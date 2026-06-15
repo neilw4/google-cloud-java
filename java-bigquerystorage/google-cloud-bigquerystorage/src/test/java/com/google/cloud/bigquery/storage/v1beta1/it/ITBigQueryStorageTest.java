@@ -16,6 +16,10 @@
 
 package com.google.cloud.bigquery.storage.v1beta1.it;
 
+import static org.awaitility.Awaitility.await;
+import com.google.api.gax.rpc.NotFoundException;
+import java.util.Objects;
+
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -1230,7 +1234,13 @@ class ITBigQueryStorageTest {
           TableReadOptions.newBuilder().setRowRestriction(filter).build());
     }
 
-    ReadSession session = client.createReadSession(createSessionRequestBuilder.build());
+    final CreateReadSessionRequest request = createSessionRequestBuilder.build();
+    ReadSession session =
+        await()
+            .atMost(Duration.ofSeconds(30))
+            .pollInterval(Duration.ofSeconds(1))
+            .ignoreException(NotFoundException.class)
+            .until(() -> client.createReadSession(request), Objects::nonNull);
     assertEquals(
         1,
         session.getStreamsCount(),
