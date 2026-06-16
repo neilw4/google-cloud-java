@@ -16,12 +16,9 @@
 
 package com.google.cloud.bigquery.storage.v1beta2.it;
 
-import static org.awaitility.Awaitility.await;
-import com.google.api.gax.rpc.NotFoundException;
-import java.util.Objects;
-
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
+import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -30,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import com.google.api.gax.core.FixedCredentialsProvider;
+import com.google.api.gax.rpc.NotFoundException;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.api.gax.rpc.UnauthenticatedException;
 import com.google.auth.oauth2.ServiceAccountCredentials;
@@ -81,6 +79,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Logger;
 import org.apache.avro.Conversions;
 import org.apache.avro.LogicalTypes;
@@ -1216,12 +1215,14 @@ class ITBigQueryStorageTest {
     }
 
     final CreateReadSessionRequest request = createSessionRequestBuilder.build();
-    ReadSession session =
-        await()
-            .atMost(Duration.ofSeconds(30))
-            .pollInterval(Duration.ofSeconds(1))
-            .ignoreException(NotFoundException.class)
-            .until(() -> client.createReadSession(request), Objects::nonNull);
+    final AtomicReference<ReadSession> sessionRef = new AtomicReference<>();
+    await()
+        .atMost(Duration.ofSeconds(10))
+        .pollInterval(Duration.ofSeconds(1))
+        // retry if the newly-created table has not yet fully propagated
+        .ignoreException(NotFoundException.class)
+        .untilAsserted(() -> sessionRef.set(client.createReadSession(request)));
+    ReadSession session = sessionRef.get();
     assertEquals(
         1,
         session.getStreamsCount(),
