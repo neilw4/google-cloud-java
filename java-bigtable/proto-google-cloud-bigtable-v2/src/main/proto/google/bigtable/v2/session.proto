@@ -20,6 +20,7 @@ import "google/api/field_behavior.proto";
 import "google/api/resource.proto";
 import "google/bigtable/v2/data.proto";
 import "google/bigtable/v2/feature_flags.proto";
+import "google/bigtable/v2/peer_info.proto";
 import "google/bigtable/v2/request_stats.proto";
 import "google/protobuf/descriptor.proto";
 import "google/protobuf/duration.proto";
@@ -326,6 +327,8 @@ message SessionResponse {
     GoAwayResponse go_away = 6;
 
     SessionRefreshConfig session_refresh_config = 7;
+
+    PeerLoadInfo peer_load_info = 8;
   }
 }
 
@@ -669,6 +672,10 @@ message SessionParametersResponse {
 
 // Internal usage only.
 message HeartbeatResponse {}
+
+message PeerLoadUpdateResponse {
+  PeerLoadInfo load_info = 1;
+}
 
 // Internal usage only.
 message GoAwayResponse {
