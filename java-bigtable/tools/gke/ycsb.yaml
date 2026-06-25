@@ -1,0 +1,39 @@
+# based on
+# kubectl create deployment jetstream-tools-ycsb --dry-run=client  -o yaml \
+#      --image=gcr.io/google.com/cloud-bigtable-dev/jetstream-tools:latest -- \
+#        --table-name=projects/google.com:cloud-bigtable-dev/instances/igor-ew1c/tables/workloadc \
+#        --max-execution-time=pt2H \
+#        --threads=30 \
+#        --qps=1000000000
+# Edited to:
+# - change command to args (to use jib's entrypoint)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: jetstream-tools-ycsb
+  name: jetstream-tools-ycsb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jetstream-tools-ycsb
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jetstream-tools-ycsb
+    spec:
+      containers:
+        - name: jetstream-tools-ycsb
+          image: gcr.io/google.com/cloud-bigtable-dev/jetstream-tools:latest
+          args:
+            - ycsb
+            - --endpoint=europe-west1-sessionbigtable.googleapis.com
+            - --table-name=projects/google.com:cloud-bigtable-dev/instances/igor-ew1c/tables/workloadc
+            - --max-execution-time=pt2H
+            - --threads=30
+            - --qps=1000000000
