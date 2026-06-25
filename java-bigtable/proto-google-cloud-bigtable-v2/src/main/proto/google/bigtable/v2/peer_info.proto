@@ -24,6 +24,19 @@ option java_package = "com.google.bigtable.v2";
 option php_namespace = "Google\\Cloud\\Bigtable\\V2";
 option ruby_package = "Google::Cloud::Bigtable::V2";
 
+message PeerLoadInfo {
+  message VersionedPeerInfo {
+    float expected_latency_ms = 1;
+    float weight = 2;
+    int32 available_rif = 3;
+    int32 convergeance_time_ms = 4;
+  }
+  // Mapping of version number to load info. This allows us to slowly roll out
+  // breaking changes without risking one version looking better than another
+  // and taking all of the load.
+  map<string, VersionedPeerInfo> versioned_load_info = 1;
+}
+
 // PeerInfo contains information about the peer that the client is
 // connecting to.
 message PeerInfo {
@@ -78,4 +91,6 @@ message PeerInfo {
   string application_frontend_subzone = 4;
 
   TransportType transport_type = 5;
+
+  PeerLoadInfo load_info = 7;
 }
