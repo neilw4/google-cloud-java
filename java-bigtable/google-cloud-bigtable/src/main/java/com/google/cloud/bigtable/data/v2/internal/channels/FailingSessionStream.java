@@ -17,6 +17,7 @@
 package com.google.cloud.bigtable.data.v2.internal.channels;
 
 import com.google.bigtable.v2.PeerInfo;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionRequest;
 import io.grpc.Metadata;
 import io.grpc.Status;
@@ -51,6 +52,11 @@ class FailingSessionStream implements SessionStream {
 
   @Override
   public void forceClose(@Nullable String message, @Nullable Throwable cause) {
+    // noop
+  }
+
+  @Override
+  public void updatePeerLoad(PeerLoadInfo peerLoad) {
     // noop
   }
 }

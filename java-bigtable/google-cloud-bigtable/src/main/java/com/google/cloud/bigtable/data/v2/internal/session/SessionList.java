@@ -20,6 +20,7 @@ import static com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.CLOS
 
 import com.google.auto.value.AutoValue;
 import com.google.bigtable.v2.CloseSessionRequest;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.PeerInfo;
 import com.google.cloud.bigtable.data.v2.internal.middleware.VRpc.VRpcResult;
 import com.google.cloud.bigtable.data.v2.internal.session.Session.SessionState;
@@ -283,6 +284,10 @@ class SessionList {
 
       allSessions.remove(this);
     }
+
+    void onPeerLoad(PeerLoadInfo peerLoad) {
+      afe.ifPresent(afeHandle -> afeHandle.afeLoad = peerLoad);
+    }
   }
 
   /** Simple counters for the sessions contained in this list. */
@@ -383,6 +388,8 @@ class SessionList {
 
     private final PeakEwma transportLatency = new PeakEwma(Duration.of(500, ChronoUnit.MICROS));
     private final PeakEwma e2eLatency = new PeakEwma(Duration.ofMillis(1));
+
+    volatile PeerLoadInfo afeLoad;
 
     public AfeHandle() {
       sessions = new ArrayDeque<>();

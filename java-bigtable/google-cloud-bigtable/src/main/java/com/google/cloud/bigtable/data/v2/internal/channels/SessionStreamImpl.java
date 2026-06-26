@@ -17,6 +17,7 @@ package com.google.cloud.bigtable.data.v2.internal.channels;
 
 import com.google.bigtable.v2.PeerInfo;
 import com.google.bigtable.v2.PeerInfo.TransportType;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionRequest;
 import com.google.bigtable.v2.SessionResponse;
 import com.google.common.annotations.VisibleForTesting;
@@ -116,5 +117,10 @@ public class SessionStreamImpl implements SessionStream {
   @Override
   public void forceClose(@Nullable String message, @Nullable Throwable cause) {
     call.cancel("Force closed: " + message, cause);
+  }
+
+  @Override
+  public void updatePeerLoad(PeerLoadInfo peerLoad) {
+    // noop
   }
 }

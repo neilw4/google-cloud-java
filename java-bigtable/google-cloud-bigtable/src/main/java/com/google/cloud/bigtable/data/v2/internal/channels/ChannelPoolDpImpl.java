@@ -17,6 +17,7 @@
 package com.google.cloud.bigtable.data.v2.internal.channels;
 
 import com.google.bigtable.v2.PeerInfo;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration;
 import com.google.bigtable.v2.SessionRequest;
 import com.google.bigtable.v2.SessionResponse;
@@ -73,9 +74,9 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   private final String poolLogId;
 
-  @VisibleForTesting volatile int minGroups;
-  @VisibleForTesting volatile int maxGroups;
-  @VisibleForTesting volatile int softMaxPerGroup;
+  @VisibleForTesting volatile int minGroups = 20;
+  @VisibleForTesting volatile int maxGroups = 50;
+  @VisibleForTesting volatile int softMaxPerGroup = 5;
 
   private final Clock clock;
   private final Supplier<ManagedChannel> channelSupplier;
@@ -171,15 +172,15 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   @Override
   public void updateConfig(ChannelPoolConfiguration config) {
-    this.minGroups = config.getMinServerCount();
-    this.maxGroups = config.getMaxServerCount();
-    this.softMaxPerGroup = config.getPerServerSessionCount();
+    // this.minGroups = config.getMinServerCount();
+    // this.maxGroups = config.getMaxServerCount();
+    // this.softMaxPerGroup = config.getPerServerSessionCount();
   }
 
   @Override
   public synchronized void start() {
     serviceChannels();
-    serviceFuture = executor.scheduleAtFixedRate(this::serviceChannels, 1, 1, TimeUnit.MINUTES);
+    serviceFuture = executor.scheduleAtFixedRate(this::serviceChannels, 15, 15, TimeUnit.SECONDS);
   }
 
   @Override
@@ -263,8 +264,13 @@ public class ChannelPoolDpImpl implements ChannelPool {
                 synchronized (ChannelPoolDpImpl.this) {
                   channelWrapper.consecutiveFailures = 0;
                   recycleBackoff = INITIAL_RECYCLE_BACKOFF;
-                  rehomeChannel(channelWrapper, afeId);
+                  rehomeChannel(channelWrapper, afeId, peerInfo.getLoadInfo());
                   sessionsPerAfeId.add(afeId);
+                }
+                if (!peerInfo.hasLoadInfo()) {
+                  LOGGER.warning("T-- no peer info present");
+                } else {
+                  LOGGER.warning("T--" + peerInfo.getLoadInfo().toString());
                 }
                 super.onBeforeSessionStart(peerInfo);
               }
@@ -283,6 +289,13 @@ public class ChannelPoolDpImpl implements ChannelPool {
               }
             },
             headers);
+      }
+
+      @Override
+      public void updatePeerLoad(PeerLoadInfo peerLoad) {
+        synchronized (ChannelPoolDpImpl.this) {
+          channelWrapper.group.afeLoad = peerLoad;
+        }
       }
     };
   }
@@ -306,7 +319,7 @@ public class ChannelPoolDpImpl implements ChannelPool {
   }
 
   @GuardedBy("this")
-  private void rehomeChannel(ChannelWrapper channelWrapper, AfeId afeId) {
+  private void rehomeChannel(ChannelWrapper channelWrapper, AfeId afeId, PeerLoadInfo loadInfo) {
     // No need to rehome recycled channels.
     if (channelWrapper.channel.isShutdown()) {
       return;
@@ -339,6 +352,7 @@ public class ChannelPoolDpImpl implements ChannelPool {
     origGroup.numStreams -= channelWrapper.numOutstanding;
     newGroup.channels.add(channelWrapper);
     newGroup.numStreams += channelWrapper.numOutstanding;
+    newGroup.afeLoad = loadInfo;
 
     return;
   }
@@ -523,6 +537,9 @@ public class ChannelPoolDpImpl implements ChannelPool {
     private final AfeId afeId;
     private final Deque<ChannelWrapper> channels;
     private int numStreams;
+    private Optional<Float> ewma_network_latency_ms = Optional.empty();
+    private Optional<Float> traffic_weight = Optional.empty();
+    private volatile PeerLoadInfo afeLoad = PeerLoadInfo.getDefaultInstance();
 
     public AfeChannelGroup(AfeId afeId) {
       this.afeId = afeId;

@@ -24,6 +24,7 @@ import com.google.bigtable.v2.GoAwayResponse;
 import com.google.bigtable.v2.LoadBalancingOptions;
 import com.google.bigtable.v2.OpenSessionRequest;
 import com.google.bigtable.v2.OpenSessionResponse;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionClientConfiguration;
 import com.google.bigtable.v2.TelemetryConfiguration;
 import com.google.cloud.bigtable.data.v2.internal.api.Util;
@@ -368,6 +369,11 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
               public void onClose(SessionState prevState, Status status, Metadata trailers) {
                 SessionPoolImpl.this.onSessionClose(handle, prevState, status, trailers);
               }
+
+              @Override
+              public void onPeerLoad(PeerLoadInfo peerLoad) {
+                SessionPoolImpl.this.onSessionPeerLoad(handle, peerLoad);
+              }
             });
       }
     } finally {
@@ -456,6 +462,10 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
               handle.getSession().getLogName()));
       createSession(handle.getSession().getOpenParams());
     }
+  }
+
+  private synchronized void onSessionPeerLoad(SessionHandle handle, PeerLoadInfo peerLoad) {
+    handle.onPeerLoad(peerLoad);
   }
 
   private void onSessionClose(

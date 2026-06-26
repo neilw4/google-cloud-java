@@ -104,7 +104,7 @@ public class CountRows implements Callable<Void> {
       channels.add(
           target
               .getChannelProvider()
-              .newChannelBuilder(callCredentials)
+              .newChannelBuilder()
               .intercept(new MetadataInterceptor())
               .build());
     }

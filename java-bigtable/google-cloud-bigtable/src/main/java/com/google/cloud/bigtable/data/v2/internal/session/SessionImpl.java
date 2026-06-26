@@ -24,6 +24,7 @@ import com.google.bigtable.v2.HeartbeatResponse;
 import com.google.bigtable.v2.OpenSessionRequest;
 import com.google.bigtable.v2.OpenSessionResponse;
 import com.google.bigtable.v2.PeerInfo;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionParametersResponse;
 import com.google.bigtable.v2.SessionRefreshConfig;
 import com.google.bigtable.v2.SessionRequest;
@@ -379,6 +380,9 @@ public class SessionImpl implements Session, VRpcSessionApi {
       case HEARTBEAT:
         handleHeartBeatResponse(message.getHeartbeat());
         break;
+      case PEER_LOAD_INFO:
+        handlePeerLoadResponse(message.getPeerLoadInfo());
+        break;
       case SESSION_REFRESH_CONFIG:
         handleSessionRefreshConfigResponse(message.getSessionRefreshConfig());
         break;
@@ -502,6 +506,13 @@ public class SessionImpl implements Session, VRpcSessionApi {
 
   private void handleHeartBeatResponse(HeartbeatResponse ignored) {
     this.nextHeartbeat = clock.instant().plus(heartbeatInterval);
+  }
+
+  private void handlePeerLoadResponse(PeerLoadInfo peerLoad) {
+    synchronized (lock) {
+      stream.updatePeerLoad(peerLoad);
+    }
+    sessionListener.onPeerLoad(peerLoad);
   }
 
   private void handleSessionRefreshConfigResponse(SessionRefreshConfig config) {

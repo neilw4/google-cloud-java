@@ -92,6 +92,7 @@ public class JetStreamDriver extends site.ycsb.DB {
       List<String> endpoints = ImmutableList.copyOf(getRequiredProp(ENDPOINTS_KEY).split(","));
 
       Mode mode = Mode.valueOf(getRequiredProp(TRANSPORT_KEY));
+      try {
       switch (mode) {
         case CloudPath:
           Preconditions.checkArgument(
@@ -117,9 +118,12 @@ public class JetStreamDriver extends site.ycsb.DB {
         default:
           throw new IllegalArgumentException("Unknown mode: " + mode);
       }
+      } catch (Exception e) {
+        throw new RuntimeException(e);
+      }
 
       try {
-        client = new Client(builder.build());
+        client = Client.create(builder.build());
       } catch (Exception e) {
         throw new DBException("Failed to initialize client", e);
       }

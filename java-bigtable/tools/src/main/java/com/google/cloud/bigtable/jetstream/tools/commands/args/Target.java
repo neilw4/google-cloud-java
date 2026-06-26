@@ -124,31 +124,35 @@ public class Target {
 
   public ChannelProviders.ChannelProvider getChannelProvider() {
     ChannelProvider provider;
-    switch (mode) {
-      case CloudPath:
-        Preconditions.checkArgument(
-            getEndpoints().size() == 1, "Cloudpath only supports a single endpoint");
-        provider = new CloudPath(getEndpoints().get(0));
-        break;
+    try {
+      switch (mode) {
+        case CloudPath:
+          Preconditions.checkArgument(
+              getEndpoints().size() == 1, "Cloudpath only supports a single endpoint");
+          provider = new CloudPath(getEndpoints().get(0));
+          break;
 
-      case RawDirectPath:
-        Preconditions.checkArgument(
-            !getEndpoints().isEmpty(), "Must specify at least one endpoint for raw directpath");
-        provider = new ChannelProviders.RawDirectPath(getEndpoints());
-        break;
-      case DirectPath:
-        Preconditions.checkArgument(endpoints.size() == 1, "DirectPath only supports one endpoint");
-        provider = new DirectAccess(getEndpoints().get(0));
-        break;
-      default:
-        throw new IllegalArgumentException("Unsupported target mode: " + mode);
+        case RawDirectPath:
+          Preconditions.checkArgument(
+              !getEndpoints().isEmpty(), "Must specify at least one endpoint for raw directpath");
+          provider = new ChannelProviders.RawDirectPath(getEndpoints());
+          break;
+        case DirectPath:
+          Preconditions.checkArgument(endpoints.size() == 1, "DirectPath only supports one endpoint");
+          provider = new DirectAccess(getEndpoints().get(0));
+          break;
+        default:
+          throw new IllegalArgumentException("Unsupported target mode: " + mode);
+      }
+    } catch (Exception e) {
+      throw new RuntimeException(e);
     }
     LOG.info("Using ChannelProvider: {}", provider);
 
     return new ForwardingChannelProvider(provider) {
       @Override
-      public ManagedChannelBuilder<?> newChannelBuilder(CallCredentials callCredentials) {
-        ManagedChannelBuilder<?> builder = super.newChannelBuilder(callCredentials)
+      public ManagedChannelBuilder<?> newChannelBuilder() {
+        ManagedChannelBuilder<?> builder = super.newChannelBuilder()
             .intercept(new IpInterceptor());
         if (dumpMetadata) {
           builder = builder.intercept(new MetadataInterceptor(requestGfeDebugHeaders));

@@ -22,6 +22,7 @@ import com.google.bigtable.v2.GoAwayResponse;
 import com.google.bigtable.v2.OpenSessionRequest;
 import com.google.bigtable.v2.OpenSessionResponse;
 import com.google.bigtable.v2.PeerInfo;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.cloud.bigtable.data.v2.internal.middleware.VRpc;
 import com.google.protobuf.Message;
 import io.grpc.Metadata;
@@ -120,5 +121,7 @@ public interface Session {
     void onGoAway(GoAwayResponse msg);
 
     void onClose(SessionState prevState, Status status, Metadata trailers);
+
+    void onPeerLoad(PeerLoadInfo peerLoad);
   }
 }

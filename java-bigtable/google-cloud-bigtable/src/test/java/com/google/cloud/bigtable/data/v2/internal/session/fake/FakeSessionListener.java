@@ -44,6 +44,11 @@ public class FakeSessionListener implements Session.Listener {
   }
 
   @Override
+  public void onPeerLoad(com.google.bigtable.v2.PeerLoadInfo peerLoad) {
+    msgs.add(peerLoad);
+  }
+
+  @Override
   public void onClose(SessionState prevState, Status status, Metadata trailers) {
     msgs.add(status);
   }

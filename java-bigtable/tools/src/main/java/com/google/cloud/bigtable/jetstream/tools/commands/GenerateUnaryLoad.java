@@ -128,7 +128,7 @@ public class GenerateUnaryLoad implements Callable<Void> {
       ManagedChannel channel =
           target
               .getChannelProvider()
-              .newChannelBuilder(callCreds)
+              .newChannelBuilder(/*callCreds*/)
               .intercept(new IpInterceptor())
               .intercept(new MetadataInterceptor())
               .build();
