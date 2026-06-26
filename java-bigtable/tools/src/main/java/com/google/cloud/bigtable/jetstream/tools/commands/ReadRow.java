@@ -70,7 +70,7 @@ public class ReadRow implements Callable<Void> {
             .setAppProfileId(resource.getAppProfileId())
             .build();
 
-    try (Client client = new Client(clientSettings);
+    try (Client client = Client.create(clientSettings);
         TableAsync table =
             client.openTableAsync(
                 resource.getTableName().getTableId(), Permission.PERMISSION_READ)) {

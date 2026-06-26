@@ -107,7 +107,7 @@ public class GenerateLoad implements Callable<Void> {
     payload = ByteString.copyFrom(payloadData);
 
     Client client =
-        new Client(
+        Client.create(
             ClientSettings.builder()
                 .setChannelProvider(target.getChannelProvider())
                 .setInstanceName(resource.getTableName().getInstanceName())

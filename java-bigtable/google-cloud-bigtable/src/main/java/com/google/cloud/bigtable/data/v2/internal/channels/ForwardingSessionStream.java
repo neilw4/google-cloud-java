@@ -16,6 +16,7 @@
 package com.google.cloud.bigtable.data.v2.internal.channels;
 
 import com.google.bigtable.v2.PeerInfo;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionRequest;
 import io.grpc.Metadata;
 import javax.annotation.Nullable;
@@ -50,5 +51,10 @@ public class ForwardingSessionStream implements SessionStream {
   @Override
   public void forceClose(@Nullable String message, @Nullable Throwable cause) {
     delegate.forceClose(message, cause);
+  }
+
+  @Override
+  public void updatePeerLoad(PeerLoadInfo peerLoad) {
+    delegate.updatePeerLoad(peerLoad);
   }
 }

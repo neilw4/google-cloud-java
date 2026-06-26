@@ -37,6 +37,8 @@ public interface SessionStream {
 
   public void forceClose(@Nullable String message, @Nullable Throwable cause);
 
+  public void updatePeerLoad(PeerLoadInfo peerLoad);
+
   /**
    * Callbacks for session stream events.
    *
