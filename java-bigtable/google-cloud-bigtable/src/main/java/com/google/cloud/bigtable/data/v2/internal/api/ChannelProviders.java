@@ -38,7 +38,7 @@ import java.util.Random;
 import java.util.function.Function;
 
 public abstract class ChannelProviders {
-  public static final String DEFAULT_HOST = "bigtable.googleapis.com";
+  public static final String DEFAULT_HOST = "test-bigtable.sandbox.googleapis.com";
 
   public interface ChannelProvider {
 

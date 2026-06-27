@@ -102,9 +102,9 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   private final String poolLogId;
 
-  @VisibleForTesting volatile int minGroups;
-  @VisibleForTesting volatile int maxGroups;
-  @VisibleForTesting volatile int softMaxPerGroup;
+  @VisibleForTesting volatile int minGroups = 2;
+  @VisibleForTesting volatile int maxGroups = 50;
+  @VisibleForTesting volatile int softMaxPerGroup = 5;
 
   private final Clock clock;
   private final Supplier<ManagedChannel> channelSupplier;
@@ -205,15 +205,15 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   @Override
   public void updateConfig(ChannelPoolConfiguration config) {
-    this.minGroups = config.getMinServerCount();
-    this.maxGroups = config.getMaxServerCount();
-    this.softMaxPerGroup = config.getPerServerSessionCount();
+    // this.minGroups = config.getMinServerCount();
+    // this.maxGroups = config.getMaxServerCount();
+    // this.softMaxPerGroup = config.getPerServerSessionCount();
   }
 
   @Override
   public synchronized void start() {
     serviceChannels();
-    serviceFuture = executor.scheduleAtFixedRate(this::serviceChannels, 1, 1, TimeUnit.MINUTES);
+    serviceFuture = executor.scheduleAtFixedRate(this::serviceChannels, 15, 15, TimeUnit.SECONDS);
   }
 
   @Override
@@ -460,9 +460,12 @@ public class ChannelPoolDpImpl implements ChannelPool {
         }
       }
     } else if (activeCount < target) {
-      log(Level.FINE, "Adding %d channels to reach target %d", target - activeCount, target);
-      for (int i = activeCount; i < target; i++) {
-        addChannel();
+      log(Level.FINE, "Adding %d channels to reach target %d", target - activeCount, target);      int desiredExtraGroups = desiredGroups - channelGroups.size();
+      int desiredExtraGroups = desiredGroups - channelGroups.size();
+      for (int i = activeCount; i < target; i++) {      int desiredExtraGroups = desiredGroups - channelGroups.size();
+        for (int i = 0; i < desiredExtraGroups * softMaxPerGroup; i++) {
+          addChannel();
+        }
       }
     }
 
