@@ -840,7 +840,7 @@ public class BigtableTableAdminStubSettings extends StubSettings<BigtableTableAd
   /** Returns the default service endpoint. */
   @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
-    return "bigtableadmin.googleapis.com:443";
+    return "test-bigtableadmin.sandbox.googleapis.com:443";
   }
 
   /** Returns the default mTLS service endpoint. */

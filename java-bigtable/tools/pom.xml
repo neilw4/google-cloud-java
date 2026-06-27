@@ -129,15 +129,11 @@
       <groupId>site.ycsb</groupId>
       <artifactId>core</artifactId>
       <version>0.18.0-SNAPSHOT</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/vendored-libs/core-0.18.0-SNAPSHOT.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>site.ycsb</groupId>
       <artifactId>googlebigtable2-binding</artifactId>
       <version>0.18.0-SNAPSHOT</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/vendored-libs/googlebigtable2-binding-0.18.0-SNAPSHOT.jar</systemPath>
     </dependency>
     <!-- Direct deps for ycsb -->
     <dependency>

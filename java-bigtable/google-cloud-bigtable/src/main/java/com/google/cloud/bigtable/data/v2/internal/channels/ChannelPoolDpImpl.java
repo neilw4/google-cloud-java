@@ -74,7 +74,7 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   private final String poolLogId;
 
-  @VisibleForTesting volatile int minGroups = 20;
+  @VisibleForTesting volatile int minGroups = 2;
   @VisibleForTesting volatile int maxGroups = 50;
   @VisibleForTesting volatile int softMaxPerGroup = 5;
 
@@ -172,9 +172,9 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   @Override
   public void updateConfig(ChannelPoolConfiguration config) {
-    // this.minGroups = config.getMinServerCount();
-    // this.maxGroups = config.getMaxServerCount();
-    // this.softMaxPerGroup = config.getPerServerSessionCount();
+    this.minGroups = config.getMinServerCount();
+    this.maxGroups = config.getMaxServerCount();
+    this.softMaxPerGroup = config.getPerServerSessionCount();
   }
 
   @Override
