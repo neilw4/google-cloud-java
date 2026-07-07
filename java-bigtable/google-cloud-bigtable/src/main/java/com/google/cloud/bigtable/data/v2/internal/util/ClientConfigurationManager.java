@@ -319,43 +319,43 @@ public class ClientConfigurationManager implements AutoCloseable {
   @GuardedBy("this")
   private CompletableFuture<ClientConfiguration> sendRequest() {
     CompletableFuture<ClientConfiguration> future = new CompletableFuture<>();
-
-    ClientCall<GetClientConfigurationRequest, ClientConfiguration> call =
-        channel.newCall(
-            BigtableGrpc.getGetClientConfigurationMethod(),
-            CallOptions.DEFAULT.withDeadline(
-                Deadline.after(defaultDeadline.toMillis(), TimeUnit.MILLISECONDS)));
-    call.start(
-        new Listener<ClientConfiguration>() {
-          @Override
-          public void onMessage(ClientConfiguration cfg) {
-            cfg = normalizeConfig(cfg);
-            future.complete(cfg);
-          }
-
-          @Override
-          public void onClose(Status status, Metadata trailers) {
-            if (!status.isOk()) {
-              future.completeExceptionally(status.asRuntimeException());
-            } else if (!future.isDone()) {
-              // Defensive: guarantee this Listener always terminates the future. A caller blocks on
-              // this future via start().get() with no timeout, so a close that neither delivered a
-              // message nor reported an error would wedge it forever. For today's unary RPC gRPC
-              // already converts a missing response into a non-OK status, so this branch is not
-              // expected to be hit, but it keeps the bridge correct regardless of that invariant.
-              future.completeExceptionally(
-                  Status.INTERNAL
-                      .withDescription(
-                          "GetClientConfiguration stream closed without returning a configuration")
-                      .asRuntimeException());
-            }
-          }
-        },
-        metadata);
-    call.sendMessage(request);
-    call.halfClose();
-    call.request(1);
-
+    try {
+      String str =
+          "session_configuration {\n"
+              + "  channel_configuration {\n"
+              + "    min_server_count: 2\n"
+              + "    max_server_count: 50\n"
+              + "    per_server_session_count: 8\n"
+              + "    direct_access_with_fallback {\n"
+              + "      check_interval {\n"
+              + "        seconds: 60\n"
+              + "      }\n"
+              + "      error_rate_threshold: 0.8\n"
+              + "    }\n"
+              + "  }\n"
+              + "  session_pool_configuration {\n"
+              + "    headroom: 0.5\n"
+              + "    min_session_count: 5\n"
+              + "    max_session_count: 600\n"
+              + "    new_session_creation_budget: 50\n"
+              + "    new_session_creation_penalty { seconds: 60 }\n"
+              + "    consecutive_session_failure_threshold: 10\n"
+              + "    new_session_queue_length: 10\n"
+              + "    load_balancing_options { least_in_flight {} }\n"
+              + "  }\n"
+              + "  session_load: 1.0\n"
+              + "  load_balancing_options { least_in_flight {} }\n"
+              + "}\n"
+              + "polling_configuration {\n"
+              + "  polling_interval { seconds: 312 }\n"
+              + "  validity_duration { seconds: 900 }\n"
+              + "}";
+      ClientConfiguration.Builder builder = ClientConfiguration.newBuilder();
+      TextFormat.getParser().merge(str, builder);
+      future.complete(normalizeConfig(builder.build()));
+    } catch (Exception e) {
+      future.completeExceptionally(e);
+    }
     return future;
   }
 
@@ -406,10 +406,8 @@ public class ClientConfigurationManager implements AutoCloseable {
     // Inject overrides
     overrideConfig.ifPresent(builder::mergeFrom);
 
-    // When sessions are disabled make sure to clear out the config. Read from the builder, not
-    // cfg, so that a nonzero session_load supplied via the override sys-prop is honoured even when
-    // the server-returned config has session_load=0.
-    if (builder.getSessionConfiguration().getSessionLoad() == 0) {
+    // When sessions are disabled make sure to clear out the config
+    if (cfg.getSessionConfiguration().getSessionLoad() == 0) {
       builder.clearSessionConfiguration();
       return builder.build();
     }

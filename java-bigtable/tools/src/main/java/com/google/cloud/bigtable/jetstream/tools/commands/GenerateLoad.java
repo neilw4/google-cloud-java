@@ -32,11 +32,16 @@ import com.google.protobuf.ByteString;
 import io.grpc.Deadline;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import picocli.CommandLine.Command;
@@ -136,8 +141,50 @@ public class GenerateLoad implements Callable<Void> {
   private Metrics metrics;
   private Random random = new Random();
 
+  private static class StatsTracker {
+    final long[] latencies;
+    final AtomicInteger count = new AtomicInteger();
+    final long startTime = System.nanoTime();
+
+    StatsTracker(int capacity) {
+      latencies = new long[capacity];
+    }
+
+    void record(long latencyMs) {
+      int idx = count.getAndIncrement();
+      if (idx < latencies.length) {
+        latencies[idx] = latencyMs;
+      }
+    }
+  }
+
   @Override
   public Void call() throws Exception {
+    final AtomicReference<StatsTracker> currentTracker = new AtomicReference<>(new StatsTracker(Math.max(100_000, qps * 20)));
+    ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    scheduler.scheduleAtFixedRate(() -> {
+      StatsTracker oldTracker = currentTracker.getAndSet(new StatsTracker(Math.max(100_000, qps * 20)));
+      int count = oldTracker.count.get();
+      int validCount = Math.min(count, oldTracker.latencies.length);
+      long[] lats = new long[validCount];
+      System.arraycopy(oldTracker.latencies, 0, lats, 0, validCount);
+      Arrays.sort(lats);
+
+      long elapsedNanos = System.nanoTime() - oldTracker.startTime;
+      double elapsedSecs = elapsedNanos / 1e9;
+      double rps = validCount / elapsedSecs;
+      double fraction = rps * concurrency / qps;
+
+      long p50 = validCount > 0 ? lats[(int)(validCount * 0.50)] : 0;
+      long p90 = validCount > 0 ? lats[(int)(validCount * 0.90)] : 0;
+      long p95 = validCount > 0 ? lats[(int)(validCount * 0.95)] : 0;
+      long p99 = validCount > 0 ? lats[(int)(validCount * 0.99)] : 0;
+      long p999 = validCount > 0 ? lats[(int)(validCount * 0.999)] : 0;
+
+      System.out.printf("RPS: %.2f, Fraction of expected: %.4f, p50: %d ms, p90: %d ms, p95: %d ms, p99: %d ms, p99.9: %d ms%n",
+          rps, fraction, p50, p90, p95, p99, p999);
+    }, 10, 10, TimeUnit.SECONDS);
+
     byte[] payloadData = new byte[payloadSize];
     new Random().nextBytes(payloadData);
     payload = ByteString.copyFrom(payloadData);
@@ -185,8 +232,14 @@ public class GenerateLoad implements Callable<Void> {
 
       f.whenComplete(
           (result, throwable) -> {
+            long latencyMs = stopwatch.elapsed(TimeUnit.MILLISECONDS);
             if (throwable != null) {
               System.err.println("Future completed with an error: " + throwable.getMessage());
+            } else {
+              StatsTracker tracker = currentTracker.get();
+              if (tracker != null) {
+                tracker.record(latencyMs);
+              }
             }
             metrics.recordLatency(
                 Duration.of(stopwatch.elapsed(TimeUnit.MICROSECONDS), ChronoUnit.MICROS),
