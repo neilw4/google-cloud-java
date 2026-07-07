@@ -22,41 +22,58 @@ import com.google.cloud.bigtable.data.v2.internal.session.SessionList.SessionHan
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.Collectors;
 
-/** Pick the AFE with the fewest in-flight requests. */
-class LeastInFlightPicker extends Picker {
+class WeightedLeastInFlightPicker extends Picker {
+
+  private static final Logger DEFAULT_LOGGER = Logger.getLogger(WeightedLeastInFlightPicker.class.getName());
+  private static final AtomicLong lastWarningTimeMillis = new AtomicLong(0);
+  private Logger logger = DEFAULT_LOGGER;
+
   private final SessionList sessionList;
-  private final LoadBalancingOptions.LeastInFlight options;
 
-  public LeastInFlightPicker(SessionList sessionList, LoadBalancingOptions.LeastInFlight options) {
+  public WeightedLeastInFlightPicker(SessionList sessionList) {
     this.sessionList = sessionList;
-    this.options = options;
   }
 
   @Override
   Optional<SessionHandle> pickSession() {
     List<AfeHandle> readyAfes = sessionList.getAfesWithReadySessions();
+
     if (readyAfes.isEmpty()) {
+      logger.warning("No AFEs available for request");
       return Optional.empty();
     }
 
     ThreadLocalRandom rng = ThreadLocalRandom.current();
-    List<AfeHandle> candidates = new ArrayList<>(readyAfes);
-    int bestCost = Integer.MAX_VALUE;
-    AfeHandle bestAfe = null;
-    long iterations = candidates.size();
-    if (options.getRandomSubsetSize() > 0) {
-      iterations = Math.min(options.getRandomSubsetSize(), iterations);
+    // Weight is from 0 to 100, and indicates likelihood that a candidate should be picked.
+    List<AfeHandle> candidates = new ArrayList<>(readyAfes.stream().filter(afe -> afe.weight > 0 && (afe.weight >= 100 || rng.nextInt(100) <= afe.weight)).collect(Collectors.toList()));
+    if (candidates.isEmpty()) {
+      long now = System.currentTimeMillis();
+      long last = lastWarningTimeMillis.get();
+      if (now - last > 100 && lastWarningTimeMillis.compareAndSet(last, now)) {
+        logger.warning("All candidate AFEs have 0 weight, picking at random");
+      }
+      // TODO: maybe we can be smarter about weighting by cost or something.
+      return sessionList.checkoutSession(readyAfes.get(rng.nextInt(readyAfes.size())));
     }
 
+    double bestCost = Double.MAX_VALUE;
+    AfeHandle bestAfe = null;
+    long iterations = candidates.size();
+
+    // Find AFE with the best cost, addressing them in a random order so that if multiple AFEs have the same cost we pick one at random.
     // Partial Fisher-Yates shuffle.
     for (int i = 0; i < iterations; i++) {
       int randomIndex = i + rng.nextInt(candidates.size() - i);
       AfeHandle picked = candidates.get(randomIndex);
-      if (picked.getNumOutstanding() < bestCost) {
-        bestCost = picked.getNumOutstanding();
+      double cost = picked.getNumOutstanding() / (double)picked.weight;
+      if (cost < bestCost) {
+        bestCost = cost;
         bestAfe = picked;
       }
       // Move candidate to the `i`th entry so that it's not picked again.

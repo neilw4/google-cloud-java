@@ -125,6 +125,10 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
   private final ScheduledFuture<?> afeListPruneTask;
 
+  private final ScheduledFuture<?> afeListUpdateWeightsTask;
+
+  private final ScheduledFuture<?> poolScaleTask;
+
   private final ScheduledFuture<?> heartbeatMonitor;
 
   private final ScheduledExecutorService executorService;
@@ -229,6 +233,70 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
             SessionList.SESSION_LIST_PRUNE_INTERVAL.toMillis(),
             SessionList.SESSION_LIST_PRUNE_INTERVAL.toMillis(),
             TimeUnit.MILLISECONDS);
+    afeListUpdateWeightsTask =
+        executorService.scheduleAtFixedRate(
+            () -> {
+              synchronized (SessionPoolImpl.this) {
+                sessions.updateWeights();
+              }
+            },
+            0,
+            100,
+            TimeUnit.MILLISECONDS);
+    poolScaleTask =
+        executorService.scheduleAtFixedRate(
+            () -> {
+              synchronized (SessionPoolImpl.this) {
+                if (poolState != PoolState.STARTED) {
+                  return;
+                }
+                int delta = poolSizer.getScaleDelta();
+                double exactToRemove = sessions.getAllSessions().size() * 0.1;
+                int sessionsToRemove = (int) exactToRemove + (java.util.concurrent.ThreadLocalRandom.current().nextDouble() < (exactToRemove - (int) exactToRemove) ? 1 : 0);
+                int removedCount = 0;
+                java.util.Map<SessionList.AfeHandle, Integer> removedPerAfe = new java.util.HashMap<>();
+
+                while (removedCount < sessionsToRemove) {
+                  List<SessionList.AfeHandle> afes = new ArrayList<>(sessions.getAfesWithReadySessions());
+                  if (afes.isEmpty()) {
+                    break;
+                  }
+
+                  SessionList.AfeHandle maxAfe = null;
+                  int maxRefCount = -1;
+                  for (SessionList.AfeHandle afe : afes) {
+                    int effectiveRefCount = afe.refCount;
+                    if (effectiveRefCount > maxRefCount && !afe.sessions.isEmpty()) {
+                      maxAfe = afe;
+                      maxRefCount = effectiveRefCount;
+                    }
+                  }
+
+                  if (maxAfe == null) {
+                    break;
+                  }
+
+                  SessionHandle handle = maxAfe.sessions.peek();
+                  if (handle != null) {
+                    // TODO: update the poolScaleTask logic for removing extra sessions. First, target AFEs with more sessions than afe.afeLoad.getVersionedLoadInfoMap().madeupgetonlyentryfunction().getAvailableRif(), and remove the ones with the most sessions. If that prevents AFEs from having too many sessions, remove sessions from those with the lowest weight - prefer to remove all sessions from one afe as opposed to a portion of sessions from many afes.
+                    handle.onSessionClosing();
+                    handle.getSession().close(CloseSessionRequest.getDefaultInstance());
+                    removedPerAfe.put(maxAfe, removedPerAfe.getOrDefault(maxAfe, 0) + 1);
+                    removedCount++;
+                  } else {
+                    break;
+                  }
+                }
+                delta += removedCount;
+
+                for (int i = delta; i > 0; i--) {
+                  createSession(openParams, /*retryFailures=*/ false);
+                }
+              }
+            },
+            0,
+            100,
+            TimeUnit.MILLISECONDS);
 
     this.budget = budget;
 
@@ -268,6 +336,8 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       }
       afeListPruneTask.cancel(false);
       heartbeatMonitor.cancel(false);
+      afeListUpdateWeightsTask.cancel(false);
+      poolScaleTask.cancel(false);
       if (retryCreateSessionFuture != null) {
         retryCreateSessionFuture.cancel(false);
         retryCreateSessionFuture = null;
@@ -299,7 +369,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
     // Pre-start
     for (int i = poolSizer.getScaleDelta(); i > 0; i--) {
-      createSession(openParams);
+      createSession(openParams, true);
     }
 
     watchdog.start();
@@ -324,18 +394,26 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
         .getConsecutiveSessionFailureThreshold();
   }
 
-  private synchronized void createSession(OpenParams openParams) {
+  private synchronized void createSession(OpenParams openParams, boolean retryFailures) {
     if (!budget.tryReserveSession()) {
       debugTagTracer.record(TelemetryConfiguration.Level.WARN, "session_pool_no_budget");
-      logger.fine(
-          String.format(
-              "Refusing to add a new session due to exhausted %s concurrent create session"
-                  + " requests",
-              budget.getMaxConcurrentRequest()));
-      // Retry create session if we run out of budget. In the edge case where we get a new VRpc
-      // after failing to create any sessions and exhausting all the budget, we'll retry session
-      // creation once the budget becomes available so the VRpc still has a chance to succeed.
-      maybeScheduleCreateSessionRetry();
+      if (retryFailures) {
+        logger.fine(
+            String.format(
+                "Refusing to add a new session due to exhausted %s concurrent create session"
+                    + " requests",
+                budget.getMaxConcurrentRequest()));
+        // Retry create session if we run out of budget. In the edge case where we get a new VRpc
+        // after failing to create any sessions and exhausting all the budget, we'll retry session
+        // creation once the budget becomes available so the VRpc still has a chance to succeed.
+        maybeScheduleCreateSessionRetry();
+      } else {
+        logger.fine(
+            String.format(
+                "Refusing to add a new session due to exhausted %s concurrent create session"
+                    + " requests, skipping retry",
+                budget.getMaxConcurrentRequest()));
+      }
       return;
     }
 
@@ -399,7 +477,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
               synchronized (this) {
                 retryCreateSessionFuture = null;
                 if (poolState != PoolState.CLOSED && poolSizer.getScaleDelta() > 0) {
-                  createSession(openParams);
+                  createSession(openParams, true);
                 }
               }
             },
@@ -460,7 +538,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
           String.format(
               "Adding new session to replace a going away session %s",
               handle.getSession().getLogName()));
-      createSession(handle.getSession().getOpenParams());
+      createSession(handle.getSession().getOpenParams(), true);
     }
   }
 
@@ -508,7 +586,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
           logger.fine(
               String.format(
                   "Replacing abnormally closed session %s", handle.getSession().getLogName()));
-          createSession(openParams.withIncrementedAttempts());
+          createSession(openParams.withIncrementedAttempts(), true);
         }
       }
     }
@@ -663,7 +741,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
         if (poolSizer.handleNewCall()) {
           logger.fine(
               String.format("Adding session to handle incoming vrpc %s", info.getLogName()));
-          createSession(openParams);
+          createSession(openParams, true);
         }
 
         tryDrainPendingRpcs();

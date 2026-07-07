@@ -53,20 +53,21 @@ class DynamicPicker extends Picker {
   }
 
   private Picker createPicker(LoadBalancingOptions options) {
-    switch (options.getLoadBalancingStrategyCase()) {
-      case RANDOM:
-        return new SimplePicker(sessions, options.getRandom());
-      case LEAST_IN_FLIGHT:
-        return new LeastInFlightPicker(sessions, options.getLeastInFlight());
-      case PEAK_EWMA:
-        return new LeastLatencyPicker(sessions, options.getPeakEwma());
-      default:
-        LOGGER.log(
-            Level.FINE,
-            "got load balancing strategy {0} which was not implemented",
-            options.getLoadBalancingStrategyCase());
-        return new LeastInFlightPicker(
-            sessions, LoadBalancingOptions.LeastInFlight.getDefaultInstance());
-    }
+    return new WeightedLeastInFlightPicker(sessions);
+    // switch (options.getLoadBalancingStrategyCase()) {
+    //   case RANDOM:
+    //     return new SimplePicker(sessions, options.getRandom());
+    //   case LEAST_IN_FLIGHT:
+    //     return new LeastInFlightPicker(sessions, options.getLeastInFlight());
+    //   case PEAK_EWMA:
+    //     return new LeastLatencyPicker(sessions, options.getPeakEwma());
+    //   default:
+    //     LOGGER.log(
+    //         Level.FINE,
+    //         "got load balancing strategy {0} which was not implemented",
+    //         options.getLoadBalancingStrategyCase());
+    //     return new LeastInFlightPicker(
+    //         sessions, LoadBalancingOptions.LeastInFlight.getDefaultInstance());
+    // }
   }
 }

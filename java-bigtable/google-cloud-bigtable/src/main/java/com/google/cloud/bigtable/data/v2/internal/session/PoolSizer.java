@@ -71,7 +71,8 @@ class PoolSizer {
     // support for multiplexing.
     int effectivePending = (int) Math.ceil((float) pendingRpcs.getSize() / pendingVRpcsPerSession);
     int sessionsInUse = effectivePending + stats.getInUseCount();
-    int unboundedDesiredIdleSessions = (int) Math.ceil(sessionsInUse * idlesSessionHeadRoom);
+    // TODO: double-check this logic.
+    int unboundedDesiredIdleSessions = (int) Math.ceil(sessionsInUse * idlesSessionHeadRoom / stats.getUsableFraction());
     int desiredIdleSessions =
         Math.max(Math.min(unboundedDesiredIdleSessions, maxIdleSessions), minIdleSessions);
 

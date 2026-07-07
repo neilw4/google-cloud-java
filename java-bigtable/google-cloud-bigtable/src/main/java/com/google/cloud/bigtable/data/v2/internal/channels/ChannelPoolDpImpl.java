@@ -57,6 +57,8 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.GuardedBy;
 
+// TODO: more aggressively create new channels to catch new AFEs
+
 /**
  * Proof of concept channel pool that avoids parallel channels to the same afe. The pool is
  * dynamically sized based on outstanding streams and tries to limit each channel to at most 10
@@ -76,7 +78,7 @@ public class ChannelPoolDpImpl implements ChannelPool {
 
   @VisibleForTesting volatile int minGroups = 2;
   @VisibleForTesting volatile int maxGroups = 50;
-  @VisibleForTesting volatile int softMaxPerGroup = 5;
+  @VisibleForTesting volatile int softMaxPerGroup = 8;
 
   private final Clock clock;
   private final Supplier<ManagedChannel> channelSupplier;
@@ -476,7 +478,8 @@ public class ChannelPoolDpImpl implements ChannelPool {
       }
     } else if (desiredGroups > channelGroups.size() + startingGroup.channels.size()) {
       log(Level.FINE, "Adding %d channels", desiredGroups - channelGroups.size());
-      for (int i = channelGroups.size(); i < desiredGroups; i++) {
+      int desiredExtraGroups = desiredGroups - channelGroups.size();
+      for (int i = 0; i < desiredExtraGroups * softMaxPerGroup; i++) {
         addChannel();
       }
     }
@@ -539,6 +542,7 @@ public class ChannelPoolDpImpl implements ChannelPool {
     private int numStreams;
     private Optional<Float> ewma_network_latency_ms = Optional.empty();
     private Optional<Float> traffic_weight = Optional.empty();
+    // TODO: we probably don't need to set this here, all the processing happens in SessionList.
     private volatile PeerLoadInfo afeLoad = PeerLoadInfo.getDefaultInstance();
 
     public AfeChannelGroup(AfeId afeId) {
