@@ -4,29 +4,25 @@
 package com.google.bigtable.v2;
 
 /**
- * <pre>
- * Internal usage only.
- * </pre>
- *
- * Protobuf type {@code google.bigtable.v2.SessionRequestStats}
+ * Protobuf type {@code google.bigtable.v2.PeerLoadUpdateResponse}
  */
-public final class SessionRequestStats extends
+public final class PeerLoadUpdateResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionRequestStats)
-    SessionRequestStatsOrBuilder {
+    // @@protoc_insertion_point(message_implements:google.bigtable.v2.PeerLoadUpdateResponse)
+    PeerLoadUpdateResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use SessionRequestStats.newBuilder() to construct.
-  private SessionRequestStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PeerLoadUpdateResponse.newBuilder() to construct.
+  private PeerLoadUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private SessionRequestStats() {
+  private PeerLoadUpdateResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new SessionRequestStats();
+    return new PeerLoadUpdateResponse();
   }
 
   @java.lang.Override
@@ -36,53 +32,41 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequestStats_descriptor;
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PeerLoadUpdateResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequestStats_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PeerLoadUpdateResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionRequestStats.class, com.google.bigtable.v2.SessionRequestStats.Builder.class);
+            com.google.bigtable.v2.PeerLoadUpdateResponse.class, com.google.bigtable.v2.PeerLoadUpdateResponse.Builder.class);
   }
 
-  public static final int BACKEND_LATENCY_FIELD_NUMBER = 1;
-  private com.google.protobuf.Duration backendLatency_;
+  public static final int LOAD_INFO_FIELD_NUMBER = 1;
+  private com.google.bigtable.v2.PeerLoadInfo loadInfo_;
   /**
-   * <pre>
-   * Backend (critical section) latency for the request.
-   * </pre>
-   *
-   * <code>.google.protobuf.Duration backend_latency = 1;</code>
-   * @return Whether the backendLatency field is set.
+   * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
+   * @return Whether the loadInfo field is set.
    */
   @java.lang.Override
-  public boolean hasBackendLatency() {
-    return backendLatency_ != null;
+  public boolean hasLoadInfo() {
+    return loadInfo_ != null;
   }
   /**
-   * <pre>
-   * Backend (critical section) latency for the request.
-   * </pre>
-   *
-   * <code>.google.protobuf.Duration backend_latency = 1;</code>
-   * @return The backendLatency.
+   * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
+   * @return The loadInfo.
    */
   @java.lang.Override
-  public com.google.protobuf.Duration getBackendLatency() {
-    return backendLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+  public com.google.bigtable.v2.PeerLoadInfo getLoadInfo() {
+    return loadInfo_ == null ? com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance() : loadInfo_;
   }
   /**
-   * <pre>
-   * Backend (critical section) latency for the request.
-   * </pre>
-   *
-   * <code>.google.protobuf.Duration backend_latency = 1;</code>
+   * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
    */
   @java.lang.Override
-  public com.google.protobuf.DurationOrBuilder getBackendLatencyOrBuilder() {
-    return backendLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+  public com.google.bigtable.v2.PeerLoadInfoOrBuilder getLoadInfoOrBuilder() {
+    return loadInfo_ == null ? com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance() : loadInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -99,8 +83,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (backendLatency_ != null) {
-      output.writeMessage(1, getBackendLatency());
+    if (loadInfo_ != null) {
+      output.writeMessage(1, getLoadInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -111,9 +95,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (backendLatency_ != null) {
+    if (loadInfo_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getBackendLatency());
+        .computeMessageSize(1, getLoadInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -125,15 +109,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.google.bigtable.v2.SessionRequestStats)) {
+    if (!(obj instanceof com.google.bigtable.v2.PeerLoadUpdateResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SessionRequestStats other = (com.google.bigtable.v2.SessionRequestStats) obj;
+    com.google.bigtable.v2.PeerLoadUpdateResponse other = (com.google.bigtable.v2.PeerLoadUpdateResponse) obj;
 
-    if (hasBackendLatency() != other.hasBackendLatency()) return false;
-    if (hasBackendLatency()) {
-      if (!getBackendLatency()
-          .equals(other.getBackendLatency())) return false;
+    if (hasLoadInfo() != other.hasLoadInfo()) return false;
+    if (hasLoadInfo()) {
+      if (!getLoadInfo()
+          .equals(other.getLoadInfo())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -146,78 +130,78 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasBackendLatency()) {
-      hash = (37 * hash) + BACKEND_LATENCY_FIELD_NUMBER;
-      hash = (53 * hash) + getBackendLatency().hashCode();
+    if (hasLoadInfo()) {
+      hash = (37 * hash) + LOAD_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(byte[] data)
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(java.io.InputStream input)
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseDelimitedFrom(java.io.InputStream input)
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseDelimitedFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.bigtable.v2.SessionRequestStats parseFrom(
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -230,7 +214,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.bigtable.v2.SessionRequestStats prototype) {
+  public static Builder newBuilder(com.google.bigtable.v2.PeerLoadUpdateResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -246,30 +230,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Internal usage only.
-   * </pre>
-   *
-   * Protobuf type {@code google.bigtable.v2.SessionRequestStats}
+   * Protobuf type {@code google.bigtable.v2.PeerLoadUpdateResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionRequestStats)
-      com.google.bigtable.v2.SessionRequestStatsOrBuilder {
+      // @@protoc_insertion_point(builder_implements:google.bigtable.v2.PeerLoadUpdateResponse)
+      com.google.bigtable.v2.PeerLoadUpdateResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequestStats_descriptor;
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PeerLoadUpdateResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequestStats_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PeerLoadUpdateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionRequestStats.class, com.google.bigtable.v2.SessionRequestStats.Builder.class);
+              com.google.bigtable.v2.PeerLoadUpdateResponse.class, com.google.bigtable.v2.PeerLoadUpdateResponse.Builder.class);
     }
 
-    // Construct using com.google.bigtable.v2.SessionRequestStats.newBuilder()
+    // Construct using com.google.bigtable.v2.PeerLoadUpdateResponse.newBuilder()
     private Builder() {
 
     }
@@ -283,10 +263,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      backendLatency_ = null;
-      if (backendLatencyBuilder_ != null) {
-        backendLatencyBuilder_.dispose();
-        backendLatencyBuilder_ = null;
+      loadInfo_ = null;
+      if (loadInfoBuilder_ != null) {
+        loadInfoBuilder_.dispose();
+        loadInfoBuilder_ = null;
       }
       return this;
     }
@@ -294,17 +274,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequestStats_descriptor;
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PeerLoadUpdateResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.SessionRequestStats getDefaultInstanceForType() {
-      return com.google.bigtable.v2.SessionRequestStats.getDefaultInstance();
+    public com.google.bigtable.v2.PeerLoadUpdateResponse getDefaultInstanceForType() {
+      return com.google.bigtable.v2.PeerLoadUpdateResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.SessionRequestStats build() {
-      com.google.bigtable.v2.SessionRequestStats result = buildPartial();
+    public com.google.bigtable.v2.PeerLoadUpdateResponse build() {
+      com.google.bigtable.v2.PeerLoadUpdateResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -312,19 +292,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.SessionRequestStats buildPartial() {
-      com.google.bigtable.v2.SessionRequestStats result = new com.google.bigtable.v2.SessionRequestStats(this);
+    public com.google.bigtable.v2.PeerLoadUpdateResponse buildPartial() {
+      com.google.bigtable.v2.PeerLoadUpdateResponse result = new com.google.bigtable.v2.PeerLoadUpdateResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.google.bigtable.v2.SessionRequestStats result) {
+    private void buildPartial0(com.google.bigtable.v2.PeerLoadUpdateResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.backendLatency_ = backendLatencyBuilder_ == null
-            ? backendLatency_
-            : backendLatencyBuilder_.build();
+        result.loadInfo_ = loadInfoBuilder_ == null
+            ? loadInfo_
+            : loadInfoBuilder_.build();
       }
     }
 
@@ -362,18 +342,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.google.bigtable.v2.SessionRequestStats) {
-        return mergeFrom((com.google.bigtable.v2.SessionRequestStats)other);
+      if (other instanceof com.google.bigtable.v2.PeerLoadUpdateResponse) {
+        return mergeFrom((com.google.bigtable.v2.PeerLoadUpdateResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.google.bigtable.v2.SessionRequestStats other) {
-      if (other == com.google.bigtable.v2.SessionRequestStats.getDefaultInstance()) return this;
-      if (other.hasBackendLatency()) {
-        mergeBackendLatency(other.getBackendLatency());
+    public Builder mergeFrom(com.google.bigtable.v2.PeerLoadUpdateResponse other) {
+      if (other == com.google.bigtable.v2.PeerLoadUpdateResponse.getDefaultInstance()) return this;
+      if (other.hasLoadInfo()) {
+        mergeLoadInfo(other.getLoadInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -403,7 +383,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getBackendLatencyFieldBuilder().getBuilder(),
+                  getLoadInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -425,159 +405,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.Duration backendLatency_;
+    private com.google.bigtable.v2.PeerLoadInfo loadInfo_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> backendLatencyBuilder_;
+        com.google.bigtable.v2.PeerLoadInfo, com.google.bigtable.v2.PeerLoadInfo.Builder, com.google.bigtable.v2.PeerLoadInfoOrBuilder> loadInfoBuilder_;
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
-     * @return Whether the backendLatency field is set.
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
+     * @return Whether the loadInfo field is set.
      */
-    public boolean hasBackendLatency() {
+    public boolean hasLoadInfo() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
-     * @return The backendLatency.
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
+     * @return The loadInfo.
      */
-    public com.google.protobuf.Duration getBackendLatency() {
-      if (backendLatencyBuilder_ == null) {
-        return backendLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+    public com.google.bigtable.v2.PeerLoadInfo getLoadInfo() {
+      if (loadInfoBuilder_ == null) {
+        return loadInfo_ == null ? com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance() : loadInfo_;
       } else {
-        return backendLatencyBuilder_.getMessage();
+        return loadInfoBuilder_.getMessage();
       }
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
-    public Builder setBackendLatency(com.google.protobuf.Duration value) {
-      if (backendLatencyBuilder_ == null) {
+    public Builder setLoadInfo(com.google.bigtable.v2.PeerLoadInfo value) {
+      if (loadInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        backendLatency_ = value;
+        loadInfo_ = value;
       } else {
-        backendLatencyBuilder_.setMessage(value);
+        loadInfoBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
-    public Builder setBackendLatency(
-        com.google.protobuf.Duration.Builder builderForValue) {
-      if (backendLatencyBuilder_ == null) {
-        backendLatency_ = builderForValue.build();
+    public Builder setLoadInfo(
+        com.google.bigtable.v2.PeerLoadInfo.Builder builderForValue) {
+      if (loadInfoBuilder_ == null) {
+        loadInfo_ = builderForValue.build();
       } else {
-        backendLatencyBuilder_.setMessage(builderForValue.build());
+        loadInfoBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
-    public Builder mergeBackendLatency(com.google.protobuf.Duration value) {
-      if (backendLatencyBuilder_ == null) {
+    public Builder mergeLoadInfo(com.google.bigtable.v2.PeerLoadInfo value) {
+      if (loadInfoBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          backendLatency_ != null &&
-          backendLatency_ != com.google.protobuf.Duration.getDefaultInstance()) {
-          getBackendLatencyBuilder().mergeFrom(value);
+          loadInfo_ != null &&
+          loadInfo_ != com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance()) {
+          getLoadInfoBuilder().mergeFrom(value);
         } else {
-          backendLatency_ = value;
+          loadInfo_ = value;
         }
       } else {
-        backendLatencyBuilder_.mergeFrom(value);
+        loadInfoBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
-    public Builder clearBackendLatency() {
+    public Builder clearLoadInfo() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      backendLatency_ = null;
-      if (backendLatencyBuilder_ != null) {
-        backendLatencyBuilder_.dispose();
-        backendLatencyBuilder_ = null;
+      loadInfo_ = null;
+      if (loadInfoBuilder_ != null) {
+        loadInfoBuilder_.dispose();
+        loadInfoBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
-    public com.google.protobuf.Duration.Builder getBackendLatencyBuilder() {
+    public com.google.bigtable.v2.PeerLoadInfo.Builder getLoadInfoBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getBackendLatencyFieldBuilder().getBuilder();
+      return getLoadInfoFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
-    public com.google.protobuf.DurationOrBuilder getBackendLatencyOrBuilder() {
-      if (backendLatencyBuilder_ != null) {
-        return backendLatencyBuilder_.getMessageOrBuilder();
+    public com.google.bigtable.v2.PeerLoadInfoOrBuilder getLoadInfoOrBuilder() {
+      if (loadInfoBuilder_ != null) {
+        return loadInfoBuilder_.getMessageOrBuilder();
       } else {
-        return backendLatency_ == null ?
-            com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+        return loadInfo_ == null ?
+            com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance() : loadInfo_;
       }
     }
     /**
-     * <pre>
-     * Backend (critical section) latency for the request.
-     * </pre>
-     *
-     * <code>.google.protobuf.Duration backend_latency = 1;</code>
+     * <code>.google.bigtable.v2.PeerLoadInfo load_info = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
-        getBackendLatencyFieldBuilder() {
-      if (backendLatencyBuilder_ == null) {
-        backendLatencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
-                getBackendLatency(),
+        com.google.bigtable.v2.PeerLoadInfo, com.google.bigtable.v2.PeerLoadInfo.Builder, com.google.bigtable.v2.PeerLoadInfoOrBuilder> 
+        getLoadInfoFieldBuilder() {
+      if (loadInfoBuilder_ == null) {
+        loadInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.bigtable.v2.PeerLoadInfo, com.google.bigtable.v2.PeerLoadInfo.Builder, com.google.bigtable.v2.PeerLoadInfoOrBuilder>(
+                getLoadInfo(),
                 getParentForChildren(),
                 isClean());
-        backendLatency_ = null;
+        loadInfo_ = null;
       }
-      return backendLatencyBuilder_;
+      return loadInfoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -592,23 +536,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:google.bigtable.v2.SessionRequestStats)
+    // @@protoc_insertion_point(builder_scope:google.bigtable.v2.PeerLoadUpdateResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionRequestStats)
-  private static final com.google.bigtable.v2.SessionRequestStats DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:google.bigtable.v2.PeerLoadUpdateResponse)
+  private static final com.google.bigtable.v2.PeerLoadUpdateResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionRequestStats();
+    DEFAULT_INSTANCE = new com.google.bigtable.v2.PeerLoadUpdateResponse();
   }
 
-  public static com.google.bigtable.v2.SessionRequestStats getDefaultInstance() {
+  public static com.google.bigtable.v2.PeerLoadUpdateResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionRequestStats>
-      PARSER = new com.google.protobuf.AbstractParser<SessionRequestStats>() {
+  private static final com.google.protobuf.Parser<PeerLoadUpdateResponse>
+      PARSER = new com.google.protobuf.AbstractParser<PeerLoadUpdateResponse>() {
     @java.lang.Override
-    public SessionRequestStats parsePartialFrom(
+    public PeerLoadUpdateResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -627,17 +571,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<SessionRequestStats> parser() {
+  public static com.google.protobuf.Parser<PeerLoadUpdateResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SessionRequestStats> getParserForType() {
+  public com.google.protobuf.Parser<PeerLoadUpdateResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.bigtable.v2.SessionRequestStats getDefaultInstanceForType() {
+  public com.google.bigtable.v2.PeerLoadUpdateResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
