@@ -317,19 +317,14 @@ message SessionResponse {
     // Error results are separate to allow for multiple vRPC responses,
     // e.g. for streaming calls like scans (post-V1). See Flow Control.
     VirtualRpcResponse virtual_rpc = 2;
-
     ErrorResponse error = 3;
 
     SessionParametersResponse session_parameters = 4;
-
     HeartbeatResponse heartbeat = 5;
-
     GoAwayResponse go_away = 6;
-
     SessionRefreshConfig session_refresh_config = 7;
-
-    PeerLoadInfo peer_load_info = 8;
   }
+  optional PeerLoadInfo peer_load_info = 8;
 }
 
 // Internal usage only.
