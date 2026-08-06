@@ -242,7 +242,7 @@ class SessionList {
     }
     String preferredVersion = optionalPreferredVersion.get();
 
-    double maxWeight = afeHandles.values().stream().mapToDouble(afe -> afe.weight).max().orElse(100.0);
+    double maxWeight = afeHandles.values().stream().mapToDouble(afe -> afe.weight).max().orElse(1.0);
 
     // TODO: find out what is causing cost of NaN, and also make this code more resilient to NaN.
     // Higher cost --> less desirable.
@@ -331,39 +331,38 @@ class SessionList {
     List<Long> idsWeightInBetween = new ArrayList<>();
 
     for (AfeHandle afe : sortedAfes) {
-      int delta_weight = 10;
+      float deltaWeight = 0.1f;
       if (afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion)) {
-        delta_weight = (int) Math.round(100.0 * ms_since_last_update / Math.max(1, afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getConvergeanceTimeMs() == 0 ? 1000 : afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getConvergeanceTimeMs()));
+        deltaWeight = (float) (1.0 * ms_since_last_update / Math.max(1, afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getConvergeanceTimeMs() == 0 ? 1000 : afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getConvergeanceTimeMs()));
       }
 
-      int oldWeight = afe.weight;
+      float oldWeight = afe.weight;
 
       if ((rifRemaining > 0 || minAfesLeftToPick > 0) && afe.refCount > 0 && (!afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion) || afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getAvailableRif() > 0)) {
-        // Ensure that at least one AFE gets a weight of 100.
-        delta_weight = (int) Math.max(delta_weight, 100 - maxPickedWeight);
+        // Ensure that at least one AFE gets a weight of 1.0.
+        deltaWeight = Math.max(deltaWeight, 1.0f - (float) maxPickedWeight);
         // Pick AFE to use, it's a good one.
         // We want to continue sending traffic to this AFE.
         rifRemaining -= afesByPotentialRif.get(afe);
         minAfesLeftToPick--;
-        afe.weight = Math.min(100, afe.weight + delta_weight);
+        afe.weight = Math.min(1.0f, afe.weight + deltaWeight);
       } else {
         // We want to reduce traffic to this AFE.
-        afe.weight = Math.max(0, afe.weight - delta_weight);
+        afe.weight = Math.max(0.0f, afe.weight - deltaWeight);
       }
 
       long id = handleToId.get(afe).getId();
 
-      if (afe.weight == 100) {
+      if (afe.weight >= 1.0f) {
         numWeight100++;
         idsWeight100.add(id);
-      } else if (afe.weight == 0) {
+      } else if (afe.weight <= 0.0f) {
         numWeight0++;
       } else {
         numWeightInBetween++;
         idsWeightInBetween.add(id);
       }
 
-      // if (oldWeight != afe.weight || afe.weight == 100 || afe.weight == 1) {
       double potentialRif = afesByPotentialRif.get(afe);
       int outstandingRif2 = afe.getNumOutstanding();
       double cost = afesByCost.get(afe);
@@ -380,17 +379,16 @@ class SessionList {
       double totalLatency = expectedLatency + networkLatency;
       double latencyPerWeight = totalLatency / (peerLoadWeight < 0.00001 ? 1.0 : peerLoadWeight);
 
-      LOG.info(String.format("AFE %d: weight changed from %d to %d, potential rif: %.2f, outstanding rif: %d, num sessions: %d, cost: %.2f, expected latency: %.2f, network latency: %.2f, expected+network latency: %.2f, peer load weight: %.2f, (expected+network latency)/weight: %.2f", 
+      LOG.info(String.format("AFE %d: weight changed from %.2f to %.2f, potential rif: %.2f, outstanding rif: %d, num sessions: %d, cost: %.2f, expected latency: %.2f, network latency: %.2f, expected+network latency: %.2f, peer load weight: %.2f, (expected+network latency)/weight: %.2f", 
           id, oldWeight, afe.weight, potentialRif, outstandingRif2, afe.refCount, cost, expectedLatency, networkLatency, totalLatency, peerLoadWeight, latencyPerWeight));
-      // }
     }
-    double usableSessions = afeHandles.values().stream().mapToDouble(afe -> afe.refCount * afe.weight / 100.0).sum();
+    double usableSessions = afeHandles.values().stream().mapToDouble(afe -> afe.refCount * afe.weight).sum();
     double totalSessions = afeHandles.values().stream().mapToDouble(afe -> afe.refCount).sum();
     // Assumes no multiplexing.
     poolStats.usableFraction = usableSessions / totalSessions;
     LOG.info(String.format("%d pct of streams are useable out of %d total", (int) (poolStats.usableFraction * 100), (int) totalSessions));
 
-    LOG.info(String.format("AFE weights: %d with weight 100 (ids: %s), %d with weight 0, %d with weight in-between (ids: %s)", numWeight100, idsWeight100, numWeight0, numWeightInBetween, idsWeightInBetween));
+    LOG.info(String.format("AFE weights: %d with weight 1.0 (ids: %s), %d with weight 0.0, %d with weight in-between (ids: %s)", numWeight100, idsWeight100, numWeight0, numWeightInBetween, idsWeightInBetween));
   }
 
   void checkHeartbeat(Clock clock) {
@@ -646,8 +644,8 @@ class SessionList {
 
     // TODO: adjust available in-flight requests to add in current in-flight requests from client (if any).
     PeerLoadInfo afeLoad = PeerLoadInfo.getDefaultInstance();
-    // 0-100.
-    int weight = 50;
+    // 0.0-1.0.
+    float weight = 0.0f;
 
     public AfeHandle() {
       sessions = new ArrayDeque<>();
