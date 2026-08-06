@@ -90,6 +90,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
   private long sessionNum = 0;
   private final SessionFactory factory;
   private final SessionDescriptor<OpenReqT> descriptor;
+  private final BigtableTimer timer;
 
   // Set once by start(), and read by both user & grpc threads
   private volatile OpenParams openParams;
@@ -155,6 +156,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       CallOptions callOptions,
       SessionDescriptor<OpenReqT> sessionDescriptor,
       String name,
+      BigtableTimer timer,
       ScheduledExecutorService executorService) {
     this(
         metrics,
@@ -165,6 +167,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
         callOptions,
         sessionDescriptor,
         name,
+        timer,
         executorService,
         createInitialBudget(configManager.getClientConfiguration()));
   }
@@ -180,6 +183,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       CallOptions callOptions,
       SessionDescriptor<OpenReqT> sessionDescriptor,
       String name,
+      BigtableTimer timer,
       ScheduledExecutorService executorService,
       SessionCreationBudget budget) {
     this.metrics = metrics;
@@ -188,6 +192,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
     this.factory =
         new SessionFactory(channelPool, sessionDescriptor.getMethodDescriptor(), callOptions);
     this.descriptor = sessionDescriptor;
+    this.timer = timer;
     this.executorService = executorService;
 
     sessions = new SessionList();
@@ -319,6 +324,20 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
   }
 
   @Override
+  public synchronized boolean awaitTerminated(Duration timeout) throws InterruptedException {
+    long timeoutNanos = timeout.toNanos();
+    long deadline = System.nanoTime() + timeoutNanos;
+    while (!sessions.getAllSessions().isEmpty()) {
+      long remaining = deadline - System.nanoTime();
+      if (remaining <= 0) {
+        return false;
+      }
+      this.wait(remaining / 1000000, (int) (remaining % 1000000));
+    }
+    return true;
+  }
+
+  @Override
   public void close(CloseSessionRequest req) {
     configListenerHandle.close();
 
@@ -344,6 +363,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       }
       watchdog.close();
       sessions.close(req);
+      this.notifyAll();
     }
   }
 
@@ -424,7 +444,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       try (Scope ignored = io.opentelemetry.context.Context.root().makeCurrent()) {
 
         SessionStream stream = factory.createNew();
-        Session session = new SessionImpl(metrics, info, sessionNum++, stream);
+        Session session = new SessionImpl(metrics, info, sessionNum++, stream, timer);
         SessionHandle handle = sessions.newHandle(session);
 
         Metadata localMd = new Metadata();
@@ -588,6 +608,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
                   "Replacing abnormally closed session %s", handle.getSession().getLogName()));
           createSession(openParams.withIncrementedAttempts(), true);
         }
+        this.notifyAll();
       }
     }
 
@@ -798,6 +819,14 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       throw new IllegalStateException("requestNext can't be called until data has been received");
     }
 
+    @Override
+    public boolean isDone() {
+      synchronized (SessionPoolImpl.this) {
+        if (realCall != null && realCall != NOOP_CALL) return realCall.isDone();
+        return isCancelled;
+      }
+    }
+
     private void drainTo(SessionHandle handle) {
       synchronized (SessionPoolImpl.this) {
         if (realCall == null) {
@@ -929,5 +958,10 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
         @Override
         public void requestNext() {}
+
+        @Override
+        public boolean isDone() {
+          return true;
+        }
       };
 }

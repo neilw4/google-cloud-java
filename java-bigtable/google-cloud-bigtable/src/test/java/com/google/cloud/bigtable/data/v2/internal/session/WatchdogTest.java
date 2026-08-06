@@ -33,15 +33,16 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ScheduledExecutorService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 public class WatchdogTest {
   private final Duration interval = Duration.ofMinutes(5);
-  private BigtableTimer timer;
   private SessionPoolImpl.Watchdog watchdog;
   private SessionList sessions;
   private FakeSession fakeSession = new FakeSession();
@@ -53,7 +54,6 @@ public class WatchdogTest {
   void setUp() {
     // run() is invoked synchronously in tests; the timer is wired in only so the constructor
     // signature is satisfied. start() / close() are not exercised here.
-    timer = new NoOpBigtableTimer();
 
     now = Instant.now();
     fakeClock = new FakeClock(now);
@@ -61,39 +61,11 @@ public class WatchdogTest {
     watchdog =
         new Watchdog(
             new java.util.concurrent.locks.ReentrantLock(),
-            timer,
-            MoreExecutors.directExecutor(),
+            Mockito.mock(ScheduledExecutorService.class),
             interval,
             sessions,
             NoopMetrics.NoopDebugTracer.INSTANCE,
             fakeClock);
-  }
-
-  // A BigtableTimer that drops every newTimeout(). Used because awaitCloseTest drives the watchdog
-  // by calling run() directly; the scheduling layer is not under test.
-  private static final class NoOpBigtableTimer implements BigtableTimer {
-    @Override
-    public Timeout newTimeout(Runnable task, Executor executor, long delay, TimeUnit unit) {
-      return new Timeout() {
-        @Override
-        public boolean cancel() {
-          return false;
-        }
-
-        @Override
-        public boolean isCancelled() {
-          return true;
-        }
-      };
-    }
-
-    @Override
-    public Registration onStop(Runnable hook) {
-      return () -> {};
-    }
-
-    @Override
-    public void stop() {}
   }
 
   @Test

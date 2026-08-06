@@ -17,6 +17,7 @@ package com.google.cloud.bigtable.data.v2.internal.channels;
 
 import com.google.bigtable.v2.PeerInfo;
 import com.google.bigtable.v2.PeerInfo.TransportType;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionRequest;
 import com.google.bigtable.v2.SessionResponse;
 import io.grpc.Metadata;

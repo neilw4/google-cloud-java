@@ -33,6 +33,7 @@ import com.google.bigtable.v2.OpenFakeSessionRequest.ActionList;
 import com.google.bigtable.v2.OpenFakeSessionRequest.StreamError;
 import com.google.bigtable.v2.OpenSessionRequest;
 import com.google.bigtable.v2.OpenSessionResponse;
+import com.google.bigtable.v2.PeerLoadInfo;
 import com.google.bigtable.v2.SessionFakeScriptedRequest;
 import com.google.bigtable.v2.SessionFakeScriptedResponse;
 import com.google.bigtable.v2.SessionParametersResponse;
@@ -713,6 +714,9 @@ public class SessionImplTest {
             capturedStatus.set(status);
             onCloseLatch.countDown();
           }
+
+          @Override
+          public void onPeerLoad(PeerLoadInfo peerLoad) {}
         };
 
     session.start(
@@ -753,6 +757,9 @@ public class SessionImplTest {
             onCloseLatch.countDown();
             throw new RuntimeException("simulated onClose failure");
           }
+
+          @Override
+          public void onPeerLoad(PeerLoadInfo peerLoad) {}
         };
 
     session.start(
@@ -805,6 +812,9 @@ public class SessionImplTest {
             onCloseInvoked.countDown();
             throw new RuntimeException("simulated onClose failure during abort");
           }
+
+          @Override
+          public void onPeerLoad(PeerLoadInfo peerLoad) {}
         };
 
     session.start(

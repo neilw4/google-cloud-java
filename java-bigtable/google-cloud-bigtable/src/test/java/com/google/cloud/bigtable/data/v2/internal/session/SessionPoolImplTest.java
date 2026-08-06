@@ -171,7 +171,7 @@ public class SessionPoolImplTest {
             FakeDescriptor.FAKE_SESSION,
             "fake-pool",
             testTimer,
-            MoreExecutors.directExecutor());
+            executor);
   }
 
   @AfterEach
@@ -256,7 +256,7 @@ public class SessionPoolImplTest {
               FakeDescriptor.FAKE_SESSION,
               "fake-pool",
               testTimer,
-              MoreExecutors.directExecutor());
+              executor);
 
       // session ack should be delayed by at least 10ms
       testSessionPool.start(OpenFakeSessionRequest.getDefaultInstance(), new Metadata());
@@ -357,7 +357,7 @@ public class SessionPoolImplTest {
               FakeDescriptor.FAKE_SESSION,
               "fake-pool-in-flight",
               testTimer,
-              MoreExecutors.directExecutor());
+              executor);
 
       testSessionPool.start(OpenFakeSessionRequest.getDefaultInstance(), new Metadata());
 
@@ -476,7 +476,7 @@ public class SessionPoolImplTest {
               FakeDescriptor.FAKE_SESSION,
               "fake-pool",
               testTimer,
-              MoreExecutors.directExecutor());
+              executor);
 
       Context.current()
           .withDeadlineAfter(1, TimeUnit.MINUTES, executor)
@@ -537,7 +537,7 @@ public class SessionPoolImplTest {
               FakeDescriptor.FAKE_SESSION,
               "fake-pool",
               mockTimer,
-              MoreExecutors.directExecutor(),
+              executor,
               budget);
     }
 
@@ -666,7 +666,7 @@ public class SessionPoolImplTest {
               FakeDescriptor.FAKE_SESSION,
               "fake-pool",
               mockTimer,
-              MoreExecutors.directExecutor(),
+              executor,
               budget);
     }
 
@@ -766,7 +766,7 @@ public class SessionPoolImplTest {
               FakeDescriptor.FAKE_SESSION,
               "fake-pool",
               mockTimer,
-              MoreExecutors.directExecutor(),
+              executor,
               budget);
     }
 

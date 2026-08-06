@@ -461,6 +461,24 @@ class SessionList {
       }
     }
 
+    void onPendingVRpcCancelled() {
+      AfeHandle afeHandle = this.afe.get();
+
+      poolStats.inUseCount--;
+      inUseSessions.remove(this);
+
+      if (session.getState() == SessionState.READY) {
+        poolStats.readyCount++;
+        afeHandle.sessions.add(this);
+        afeHandle.lastConnected = Instant.now();
+
+        // If this is the first session returned to the pool, transition the afe to ready list
+        if (afeHandle.sessions.size() == 1) {
+          afesWithReadySessions.add(afeHandle);
+        }
+      }
+    }
+
     /**
      * Server started graceful refresh. The session is still available, but a replacement is being
      * searched for.

@@ -548,6 +548,9 @@ public class SessionImpl implements Session, VRpcSessionApi {
   // region SessionStream event handlers
   private void dispatchResponseMessage(SessionResponse message) {
     sessionSyncContext.throwIfNotInThisSynchronizationContext();
+    if (message.hasPeerLoadInfo()) {
+      handlePeerLoadResponse(message.getPeerLoadInfo());
+    }
     switch (message.getPayloadCase()) {
       case OPEN_SESSION:
         handleOpenSessionResponse(message.getOpenSession());
@@ -564,9 +567,9 @@ public class SessionImpl implements Session, VRpcSessionApi {
       case HEARTBEAT:
         handleHeartBeatResponse(message.getHeartbeat());
         break;
-      case PEER_LOAD_INFO:
-        handlePeerLoadResponse(message.getPeerLoadInfo());
-        break;
+      // case PEER_LOAD_INFO:
+      //   handlePeerLoadResponse(message.getPeerLoadInfo());
+      //   break;
       case SESSION_REFRESH_CONFIG:
         handleSessionRefreshConfigResponse(message.getSessionRefreshConfig());
         break;
@@ -681,9 +684,8 @@ public class SessionImpl implements Session, VRpcSessionApi {
   }
 
   private void handlePeerLoadResponse(PeerLoadInfo peerLoad) {
-    synchronized (lock) {
-      stream.updatePeerLoad(peerLoad);
-    }
+    sessionSyncContext.throwIfNotInThisSynchronizationContext();
+    stream.updatePeerLoad(peerLoad);
     sessionListener.onPeerLoad(peerLoad);
   }
 
