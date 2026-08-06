@@ -278,7 +278,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
                   SessionHandle handle = maxAfe.sessions.peek();
                   if (handle != null) {
-                    // TODO: update the poolScaleTask logic for removing extra sessions. First, target AFEs with more sessions than afe.afeLoad.getVersionedLoadInfoMap().madeupgetonlyentryfunction().getAvailableRif(), and remove the ones with the most sessions. If that prevents AFEs from having too many sessions, remove sessions from those with the lowest weight - prefer to remove all sessions from one afe as opposed to a portion of sessions from many afes.
+                    // TODO: update the poolScaleTask logic for removing extra sessions. First, target AFEs with more sessions than afe.afeLoad.getAvailableRif(), and remove the ones with the most sessions. If that prevents AFEs from having too many sessions, remove sessions from those with the lowest weight - prefer to remove all sessions from one afe as opposed to a portion of sessions from many afes.
                     handle.onSessionClosing();
                     handle.getSession().close(CloseSessionRequest.getDefaultInstance());
                     removedPerAfe.put(maxAfe, removedPerAfe.getOrDefault(maxAfe, 0) + 1);

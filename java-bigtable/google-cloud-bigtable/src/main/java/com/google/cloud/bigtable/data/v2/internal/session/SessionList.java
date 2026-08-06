@@ -228,11 +228,11 @@ class SessionList {
     Map<AfeHandle, Double> afesByNetworkLatency = mapWithAverage(afeHandles.values(), afe -> afe.transportLatency.samples > 10 ? Optional.of(afe.getTransportCost() / 1_000_000.0) : Optional.<Double>empty(), 0.5);
 
     // Identify most common AFE load version, if they're all the same, pick the highest version.
-    Optional<String> optionalPreferredVersion = afeHandles.values().stream()
-    .flatMap(afe -> afe.afeLoad.getVersionedLoadInfoMap().keySet().stream())
+    Optional<Integer> optionalPreferredVersion = afeHandles.values().stream()
+    .map(afe -> afe.afeLoad.getVersion())
     .collect(Collectors.groupingBy(v -> v, Collectors.counting()))
     .entrySet().stream()
-    .max(Map.Entry.<String, Long>comparingByValue()
+    .max(Map.Entry.<Integer, Long>comparingByValue()
       .thenComparing(Map.Entry::getKey))
     .map(Map.Entry::getKey);
 
@@ -240,18 +240,18 @@ class SessionList {
       LOG.warning("No load data for any AFE, skipping weight update.");
       return;
     }
-    String preferredVersion = optionalPreferredVersion.get();
+    int preferredVersion = optionalPreferredVersion.get();
 
     double maxWeight = afeHandles.values().stream().mapToDouble(afe -> afe.weight).max().orElse(1.0);
 
     // TODO: find out what is causing cost of NaN, and also make this code more resilient to NaN.
     // Higher cost --> less desirable.
     Map<AfeHandle, Double> afesByCost = mapWithAverage(afeHandles.values(), afe -> {
-              if (!afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion)) {
-                LOG.warning(String.format("Unexpected condition: AFE %d missing preferred version %s", handleToId.get(afe).getId(), preferredVersion));
+              if (afe.afeLoad.getVersion() != preferredVersion) {
+                LOG.warning(String.format("Unexpected condition: AFE %d missing preferred version %d", handleToId.get(afe).getId(), preferredVersion));
                 return Optional.<Double>empty();
               }
-              PeerLoadInfo.VersionedPeerInfo loadInfo = afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion);
+              PeerLoadInfo loadInfo = afe.afeLoad;
 
               // Prefer to use the same set of AFEs where possible
               double alreadyPickedBonus = 1.0;
@@ -268,14 +268,13 @@ class SessionList {
     sortedAfes.sort(Comparator.comparingDouble(afe -> afesByCost.get(afe)));
 
     Map<AfeHandle, Double> afesByPotentialRif = mapWithAverage(afeHandles.values(), afe -> {
-              if (!afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion)) {
+              if (afe.afeLoad.getVersion() != preferredVersion) {
                 return Optional.<Double>empty();
               }
 
-              PeerLoadInfo.VersionedPeerInfo loadInfo = afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion);
               return Optional.of((double) (Math.max(0, Math.min(
                 // RIFs that the server reports it can handle (plus requests from the client that the server was already handling).
-                loadInfo.getAvailableRif(),
+                afe.afeLoad.getAvailableRif(),
                 // RIFs that the client can send to this server, i.e. number of sessions (because sessions aren't multiplexed).
                 afe.refCount))));
     }, 1);
@@ -311,7 +310,7 @@ class SessionList {
     double tempRifRemaining = expectedRif;
     int tempMinAfesLeft = 2;
     for (AfeHandle afe : sortedAfes) {
-      if ((tempRifRemaining > 0 || tempMinAfesLeft > 0) && afe.refCount > 0 && (!afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion) || afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getAvailableRif() > 0)) {
+      if ((tempRifRemaining > 0 || tempMinAfesLeft > 0) && afe.refCount > 0 && (afe.afeLoad.getVersion() != preferredVersion || afe.afeLoad.getAvailableRif() > 0)) {
         maxPickedWeight = Math.max(maxPickedWeight, afe.weight);
         tempRifRemaining -= afesByPotentialRif.get(afe);
         tempMinAfesLeft--;
@@ -328,13 +327,13 @@ class SessionList {
 
     for (AfeHandle afe : sortedAfes) {
       float deltaWeight = 0.1f;
-      if (afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion)) {
-        deltaWeight = (float) (1.0 * ms_since_last_update / Math.max(1, afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getConvergeanceTimeMs() == 0 ? 1000 : afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getConvergeanceTimeMs()));
+      if (afe.afeLoad.getVersion() == preferredVersion) {
+        deltaWeight = (float) (1.0 * ms_since_last_update / Math.max(1, afe.afeLoad.getConvergenceTimeMs() == 0 ? 1000 : afe.afeLoad.getConvergenceTimeMs()));
       }
 
       float oldWeight = afe.weight;
 
-      if ((rifRemaining > 0 || minAfesLeftToPick > 0) && afe.refCount > 0 && (!afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion) || afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion).getAvailableRif() > 0)) {
+      if ((rifRemaining > 0 || minAfesLeftToPick > 0) && afe.refCount > 0 && (afe.afeLoad.getVersion() != preferredVersion || afe.afeLoad.getAvailableRif() > 0)) {
         // Ensure that at least one AFE gets a weight of 1.0.
         deltaWeight = Math.max(deltaWeight, 1.0f - (float) maxPickedWeight);
         // Pick AFE to use, it's a good one.
@@ -365,8 +364,8 @@ class SessionList {
       
       double expectedLatency = 0.0;
       double peerLoadWeight = 1.0;
-      if (afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion)) {
-        PeerLoadInfo.VersionedPeerInfo loadInfo = afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion);
+      if (afe.afeLoad.getVersion() == preferredVersion) {
+        PeerLoadInfo loadInfo = afe.afeLoad;
         expectedLatency = loadInfo.getExpectedLatencyMs();
         peerLoadWeight = loadInfo.getWeight();
       }
@@ -666,21 +665,14 @@ class SessionList {
 
     void setAfeLoad(PeerLoadInfo newAfeLoad) {
       PeerLoadInfo.Builder afeLoadBuilder = newAfeLoad.toBuilder();
-      Map<String, PeerLoadInfo.VersionedPeerInfo> newVersionedLoadInfoMap = new HashMap<>();
 
-      for (Map.Entry<String, PeerLoadInfo.VersionedPeerInfo> entry : newAfeLoad.getVersionedLoadInfoMap().entrySet()) {
-        PeerLoadInfo.VersionedPeerInfo.Builder versionedPeerInfoBuilder = entry.getValue().toBuilder();
-
-        if (versionedPeerInfoBuilder.getConvergeanceTimeMs() == 0) {
-          versionedPeerInfoBuilder.setConvergeanceTimeMs(1000);
-        }
-        // The available RIF reported by the AFE doesn't factor in requests already in-flight from the client.
-        // Factoring this in makes it easier to reason about the number of in-flight requests we can have.
-        versionedPeerInfoBuilder.setAvailableRif(
-            versionedPeerInfoBuilder.getAvailableRif() + getNumOutstanding());
-        newVersionedLoadInfoMap.put(entry.getKey(), versionedPeerInfoBuilder.build());
+      if (afeLoadBuilder.getConvergenceTimeMs() == 0) {
+        afeLoadBuilder.setConvergenceTimeMs(1000);
       }
-      afeLoadBuilder.clearVersionedLoadInfo().putAllVersionedLoadInfo(newVersionedLoadInfoMap);
+      // The available RIF reported by the AFE doesn't factor in requests already in-flight from the client.
+      // Factoring this in makes it easier to reason about the number of in-flight requests we can have.
+      afeLoadBuilder.setAvailableRif(
+          afeLoadBuilder.getAvailableRif() + getNumOutstanding());
       this.afeLoad = afeLoadBuilder.build();
     }
   }
