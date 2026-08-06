@@ -267,10 +267,6 @@ class SessionList {
     List<AfeHandle> sortedAfes = new ArrayList<>(afeHandles.values());
     sortedAfes.sort(Comparator.comparingDouble(afe -> afesByCost.get(afe)));
 
-    // TODO: have AFEs publish their current RIF and utilization, and allow clients to compute potential RIF.
-    // General formula should be to first find target utilization, which is max(80, p75 AFE utilization),
-    // find available RIF, then reduce it using a constant multiplier to try to avoid overshooting.
-    // TODO: also look at number of sessions, which also limits RIF.
     Map<AfeHandle, Double> afesByPotentialRif = mapWithAverage(afeHandles.values(), afe -> {
               if (!afe.afeLoad.getVersionedLoadInfoMap().containsKey(preferredVersion)) {
                 return Optional.<Double>empty();
@@ -278,8 +274,8 @@ class SessionList {
 
               PeerLoadInfo.VersionedPeerInfo loadInfo = afe.afeLoad.getVersionedLoadInfoMap().get(preferredVersion);
               return Optional.of((double) (Math.max(0, Math.min(
-                // RIFs that the server can handle + RIFs that the server is already handling from this client.
-                loadInfo.getAvailableRif() + afe.getNumOutstanding(),
+                // RIFs that the server reports it can handle (plus requests from the client that the server was already handling).
+                loadInfo.getAvailableRif(),
                 // RIFs that the client can send to this server, i.e. number of sessions (because sessions aren't multiplexed).
                 afe.refCount))));
     }, 1);
@@ -434,7 +430,7 @@ class SessionList {
       if (afeHandle.sessions.size() == 1) {
         afesWithReadySessions.add(afeHandle);
       }
-      afeHandle.afeLoad = peerInfo.getLoadInfo();
+      afeHandle.setAfeLoad(peerInfo.getLoadInfo());
 
       poolStats.startingCount--;
       poolStats.readyCount++;
@@ -532,7 +528,7 @@ class SessionList {
     }
 
     void onPeerLoad(PeerLoadInfo peerLoad) {
-      afe.ifPresent(afeHandle -> afeHandle.afeLoad = peerLoad);
+      afe.ifPresent(afeHandle -> afeHandle.setAfeLoad(peerLoad));
     }
   }
 
@@ -666,6 +662,26 @@ class SessionList {
 
     int getNumOutstanding() {
       return refCount - sessions.size();
+    }
+
+    void setAfeLoad(PeerLoadInfo newAfeLoad) {
+      PeerLoadInfo.Builder afeLoadBuilder = newAfeLoad.toBuilder();
+      Map<String, PeerLoadInfo.VersionedPeerInfo> newVersionedLoadInfoMap = new HashMap<>();
+
+      for (Map.Entry<String, PeerLoadInfo.VersionedPeerInfo> entry : newAfeLoad.getVersionedLoadInfoMap().entrySet()) {
+        PeerLoadInfo.VersionedPeerInfo.Builder versionedPeerInfoBuilder = entry.getValue().toBuilder();
+
+        if (versionedPeerInfoBuilder.getConvergeanceTimeMs() == 0) {
+          versionedPeerInfoBuilder.setConvergeanceTimeMs(1000);
+        }
+        // The available RIF reported by the AFE doesn't factor in requests already in-flight from the client.
+        // Factoring this in makes it easier to reason about the number of in-flight requests we can have.
+        versionedPeerInfoBuilder.setAvailableRif(
+            versionedPeerInfoBuilder.getAvailableRif() + getNumOutstanding());
+        newVersionedLoadInfoMap.put(entry.getKey(), versionedPeerInfoBuilder.build());
+      }
+      afeLoadBuilder.clearVersionedLoadInfo().putAllVersionedLoadInfo(newVersionedLoadInfoMap);
+      this.afeLoad = afeLoadBuilder.build();
     }
   }
 
