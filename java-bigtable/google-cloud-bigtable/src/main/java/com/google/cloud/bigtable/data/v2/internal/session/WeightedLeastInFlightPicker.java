@@ -49,6 +49,9 @@ class WeightedLeastInFlightPicker extends Picker {
       return Optional.empty();
     }
 
+    // TODO: change weight to 0-1.
+    // TODO: implement logic to deal with all weights being zero from https://docs.google.com/document/d/1MCiF73XLXoHGaCjiqLRbpYrqh4WLMAmKU6E7gk2Q73c/edit?usp=sharing
+
     ThreadLocalRandom rng = ThreadLocalRandom.current();
     // Weight is from 0 to 100, and indicates likelihood that a candidate should be picked.
     List<AfeHandle> candidates = new ArrayList<>(readyAfes.stream().filter(afe -> afe.weight > 0 && (afe.weight >= 100 || rng.nextInt(100) <= afe.weight)).collect(Collectors.toList()));

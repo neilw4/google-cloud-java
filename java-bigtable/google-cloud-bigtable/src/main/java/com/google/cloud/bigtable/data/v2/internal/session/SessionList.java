@@ -644,6 +644,7 @@ class SessionList {
     private final PeakEwma transportLatency = new PeakEwma(Duration.of(500, ChronoUnit.MICROS));
     private final PeakEwma e2eLatency = new PeakEwma(Duration.ofMillis(1));
 
+    // TODO: adjust available in-flight requests to add in current in-flight requests from client (if any).
     PeerLoadInfo afeLoad = PeerLoadInfo.getDefaultInstance();
     // 0-100.
     int weight = 50;
