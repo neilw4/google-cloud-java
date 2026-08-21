@@ -1,110 +1,66 @@
-// Copyright 2026 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 syntax = "proto3";
 
 package google.bigtable.v2;
 
+import "storage/datapol/annotations/proto/semantic_annotations.proto";
+
+option go_api_flag = "OPEN_TO_OPAQUE_HYBRID";
 option csharp_namespace = "Google.Cloud.Bigtable.V2";
-option go_package = "cloud.google.com/go/bigtable/apiv2/bigtablepb;bigtablepb";
-option java_multiple_files = true;
-option java_outer_classname = "PeerInfoProto";
-option java_package = "com.google.bigtable.v2";
 option php_namespace = "Google\\Cloud\\Bigtable\\V2";
 option ruby_package = "Google::Cloud::Bigtable::V2";
-
-// PeerLoadInfo contains information about the peer that can be used for
-// load balancing.
-//
-// (-- Next ID: 8 --)
-message PeerLoadInfo {
-  // PeerLoadInfo messages with different versions cannot be safely compared.
-  // For example, one version of the logic may result in a lower expected,
-  // latency, but that doesn't mean that the client should only send traffic to
-  // the "faster" peers that use that version.
-  int32 version = 1;
-  // Peer's best guess as to how long requests will take. This may be noisy.
-  // This does not include network latency.
-  float expected_latency_ms = 2;
-  // Higher weight means that the peer is less healthy and traffic should be
-  // reduced.
-  float weight = 3;
-  // Estimate of how many more in-flight requests the peer can handle.
-  int32 available_rif = 4;
-  // Clients should slowly move traffic over this period of time to avoid
-  // sudden changes in traffic.
-  int32 convergence_time_ms = 5;
-  // Note: these fields are implementation details that may not be set in the
-  // future.
-  float utilization = 6;
-  int32 current_rif = 7;
-}
+option java_multiple_files = true;
+option java_package = "com.google.bigtable.v2";
+option java_outer_classname = "PeerInfoProto";
 
 // PeerInfo contains information about the peer that the client is
 // connecting to.
+//
+// (-- Next ID: 7 --)
 message PeerInfo {
-  // The transport type that the client used to connect to this peer.
-  enum TransportType {
-    // The transport type is unknown.
-    TRANSPORT_TYPE_UNKNOWN = 0;
-
-    // The client connected to this peer via an external network
-    // (e.g. outside Google Coud).
-    TRANSPORT_TYPE_EXTERNAL = 1;
-
-    // The client connected to this peer via CloudPath.
-    TRANSPORT_TYPE_CLOUD_PATH = 2;
-
-    // The client connected to this peer via DirectAccess.
-    TRANSPORT_TYPE_DIRECT_ACCESS = 3;
-
-    // The client connected to this peer via Bigtable Sessions using an unknown
-    // transport type.
-    TRANSPORT_TYPE_SESSION_UNKNOWN = 4;
-
-    // The client connected to this peer via Bigtable Sessions on an external
-    // network (e.g. outside Google Cloud).
-    TRANSPORT_TYPE_SESSION_EXTERNAL = 5;
-
-    // The client connected to this peer via Bigtable Sessions using CloudPath.
-    TRANSPORT_TYPE_SESSION_CLOUD_PATH = 6;
-
-    // The client connected to this peer via Bigtable Sessions using
-    // DirectAccess.
-    TRANSPORT_TYPE_SESSION_DIRECT_ACCESS = 7;
-  }
-
   // An opaque identifier for the Google Frontend which serviced this request.
   // Only set when not using DirectAccess.
-  int64 google_frontend_id = 1;
+  int64 google_frontend_id = 1 [(datapol.semantic_type) = ST_NOT_REQUIRED];
 
   // An opaque identifier for the application frontend which serviced this
   // request.
-  int64 application_frontend_id = 2;
+  int64 application_frontend_id = 2 [(datapol.semantic_type) = ST_NOT_REQUIRED];
 
   // The Cloud region of the application frontend that served this request.
-  string application_frontend_region = 6;
+  string application_frontend_region = 6
+      [(datapol.semantic_type) = ST_NOT_REQUIRED];
 
   // The Cloud zone of the application frontend that served this request.
-  string application_frontend_zone = 3 [deprecated = true];
+  string application_frontend_zone = 3
+      [deprecated = true, (datapol.semantic_type) = ST_NOT_REQUIRED];
 
   // The subzone of the application frontend that served this request, e.g. an
   // identifier for where within a zone (within the reported region) the
   // application frontend is.
-  string application_frontend_subzone = 4;
+  string application_frontend_subzone = 4
+      [(datapol.semantic_type) = ST_NOT_REQUIRED];
 
-  TransportType transport_type = 5;
-
-  PeerLoadInfo load_info = 7;
+  // The transport type that the client used to connect to this peer.
+  enum TransportType {
+    // The transport type is unknown.
+    TRANSPORT_TYPE_UNKNOWN = 0;
+    // The client connected to this peer via an external network
+    // (e.g. outside Google Cloud).
+    TRANSPORT_TYPE_EXTERNAL = 1;
+    // The client connected to this peer via CloudPath.
+    TRANSPORT_TYPE_CLOUD_PATH = 2;
+    // The client connected to this peer via DirectAccess.
+    TRANSPORT_TYPE_DIRECT_ACCESS = 3;
+    // The client connected to this peer via Bigtable Sessions using an unknown
+    // transport type.
+    TRANSPORT_TYPE_SESSION_UNKNOWN = 4;
+    // The client connected to this peer via Bigtable Sessions on an external
+    // network (e.g. outside Google Cloud).
+    TRANSPORT_TYPE_SESSION_EXTERNAL = 5;
+    // The client connected to this peer via Bigtable Sessions using CloudPath.
+    TRANSPORT_TYPE_SESSION_CLOUD_PATH = 6;
+    // The client connected to this peer via Bigtable Sessions using
+    // DirectAccess.
+    TRANSPORT_TYPE_SESSION_DIRECT_ACCESS = 7;
+  }
+  TransportType transport_type = 5 [(datapol.semantic_type) = ST_NOT_REQUIRED];
 }

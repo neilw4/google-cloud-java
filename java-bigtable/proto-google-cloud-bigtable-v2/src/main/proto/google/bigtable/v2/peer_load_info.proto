@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package google.bigtable.v2;
+
+import "google/protobuf/duration.proto";
+
+option csharp_namespace = "Google.Cloud.Bigtable.V2";
+option go_api_flag = "OPEN_TO_OPAQUE_HYBRID";
+option java_multiple_files = true;
+option java_outer_classname = "PeerLoadInfoProto";
+option java_package = "com.google.bigtable.v2";
+option php_namespace = "Google\\Cloud\\Bigtable\\V2";
+option ruby_package = "Google::Cloud::Bigtable::V2";
+
+// PeerLoadInfo contains information about the peer that can be used for
+// load balancing.
+//
+// (-- Next ID: 8 --)
+message PeerLoadInfo {
+  // PeerLoadInfo messages with different versions cannot be safely compared.
+  // For example, one version of the logic may result in a lower expected
+  // latency, but that doesn't mean that the client should only send traffic to
+  // the "faster" peers that use that version.
+  int32 version = 1;
+  // Peer's best guess as to how long requests will take. This may be noisy.
+  // This does not include network latency.
+  google.protobuf.Duration expected_latency = 2;
+  // Higher weight means that the peer is less healthy and traffic should be
+  // reduced.
+  float weight = 3;
+  // Estimate of how many more in-flight requests the peer can handle.
+  int32 available_in_flight_requests = 4;
+  // Clients should slowly move traffic over this period of time to avoid
+  // sudden changes in traffic.
+  google.protobuf.Duration convergence_time = 5;
+
+  // Note: this is an implementation detail that may not be set in the future.
+  // Current CPU utilization of the server.
+  float utilization = 6;
+  // Number of requests currently being handled by the server.
+  // Note: this is an implementation detail that may not be set in the future.
+  int32 outstanding_requests = 7;
+}
