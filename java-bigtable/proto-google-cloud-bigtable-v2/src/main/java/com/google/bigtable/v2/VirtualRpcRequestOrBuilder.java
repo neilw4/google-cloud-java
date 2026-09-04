@@ -6,28 +6,22 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface VirtualRpcRequestOrBuilder
-    extends
+public interface VirtualRpcRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.VirtualRpcRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Client chosen, monotonically increasing identifier for the request.
    * Must be unique within a session.
    * </pre>
    *
    * <code>int64 rpc_id = 1;</code>
-   *
    * @return The rpcId.
    */
   long getRpcId();
 
   /**
-   *
-   *
    * <pre>
    * Attempt deadline.
    *
@@ -36,14 +30,10 @@ public interface VirtualRpcRequestOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration deadline = 2;</code>
-   *
    * @return Whether the deadline field is set.
    */
   boolean hasDeadline();
-
   /**
-   *
-   *
    * <pre>
    * Attempt deadline.
    *
@@ -52,14 +42,10 @@ public interface VirtualRpcRequestOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration deadline = 2;</code>
-   *
    * @return The deadline.
    */
   com.google.protobuf.Duration getDeadline();
-
   /**
-   *
-   *
    * <pre>
    * Attempt deadline.
    *
@@ -72,34 +58,24 @@ public interface VirtualRpcRequestOrBuilder
   com.google.protobuf.DurationOrBuilder getDeadlineOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * vRPC metadata.
    * </pre>
    *
    * <code>.google.bigtable.v2.VirtualRpcRequest.Metadata metadata = 3;</code>
-   *
    * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
-
   /**
-   *
-   *
    * <pre>
    * vRPC metadata.
    * </pre>
    *
    * <code>.google.bigtable.v2.VirtualRpcRequest.Metadata metadata = 3;</code>
-   *
    * @return The metadata.
    */
   com.google.bigtable.v2.VirtualRpcRequest.Metadata getMetadata();
-
   /**
-   *
-   *
    * <pre>
    * vRPC metadata.
    * </pre>
@@ -109,14 +85,11 @@ public interface VirtualRpcRequestOrBuilder
   com.google.bigtable.v2.VirtualRpcRequest.MetadataOrBuilder getMetadataOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Could be TableRequest (or in post-V1, SqlRequest)
    * </pre>
    *
    * <code>bytes payload = 4;</code>
-   *
    * @return The payload.
    */
   com.google.protobuf.ByteString getPayload();

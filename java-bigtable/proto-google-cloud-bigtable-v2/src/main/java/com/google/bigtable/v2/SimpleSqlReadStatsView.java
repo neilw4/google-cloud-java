@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * SimpleSqlReadStatsView captures some simple stats of a SQL read. This view
  * captures the rows and cells seen and returned, as well as the latency of the
@@ -18,53 +16,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SimpleSqlReadStatsView}
  */
 @com.google.protobuf.Generated
-public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SimpleSqlReadStatsView extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SimpleSqlReadStatsView)
     SimpleSqlReadStatsViewOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SimpleSqlReadStatsView");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SimpleSqlReadStatsView");
   }
-
   // Use SimpleSqlReadStatsView.newBuilder() to construct.
   private SimpleSqlReadStatsView(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private SimpleSqlReadStatsView() {
     perTableReadIterationStats_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SimpleSqlReadStatsView.class,
-            com.google.bigtable.v2.SimpleSqlReadStatsView.Builder.class);
+            com.google.bigtable.v2.SimpleSqlReadStatsView.class, com.google.bigtable.v2.SimpleSqlReadStatsView.Builder.class);
   }
 
   private int bitField0_;
   public static final int READ_ITERATION_STATS_FIELD_NUMBER = 1;
   private com.google.bigtable.v2.ReadIterationStats readIterationStats_;
-
   /**
-   *
-   *
    * <pre>
    * Iteration stats describe how efficient the read is, e.g. comparing
    * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -73,17 +63,13 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
-   *
    * @return Whether the readIterationStats field is set.
    */
   @java.lang.Override
   public boolean hasReadIterationStats() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Iteration stats describe how efficient the read is, e.g. comparing
    * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -92,19 +78,13 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
-   *
    * @return The readIterationStats.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ReadIterationStats getReadIterationStats() {
-    return readIterationStats_ == null
-        ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-        : readIterationStats_;
+    return readIterationStats_ == null ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Iteration stats describe how efficient the read is, e.g. comparing
    * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -116,53 +96,38 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
    */
   @java.lang.Override
   public com.google.bigtable.v2.ReadIterationStatsOrBuilder getReadIterationStatsOrBuilder() {
-    return readIterationStats_ == null
-        ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-        : readIterationStats_;
+    return readIterationStats_ == null ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
   }
 
   public static final int REQUEST_LATENCY_STATS_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.RequestLatencyStats requestLatencyStats_;
-
   /**
-   *
-   *
    * <pre>
    * Request latency stats describe the time taken to complete a request, from
    * the server side.
    * </pre>
    *
    * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
-   *
    * @return Whether the requestLatencyStats field is set.
    */
   @java.lang.Override
   public boolean hasRequestLatencyStats() {
     return ((bitField0_ & 0x00000002) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Request latency stats describe the time taken to complete a request, from
    * the server side.
    * </pre>
    *
    * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
-   *
    * @return The requestLatencyStats.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RequestLatencyStats getRequestLatencyStats() {
-    return requestLatencyStats_ == null
-        ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance()
-        : requestLatencyStats_;
+    return requestLatencyStats_ == null ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance() : requestLatencyStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Request latency stats describe the time taken to complete a request, from
    * the server side.
@@ -172,97 +137,71 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
    */
   @java.lang.Override
   public com.google.bigtable.v2.RequestLatencyStatsOrBuilder getRequestLatencyStatsOrBuilder() {
-    return requestLatencyStats_ == null
-        ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance()
-        : requestLatencyStats_;
+    return requestLatencyStats_ == null ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance() : requestLatencyStats_;
   }
 
   public static final int PER_TABLE_READ_ITERATION_STATS_FIELD_NUMBER = 3;
-
   @SuppressWarnings("serial")
-  private java.util.List<com.google.bigtable.v2.TableReadIterationStats>
-      perTableReadIterationStats_;
-
+  private java.util.List<com.google.bigtable.v2.TableReadIterationStats> perTableReadIterationStats_;
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<com.google.bigtable.v2.TableReadIterationStats>
-      getPerTableReadIterationStatsList() {
+  public java.util.List<com.google.bigtable.v2.TableReadIterationStats> getPerTableReadIterationStatsList() {
     return perTableReadIterationStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.TableReadIterationStatsOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.TableReadIterationStatsOrBuilder> 
       getPerTableReadIterationStatsOrBuilderList() {
     return perTableReadIterationStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   @java.lang.Override
   public int getPerTableReadIterationStatsCount() {
     return perTableReadIterationStats_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   @java.lang.Override
   public com.google.bigtable.v2.TableReadIterationStats getPerTableReadIterationStats(int index) {
     return perTableReadIterationStats_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.TableReadIterationStatsOrBuilder
-      getPerTableReadIterationStatsOrBuilder(int index) {
+  public com.google.bigtable.v2.TableReadIterationStatsOrBuilder getPerTableReadIterationStatsOrBuilder(
+      int index) {
     return perTableReadIterationStats_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -274,7 +213,8 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getReadIterationStats());
     }
@@ -294,15 +234,16 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getReadIterationStats());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getReadIterationStats());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRequestLatencyStats());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getRequestLatencyStats());
     }
     for (int i = 0; i < perTableReadIterationStats_.size(); i++) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              3, perTableReadIterationStats_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, perTableReadIterationStats_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -312,24 +253,25 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SimpleSqlReadStatsView)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SimpleSqlReadStatsView other =
-        (com.google.bigtable.v2.SimpleSqlReadStatsView) obj;
+    com.google.bigtable.v2.SimpleSqlReadStatsView other = (com.google.bigtable.v2.SimpleSqlReadStatsView) obj;
 
     if (hasReadIterationStats() != other.hasReadIterationStats()) return false;
     if (hasReadIterationStats()) {
-      if (!getReadIterationStats().equals(other.getReadIterationStats())) return false;
+      if (!getReadIterationStats()
+          .equals(other.getReadIterationStats())) return false;
     }
     if (hasRequestLatencyStats() != other.hasRequestLatencyStats()) return false;
     if (hasRequestLatencyStats()) {
-      if (!getRequestLatencyStats().equals(other.getRequestLatencyStats())) return false;
+      if (!getRequestLatencyStats()
+          .equals(other.getRequestLatencyStats())) return false;
     }
-    if (!getPerTableReadIterationStatsList().equals(other.getPerTableReadIterationStatsList()))
-      return false;
+    if (!getPerTableReadIterationStatsList()
+        .equals(other.getPerTableReadIterationStatsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -358,105 +300,99 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
     return hash;
   }
 
-  public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SimpleSqlReadStatsView parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SimpleSqlReadStatsView parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SimpleSqlReadStatsView parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SimpleSqlReadStatsView prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * SimpleSqlReadStatsView captures some simple stats of a SQL read. This view
    * captures the rows and cells seen and returned, as well as the latency of the
@@ -466,23 +402,21 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
    *
    * Protobuf type {@code google.bigtable.v2.SimpleSqlReadStatsView}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SimpleSqlReadStatsView)
       com.google.bigtable.v2.SimpleSqlReadStatsViewOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SimpleSqlReadStatsView.class,
-              com.google.bigtable.v2.SimpleSqlReadStatsView.Builder.class);
+              com.google.bigtable.v2.SimpleSqlReadStatsView.class, com.google.bigtable.v2.SimpleSqlReadStatsView.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SimpleSqlReadStatsView.newBuilder()
@@ -490,19 +424,19 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetReadIterationStatsFieldBuilder();
         internalGetRequestLatencyStatsFieldBuilder();
         internalGetPerTableReadIterationStatsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -528,9 +462,9 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
     }
 
     @java.lang.Override
@@ -549,12 +483,9 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
 
     @java.lang.Override
     public com.google.bigtable.v2.SimpleSqlReadStatsView buildPartial() {
-      com.google.bigtable.v2.SimpleSqlReadStatsView result =
-          new com.google.bigtable.v2.SimpleSqlReadStatsView(this);
+      com.google.bigtable.v2.SimpleSqlReadStatsView result = new com.google.bigtable.v2.SimpleSqlReadStatsView(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -562,8 +493,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
     private void buildPartialRepeatedFields(com.google.bigtable.v2.SimpleSqlReadStatsView result) {
       if (perTableReadIterationStatsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
-          perTableReadIterationStats_ =
-              java.util.Collections.unmodifiableList(perTableReadIterationStats_);
+          perTableReadIterationStats_ = java.util.Collections.unmodifiableList(perTableReadIterationStats_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.perTableReadIterationStats_ = perTableReadIterationStats_;
@@ -576,17 +506,15 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.readIterationStats_ =
-            readIterationStatsBuilder_ == null
-                ? readIterationStats_
-                : readIterationStatsBuilder_.build();
+        result.readIterationStats_ = readIterationStatsBuilder_ == null
+            ? readIterationStats_
+            : readIterationStatsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.requestLatencyStats_ =
-            requestLatencyStatsBuilder_ == null
-                ? requestLatencyStats_
-                : requestLatencyStatsBuilder_.build();
+        result.requestLatencyStats_ = requestLatencyStatsBuilder_ == null
+            ? requestLatencyStats_
+            : requestLatencyStatsBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
@@ -595,7 +523,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SimpleSqlReadStatsView) {
-        return mergeFrom((com.google.bigtable.v2.SimpleSqlReadStatsView) other);
+        return mergeFrom((com.google.bigtable.v2.SimpleSqlReadStatsView)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -628,10 +556,9 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
             perTableReadIterationStatsBuilder_ = null;
             perTableReadIterationStats_ = other.perTableReadIterationStats_;
             bitField0_ = (bitField0_ & ~0x00000004);
-            perTableReadIterationStatsBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetPerTableReadIterationStatsFieldBuilder()
-                    : null;
+            perTableReadIterationStatsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetPerTableReadIterationStatsFieldBuilder() : null;
           } else {
             perTableReadIterationStatsBuilder_.addAllMessages(other.perTableReadIterationStats_);
           }
@@ -663,40 +590,39 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetReadIterationStatsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetRequestLatencyStatsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 26:
-              {
-                com.google.bigtable.v2.TableReadIterationStats m =
-                    input.readMessage(
-                        com.google.bigtable.v2.TableReadIterationStats.parser(), extensionRegistry);
-                if (perTableReadIterationStatsBuilder_ == null) {
-                  ensurePerTableReadIterationStatsIsMutable();
-                  perTableReadIterationStats_.add(m);
-                } else {
-                  perTableReadIterationStatsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetReadIterationStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetRequestLatencyStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              com.google.bigtable.v2.TableReadIterationStats m =
+                  input.readMessage(
+                      com.google.bigtable.v2.TableReadIterationStats.parser(),
+                      extensionRegistry);
+              if (perTableReadIterationStatsBuilder_ == null) {
+                ensurePerTableReadIterationStatsIsMutable();
+                perTableReadIterationStats_.add(m);
+              } else {
+                perTableReadIterationStatsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -706,19 +632,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.bigtable.v2.ReadIterationStats readIterationStats_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ReadIterationStats,
-            com.google.bigtable.v2.ReadIterationStats.Builder,
-            com.google.bigtable.v2.ReadIterationStatsOrBuilder>
-        readIterationStatsBuilder_;
-
+        com.google.bigtable.v2.ReadIterationStats, com.google.bigtable.v2.ReadIterationStats.Builder, com.google.bigtable.v2.ReadIterationStatsOrBuilder> readIterationStatsBuilder_;
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -727,16 +646,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
-     *
      * @return Whether the readIterationStats field is set.
      */
     public boolean hasReadIterationStats() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -745,22 +660,16 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
-     *
      * @return The readIterationStats.
      */
     public com.google.bigtable.v2.ReadIterationStats getReadIterationStats() {
       if (readIterationStatsBuilder_ == null) {
-        return readIterationStats_ == null
-            ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-            : readIterationStats_;
+        return readIterationStats_ == null ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
       } else {
         return readIterationStatsBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -783,10 +692,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -807,10 +713,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -822,10 +725,9 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
      */
     public Builder mergeReadIterationStats(com.google.bigtable.v2.ReadIterationStats value) {
       if (readIterationStatsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && readIterationStats_ != null
-            && readIterationStats_
-                != com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          readIterationStats_ != null &&
+          readIterationStats_ != com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()) {
           getReadIterationStatsBuilder().mergeFrom(value);
         } else {
           readIterationStats_ = value;
@@ -839,10 +741,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -862,10 +761,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -880,10 +776,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return internalGetReadIterationStatsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -897,15 +790,11 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       if (readIterationStatsBuilder_ != null) {
         return readIterationStatsBuilder_.getMessageOrBuilder();
       } else {
-        return readIterationStats_ == null
-            ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-            : readIterationStats_;
+        return readIterationStats_ == null ?
+            com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Iteration stats describe how efficient the read is, e.g. comparing
      * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -916,17 +805,14 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
      * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ReadIterationStats,
-            com.google.bigtable.v2.ReadIterationStats.Builder,
-            com.google.bigtable.v2.ReadIterationStatsOrBuilder>
+        com.google.bigtable.v2.ReadIterationStats, com.google.bigtable.v2.ReadIterationStats.Builder, com.google.bigtable.v2.ReadIterationStatsOrBuilder> 
         internalGetReadIterationStatsFieldBuilder() {
       if (readIterationStatsBuilder_ == null) {
-        readIterationStatsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ReadIterationStats,
-                com.google.bigtable.v2.ReadIterationStats.Builder,
-                com.google.bigtable.v2.ReadIterationStatsOrBuilder>(
-                getReadIterationStats(), getParentForChildren(), isClean());
+        readIterationStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ReadIterationStats, com.google.bigtable.v2.ReadIterationStats.Builder, com.google.bigtable.v2.ReadIterationStatsOrBuilder>(
+                getReadIterationStats(),
+                getParentForChildren(),
+                isClean());
         readIterationStats_ = null;
       }
       return readIterationStatsBuilder_;
@@ -934,52 +820,36 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
 
     private com.google.bigtable.v2.RequestLatencyStats requestLatencyStats_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RequestLatencyStats,
-            com.google.bigtable.v2.RequestLatencyStats.Builder,
-            com.google.bigtable.v2.RequestLatencyStatsOrBuilder>
-        requestLatencyStatsBuilder_;
-
+        com.google.bigtable.v2.RequestLatencyStats, com.google.bigtable.v2.RequestLatencyStats.Builder, com.google.bigtable.v2.RequestLatencyStatsOrBuilder> requestLatencyStatsBuilder_;
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
      * </pre>
      *
      * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
-     *
      * @return Whether the requestLatencyStats field is set.
      */
     public boolean hasRequestLatencyStats() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
      * </pre>
      *
      * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
-     *
      * @return The requestLatencyStats.
      */
     public com.google.bigtable.v2.RequestLatencyStats getRequestLatencyStats() {
       if (requestLatencyStatsBuilder_ == null) {
-        return requestLatencyStats_ == null
-            ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance()
-            : requestLatencyStats_;
+        return requestLatencyStats_ == null ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance() : requestLatencyStats_;
       } else {
         return requestLatencyStatsBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1000,10 +870,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1022,10 +889,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1035,10 +899,9 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
      */
     public Builder mergeRequestLatencyStats(com.google.bigtable.v2.RequestLatencyStats value) {
       if (requestLatencyStatsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && requestLatencyStats_ != null
-            && requestLatencyStats_
-                != com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          requestLatencyStats_ != null &&
+          requestLatencyStats_ != com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance()) {
           getRequestLatencyStatsBuilder().mergeFrom(value);
         } else {
           requestLatencyStats_ = value;
@@ -1052,10 +915,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1073,10 +933,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1089,10 +946,7 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       onChanged();
       return internalGetRequestLatencyStatsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1104,15 +958,11 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       if (requestLatencyStatsBuilder_ != null) {
         return requestLatencyStatsBuilder_.getMessageOrBuilder();
       } else {
-        return requestLatencyStats_ == null
-            ? com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance()
-            : requestLatencyStats_;
+        return requestLatencyStats_ == null ?
+            com.google.bigtable.v2.RequestLatencyStats.getDefaultInstance() : requestLatencyStats_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Request latency stats describe the time taken to complete a request, from
      * the server side.
@@ -1121,70 +971,51 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
      * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RequestLatencyStats,
-            com.google.bigtable.v2.RequestLatencyStats.Builder,
-            com.google.bigtable.v2.RequestLatencyStatsOrBuilder>
+        com.google.bigtable.v2.RequestLatencyStats, com.google.bigtable.v2.RequestLatencyStats.Builder, com.google.bigtable.v2.RequestLatencyStatsOrBuilder> 
         internalGetRequestLatencyStatsFieldBuilder() {
       if (requestLatencyStatsBuilder_ == null) {
-        requestLatencyStatsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RequestLatencyStats,
-                com.google.bigtable.v2.RequestLatencyStats.Builder,
-                com.google.bigtable.v2.RequestLatencyStatsOrBuilder>(
-                getRequestLatencyStats(), getParentForChildren(), isClean());
+        requestLatencyStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RequestLatencyStats, com.google.bigtable.v2.RequestLatencyStats.Builder, com.google.bigtable.v2.RequestLatencyStatsOrBuilder>(
+                getRequestLatencyStats(),
+                getParentForChildren(),
+                isClean());
         requestLatencyStats_ = null;
       }
       return requestLatencyStatsBuilder_;
     }
 
-    private java.util.List<com.google.bigtable.v2.TableReadIterationStats>
-        perTableReadIterationStats_ = java.util.Collections.emptyList();
-
+    private java.util.List<com.google.bigtable.v2.TableReadIterationStats> perTableReadIterationStats_ =
+      java.util.Collections.emptyList();
     private void ensurePerTableReadIterationStatsIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        perTableReadIterationStats_ =
-            new java.util.ArrayList<com.google.bigtable.v2.TableReadIterationStats>(
-                perTableReadIterationStats_);
+        perTableReadIterationStats_ = new java.util.ArrayList<com.google.bigtable.v2.TableReadIterationStats>(perTableReadIterationStats_);
         bitField0_ |= 0x00000004;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.TableReadIterationStats,
-            com.google.bigtable.v2.TableReadIterationStats.Builder,
-            com.google.bigtable.v2.TableReadIterationStatsOrBuilder>
-        perTableReadIterationStatsBuilder_;
+        com.google.bigtable.v2.TableReadIterationStats, com.google.bigtable.v2.TableReadIterationStats.Builder, com.google.bigtable.v2.TableReadIterationStatsOrBuilder> perTableReadIterationStatsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public java.util.List<com.google.bigtable.v2.TableReadIterationStats>
-        getPerTableReadIterationStatsList() {
+    public java.util.List<com.google.bigtable.v2.TableReadIterationStats> getPerTableReadIterationStatsList() {
       if (perTableReadIterationStatsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(perTableReadIterationStats_);
       } else {
         return perTableReadIterationStatsBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public int getPerTableReadIterationStatsCount() {
       if (perTableReadIterationStatsBuilder_ == null) {
@@ -1193,17 +1024,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
         return perTableReadIterationStatsBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public com.google.bigtable.v2.TableReadIterationStats getPerTableReadIterationStats(int index) {
       if (perTableReadIterationStatsBuilder_ == null) {
@@ -1212,17 +1038,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
         return perTableReadIterationStatsBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder setPerTableReadIterationStats(
         int index, com.google.bigtable.v2.TableReadIterationStats value) {
@@ -1238,17 +1059,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder setPerTableReadIterationStats(
         int index, com.google.bigtable.v2.TableReadIterationStats.Builder builderForValue) {
@@ -1261,20 +1077,14 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public Builder addPerTableReadIterationStats(
-        com.google.bigtable.v2.TableReadIterationStats value) {
+    public Builder addPerTableReadIterationStats(com.google.bigtable.v2.TableReadIterationStats value) {
       if (perTableReadIterationStatsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1287,17 +1097,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder addPerTableReadIterationStats(
         int index, com.google.bigtable.v2.TableReadIterationStats value) {
@@ -1313,17 +1118,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder addPerTableReadIterationStats(
         com.google.bigtable.v2.TableReadIterationStats.Builder builderForValue) {
@@ -1336,17 +1136,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder addPerTableReadIterationStats(
         int index, com.google.bigtable.v2.TableReadIterationStats.Builder builderForValue) {
@@ -1359,40 +1154,31 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder addAllPerTableReadIterationStats(
         java.lang.Iterable<? extends com.google.bigtable.v2.TableReadIterationStats> values) {
       if (perTableReadIterationStatsBuilder_ == null) {
         ensurePerTableReadIterationStatsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, perTableReadIterationStats_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, perTableReadIterationStats_);
         onChanged();
       } else {
         perTableReadIterationStatsBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder clearPerTableReadIterationStats() {
       if (perTableReadIterationStatsBuilder_ == null) {
@@ -1404,17 +1190,12 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
     public Builder removePerTableReadIterationStats(int index) {
       if (perTableReadIterationStatsBuilder_ == null) {
@@ -1426,124 +1207,86 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public com.google.bigtable.v2.TableReadIterationStats.Builder
-        getPerTableReadIterationStatsBuilder(int index) {
+    public com.google.bigtable.v2.TableReadIterationStats.Builder getPerTableReadIterationStatsBuilder(
+        int index) {
       return internalGetPerTableReadIterationStatsFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public com.google.bigtable.v2.TableReadIterationStatsOrBuilder
-        getPerTableReadIterationStatsOrBuilder(int index) {
+    public com.google.bigtable.v2.TableReadIterationStatsOrBuilder getPerTableReadIterationStatsOrBuilder(
+        int index) {
       if (perTableReadIterationStatsBuilder_ == null) {
-        return perTableReadIterationStats_.get(index);
-      } else {
+        return perTableReadIterationStats_.get(index);  } else {
         return perTableReadIterationStatsBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.TableReadIterationStatsOrBuilder>
-        getPerTableReadIterationStatsOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.TableReadIterationStatsOrBuilder> 
+         getPerTableReadIterationStatsOrBuilderList() {
       if (perTableReadIterationStatsBuilder_ != null) {
         return perTableReadIterationStatsBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(perTableReadIterationStats_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public com.google.bigtable.v2.TableReadIterationStats.Builder
-        addPerTableReadIterationStatsBuilder() {
-      return internalGetPerTableReadIterationStatsFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.TableReadIterationStats.getDefaultInstance());
+    public com.google.bigtable.v2.TableReadIterationStats.Builder addPerTableReadIterationStatsBuilder() {
+      return internalGetPerTableReadIterationStatsFieldBuilder().addBuilder(
+          com.google.bigtable.v2.TableReadIterationStats.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public com.google.bigtable.v2.TableReadIterationStats.Builder
-        addPerTableReadIterationStatsBuilder(int index) {
-      return internalGetPerTableReadIterationStatsFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.TableReadIterationStats.getDefaultInstance());
+    public com.google.bigtable.v2.TableReadIterationStats.Builder addPerTableReadIterationStatsBuilder(
+        int index) {
+      return internalGetPerTableReadIterationStatsFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.TableReadIterationStats.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Read iteration stats broken down by table.
      * </pre>
      *
-     * <code>
-     * repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-     * </code>
+     * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
      */
-    public java.util.List<com.google.bigtable.v2.TableReadIterationStats.Builder>
-        getPerTableReadIterationStatsBuilderList() {
+    public java.util.List<com.google.bigtable.v2.TableReadIterationStats.Builder> 
+         getPerTableReadIterationStatsBuilderList() {
       return internalGetPerTableReadIterationStatsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.TableReadIterationStats,
-            com.google.bigtable.v2.TableReadIterationStats.Builder,
-            com.google.bigtable.v2.TableReadIterationStatsOrBuilder>
+        com.google.bigtable.v2.TableReadIterationStats, com.google.bigtable.v2.TableReadIterationStats.Builder, com.google.bigtable.v2.TableReadIterationStatsOrBuilder> 
         internalGetPerTableReadIterationStatsFieldBuilder() {
       if (perTableReadIterationStatsBuilder_ == null) {
-        perTableReadIterationStatsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.TableReadIterationStats,
-                com.google.bigtable.v2.TableReadIterationStats.Builder,
-                com.google.bigtable.v2.TableReadIterationStatsOrBuilder>(
+        perTableReadIterationStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.TableReadIterationStats, com.google.bigtable.v2.TableReadIterationStats.Builder, com.google.bigtable.v2.TableReadIterationStatsOrBuilder>(
                 perTableReadIterationStats_,
                 ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
@@ -1558,7 +1301,6 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SimpleSqlReadStatsView)
   private static final com.google.bigtable.v2.SimpleSqlReadStatsView DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SimpleSqlReadStatsView();
   }
@@ -1567,27 +1309,27 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SimpleSqlReadStatsView> PARSER =
-      new com.google.protobuf.AbstractParser<SimpleSqlReadStatsView>() {
-        @java.lang.Override
-        public SimpleSqlReadStatsView parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SimpleSqlReadStatsView>
+      PARSER = new com.google.protobuf.AbstractParser<SimpleSqlReadStatsView>() {
+    @java.lang.Override
+    public SimpleSqlReadStatsView parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SimpleSqlReadStatsView> parser() {
     return PARSER;
@@ -1602,4 +1344,6 @@ public final class SimpleSqlReadStatsView extends com.google.protobuf.GeneratedM
   public com.google.bigtable.v2.SimpleSqlReadStatsView getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

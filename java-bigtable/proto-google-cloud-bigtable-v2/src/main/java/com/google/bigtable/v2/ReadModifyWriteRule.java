@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Specifies an atomic read/modify/write operation on the latest value of the
  * specified column.
@@ -16,65 +14,55 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ReadModifyWriteRule}
  */
 @com.google.protobuf.Generated
-public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ReadModifyWriteRule extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ReadModifyWriteRule)
     ReadModifyWriteRuleOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ReadModifyWriteRule");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ReadModifyWriteRule");
   }
-
   // Use ReadModifyWriteRule.newBuilder() to construct.
   private ReadModifyWriteRule(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private ReadModifyWriteRule() {
     familyName_ = "";
     columnQualifier_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ReadModifyWriteRule_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ReadModifyWriteRule_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ReadModifyWriteRule_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ReadModifyWriteRule_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ReadModifyWriteRule.class,
-            com.google.bigtable.v2.ReadModifyWriteRule.Builder.class);
+            com.google.bigtable.v2.ReadModifyWriteRule.class, com.google.bigtable.v2.ReadModifyWriteRule.Builder.class);
   }
 
   private int ruleCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object rule_;
-
   public enum RuleCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     APPEND_VALUE(3),
     INCREMENT_AMOUNT(4),
     RULE_NOT_SET(0);
     private final int value;
-
     private RuleCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -87,41 +75,33 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
 
     public static RuleCase forNumber(int value) {
       switch (value) {
-        case 3:
-          return APPEND_VALUE;
-        case 4:
-          return INCREMENT_AMOUNT;
-        case 0:
-          return RULE_NOT_SET;
-        default:
-          return null;
+        case 3: return APPEND_VALUE;
+        case 4: return INCREMENT_AMOUNT;
+        case 0: return RULE_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public RuleCase getRuleCase() {
-    return RuleCase.forNumber(ruleCase_);
+  public RuleCase
+  getRuleCase() {
+    return RuleCase.forNumber(
+        ruleCase_);
   }
 
   public static final int FAMILY_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object familyName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The name of the family to which the read/modify/write should be applied.
    * Must match `+`
    * </pre>
    *
    * <code>string family_name = 1;</code>
-   *
    * @return The familyName.
    */
   @java.lang.Override
@@ -130,31 +110,30 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       familyName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The name of the family to which the read/modify/write should be applied.
    * Must match `+`
    * </pre>
    *
    * <code>string family_name = 1;</code>
-   *
    * @return The bytes for familyName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getFamilyNameBytes() {
+  public com.google.protobuf.ByteString
+      getFamilyNameBytes() {
     java.lang.Object ref = familyName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       familyName_ = b;
       return b;
     } else {
@@ -164,10 +143,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
 
   public static final int COLUMN_QUALIFIER_FIELD_NUMBER = 2;
   private com.google.protobuf.ByteString columnQualifier_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * The qualifier of the column to which the read/modify/write should be
    * applied.
@@ -175,7 +151,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>bytes column_qualifier = 2;</code>
-   *
    * @return The columnQualifier.
    */
   @java.lang.Override
@@ -184,10 +159,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
   }
 
   public static final int APPEND_VALUE_FIELD_NUMBER = 3;
-
   /**
-   *
-   *
    * <pre>
    * Rule specifying that `append_value` be appended to the existing value.
    * If the targeted cell is unset, it will be treated as containing the
@@ -195,17 +167,13 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>bytes append_value = 3;</code>
-   *
    * @return Whether the appendValue field is set.
    */
   @java.lang.Override
   public boolean hasAppendValue() {
     return ruleCase_ == 3;
   }
-
   /**
-   *
-   *
    * <pre>
    * Rule specifying that `append_value` be appended to the existing value.
    * If the targeted cell is unset, it will be treated as containing the
@@ -213,7 +181,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>bytes append_value = 3;</code>
-   *
    * @return The appendValue.
    */
   @java.lang.Override
@@ -225,10 +192,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
   }
 
   public static final int INCREMENT_AMOUNT_FIELD_NUMBER = 4;
-
   /**
-   *
-   *
    * <pre>
    * Rule specifying that `increment_amount` be added to the existing value.
    * If the targeted cell is unset, it will be treated as containing a zero.
@@ -237,17 +201,13 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>int64 increment_amount = 4;</code>
-   *
    * @return Whether the incrementAmount field is set.
    */
   @java.lang.Override
   public boolean hasIncrementAmount() {
     return ruleCase_ == 4;
   }
-
   /**
-   *
-   *
    * <pre>
    * Rule specifying that `increment_amount` be added to the existing value.
    * If the targeted cell is unset, it will be treated as containing a zero.
@@ -256,7 +216,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>int64 increment_amount = 4;</code>
-   *
    * @return The incrementAmount.
    */
   @java.lang.Override
@@ -268,7 +227,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -280,7 +238,8 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(familyName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, familyName_);
     }
@@ -288,10 +247,12 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       output.writeBytes(2, columnQualifier_);
     }
     if (ruleCase_ == 3) {
-      output.writeBytes(3, (com.google.protobuf.ByteString) rule_);
+      output.writeBytes(
+          3, (com.google.protobuf.ByteString) rule_);
     }
     if (ruleCase_ == 4) {
-      output.writeInt64(4, (long) ((java.lang.Long) rule_));
+      output.writeInt64(
+          4, (long)((java.lang.Long) rule_));
     }
     getUnknownFields().writeTo(output);
   }
@@ -306,17 +267,18 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, familyName_);
     }
     if (!columnQualifier_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, columnQualifier_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(2, columnQualifier_);
     }
     if (ruleCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              3, (com.google.protobuf.ByteString) rule_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            3, (com.google.protobuf.ByteString) rule_);
     }
     if (ruleCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt64Size(
-              4, (long) ((java.lang.Long) rule_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            4, (long)((java.lang.Long) rule_));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -326,23 +288,26 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ReadModifyWriteRule)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.ReadModifyWriteRule other =
-        (com.google.bigtable.v2.ReadModifyWriteRule) obj;
+    com.google.bigtable.v2.ReadModifyWriteRule other = (com.google.bigtable.v2.ReadModifyWriteRule) obj;
 
-    if (!getFamilyName().equals(other.getFamilyName())) return false;
-    if (!getColumnQualifier().equals(other.getColumnQualifier())) return false;
+    if (!getFamilyName()
+        .equals(other.getFamilyName())) return false;
+    if (!getColumnQualifier()
+        .equals(other.getColumnQualifier())) return false;
     if (!getRuleCase().equals(other.getRuleCase())) return false;
     switch (ruleCase_) {
       case 3:
-        if (!getAppendValue().equals(other.getAppendValue())) return false;
+        if (!getAppendValue()
+            .equals(other.getAppendValue())) return false;
         break;
       case 4:
-        if (getIncrementAmount() != other.getIncrementAmount()) return false;
+        if (getIncrementAmount()
+            != other.getIncrementAmount()) return false;
         break;
       case 0:
       default:
@@ -369,7 +334,8 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
         break;
       case 4:
         hash = (37 * hash) + INCREMENT_AMOUNT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getIncrementAmount());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getIncrementAmount());
         break;
       case 0:
       default:
@@ -379,105 +345,99 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     return hash;
   }
 
-  public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.ReadModifyWriteRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ReadModifyWriteRule parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.ReadModifyWriteRule parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ReadModifyWriteRule parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ReadModifyWriteRule prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Specifies an atomic read/modify/write operation on the latest value of the
    * specified column.
@@ -485,32 +445,33 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
    *
    * Protobuf type {@code google.bigtable.v2.ReadModifyWriteRule}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ReadModifyWriteRule)
       com.google.bigtable.v2.ReadModifyWriteRuleOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ReadModifyWriteRule_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ReadModifyWriteRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ReadModifyWriteRule_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ReadModifyWriteRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ReadModifyWriteRule.class,
-              com.google.bigtable.v2.ReadModifyWriteRule.Builder.class);
+              com.google.bigtable.v2.ReadModifyWriteRule.class, com.google.bigtable.v2.ReadModifyWriteRule.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ReadModifyWriteRule.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -523,9 +484,9 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ReadModifyWriteRule_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ReadModifyWriteRule_descriptor;
     }
 
     @java.lang.Override
@@ -544,11 +505,8 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
 
     @java.lang.Override
     public com.google.bigtable.v2.ReadModifyWriteRule buildPartial() {
-      com.google.bigtable.v2.ReadModifyWriteRule result =
-          new com.google.bigtable.v2.ReadModifyWriteRule(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.ReadModifyWriteRule result = new com.google.bigtable.v2.ReadModifyWriteRule(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -572,7 +530,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ReadModifyWriteRule) {
-        return mergeFrom((com.google.bigtable.v2.ReadModifyWriteRule) other);
+        return mergeFrom((com.google.bigtable.v2.ReadModifyWriteRule)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -590,20 +548,17 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
         setColumnQualifier(other.getColumnQualifier());
       }
       switch (other.getRuleCase()) {
-        case APPEND_VALUE:
-          {
-            setAppendValue(other.getAppendValue());
-            break;
-          }
-        case INCREMENT_AMOUNT:
-          {
-            setIncrementAmount(other.getIncrementAmount());
-            break;
-          }
-        case RULE_NOT_SET:
-          {
-            break;
-          }
+        case APPEND_VALUE: {
+          setAppendValue(other.getAppendValue());
+          break;
+        }
+        case INCREMENT_AMOUNT: {
+          setIncrementAmount(other.getIncrementAmount());
+          break;
+        }
+        case RULE_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -631,37 +586,32 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                familyName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                columnQualifier_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 26:
-              {
-                rule_ = input.readBytes();
-                ruleCase_ = 3;
-                break;
-              } // case 26
-            case 32:
-              {
-                rule_ = input.readInt64();
-                ruleCase_ = 4;
-                break;
-              } // case 32
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              familyName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              columnQualifier_ = input.readBytes();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              rule_ = input.readBytes();
+              ruleCase_ = 3;
+              break;
+            } // case 26
+            case 32: {
+              rule_ = input.readInt64();
+              ruleCase_ = 4;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -671,12 +621,12 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       } // finally
       return this;
     }
-
     private int ruleCase_ = 0;
     private java.lang.Object rule_;
-
-    public RuleCase getRuleCase() {
-      return RuleCase.forNumber(ruleCase_);
+    public RuleCase
+        getRuleCase() {
+      return RuleCase.forNumber(
+          ruleCase_);
     }
 
     public Builder clearRule() {
@@ -689,23 +639,20 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     private int bitField0_;
 
     private java.lang.Object familyName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The name of the family to which the read/modify/write should be applied.
      * Must match `+`
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return The familyName.
      */
     public java.lang.String getFamilyName() {
       java.lang.Object ref = familyName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         familyName_ = s;
         return s;
@@ -713,64 +660,53 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The name of the family to which the read/modify/write should be applied.
      * Must match `+`
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return The bytes for familyName.
      */
-    public com.google.protobuf.ByteString getFamilyNameBytes() {
+    public com.google.protobuf.ByteString
+        getFamilyNameBytes() {
       java.lang.Object ref = familyName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         familyName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The name of the family to which the read/modify/write should be applied.
      * Must match `+`
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @param value The familyName to set.
      * @return This builder for chaining.
      */
-    public Builder setFamilyName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setFamilyName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       familyName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The name of the family to which the read/modify/write should be applied.
      * Must match `+`
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearFamilyName() {
@@ -779,24 +715,19 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The name of the family to which the read/modify/write should be applied.
      * Must match `+`
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @param value The bytes for familyName to set.
      * @return This builder for chaining.
      */
-    public Builder setFamilyNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setFamilyNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       familyName_ = value;
       bitField0_ |= 0x00000001;
@@ -805,10 +736,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     }
 
     private com.google.protobuf.ByteString columnQualifier_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * The qualifier of the column to which the read/modify/write should be
      * applied.
@@ -816,17 +744,13 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes column_qualifier = 2;</code>
-     *
      * @return The columnQualifier.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getColumnQualifier() {
       return columnQualifier_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The qualifier of the column to which the read/modify/write should be
      * applied.
@@ -834,23 +758,17 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes column_qualifier = 2;</code>
-     *
      * @param value The columnQualifier to set.
      * @return This builder for chaining.
      */
     public Builder setColumnQualifier(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       columnQualifier_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The qualifier of the column to which the read/modify/write should be
      * applied.
@@ -858,7 +776,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes column_qualifier = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearColumnQualifier() {
@@ -869,8 +786,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     }
 
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `append_value` be appended to the existing value.
      * If the targeted cell is unset, it will be treated as containing the
@@ -878,16 +793,12 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes append_value = 3;</code>
-     *
      * @return Whether the appendValue field is set.
      */
     public boolean hasAppendValue() {
       return ruleCase_ == 3;
     }
-
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `append_value` be appended to the existing value.
      * If the targeted cell is unset, it will be treated as containing the
@@ -895,7 +806,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes append_value = 3;</code>
-     *
      * @return The appendValue.
      */
     public com.google.protobuf.ByteString getAppendValue() {
@@ -904,10 +814,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `append_value` be appended to the existing value.
      * If the targeted cell is unset, it will be treated as containing the
@@ -915,23 +822,17 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes append_value = 3;</code>
-     *
      * @param value The appendValue to set.
      * @return This builder for chaining.
      */
     public Builder setAppendValue(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       ruleCase_ = 3;
       rule_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `append_value` be appended to the existing value.
      * If the targeted cell is unset, it will be treated as containing the
@@ -939,7 +840,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>bytes append_value = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppendValue() {
@@ -952,8 +852,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     }
 
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `increment_amount` be added to the existing value.
      * If the targeted cell is unset, it will be treated as containing a zero.
@@ -962,16 +860,12 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>int64 increment_amount = 4;</code>
-     *
      * @return Whether the incrementAmount field is set.
      */
     public boolean hasIncrementAmount() {
       return ruleCase_ == 4;
     }
-
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `increment_amount` be added to the existing value.
      * If the targeted cell is unset, it will be treated as containing a zero.
@@ -980,7 +874,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>int64 increment_amount = 4;</code>
-     *
      * @return The incrementAmount.
      */
     public long getIncrementAmount() {
@@ -989,10 +882,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       }
       return 0L;
     }
-
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `increment_amount` be added to the existing value.
      * If the targeted cell is unset, it will be treated as containing a zero.
@@ -1001,7 +891,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>int64 increment_amount = 4;</code>
-     *
      * @param value The incrementAmount to set.
      * @return This builder for chaining.
      */
@@ -1012,10 +901,7 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Rule specifying that `increment_amount` be added to the existing value.
      * If the targeted cell is unset, it will be treated as containing a zero.
@@ -1024,7 +910,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>int64 increment_amount = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearIncrementAmount() {
@@ -1041,7 +926,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ReadModifyWriteRule)
   private static final com.google.bigtable.v2.ReadModifyWriteRule DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ReadModifyWriteRule();
   }
@@ -1050,27 +934,27 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ReadModifyWriteRule> PARSER =
-      new com.google.protobuf.AbstractParser<ReadModifyWriteRule>() {
-        @java.lang.Override
-        public ReadModifyWriteRule parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ReadModifyWriteRule>
+      PARSER = new com.google.protobuf.AbstractParser<ReadModifyWriteRule>() {
+    @java.lang.Override
+    public ReadModifyWriteRule parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ReadModifyWriteRule> parser() {
     return PARSER;
@@ -1085,4 +969,6 @@ public final class ReadModifyWriteRule extends com.google.protobuf.GeneratedMess
   public com.google.bigtable.v2.ReadModifyWriteRule getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

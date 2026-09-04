@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Note: This API won't be generally available.
  * Request message for InferInternalTypeMetadata
@@ -16,66 +14,53 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataRequest}
  */
 @com.google.protobuf.Generated
-public final class InferInternalTypeMetadataRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class InferInternalTypeMetadataRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.InferInternalTypeMetadataRequest)
     InferInternalTypeMetadataRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "InferInternalTypeMetadataRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "InferInternalTypeMetadataRequest");
   }
-
   // Use InferInternalTypeMetadataRequest.newBuilder() to construct.
-  private InferInternalTypeMetadataRequest(
-      com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  private InferInternalTypeMetadataRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private InferInternalTypeMetadataRequest() {
     tableName_ = "";
     appProfileId_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.InferInternalTypeMetadataRequest.class,
-            com.google.bigtable.v2.InferInternalTypeMetadataRequest.Builder.class);
+            com.google.bigtable.v2.InferInternalTypeMetadataRequest.class, com.google.bigtable.v2.InferInternalTypeMetadataRequest.Builder.class);
   }
 
   public static final int TABLE_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object tableName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the requested table.
    * Values are of the form
    * `projects/{project}/instances/{instance}/tables/{table}`.
    * </pre>
    *
-   * <code>
-   * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The tableName.
    */
   @java.lang.Override
@@ -84,34 +69,31 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       tableName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the requested table.
    * Values are of the form
    * `projects/{project}/instances/{instance}/tables/{table}`.
    * </pre>
    *
-   * <code>
-   * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for tableName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getTableNameBytes() {
+  public com.google.protobuf.ByteString
+      getTableNameBytes() {
     java.lang.Object ref = tableName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       tableName_ = b;
       return b;
     } else {
@@ -120,19 +102,14 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
   }
 
   public static final int APP_PROFILE_ID_FIELD_NUMBER = 5;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object appProfileId_ = "";
-
   /**
-   *
-   *
    * <pre>
    * This API only accepts the empty value of app_profile_id.
    * </pre>
    *
    * <code>string app_profile_id = 5;</code>
-   *
    * @return The appProfileId.
    */
   @java.lang.Override
@@ -141,30 +118,29 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       appProfileId_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * This API only accepts the empty value of app_profile_id.
    * </pre>
    *
    * <code>string app_profile_id = 5;</code>
-   *
    * @return The bytes for appProfileId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAppProfileIdBytes() {
+  public com.google.protobuf.ByteString
+      getAppProfileIdBytes() {
     java.lang.Object ref = appProfileId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       appProfileId_ = b;
       return b;
     } else {
@@ -174,10 +150,7 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
 
   public static final int ROWS_LIMIT_FIELD_NUMBER = 3;
   private int rowsLimit_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * The API will scan the first `rows_limit` rows in the table. The limit must
    * be greater than 0 and less than or equal to 1000, otherwise the request
@@ -185,7 +158,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
    * </pre>
    *
    * <code>int32 rows_limit = 3;</code>
-   *
    * @return The rowsLimit.
    */
   @java.lang.Override
@@ -195,10 +167,7 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
 
   public static final int COLUMNS_PER_ROW_LIMIT_FIELD_NUMBER = 4;
   private int columnsPerRowLimit_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * The API will scan the first `columns_per_row_limit` columns in each row.
    * The limit must be greater than 0 and less than or equal to 1000, otherwise
@@ -206,7 +175,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
    * </pre>
    *
    * <code>int32 columns_per_row_limit = 4;</code>
-   *
    * @return The columnsPerRowLimit.
    */
   @java.lang.Override
@@ -215,7 +183,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -227,7 +194,8 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tableName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, tableName_);
     }
@@ -253,10 +221,12 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, tableName_);
     }
     if (rowsLimit_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, rowsLimit_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, rowsLimit_);
     }
     if (columnsPerRowLimit_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, columnsPerRowLimit_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, columnsPerRowLimit_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(appProfileId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, appProfileId_);
@@ -269,18 +239,21 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.InferInternalTypeMetadataRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.InferInternalTypeMetadataRequest other =
-        (com.google.bigtable.v2.InferInternalTypeMetadataRequest) obj;
+    com.google.bigtable.v2.InferInternalTypeMetadataRequest other = (com.google.bigtable.v2.InferInternalTypeMetadataRequest) obj;
 
-    if (!getTableName().equals(other.getTableName())) return false;
-    if (!getAppProfileId().equals(other.getAppProfileId())) return false;
-    if (getRowsLimit() != other.getRowsLimit()) return false;
-    if (getColumnsPerRowLimit() != other.getColumnsPerRowLimit()) return false;
+    if (!getTableName()
+        .equals(other.getTableName())) return false;
+    if (!getAppProfileId()
+        .equals(other.getAppProfileId())) return false;
+    if (getRowsLimit()
+        != other.getRowsLimit()) return false;
+    if (getColumnsPerRowLimit()
+        != other.getColumnsPerRowLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -306,105 +279,98 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
   }
 
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
-  public static Builder newBuilder(
-      com.google.bigtable.v2.InferInternalTypeMetadataRequest prototype) {
+  public static Builder newBuilder(com.google.bigtable.v2.InferInternalTypeMetadataRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Note: This API won't be generally available.
    * Request message for InferInternalTypeMetadata
@@ -412,32 +378,33 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
    *
    * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.InferInternalTypeMetadataRequest)
       com.google.bigtable.v2.InferInternalTypeMetadataRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.InferInternalTypeMetadataRequest.class,
-              com.google.bigtable.v2.InferInternalTypeMetadataRequest.Builder.class);
+              com.google.bigtable.v2.InferInternalTypeMetadataRequest.class, com.google.bigtable.v2.InferInternalTypeMetadataRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.InferInternalTypeMetadataRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -450,9 +417,9 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
     }
 
     @java.lang.Override
@@ -471,11 +438,8 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
 
     @java.lang.Override
     public com.google.bigtable.v2.InferInternalTypeMetadataRequest buildPartial() {
-      com.google.bigtable.v2.InferInternalTypeMetadataRequest result =
-          new com.google.bigtable.v2.InferInternalTypeMetadataRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.InferInternalTypeMetadataRequest result = new com.google.bigtable.v2.InferInternalTypeMetadataRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -499,7 +463,7 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.InferInternalTypeMetadataRequest) {
-        return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataRequest) other);
+        return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -507,8 +471,7 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.InferInternalTypeMetadataRequest other) {
-      if (other == com.google.bigtable.v2.InferInternalTypeMetadataRequest.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.InferInternalTypeMetadataRequest.getDefaultInstance()) return this;
       if (!other.getTableName().isEmpty()) {
         tableName_ = other.tableName_;
         bitField0_ |= 0x00000001;
@@ -551,37 +514,32 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                tableName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 24:
-              {
-                rowsLimit_ = input.readInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            case 32:
-              {
-                columnsPerRowLimit_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-            case 42:
-              {
-                appProfileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 42
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              tableName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 24: {
+              rowsLimit_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              columnsPerRowLimit_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              appProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -591,30 +549,24 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object tableName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the requested table.
      * Values are of the form
      * `projects/{project}/instances/{instance}/tables/{table}`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The tableName.
      */
     public java.lang.String getTableName() {
       java.lang.Object ref = tableName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         tableName_ = s;
         return s;
@@ -622,73 +574,56 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the requested table.
      * Values are of the form
      * `projects/{project}/instances/{instance}/tables/{table}`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for tableName.
      */
-    public com.google.protobuf.ByteString getTableNameBytes() {
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
       java.lang.Object ref = tableName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         tableName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the requested table.
      * Values are of the form
      * `projects/{project}/instances/{instance}/tables/{table}`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       tableName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the requested table.
      * Values are of the form
      * `projects/{project}/instances/{instance}/tables/{table}`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearTableName() {
@@ -697,27 +632,20 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the requested table.
      * Values are of the form
      * `projects/{project}/instances/{instance}/tables/{table}`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       tableName_ = value;
       bitField0_ |= 0x00000001;
@@ -726,22 +654,19 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     }
 
     private java.lang.Object appProfileId_ = "";
-
     /**
-     *
-     *
      * <pre>
      * This API only accepts the empty value of app_profile_id.
      * </pre>
      *
      * <code>string app_profile_id = 5;</code>
-     *
      * @return The appProfileId.
      */
     public java.lang.String getAppProfileId() {
       java.lang.Object ref = appProfileId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appProfileId_ = s;
         return s;
@@ -749,61 +674,50 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * This API only accepts the empty value of app_profile_id.
      * </pre>
      *
      * <code>string app_profile_id = 5;</code>
-     *
      * @return The bytes for appProfileId.
      */
-    public com.google.protobuf.ByteString getAppProfileIdBytes() {
+    public com.google.protobuf.ByteString
+        getAppProfileIdBytes() {
       java.lang.Object ref = appProfileId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         appProfileId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * This API only accepts the empty value of app_profile_id.
      * </pre>
      *
      * <code>string app_profile_id = 5;</code>
-     *
      * @param value The appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This API only accepts the empty value of app_profile_id.
      * </pre>
      *
      * <code>string app_profile_id = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppProfileId() {
@@ -812,23 +726,18 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This API only accepts the empty value of app_profile_id.
      * </pre>
      *
      * <code>string app_profile_id = 5;</code>
-     *
      * @param value The bytes for appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
@@ -836,11 +745,8 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       return this;
     }
 
-    private int rowsLimit_;
-
+    private int rowsLimit_ ;
     /**
-     *
-     *
      * <pre>
      * The API will scan the first `rows_limit` rows in the table. The limit must
      * be greater than 0 and less than or equal to 1000, otherwise the request
@@ -848,17 +754,13 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
      * </pre>
      *
      * <code>int32 rows_limit = 3;</code>
-     *
      * @return The rowsLimit.
      */
     @java.lang.Override
     public int getRowsLimit() {
       return rowsLimit_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The API will scan the first `rows_limit` rows in the table. The limit must
      * be greater than 0 and less than or equal to 1000, otherwise the request
@@ -866,7 +768,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
      * </pre>
      *
      * <code>int32 rows_limit = 3;</code>
-     *
      * @param value The rowsLimit to set.
      * @return This builder for chaining.
      */
@@ -877,10 +778,7 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The API will scan the first `rows_limit` rows in the table. The limit must
      * be greater than 0 and less than or equal to 1000, otherwise the request
@@ -888,7 +786,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
      * </pre>
      *
      * <code>int32 rows_limit = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRowsLimit() {
@@ -898,11 +795,8 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       return this;
     }
 
-    private int columnsPerRowLimit_;
-
+    private int columnsPerRowLimit_ ;
     /**
-     *
-     *
      * <pre>
      * The API will scan the first `columns_per_row_limit` columns in each row.
      * The limit must be greater than 0 and less than or equal to 1000, otherwise
@@ -910,17 +804,13 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
      * </pre>
      *
      * <code>int32 columns_per_row_limit = 4;</code>
-     *
      * @return The columnsPerRowLimit.
      */
     @java.lang.Override
     public int getColumnsPerRowLimit() {
       return columnsPerRowLimit_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The API will scan the first `columns_per_row_limit` columns in each row.
      * The limit must be greater than 0 and less than or equal to 1000, otherwise
@@ -928,7 +818,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
      * </pre>
      *
      * <code>int32 columns_per_row_limit = 4;</code>
-     *
      * @param value The columnsPerRowLimit to set.
      * @return This builder for chaining.
      */
@@ -939,10 +828,7 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The API will scan the first `columns_per_row_limit` columns in each row.
      * The limit must be greater than 0 and less than or equal to 1000, otherwise
@@ -950,7 +836,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
      * </pre>
      *
      * <code>int32 columns_per_row_limit = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearColumnsPerRowLimit() {
@@ -965,7 +850,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.InferInternalTypeMetadataRequest)
   private static final com.google.bigtable.v2.InferInternalTypeMetadataRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.InferInternalTypeMetadataRequest();
   }
@@ -974,27 +858,27 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<InferInternalTypeMetadataRequest> PARSER =
-      new com.google.protobuf.AbstractParser<InferInternalTypeMetadataRequest>() {
-        @java.lang.Override
-        public InferInternalTypeMetadataRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<InferInternalTypeMetadataRequest>
+      PARSER = new com.google.protobuf.AbstractParser<InferInternalTypeMetadataRequest>() {
+    @java.lang.Override
+    public InferInternalTypeMetadataRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<InferInternalTypeMetadataRequest> parser() {
     return PARSER;
@@ -1009,4 +893,6 @@ public final class InferInternalTypeMetadataRequest extends com.google.protobuf.
   public com.google.bigtable.v2.InferInternalTypeMetadataRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -8,62 +8,59 @@ package com.google.bigtable.v2;
 @com.google.protobuf.Generated
 public final class ResponseParamsProto extends com.google.protobuf.GeneratedFile {
   private ResponseParamsProto() {}
-
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ResponseParamsProto");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ResponseParamsProto");
+  }
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ResponseParams_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ResponseParams_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ResponseParams_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n"
-          + "(google/bigtable/v2/response_params.proto\022\022google.bigtable.v2\"z\n"
-          + "\016ResponseParams\022\024\n"
-          + "\007zone_id\030\001 \001(\tH\000\210\001\001\022\027\n\n"
-          + "cluster_id\030\002 \001(\tH\001\210\001\001\022\023\n"
-          + "\006afe_id\030\003 \001(\003H\002\210\001\001B\n\n"
-          + "\010_zone_idB\r\n"
-          + "\013_cluster_idB\t\n"
-          + "\007_afe_idB\275\001\n"
-          + "\026com.google.bigtable.v2B\023ResponseParamsProtoP\001Z8cl"
-          + "oud.google.com/go/bigtable/apiv2/bigtabl"
-          + "epb;bigtablepb\252\002\030Google.Cloud.Bigtable.V"
-          + "2\312\002\030Google\\Cloud\\Bigtable\\V2\352\002\033Google::C"
-          + "loud::Bigtable::V2b\006proto3"
+      "\n(google/bigtable/v2/response_params.pro" +
+      "to\022\022google.bigtable.v2\"z\n\016ResponseParams" +
+      "\022\024\n\007zone_id\030\001 \001(\tH\000\210\001\001\022\027\n\ncluster_id\030\002 \001" +
+      "(\tH\001\210\001\001\022\023\n\006afe_id\030\003 \001(\003H\002\210\001\001B\n\n\010_zone_id" +
+      "B\r\n\013_cluster_idB\t\n\007_afe_idB\275\001\n\026com.googl" +
+      "e.bigtable.v2B\023ResponseParamsProtoP\001Z8cl" +
+      "oud.google.com/go/bigtable/apiv2/bigtabl" +
+      "epb;bigtablepb\252\002\030Google.Cloud.Bigtable.V" +
+      "2\312\002\030Google\\Cloud\\Bigtable\\V2\352\002\033Google::C" +
+      "loud::Bigtable::V2b\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData, new com.google.protobuf.Descriptors.FileDescriptor[] {});
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        });
     internal_static_google_bigtable_v2_ResponseParams_descriptor =
-        getDescriptor().getMessageType(0);
-    internal_static_google_bigtable_v2_ResponseParams_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ResponseParams_descriptor,
-            new java.lang.String[] {
-              "ZoneId", "ClusterId", "AfeId",
-            });
+      getDescriptor().getMessageType(0);
+    internal_static_google_bigtable_v2_ResponseParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ResponseParams_descriptor,
+        new java.lang.String[] { "ZoneId", "ClusterId", "AfeId", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

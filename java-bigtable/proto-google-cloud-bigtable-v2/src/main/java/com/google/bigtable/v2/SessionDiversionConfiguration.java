@@ -5,64 +5,57 @@
 
 package com.google.bigtable.v2;
 
-/** Protobuf type {@code google.bigtable.v2.SessionDiversionConfiguration} */
+/**
+ * Protobuf type {@code google.bigtable.v2.SessionDiversionConfiguration}
+ */
 @com.google.protobuf.Generated
-public final class SessionDiversionConfiguration extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionDiversionConfiguration extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionDiversionConfiguration)
     SessionDiversionConfigurationOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionDiversionConfiguration");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionDiversionConfiguration");
   }
-
   // Use SessionDiversionConfiguration.newBuilder() to construct.
   private SessionDiversionConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private SessionDiversionConfiguration() {
+  }
 
-  private SessionDiversionConfiguration() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionDiversionConfiguration_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionDiversionConfiguration_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionDiversionConfiguration_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionDiversionConfiguration_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionDiversionConfiguration.class,
-            com.google.bigtable.v2.SessionDiversionConfiguration.Builder.class);
+            com.google.bigtable.v2.SessionDiversionConfiguration.class, com.google.bigtable.v2.SessionDiversionConfiguration.Builder.class);
   }
 
   private int diversionStrategyCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object diversionStrategy_;
-
   public enum DiversionStrategyCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     SESSION_LOAD(1),
     PER_METHOD_SESSION_LOAD(2),
     DIVERSIONSTRATEGY_NOT_SET(0);
     private final int value;
-
     private DiversionStrategyCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -75,31 +68,25 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
 
     public static DiversionStrategyCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return SESSION_LOAD;
-        case 2:
-          return PER_METHOD_SESSION_LOAD;
-        case 0:
-          return DIVERSIONSTRATEGY_NOT_SET;
-        default:
-          return null;
+        case 1: return SESSION_LOAD;
+        case 2: return PER_METHOD_SESSION_LOAD;
+        case 0: return DIVERSIONSTRATEGY_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public DiversionStrategyCase getDiversionStrategyCase() {
-    return DiversionStrategyCase.forNumber(diversionStrategyCase_);
+  public DiversionStrategyCase
+  getDiversionStrategyCase() {
+    return DiversionStrategyCase.forNumber(
+        diversionStrategyCase_);
   }
 
   public static final int SESSION_LOAD_FIELD_NUMBER = 1;
-
   /**
-   *
-   *
    * <pre>
    * What share of requests should operate on a session,. The rest
    * should operate on the old-style API. If provided, this should apply to
@@ -107,17 +94,13 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
    * </pre>
    *
    * <code>float session_load = 1;</code>
-   *
    * @return Whether the sessionLoad field is set.
    */
   @java.lang.Override
   public boolean hasSessionLoad() {
     return diversionStrategyCase_ == 1;
   }
-
   /**
-   *
-   *
    * <pre>
    * What share of requests should operate on a session,. The rest
    * should operate on the old-style API. If provided, this should apply to
@@ -125,7 +108,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
    * </pre>
    *
    * <code>float session_load = 1;</code>
-   *
    * @return The sessionLoad.
    */
   @java.lang.Override
@@ -137,45 +119,34 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
   }
 
   public static final int PER_METHOD_SESSION_LOAD_FIELD_NUMBER = 2;
-
   /**
-   *
-   *
    * <pre>
    * The session load per method.
    * </pre>
    *
    * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
-   *
    * @return Whether the perMethodSessionLoad field is set.
    */
   @java.lang.Override
   public boolean hasPerMethodSessionLoad() {
     return diversionStrategyCase_ == 2;
   }
-
   /**
-   *
-   *
    * <pre>
    * The session load per method.
    * </pre>
    *
    * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
-   *
    * @return The perMethodSessionLoad.
    */
   @java.lang.Override
   public com.google.bigtable.v2.PerMethodSessionLoad getPerMethodSessionLoad() {
     if (diversionStrategyCase_ == 2) {
-      return (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_;
+       return (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_;
     }
     return com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * The session load per method.
    * </pre>
@@ -185,13 +156,12 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
   @java.lang.Override
   public com.google.bigtable.v2.PerMethodSessionLoadOrBuilder getPerMethodSessionLoadOrBuilder() {
     if (diversionStrategyCase_ == 2) {
-      return (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_;
+       return (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_;
     }
     return com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -203,9 +173,11 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (diversionStrategyCase_ == 1) {
-      output.writeFloat(1, (float) ((java.lang.Float) diversionStrategy_));
+      output.writeFloat(
+          1, (float)((java.lang.Float) diversionStrategy_));
     }
     if (diversionStrategyCase_ == 2) {
       output.writeMessage(2, (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_);
@@ -220,14 +192,13 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
 
     size = 0;
     if (diversionStrategyCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeFloatSize(
-              1, (float) ((java.lang.Float) diversionStrategy_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(
+            1, (float)((java.lang.Float) diversionStrategy_));
     }
     if (diversionStrategyCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -237,22 +208,23 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionDiversionConfiguration)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SessionDiversionConfiguration other =
-        (com.google.bigtable.v2.SessionDiversionConfiguration) obj;
+    com.google.bigtable.v2.SessionDiversionConfiguration other = (com.google.bigtable.v2.SessionDiversionConfiguration) obj;
 
     if (!getDiversionStrategyCase().equals(other.getDiversionStrategyCase())) return false;
     switch (diversionStrategyCase_) {
       case 1:
         if (java.lang.Float.floatToIntBits(getSessionLoad())
-            != java.lang.Float.floatToIntBits(other.getSessionLoad())) return false;
+            != java.lang.Float.floatToIntBits(
+                other.getSessionLoad())) return false;
         break;
       case 2:
-        if (!getPerMethodSessionLoad().equals(other.getPerMethodSessionLoad())) return false;
+        if (!getPerMethodSessionLoad()
+            .equals(other.getPerMethodSessionLoad())) return false;
         break;
       case 0:
       default:
@@ -271,7 +243,8 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     switch (diversionStrategyCase_) {
       case 1:
         hash = (37 * hash) + SESSION_LOAD_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(getSessionLoad());
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getSessionLoad());
         break;
       case 2:
         hash = (37 * hash) + PER_METHOD_SESSION_LOAD_FIELD_NUMBER;
@@ -286,128 +259,127 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
   }
 
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SessionDiversionConfiguration parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SessionDiversionConfiguration parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionDiversionConfiguration parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionDiversionConfiguration prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
-  /** Protobuf type {@code google.bigtable.v2.SessionDiversionConfiguration} */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  /**
+   * Protobuf type {@code google.bigtable.v2.SessionDiversionConfiguration}
+   */
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionDiversionConfiguration)
       com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionDiversionConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionDiversionConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionDiversionConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionDiversionConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionDiversionConfiguration.class,
-              com.google.bigtable.v2.SessionDiversionConfiguration.Builder.class);
+              com.google.bigtable.v2.SessionDiversionConfiguration.class, com.google.bigtable.v2.SessionDiversionConfiguration.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionDiversionConfiguration.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -421,9 +393,9 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionDiversionConfiguration_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionDiversionConfiguration_descriptor;
     }
 
     @java.lang.Override
@@ -442,11 +414,8 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionDiversionConfiguration buildPartial() {
-      com.google.bigtable.v2.SessionDiversionConfiguration result =
-          new com.google.bigtable.v2.SessionDiversionConfiguration(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SessionDiversionConfiguration result = new com.google.bigtable.v2.SessionDiversionConfiguration(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -459,7 +428,8 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     private void buildPartialOneofs(com.google.bigtable.v2.SessionDiversionConfiguration result) {
       result.diversionStrategyCase_ = diversionStrategyCase_;
       result.diversionStrategy_ = this.diversionStrategy_;
-      if (diversionStrategyCase_ == 2 && perMethodSessionLoadBuilder_ != null) {
+      if (diversionStrategyCase_ == 2 &&
+          perMethodSessionLoadBuilder_ != null) {
         result.diversionStrategy_ = perMethodSessionLoadBuilder_.build();
       }
     }
@@ -467,7 +437,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionDiversionConfiguration) {
-        return mergeFrom((com.google.bigtable.v2.SessionDiversionConfiguration) other);
+        return mergeFrom((com.google.bigtable.v2.SessionDiversionConfiguration)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -475,23 +445,19 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.SessionDiversionConfiguration other) {
-      if (other == com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()) return this;
       switch (other.getDiversionStrategyCase()) {
-        case SESSION_LOAD:
-          {
-            setSessionLoad(other.getSessionLoad());
-            break;
-          }
-        case PER_METHOD_SESSION_LOAD:
-          {
-            mergePerMethodSessionLoad(other.getPerMethodSessionLoad());
-            break;
-          }
-        case DIVERSIONSTRATEGY_NOT_SET:
-          {
-            break;
-          }
+        case SESSION_LOAD: {
+          setSessionLoad(other.getSessionLoad());
+          break;
+        }
+        case PER_METHOD_SESSION_LOAD: {
+          mergePerMethodSessionLoad(other.getPerMethodSessionLoad());
+          break;
+        }
+        case DIVERSIONSTRATEGY_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -519,26 +485,24 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
             case 0:
               done = true;
               break;
-            case 13:
-              {
-                diversionStrategy_ = input.readFloat();
-                diversionStrategyCase_ = 1;
-                break;
-              } // case 13
-            case 18:
-              {
-                input.readMessage(
-                    internalGetPerMethodSessionLoadFieldBuilder().getBuilder(), extensionRegistry);
-                diversionStrategyCase_ = 2;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 13: {
+              diversionStrategy_ = input.readFloat();
+              diversionStrategyCase_ = 1;
+              break;
+            } // case 13
+            case 18: {
+              input.readMessage(
+                  internalGetPerMethodSessionLoadFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              diversionStrategyCase_ = 2;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -548,12 +512,12 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       } // finally
       return this;
     }
-
     private int diversionStrategyCase_ = 0;
     private java.lang.Object diversionStrategy_;
-
-    public DiversionStrategyCase getDiversionStrategyCase() {
-      return DiversionStrategyCase.forNumber(diversionStrategyCase_);
+    public DiversionStrategyCase
+        getDiversionStrategyCase() {
+      return DiversionStrategyCase.forNumber(
+          diversionStrategyCase_);
     }
 
     public Builder clearDiversionStrategy() {
@@ -566,8 +530,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     private int bitField0_;
 
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest
      * should operate on the old-style API. If provided, this should apply to
@@ -575,16 +537,12 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @return Whether the sessionLoad field is set.
      */
     public boolean hasSessionLoad() {
       return diversionStrategyCase_ == 1;
     }
-
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest
      * should operate on the old-style API. If provided, this should apply to
@@ -592,7 +550,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @return The sessionLoad.
      */
     public float getSessionLoad() {
@@ -601,10 +558,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       }
       return 0F;
     }
-
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest
      * should operate on the old-style API. If provided, this should apply to
@@ -612,7 +566,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @param value The sessionLoad to set.
      * @return This builder for chaining.
      */
@@ -623,10 +576,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest
      * should operate on the old-style API. If provided, this should apply to
@@ -634,7 +584,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSessionLoad() {
@@ -647,36 +596,25 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.PerMethodSessionLoad,
-            com.google.bigtable.v2.PerMethodSessionLoad.Builder,
-            com.google.bigtable.v2.PerMethodSessionLoadOrBuilder>
-        perMethodSessionLoadBuilder_;
-
+        com.google.bigtable.v2.PerMethodSessionLoad, com.google.bigtable.v2.PerMethodSessionLoad.Builder, com.google.bigtable.v2.PerMethodSessionLoadOrBuilder> perMethodSessionLoadBuilder_;
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
      *
      * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
-     *
      * @return Whether the perMethodSessionLoad field is set.
      */
     @java.lang.Override
     public boolean hasPerMethodSessionLoad() {
       return diversionStrategyCase_ == 2;
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
      *
      * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
-     *
      * @return The perMethodSessionLoad.
      */
     @java.lang.Override
@@ -693,10 +631,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
         return com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -716,10 +651,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       diversionStrategyCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -737,10 +669,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       diversionStrategyCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -749,14 +678,10 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
      */
     public Builder mergePerMethodSessionLoad(com.google.bigtable.v2.PerMethodSessionLoad value) {
       if (perMethodSessionLoadBuilder_ == null) {
-        if (diversionStrategyCase_ == 2
-            && diversionStrategy_
-                != com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance()) {
-          diversionStrategy_ =
-              com.google.bigtable.v2.PerMethodSessionLoad.newBuilder(
-                      (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (diversionStrategyCase_ == 2 &&
+            diversionStrategy_ != com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance()) {
+          diversionStrategy_ = com.google.bigtable.v2.PerMethodSessionLoad.newBuilder((com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_)
+              .mergeFrom(value).buildPartial();
         } else {
           diversionStrategy_ = value;
         }
@@ -771,10 +696,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       diversionStrategyCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -797,10 +719,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -810,10 +729,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     public com.google.bigtable.v2.PerMethodSessionLoad.Builder getPerMethodSessionLoadBuilder() {
       return internalGetPerMethodSessionLoadFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -831,10 +747,7 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
         return com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The session load per method.
      * </pre>
@@ -842,19 +755,14 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
      * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.PerMethodSessionLoad,
-            com.google.bigtable.v2.PerMethodSessionLoad.Builder,
-            com.google.bigtable.v2.PerMethodSessionLoadOrBuilder>
+        com.google.bigtable.v2.PerMethodSessionLoad, com.google.bigtable.v2.PerMethodSessionLoad.Builder, com.google.bigtable.v2.PerMethodSessionLoadOrBuilder> 
         internalGetPerMethodSessionLoadFieldBuilder() {
       if (perMethodSessionLoadBuilder_ == null) {
         if (!(diversionStrategyCase_ == 2)) {
           diversionStrategy_ = com.google.bigtable.v2.PerMethodSessionLoad.getDefaultInstance();
         }
-        perMethodSessionLoadBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.PerMethodSessionLoad,
-                com.google.bigtable.v2.PerMethodSessionLoad.Builder,
-                com.google.bigtable.v2.PerMethodSessionLoadOrBuilder>(
+        perMethodSessionLoadBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.PerMethodSessionLoad, com.google.bigtable.v2.PerMethodSessionLoad.Builder, com.google.bigtable.v2.PerMethodSessionLoadOrBuilder>(
                 (com.google.bigtable.v2.PerMethodSessionLoad) diversionStrategy_,
                 getParentForChildren(),
                 isClean());
@@ -870,7 +778,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionDiversionConfiguration)
   private static final com.google.bigtable.v2.SessionDiversionConfiguration DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionDiversionConfiguration();
   }
@@ -879,27 +786,27 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionDiversionConfiguration> PARSER =
-      new com.google.protobuf.AbstractParser<SessionDiversionConfiguration>() {
-        @java.lang.Override
-        public SessionDiversionConfiguration parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionDiversionConfiguration>
+      PARSER = new com.google.protobuf.AbstractParser<SessionDiversionConfiguration>() {
+    @java.lang.Override
+    public SessionDiversionConfiguration parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionDiversionConfiguration> parser() {
     return PARSER;
@@ -914,4 +821,6 @@ public final class SessionDiversionConfiguration extends com.google.protobuf.Gen
   public com.google.bigtable.v2.SessionDiversionConfiguration getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

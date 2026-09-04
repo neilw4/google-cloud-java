@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Specifies a contiguous range of rows.
  * </pre>
@@ -15,60 +13,53 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.RowRange}
  */
 @com.google.protobuf.Generated
-public final class RowRange extends com.google.protobuf.GeneratedMessage
-    implements
+public final class RowRange extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.RowRange)
     RowRangeOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "RowRange");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "RowRange");
   }
-
   // Use RowRange.newBuilder() to construct.
   private RowRange(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private RowRange() {
+  }
 
-  private RowRange() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowRange_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_RowRange_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowRange_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.bigtable.v2.RowRange.class, com.google.bigtable.v2.RowRange.Builder.class);
   }
 
   private int startKeyCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object startKey_;
-
   public enum StartKeyCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     START_KEY_CLOSED(1),
     START_KEY_OPEN(2),
     STARTKEY_NOT_SET(0);
     private final int value;
-
     private StartKeyCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -81,44 +72,36 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
 
     public static StartKeyCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return START_KEY_CLOSED;
-        case 2:
-          return START_KEY_OPEN;
-        case 0:
-          return STARTKEY_NOT_SET;
-        default:
-          return null;
+        case 1: return START_KEY_CLOSED;
+        case 2: return START_KEY_OPEN;
+        case 0: return STARTKEY_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public StartKeyCase getStartKeyCase() {
-    return StartKeyCase.forNumber(startKeyCase_);
+  public StartKeyCase
+  getStartKeyCase() {
+    return StartKeyCase.forNumber(
+        startKeyCase_);
   }
 
   private int endKeyCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object endKey_;
-
   public enum EndKeyCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     END_KEY_OPEN(3),
     END_KEY_CLOSED(4),
     ENDKEY_NOT_SET(0);
     private final int value;
-
     private EndKeyCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -131,53 +114,42 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
 
     public static EndKeyCase forNumber(int value) {
       switch (value) {
-        case 3:
-          return END_KEY_OPEN;
-        case 4:
-          return END_KEY_CLOSED;
-        case 0:
-          return ENDKEY_NOT_SET;
-        default:
-          return null;
+        case 3: return END_KEY_OPEN;
+        case 4: return END_KEY_CLOSED;
+        case 0: return ENDKEY_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public EndKeyCase getEndKeyCase() {
-    return EndKeyCase.forNumber(endKeyCase_);
+  public EndKeyCase
+  getEndKeyCase() {
+    return EndKeyCase.forNumber(
+        endKeyCase_);
   }
 
   public static final int START_KEY_CLOSED_FIELD_NUMBER = 1;
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an inclusive lower bound for the range.
    * </pre>
    *
    * <code>bytes start_key_closed = 1;</code>
-   *
    * @return Whether the startKeyClosed field is set.
    */
   @java.lang.Override
   public boolean hasStartKeyClosed() {
     return startKeyCase_ == 1;
   }
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an inclusive lower bound for the range.
    * </pre>
    *
    * <code>bytes start_key_closed = 1;</code>
-   *
    * @return The startKeyClosed.
    */
   @java.lang.Override
@@ -189,32 +161,24 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int START_KEY_OPEN_FIELD_NUMBER = 2;
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an exclusive lower bound for the range.
    * </pre>
    *
    * <code>bytes start_key_open = 2;</code>
-   *
    * @return Whether the startKeyOpen field is set.
    */
   @java.lang.Override
   public boolean hasStartKeyOpen() {
     return startKeyCase_ == 2;
   }
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an exclusive lower bound for the range.
    * </pre>
    *
    * <code>bytes start_key_open = 2;</code>
-   *
    * @return The startKeyOpen.
    */
   @java.lang.Override
@@ -226,32 +190,24 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int END_KEY_OPEN_FIELD_NUMBER = 3;
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an exclusive upper bound for the range.
    * </pre>
    *
    * <code>bytes end_key_open = 3;</code>
-   *
    * @return Whether the endKeyOpen field is set.
    */
   @java.lang.Override
   public boolean hasEndKeyOpen() {
     return endKeyCase_ == 3;
   }
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an exclusive upper bound for the range.
    * </pre>
    *
    * <code>bytes end_key_open = 3;</code>
-   *
    * @return The endKeyOpen.
    */
   @java.lang.Override
@@ -263,32 +219,24 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int END_KEY_CLOSED_FIELD_NUMBER = 4;
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an inclusive upper bound for the range.
    * </pre>
    *
    * <code>bytes end_key_closed = 4;</code>
-   *
    * @return Whether the endKeyClosed field is set.
    */
   @java.lang.Override
   public boolean hasEndKeyClosed() {
     return endKeyCase_ == 4;
   }
-
   /**
-   *
-   *
    * <pre>
    * Used when giving an inclusive upper bound for the range.
    * </pre>
    *
    * <code>bytes end_key_closed = 4;</code>
-   *
    * @return The endKeyClosed.
    */
   @java.lang.Override
@@ -300,7 +248,6 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -312,18 +259,23 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (startKeyCase_ == 1) {
-      output.writeBytes(1, (com.google.protobuf.ByteString) startKey_);
+      output.writeBytes(
+          1, (com.google.protobuf.ByteString) startKey_);
     }
     if (startKeyCase_ == 2) {
-      output.writeBytes(2, (com.google.protobuf.ByteString) startKey_);
+      output.writeBytes(
+          2, (com.google.protobuf.ByteString) startKey_);
     }
     if (endKeyCase_ == 3) {
-      output.writeBytes(3, (com.google.protobuf.ByteString) endKey_);
+      output.writeBytes(
+          3, (com.google.protobuf.ByteString) endKey_);
     }
     if (endKeyCase_ == 4) {
-      output.writeBytes(4, (com.google.protobuf.ByteString) endKey_);
+      output.writeBytes(
+          4, (com.google.protobuf.ByteString) endKey_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -335,24 +287,24 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (startKeyCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              1, (com.google.protobuf.ByteString) startKey_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            1, (com.google.protobuf.ByteString) startKey_);
     }
     if (startKeyCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              2, (com.google.protobuf.ByteString) startKey_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            2, (com.google.protobuf.ByteString) startKey_);
     }
     if (endKeyCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              3, (com.google.protobuf.ByteString) endKey_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            3, (com.google.protobuf.ByteString) endKey_);
     }
     if (endKeyCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              4, (com.google.protobuf.ByteString) endKey_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            4, (com.google.protobuf.ByteString) endKey_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -362,7 +314,7 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.RowRange)) {
       return super.equals(obj);
@@ -372,10 +324,12 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     if (!getStartKeyCase().equals(other.getStartKeyCase())) return false;
     switch (startKeyCase_) {
       case 1:
-        if (!getStartKeyClosed().equals(other.getStartKeyClosed())) return false;
+        if (!getStartKeyClosed()
+            .equals(other.getStartKeyClosed())) return false;
         break;
       case 2:
-        if (!getStartKeyOpen().equals(other.getStartKeyOpen())) return false;
+        if (!getStartKeyOpen()
+            .equals(other.getStartKeyOpen())) return false;
         break;
       case 0:
       default:
@@ -383,10 +337,12 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     if (!getEndKeyCase().equals(other.getEndKeyCase())) return false;
     switch (endKeyCase_) {
       case 3:
-        if (!getEndKeyOpen().equals(other.getEndKeyOpen())) return false;
+        if (!getEndKeyOpen()
+            .equals(other.getEndKeyOpen())) return false;
         break;
       case 4:
-        if (!getEndKeyClosed().equals(other.getEndKeyClosed())) return false;
+        if (!getEndKeyClosed()
+            .equals(other.getEndKeyClosed())) return false;
         break;
       case 0:
       default:
@@ -431,135 +387,132 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.RowRange parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.RowRange parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.RowRange parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.RowRange parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.RowRange parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.RowRange parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RowRange parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.RowRange prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Specifies a contiguous range of rows.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.RowRange}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RowRange)
       com.google.bigtable.v2.RowRangeOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowRange_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowRange_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowRange_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowRange_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.bigtable.v2.RowRange.class, com.google.bigtable.v2.RowRange.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.RowRange.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -572,9 +525,9 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowRange_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowRange_descriptor;
     }
 
     @java.lang.Override
@@ -594,9 +547,7 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.RowRange buildPartial() {
       com.google.bigtable.v2.RowRange result = new com.google.bigtable.v2.RowRange(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -616,7 +567,7 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.RowRange) {
-        return mergeFrom((com.google.bigtable.v2.RowRange) other);
+        return mergeFrom((com.google.bigtable.v2.RowRange)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -626,36 +577,30 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     public Builder mergeFrom(com.google.bigtable.v2.RowRange other) {
       if (other == com.google.bigtable.v2.RowRange.getDefaultInstance()) return this;
       switch (other.getStartKeyCase()) {
-        case START_KEY_CLOSED:
-          {
-            setStartKeyClosed(other.getStartKeyClosed());
-            break;
-          }
-        case START_KEY_OPEN:
-          {
-            setStartKeyOpen(other.getStartKeyOpen());
-            break;
-          }
-        case STARTKEY_NOT_SET:
-          {
-            break;
-          }
+        case START_KEY_CLOSED: {
+          setStartKeyClosed(other.getStartKeyClosed());
+          break;
+        }
+        case START_KEY_OPEN: {
+          setStartKeyOpen(other.getStartKeyOpen());
+          break;
+        }
+        case STARTKEY_NOT_SET: {
+          break;
+        }
       }
       switch (other.getEndKeyCase()) {
-        case END_KEY_OPEN:
-          {
-            setEndKeyOpen(other.getEndKeyOpen());
-            break;
-          }
-        case END_KEY_CLOSED:
-          {
-            setEndKeyClosed(other.getEndKeyClosed());
-            break;
-          }
-        case ENDKEY_NOT_SET:
-          {
-            break;
-          }
+        case END_KEY_OPEN: {
+          setEndKeyOpen(other.getEndKeyOpen());
+          break;
+        }
+        case END_KEY_CLOSED: {
+          setEndKeyClosed(other.getEndKeyClosed());
+          break;
+        }
+        case ENDKEY_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -683,37 +628,32 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                startKey_ = input.readBytes();
-                startKeyCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                startKey_ = input.readBytes();
-                startKeyCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                endKey_ = input.readBytes();
-                endKeyCase_ = 3;
-                break;
-              } // case 26
-            case 34:
-              {
-                endKey_ = input.readBytes();
-                endKeyCase_ = 4;
-                break;
-              } // case 34
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              startKey_ = input.readBytes();
+              startKeyCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              startKey_ = input.readBytes();
+              startKeyCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              endKey_ = input.readBytes();
+              endKeyCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              endKey_ = input.readBytes();
+              endKeyCase_ = 4;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -723,12 +663,12 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int startKeyCase_ = 0;
     private java.lang.Object startKey_;
-
-    public StartKeyCase getStartKeyCase() {
-      return StartKeyCase.forNumber(startKeyCase_);
+    public StartKeyCase
+        getStartKeyCase() {
+      return StartKeyCase.forNumber(
+          startKeyCase_);
     }
 
     public Builder clearStartKey() {
@@ -740,9 +680,10 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
 
     private int endKeyCase_ = 0;
     private java.lang.Object endKey_;
-
-    public EndKeyCase getEndKeyCase() {
-      return EndKeyCase.forNumber(endKeyCase_);
+    public EndKeyCase
+        getEndKeyCase() {
+      return EndKeyCase.forNumber(
+          endKeyCase_);
     }
 
     public Builder clearEndKey() {
@@ -755,29 +696,22 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     private int bitField0_;
 
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_closed = 1;</code>
-     *
      * @return Whether the startKeyClosed field is set.
      */
     public boolean hasStartKeyClosed() {
       return startKeyCase_ == 1;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_closed = 1;</code>
-     *
      * @return The startKeyClosed.
      */
     public com.google.protobuf.ByteString getStartKeyClosed() {
@@ -786,38 +720,28 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_closed = 1;</code>
-     *
      * @param value The startKeyClosed to set.
      * @return This builder for chaining.
      */
     public Builder setStartKeyClosed(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       startKeyCase_ = 1;
       startKey_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_closed = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearStartKeyClosed() {
@@ -830,29 +754,22 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_open = 2;</code>
-     *
      * @return Whether the startKeyOpen field is set.
      */
     public boolean hasStartKeyOpen() {
       return startKeyCase_ == 2;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_open = 2;</code>
-     *
      * @return The startKeyOpen.
      */
     public com.google.protobuf.ByteString getStartKeyOpen() {
@@ -861,38 +778,28 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_open = 2;</code>
-     *
      * @param value The startKeyOpen to set.
      * @return This builder for chaining.
      */
     public Builder setStartKeyOpen(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       startKeyCase_ = 2;
       startKey_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive lower bound for the range.
      * </pre>
      *
      * <code>bytes start_key_open = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearStartKeyOpen() {
@@ -905,29 +812,22 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_open = 3;</code>
-     *
      * @return Whether the endKeyOpen field is set.
      */
     public boolean hasEndKeyOpen() {
       return endKeyCase_ == 3;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_open = 3;</code>
-     *
      * @return The endKeyOpen.
      */
     public com.google.protobuf.ByteString getEndKeyOpen() {
@@ -936,38 +836,28 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_open = 3;</code>
-     *
      * @param value The endKeyOpen to set.
      * @return This builder for chaining.
      */
     public Builder setEndKeyOpen(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       endKeyCase_ = 3;
       endKey_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an exclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_open = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearEndKeyOpen() {
@@ -980,29 +870,22 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_closed = 4;</code>
-     *
      * @return Whether the endKeyClosed field is set.
      */
     public boolean hasEndKeyClosed() {
       return endKeyCase_ == 4;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_closed = 4;</code>
-     *
      * @return The endKeyClosed.
      */
     public com.google.protobuf.ByteString getEndKeyClosed() {
@@ -1011,38 +894,28 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_closed = 4;</code>
-     *
      * @param value The endKeyClosed to set.
      * @return This builder for chaining.
      */
     public Builder setEndKeyClosed(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       endKeyCase_ = 4;
       endKey_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used when giving an inclusive upper bound for the range.
      * </pre>
      *
      * <code>bytes end_key_closed = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearEndKeyClosed() {
@@ -1059,7 +932,6 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.RowRange)
   private static final com.google.bigtable.v2.RowRange DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.RowRange();
   }
@@ -1068,27 +940,27 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RowRange> PARSER =
-      new com.google.protobuf.AbstractParser<RowRange>() {
-        @java.lang.Override
-        public RowRange parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<RowRange>
+      PARSER = new com.google.protobuf.AbstractParser<RowRange>() {
+    @java.lang.Override
+    public RowRange parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<RowRange> parser() {
     return PARSER;
@@ -1103,4 +975,6 @@ public final class RowRange extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.RowRange getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

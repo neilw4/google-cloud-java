@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionParametersResponseOrBuilder
-    extends
+public interface SessionParametersResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionParametersResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Maximum time between messages that the AFE will send to the client. The
    * client may use this information to determine its control-flow in relation
@@ -24,14 +21,10 @@ public interface SessionParametersResponseOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration keep_alive = 1;</code>
-   *
    * @return Whether the keepAlive field is set.
    */
   boolean hasKeepAlive();
-
   /**
-   *
-   *
    * <pre>
    * Maximum time between messages that the AFE will send to the client. The
    * client may use this information to determine its control-flow in relation
@@ -42,14 +35,10 @@ public interface SessionParametersResponseOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration keep_alive = 1;</code>
-   *
    * @return The keepAlive.
    */
   com.google.protobuf.Duration getKeepAlive();
-
   /**
-   *
-   *
    * <pre>
    * Maximum time between messages that the AFE will send to the client. The
    * client may use this information to determine its control-flow in relation
@@ -64,8 +53,6 @@ public interface SessionParametersResponseOrBuilder
   com.google.protobuf.DurationOrBuilder getKeepAliveOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Client will pull this many bytes at most to make messages for steamed
    * responses. If the last byte is mid-message, it will continue until a full
@@ -73,7 +60,6 @@ public interface SessionParametersResponseOrBuilder
    * </pre>
    *
    * <code>int32 softmax_streaming_prefetch_buffer_size = 2;</code>
-   *
    * @return The softmaxStreamingPrefetchBufferSize.
    */
   int getSoftmaxStreamingPrefetchBufferSize();

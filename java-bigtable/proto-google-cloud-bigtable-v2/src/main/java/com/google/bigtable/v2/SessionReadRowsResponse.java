@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,113 +13,110 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SessionReadRowsResponse}
  */
 @com.google.protobuf.Generated
-public final class SessionReadRowsResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionReadRowsResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionReadRowsResponse)
     SessionReadRowsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionReadRowsResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionReadRowsResponse");
   }
-
   // Use SessionReadRowsResponse.newBuilder() to construct.
   private SessionReadRowsResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private SessionReadRowsResponse() {
     row_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionReadRowsResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionReadRowsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionReadRowsResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionReadRowsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionReadRowsResponse.class,
-            com.google.bigtable.v2.SessionReadRowsResponse.Builder.class);
+            com.google.bigtable.v2.SessionReadRowsResponse.class, com.google.bigtable.v2.SessionReadRowsResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int ROW_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.Row> row_;
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   @java.lang.Override
   public java.util.List<com.google.bigtable.v2.Row> getRowList() {
     return row_;
   }
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.RowOrBuilder> getRowOrBuilderList() {
+  public java.util.List<? extends com.google.bigtable.v2.RowOrBuilder> 
+      getRowOrBuilderList() {
     return row_;
   }
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   @java.lang.Override
   public int getRowCount() {
     return row_.size();
   }
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.Row getRow(int index) {
     return row_.get(index);
   }
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   @java.lang.Override
-  public com.google.bigtable.v2.RowOrBuilder getRowOrBuilder(int index) {
+  public com.google.bigtable.v2.RowOrBuilder getRowOrBuilder(
+      int index) {
     return row_.get(index);
   }
 
   public static final int STATS_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.RequestStats stats_;
-
   /**
    * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
-   *
    * @return Whether the stats field is set.
    */
   @java.lang.Override
   public boolean hasStats() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
    * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
-   *
    * @return The stats.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RequestStats getStats() {
     return stats_ == null ? com.google.bigtable.v2.RequestStats.getDefaultInstance() : stats_;
   }
-
-  /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.RequestStatsOrBuilder getStatsOrBuilder() {
     return stats_ == null ? com.google.bigtable.v2.RequestStats.getDefaultInstance() : stats_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -133,7 +128,8 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < row_.size(); i++) {
       output.writeMessage(1, row_.get(i));
     }
@@ -150,10 +146,12 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
 
     size = 0;
     for (int i = 0; i < row_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, row_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, row_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getStats());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getStats());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -163,18 +161,19 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionReadRowsResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SessionReadRowsResponse other =
-        (com.google.bigtable.v2.SessionReadRowsResponse) obj;
+    com.google.bigtable.v2.SessionReadRowsResponse other = (com.google.bigtable.v2.SessionReadRowsResponse) obj;
 
-    if (!getRowList().equals(other.getRowList())) return false;
+    if (!getRowList()
+        .equals(other.getRowList())) return false;
     if (hasStats() != other.hasStats()) return false;
     if (hasStats()) {
-      if (!getStats().equals(other.getStats())) return false;
+      if (!getStats()
+          .equals(other.getStats())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -200,128 +199,120 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
     return hash;
   }
 
-  public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SessionReadRowsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionReadRowsResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SessionReadRowsResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionReadRowsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionReadRowsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionReadRowsResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionReadRowsResponse)
       com.google.bigtable.v2.SessionReadRowsResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionReadRowsResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionReadRowsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionReadRowsResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionReadRowsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionReadRowsResponse.class,
-              com.google.bigtable.v2.SessionReadRowsResponse.Builder.class);
+              com.google.bigtable.v2.SessionReadRowsResponse.class, com.google.bigtable.v2.SessionReadRowsResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionReadRowsResponse.newBuilder()
@@ -329,18 +320,18 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetRowFieldBuilder();
         internalGetStatsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -361,9 +352,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionReadRowsResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionReadRowsResponse_descriptor;
     }
 
     @java.lang.Override
@@ -382,12 +373,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionReadRowsResponse buildPartial() {
-      com.google.bigtable.v2.SessionReadRowsResponse result =
-          new com.google.bigtable.v2.SessionReadRowsResponse(this);
+      com.google.bigtable.v2.SessionReadRowsResponse result = new com.google.bigtable.v2.SessionReadRowsResponse(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -408,7 +396,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.stats_ = statsBuilder_ == null ? stats_ : statsBuilder_.build();
+        result.stats_ = statsBuilder_ == null
+            ? stats_
+            : statsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -417,7 +407,7 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionReadRowsResponse) {
-        return mergeFrom((com.google.bigtable.v2.SessionReadRowsResponse) other);
+        return mergeFrom((com.google.bigtable.v2.SessionReadRowsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -444,10 +434,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
             rowBuilder_ = null;
             row_ = other.row_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            rowBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetRowFieldBuilder()
-                    : null;
+            rowBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetRowFieldBuilder() : null;
           } else {
             rowBuilder_.addAllMessages(other.row_);
           }
@@ -482,31 +471,32 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.Row m =
-                    input.readMessage(com.google.bigtable.v2.Row.parser(), extensionRegistry);
-                if (rowBuilder_ == null) {
-                  ensureRowIsMutable();
-                  row_.add(m);
-                } else {
-                  rowBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(internalGetStatsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.Row m =
+                  input.readMessage(
+                      com.google.bigtable.v2.Row.parser(),
+                      extensionRegistry);
+              if (rowBuilder_ == null) {
+                ensureRowIsMutable();
+                row_.add(m);
+              } else {
+                rowBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -516,25 +506,23 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private java.util.List<com.google.bigtable.v2.Row> row_ = java.util.Collections.emptyList();
-
+    private java.util.List<com.google.bigtable.v2.Row> row_ =
+      java.util.Collections.emptyList();
     private void ensureRowIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         row_ = new java.util.ArrayList<com.google.bigtable.v2.Row>(row_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.Row,
-            com.google.bigtable.v2.Row.Builder,
-            com.google.bigtable.v2.RowOrBuilder>
-        rowBuilder_;
+        com.google.bigtable.v2.Row, com.google.bigtable.v2.Row.Builder, com.google.bigtable.v2.RowOrBuilder> rowBuilder_;
 
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public java.util.List<com.google.bigtable.v2.Row> getRowList() {
       if (rowBuilder_ == null) {
         return java.util.Collections.unmodifiableList(row_);
@@ -542,8 +530,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
         return rowBuilder_.getMessageList();
       }
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public int getRowCount() {
       if (rowBuilder_ == null) {
         return row_.size();
@@ -551,8 +540,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
         return rowBuilder_.getCount();
       }
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public com.google.bigtable.v2.Row getRow(int index) {
       if (rowBuilder_ == null) {
         return row_.get(index);
@@ -560,9 +550,11 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
         return rowBuilder_.getMessage(index);
       }
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public Builder setRow(int index, com.google.bigtable.v2.Row value) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public Builder setRow(
+        int index, com.google.bigtable.v2.Row value) {
       if (rowBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -575,9 +567,11 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public Builder setRow(int index, com.google.bigtable.v2.Row.Builder builderForValue) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public Builder setRow(
+        int index, com.google.bigtable.v2.Row.Builder builderForValue) {
       if (rowBuilder_ == null) {
         ensureRowIsMutable();
         row_.set(index, builderForValue.build());
@@ -587,8 +581,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public Builder addRow(com.google.bigtable.v2.Row value) {
       if (rowBuilder_ == null) {
         if (value == null) {
@@ -602,9 +597,11 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public Builder addRow(int index, com.google.bigtable.v2.Row value) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public Builder addRow(
+        int index, com.google.bigtable.v2.Row value) {
       if (rowBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -617,9 +614,11 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public Builder addRow(com.google.bigtable.v2.Row.Builder builderForValue) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public Builder addRow(
+        com.google.bigtable.v2.Row.Builder builderForValue) {
       if (rowBuilder_ == null) {
         ensureRowIsMutable();
         row_.add(builderForValue.build());
@@ -629,9 +628,11 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public Builder addRow(int index, com.google.bigtable.v2.Row.Builder builderForValue) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public Builder addRow(
+        int index, com.google.bigtable.v2.Row.Builder builderForValue) {
       if (rowBuilder_ == null) {
         ensureRowIsMutable();
         row_.add(index, builderForValue.build());
@@ -641,20 +642,24 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public Builder addAllRow(java.lang.Iterable<? extends com.google.bigtable.v2.Row> values) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public Builder addAllRow(
+        java.lang.Iterable<? extends com.google.bigtable.v2.Row> values) {
       if (rowBuilder_ == null) {
         ensureRowIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, row_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, row_);
         onChanged();
       } else {
         rowBuilder_.addAllMessages(values);
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public Builder clearRow() {
       if (rowBuilder_ == null) {
         row_ = java.util.Collections.emptyList();
@@ -665,8 +670,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public Builder removeRow(int index) {
       if (rowBuilder_ == null) {
         ensureRowIsMutable();
@@ -677,59 +683,66 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public com.google.bigtable.v2.Row.Builder getRowBuilder(int index) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public com.google.bigtable.v2.Row.Builder getRowBuilder(
+        int index) {
       return internalGetRowFieldBuilder().getBuilder(index);
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public com.google.bigtable.v2.RowOrBuilder getRowOrBuilder(int index) {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public com.google.bigtable.v2.RowOrBuilder getRowOrBuilder(
+        int index) {
       if (rowBuilder_ == null) {
-        return row_.get(index);
-      } else {
+        return row_.get(index);  } else {
         return rowBuilder_.getMessageOrBuilder(index);
       }
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public java.util.List<? extends com.google.bigtable.v2.RowOrBuilder> getRowOrBuilderList() {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public java.util.List<? extends com.google.bigtable.v2.RowOrBuilder> 
+         getRowOrBuilderList() {
       if (rowBuilder_ != null) {
         return rowBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(row_);
       }
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
     public com.google.bigtable.v2.Row.Builder addRowBuilder() {
-      return internalGetRowFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.Row.getDefaultInstance());
+      return internalGetRowFieldBuilder().addBuilder(
+          com.google.bigtable.v2.Row.getDefaultInstance());
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public com.google.bigtable.v2.Row.Builder addRowBuilder(int index) {
-      return internalGetRowFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.Row.getDefaultInstance());
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public com.google.bigtable.v2.Row.Builder addRowBuilder(
+        int index) {
+      return internalGetRowFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.Row.getDefaultInstance());
     }
-
-    /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-    public java.util.List<com.google.bigtable.v2.Row.Builder> getRowBuilderList() {
+    /**
+     * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+     */
+    public java.util.List<com.google.bigtable.v2.Row.Builder> 
+         getRowBuilderList() {
       return internalGetRowFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.Row,
-            com.google.bigtable.v2.Row.Builder,
-            com.google.bigtable.v2.RowOrBuilder>
+        com.google.bigtable.v2.Row, com.google.bigtable.v2.Row.Builder, com.google.bigtable.v2.RowOrBuilder> 
         internalGetRowFieldBuilder() {
       if (rowBuilder_ == null) {
-        rowBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.Row,
-                com.google.bigtable.v2.Row.Builder,
-                com.google.bigtable.v2.RowOrBuilder>(
-                row_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        rowBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.Row, com.google.bigtable.v2.Row.Builder, com.google.bigtable.v2.RowOrBuilder>(
+                row_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         row_ = null;
       }
       return rowBuilder_;
@@ -737,23 +750,16 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
 
     private com.google.bigtable.v2.RequestStats stats_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RequestStats,
-            com.google.bigtable.v2.RequestStats.Builder,
-            com.google.bigtable.v2.RequestStatsOrBuilder>
-        statsBuilder_;
-
+        com.google.bigtable.v2.RequestStats, com.google.bigtable.v2.RequestStats.Builder, com.google.bigtable.v2.RequestStatsOrBuilder> statsBuilder_;
     /**
      * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
-     *
      * @return Whether the stats field is set.
      */
     public boolean hasStats() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
      * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
-     *
      * @return The stats.
      */
     public com.google.bigtable.v2.RequestStats getStats() {
@@ -763,8 +769,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
         return statsBuilder_.getMessage();
       }
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
     public Builder setStats(com.google.bigtable.v2.RequestStats value) {
       if (statsBuilder_ == null) {
         if (value == null) {
@@ -778,9 +785,11 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
-    public Builder setStats(com.google.bigtable.v2.RequestStats.Builder builderForValue) {
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
+    public Builder setStats(
+        com.google.bigtable.v2.RequestStats.Builder builderForValue) {
       if (statsBuilder_ == null) {
         stats_ = builderForValue.build();
       } else {
@@ -790,13 +799,14 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
     public Builder mergeStats(com.google.bigtable.v2.RequestStats value) {
       if (statsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && stats_ != null
-            && stats_ != com.google.bigtable.v2.RequestStats.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          stats_ != null &&
+          stats_ != com.google.bigtable.v2.RequestStats.getDefaultInstance()) {
           getStatsBuilder().mergeFrom(value);
         } else {
           stats_ = value;
@@ -810,8 +820,9 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
     public Builder clearStats() {
       bitField0_ = (bitField0_ & ~0x00000002);
       stats_ = null;
@@ -822,36 +833,37 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
     public com.google.bigtable.v2.RequestStats.Builder getStatsBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return internalGetStatsFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
     public com.google.bigtable.v2.RequestStatsOrBuilder getStatsOrBuilder() {
       if (statsBuilder_ != null) {
         return statsBuilder_.getMessageOrBuilder();
       } else {
-        return stats_ == null ? com.google.bigtable.v2.RequestStats.getDefaultInstance() : stats_;
+        return stats_ == null ?
+            com.google.bigtable.v2.RequestStats.getDefaultInstance() : stats_;
       }
     }
-
-    /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RequestStats,
-            com.google.bigtable.v2.RequestStats.Builder,
-            com.google.bigtable.v2.RequestStatsOrBuilder>
+        com.google.bigtable.v2.RequestStats, com.google.bigtable.v2.RequestStats.Builder, com.google.bigtable.v2.RequestStatsOrBuilder> 
         internalGetStatsFieldBuilder() {
       if (statsBuilder_ == null) {
-        statsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RequestStats,
-                com.google.bigtable.v2.RequestStats.Builder,
-                com.google.bigtable.v2.RequestStatsOrBuilder>(
-                getStats(), getParentForChildren(), isClean());
+        statsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RequestStats, com.google.bigtable.v2.RequestStats.Builder, com.google.bigtable.v2.RequestStatsOrBuilder>(
+                getStats(),
+                getParentForChildren(),
+                isClean());
         stats_ = null;
       }
       return statsBuilder_;
@@ -862,7 +874,6 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionReadRowsResponse)
   private static final com.google.bigtable.v2.SessionReadRowsResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionReadRowsResponse();
   }
@@ -871,27 +882,27 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionReadRowsResponse> PARSER =
-      new com.google.protobuf.AbstractParser<SessionReadRowsResponse>() {
-        @java.lang.Override
-        public SessionReadRowsResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionReadRowsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<SessionReadRowsResponse>() {
+    @java.lang.Override
+    public SessionReadRowsResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionReadRowsResponse> parser() {
     return PARSER;
@@ -906,4 +917,6 @@ public final class SessionReadRowsResponse extends com.google.protobuf.Generated
   public com.google.bigtable.v2.SessionReadRowsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

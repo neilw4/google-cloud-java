@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Information about the connected backends from a session client's
  * perspective. This information may be used to make choices about session
@@ -18,59 +16,50 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.BackendIdentifier}
  */
 @com.google.protobuf.Generated
-public final class BackendIdentifier extends com.google.protobuf.GeneratedMessage
-    implements
+public final class BackendIdentifier extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.BackendIdentifier)
     BackendIdentifierOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "BackendIdentifier");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "BackendIdentifier");
   }
-
   // Use BackendIdentifier.newBuilder() to construct.
   private BackendIdentifier(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private BackendIdentifier() {
     applicationFrontendZone_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_BackendIdentifier_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_BackendIdentifier_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_BackendIdentifier_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_BackendIdentifier_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.BackendIdentifier.class,
-            com.google.bigtable.v2.BackendIdentifier.Builder.class);
+            com.google.bigtable.v2.BackendIdentifier.class, com.google.bigtable.v2.BackendIdentifier.Builder.class);
   }
 
   public static final int GOOGLE_FRONTEND_ID_FIELD_NUMBER = 1;
   private long googleFrontendId_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the Google Frontend which serviced this request.
    * Only set when not using DirectAccess.
    * </pre>
    *
    * <code>int64 google_frontend_id = 1;</code>
-   *
    * @return The googleFrontendId.
    */
   @java.lang.Override
@@ -80,17 +69,13 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
 
   public static final int APPLICATION_FRONTEND_ID_FIELD_NUMBER = 2;
   private long applicationFrontendId_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the application frontend which serviced this
    * request.
    * </pre>
    *
    * <code>int64 application_frontend_id = 2;</code>
-   *
    * @return The applicationFrontendId.
    */
   @java.lang.Override
@@ -99,19 +84,14 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
   }
 
   public static final int APPLICATION_FRONTEND_ZONE_FIELD_NUMBER = 3;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object applicationFrontendZone_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The applicationFrontendZone.
    */
   @java.lang.Override
@@ -120,30 +100,29 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       applicationFrontendZone_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The bytes for applicationFrontendZone.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getApplicationFrontendZoneBytes() {
+  public com.google.protobuf.ByteString
+      getApplicationFrontendZoneBytes() {
     java.lang.Object ref = applicationFrontendZone_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       applicationFrontendZone_ = b;
       return b;
     } else {
@@ -152,7 +131,6 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -164,7 +142,8 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (googleFrontendId_ != 0L) {
       output.writeInt64(1, googleFrontendId_);
     }
@@ -184,10 +163,12 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
 
     size = 0;
     if (googleFrontendId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, googleFrontendId_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, googleFrontendId_);
     }
     if (applicationFrontendId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, applicationFrontendId_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, applicationFrontendId_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(applicationFrontendZone_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, applicationFrontendZone_);
@@ -200,16 +181,19 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.BackendIdentifier)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.BackendIdentifier other = (com.google.bigtable.v2.BackendIdentifier) obj;
 
-    if (getGoogleFrontendId() != other.getGoogleFrontendId()) return false;
-    if (getApplicationFrontendId() != other.getApplicationFrontendId()) return false;
-    if (!getApplicationFrontendZone().equals(other.getApplicationFrontendZone())) return false;
+    if (getGoogleFrontendId()
+        != other.getGoogleFrontendId()) return false;
+    if (getApplicationFrontendId()
+        != other.getApplicationFrontendId()) return false;
+    if (!getApplicationFrontendZone()
+        .equals(other.getApplicationFrontendZone())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -222,9 +206,11 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + GOOGLE_FRONTEND_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getGoogleFrontendId());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getGoogleFrontendId());
     hash = (37 * hash) + APPLICATION_FRONTEND_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getApplicationFrontendId());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getApplicationFrontendId());
     hash = (37 * hash) + APPLICATION_FRONTEND_ZONE_FIELD_NUMBER;
     hash = (53 * hash) + getApplicationFrontendZone().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -232,105 +218,99 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     return hash;
   }
 
-  public static com.google.bigtable.v2.BackendIdentifier parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.BackendIdentifier parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.BackendIdentifier parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.BackendIdentifier parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.BackendIdentifier parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.BackendIdentifier parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.BackendIdentifier parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.BackendIdentifier parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.BackendIdentifier prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Information about the connected backends from a session client's
    * perspective. This information may be used to make choices about session
@@ -340,32 +320,33 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
    *
    * Protobuf type {@code google.bigtable.v2.BackendIdentifier}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.BackendIdentifier)
       com.google.bigtable.v2.BackendIdentifierOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_BackendIdentifier_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_BackendIdentifier_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_BackendIdentifier_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_BackendIdentifier_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.BackendIdentifier.class,
-              com.google.bigtable.v2.BackendIdentifier.Builder.class);
+              com.google.bigtable.v2.BackendIdentifier.class, com.google.bigtable.v2.BackendIdentifier.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.BackendIdentifier.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -377,9 +358,9 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_BackendIdentifier_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_BackendIdentifier_descriptor;
     }
 
     @java.lang.Override
@@ -398,11 +379,8 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
 
     @java.lang.Override
     public com.google.bigtable.v2.BackendIdentifier buildPartial() {
-      com.google.bigtable.v2.BackendIdentifier result =
-          new com.google.bigtable.v2.BackendIdentifier(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.BackendIdentifier result = new com.google.bigtable.v2.BackendIdentifier(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -423,7 +401,7 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.BackendIdentifier) {
-        return mergeFrom((com.google.bigtable.v2.BackendIdentifier) other);
+        return mergeFrom((com.google.bigtable.v2.BackendIdentifier)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -469,31 +447,27 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                googleFrontendId_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 16:
-              {
-                applicationFrontendId_ = input.readInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-            case 26:
-              {
-                applicationFrontendZone_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              googleFrontendId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              applicationFrontendId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              applicationFrontendZone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -503,38 +477,29 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private long googleFrontendId_;
-
+    private long googleFrontendId_ ;
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the Google Frontend which serviced this request.
      * Only set when not using DirectAccess.
      * </pre>
      *
      * <code>int64 google_frontend_id = 1;</code>
-     *
      * @return The googleFrontendId.
      */
     @java.lang.Override
     public long getGoogleFrontendId() {
       return googleFrontendId_;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the Google Frontend which serviced this request.
      * Only set when not using DirectAccess.
      * </pre>
      *
      * <code>int64 google_frontend_id = 1;</code>
-     *
      * @param value The googleFrontendId to set.
      * @return This builder for chaining.
      */
@@ -545,17 +510,13 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the Google Frontend which serviced this request.
      * Only set when not using DirectAccess.
      * </pre>
      *
      * <code>int64 google_frontend_id = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearGoogleFrontendId() {
@@ -565,35 +526,27 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
       return this;
     }
 
-    private long applicationFrontendId_;
-
+    private long applicationFrontendId_ ;
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the application frontend which serviced this
      * request.
      * </pre>
      *
      * <code>int64 application_frontend_id = 2;</code>
-     *
      * @return The applicationFrontendId.
      */
     @java.lang.Override
     public long getApplicationFrontendId() {
       return applicationFrontendId_;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the application frontend which serviced this
      * request.
      * </pre>
      *
      * <code>int64 application_frontend_id = 2;</code>
-     *
      * @param value The applicationFrontendId to set.
      * @return This builder for chaining.
      */
@@ -604,17 +557,13 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the application frontend which serviced this
      * request.
      * </pre>
      *
      * <code>int64 application_frontend_id = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplicationFrontendId() {
@@ -625,22 +574,19 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     }
 
     private java.lang.Object applicationFrontendZone_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @return The applicationFrontendZone.
      */
     public java.lang.String getApplicationFrontendZone() {
       java.lang.Object ref = applicationFrontendZone_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         applicationFrontendZone_ = s;
         return s;
@@ -648,61 +594,50 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @return The bytes for applicationFrontendZone.
      */
-    public com.google.protobuf.ByteString getApplicationFrontendZoneBytes() {
+    public com.google.protobuf.ByteString
+        getApplicationFrontendZoneBytes() {
       java.lang.Object ref = applicationFrontendZone_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         applicationFrontendZone_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @param value The applicationFrontendZone to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendZone(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendZone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       applicationFrontendZone_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplicationFrontendZone() {
@@ -711,23 +646,18 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @param value The bytes for applicationFrontendZone to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendZoneBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendZoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       applicationFrontendZone_ = value;
       bitField0_ |= 0x00000004;
@@ -740,7 +670,6 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.BackendIdentifier)
   private static final com.google.bigtable.v2.BackendIdentifier DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.BackendIdentifier();
   }
@@ -749,27 +678,27 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BackendIdentifier> PARSER =
-      new com.google.protobuf.AbstractParser<BackendIdentifier>() {
-        @java.lang.Override
-        public BackendIdentifier parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<BackendIdentifier>
+      PARSER = new com.google.protobuf.AbstractParser<BackendIdentifier>() {
+    @java.lang.Override
+    public BackendIdentifier parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<BackendIdentifier> parser() {
     return PARSER;
@@ -784,4 +713,6 @@ public final class BackendIdentifier extends com.google.protobuf.GeneratedMessag
   public com.google.bigtable.v2.BackendIdentifier getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

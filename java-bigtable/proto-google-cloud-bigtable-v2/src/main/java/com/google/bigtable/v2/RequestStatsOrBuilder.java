@@ -6,42 +6,31 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface RequestStatsOrBuilder
-    extends
+public interface RequestStatsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.RequestStats)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Available with the ReadRowsRequest.RequestStatsView.REQUEST_STATS_FULL
    * view, see package google.bigtable.v2.
    * </pre>
    *
    * <code>.google.bigtable.v2.FullReadStatsView full_read_stats_view = 1;</code>
-   *
    * @return Whether the fullReadStatsView field is set.
    */
   boolean hasFullReadStatsView();
-
   /**
-   *
-   *
    * <pre>
    * Available with the ReadRowsRequest.RequestStatsView.REQUEST_STATS_FULL
    * view, see package google.bigtable.v2.
    * </pre>
    *
    * <code>.google.bigtable.v2.FullReadStatsView full_read_stats_view = 1;</code>
-   *
    * @return The fullReadStatsView.
    */
   com.google.bigtable.v2.FullReadStatsView getFullReadStatsView();
-
   /**
-   *
-   *
    * <pre>
    * Available with the ReadRowsRequest.RequestStatsView.REQUEST_STATS_FULL
    * view, see package google.bigtable.v2.
@@ -52,8 +41,6 @@ public interface RequestStatsOrBuilder
   com.google.bigtable.v2.FullReadStatsViewOrBuilder getFullReadStatsViewOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Available with the
    * ExecuteQueryRequest.RequestStatsView.REQUEST_STATS_VIEW_SIMPLE view, see
@@ -61,14 +48,10 @@ public interface RequestStatsOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.SimpleSqlReadStatsView simple_sql_read_stats_view = 2;</code>
-   *
    * @return Whether the simpleSqlReadStatsView field is set.
    */
   boolean hasSimpleSqlReadStatsView();
-
   /**
-   *
-   *
    * <pre>
    * Available with the
    * ExecuteQueryRequest.RequestStatsView.REQUEST_STATS_VIEW_SIMPLE view, see
@@ -76,14 +59,10 @@ public interface RequestStatsOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.SimpleSqlReadStatsView simple_sql_read_stats_view = 2;</code>
-   *
    * @return The simpleSqlReadStatsView.
    */
   com.google.bigtable.v2.SimpleSqlReadStatsView getSimpleSqlReadStatsView();
-
   /**
-   *
-   *
    * <pre>
    * Available with the
    * ExecuteQueryRequest.RequestStatsView.REQUEST_STATS_VIEW_SIMPLE view, see

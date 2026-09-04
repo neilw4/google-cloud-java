@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Configuration for the Session API. Internal usage only.
  * </pre>
@@ -15,52 +13,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration}
  */
 @com.google.protobuf.Generated
-public final class SessionClientConfiguration extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionClientConfiguration extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionClientConfiguration)
     SessionClientConfigurationOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionClientConfiguration");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionClientConfiguration");
   }
-
   // Use SessionClientConfiguration.newBuilder() to construct.
   private SessionClientConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private SessionClientConfiguration() {
+  }
 
-  private SessionClientConfiguration() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionClientConfiguration_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionClientConfiguration_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionClientConfiguration.class,
-            com.google.bigtable.v2.SessionClientConfiguration.Builder.class);
+            com.google.bigtable.v2.SessionClientConfiguration.class, com.google.bigtable.v2.SessionClientConfiguration.Builder.class);
   }
 
-  public interface ChannelPoolConfigurationOrBuilder
-      extends
+  public interface ChannelPoolConfigurationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The minimum number of distcint servers to connect to in the channel pool.
      * The client will ensure that the channel pool will have at least this many
@@ -69,14 +60,11 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 min_server_count = 1;</code>
-     *
      * @return The minServerCount.
      */
     int getMinServerCount();
 
     /**
-     *
-     *
      * <pre>
      * The maximum number of distinct servers to connect to in the channel pool.
      * The client will ensure that the channel pool will have at most this many
@@ -84,14 +72,11 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 max_server_count = 2;</code>
-     *
      * @return The maxServerCount.
      */
     int getMaxServerCount();
 
     /**
-     *
-     *
      * <pre>
      * Soft maximum for how many sessions are allowed per server. Normally, the
      * client will ensure that it does not host more than this count of sessions
@@ -100,210 +85,139 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 per_server_session_count = 3;</code>
-     *
      * @return The perServerSessionCount.
      */
     int getPerServerSessionCount();
 
     /**
-     *
-     *
      * <pre>
      * DirectAccess with a fallback to CloudPath.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
      * @return Whether the directAccessWithFallback field is set.
      */
     boolean hasDirectAccessWithFallback();
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess with a fallback to CloudPath.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
      * @return The directAccessWithFallback.
      */
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessWithFallback
-        getDirectAccessWithFallback();
-
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback getDirectAccessWithFallback();
     /**
-     *
-     *
      * <pre>
      * DirectAccess with a fallback to CloudPath.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
      */
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessWithFallbackOrBuilder
-        getDirectAccessWithFallbackOrBuilder();
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder getDirectAccessWithFallbackOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * DirectAccess only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
      * @return Whether the directAccessOnly field is set.
      */
     boolean hasDirectAccessOnly();
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
      * @return The directAccessOnly.
      */
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly
-        getDirectAccessOnly();
-
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly getDirectAccessOnly();
     /**
-     *
-     *
      * <pre>
      * DirectAccess only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
      */
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessOnlyOrBuilder
-        getDirectAccessOnlyOrBuilder();
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder getDirectAccessOnlyOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * CloudPath only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
      * @return Whether the cloudPathOnly field is set.
      */
     boolean hasCloudPathOnly();
-
     /**
-     *
-     *
      * <pre>
      * CloudPath only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
      * @return The cloudPathOnly.
      */
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-        getCloudPathOnly();
-
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly getCloudPathOnly();
     /**
-     *
-     *
      * <pre>
      * CloudPath only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
      */
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .CloudPathOnlyOrBuilder
-        getCloudPathOnlyOrBuilder();
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder getCloudPathOnlyOrBuilder();
 
-    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.ModeCase
-        getModeCase();
+    com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.ModeCase getModeCase();
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration}
    */
-  public static final class ChannelPoolConfiguration extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class ChannelPoolConfiguration extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)
       ChannelPoolConfigurationOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "ChannelPoolConfiguration");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "ChannelPoolConfiguration");
     }
-
     // Use ChannelPoolConfiguration.newBuilder() to construct.
     private ChannelPoolConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private ChannelPoolConfiguration() {
+    }
 
-    private ChannelPoolConfiguration() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.class,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder
-                  .class);
+              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder.class);
     }
 
-    public interface DirectAccessWithFallbackOrBuilder
-        extends
+    public interface DirectAccessWithFallbackOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       *
-       *
        * <pre>
        * The threshold for errors on DirectAccess to trigger CloudPath fallback.
        * The error rate is calculated based on a count of vRPCs with errors
@@ -313,40 +227,29 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>float error_rate_threshold = 1;</code>
-       *
        * @return The errorRateThreshold.
        */
       float getErrorRateThreshold();
 
       /**
-       *
-       *
        * <pre>
        * The interval to check the error rate over.
        * </pre>
        *
        * <code>.google.protobuf.Duration check_interval = 2;</code>
-       *
        * @return Whether the checkInterval field is set.
        */
       boolean hasCheckInterval();
-
       /**
-       *
-       *
        * <pre>
        * The interval to check the error rate over.
        * </pre>
        *
        * <code>.google.protobuf.Duration check_interval = 2;</code>
-       *
        * @return The checkInterval.
        */
       com.google.protobuf.Duration getCheckInterval();
-
       /**
-       *
-       *
        * <pre>
        * The interval to check the error rate over.
        * </pre>
@@ -355,65 +258,52 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        */
       com.google.protobuf.DurationOrBuilder getCheckIntervalOrBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * A channel mode which allows DirectAccess with a fallback to CloudPath if
      * DirectAccess is unavailable.
      * </pre>
      *
-     * Protobuf type {@code
-     * google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback}
+     * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback}
      */
-    public static final class DirectAccessWithFallback extends com.google.protobuf.GeneratedMessage
-        implements
+    public static final class DirectAccessWithFallback extends
+        com.google.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback)
         DirectAccessWithFallbackOrBuilder {
-      private static final long serialVersionUID = 0L;
-
+    private static final long serialVersionUID = 0L;
       static {
         com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-            com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-            /* major= */ 4,
-            /* minor= */ 33,
-            /* patch= */ 6,
-            /* suffix= */ "",
-            "DirectAccessWithFallback");
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 33,
+          /* patch= */ 6,
+          /* suffix= */ "",
+          "DirectAccessWithFallback");
       }
-
       // Use DirectAccessWithFallback.newBuilder() to construct.
       private DirectAccessWithFallback(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
       }
+      private DirectAccessWithFallback() {
+      }
 
-      private DirectAccessWithFallback() {}
-
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback.class,
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback.Builder.class);
+                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder.class);
       }
 
       private int bitField0_;
       public static final int ERROR_RATE_THRESHOLD_FIELD_NUMBER = 1;
       private float errorRateThreshold_ = 0F;
-
       /**
-       *
-       *
        * <pre>
        * The threshold for errors on DirectAccess to trigger CloudPath fallback.
        * The error rate is calculated based on a count of vRPCs with errors
@@ -423,7 +313,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>float error_rate_threshold = 1;</code>
-       *
        * @return The errorRateThreshold.
        */
       @java.lang.Override
@@ -433,44 +322,31 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       public static final int CHECK_INTERVAL_FIELD_NUMBER = 2;
       private com.google.protobuf.Duration checkInterval_;
-
       /**
-       *
-       *
        * <pre>
        * The interval to check the error rate over.
        * </pre>
        *
        * <code>.google.protobuf.Duration check_interval = 2;</code>
-       *
        * @return Whether the checkInterval field is set.
        */
       @java.lang.Override
       public boolean hasCheckInterval() {
         return ((bitField0_ & 0x00000001) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * The interval to check the error rate over.
        * </pre>
        *
        * <code>.google.protobuf.Duration check_interval = 2;</code>
-       *
        * @return The checkInterval.
        */
       @java.lang.Override
       public com.google.protobuf.Duration getCheckInterval() {
-        return checkInterval_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : checkInterval_;
+        return checkInterval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : checkInterval_;
       }
-
       /**
-       *
-       *
        * <pre>
        * The interval to check the error rate over.
        * </pre>
@@ -479,13 +355,10 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        */
       @java.lang.Override
       public com.google.protobuf.DurationOrBuilder getCheckIntervalOrBuilder() {
-        return checkInterval_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : checkInterval_;
+        return checkInterval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : checkInterval_;
       }
 
       private byte memoizedIsInitialized = -1;
-
       @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -497,7 +370,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
         if (java.lang.Float.floatToRawIntBits(errorRateThreshold_) != 0) {
           output.writeFloat(1, errorRateThreshold_);
         }
@@ -514,10 +388,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
         size = 0;
         if (java.lang.Float.floatToRawIntBits(errorRateThreshold_) != 0) {
-          size += com.google.protobuf.CodedOutputStream.computeFloatSize(1, errorRateThreshold_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(1, errorRateThreshold_);
         }
         if (((bitField0_ & 0x00000001) != 0)) {
-          size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getCheckInterval());
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getCheckInterval());
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -527,26 +403,20 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
-        if (!(obj
-            instanceof
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback)) {
+        if (!(obj instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback)) {
           return super.equals(obj);
         }
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback
-            other =
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .DirectAccessWithFallback)
-                    obj;
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback other = (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) obj;
 
         if (java.lang.Float.floatToIntBits(getErrorRateThreshold())
-            != java.lang.Float.floatToIntBits(other.getErrorRateThreshold())) return false;
+            != java.lang.Float.floatToIntBits(
+                other.getErrorRateThreshold())) return false;
         if (hasCheckInterval() != other.hasCheckInterval()) return false;
         if (hasCheckInterval()) {
-          if (!getCheckInterval().equals(other.getCheckInterval())) return false;
+          if (!getCheckInterval()
+              .equals(other.getCheckInterval())) return false;
         }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
@@ -560,7 +430,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + ERROR_RATE_THRESHOLD_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(getErrorRateThreshold());
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getErrorRateThreshold());
         if (hasCheckInterval()) {
           hash = (37 * hash) + CHECK_INTERVAL_FIELD_NUMBER;
           hash = (53 * hash) + getCheckInterval().hashCode();
@@ -570,117 +441,90 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return hash;
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(java.nio.ByteBuffer data)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(
-              java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(com.google.protobuf.ByteString data)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(
-              com.google.protobuf.ByteString data,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(
-              java.io.InputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseDelimitedFrom(
-              java.io.InputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-      }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          parseFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       @java.lang.Override
-      public Builder newBuilderForType() {
-        return newBuilder();
-      }
-
+      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-
-      public static Builder newBuilder(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback
-              prototype) {
+      public static Builder newBuilder(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-
       @java.lang.Override
       public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
       }
 
       @java.lang.Override
@@ -689,58 +533,47 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         Builder builder = new Builder(parent);
         return builder;
       }
-
       /**
-       *
-       *
        * <pre>
        * A channel mode which allows DirectAccess with a fallback to CloudPath if
        * DirectAccess is unavailable.
        * </pre>
        *
-       * Protobuf type {@code
-       * google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback}
+       * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback}
        */
-      public static final class Builder
-          extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-          implements
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback)
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallbackOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_descriptor;
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_fieldAccessorTable
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallback.class,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallback.Builder.class);
+                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder.class);
         }
 
-        // Construct using
-        // com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.newBuilder()
+        // Construct using com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
 
-        private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
-
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (com.google.protobuf.GeneratedMessage
+                  .alwaysUseFieldBuilders) {
             internalGetCheckIntervalFieldBuilder();
           }
         }
-
         @java.lang.Override
         public Builder clear() {
           super.clear();
@@ -755,26 +588,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
 
         @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_descriptor;
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessWithFallback_descriptor;
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback
-            getDefaultInstanceForType() {
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback.getDefaultInstance();
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback getDefaultInstanceForType() {
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback
-            build() {
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback
-              result = buildPartial();
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback build() {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -782,33 +608,23 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback
-            buildPartial() {
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback
-              result =
-                  new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallback(this);
-          if (bitField0_ != 0) {
-            buildPartial0(result);
-          }
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback buildPartial() {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback result = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        private void buildPartial0(
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback
-                result) {
+        private void buildPartial0(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback result) {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.errorRateThreshold_ = errorRateThreshold_;
           }
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.checkInterval_ =
-                checkIntervalBuilder_ == null ? checkInterval_ : checkIntervalBuilder_.build();
+            result.checkInterval_ = checkIntervalBuilder_ == null
+                ? checkInterval_
+                : checkIntervalBuilder_.build();
             to_bitField0_ |= 0x00000001;
           }
           result.bitField0_ |= to_bitField0_;
@@ -816,27 +632,16 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other
-              instanceof
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback) {
-            return mergeFrom(
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .DirectAccessWithFallback)
-                    other);
+          if (other instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) {
+            return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback
-                other) {
-          if (other
-              == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback other) {
+          if (other == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance()) return this;
           if (java.lang.Float.floatToRawIntBits(other.getErrorRateThreshold()) != 0) {
             setErrorRateThreshold(other.getErrorRateThreshold());
           }
@@ -869,26 +674,24 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
                 case 0:
                   done = true;
                   break;
-                case 13:
-                  {
-                    errorRateThreshold_ = input.readFloat();
-                    bitField0_ |= 0x00000001;
-                    break;
-                  } // case 13
-                case 18:
-                  {
-                    input.readMessage(
-                        internalGetCheckIntervalFieldBuilder().getBuilder(), extensionRegistry);
-                    bitField0_ |= 0x00000002;
-                    break;
-                  } // case 18
-                default:
-                  {
-                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                      done = true; // was an endgroup tag
-                    }
-                    break;
-                  } // default:
+                case 13: {
+                  errorRateThreshold_ = input.readFloat();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 13
+                case 18: {
+                  input.readMessage(
+                      internalGetCheckIntervalFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
               } // switch (tag)
             } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -898,14 +701,10 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           } // finally
           return this;
         }
-
         private int bitField0_;
 
-        private float errorRateThreshold_;
-
+        private float errorRateThreshold_ ;
         /**
-         *
-         *
          * <pre>
          * The threshold for errors on DirectAccess to trigger CloudPath fallback.
          * The error rate is calculated based on a count of vRPCs with errors
@@ -915,17 +714,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
          * </pre>
          *
          * <code>float error_rate_threshold = 1;</code>
-         *
          * @return The errorRateThreshold.
          */
         @java.lang.Override
         public float getErrorRateThreshold() {
           return errorRateThreshold_;
         }
-
         /**
-         *
-         *
          * <pre>
          * The threshold for errors on DirectAccess to trigger CloudPath fallback.
          * The error rate is calculated based on a count of vRPCs with errors
@@ -935,7 +730,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
          * </pre>
          *
          * <code>float error_rate_threshold = 1;</code>
-         *
          * @param value The errorRateThreshold to set.
          * @return This builder for chaining.
          */
@@ -946,10 +740,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           onChanged();
           return this;
         }
-
         /**
-         *
-         *
          * <pre>
          * The threshold for errors on DirectAccess to trigger CloudPath fallback.
          * The error rate is calculated based on a count of vRPCs with errors
@@ -959,7 +750,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
          * </pre>
          *
          * <code>float error_rate_threshold = 1;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearErrorRateThreshold() {
@@ -971,50 +761,34 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
         private com.google.protobuf.Duration checkInterval_;
         private com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>
-            checkIntervalBuilder_;
-
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> checkIntervalBuilder_;
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
          *
          * <code>.google.protobuf.Duration check_interval = 2;</code>
-         *
          * @return Whether the checkInterval field is set.
          */
         public boolean hasCheckInterval() {
           return ((bitField0_ & 0x00000002) != 0);
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
          *
          * <code>.google.protobuf.Duration check_interval = 2;</code>
-         *
          * @return The checkInterval.
          */
         public com.google.protobuf.Duration getCheckInterval() {
           if (checkIntervalBuilder_ == null) {
-            return checkInterval_ == null
-                ? com.google.protobuf.Duration.getDefaultInstance()
-                : checkInterval_;
+            return checkInterval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : checkInterval_;
           } else {
             return checkIntervalBuilder_.getMessage();
           }
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
@@ -1034,17 +808,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           onChanged();
           return this;
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
          *
          * <code>.google.protobuf.Duration check_interval = 2;</code>
          */
-        public Builder setCheckInterval(com.google.protobuf.Duration.Builder builderForValue) {
+        public Builder setCheckInterval(
+            com.google.protobuf.Duration.Builder builderForValue) {
           if (checkIntervalBuilder_ == null) {
             checkInterval_ = builderForValue.build();
           } else {
@@ -1054,10 +826,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           onChanged();
           return this;
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
@@ -1066,9 +835,9 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
          */
         public Builder mergeCheckInterval(com.google.protobuf.Duration value) {
           if (checkIntervalBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) != 0)
-                && checkInterval_ != null
-                && checkInterval_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              checkInterval_ != null &&
+              checkInterval_ != com.google.protobuf.Duration.getDefaultInstance()) {
               getCheckIntervalBuilder().mergeFrom(value);
             } else {
               checkInterval_ = value;
@@ -1082,10 +851,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           }
           return this;
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
@@ -1102,10 +868,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           onChanged();
           return this;
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
@@ -1117,10 +880,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           onChanged();
           return internalGetCheckIntervalFieldBuilder().getBuilder();
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
@@ -1131,15 +891,11 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           if (checkIntervalBuilder_ != null) {
             return checkIntervalBuilder_.getMessageOrBuilder();
           } else {
-            return checkInterval_ == null
-                ? com.google.protobuf.Duration.getDefaultInstance()
-                : checkInterval_;
+            return checkInterval_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : checkInterval_;
           }
         }
-
         /**
-         *
-         *
          * <pre>
          * The interval to check the error rate over.
          * </pre>
@@ -1147,17 +903,14 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
          * <code>.google.protobuf.Duration check_interval = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
             internalGetCheckIntervalFieldBuilder() {
           if (checkIntervalBuilder_ == null) {
-            checkIntervalBuilder_ =
-                new com.google.protobuf.SingleFieldBuilder<
-                    com.google.protobuf.Duration,
-                    com.google.protobuf.Duration.Builder,
-                    com.google.protobuf.DurationOrBuilder>(
-                    getCheckInterval(), getParentForChildren(), isClean());
+            checkIntervalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getCheckInterval(),
+                    getParentForChildren(),
+                    isClean());
             checkInterval_ = null;
           }
           return checkIntervalBuilder_;
@@ -1167,44 +920,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback)
-      private static final com.google.bigtable.v2.SessionClientConfiguration
-              .ChannelPoolConfiguration.DirectAccessWithFallback
-          DEFAULT_INSTANCE;
-
+      private static final com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE =
-            new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback();
+        DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback();
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          getDefaultInstance() {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<DirectAccessWithFallback> PARSER =
-          new com.google.protobuf.AbstractParser<DirectAccessWithFallback>() {
-            @java.lang.Override
-            public DirectAccessWithFallback parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              Builder builder = newBuilder();
-              try {
-                builder.mergeFrom(input, extensionRegistry);
-              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                throw e.setUnfinishedMessage(builder.buildPartial());
-              } catch (com.google.protobuf.UninitializedMessageException e) {
-                throw e.asInvalidProtocolBufferException()
-                    .setUnfinishedMessage(builder.buildPartial());
-              } catch (java.io.IOException e) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                    .setUnfinishedMessage(builder.buildPartial());
-              }
-              return builder.buildPartial();
-            }
-          };
+      private static final com.google.protobuf.Parser<DirectAccessWithFallback>
+          PARSER = new com.google.protobuf.AbstractParser<DirectAccessWithFallback>() {
+        @java.lang.Override
+        public DirectAccessWithFallback parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
 
       public static com.google.protobuf.Parser<DirectAccessWithFallback> parser() {
         return PARSER;
@@ -1216,70 +961,58 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
+
     }
 
-    public interface DirectAccessOnlyOrBuilder
-        extends
+    public interface DirectAccessOnlyOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly)
-        com.google.protobuf.MessageOrBuilder {}
-
+        com.google.protobuf.MessageOrBuilder {
+    }
     /**
-     *
-     *
      * <pre>
      * A channel mode which only allows DirectAccess.
      * </pre>
      *
-     * Protobuf type {@code
-     * google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly}
+     * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly}
      */
-    public static final class DirectAccessOnly extends com.google.protobuf.GeneratedMessage
-        implements
+    public static final class DirectAccessOnly extends
+        com.google.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly)
         DirectAccessOnlyOrBuilder {
-      private static final long serialVersionUID = 0L;
-
+    private static final long serialVersionUID = 0L;
       static {
         com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-            com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-            /* major= */ 4,
-            /* minor= */ 33,
-            /* patch= */ 6,
-            /* suffix= */ "",
-            "DirectAccessOnly");
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 33,
+          /* patch= */ 6,
+          /* suffix= */ "",
+          "DirectAccessOnly");
       }
-
       // Use DirectAccessOnly.newBuilder() to construct.
       private DirectAccessOnly(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
       }
+      private DirectAccessOnly() {
+      }
 
-      private DirectAccessOnly() {}
-
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly.class,
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly.Builder.class);
+                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder.class);
       }
 
       private byte memoizedIsInitialized = -1;
-
       @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -1291,7 +1024,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
         getUnknownFields().writeTo(output);
       }
 
@@ -1309,19 +1043,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
-        if (!(obj
-            instanceof
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly)) {
+        if (!(obj instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly)) {
           return super.equals(obj);
         }
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly
-            other =
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .DirectAccessOnly)
-                    obj;
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly other = (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) obj;
 
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
@@ -1339,117 +1066,90 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return hash;
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(java.nio.ByteBuffer data)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(
-              java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(com.google.protobuf.ByteString data)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(
-              com.google.protobuf.ByteString data,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(
-              java.io.InputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseDelimitedFrom(
-              java.io.InputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-      }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          parseFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       @java.lang.Override
-      public Builder newBuilderForType() {
-        return newBuilder();
-      }
-
+      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-
-      public static Builder newBuilder(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly
-              prototype) {
+      public static Builder newBuilder(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-
       @java.lang.Override
       public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
       }
 
       @java.lang.Override
@@ -1458,48 +1158,40 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         Builder builder = new Builder(parent);
         return builder;
       }
-
       /**
-       *
-       *
        * <pre>
        * A channel mode which only allows DirectAccess.
        * </pre>
        *
-       * Protobuf type {@code
-       * google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly}
+       * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly}
        */
-      public static final class Builder
-          extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-          implements
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly)
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnlyOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_descriptor;
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_fieldAccessorTable
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnly.class,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnly.Builder.class);
+                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder.class);
         }
 
-        // Construct using
-        // com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.newBuilder()
-        private Builder() {}
+        // Construct using com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.newBuilder()
+        private Builder() {
 
-        private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
-        }
 
+        }
         @java.lang.Override
         public Builder clear() {
           super.clear();
@@ -1507,26 +1199,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
 
         @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_descriptor;
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_DirectAccessOnly_descriptor;
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly
-            getDefaultInstanceForType() {
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly.getDefaultInstance();
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly getDefaultInstanceForType() {
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly
-            build() {
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly
-              result = buildPartial();
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly build() {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -1534,41 +1219,24 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly
-            buildPartial() {
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly
-              result =
-                  new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnly(this);
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly buildPartial() {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly result = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly(this);
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other
-              instanceof
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly) {
-            return mergeFrom(
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .DirectAccessOnly)
-                    other);
+          if (other instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) {
+            return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly
-                other) {
-          if (other
-              == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly other) {
+          if (other == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance()) return this;
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -1595,13 +1263,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
                 case 0:
                   done = true;
                   break;
-                default:
-                  {
-                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                      done = true; // was an endgroup tag
-                    }
-                    break;
-                  } // default:
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
               } // switch (tag)
             } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1616,44 +1283,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly)
-      private static final com.google.bigtable.v2.SessionClientConfiguration
-              .ChannelPoolConfiguration.DirectAccessOnly
-          DEFAULT_INSTANCE;
-
+      private static final com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE =
-            new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly();
+        DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly();
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          getDefaultInstance() {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<DirectAccessOnly> PARSER =
-          new com.google.protobuf.AbstractParser<DirectAccessOnly>() {
-            @java.lang.Override
-            public DirectAccessOnly parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              Builder builder = newBuilder();
-              try {
-                builder.mergeFrom(input, extensionRegistry);
-              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                throw e.setUnfinishedMessage(builder.buildPartial());
-              } catch (com.google.protobuf.UninitializedMessageException e) {
-                throw e.asInvalidProtocolBufferException()
-                    .setUnfinishedMessage(builder.buildPartial());
-              } catch (java.io.IOException e) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                    .setUnfinishedMessage(builder.buildPartial());
-              }
-              return builder.buildPartial();
-            }
-          };
+      private static final com.google.protobuf.Parser<DirectAccessOnly>
+          PARSER = new com.google.protobuf.AbstractParser<DirectAccessOnly>() {
+        @java.lang.Override
+        public DirectAccessOnly parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
 
       public static com.google.protobuf.Parser<DirectAccessOnly> parser() {
         return PARSER;
@@ -1665,70 +1324,58 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
+
     }
 
-    public interface CloudPathOnlyOrBuilder
-        extends
+    public interface CloudPathOnlyOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly)
-        com.google.protobuf.MessageOrBuilder {}
-
+        com.google.protobuf.MessageOrBuilder {
+    }
     /**
-     *
-     *
      * <pre>
      * A channel mode which only allows CloudPath.
      * </pre>
      *
-     * Protobuf type {@code
-     * google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly}
+     * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly}
      */
-    public static final class CloudPathOnly extends com.google.protobuf.GeneratedMessage
-        implements
+    public static final class CloudPathOnly extends
+        com.google.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly)
         CloudPathOnlyOrBuilder {
-      private static final long serialVersionUID = 0L;
-
+    private static final long serialVersionUID = 0L;
       static {
         com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-            com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-            /* major= */ 4,
-            /* minor= */ 33,
-            /* patch= */ 6,
-            /* suffix= */ "",
-            "CloudPathOnly");
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 33,
+          /* patch= */ 6,
+          /* suffix= */ "",
+          "CloudPathOnly");
       }
-
       // Use CloudPathOnly.newBuilder() to construct.
       private CloudPathOnly(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
       }
+      private CloudPathOnly() {
+      }
 
-      private CloudPathOnly() {}
-
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly.class,
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly.Builder.class);
+                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder.class);
       }
 
       private byte memoizedIsInitialized = -1;
-
       @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -1740,7 +1387,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
         getUnknownFields().writeTo(output);
       }
 
@@ -1758,19 +1406,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
-        if (!(obj
-            instanceof
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly)) {
+        if (!(obj instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly)) {
           return super.equals(obj);
         }
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-            other =
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .CloudPathOnly)
-                    obj;
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly other = (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) obj;
 
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
@@ -1788,116 +1429,90 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return hash;
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(java.nio.ByteBuffer data)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(
-              java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(com.google.protobuf.ByteString data)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(
-              com.google.protobuf.ByteString data,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(
-              java.io.InputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseDelimitedFrom(
-              java.io.InputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-      }
-
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          parseFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage.parseWithIOException(
-            PARSER, input, extensionRegistry);
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       @java.lang.Override
-      public Builder newBuilderForType() {
-        return newBuilder();
-      }
-
+      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-
-      public static Builder newBuilder(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-              prototype) {
+      public static Builder newBuilder(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-
       @java.lang.Override
       public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
       }
 
       @java.lang.Override
@@ -1906,48 +1521,40 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         Builder builder = new Builder(parent);
         return builder;
       }
-
       /**
-       *
-       *
        * <pre>
        * A channel mode which only allows CloudPath.
        * </pre>
        *
-       * Protobuf type {@code
-       * google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly}
+       * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly}
        */
-      public static final class Builder
-          extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-          implements
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly)
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnlyOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_descriptor;
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_fieldAccessorTable
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnly.class,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnly.Builder.class);
+                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder.class);
         }
 
-        // Construct using
-        // com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.newBuilder()
-        private Builder() {}
+        // Construct using com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.newBuilder()
+        private Builder() {
 
-        private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
-        }
 
+        }
         @java.lang.Override
         public Builder clear() {
           super.clear();
@@ -1955,25 +1562,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
 
         @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-          return com.google.bigtable.v2.SessionProto
-              .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_descriptor;
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_CloudPathOnly_descriptor;
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly
-            getDefaultInstanceForType() {
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly.getDefaultInstance();
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly getDefaultInstanceForType() {
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly
-            build() {
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-              result = buildPartial();
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly build() {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -1981,39 +1582,24 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
 
         @java.lang.Override
-        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly
-            buildPartial() {
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-              result =
-                  new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnly(this);
+        public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly buildPartial() {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly result = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly(this);
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other
-              instanceof
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnly) {
-            return mergeFrom(
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .CloudPathOnly)
-                    other);
+          if (other instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) {
+            return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-                other) {
-          if (other
-              == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnly.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly other) {
+          if (other == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance()) return this;
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -2040,13 +1626,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
                 case 0:
                   done = true;
                   break;
-                default:
-                  {
-                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                      done = true; // was an endgroup tag
-                    }
-                    break;
-                  } // default:
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
               } // switch (tag)
             } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2061,44 +1646,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly)
-      private static final com.google.bigtable.v2.SessionClientConfiguration
-              .ChannelPoolConfiguration.CloudPathOnly
-          DEFAULT_INSTANCE;
-
+      private static final com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE =
-            new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly();
+        DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly();
       }
 
-      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          getDefaultInstance() {
+      public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<CloudPathOnly> PARSER =
-          new com.google.protobuf.AbstractParser<CloudPathOnly>() {
-            @java.lang.Override
-            public CloudPathOnly parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              Builder builder = newBuilder();
-              try {
-                builder.mergeFrom(input, extensionRegistry);
-              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                throw e.setUnfinishedMessage(builder.buildPartial());
-              } catch (com.google.protobuf.UninitializedMessageException e) {
-                throw e.asInvalidProtocolBufferException()
-                    .setUnfinishedMessage(builder.buildPartial());
-              } catch (java.io.IOException e) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                    .setUnfinishedMessage(builder.buildPartial());
-              }
-              return builder.buildPartial();
-            }
-          };
+      private static final com.google.protobuf.Parser<CloudPathOnly>
+          PARSER = new com.google.protobuf.AbstractParser<CloudPathOnly>() {
+        @java.lang.Override
+        public CloudPathOnly parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
 
       public static com.google.protobuf.Parser<CloudPathOnly> parser() {
         return PARSER;
@@ -2110,32 +1687,26 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
+
     }
 
     private int modeCase_ = 0;
-
     @SuppressWarnings("serial")
     private java.lang.Object mode_;
-
     public enum ModeCase
-        implements
-            com.google.protobuf.Internal.EnumLite,
+        implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DIRECT_ACCESS_WITH_FALLBACK(4),
       DIRECT_ACCESS_ONLY(5),
       CLOUD_PATH_ONLY(6),
       MODE_NOT_SET(0);
       private final int value;
-
       private ModeCase(int value) {
         this.value = value;
       }
-
       /**
        * @param value The number of the enum to look for.
        * @return The enum associated with the given number.
@@ -2148,34 +1719,27 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       public static ModeCase forNumber(int value) {
         switch (value) {
-          case 4:
-            return DIRECT_ACCESS_WITH_FALLBACK;
-          case 5:
-            return DIRECT_ACCESS_ONLY;
-          case 6:
-            return CLOUD_PATH_ONLY;
-          case 0:
-            return MODE_NOT_SET;
-          default:
-            return null;
+          case 4: return DIRECT_ACCESS_WITH_FALLBACK;
+          case 5: return DIRECT_ACCESS_ONLY;
+          case 6: return CLOUD_PATH_ONLY;
+          case 0: return MODE_NOT_SET;
+          default: return null;
         }
       }
-
       public int getNumber() {
         return this.value;
       }
     };
 
-    public ModeCase getModeCase() {
-      return ModeCase.forNumber(modeCase_);
+    public ModeCase
+    getModeCase() {
+      return ModeCase.forNumber(
+          modeCase_);
     }
 
     public static final int MIN_SERVER_COUNT_FIELD_NUMBER = 1;
     private int minServerCount_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * The minimum number of distcint servers to connect to in the channel pool.
      * The client will ensure that the channel pool will have at least this many
@@ -2184,7 +1748,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 min_server_count = 1;</code>
-     *
      * @return The minServerCount.
      */
     @java.lang.Override
@@ -2194,10 +1757,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int MAX_SERVER_COUNT_FIELD_NUMBER = 2;
     private int maxServerCount_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * The maximum number of distinct servers to connect to in the channel pool.
      * The client will ensure that the channel pool will have at most this many
@@ -2205,7 +1765,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 max_server_count = 2;</code>
-     *
      * @return The maxServerCount.
      */
     @java.lang.Override
@@ -2215,10 +1774,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int PER_SERVER_SESSION_COUNT_FIELD_NUMBER = 3;
     private int perServerSessionCount_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Soft maximum for how many sessions are allowed per server. Normally, the
      * client will ensure that it does not host more than this count of sessions
@@ -2227,7 +1783,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 per_server_session_count = 3;</code>
-     *
      * @return The perServerSessionCount.
      */
     @java.lang.Override
@@ -2236,216 +1791,135 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     public static final int DIRECT_ACCESS_WITH_FALLBACK_FIELD_NUMBER = 4;
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess with a fallback to CloudPath.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
      * @return Whether the directAccessWithFallback field is set.
      */
     @java.lang.Override
     public boolean hasDirectAccessWithFallback() {
       return modeCase_ == 4;
     }
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess with a fallback to CloudPath.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
      * @return The directAccessWithFallback.
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessWithFallback
-        getDirectAccessWithFallback() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback getDirectAccessWithFallback() {
       if (modeCase_ == 4) {
-        return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback)
-            mode_;
+         return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_;
       }
-      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          .DirectAccessWithFallback.getDefaultInstance();
+      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
     }
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess with a fallback to CloudPath.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessWithFallbackOrBuilder
-        getDirectAccessWithFallbackOrBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder getDirectAccessWithFallbackOrBuilder() {
       if (modeCase_ == 4) {
-        return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessWithFallback)
-            mode_;
+         return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_;
       }
-      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          .DirectAccessWithFallback.getDefaultInstance();
+      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
     }
 
     public static final int DIRECT_ACCESS_ONLY_FIELD_NUMBER = 5;
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
      * @return Whether the directAccessOnly field is set.
      */
     @java.lang.Override
     public boolean hasDirectAccessOnly() {
       return modeCase_ == 5;
     }
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
      * @return The directAccessOnly.
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessOnly
-        getDirectAccessOnly() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly getDirectAccessOnly() {
       if (modeCase_ == 5) {
-        return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly)
-            mode_;
+         return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_;
       }
-      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          .DirectAccessOnly.getDefaultInstance();
+      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
     }
-
     /**
-     *
-     *
      * <pre>
      * DirectAccess only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .DirectAccessOnlyOrBuilder
-        getDirectAccessOnlyOrBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder getDirectAccessOnlyOrBuilder() {
       if (modeCase_ == 5) {
-        return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .DirectAccessOnly)
-            mode_;
+         return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_;
       }
-      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          .DirectAccessOnly.getDefaultInstance();
+      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
     }
 
     public static final int CLOUD_PATH_ONLY_FIELD_NUMBER = 6;
-
     /**
-     *
-     *
      * <pre>
      * CloudPath only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
      * @return Whether the cloudPathOnly field is set.
      */
     @java.lang.Override
     public boolean hasCloudPathOnly() {
       return modeCase_ == 6;
     }
-
     /**
-     *
-     *
      * <pre>
      * CloudPath only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
      * @return The cloudPathOnly.
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-        getCloudPathOnly() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly getCloudPathOnly() {
       if (modeCase_ == 6) {
-        return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly)
-            mode_;
+         return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_;
       }
-      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          .CloudPathOnly.getDefaultInstance();
+      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
     }
-
     /**
-     *
-     *
      * <pre>
      * CloudPath only.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .CloudPathOnlyOrBuilder
-        getCloudPathOnlyOrBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder getCloudPathOnlyOrBuilder() {
       if (modeCase_ == 6) {
-        return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .CloudPathOnly)
-            mode_;
+         return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_;
       }
-      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          .CloudPathOnly.getDefaultInstance();
+      return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -2457,7 +1931,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (minServerCount_ != 0) {
         output.writeInt32(1, minServerCount_);
       }
@@ -2468,25 +1943,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         output.writeInt32(3, perServerSessionCount_);
       }
       if (modeCase_ == 4) {
-        output.writeMessage(
-            4,
-            (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback)
-                mode_);
+        output.writeMessage(4, (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_);
       }
       if (modeCase_ == 5) {
-        output.writeMessage(
-            5,
-            (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly)
-                mode_);
+        output.writeMessage(5, (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_);
       }
       if (modeCase_ == 6) {
-        output.writeMessage(
-            6,
-            (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly)
-                mode_);
+        output.writeMessage(6, (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2498,37 +1961,28 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       size = 0;
       if (minServerCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, minServerCount_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, minServerCount_);
       }
       if (maxServerCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, maxServerCount_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, maxServerCount_);
       }
       if (perServerSessionCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, perServerSessionCount_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, perServerSessionCount_);
       }
       if (modeCase_ == 4) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                4,
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .DirectAccessWithFallback)
-                    mode_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_);
       }
       if (modeCase_ == 5) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                5,
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .DirectAccessOnly)
-                    mode_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_);
       }
       if (modeCase_ == 6) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                6,
-                (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                        .CloudPathOnly)
-                    mode_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2538,29 +1992,32 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
-      if (!(obj
-          instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)) {
+      if (!(obj instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration other =
-          (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration) obj;
+      com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration other = (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration) obj;
 
-      if (getMinServerCount() != other.getMinServerCount()) return false;
-      if (getMaxServerCount() != other.getMaxServerCount()) return false;
-      if (getPerServerSessionCount() != other.getPerServerSessionCount()) return false;
+      if (getMinServerCount()
+          != other.getMinServerCount()) return false;
+      if (getMaxServerCount()
+          != other.getMaxServerCount()) return false;
+      if (getPerServerSessionCount()
+          != other.getPerServerSessionCount()) return false;
       if (!getModeCase().equals(other.getModeCase())) return false;
       switch (modeCase_) {
         case 4:
-          if (!getDirectAccessWithFallback().equals(other.getDirectAccessWithFallback()))
-            return false;
+          if (!getDirectAccessWithFallback()
+              .equals(other.getDirectAccessWithFallback())) return false;
           break;
         case 5:
-          if (!getDirectAccessOnly().equals(other.getDirectAccessOnly())) return false;
+          if (!getDirectAccessOnly()
+              .equals(other.getDirectAccessOnly())) return false;
           break;
         case 6:
-          if (!getCloudPathOnly().equals(other.getCloudPathOnly())) return false;
+          if (!getCloudPathOnly()
+              .equals(other.getCloudPathOnly())) return false;
           break;
         case 0:
         default:
@@ -2603,146 +2060,132 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       return hash;
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(
-            java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseDelimitedFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)
         com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.class,
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder
-                    .class);
+                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.class, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder.class);
       }
 
-      // Construct using
-      // com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.newBuilder()
-      private Builder() {}
+      // Construct using com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.newBuilder()
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-      }
 
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -2765,22 +2208,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_ChannelPoolConfiguration_descriptor;
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          getDefaultInstanceForType() {
-        return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .getDefaultInstance();
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration getDefaultInstanceForType() {
+        return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance();
       }
 
       @java.lang.Override
       public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration build() {
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result =
-            buildPartial();
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2788,20 +2228,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-          buildPartial() {
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result =
-            new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration buildPartial() {
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result) {
+      private void buildPartial0(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minServerCount_ = minServerCount_;
@@ -2814,38 +2249,35 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
       }
 
-      private void buildPartialOneofs(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result) {
+      private void buildPartialOneofs(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration result) {
         result.modeCase_ = modeCase_;
         result.mode_ = this.mode_;
-        if (modeCase_ == 4 && directAccessWithFallbackBuilder_ != null) {
+        if (modeCase_ == 4 &&
+            directAccessWithFallbackBuilder_ != null) {
           result.mode_ = directAccessWithFallbackBuilder_.build();
         }
-        if (modeCase_ == 5 && directAccessOnlyBuilder_ != null) {
+        if (modeCase_ == 5 &&
+            directAccessOnlyBuilder_ != null) {
           result.mode_ = directAccessOnlyBuilder_.build();
         }
-        if (modeCase_ == 6 && cloudPathOnlyBuilder_ != null) {
+        if (modeCase_ == 6 &&
+            cloudPathOnlyBuilder_ != null) {
           result.mode_ = cloudPathOnlyBuilder_.build();
         }
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other
-            instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration) {
-          return mergeFrom(
-              (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration) other);
+        if (other instanceof com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration) {
+          return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration other) {
-        if (other
-            == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .getDefaultInstance()) return this;
+      public Builder mergeFrom(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration other) {
+        if (other == com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance()) return this;
         if (other.getMinServerCount() != 0) {
           setMinServerCount(other.getMinServerCount());
         }
@@ -2856,25 +2288,21 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
           setPerServerSessionCount(other.getPerServerSessionCount());
         }
         switch (other.getModeCase()) {
-          case DIRECT_ACCESS_WITH_FALLBACK:
-            {
-              mergeDirectAccessWithFallback(other.getDirectAccessWithFallback());
-              break;
-            }
-          case DIRECT_ACCESS_ONLY:
-            {
-              mergeDirectAccessOnly(other.getDirectAccessOnly());
-              break;
-            }
-          case CLOUD_PATH_ONLY:
-            {
-              mergeCloudPathOnly(other.getCloudPathOnly());
-              break;
-            }
-          case MODE_NOT_SET:
-            {
-              break;
-            }
+          case DIRECT_ACCESS_WITH_FALLBACK: {
+            mergeDirectAccessWithFallback(other.getDirectAccessWithFallback());
+            break;
+          }
+          case DIRECT_ACCESS_ONLY: {
+            mergeDirectAccessOnly(other.getDirectAccessOnly());
+            break;
+          }
+          case CLOUD_PATH_ONLY: {
+            mergeCloudPathOnly(other.getCloudPathOnly());
+            break;
+          }
+          case MODE_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2902,53 +2330,48 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  minServerCount_ = input.readInt32();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-              case 16:
-                {
-                  maxServerCount_ = input.readInt32();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 16
-              case 24:
-                {
-                  perServerSessionCount_ = input.readInt32();
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 24
-              case 34:
-                {
-                  input.readMessage(
-                      internalGetDirectAccessWithFallbackFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  modeCase_ = 4;
-                  break;
-                } // case 34
-              case 42:
-                {
-                  input.readMessage(
-                      internalGetDirectAccessOnlyFieldBuilder().getBuilder(), extensionRegistry);
-                  modeCase_ = 5;
-                  break;
-                } // case 42
-              case 50:
-                {
-                  input.readMessage(
-                      internalGetCloudPathOnlyFieldBuilder().getBuilder(), extensionRegistry);
-                  modeCase_ = 6;
-                  break;
-                } // case 50
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 8: {
+                minServerCount_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                maxServerCount_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                perServerSessionCount_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    internalGetDirectAccessWithFallbackFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                modeCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    internalGetDirectAccessOnlyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                modeCase_ = 5;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    internalGetCloudPathOnlyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                modeCase_ = 6;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2958,12 +2381,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         } // finally
         return this;
       }
-
       private int modeCase_ = 0;
       private java.lang.Object mode_;
-
-      public ModeCase getModeCase() {
-        return ModeCase.forNumber(modeCase_);
+      public ModeCase
+          getModeCase() {
+        return ModeCase.forNumber(
+            modeCase_);
       }
 
       public Builder clearMode() {
@@ -2975,11 +2398,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       private int bitField0_;
 
-      private int minServerCount_;
-
+      private int minServerCount_ ;
       /**
-       *
-       *
        * <pre>
        * The minimum number of distcint servers to connect to in the channel pool.
        * The client will ensure that the channel pool will have at least this many
@@ -2988,17 +2408,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 min_server_count = 1;</code>
-       *
        * @return The minServerCount.
        */
       @java.lang.Override
       public int getMinServerCount() {
         return minServerCount_;
       }
-
       /**
-       *
-       *
        * <pre>
        * The minimum number of distcint servers to connect to in the channel pool.
        * The client will ensure that the channel pool will have at least this many
@@ -3007,7 +2423,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 min_server_count = 1;</code>
-       *
        * @param value The minServerCount to set.
        * @return This builder for chaining.
        */
@@ -3018,10 +2433,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The minimum number of distcint servers to connect to in the channel pool.
        * The client will ensure that the channel pool will have at least this many
@@ -3030,7 +2442,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 min_server_count = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMinServerCount() {
@@ -3040,11 +2451,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return this;
       }
 
-      private int maxServerCount_;
-
+      private int maxServerCount_ ;
       /**
-       *
-       *
        * <pre>
        * The maximum number of distinct servers to connect to in the channel pool.
        * The client will ensure that the channel pool will have at most this many
@@ -3052,17 +2460,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 max_server_count = 2;</code>
-       *
        * @return The maxServerCount.
        */
       @java.lang.Override
       public int getMaxServerCount() {
         return maxServerCount_;
       }
-
       /**
-       *
-       *
        * <pre>
        * The maximum number of distinct servers to connect to in the channel pool.
        * The client will ensure that the channel pool will have at most this many
@@ -3070,7 +2474,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 max_server_count = 2;</code>
-       *
        * @param value The maxServerCount to set.
        * @return This builder for chaining.
        */
@@ -3081,10 +2484,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The maximum number of distinct servers to connect to in the channel pool.
        * The client will ensure that the channel pool will have at most this many
@@ -3092,7 +2492,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 max_server_count = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMaxServerCount() {
@@ -3102,11 +2501,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return this;
       }
 
-      private int perServerSessionCount_;
-
+      private int perServerSessionCount_ ;
       /**
-       *
-       *
        * <pre>
        * Soft maximum for how many sessions are allowed per server. Normally, the
        * client will ensure that it does not host more than this count of sessions
@@ -3115,17 +2511,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 per_server_session_count = 3;</code>
-       *
        * @return The perServerSessionCount.
        */
       @java.lang.Override
       public int getPerServerSessionCount() {
         return perServerSessionCount_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Soft maximum for how many sessions are allowed per server. Normally, the
        * client will ensure that it does not host more than this count of sessions
@@ -3134,7 +2526,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 per_server_session_count = 3;</code>
-       *
        * @param value The perServerSessionCount to set.
        * @return This builder for chaining.
        */
@@ -3145,10 +2536,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Soft maximum for how many sessions are allowed per server. Normally, the
        * client will ensure that it does not host more than this count of sessions
@@ -3157,7 +2545,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 per_server_session_count = 3;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearPerServerSessionCount() {
@@ -3168,81 +2555,49 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback.Builder,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallbackOrBuilder>
-          directAccessWithFallbackBuilder_;
-
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder> directAccessWithFallbackBuilder_;
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        * @return Whether the directAccessWithFallback field is set.
        */
       @java.lang.Override
       public boolean hasDirectAccessWithFallback() {
         return modeCase_ == 4;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        * @return The directAccessWithFallback.
        */
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback
-          getDirectAccessWithFallback() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback getDirectAccessWithFallback() {
         if (directAccessWithFallbackBuilder_ == null) {
           if (modeCase_ == 4) {
-            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback)
-                mode_;
+            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_;
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
         } else {
           if (modeCase_ == 4) {
             return directAccessWithFallbackBuilder_.getMessage();
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
-      public Builder setDirectAccessWithFallback(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback
-              value) {
+      public Builder setDirectAccessWithFallback(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback value) {
         if (directAccessWithFallbackBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3255,22 +2610,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 4;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
       public Builder setDirectAccessWithFallback(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback.Builder
-              builderForValue) {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder builderForValue) {
         if (directAccessWithFallbackBuilder_ == null) {
           mode_ = builderForValue.build();
           onChanged();
@@ -3280,35 +2628,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 4;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
-      public Builder mergeDirectAccessWithFallback(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback
-              value) {
+      public Builder mergeDirectAccessWithFallback(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback value) {
         if (directAccessWithFallbackBuilder_ == null) {
-          if (modeCase_ == 4
-              && mode_
-                  != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallback.getDefaultInstance()) {
-            mode_ =
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback.newBuilder(
-                        (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                                .DirectAccessWithFallback)
-                            mode_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (modeCase_ == 4 &&
+              mode_ != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance()) {
+            mode_ = com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.newBuilder((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_)
+                .mergeFrom(value).buildPartial();
           } else {
             mode_ = value;
           }
@@ -3323,17 +2655,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 4;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
       public Builder clearDirectAccessWithFallback() {
         if (directAccessWithFallbackBuilder_ == null) {
@@ -3351,88 +2678,51 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback.Builder
-          getDirectAccessWithFallbackBuilder() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder getDirectAccessWithFallbackBuilder() {
         return internalGetDirectAccessWithFallbackFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallbackOrBuilder
-          getDirectAccessWithFallbackOrBuilder() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder getDirectAccessWithFallbackOrBuilder() {
         if ((modeCase_ == 4) && (directAccessWithFallbackBuilder_ != null)) {
           return directAccessWithFallbackBuilder_.getMessageOrBuilder();
         } else {
           if (modeCase_ == 4) {
-            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback)
-                mode_;
+            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_;
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessWithFallback.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess with a fallback to CloudPath.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback direct_access_with_fallback = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallback.Builder,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessWithFallbackOrBuilder>
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder> 
           internalGetDirectAccessWithFallbackFieldBuilder() {
         if (directAccessWithFallbackBuilder_ == null) {
           if (!(modeCase_ == 4)) {
-            mode_ =
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessWithFallback.getDefaultInstance();
+            mode_ = com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.getDefaultInstance();
           }
-          directAccessWithFallbackBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallback,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallback.Builder,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessWithFallbackOrBuilder>(
-                  (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                          .DirectAccessWithFallback)
-                      mode_,
+          directAccessWithFallbackBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallbackOrBuilder>(
+                  (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessWithFallback) mode_,
                   getParentForChildren(),
                   isClean());
           mode_ = null;
@@ -3443,81 +2733,49 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly.Builder,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnlyOrBuilder>
-          directAccessOnlyBuilder_;
-
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder> directAccessOnlyBuilder_;
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        * @return Whether the directAccessOnly field is set.
        */
       @java.lang.Override
       public boolean hasDirectAccessOnly() {
         return modeCase_ == 5;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        * @return The directAccessOnly.
        */
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly
-          getDirectAccessOnly() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly getDirectAccessOnly() {
         if (directAccessOnlyBuilder_ == null) {
           if (modeCase_ == 5) {
-            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly)
-                mode_;
+            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_;
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
         } else {
           if (modeCase_ == 5) {
             return directAccessOnlyBuilder_.getMessage();
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
-      public Builder setDirectAccessOnly(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly
-              value) {
+      public Builder setDirectAccessOnly(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly value) {
         if (directAccessOnlyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3530,22 +2788,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 5;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
       public Builder setDirectAccessOnly(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly.Builder
-              builderForValue) {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder builderForValue) {
         if (directAccessOnlyBuilder_ == null) {
           mode_ = builderForValue.build();
           onChanged();
@@ -3555,35 +2806,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 5;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
-      public Builder mergeDirectAccessOnly(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly
-              value) {
+      public Builder mergeDirectAccessOnly(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly value) {
         if (directAccessOnlyBuilder_ == null) {
-          if (modeCase_ == 5
-              && mode_
-                  != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnly.getDefaultInstance()) {
-            mode_ =
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly.newBuilder(
-                        (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                                .DirectAccessOnly)
-                            mode_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (modeCase_ == 5 &&
+              mode_ != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance()) {
+            mode_ = com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.newBuilder((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_)
+                .mergeFrom(value).buildPartial();
           } else {
             mode_ = value;
           }
@@ -3598,17 +2833,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 5;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
       public Builder clearDirectAccessOnly() {
         if (directAccessOnlyBuilder_ == null) {
@@ -3626,88 +2856,51 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly.Builder
-          getDirectAccessOnlyBuilder() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder getDirectAccessOnlyBuilder() {
         return internalGetDirectAccessOnlyFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnlyOrBuilder
-          getDirectAccessOnlyOrBuilder() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder getDirectAccessOnlyOrBuilder() {
         if ((modeCase_ == 5) && (directAccessOnlyBuilder_ != null)) {
           return directAccessOnlyBuilder_.getMessageOrBuilder();
         } else {
           if (modeCase_ == 5) {
-            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly)
-                mode_;
+            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_;
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .DirectAccessOnly.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * DirectAccess only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly direct_access_only = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnly.Builder,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .DirectAccessOnlyOrBuilder>
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder> 
           internalGetDirectAccessOnlyFieldBuilder() {
         if (directAccessOnlyBuilder_ == null) {
           if (!(modeCase_ == 5)) {
-            mode_ =
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .DirectAccessOnly.getDefaultInstance();
+            mode_ = com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.getDefaultInstance();
           }
-          directAccessOnlyBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnly,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnly.Builder,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .DirectAccessOnlyOrBuilder>(
-                  (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                          .DirectAccessOnly)
-                      mode_,
+          directAccessOnlyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnlyOrBuilder>(
+                  (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.DirectAccessOnly) mode_,
                   getParentForChildren(),
                   isClean());
           mode_ = null;
@@ -3718,80 +2911,49 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnly,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnly.Builder,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnlyOrBuilder>
-          cloudPathOnlyBuilder_;
-
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder> cloudPathOnlyBuilder_;
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        * @return Whether the cloudPathOnly field is set.
        */
       @java.lang.Override
       public boolean hasCloudPathOnly() {
         return modeCase_ == 6;
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        * @return The cloudPathOnly.
        */
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly
-          getCloudPathOnly() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly getCloudPathOnly() {
         if (cloudPathOnlyBuilder_ == null) {
           if (modeCase_ == 6) {
-            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly)
-                mode_;
+            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_;
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
         } else {
           if (modeCase_ == 6) {
             return cloudPathOnlyBuilder_.getMessage();
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
-      public Builder setCloudPathOnly(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-              value) {
+      public Builder setCloudPathOnly(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly value) {
         if (cloudPathOnlyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3804,22 +2966,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 6;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
       public Builder setCloudPathOnly(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-                  .Builder
-              builderForValue) {
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder builderForValue) {
         if (cloudPathOnlyBuilder_ == null) {
           mode_ = builderForValue.build();
           onChanged();
@@ -3829,34 +2984,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 6;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
-      public Builder mergeCloudPathOnly(
-          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly
-              value) {
+      public Builder mergeCloudPathOnly(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly value) {
         if (cloudPathOnlyBuilder_ == null) {
-          if (modeCase_ == 6
-              && mode_
-                  != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnly.getDefaultInstance()) {
-            mode_ =
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly.newBuilder(
-                        (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                                .CloudPathOnly)
-                            mode_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (modeCase_ == 6 &&
+              mode_ != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance()) {
+            mode_ = com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.newBuilder((com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_)
+                .mergeFrom(value).buildPartial();
           } else {
             mode_ = value;
           }
@@ -3871,17 +3011,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         modeCase_ = 6;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
       public Builder clearCloudPathOnly() {
         if (cloudPathOnlyBuilder_ == null) {
@@ -3899,88 +3034,51 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly.Builder
-          getCloudPathOnlyBuilder() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder getCloudPathOnlyBuilder() {
         return internalGetCloudPathOnlyFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnlyOrBuilder
-          getCloudPathOnlyOrBuilder() {
+      public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder getCloudPathOnlyOrBuilder() {
         if ((modeCase_ == 6) && (cloudPathOnlyBuilder_ != null)) {
           return cloudPathOnlyBuilder_.getMessageOrBuilder();
         } else {
           if (modeCase_ == 6) {
-            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly)
-                mode_;
+            return (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_;
           }
-          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-              .CloudPathOnly.getDefaultInstance();
+          return com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * CloudPath only.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;
-       * </code>
+       * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly cloud_path_only = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnly,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnly.Builder,
-              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                  .CloudPathOnlyOrBuilder>
+          com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder> 
           internalGetCloudPathOnlyFieldBuilder() {
         if (cloudPathOnlyBuilder_ == null) {
           if (!(modeCase_ == 6)) {
-            mode_ =
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .CloudPathOnly.getDefaultInstance();
+            mode_ = com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.getDefaultInstance();
           }
-          cloudPathOnlyBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnly,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnly.Builder,
-                  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                      .CloudPathOnlyOrBuilder>(
-                  (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                          .CloudPathOnly)
-                      mode_,
+          cloudPathOnlyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnlyOrBuilder>(
+                  (com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.CloudPathOnly) mode_,
                   getParentForChildren(),
                   isClean());
           mode_ = null;
@@ -3994,41 +3092,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration)
-    private static final com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        DEFAULT_INSTANCE;
-
+    private static final com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE =
-          new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration();
+      DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration();
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        getDefaultInstance() {
+    public static com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ChannelPoolConfiguration> PARSER =
-        new com.google.protobuf.AbstractParser<ChannelPoolConfiguration>() {
-          @java.lang.Override
-          public ChannelPoolConfiguration parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<ChannelPoolConfiguration>
+        PARSER = new com.google.protobuf.AbstractParser<ChannelPoolConfiguration>() {
+      @java.lang.Override
+      public ChannelPoolConfiguration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<ChannelPoolConfiguration> parser() {
       return PARSER;
@@ -4040,20 +3133,17 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        getDefaultInstanceForType() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface SessionPoolConfigurationOrBuilder
-      extends
+  public interface SessionPoolConfigurationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Fraction of idle sessions to keep in order to manage an increase in
      * requests-in-flight. For example, a headroom of 0.5 will keep enough
@@ -4061,53 +3151,41 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>float headroom = 1;</code>
-     *
      * @return The headroom.
      */
     float getHeadroom();
 
     /**
-     *
-     *
      * <pre>
      * The minimum number of sessions for a given scope.
      * </pre>
      *
      * <code>int32 min_session_count = 2;</code>
-     *
      * @return The minSessionCount.
      */
     int getMinSessionCount();
 
     /**
-     *
-     *
      * <pre>
      * The maximum number of sessions for a given scope.
      * </pre>
      *
      * <code>int32 max_session_count = 3;</code>
-     *
      * @return The maxSessionCount.
      */
     int getMaxSessionCount();
 
     /**
-     *
-     *
      * <pre>
      * Number of vRPCs that can be queued per starting session.
      * </pre>
      *
      * <code>int32 new_session_queue_length = 4;</code>
-     *
      * @return The newSessionQueueLength.
      */
     int getNewSessionQueueLength();
 
     /**
-     *
-     *
      * <pre>
      * How many concurrent session establishments are allowed. The client will
      * hold onto a count against this budget whenever it is establishing a new
@@ -4116,42 +3194,31 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 new_session_creation_budget = 5;</code>
-     *
      * @return The newSessionCreationBudget.
      */
     int getNewSessionCreationBudget();
 
     /**
-     *
-     *
      * <pre>
      * How long to penalize the creation budget for a failed session creation
      * attempt.
      * </pre>
      *
      * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
-     *
      * @return Whether the newSessionCreationPenalty field is set.
      */
     boolean hasNewSessionCreationPenalty();
-
     /**
-     *
-     *
      * <pre>
      * How long to penalize the creation budget for a failed session creation
      * attempt.
      * </pre>
      *
      * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
-     *
      * @return The newSessionCreationPenalty.
      */
     com.google.protobuf.Duration getNewSessionCreationPenalty();
-
     /**
-     *
-     *
      * <pre>
      * How long to penalize the creation budget for a failed session creation
      * attempt.
@@ -4162,8 +3229,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     com.google.protobuf.DurationOrBuilder getNewSessionCreationPenaltyOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * A threshold for cancelling all pending vRPCs based on how many
      * consecutive session establishment errors have been observed. The client
@@ -4173,42 +3238,31 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 consecutive_session_failure_threshold = 8;</code>
-     *
      * @return The consecutiveSessionFailureThreshold.
      */
     int getConsecutiveSessionFailureThreshold();
 
     /**
-     *
-     *
      * <pre>
      * How to balance vRPC load over connections to AFEs.
      * Set only if session_load &gt; 0.
      * </pre>
      *
      * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
-     *
      * @return Whether the loadBalancingOptions field is set.
      */
     boolean hasLoadBalancingOptions();
-
     /**
-     *
-     *
      * <pre>
      * How to balance vRPC load over connections to AFEs.
      * Set only if session_load &gt; 0.
      * </pre>
      *
      * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
-     *
      * @return The loadBalancingOptions.
      */
     com.google.bigtable.v2.LoadBalancingOptions getLoadBalancingOptions();
-
     /**
-     *
-     *
      * <pre>
      * How to balance vRPC load over connections to AFEs.
      * Set only if session_load &gt; 0.
@@ -4218,10 +3272,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      */
     com.google.bigtable.v2.LoadBalancingOptionsOrBuilder getLoadBalancingOptionsOrBuilder();
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools. Session pools are tied to a scope
    * like a table, an app profile, and a permission.
@@ -4229,52 +3280,44 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
    *
    * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration}
    */
-  public static final class SessionPoolConfiguration extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class SessionPoolConfiguration extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)
       SessionPoolConfigurationOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "SessionPoolConfiguration");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "SessionPoolConfiguration");
     }
-
     // Use SessionPoolConfiguration.newBuilder() to construct.
     private SessionPoolConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private SessionPoolConfiguration() {
+    }
 
-    private SessionPoolConfiguration() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.class,
-              com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder
-                  .class);
+              com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.class, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder.class);
     }
 
     private int bitField0_;
     public static final int HEADROOM_FIELD_NUMBER = 1;
     private float headroom_ = 0F;
-
     /**
-     *
-     *
      * <pre>
      * Fraction of idle sessions to keep in order to manage an increase in
      * requests-in-flight. For example, a headroom of 0.5 will keep enough
@@ -4282,7 +3325,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>float headroom = 1;</code>
-     *
      * @return The headroom.
      */
     @java.lang.Override
@@ -4292,16 +3334,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int MIN_SESSION_COUNT_FIELD_NUMBER = 2;
     private int minSessionCount_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * The minimum number of sessions for a given scope.
      * </pre>
      *
      * <code>int32 min_session_count = 2;</code>
-     *
      * @return The minSessionCount.
      */
     @java.lang.Override
@@ -4311,16 +3349,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int MAX_SESSION_COUNT_FIELD_NUMBER = 3;
     private int maxSessionCount_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * The maximum number of sessions for a given scope.
      * </pre>
      *
      * <code>int32 max_session_count = 3;</code>
-     *
      * @return The maxSessionCount.
      */
     @java.lang.Override
@@ -4330,16 +3364,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int NEW_SESSION_QUEUE_LENGTH_FIELD_NUMBER = 4;
     private int newSessionQueueLength_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Number of vRPCs that can be queued per starting session.
      * </pre>
      *
      * <code>int32 new_session_queue_length = 4;</code>
-     *
      * @return The newSessionQueueLength.
      */
     @java.lang.Override
@@ -4349,10 +3379,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int NEW_SESSION_CREATION_BUDGET_FIELD_NUMBER = 5;
     private int newSessionCreationBudget_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * How many concurrent session establishments are allowed. The client will
      * hold onto a count against this budget whenever it is establishing a new
@@ -4361,7 +3388,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 new_session_creation_budget = 5;</code>
-     *
      * @return The newSessionCreationBudget.
      */
     @java.lang.Override
@@ -4371,46 +3397,33 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int NEW_SESSION_CREATION_PENALTY_FIELD_NUMBER = 6;
     private com.google.protobuf.Duration newSessionCreationPenalty_;
-
     /**
-     *
-     *
      * <pre>
      * How long to penalize the creation budget for a failed session creation
      * attempt.
      * </pre>
      *
      * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
-     *
      * @return Whether the newSessionCreationPenalty field is set.
      */
     @java.lang.Override
     public boolean hasNewSessionCreationPenalty() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * How long to penalize the creation budget for a failed session creation
      * attempt.
      * </pre>
      *
      * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
-     *
      * @return The newSessionCreationPenalty.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getNewSessionCreationPenalty() {
-      return newSessionCreationPenalty_ == null
-          ? com.google.protobuf.Duration.getDefaultInstance()
-          : newSessionCreationPenalty_;
+      return newSessionCreationPenalty_ == null ? com.google.protobuf.Duration.getDefaultInstance() : newSessionCreationPenalty_;
     }
-
     /**
-     *
-     *
      * <pre>
      * How long to penalize the creation budget for a failed session creation
      * attempt.
@@ -4420,17 +3433,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getNewSessionCreationPenaltyOrBuilder() {
-      return newSessionCreationPenalty_ == null
-          ? com.google.protobuf.Duration.getDefaultInstance()
-          : newSessionCreationPenalty_;
+      return newSessionCreationPenalty_ == null ? com.google.protobuf.Duration.getDefaultInstance() : newSessionCreationPenalty_;
     }
 
     public static final int CONSECUTIVE_SESSION_FAILURE_THRESHOLD_FIELD_NUMBER = 8;
     private int consecutiveSessionFailureThreshold_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * A threshold for cancelling all pending vRPCs based on how many
      * consecutive session establishment errors have been observed. The client
@@ -4440,7 +3448,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>int32 consecutive_session_failure_threshold = 8;</code>
-     *
      * @return The consecutiveSessionFailureThreshold.
      */
     @java.lang.Override
@@ -4450,46 +3457,33 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     public static final int LOAD_BALANCING_OPTIONS_FIELD_NUMBER = 9;
     private com.google.bigtable.v2.LoadBalancingOptions loadBalancingOptions_;
-
     /**
-     *
-     *
      * <pre>
      * How to balance vRPC load over connections to AFEs.
      * Set only if session_load &gt; 0.
      * </pre>
      *
      * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
-     *
      * @return Whether the loadBalancingOptions field is set.
      */
     @java.lang.Override
     public boolean hasLoadBalancingOptions() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * How to balance vRPC load over connections to AFEs.
      * Set only if session_load &gt; 0.
      * </pre>
      *
      * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
-     *
      * @return The loadBalancingOptions.
      */
     @java.lang.Override
     public com.google.bigtable.v2.LoadBalancingOptions getLoadBalancingOptions() {
-      return loadBalancingOptions_ == null
-          ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-          : loadBalancingOptions_;
+      return loadBalancingOptions_ == null ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
     }
-
     /**
-     *
-     *
      * <pre>
      * How to balance vRPC load over connections to AFEs.
      * Set only if session_load &gt; 0.
@@ -4499,13 +3493,10 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      */
     @java.lang.Override
     public com.google.bigtable.v2.LoadBalancingOptionsOrBuilder getLoadBalancingOptionsOrBuilder() {
-      return loadBalancingOptions_ == null
-          ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-          : loadBalancingOptions_;
+      return loadBalancingOptions_ == null ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -4517,7 +3508,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (java.lang.Float.floatToRawIntBits(headroom_) != 0) {
         output.writeFloat(1, headroom_);
       }
@@ -4552,34 +3544,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       size = 0;
       if (java.lang.Float.floatToRawIntBits(headroom_) != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeFloatSize(1, headroom_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, headroom_);
       }
       if (minSessionCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, minSessionCount_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, minSessionCount_);
       }
       if (maxSessionCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, maxSessionCount_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, maxSessionCount_);
       }
       if (newSessionQueueLength_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, newSessionQueueLength_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, newSessionQueueLength_);
       }
       if (newSessionCreationBudget_ != 0) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeInt32Size(5, newSessionCreationBudget_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, newSessionCreationBudget_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                6, getNewSessionCreationPenalty());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getNewSessionCreationPenalty());
       }
       if (consecutiveSessionFailureThreshold_ != 0) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeInt32Size(
-                8, consecutiveSessionFailureThreshold_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, consecutiveSessionFailureThreshold_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(9, getLoadBalancingOptions());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getLoadBalancingOptions());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4589,31 +3583,35 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
-      if (!(obj
-          instanceof com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)) {
+      if (!(obj instanceof com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration other =
-          (com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration) obj;
+      com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration other = (com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration) obj;
 
       if (java.lang.Float.floatToIntBits(getHeadroom())
-          != java.lang.Float.floatToIntBits(other.getHeadroom())) return false;
-      if (getMinSessionCount() != other.getMinSessionCount()) return false;
-      if (getMaxSessionCount() != other.getMaxSessionCount()) return false;
-      if (getNewSessionQueueLength() != other.getNewSessionQueueLength()) return false;
-      if (getNewSessionCreationBudget() != other.getNewSessionCreationBudget()) return false;
+          != java.lang.Float.floatToIntBits(
+              other.getHeadroom())) return false;
+      if (getMinSessionCount()
+          != other.getMinSessionCount()) return false;
+      if (getMaxSessionCount()
+          != other.getMaxSessionCount()) return false;
+      if (getNewSessionQueueLength()
+          != other.getNewSessionQueueLength()) return false;
+      if (getNewSessionCreationBudget()
+          != other.getNewSessionCreationBudget()) return false;
       if (hasNewSessionCreationPenalty() != other.hasNewSessionCreationPenalty()) return false;
       if (hasNewSessionCreationPenalty()) {
-        if (!getNewSessionCreationPenalty().equals(other.getNewSessionCreationPenalty()))
-          return false;
+        if (!getNewSessionCreationPenalty()
+            .equals(other.getNewSessionCreationPenalty())) return false;
       }
-      if (getConsecutiveSessionFailureThreshold() != other.getConsecutiveSessionFailureThreshold())
-        return false;
+      if (getConsecutiveSessionFailureThreshold()
+          != other.getConsecutiveSessionFailureThreshold()) return false;
       if (hasLoadBalancingOptions() != other.hasLoadBalancingOptions()) return false;
       if (hasLoadBalancingOptions()) {
-        if (!getLoadBalancingOptions().equals(other.getLoadBalancingOptions())) return false;
+        if (!getLoadBalancingOptions()
+            .equals(other.getLoadBalancingOptions())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -4627,7 +3625,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + HEADROOM_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(getHeadroom());
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getHeadroom());
       hash = (37 * hash) + MIN_SESSION_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getMinSessionCount();
       hash = (37 * hash) + MAX_SESSION_COUNT_FIELD_NUMBER;
@@ -4651,112 +3650,99 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       return hash;
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(
-            java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseDelimitedFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools. Session pools are tied to a scope
      * like a table, an app profile, and a permission.
@@ -4764,44 +3750,40 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      *
      * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)
         com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.class,
-                com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder
-                    .class);
+                com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.class, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder.class);
       }
 
-      // Construct using
-      // com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.newBuilder()
+      // Construct using com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
           internalGetNewSessionCreationPenaltyFieldBuilder();
           internalGetLoadBalancingOptionsFieldBuilder();
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -4826,22 +3808,19 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_SessionPoolConfiguration_descriptor;
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-          getDefaultInstanceForType() {
-        return com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-            .getDefaultInstance();
+      public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration getDefaultInstanceForType() {
+        return com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance();
       }
 
       @java.lang.Override
       public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration build() {
-        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration result =
-            buildPartial();
+        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4849,19 +3828,14 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-          buildPartial() {
-        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration result =
-            new com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+      public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration buildPartial() {
+        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration result = new com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(
-          com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration result) {
+      private void buildPartial0(com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.headroom_ = headroom_;
@@ -4880,20 +3854,18 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.newSessionCreationPenalty_ =
-              newSessionCreationPenaltyBuilder_ == null
-                  ? newSessionCreationPenalty_
-                  : newSessionCreationPenaltyBuilder_.build();
+          result.newSessionCreationPenalty_ = newSessionCreationPenaltyBuilder_ == null
+              ? newSessionCreationPenalty_
+              : newSessionCreationPenaltyBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.consecutiveSessionFailureThreshold_ = consecutiveSessionFailureThreshold_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.loadBalancingOptions_ =
-              loadBalancingOptionsBuilder_ == null
-                  ? loadBalancingOptions_
-                  : loadBalancingOptionsBuilder_.build();
+          result.loadBalancingOptions_ = loadBalancingOptionsBuilder_ == null
+              ? loadBalancingOptions_
+              : loadBalancingOptionsBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
@@ -4901,21 +3873,16 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other
-            instanceof com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration) {
-          return mergeFrom(
-              (com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration) other);
+        if (other instanceof com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration) {
+          return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration other) {
-        if (other
-            == com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-                .getDefaultInstance()) return this;
+      public Builder mergeFrom(com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration other) {
+        if (other == com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance()) return this;
         if (java.lang.Float.floatToRawIntBits(other.getHeadroom()) != 0) {
           setHeadroom(other.getHeadroom());
         }
@@ -4966,65 +3933,56 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
               case 0:
                 done = true;
                 break;
-              case 13:
-                {
-                  headroom_ = input.readFloat();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 13
-              case 16:
-                {
-                  minSessionCount_ = input.readInt32();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 16
-              case 24:
-                {
-                  maxSessionCount_ = input.readInt32();
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 24
-              case 32:
-                {
-                  newSessionQueueLength_ = input.readInt32();
-                  bitField0_ |= 0x00000008;
-                  break;
-                } // case 32
-              case 40:
-                {
-                  newSessionCreationBudget_ = input.readInt32();
-                  bitField0_ |= 0x00000010;
-                  break;
-                } // case 40
-              case 50:
-                {
-                  input.readMessage(
-                      internalGetNewSessionCreationPenaltyFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000020;
-                  break;
-                } // case 50
-              case 64:
-                {
-                  consecutiveSessionFailureThreshold_ = input.readInt32();
-                  bitField0_ |= 0x00000040;
-                  break;
-                } // case 64
-              case 74:
-                {
-                  input.readMessage(
-                      internalGetLoadBalancingOptionsFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000080;
-                  break;
-                } // case 74
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 13: {
+                headroom_ = input.readFloat();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 13
+              case 16: {
+                minSessionCount_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                maxSessionCount_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                newSessionQueueLength_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                newSessionCreationBudget_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    internalGetNewSessionCreationPenaltyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 64: {
+                consecutiveSessionFailureThreshold_ = input.readInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 64
+              case 74: {
+                input.readMessage(
+                    internalGetLoadBalancingOptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5034,14 +3992,10 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         } // finally
         return this;
       }
-
       private int bitField0_;
 
-      private float headroom_;
-
+      private float headroom_ ;
       /**
-       *
-       *
        * <pre>
        * Fraction of idle sessions to keep in order to manage an increase in
        * requests-in-flight. For example, a headroom of 0.5 will keep enough
@@ -5049,17 +4003,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>float headroom = 1;</code>
-       *
        * @return The headroom.
        */
       @java.lang.Override
       public float getHeadroom() {
         return headroom_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Fraction of idle sessions to keep in order to manage an increase in
        * requests-in-flight. For example, a headroom of 0.5 will keep enough
@@ -5067,7 +4017,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>float headroom = 1;</code>
-       *
        * @param value The headroom to set.
        * @return This builder for chaining.
        */
@@ -5078,10 +4027,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Fraction of idle sessions to keep in order to manage an increase in
        * requests-in-flight. For example, a headroom of 0.5 will keep enough
@@ -5089,7 +4035,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>float headroom = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearHeadroom() {
@@ -5099,33 +4044,25 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return this;
       }
 
-      private int minSessionCount_;
-
+      private int minSessionCount_ ;
       /**
-       *
-       *
        * <pre>
        * The minimum number of sessions for a given scope.
        * </pre>
        *
        * <code>int32 min_session_count = 2;</code>
-       *
        * @return The minSessionCount.
        */
       @java.lang.Override
       public int getMinSessionCount() {
         return minSessionCount_;
       }
-
       /**
-       *
-       *
        * <pre>
        * The minimum number of sessions for a given scope.
        * </pre>
        *
        * <code>int32 min_session_count = 2;</code>
-       *
        * @param value The minSessionCount to set.
        * @return This builder for chaining.
        */
@@ -5136,16 +4073,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The minimum number of sessions for a given scope.
        * </pre>
        *
        * <code>int32 min_session_count = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMinSessionCount() {
@@ -5155,33 +4088,25 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return this;
       }
 
-      private int maxSessionCount_;
-
+      private int maxSessionCount_ ;
       /**
-       *
-       *
        * <pre>
        * The maximum number of sessions for a given scope.
        * </pre>
        *
        * <code>int32 max_session_count = 3;</code>
-       *
        * @return The maxSessionCount.
        */
       @java.lang.Override
       public int getMaxSessionCount() {
         return maxSessionCount_;
       }
-
       /**
-       *
-       *
        * <pre>
        * The maximum number of sessions for a given scope.
        * </pre>
        *
        * <code>int32 max_session_count = 3;</code>
-       *
        * @param value The maxSessionCount to set.
        * @return This builder for chaining.
        */
@@ -5192,16 +4117,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The maximum number of sessions for a given scope.
        * </pre>
        *
        * <code>int32 max_session_count = 3;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMaxSessionCount() {
@@ -5211,33 +4132,25 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return this;
       }
 
-      private int newSessionQueueLength_;
-
+      private int newSessionQueueLength_ ;
       /**
-       *
-       *
        * <pre>
        * Number of vRPCs that can be queued per starting session.
        * </pre>
        *
        * <code>int32 new_session_queue_length = 4;</code>
-       *
        * @return The newSessionQueueLength.
        */
       @java.lang.Override
       public int getNewSessionQueueLength() {
         return newSessionQueueLength_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of vRPCs that can be queued per starting session.
        * </pre>
        *
        * <code>int32 new_session_queue_length = 4;</code>
-       *
        * @param value The newSessionQueueLength to set.
        * @return This builder for chaining.
        */
@@ -5248,16 +4161,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of vRPCs that can be queued per starting session.
        * </pre>
        *
        * <code>int32 new_session_queue_length = 4;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearNewSessionQueueLength() {
@@ -5267,11 +4176,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         return this;
       }
 
-      private int newSessionCreationBudget_;
-
+      private int newSessionCreationBudget_ ;
       /**
-       *
-       *
        * <pre>
        * How many concurrent session establishments are allowed. The client will
        * hold onto a count against this budget whenever it is establishing a new
@@ -5280,17 +4186,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 new_session_creation_budget = 5;</code>
-       *
        * @return The newSessionCreationBudget.
        */
       @java.lang.Override
       public int getNewSessionCreationBudget() {
         return newSessionCreationBudget_;
       }
-
       /**
-       *
-       *
        * <pre>
        * How many concurrent session establishments are allowed. The client will
        * hold onto a count against this budget whenever it is establishing a new
@@ -5299,7 +4201,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 new_session_creation_budget = 5;</code>
-       *
        * @param value The newSessionCreationBudget to set.
        * @return This builder for chaining.
        */
@@ -5310,10 +4211,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How many concurrent session establishments are allowed. The client will
        * hold onto a count against this budget whenever it is establishing a new
@@ -5322,7 +4220,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 new_session_creation_budget = 5;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearNewSessionCreationBudget() {
@@ -5334,52 +4231,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       private com.google.protobuf.Duration newSessionCreationPenalty_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.protobuf.Duration,
-              com.google.protobuf.Duration.Builder,
-              com.google.protobuf.DurationOrBuilder>
-          newSessionCreationPenaltyBuilder_;
-
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> newSessionCreationPenaltyBuilder_;
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
        * </pre>
        *
        * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
-       *
        * @return Whether the newSessionCreationPenalty field is set.
        */
       public boolean hasNewSessionCreationPenalty() {
         return ((bitField0_ & 0x00000020) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
        * </pre>
        *
        * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
-       *
        * @return The newSessionCreationPenalty.
        */
       public com.google.protobuf.Duration getNewSessionCreationPenalty() {
         if (newSessionCreationPenaltyBuilder_ == null) {
-          return newSessionCreationPenalty_ == null
-              ? com.google.protobuf.Duration.getDefaultInstance()
-              : newSessionCreationPenalty_;
+          return newSessionCreationPenalty_ == null ? com.google.protobuf.Duration.getDefaultInstance() : newSessionCreationPenalty_;
         } else {
           return newSessionCreationPenaltyBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5400,10 +4281,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5422,10 +4300,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5435,9 +4310,9 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        */
       public Builder mergeNewSessionCreationPenalty(com.google.protobuf.Duration value) {
         if (newSessionCreationPenaltyBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)
-              && newSessionCreationPenalty_ != null
-              && newSessionCreationPenalty_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            newSessionCreationPenalty_ != null &&
+            newSessionCreationPenalty_ != com.google.protobuf.Duration.getDefaultInstance()) {
             getNewSessionCreationPenaltyBuilder().mergeFrom(value);
           } else {
             newSessionCreationPenalty_ = value;
@@ -5451,10 +4326,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5472,10 +4344,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5488,10 +4357,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return internalGetNewSessionCreationPenaltyFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5503,15 +4369,11 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         if (newSessionCreationPenaltyBuilder_ != null) {
           return newSessionCreationPenaltyBuilder_.getMessageOrBuilder();
         } else {
-          return newSessionCreationPenalty_ == null
-              ? com.google.protobuf.Duration.getDefaultInstance()
-              : newSessionCreationPenalty_;
+          return newSessionCreationPenalty_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : newSessionCreationPenalty_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * How long to penalize the creation budget for a failed session creation
        * attempt.
@@ -5520,27 +4382,21 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * <code>.google.protobuf.Duration new_session_creation_penalty = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.protobuf.Duration,
-              com.google.protobuf.Duration.Builder,
-              com.google.protobuf.DurationOrBuilder>
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
           internalGetNewSessionCreationPenaltyFieldBuilder() {
         if (newSessionCreationPenaltyBuilder_ == null) {
-          newSessionCreationPenaltyBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.protobuf.Duration,
-                  com.google.protobuf.Duration.Builder,
-                  com.google.protobuf.DurationOrBuilder>(
-                  getNewSessionCreationPenalty(), getParentForChildren(), isClean());
+          newSessionCreationPenaltyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getNewSessionCreationPenalty(),
+                  getParentForChildren(),
+                  isClean());
           newSessionCreationPenalty_ = null;
         }
         return newSessionCreationPenaltyBuilder_;
       }
 
-      private int consecutiveSessionFailureThreshold_;
-
+      private int consecutiveSessionFailureThreshold_ ;
       /**
-       *
-       *
        * <pre>
        * A threshold for cancelling all pending vRPCs based on how many
        * consecutive session establishment errors have been observed. The client
@@ -5550,17 +4406,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 consecutive_session_failure_threshold = 8;</code>
-       *
        * @return The consecutiveSessionFailureThreshold.
        */
       @java.lang.Override
       public int getConsecutiveSessionFailureThreshold() {
         return consecutiveSessionFailureThreshold_;
       }
-
       /**
-       *
-       *
        * <pre>
        * A threshold for cancelling all pending vRPCs based on how many
        * consecutive session establishment errors have been observed. The client
@@ -5570,7 +4422,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 consecutive_session_failure_threshold = 8;</code>
-       *
        * @param value The consecutiveSessionFailureThreshold to set.
        * @return This builder for chaining.
        */
@@ -5581,10 +4432,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * A threshold for cancelling all pending vRPCs based on how many
        * consecutive session establishment errors have been observed. The client
@@ -5594,7 +4442,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * </pre>
        *
        * <code>int32 consecutive_session_failure_threshold = 8;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearConsecutiveSessionFailureThreshold() {
@@ -5606,52 +4453,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
       private com.google.bigtable.v2.LoadBalancingOptions loadBalancingOptions_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.LoadBalancingOptions,
-              com.google.bigtable.v2.LoadBalancingOptions.Builder,
-              com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>
-          loadBalancingOptionsBuilder_;
-
+          com.google.bigtable.v2.LoadBalancingOptions, com.google.bigtable.v2.LoadBalancingOptions.Builder, com.google.bigtable.v2.LoadBalancingOptionsOrBuilder> loadBalancingOptionsBuilder_;
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
        * </pre>
        *
        * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
-       *
        * @return Whether the loadBalancingOptions field is set.
        */
       public boolean hasLoadBalancingOptions() {
         return ((bitField0_ & 0x00000080) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
        * </pre>
        *
        * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
-       *
        * @return The loadBalancingOptions.
        */
       public com.google.bigtable.v2.LoadBalancingOptions getLoadBalancingOptions() {
         if (loadBalancingOptionsBuilder_ == null) {
-          return loadBalancingOptions_ == null
-              ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-              : loadBalancingOptions_;
+          return loadBalancingOptions_ == null ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
         } else {
           return loadBalancingOptionsBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5672,10 +4503,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5694,10 +4522,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5707,10 +4532,9 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        */
       public Builder mergeLoadBalancingOptions(com.google.bigtable.v2.LoadBalancingOptions value) {
         if (loadBalancingOptionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)
-              && loadBalancingOptions_ != null
-              && loadBalancingOptions_
-                  != com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            loadBalancingOptions_ != null &&
+            loadBalancingOptions_ != com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()) {
             getLoadBalancingOptionsBuilder().mergeFrom(value);
           } else {
             loadBalancingOptions_ = value;
@@ -5724,10 +4548,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5745,10 +4566,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5761,10 +4579,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
         onChanged();
         return internalGetLoadBalancingOptionsFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5772,20 +4587,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        *
        * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
        */
-      public com.google.bigtable.v2.LoadBalancingOptionsOrBuilder
-          getLoadBalancingOptionsOrBuilder() {
+      public com.google.bigtable.v2.LoadBalancingOptionsOrBuilder getLoadBalancingOptionsOrBuilder() {
         if (loadBalancingOptionsBuilder_ != null) {
           return loadBalancingOptionsBuilder_.getMessageOrBuilder();
         } else {
-          return loadBalancingOptions_ == null
-              ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-              : loadBalancingOptions_;
+          return loadBalancingOptions_ == null ?
+              com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * How to balance vRPC load over connections to AFEs.
        * Set only if session_load &gt; 0.
@@ -5794,17 +4604,14 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
        * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.LoadBalancingOptions,
-              com.google.bigtable.v2.LoadBalancingOptions.Builder,
-              com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>
+          com.google.bigtable.v2.LoadBalancingOptions, com.google.bigtable.v2.LoadBalancingOptions.Builder, com.google.bigtable.v2.LoadBalancingOptionsOrBuilder> 
           internalGetLoadBalancingOptionsFieldBuilder() {
         if (loadBalancingOptionsBuilder_ == null) {
-          loadBalancingOptionsBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.LoadBalancingOptions,
-                  com.google.bigtable.v2.LoadBalancingOptions.Builder,
-                  com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>(
-                  getLoadBalancingOptions(), getParentForChildren(), isClean());
+          loadBalancingOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.LoadBalancingOptions, com.google.bigtable.v2.LoadBalancingOptions.Builder, com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>(
+                  getLoadBalancingOptions(),
+                  getParentForChildren(),
+                  isClean());
           loadBalancingOptions_ = null;
         }
         return loadBalancingOptionsBuilder_;
@@ -5814,41 +4621,36 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration)
-    private static final com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        DEFAULT_INSTANCE;
-
+    private static final com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE =
-          new com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration();
+      DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration();
     }
 
-    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        getDefaultInstance() {
+    public static com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SessionPoolConfiguration> PARSER =
-        new com.google.protobuf.AbstractParser<SessionPoolConfiguration>() {
-          @java.lang.Override
-          public SessionPoolConfiguration parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<SessionPoolConfiguration>
+        PARSER = new com.google.protobuf.AbstractParser<SessionPoolConfiguration>() {
+      @java.lang.Override
+      public SessionPoolConfiguration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<SessionPoolConfiguration> parser() {
       return PARSER;
@@ -5860,19 +4662,16 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        getDefaultInstanceForType() {
+    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   private int bitField0_;
   public static final int SESSION_LOAD_FIELD_NUMBER = 1;
   private float sessionLoad_ = 0F;
-
   /**
-   *
-   *
    * <pre>
    * What share of requests should operate on a session,. The rest should
    * operate on the old-style API. If provided, this should apply to all
@@ -5880,7 +4679,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
    * </pre>
    *
    * <code>float session_load = 1;</code>
-   *
    * @return The sessionLoad.
    */
   @java.lang.Override
@@ -5890,224 +4688,145 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
   public static final int SESSION_DIVERSION_CONFIGURATION_FIELD_NUMBER = 5;
   private com.google.bigtable.v2.SessionDiversionConfiguration sessionDiversionConfiguration_;
-
   /**
-   *
-   *
    * <pre>
    * How load should be divered to sessions.
    * </pre>
    *
-   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
    * @return Whether the sessionDiversionConfiguration field is set.
    */
   @java.lang.Override
   public boolean hasSessionDiversionConfiguration() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * How load should be divered to sessions.
    * </pre>
    *
-   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
    * @return The sessionDiversionConfiguration.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionDiversionConfiguration getSessionDiversionConfiguration() {
-    return sessionDiversionConfiguration_ == null
-        ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()
-        : sessionDiversionConfiguration_;
+    return sessionDiversionConfiguration_ == null ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance() : sessionDiversionConfiguration_;
   }
-
   /**
-   *
-   *
    * <pre>
    * How load should be divered to sessions.
    * </pre>
    *
-   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-   * </code>
+   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder
-      getSessionDiversionConfigurationOrBuilder() {
-    return sessionDiversionConfiguration_ == null
-        ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()
-        : sessionDiversionConfiguration_;
+  public com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder getSessionDiversionConfigurationOrBuilder() {
+    return sessionDiversionConfiguration_ == null ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance() : sessionDiversionConfiguration_;
   }
 
   public static final int LOAD_BALANCING_OPTIONS_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.LoadBalancingOptions loadBalancingOptions_;
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
-   *
    * @return Whether the loadBalancingOptions field is set.
    */
   @java.lang.Override
   public boolean hasLoadBalancingOptions() {
     return ((bitField0_ & 0x00000002) != 0);
   }
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
-   *
    * @return The loadBalancingOptions.
    */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptions getLoadBalancingOptions() {
-    return loadBalancingOptions_ == null
-        ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-        : loadBalancingOptions_;
+    return loadBalancingOptions_ == null ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
   }
-
-  /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptionsOrBuilder getLoadBalancingOptionsOrBuilder() {
-    return loadBalancingOptions_ == null
-        ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-        : loadBalancingOptions_;
+    return loadBalancingOptions_ == null ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
   }
 
   public static final int CHANNEL_CONFIGURATION_FIELD_NUMBER = 3;
-  private com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-      channelConfiguration_;
-
+  private com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channelConfiguration_;
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
    * @return Whether the channelConfiguration field is set.
    */
   @java.lang.Override
   public boolean hasChannelConfiguration() {
     return ((bitField0_ & 0x00000004) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
    * @return The channelConfiguration.
    */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-      getChannelConfiguration() {
-    return channelConfiguration_ == null
-        ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .getDefaultInstance()
-        : channelConfiguration_;
+  public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration getChannelConfiguration() {
+    return channelConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance() : channelConfiguration_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-   * </code>
+   * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder
-      getChannelConfigurationOrBuilder() {
-    return channelConfiguration_ == null
-        ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-            .getDefaultInstance()
-        : channelConfiguration_;
+  public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder getChannelConfigurationOrBuilder() {
+    return channelConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance() : channelConfiguration_;
   }
 
   public static final int SESSION_POOL_CONFIGURATION_FIELD_NUMBER = 4;
-  private com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-      sessionPoolConfiguration_;
-
+  private com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration sessionPoolConfiguration_;
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
    * @return Whether the sessionPoolConfiguration field is set.
    */
   @java.lang.Override
   public boolean hasSessionPoolConfiguration() {
     return ((bitField0_ & 0x00000008) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
    * @return The sessionPoolConfiguration.
    */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-      getSessionPoolConfiguration() {
-    return sessionPoolConfiguration_ == null
-        ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-            .getDefaultInstance()
-        : sessionPoolConfiguration_;
+  public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration getSessionPoolConfiguration() {
+    return sessionPoolConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance() : sessionPoolConfiguration_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-   * </code>
+   * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder
-      getSessionPoolConfigurationOrBuilder() {
-    return sessionPoolConfiguration_ == null
-        ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-            .getDefaultInstance()
-        : sessionPoolConfiguration_;
+  public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder getSessionPoolConfigurationOrBuilder() {
+    return sessionPoolConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance() : sessionPoolConfiguration_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -6119,7 +4838,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (java.lang.Float.floatToRawIntBits(sessionLoad_) != 0) {
       output.writeFloat(1, sessionLoad_);
     }
@@ -6145,25 +4865,24 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     size = 0;
     if (java.lang.Float.floatToRawIntBits(sessionLoad_) != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeFloatSize(1, sessionLoad_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(1, sessionLoad_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(2, getLoadBalancingOptions());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getLoadBalancingOptions());
     }
     if (((bitField0_ & 0x00000004) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(3, getChannelConfiguration());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getChannelConfiguration());
     }
     if (((bitField0_ & 0x00000008) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, getSessionPoolConfiguration());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getSessionPoolConfiguration());
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              5, getSessionDiversionConfiguration());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getSessionDiversionConfiguration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6173,33 +4892,35 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionClientConfiguration)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SessionClientConfiguration other =
-        (com.google.bigtable.v2.SessionClientConfiguration) obj;
+    com.google.bigtable.v2.SessionClientConfiguration other = (com.google.bigtable.v2.SessionClientConfiguration) obj;
 
     if (java.lang.Float.floatToIntBits(getSessionLoad())
-        != java.lang.Float.floatToIntBits(other.getSessionLoad())) return false;
-    if (hasSessionDiversionConfiguration() != other.hasSessionDiversionConfiguration())
-      return false;
+        != java.lang.Float.floatToIntBits(
+            other.getSessionLoad())) return false;
+    if (hasSessionDiversionConfiguration() != other.hasSessionDiversionConfiguration()) return false;
     if (hasSessionDiversionConfiguration()) {
-      if (!getSessionDiversionConfiguration().equals(other.getSessionDiversionConfiguration()))
-        return false;
+      if (!getSessionDiversionConfiguration()
+          .equals(other.getSessionDiversionConfiguration())) return false;
     }
     if (hasLoadBalancingOptions() != other.hasLoadBalancingOptions()) return false;
     if (hasLoadBalancingOptions()) {
-      if (!getLoadBalancingOptions().equals(other.getLoadBalancingOptions())) return false;
+      if (!getLoadBalancingOptions()
+          .equals(other.getLoadBalancingOptions())) return false;
     }
     if (hasChannelConfiguration() != other.hasChannelConfiguration()) return false;
     if (hasChannelConfiguration()) {
-      if (!getChannelConfiguration().equals(other.getChannelConfiguration())) return false;
+      if (!getChannelConfiguration()
+          .equals(other.getChannelConfiguration())) return false;
     }
     if (hasSessionPoolConfiguration() != other.hasSessionPoolConfiguration()) return false;
     if (hasSessionPoolConfiguration()) {
-      if (!getSessionPoolConfiguration().equals(other.getSessionPoolConfiguration())) return false;
+      if (!getSessionPoolConfiguration()
+          .equals(other.getSessionPoolConfiguration())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -6213,7 +4934,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + SESSION_LOAD_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(getSessionLoad());
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getSessionLoad());
     if (hasSessionDiversionConfiguration()) {
       hash = (37 * hash) + SESSION_DIVERSION_CONFIGURATION_FIELD_NUMBER;
       hash = (53 * hash) + getSessionDiversionConfiguration().hashCode();
@@ -6236,127 +4958,119 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
   }
 
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SessionClientConfiguration parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionClientConfiguration parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SessionClientConfiguration parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionClientConfiguration parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionClientConfiguration prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the Session API. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionClientConfiguration}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionClientConfiguration)
       com.google.bigtable.v2.SessionClientConfigurationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionClientConfiguration.class,
-              com.google.bigtable.v2.SessionClientConfiguration.Builder.class);
+              com.google.bigtable.v2.SessionClientConfiguration.class, com.google.bigtable.v2.SessionClientConfiguration.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionClientConfiguration.newBuilder()
@@ -6364,20 +5078,20 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetSessionDiversionConfigurationFieldBuilder();
         internalGetLoadBalancingOptionsFieldBuilder();
         internalGetChannelConfigurationFieldBuilder();
         internalGetSessionPoolConfigurationFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -6407,9 +5121,9 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionClientConfiguration_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionClientConfiguration_descriptor;
     }
 
     @java.lang.Override
@@ -6428,11 +5142,8 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionClientConfiguration buildPartial() {
-      com.google.bigtable.v2.SessionClientConfiguration result =
-          new com.google.bigtable.v2.SessionClientConfiguration(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SessionClientConfiguration result = new com.google.bigtable.v2.SessionClientConfiguration(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -6444,31 +5155,27 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.sessionDiversionConfiguration_ =
-            sessionDiversionConfigurationBuilder_ == null
-                ? sessionDiversionConfiguration_
-                : sessionDiversionConfigurationBuilder_.build();
+        result.sessionDiversionConfiguration_ = sessionDiversionConfigurationBuilder_ == null
+            ? sessionDiversionConfiguration_
+            : sessionDiversionConfigurationBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.loadBalancingOptions_ =
-            loadBalancingOptionsBuilder_ == null
-                ? loadBalancingOptions_
-                : loadBalancingOptionsBuilder_.build();
+        result.loadBalancingOptions_ = loadBalancingOptionsBuilder_ == null
+            ? loadBalancingOptions_
+            : loadBalancingOptionsBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.channelConfiguration_ =
-            channelConfigurationBuilder_ == null
-                ? channelConfiguration_
-                : channelConfigurationBuilder_.build();
+        result.channelConfiguration_ = channelConfigurationBuilder_ == null
+            ? channelConfiguration_
+            : channelConfigurationBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.sessionPoolConfiguration_ =
-            sessionPoolConfigurationBuilder_ == null
-                ? sessionPoolConfiguration_
-                : sessionPoolConfigurationBuilder_.build();
+        result.sessionPoolConfiguration_ = sessionPoolConfigurationBuilder_ == null
+            ? sessionPoolConfiguration_
+            : sessionPoolConfigurationBuilder_.build();
         to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ |= to_bitField0_;
@@ -6477,7 +5184,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionClientConfiguration) {
-        return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration) other);
+        return mergeFrom((com.google.bigtable.v2.SessionClientConfiguration)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -6485,8 +5192,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.SessionClientConfiguration other) {
-      if (other == com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()) return this;
       if (java.lang.Float.floatToRawIntBits(other.getSessionLoad()) != 0) {
         setSessionLoad(other.getSessionLoad());
       }
@@ -6528,49 +5234,45 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
             case 0:
               done = true;
               break;
-            case 13:
-              {
-                sessionLoad_ = input.readFloat();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 13
-            case 18:
-              {
-                input.readMessage(
-                    internalGetLoadBalancingOptionsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(
-                    internalGetChannelConfigurationFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 26
-            case 34:
-              {
-                input.readMessage(
-                    internalGetSessionPoolConfigurationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 34
-            case 42:
-              {
-                input.readMessage(
-                    internalGetSessionDiversionConfigurationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 42
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 13: {
+              sessionLoad_ = input.readFloat();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 13
+            case 18: {
+              input.readMessage(
+                  internalGetLoadBalancingOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetChannelConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetSessionPoolConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  internalGetSessionDiversionConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6580,14 +5282,10 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private float sessionLoad_;
-
+    private float sessionLoad_ ;
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest should
      * operate on the old-style API. If provided, this should apply to all
@@ -6595,17 +5293,13 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @return The sessionLoad.
      */
     @java.lang.Override
     public float getSessionLoad() {
       return sessionLoad_;
     }
-
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest should
      * operate on the old-style API. If provided, this should apply to all
@@ -6613,7 +5307,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @param value The sessionLoad to set.
      * @return This builder for chaining.
      */
@@ -6624,10 +5317,7 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * What share of requests should operate on a session,. The rest should
      * operate on the old-style API. If provided, this should apply to all
@@ -6635,7 +5325,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>float session_load = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSessionLoad() {
@@ -6647,61 +5336,41 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     private com.google.bigtable.v2.SessionDiversionConfiguration sessionDiversionConfiguration_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionDiversionConfiguration,
-            com.google.bigtable.v2.SessionDiversionConfiguration.Builder,
-            com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder>
-        sessionDiversionConfigurationBuilder_;
-
+        com.google.bigtable.v2.SessionDiversionConfiguration, com.google.bigtable.v2.SessionDiversionConfiguration.Builder, com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder> sessionDiversionConfigurationBuilder_;
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      * @return Whether the sessionDiversionConfiguration field is set.
      */
     public boolean hasSessionDiversionConfiguration() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      * @return The sessionDiversionConfiguration.
      */
     public com.google.bigtable.v2.SessionDiversionConfiguration getSessionDiversionConfiguration() {
       if (sessionDiversionConfigurationBuilder_ == null) {
-        return sessionDiversionConfiguration_ == null
-            ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()
-            : sessionDiversionConfiguration_;
+        return sessionDiversionConfiguration_ == null ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance() : sessionDiversionConfiguration_;
       } else {
         return sessionDiversionConfigurationBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
-    public Builder setSessionDiversionConfiguration(
-        com.google.bigtable.v2.SessionDiversionConfiguration value) {
+    public Builder setSessionDiversionConfiguration(com.google.bigtable.v2.SessionDiversionConfiguration value) {
       if (sessionDiversionConfigurationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6714,16 +5383,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
     public Builder setSessionDiversionConfiguration(
         com.google.bigtable.v2.SessionDiversionConfiguration.Builder builderForValue) {
@@ -6736,24 +5401,18 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
-    public Builder mergeSessionDiversionConfiguration(
-        com.google.bigtable.v2.SessionDiversionConfiguration value) {
+    public Builder mergeSessionDiversionConfiguration(com.google.bigtable.v2.SessionDiversionConfiguration value) {
       if (sessionDiversionConfigurationBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && sessionDiversionConfiguration_ != null
-            && sessionDiversionConfiguration_
-                != com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          sessionDiversionConfiguration_ != null &&
+          sessionDiversionConfiguration_ != com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()) {
           getSessionDiversionConfigurationBuilder().mergeFrom(value);
         } else {
           sessionDiversionConfiguration_ = value;
@@ -6767,16 +5426,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
     public Builder clearSessionDiversionConfiguration() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -6788,67 +5443,49 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
-    public com.google.bigtable.v2.SessionDiversionConfiguration.Builder
-        getSessionDiversionConfigurationBuilder() {
+    public com.google.bigtable.v2.SessionDiversionConfiguration.Builder getSessionDiversionConfigurationBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return internalGetSessionDiversionConfigurationFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
-    public com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder
-        getSessionDiversionConfigurationOrBuilder() {
+    public com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder getSessionDiversionConfigurationOrBuilder() {
       if (sessionDiversionConfigurationBuilder_ != null) {
         return sessionDiversionConfigurationBuilder_.getMessageOrBuilder();
       } else {
-        return sessionDiversionConfiguration_ == null
-            ? com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance()
-            : sessionDiversionConfiguration_;
+        return sessionDiversionConfiguration_ == null ?
+            com.google.bigtable.v2.SessionDiversionConfiguration.getDefaultInstance() : sessionDiversionConfiguration_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * How load should be divered to sessions.
      * </pre>
      *
-     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionDiversionConfiguration,
-            com.google.bigtable.v2.SessionDiversionConfiguration.Builder,
-            com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder>
+        com.google.bigtable.v2.SessionDiversionConfiguration, com.google.bigtable.v2.SessionDiversionConfiguration.Builder, com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder> 
         internalGetSessionDiversionConfigurationFieldBuilder() {
       if (sessionDiversionConfigurationBuilder_ == null) {
-        sessionDiversionConfigurationBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionDiversionConfiguration,
-                com.google.bigtable.v2.SessionDiversionConfiguration.Builder,
-                com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder>(
-                getSessionDiversionConfiguration(), getParentForChildren(), isClean());
+        sessionDiversionConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionDiversionConfiguration, com.google.bigtable.v2.SessionDiversionConfiguration.Builder, com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder>(
+                getSessionDiversionConfiguration(),
+                getParentForChildren(),
+                isClean());
         sessionDiversionConfiguration_ = null;
       }
       return sessionDiversionConfigurationBuilder_;
@@ -6856,36 +5493,28 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
     private com.google.bigtable.v2.LoadBalancingOptions loadBalancingOptions_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions,
-            com.google.bigtable.v2.LoadBalancingOptions.Builder,
-            com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>
-        loadBalancingOptionsBuilder_;
-
+        com.google.bigtable.v2.LoadBalancingOptions, com.google.bigtable.v2.LoadBalancingOptions.Builder, com.google.bigtable.v2.LoadBalancingOptionsOrBuilder> loadBalancingOptionsBuilder_;
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
-     *
      * @return Whether the loadBalancingOptions field is set.
      */
     public boolean hasLoadBalancingOptions() {
       return ((bitField0_ & 0x00000004) != 0);
     }
-
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
-     *
      * @return The loadBalancingOptions.
      */
     public com.google.bigtable.v2.LoadBalancingOptions getLoadBalancingOptions() {
       if (loadBalancingOptionsBuilder_ == null) {
-        return loadBalancingOptions_ == null
-            ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-            : loadBalancingOptions_;
+        return loadBalancingOptions_ == null ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
       } else {
         return loadBalancingOptionsBuilder_.getMessage();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     public Builder setLoadBalancingOptions(com.google.bigtable.v2.LoadBalancingOptions value) {
       if (loadBalancingOptionsBuilder_ == null) {
         if (value == null) {
@@ -6899,8 +5528,9 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     public Builder setLoadBalancingOptions(
         com.google.bigtable.v2.LoadBalancingOptions.Builder builderForValue) {
       if (loadBalancingOptionsBuilder_ == null) {
@@ -6912,14 +5542,14 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     public Builder mergeLoadBalancingOptions(com.google.bigtable.v2.LoadBalancingOptions value) {
       if (loadBalancingOptionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)
-            && loadBalancingOptions_ != null
-            && loadBalancingOptions_
-                != com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          loadBalancingOptions_ != null &&
+          loadBalancingOptions_ != com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()) {
           getLoadBalancingOptionsBuilder().mergeFrom(value);
         } else {
           loadBalancingOptions_ = value;
@@ -6933,8 +5563,9 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     public Builder clearLoadBalancingOptions() {
       bitField0_ = (bitField0_ & ~0x00000004);
       loadBalancingOptions_ = null;
@@ -6945,106 +5576,79 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     public com.google.bigtable.v2.LoadBalancingOptions.Builder getLoadBalancingOptionsBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return internalGetLoadBalancingOptionsFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     public com.google.bigtable.v2.LoadBalancingOptionsOrBuilder getLoadBalancingOptionsOrBuilder() {
       if (loadBalancingOptionsBuilder_ != null) {
         return loadBalancingOptionsBuilder_.getMessageOrBuilder();
       } else {
-        return loadBalancingOptions_ == null
-            ? com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()
-            : loadBalancingOptions_;
+        return loadBalancingOptions_ == null ?
+            com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance() : loadBalancingOptions_;
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions,
-            com.google.bigtable.v2.LoadBalancingOptions.Builder,
-            com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>
+        com.google.bigtable.v2.LoadBalancingOptions, com.google.bigtable.v2.LoadBalancingOptions.Builder, com.google.bigtable.v2.LoadBalancingOptionsOrBuilder> 
         internalGetLoadBalancingOptionsFieldBuilder() {
       if (loadBalancingOptionsBuilder_ == null) {
-        loadBalancingOptionsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.LoadBalancingOptions,
-                com.google.bigtable.v2.LoadBalancingOptions.Builder,
-                com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>(
-                getLoadBalancingOptions(), getParentForChildren(), isClean());
+        loadBalancingOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.LoadBalancingOptions, com.google.bigtable.v2.LoadBalancingOptions.Builder, com.google.bigtable.v2.LoadBalancingOptionsOrBuilder>(
+                getLoadBalancingOptions(),
+                getParentForChildren(),
+                isClean());
         loadBalancingOptions_ = null;
       }
       return loadBalancingOptionsBuilder_;
     }
 
-    private com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        channelConfiguration_;
+    private com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channelConfiguration_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration,
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder,
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder>
-        channelConfigurationBuilder_;
-
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder> channelConfigurationBuilder_;
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      * @return Whether the channelConfiguration field is set.
      */
     public boolean hasChannelConfiguration() {
       return ((bitField0_ & 0x00000008) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      * @return The channelConfiguration.
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-        getChannelConfiguration() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration getChannelConfiguration() {
       if (channelConfigurationBuilder_ == null) {
-        return channelConfiguration_ == null
-            ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .getDefaultInstance()
-            : channelConfiguration_;
+        return channelConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance() : channelConfiguration_;
       } else {
         return channelConfigurationBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
-    public Builder setChannelConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration value) {
+    public Builder setChannelConfiguration(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration value) {
       if (channelConfigurationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7057,21 +5661,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
     public Builder setChannelConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder
-            builderForValue) {
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder builderForValue) {
       if (channelConfigurationBuilder_ == null) {
         channelConfiguration_ = builderForValue.build();
       } else {
@@ -7081,26 +5679,18 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
-    public Builder mergeChannelConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration value) {
+    public Builder mergeChannelConfiguration(com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration value) {
       if (channelConfigurationBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)
-            && channelConfiguration_ != null
-            && channelConfiguration_
-                != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                    .getDefaultInstance()) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          channelConfiguration_ != null &&
+          channelConfiguration_ != com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance()) {
           getChannelConfigurationBuilder().mergeFrom(value);
         } else {
           channelConfiguration_ = value;
@@ -7114,17 +5704,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
     public Builder clearChannelConfiguration() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -7136,140 +5721,91 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder
-        getChannelConfigurationBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder getChannelConfigurationBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return internalGetChannelConfigurationFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder
-        getChannelConfigurationOrBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder getChannelConfigurationOrBuilder() {
       if (channelConfigurationBuilder_ != null) {
         return channelConfigurationBuilder_.getMessageOrBuilder();
       } else {
-        return channelConfiguration_ == null
-            ? com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-                .getDefaultInstance()
-            : channelConfiguration_;
+        return channelConfiguration_ == null ?
+            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.getDefaultInstance() : channelConfiguration_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the channel pool.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration,
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder,
-            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder>
+        com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder> 
         internalGetChannelConfigurationFieldBuilder() {
       if (channelConfigurationBuilder_ == null) {
-        channelConfigurationBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration,
-                com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder,
-                com.google.bigtable.v2.SessionClientConfiguration
-                    .ChannelPoolConfigurationOrBuilder>(
-                getChannelConfiguration(), getParentForChildren(), isClean());
+        channelConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration.Builder, com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder>(
+                getChannelConfiguration(),
+                getParentForChildren(),
+                isClean());
         channelConfiguration_ = null;
       }
       return channelConfigurationBuilder_;
     }
 
-    private com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        sessionPoolConfiguration_;
+    private com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration sessionPoolConfiguration_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration,
-            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder,
-            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder>
-        sessionPoolConfigurationBuilder_;
-
+        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder> sessionPoolConfigurationBuilder_;
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      * @return Whether the sessionPoolConfiguration field is set.
      */
     public boolean hasSessionPoolConfiguration() {
       return ((bitField0_ & 0x00000010) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      * @return The sessionPoolConfiguration.
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-        getSessionPoolConfiguration() {
+    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration getSessionPoolConfiguration() {
       if (sessionPoolConfigurationBuilder_ == null) {
-        return sessionPoolConfiguration_ == null
-            ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-                .getDefaultInstance()
-            : sessionPoolConfiguration_;
+        return sessionPoolConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance() : sessionPoolConfiguration_;
       } else {
         return sessionPoolConfigurationBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
-    public Builder setSessionPoolConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration value) {
+    public Builder setSessionPoolConfiguration(com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration value) {
       if (sessionPoolConfigurationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7282,21 +5818,15 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
     public Builder setSessionPoolConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder
-            builderForValue) {
+        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder builderForValue) {
       if (sessionPoolConfigurationBuilder_ == null) {
         sessionPoolConfiguration_ = builderForValue.build();
       } else {
@@ -7306,26 +5836,18 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
-    public Builder mergeSessionPoolConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration value) {
+    public Builder mergeSessionPoolConfiguration(com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration value) {
       if (sessionPoolConfigurationBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)
-            && sessionPoolConfiguration_ != null
-            && sessionPoolConfiguration_
-                != com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-                    .getDefaultInstance()) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          sessionPoolConfiguration_ != null &&
+          sessionPoolConfiguration_ != com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance()) {
           getSessionPoolConfigurationBuilder().mergeFrom(value);
         } else {
           sessionPoolConfiguration_ = value;
@@ -7339,17 +5861,12 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
     public Builder clearSessionPoolConfiguration() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -7361,72 +5878,49 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder
-        getSessionPoolConfigurationBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder getSessionPoolConfigurationBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return internalGetSessionPoolConfigurationFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder
-        getSessionPoolConfigurationOrBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder getSessionPoolConfigurationOrBuilder() {
       if (sessionPoolConfigurationBuilder_ != null) {
         return sessionPoolConfigurationBuilder_.getMessageOrBuilder();
       } else {
-        return sessionPoolConfiguration_ == null
-            ? com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-                .getDefaultInstance()
-            : sessionPoolConfiguration_;
+        return sessionPoolConfiguration_ == null ?
+            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.getDefaultInstance() : sessionPoolConfiguration_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for the session pools.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-     * </code>
+     * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration,
-            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder,
-            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder>
+        com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder> 
         internalGetSessionPoolConfigurationFieldBuilder() {
       if (sessionPoolConfigurationBuilder_ == null) {
-        sessionPoolConfigurationBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration,
-                com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder,
-                com.google.bigtable.v2.SessionClientConfiguration
-                    .SessionPoolConfigurationOrBuilder>(
-                getSessionPoolConfiguration(), getParentForChildren(), isClean());
+        sessionPoolConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration.Builder, com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder>(
+                getSessionPoolConfiguration(),
+                getParentForChildren(),
+                isClean());
         sessionPoolConfiguration_ = null;
       }
       return sessionPoolConfigurationBuilder_;
@@ -7437,7 +5931,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionClientConfiguration)
   private static final com.google.bigtable.v2.SessionClientConfiguration DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionClientConfiguration();
   }
@@ -7446,27 +5939,27 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionClientConfiguration> PARSER =
-      new com.google.protobuf.AbstractParser<SessionClientConfiguration>() {
-        @java.lang.Override
-        public SessionClientConfiguration parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionClientConfiguration>
+      PARSER = new com.google.protobuf.AbstractParser<SessionClientConfiguration>() {
+    @java.lang.Override
+    public SessionClientConfiguration parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionClientConfiguration> parser() {
     return PARSER;
@@ -7481,4 +5974,6 @@ public final class SessionClientConfiguration extends com.google.protobuf.Genera
   public com.google.bigtable.v2.SessionClientConfiguration getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,52 +13,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SessionResponse}
  */
 @com.google.protobuf.Generated
-public final class SessionResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionResponse)
     SessionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionResponse");
   }
-
   // Use SessionResponse.newBuilder() to construct.
   private SessionResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private SessionResponse() {
+  }
 
-  private SessionResponse() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionResponse.class,
-            com.google.bigtable.v2.SessionResponse.Builder.class);
+            com.google.bigtable.v2.SessionResponse.class, com.google.bigtable.v2.SessionResponse.Builder.class);
   }
 
   private int payloadCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object payload_;
-
   public enum PayloadCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     OPEN_SESSION(1),
     VIRTUAL_RPC(2),
@@ -72,11 +63,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     PEER_LOAD_INFO(8),
     PAYLOAD_NOT_SET(0);
     private final int value;
-
     private PayloadCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -89,77 +78,62 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
 
     public static PayloadCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return OPEN_SESSION;
-        case 2:
-          return VIRTUAL_RPC;
-        case 3:
-          return ERROR;
-        case 4:
-          return SESSION_PARAMETERS;
-        case 5:
-          return HEARTBEAT;
-        case 6:
-          return GO_AWAY;
-        case 7:
-          return SESSION_REFRESH_CONFIG;
-        case 8:
-          return PEER_LOAD_INFO;
-        case 0:
-          return PAYLOAD_NOT_SET;
-        default:
-          return null;
+        case 1: return OPEN_SESSION;
+        case 2: return VIRTUAL_RPC;
+        case 3: return ERROR;
+        case 4: return SESSION_PARAMETERS;
+        case 5: return HEARTBEAT;
+        case 6: return GO_AWAY;
+        case 7: return SESSION_REFRESH_CONFIG;
+        case 8: return PEER_LOAD_INFO;
+        case 0: return PAYLOAD_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PayloadCase getPayloadCase() {
-    return PayloadCase.forNumber(payloadCase_);
+  public PayloadCase
+  getPayloadCase() {
+    return PayloadCase.forNumber(
+        payloadCase_);
   }
 
   public static final int OPEN_SESSION_FIELD_NUMBER = 1;
-
   /**
    * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
-   *
    * @return Whether the openSession field is set.
    */
   @java.lang.Override
   public boolean hasOpenSession() {
     return payloadCase_ == 1;
   }
-
   /**
    * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
-   *
    * @return The openSession.
    */
   @java.lang.Override
   public com.google.bigtable.v2.OpenSessionResponse getOpenSession() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.OpenSessionResponse) payload_;
+       return (com.google.bigtable.v2.OpenSessionResponse) payload_;
     }
     return com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+  /**
+   * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.OpenSessionResponseOrBuilder getOpenSessionOrBuilder() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.OpenSessionResponse) payload_;
+       return (com.google.bigtable.v2.OpenSessionResponse) payload_;
     }
     return com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance();
   }
 
   public static final int VIRTUAL_RPC_FIELD_NUMBER = 2;
-
   /**
-   *
-   *
    * <pre>
    * A vRPC can result in either a successful result or an error.
    * Error results are separate to allow for multiple vRPC responses,
@@ -167,17 +141,13 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.VirtualRpcResponse virtual_rpc = 2;</code>
-   *
    * @return Whether the virtualRpc field is set.
    */
   @java.lang.Override
   public boolean hasVirtualRpc() {
     return payloadCase_ == 2;
   }
-
   /**
-   *
-   *
    * <pre>
    * A vRPC can result in either a successful result or an error.
    * Error results are separate to allow for multiple vRPC responses,
@@ -185,20 +155,16 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.VirtualRpcResponse virtual_rpc = 2;</code>
-   *
    * @return The virtualRpc.
    */
   @java.lang.Override
   public com.google.bigtable.v2.VirtualRpcResponse getVirtualRpc() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.VirtualRpcResponse) payload_;
+       return (com.google.bigtable.v2.VirtualRpcResponse) payload_;
     }
     return com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * A vRPC can result in either a successful result or an error.
    * Error results are separate to allow for multiple vRPC responses,
@@ -210,217 +176,198 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.VirtualRpcResponseOrBuilder getVirtualRpcOrBuilder() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.VirtualRpcResponse) payload_;
+       return (com.google.bigtable.v2.VirtualRpcResponse) payload_;
     }
     return com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance();
   }
 
   public static final int ERROR_FIELD_NUMBER = 3;
-
   /**
    * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
-   *
    * @return Whether the error field is set.
    */
   @java.lang.Override
   public boolean hasError() {
     return payloadCase_ == 3;
   }
-
   /**
    * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
-   *
    * @return The error.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ErrorResponse getError() {
     if (payloadCase_ == 3) {
-      return (com.google.bigtable.v2.ErrorResponse) payload_;
+       return (com.google.bigtable.v2.ErrorResponse) payload_;
     }
     return com.google.bigtable.v2.ErrorResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+  /**
+   * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.ErrorResponseOrBuilder getErrorOrBuilder() {
     if (payloadCase_ == 3) {
-      return (com.google.bigtable.v2.ErrorResponse) payload_;
+       return (com.google.bigtable.v2.ErrorResponse) payload_;
     }
     return com.google.bigtable.v2.ErrorResponse.getDefaultInstance();
   }
 
   public static final int SESSION_PARAMETERS_FIELD_NUMBER = 4;
-
   /**
    * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
-   *
    * @return Whether the sessionParameters field is set.
    */
   @java.lang.Override
   public boolean hasSessionParameters() {
     return payloadCase_ == 4;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
-   *
    * @return The sessionParameters.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionParametersResponse getSessionParameters() {
     if (payloadCase_ == 4) {
-      return (com.google.bigtable.v2.SessionParametersResponse) payload_;
+       return (com.google.bigtable.v2.SessionParametersResponse) payload_;
     }
     return com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionParametersResponseOrBuilder getSessionParametersOrBuilder() {
     if (payloadCase_ == 4) {
-      return (com.google.bigtable.v2.SessionParametersResponse) payload_;
+       return (com.google.bigtable.v2.SessionParametersResponse) payload_;
     }
     return com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance();
   }
 
   public static final int HEARTBEAT_FIELD_NUMBER = 5;
-
   /**
    * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
-   *
    * @return Whether the heartbeat field is set.
    */
   @java.lang.Override
   public boolean hasHeartbeat() {
     return payloadCase_ == 5;
   }
-
   /**
    * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
-   *
    * @return The heartbeat.
    */
   @java.lang.Override
   public com.google.bigtable.v2.HeartbeatResponse getHeartbeat() {
     if (payloadCase_ == 5) {
-      return (com.google.bigtable.v2.HeartbeatResponse) payload_;
+       return (com.google.bigtable.v2.HeartbeatResponse) payload_;
     }
     return com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+  /**
+   * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.HeartbeatResponseOrBuilder getHeartbeatOrBuilder() {
     if (payloadCase_ == 5) {
-      return (com.google.bigtable.v2.HeartbeatResponse) payload_;
+       return (com.google.bigtable.v2.HeartbeatResponse) payload_;
     }
     return com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance();
   }
 
   public static final int GO_AWAY_FIELD_NUMBER = 6;
-
   /**
    * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
-   *
    * @return Whether the goAway field is set.
    */
   @java.lang.Override
   public boolean hasGoAway() {
     return payloadCase_ == 6;
   }
-
   /**
    * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
-   *
    * @return The goAway.
    */
   @java.lang.Override
   public com.google.bigtable.v2.GoAwayResponse getGoAway() {
     if (payloadCase_ == 6) {
-      return (com.google.bigtable.v2.GoAwayResponse) payload_;
+       return (com.google.bigtable.v2.GoAwayResponse) payload_;
     }
     return com.google.bigtable.v2.GoAwayResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+  /**
+   * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.GoAwayResponseOrBuilder getGoAwayOrBuilder() {
     if (payloadCase_ == 6) {
-      return (com.google.bigtable.v2.GoAwayResponse) payload_;
+       return (com.google.bigtable.v2.GoAwayResponse) payload_;
     }
     return com.google.bigtable.v2.GoAwayResponse.getDefaultInstance();
   }
 
   public static final int SESSION_REFRESH_CONFIG_FIELD_NUMBER = 7;
-
   /**
    * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
-   *
    * @return Whether the sessionRefreshConfig field is set.
    */
   @java.lang.Override
   public boolean hasSessionRefreshConfig() {
     return payloadCase_ == 7;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
-   *
    * @return The sessionRefreshConfig.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionRefreshConfig getSessionRefreshConfig() {
     if (payloadCase_ == 7) {
-      return (com.google.bigtable.v2.SessionRefreshConfig) payload_;
+       return (com.google.bigtable.v2.SessionRefreshConfig) payload_;
     }
     return com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionRefreshConfigOrBuilder getSessionRefreshConfigOrBuilder() {
     if (payloadCase_ == 7) {
-      return (com.google.bigtable.v2.SessionRefreshConfig) payload_;
+       return (com.google.bigtable.v2.SessionRefreshConfig) payload_;
     }
     return com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance();
   }
 
   public static final int PEER_LOAD_INFO_FIELD_NUMBER = 8;
-
   /**
    * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
-   *
    * @return Whether the peerLoadInfo field is set.
    */
   @java.lang.Override
   public boolean hasPeerLoadInfo() {
     return payloadCase_ == 8;
   }
-
   /**
    * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
-   *
    * @return The peerLoadInfo.
    */
   @java.lang.Override
   public com.google.bigtable.v2.PeerLoadInfo getPeerLoadInfo() {
     if (payloadCase_ == 8) {
-      return (com.google.bigtable.v2.PeerLoadInfo) payload_;
+       return (com.google.bigtable.v2.PeerLoadInfo) payload_;
     }
     return com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+  /**
+   * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.PeerLoadInfoOrBuilder getPeerLoadInfoOrBuilder() {
     if (payloadCase_ == 8) {
-      return (com.google.bigtable.v2.PeerLoadInfo) payload_;
+       return (com.google.bigtable.v2.PeerLoadInfo) payload_;
     }
     return com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -432,7 +379,8 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (payloadCase_ == 1) {
       output.writeMessage(1, (com.google.bigtable.v2.OpenSessionResponse) payload_);
     }
@@ -467,44 +415,36 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (payloadCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1, (com.google.bigtable.v2.OpenSessionResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.OpenSessionResponse) payload_);
     }
     if (payloadCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.VirtualRpcResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.VirtualRpcResponse) payload_);
     }
     if (payloadCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              3, (com.google.bigtable.v2.ErrorResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.bigtable.v2.ErrorResponse) payload_);
     }
     if (payloadCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.bigtable.v2.SessionParametersResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.bigtable.v2.SessionParametersResponse) payload_);
     }
     if (payloadCase_ == 5) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              5, (com.google.bigtable.v2.HeartbeatResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.bigtable.v2.HeartbeatResponse) payload_);
     }
     if (payloadCase_ == 6) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              6, (com.google.bigtable.v2.GoAwayResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, (com.google.bigtable.v2.GoAwayResponse) payload_);
     }
     if (payloadCase_ == 7) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              7, (com.google.bigtable.v2.SessionRefreshConfig) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (com.google.bigtable.v2.SessionRefreshConfig) payload_);
     }
     if (payloadCase_ == 8) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              8, (com.google.bigtable.v2.PeerLoadInfo) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.bigtable.v2.PeerLoadInfo) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -514,7 +454,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionResponse)) {
       return super.equals(obj);
@@ -524,28 +464,36 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     if (!getPayloadCase().equals(other.getPayloadCase())) return false;
     switch (payloadCase_) {
       case 1:
-        if (!getOpenSession().equals(other.getOpenSession())) return false;
+        if (!getOpenSession()
+            .equals(other.getOpenSession())) return false;
         break;
       case 2:
-        if (!getVirtualRpc().equals(other.getVirtualRpc())) return false;
+        if (!getVirtualRpc()
+            .equals(other.getVirtualRpc())) return false;
         break;
       case 3:
-        if (!getError().equals(other.getError())) return false;
+        if (!getError()
+            .equals(other.getError())) return false;
         break;
       case 4:
-        if (!getSessionParameters().equals(other.getSessionParameters())) return false;
+        if (!getSessionParameters()
+            .equals(other.getSessionParameters())) return false;
         break;
       case 5:
-        if (!getHeartbeat().equals(other.getHeartbeat())) return false;
+        if (!getHeartbeat()
+            .equals(other.getHeartbeat())) return false;
         break;
       case 6:
-        if (!getGoAway().equals(other.getGoAway())) return false;
+        if (!getGoAway()
+            .equals(other.getGoAway())) return false;
         break;
       case 7:
-        if (!getSessionRefreshConfig().equals(other.getSessionRefreshConfig())) return false;
+        if (!getSessionRefreshConfig()
+            .equals(other.getSessionRefreshConfig())) return false;
         break;
       case 8:
-        if (!getPeerLoadInfo().equals(other.getPeerLoadInfo())) return false;
+        if (!getPeerLoadInfo()
+            .equals(other.getPeerLoadInfo())) return false;
         break;
       case 0:
       default:
@@ -602,137 +550,132 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.SessionResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SessionResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.SessionResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionResponse)
       com.google.bigtable.v2.SessionResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionResponse.class,
-              com.google.bigtable.v2.SessionResponse.Builder.class);
+              com.google.bigtable.v2.SessionResponse.class, com.google.bigtable.v2.SessionResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionResponse.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -767,9 +710,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionResponse_descriptor;
     }
 
     @java.lang.Override
@@ -788,11 +731,8 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionResponse buildPartial() {
-      com.google.bigtable.v2.SessionResponse result =
-          new com.google.bigtable.v2.SessionResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SessionResponse result = new com.google.bigtable.v2.SessionResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -805,28 +745,36 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     private void buildPartialOneofs(com.google.bigtable.v2.SessionResponse result) {
       result.payloadCase_ = payloadCase_;
       result.payload_ = this.payload_;
-      if (payloadCase_ == 1 && openSessionBuilder_ != null) {
+      if (payloadCase_ == 1 &&
+          openSessionBuilder_ != null) {
         result.payload_ = openSessionBuilder_.build();
       }
-      if (payloadCase_ == 2 && virtualRpcBuilder_ != null) {
+      if (payloadCase_ == 2 &&
+          virtualRpcBuilder_ != null) {
         result.payload_ = virtualRpcBuilder_.build();
       }
-      if (payloadCase_ == 3 && errorBuilder_ != null) {
+      if (payloadCase_ == 3 &&
+          errorBuilder_ != null) {
         result.payload_ = errorBuilder_.build();
       }
-      if (payloadCase_ == 4 && sessionParametersBuilder_ != null) {
+      if (payloadCase_ == 4 &&
+          sessionParametersBuilder_ != null) {
         result.payload_ = sessionParametersBuilder_.build();
       }
-      if (payloadCase_ == 5 && heartbeatBuilder_ != null) {
+      if (payloadCase_ == 5 &&
+          heartbeatBuilder_ != null) {
         result.payload_ = heartbeatBuilder_.build();
       }
-      if (payloadCase_ == 6 && goAwayBuilder_ != null) {
+      if (payloadCase_ == 6 &&
+          goAwayBuilder_ != null) {
         result.payload_ = goAwayBuilder_.build();
       }
-      if (payloadCase_ == 7 && sessionRefreshConfigBuilder_ != null) {
+      if (payloadCase_ == 7 &&
+          sessionRefreshConfigBuilder_ != null) {
         result.payload_ = sessionRefreshConfigBuilder_.build();
       }
-      if (payloadCase_ == 8 && peerLoadInfoBuilder_ != null) {
+      if (payloadCase_ == 8 &&
+          peerLoadInfoBuilder_ != null) {
         result.payload_ = peerLoadInfoBuilder_.build();
       }
     }
@@ -834,7 +782,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionResponse) {
-        return mergeFrom((com.google.bigtable.v2.SessionResponse) other);
+        return mergeFrom((com.google.bigtable.v2.SessionResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -844,50 +792,41 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     public Builder mergeFrom(com.google.bigtable.v2.SessionResponse other) {
       if (other == com.google.bigtable.v2.SessionResponse.getDefaultInstance()) return this;
       switch (other.getPayloadCase()) {
-        case OPEN_SESSION:
-          {
-            mergeOpenSession(other.getOpenSession());
-            break;
-          }
-        case VIRTUAL_RPC:
-          {
-            mergeVirtualRpc(other.getVirtualRpc());
-            break;
-          }
-        case ERROR:
-          {
-            mergeError(other.getError());
-            break;
-          }
-        case SESSION_PARAMETERS:
-          {
-            mergeSessionParameters(other.getSessionParameters());
-            break;
-          }
-        case HEARTBEAT:
-          {
-            mergeHeartbeat(other.getHeartbeat());
-            break;
-          }
-        case GO_AWAY:
-          {
-            mergeGoAway(other.getGoAway());
-            break;
-          }
-        case SESSION_REFRESH_CONFIG:
-          {
-            mergeSessionRefreshConfig(other.getSessionRefreshConfig());
-            break;
-          }
-        case PEER_LOAD_INFO:
-          {
-            mergePeerLoadInfo(other.getPeerLoadInfo());
-            break;
-          }
-        case PAYLOAD_NOT_SET:
-          {
-            break;
-          }
+        case OPEN_SESSION: {
+          mergeOpenSession(other.getOpenSession());
+          break;
+        }
+        case VIRTUAL_RPC: {
+          mergeVirtualRpc(other.getVirtualRpc());
+          break;
+        }
+        case ERROR: {
+          mergeError(other.getError());
+          break;
+        }
+        case SESSION_PARAMETERS: {
+          mergeSessionParameters(other.getSessionParameters());
+          break;
+        }
+        case HEARTBEAT: {
+          mergeHeartbeat(other.getHeartbeat());
+          break;
+        }
+        case GO_AWAY: {
+          mergeGoAway(other.getGoAway());
+          break;
+        }
+        case SESSION_REFRESH_CONFIG: {
+          mergeSessionRefreshConfig(other.getSessionRefreshConfig());
+          break;
+        }
+        case PEER_LOAD_INFO: {
+          mergePeerLoadInfo(other.getPeerLoadInfo());
+          break;
+        }
+        case PAYLOAD_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -915,67 +854,68 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetOpenSessionFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetVirtualRpcFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(internalGetErrorFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 3;
-                break;
-              } // case 26
-            case 34:
-              {
-                input.readMessage(
-                    internalGetSessionParametersFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 4;
-                break;
-              } // case 34
-            case 42:
-              {
-                input.readMessage(
-                    internalGetHeartbeatFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 5;
-                break;
-              } // case 42
-            case 50:
-              {
-                input.readMessage(internalGetGoAwayFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 6;
-                break;
-              } // case 50
-            case 58:
-              {
-                input.readMessage(
-                    internalGetSessionRefreshConfigFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 7;
-                break;
-              } // case 58
-            case 66:
-              {
-                input.readMessage(
-                    internalGetPeerLoadInfoFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 8;
-                break;
-              } // case 66
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetOpenSessionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetVirtualRpcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetErrorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetSessionParametersFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  internalGetHeartbeatFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  internalGetGoAwayFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  internalGetSessionRefreshConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  internalGetPeerLoadInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 8;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -985,12 +925,12 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int payloadCase_ = 0;
     private java.lang.Object payload_;
-
-    public PayloadCase getPayloadCase() {
-      return PayloadCase.forNumber(payloadCase_);
+    public PayloadCase
+        getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
     }
 
     public Builder clearPayload() {
@@ -1003,24 +943,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.OpenSessionResponse,
-            com.google.bigtable.v2.OpenSessionResponse.Builder,
-            com.google.bigtable.v2.OpenSessionResponseOrBuilder>
-        openSessionBuilder_;
-
+        com.google.bigtable.v2.OpenSessionResponse, com.google.bigtable.v2.OpenSessionResponse.Builder, com.google.bigtable.v2.OpenSessionResponseOrBuilder> openSessionBuilder_;
     /**
      * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
-     *
      * @return Whether the openSession field is set.
      */
     @java.lang.Override
     public boolean hasOpenSession() {
       return payloadCase_ == 1;
     }
-
     /**
      * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
-     *
      * @return The openSession.
      */
     @java.lang.Override
@@ -1037,8 +970,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     public Builder setOpenSession(com.google.bigtable.v2.OpenSessionResponse value) {
       if (openSessionBuilder_ == null) {
         if (value == null) {
@@ -1052,8 +986,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     public Builder setOpenSession(
         com.google.bigtable.v2.OpenSessionResponse.Builder builderForValue) {
       if (openSessionBuilder_ == null) {
@@ -1065,17 +1000,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     public Builder mergeOpenSession(com.google.bigtable.v2.OpenSessionResponse value) {
       if (openSessionBuilder_ == null) {
-        if (payloadCase_ == 1
-            && payload_ != com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.OpenSessionResponse.newBuilder(
-                      (com.google.bigtable.v2.OpenSessionResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 1 &&
+            payload_ != com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.OpenSessionResponse.newBuilder((com.google.bigtable.v2.OpenSessionResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1090,8 +1023,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     public Builder clearOpenSession() {
       if (openSessionBuilder_ == null) {
         if (payloadCase_ == 1) {
@@ -1108,13 +1042,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     public com.google.bigtable.v2.OpenSessionResponse.Builder getOpenSessionBuilder() {
       return internalGetOpenSessionFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.OpenSessionResponseOrBuilder getOpenSessionOrBuilder() {
       if ((payloadCase_ == 1) && (openSessionBuilder_ != null)) {
@@ -1126,22 +1062,18 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionResponse open_session = 1;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.OpenSessionResponse,
-            com.google.bigtable.v2.OpenSessionResponse.Builder,
-            com.google.bigtable.v2.OpenSessionResponseOrBuilder>
+        com.google.bigtable.v2.OpenSessionResponse, com.google.bigtable.v2.OpenSessionResponse.Builder, com.google.bigtable.v2.OpenSessionResponseOrBuilder> 
         internalGetOpenSessionFieldBuilder() {
       if (openSessionBuilder_ == null) {
         if (!(payloadCase_ == 1)) {
           payload_ = com.google.bigtable.v2.OpenSessionResponse.getDefaultInstance();
         }
-        openSessionBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.OpenSessionResponse,
-                com.google.bigtable.v2.OpenSessionResponse.Builder,
-                com.google.bigtable.v2.OpenSessionResponseOrBuilder>(
+        openSessionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.OpenSessionResponse, com.google.bigtable.v2.OpenSessionResponse.Builder, com.google.bigtable.v2.OpenSessionResponseOrBuilder>(
                 (com.google.bigtable.v2.OpenSessionResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1153,14 +1085,8 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.VirtualRpcResponse,
-            com.google.bigtable.v2.VirtualRpcResponse.Builder,
-            com.google.bigtable.v2.VirtualRpcResponseOrBuilder>
-        virtualRpcBuilder_;
-
+        com.google.bigtable.v2.VirtualRpcResponse, com.google.bigtable.v2.VirtualRpcResponse.Builder, com.google.bigtable.v2.VirtualRpcResponseOrBuilder> virtualRpcBuilder_;
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1168,17 +1094,13 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.VirtualRpcResponse virtual_rpc = 2;</code>
-     *
      * @return Whether the virtualRpc field is set.
      */
     @java.lang.Override
     public boolean hasVirtualRpc() {
       return payloadCase_ == 2;
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1186,7 +1108,6 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.VirtualRpcResponse virtual_rpc = 2;</code>
-     *
      * @return The virtualRpc.
      */
     @java.lang.Override
@@ -1203,10 +1124,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1228,10 +1146,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1251,10 +1166,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1265,13 +1177,10 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeVirtualRpc(com.google.bigtable.v2.VirtualRpcResponse value) {
       if (virtualRpcBuilder_ == null) {
-        if (payloadCase_ == 2
-            && payload_ != com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.VirtualRpcResponse.newBuilder(
-                      (com.google.bigtable.v2.VirtualRpcResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 2 &&
+            payload_ != com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.VirtualRpcResponse.newBuilder((com.google.bigtable.v2.VirtualRpcResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1286,10 +1195,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1314,10 +1220,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1329,10 +1232,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.VirtualRpcResponse.Builder getVirtualRpcBuilder() {
       return internalGetVirtualRpcFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1352,10 +1252,7 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * A vRPC can result in either a successful result or an error.
      * Error results are separate to allow for multiple vRPC responses,
@@ -1365,19 +1262,14 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.VirtualRpcResponse virtual_rpc = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.VirtualRpcResponse,
-            com.google.bigtable.v2.VirtualRpcResponse.Builder,
-            com.google.bigtable.v2.VirtualRpcResponseOrBuilder>
+        com.google.bigtable.v2.VirtualRpcResponse, com.google.bigtable.v2.VirtualRpcResponse.Builder, com.google.bigtable.v2.VirtualRpcResponseOrBuilder> 
         internalGetVirtualRpcFieldBuilder() {
       if (virtualRpcBuilder_ == null) {
         if (!(payloadCase_ == 2)) {
           payload_ = com.google.bigtable.v2.VirtualRpcResponse.getDefaultInstance();
         }
-        virtualRpcBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.VirtualRpcResponse,
-                com.google.bigtable.v2.VirtualRpcResponse.Builder,
-                com.google.bigtable.v2.VirtualRpcResponseOrBuilder>(
+        virtualRpcBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.VirtualRpcResponse, com.google.bigtable.v2.VirtualRpcResponse.Builder, com.google.bigtable.v2.VirtualRpcResponseOrBuilder>(
                 (com.google.bigtable.v2.VirtualRpcResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1389,24 +1281,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ErrorResponse,
-            com.google.bigtable.v2.ErrorResponse.Builder,
-            com.google.bigtable.v2.ErrorResponseOrBuilder>
-        errorBuilder_;
-
+        com.google.bigtable.v2.ErrorResponse, com.google.bigtable.v2.ErrorResponse.Builder, com.google.bigtable.v2.ErrorResponseOrBuilder> errorBuilder_;
     /**
      * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
-     *
      * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
       return payloadCase_ == 3;
     }
-
     /**
      * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
-     *
      * @return The error.
      */
     @java.lang.Override
@@ -1423,8 +1308,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ErrorResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
     public Builder setError(com.google.bigtable.v2.ErrorResponse value) {
       if (errorBuilder_ == null) {
         if (value == null) {
@@ -1438,9 +1324,11 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
-    public Builder setError(com.google.bigtable.v2.ErrorResponse.Builder builderForValue) {
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
+    public Builder setError(
+        com.google.bigtable.v2.ErrorResponse.Builder builderForValue) {
       if (errorBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
@@ -1450,17 +1338,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
     public Builder mergeError(com.google.bigtable.v2.ErrorResponse value) {
       if (errorBuilder_ == null) {
-        if (payloadCase_ == 3
-            && payload_ != com.google.bigtable.v2.ErrorResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.ErrorResponse.newBuilder(
-                      (com.google.bigtable.v2.ErrorResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 3 &&
+            payload_ != com.google.bigtable.v2.ErrorResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.ErrorResponse.newBuilder((com.google.bigtable.v2.ErrorResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1475,8 +1361,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
     public Builder clearError() {
       if (errorBuilder_ == null) {
         if (payloadCase_ == 3) {
@@ -1493,13 +1380,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
     public com.google.bigtable.v2.ErrorResponse.Builder getErrorBuilder() {
       return internalGetErrorFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.ErrorResponseOrBuilder getErrorOrBuilder() {
       if ((payloadCase_ == 3) && (errorBuilder_ != null)) {
@@ -1511,23 +1400,21 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ErrorResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.ErrorResponse error = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.ErrorResponse error = 3;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ErrorResponse,
-            com.google.bigtable.v2.ErrorResponse.Builder,
-            com.google.bigtable.v2.ErrorResponseOrBuilder>
+        com.google.bigtable.v2.ErrorResponse, com.google.bigtable.v2.ErrorResponse.Builder, com.google.bigtable.v2.ErrorResponseOrBuilder> 
         internalGetErrorFieldBuilder() {
       if (errorBuilder_ == null) {
         if (!(payloadCase_ == 3)) {
           payload_ = com.google.bigtable.v2.ErrorResponse.getDefaultInstance();
         }
-        errorBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ErrorResponse,
-                com.google.bigtable.v2.ErrorResponse.Builder,
-                com.google.bigtable.v2.ErrorResponseOrBuilder>(
-                (com.google.bigtable.v2.ErrorResponse) payload_, getParentForChildren(), isClean());
+        errorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ErrorResponse, com.google.bigtable.v2.ErrorResponse.Builder, com.google.bigtable.v2.ErrorResponseOrBuilder>(
+                (com.google.bigtable.v2.ErrorResponse) payload_,
+                getParentForChildren(),
+                isClean());
         payload_ = null;
       }
       payloadCase_ = 3;
@@ -1536,24 +1423,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionParametersResponse,
-            com.google.bigtable.v2.SessionParametersResponse.Builder,
-            com.google.bigtable.v2.SessionParametersResponseOrBuilder>
-        sessionParametersBuilder_;
-
+        com.google.bigtable.v2.SessionParametersResponse, com.google.bigtable.v2.SessionParametersResponse.Builder, com.google.bigtable.v2.SessionParametersResponseOrBuilder> sessionParametersBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
-     *
      * @return Whether the sessionParameters field is set.
      */
     @java.lang.Override
     public boolean hasSessionParameters() {
       return payloadCase_ == 4;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
-     *
      * @return The sessionParameters.
      */
     @java.lang.Override
@@ -1570,8 +1450,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     public Builder setSessionParameters(com.google.bigtable.v2.SessionParametersResponse value) {
       if (sessionParametersBuilder_ == null) {
         if (value == null) {
@@ -1585,8 +1466,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     public Builder setSessionParameters(
         com.google.bigtable.v2.SessionParametersResponse.Builder builderForValue) {
       if (sessionParametersBuilder_ == null) {
@@ -1598,17 +1480,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     public Builder mergeSessionParameters(com.google.bigtable.v2.SessionParametersResponse value) {
       if (sessionParametersBuilder_ == null) {
-        if (payloadCase_ == 4
-            && payload_ != com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionParametersResponse.newBuilder(
-                      (com.google.bigtable.v2.SessionParametersResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 4 &&
+            payload_ != com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionParametersResponse.newBuilder((com.google.bigtable.v2.SessionParametersResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1623,8 +1503,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     public Builder clearSessionParameters() {
       if (sessionParametersBuilder_ == null) {
         if (payloadCase_ == 4) {
@@ -1641,16 +1522,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     public com.google.bigtable.v2.SessionParametersResponse.Builder getSessionParametersBuilder() {
       return internalGetSessionParametersFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionParametersResponseOrBuilder
-        getSessionParametersOrBuilder() {
+    public com.google.bigtable.v2.SessionParametersResponseOrBuilder getSessionParametersOrBuilder() {
       if ((payloadCase_ == 4) && (sessionParametersBuilder_ != null)) {
         return sessionParametersBuilder_.getMessageOrBuilder();
       } else {
@@ -1660,22 +1542,18 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionParametersResponse session_parameters = 4;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionParametersResponse,
-            com.google.bigtable.v2.SessionParametersResponse.Builder,
-            com.google.bigtable.v2.SessionParametersResponseOrBuilder>
+        com.google.bigtable.v2.SessionParametersResponse, com.google.bigtable.v2.SessionParametersResponse.Builder, com.google.bigtable.v2.SessionParametersResponseOrBuilder> 
         internalGetSessionParametersFieldBuilder() {
       if (sessionParametersBuilder_ == null) {
         if (!(payloadCase_ == 4)) {
           payload_ = com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance();
         }
-        sessionParametersBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionParametersResponse,
-                com.google.bigtable.v2.SessionParametersResponse.Builder,
-                com.google.bigtable.v2.SessionParametersResponseOrBuilder>(
+        sessionParametersBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionParametersResponse, com.google.bigtable.v2.SessionParametersResponse.Builder, com.google.bigtable.v2.SessionParametersResponseOrBuilder>(
                 (com.google.bigtable.v2.SessionParametersResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1687,24 +1565,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.HeartbeatResponse,
-            com.google.bigtable.v2.HeartbeatResponse.Builder,
-            com.google.bigtable.v2.HeartbeatResponseOrBuilder>
-        heartbeatBuilder_;
-
+        com.google.bigtable.v2.HeartbeatResponse, com.google.bigtable.v2.HeartbeatResponse.Builder, com.google.bigtable.v2.HeartbeatResponseOrBuilder> heartbeatBuilder_;
     /**
      * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
-     *
      * @return Whether the heartbeat field is set.
      */
     @java.lang.Override
     public boolean hasHeartbeat() {
       return payloadCase_ == 5;
     }
-
     /**
      * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
-     *
      * @return The heartbeat.
      */
     @java.lang.Override
@@ -1721,8 +1592,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
     public Builder setHeartbeat(com.google.bigtable.v2.HeartbeatResponse value) {
       if (heartbeatBuilder_ == null) {
         if (value == null) {
@@ -1736,9 +1608,11 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 5;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
-    public Builder setHeartbeat(com.google.bigtable.v2.HeartbeatResponse.Builder builderForValue) {
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
+    public Builder setHeartbeat(
+        com.google.bigtable.v2.HeartbeatResponse.Builder builderForValue) {
       if (heartbeatBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
@@ -1748,17 +1622,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 5;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
     public Builder mergeHeartbeat(com.google.bigtable.v2.HeartbeatResponse value) {
       if (heartbeatBuilder_ == null) {
-        if (payloadCase_ == 5
-            && payload_ != com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.HeartbeatResponse.newBuilder(
-                      (com.google.bigtable.v2.HeartbeatResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 5 &&
+            payload_ != com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.HeartbeatResponse.newBuilder((com.google.bigtable.v2.HeartbeatResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1773,8 +1645,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 5;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
     public Builder clearHeartbeat() {
       if (heartbeatBuilder_ == null) {
         if (payloadCase_ == 5) {
@@ -1791,13 +1664,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
     public com.google.bigtable.v2.HeartbeatResponse.Builder getHeartbeatBuilder() {
       return internalGetHeartbeatFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.HeartbeatResponseOrBuilder getHeartbeatOrBuilder() {
       if ((payloadCase_ == 5) && (heartbeatBuilder_ != null)) {
@@ -1809,22 +1684,18 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.HeartbeatResponse heartbeat = 5;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.HeartbeatResponse,
-            com.google.bigtable.v2.HeartbeatResponse.Builder,
-            com.google.bigtable.v2.HeartbeatResponseOrBuilder>
+        com.google.bigtable.v2.HeartbeatResponse, com.google.bigtable.v2.HeartbeatResponse.Builder, com.google.bigtable.v2.HeartbeatResponseOrBuilder> 
         internalGetHeartbeatFieldBuilder() {
       if (heartbeatBuilder_ == null) {
         if (!(payloadCase_ == 5)) {
           payload_ = com.google.bigtable.v2.HeartbeatResponse.getDefaultInstance();
         }
-        heartbeatBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.HeartbeatResponse,
-                com.google.bigtable.v2.HeartbeatResponse.Builder,
-                com.google.bigtable.v2.HeartbeatResponseOrBuilder>(
+        heartbeatBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.HeartbeatResponse, com.google.bigtable.v2.HeartbeatResponse.Builder, com.google.bigtable.v2.HeartbeatResponseOrBuilder>(
                 (com.google.bigtable.v2.HeartbeatResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1836,24 +1707,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.GoAwayResponse,
-            com.google.bigtable.v2.GoAwayResponse.Builder,
-            com.google.bigtable.v2.GoAwayResponseOrBuilder>
-        goAwayBuilder_;
-
+        com.google.bigtable.v2.GoAwayResponse, com.google.bigtable.v2.GoAwayResponse.Builder, com.google.bigtable.v2.GoAwayResponseOrBuilder> goAwayBuilder_;
     /**
      * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
-     *
      * @return Whether the goAway field is set.
      */
     @java.lang.Override
     public boolean hasGoAway() {
       return payloadCase_ == 6;
     }
-
     /**
      * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
-     *
      * @return The goAway.
      */
     @java.lang.Override
@@ -1870,8 +1734,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.GoAwayResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
     public Builder setGoAway(com.google.bigtable.v2.GoAwayResponse value) {
       if (goAwayBuilder_ == null) {
         if (value == null) {
@@ -1885,9 +1750,11 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 6;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
-    public Builder setGoAway(com.google.bigtable.v2.GoAwayResponse.Builder builderForValue) {
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
+    public Builder setGoAway(
+        com.google.bigtable.v2.GoAwayResponse.Builder builderForValue) {
       if (goAwayBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
@@ -1897,17 +1764,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 6;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
     public Builder mergeGoAway(com.google.bigtable.v2.GoAwayResponse value) {
       if (goAwayBuilder_ == null) {
-        if (payloadCase_ == 6
-            && payload_ != com.google.bigtable.v2.GoAwayResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.GoAwayResponse.newBuilder(
-                      (com.google.bigtable.v2.GoAwayResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 6 &&
+            payload_ != com.google.bigtable.v2.GoAwayResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.GoAwayResponse.newBuilder((com.google.bigtable.v2.GoAwayResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1922,8 +1787,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 6;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
     public Builder clearGoAway() {
       if (goAwayBuilder_ == null) {
         if (payloadCase_ == 6) {
@@ -1940,13 +1806,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
     public com.google.bigtable.v2.GoAwayResponse.Builder getGoAwayBuilder() {
       return internalGetGoAwayFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.GoAwayResponseOrBuilder getGoAwayOrBuilder() {
       if ((payloadCase_ == 6) && (goAwayBuilder_ != null)) {
@@ -1958,22 +1826,18 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.GoAwayResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code> */
+    /**
+     * <code>.google.bigtable.v2.GoAwayResponse go_away = 6;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.GoAwayResponse,
-            com.google.bigtable.v2.GoAwayResponse.Builder,
-            com.google.bigtable.v2.GoAwayResponseOrBuilder>
+        com.google.bigtable.v2.GoAwayResponse, com.google.bigtable.v2.GoAwayResponse.Builder, com.google.bigtable.v2.GoAwayResponseOrBuilder> 
         internalGetGoAwayFieldBuilder() {
       if (goAwayBuilder_ == null) {
         if (!(payloadCase_ == 6)) {
           payload_ = com.google.bigtable.v2.GoAwayResponse.getDefaultInstance();
         }
-        goAwayBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.GoAwayResponse,
-                com.google.bigtable.v2.GoAwayResponse.Builder,
-                com.google.bigtable.v2.GoAwayResponseOrBuilder>(
+        goAwayBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.GoAwayResponse, com.google.bigtable.v2.GoAwayResponse.Builder, com.google.bigtable.v2.GoAwayResponseOrBuilder>(
                 (com.google.bigtable.v2.GoAwayResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1985,24 +1849,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionRefreshConfig,
-            com.google.bigtable.v2.SessionRefreshConfig.Builder,
-            com.google.bigtable.v2.SessionRefreshConfigOrBuilder>
-        sessionRefreshConfigBuilder_;
-
+        com.google.bigtable.v2.SessionRefreshConfig, com.google.bigtable.v2.SessionRefreshConfig.Builder, com.google.bigtable.v2.SessionRefreshConfigOrBuilder> sessionRefreshConfigBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
-     *
      * @return Whether the sessionRefreshConfig field is set.
      */
     @java.lang.Override
     public boolean hasSessionRefreshConfig() {
       return payloadCase_ == 7;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
-     *
      * @return The sessionRefreshConfig.
      */
     @java.lang.Override
@@ -2019,8 +1876,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     public Builder setSessionRefreshConfig(com.google.bigtable.v2.SessionRefreshConfig value) {
       if (sessionRefreshConfigBuilder_ == null) {
         if (value == null) {
@@ -2034,8 +1892,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 7;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     public Builder setSessionRefreshConfig(
         com.google.bigtable.v2.SessionRefreshConfig.Builder builderForValue) {
       if (sessionRefreshConfigBuilder_ == null) {
@@ -2047,17 +1906,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 7;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     public Builder mergeSessionRefreshConfig(com.google.bigtable.v2.SessionRefreshConfig value) {
       if (sessionRefreshConfigBuilder_ == null) {
-        if (payloadCase_ == 7
-            && payload_ != com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionRefreshConfig.newBuilder(
-                      (com.google.bigtable.v2.SessionRefreshConfig) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 7 &&
+            payload_ != com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionRefreshConfig.newBuilder((com.google.bigtable.v2.SessionRefreshConfig) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -2072,8 +1929,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 7;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     public Builder clearSessionRefreshConfig() {
       if (sessionRefreshConfigBuilder_ == null) {
         if (payloadCase_ == 7) {
@@ -2090,13 +1948,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     public com.google.bigtable.v2.SessionRefreshConfig.Builder getSessionRefreshConfigBuilder() {
       return internalGetSessionRefreshConfigFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.SessionRefreshConfigOrBuilder getSessionRefreshConfigOrBuilder() {
       if ((payloadCase_ == 7) && (sessionRefreshConfigBuilder_ != null)) {
@@ -2108,22 +1968,18 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionRefreshConfig session_refresh_config = 7;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionRefreshConfig,
-            com.google.bigtable.v2.SessionRefreshConfig.Builder,
-            com.google.bigtable.v2.SessionRefreshConfigOrBuilder>
+        com.google.bigtable.v2.SessionRefreshConfig, com.google.bigtable.v2.SessionRefreshConfig.Builder, com.google.bigtable.v2.SessionRefreshConfigOrBuilder> 
         internalGetSessionRefreshConfigFieldBuilder() {
       if (sessionRefreshConfigBuilder_ == null) {
         if (!(payloadCase_ == 7)) {
           payload_ = com.google.bigtable.v2.SessionRefreshConfig.getDefaultInstance();
         }
-        sessionRefreshConfigBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionRefreshConfig,
-                com.google.bigtable.v2.SessionRefreshConfig.Builder,
-                com.google.bigtable.v2.SessionRefreshConfigOrBuilder>(
+        sessionRefreshConfigBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionRefreshConfig, com.google.bigtable.v2.SessionRefreshConfig.Builder, com.google.bigtable.v2.SessionRefreshConfigOrBuilder>(
                 (com.google.bigtable.v2.SessionRefreshConfig) payload_,
                 getParentForChildren(),
                 isClean());
@@ -2135,24 +1991,17 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.PeerLoadInfo,
-            com.google.bigtable.v2.PeerLoadInfo.Builder,
-            com.google.bigtable.v2.PeerLoadInfoOrBuilder>
-        peerLoadInfoBuilder_;
-
+        com.google.bigtable.v2.PeerLoadInfo, com.google.bigtable.v2.PeerLoadInfo.Builder, com.google.bigtable.v2.PeerLoadInfoOrBuilder> peerLoadInfoBuilder_;
     /**
      * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
-     *
      * @return Whether the peerLoadInfo field is set.
      */
     @java.lang.Override
     public boolean hasPeerLoadInfo() {
       return payloadCase_ == 8;
     }
-
     /**
      * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
-     *
      * @return The peerLoadInfo.
      */
     @java.lang.Override
@@ -2169,8 +2018,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
     public Builder setPeerLoadInfo(com.google.bigtable.v2.PeerLoadInfo value) {
       if (peerLoadInfoBuilder_ == null) {
         if (value == null) {
@@ -2184,9 +2034,11 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 8;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
-    public Builder setPeerLoadInfo(com.google.bigtable.v2.PeerLoadInfo.Builder builderForValue) {
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
+    public Builder setPeerLoadInfo(
+        com.google.bigtable.v2.PeerLoadInfo.Builder builderForValue) {
       if (peerLoadInfoBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
@@ -2196,17 +2048,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 8;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
     public Builder mergePeerLoadInfo(com.google.bigtable.v2.PeerLoadInfo value) {
       if (peerLoadInfoBuilder_ == null) {
-        if (payloadCase_ == 8
-            && payload_ != com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.PeerLoadInfo.newBuilder(
-                      (com.google.bigtable.v2.PeerLoadInfo) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 8 &&
+            payload_ != com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.PeerLoadInfo.newBuilder((com.google.bigtable.v2.PeerLoadInfo) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -2221,8 +2071,9 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 8;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
     public Builder clearPeerLoadInfo() {
       if (peerLoadInfoBuilder_ == null) {
         if (payloadCase_ == 8) {
@@ -2239,13 +2090,15 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
     public com.google.bigtable.v2.PeerLoadInfo.Builder getPeerLoadInfoBuilder() {
       return internalGetPeerLoadInfoFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.PeerLoadInfoOrBuilder getPeerLoadInfoOrBuilder() {
       if ((payloadCase_ == 8) && (peerLoadInfoBuilder_ != null)) {
@@ -2257,23 +2110,21 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code> */
+    /**
+     * <code>.google.bigtable.v2.PeerLoadInfo peer_load_info = 8;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.PeerLoadInfo,
-            com.google.bigtable.v2.PeerLoadInfo.Builder,
-            com.google.bigtable.v2.PeerLoadInfoOrBuilder>
+        com.google.bigtable.v2.PeerLoadInfo, com.google.bigtable.v2.PeerLoadInfo.Builder, com.google.bigtable.v2.PeerLoadInfoOrBuilder> 
         internalGetPeerLoadInfoFieldBuilder() {
       if (peerLoadInfoBuilder_ == null) {
         if (!(payloadCase_ == 8)) {
           payload_ = com.google.bigtable.v2.PeerLoadInfo.getDefaultInstance();
         }
-        peerLoadInfoBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.PeerLoadInfo,
-                com.google.bigtable.v2.PeerLoadInfo.Builder,
-                com.google.bigtable.v2.PeerLoadInfoOrBuilder>(
-                (com.google.bigtable.v2.PeerLoadInfo) payload_, getParentForChildren(), isClean());
+        peerLoadInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.PeerLoadInfo, com.google.bigtable.v2.PeerLoadInfo.Builder, com.google.bigtable.v2.PeerLoadInfoOrBuilder>(
+                (com.google.bigtable.v2.PeerLoadInfo) payload_,
+                getParentForChildren(),
+                isClean());
         payload_ = null;
       }
       payloadCase_ = 8;
@@ -2286,7 +2137,6 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionResponse)
   private static final com.google.bigtable.v2.SessionResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionResponse();
   }
@@ -2295,27 +2145,27 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionResponse> PARSER =
-      new com.google.protobuf.AbstractParser<SessionResponse>() {
-        @java.lang.Override
-        public SessionResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionResponse>
+      PARSER = new com.google.protobuf.AbstractParser<SessionResponse>() {
+    @java.lang.Override
+    public SessionResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionResponse> parser() {
     return PARSER;
@@ -2330,4 +2180,6 @@ public final class SessionResponse extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.SessionResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

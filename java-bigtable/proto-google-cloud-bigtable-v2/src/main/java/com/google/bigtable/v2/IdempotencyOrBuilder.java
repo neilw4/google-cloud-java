@@ -6,28 +6,22 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface IdempotencyOrBuilder
-    extends
+public interface IdempotencyOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.Idempotency)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Unique token used to identify replays of this mutation.
    * Must be at least 8 bytes long.
    * </pre>
    *
    * <code>bytes token = 1;</code>
-   *
    * @return The token.
    */
   com.google.protobuf.ByteString getToken();
 
   /**
-   *
-   *
    * <pre>
    * Client-assigned timestamp when the mutation's first attempt was sent.
    * Used to reject mutations that arrive after idempotency protection may
@@ -38,14 +32,10 @@ public interface IdempotencyOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 2;</code>
-   *
    * @return Whether the startTime field is set.
    */
   boolean hasStartTime();
-
   /**
-   *
-   *
    * <pre>
    * Client-assigned timestamp when the mutation's first attempt was sent.
    * Used to reject mutations that arrive after idempotency protection may
@@ -56,14 +46,10 @@ public interface IdempotencyOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 2;</code>
-   *
    * @return The startTime.
    */
   com.google.protobuf.Timestamp getStartTime();
-
   /**
-   *
-   *
    * <pre>
    * Client-assigned timestamp when the mutation's first attempt was sent.
    * Used to reject mutations that arrive after idempotency protection may

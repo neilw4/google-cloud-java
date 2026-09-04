@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * ReadIterationStats captures information about the iteration of rows or cells
  * over the course of a read, e.g. how many results were scanned in a read
@@ -17,83 +15,64 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ReadIterationStats}
  */
 @com.google.protobuf.Generated
-public final class ReadIterationStats extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ReadIterationStats extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ReadIterationStats)
     ReadIterationStatsOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ReadIterationStats");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ReadIterationStats");
   }
-
   // Use ReadIterationStats.newBuilder() to construct.
   private ReadIterationStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private ReadIterationStats() {
+  }
 
-  private ReadIterationStats() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ReadIterationStats.class,
-            com.google.bigtable.v2.ReadIterationStats.Builder.class);
+            com.google.bigtable.v2.ReadIterationStats.class, com.google.bigtable.v2.ReadIterationStats.Builder.class);
   }
 
-  public interface MemoryLayerStatsOrBuilder
-      extends
+  public interface MemoryLayerStatsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ReadIterationStats.MemoryLayerStats)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Reason why the entire request cannot use the memory layer.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
      * @return The enum numeric value on the wire for requestIneligibilityReason.
      */
     int getRequestIneligibilityReasonValue();
-
     /**
-     *
-     *
      * <pre>
      * Reason why the entire request cannot use the memory layer.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
      * @return The requestIneligibilityReason.
      */
-    com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-        getRequestIneligibilityReason();
+    com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason getRequestIneligibilityReason();
 
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -102,10 +81,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
     int getRowResultCountsCount();
-
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -113,15 +89,15 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      *
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
-    boolean containsRowResultCounts(int key);
-
-    /** Use {@link #getRowResultCountsMap()} instead. */
+    boolean containsRowResultCounts(
+        int key);
+    /**
+     * Use {@link #getRowResultCountsMap()} instead.
+     */
     @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, java.lang.Long> getRowResultCounts();
-
+    java.util.Map<java.lang.Integer, java.lang.Long>
+    getRowResultCounts();
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -129,11 +105,9 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      *
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
-    java.util.Map<java.lang.Integer, java.lang.Long> getRowResultCountsMap();
-
+    java.util.Map<java.lang.Integer, java.lang.Long>
+    getRowResultCountsMap();
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -141,11 +115,10 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      *
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
-    long getRowResultCountsOrDefault(int key, long defaultValue);
-
+    long getRowResultCountsOrDefault(
+        int key,
+        long defaultValue);
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -153,46 +126,41 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      *
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
-    long getRowResultCountsOrThrow(int key);
+    long getRowResultCountsOrThrow(
+        int key);
   }
-
   /**
-   *
-   *
    * <pre>
    * Captures information about the usage of the memory layer during the read.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ReadIterationStats.MemoryLayerStats}
    */
-  public static final class MemoryLayerStats extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class MemoryLayerStats extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.ReadIterationStats.MemoryLayerStats)
       MemoryLayerStatsOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "MemoryLayerStats");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "MemoryLayerStats");
     }
-
     // Use MemoryLayerStats.newBuilder() to construct.
     private MemoryLayerStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private MemoryLayerStats() {
       requestIneligibilityReason_ = 0;
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -203,34 +171,28 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         case 2:
           return internalGetRowResultCounts();
         default:
-          throw new RuntimeException("Invalid map field number: " + number);
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
       }
     }
-
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.class,
-              com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder.class);
+              com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.class, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder.class);
     }
 
     /**
-     *
-     *
      * <pre>
      * Reason why the entire request cannot use the memory layer.
      * </pre>
      *
-     * Protobuf enum {@code
-     * google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason}
+     * Protobuf enum {@code google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason}
      */
-    public enum RequestIneligibilityReason implements com.google.protobuf.ProtocolMessageEnum {
+    public enum RequestIneligibilityReason
+        implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       *
-       *
        * <pre>
        * The request was eligible to use the memory layer.
        * </pre>
@@ -239,8 +201,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       REQUEST_ELIGIBLE(0),
       /**
-       *
-       *
        * <pre>
        * The client library version is outdated and does not support the memory
        * layer.
@@ -250,8 +210,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       CLIENT_VERSION_OUTDATED(1),
       /**
-       *
-       *
        * <pre>
        * The app profile used for the request does not have a memory layer
        * configured.
@@ -261,8 +219,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       APP_PROFILE_NO_MEMORY_CONFIG(2),
       /**
-       *
-       *
        * <pre>
        * The request was throttled and bypassed the memory layer.
        * </pre>
@@ -271,8 +227,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       REQUEST_THROTTLED(3),
       /**
-       *
-       *
        * <pre>
        * The rowset in the request is not supported by the memory layer.
        * </pre>
@@ -281,8 +235,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       ROWSET_INELIGIBLE(4),
       /**
-       *
-       *
        * <pre>
        * The filter in the request is not supported by the memory layer.
        * </pre>
@@ -291,8 +243,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       FILTER_INELIGIBLE(5),
       /**
-       *
-       *
        * <pre>
        * The memory layer is disabled or unavailable.
        * </pre>
@@ -301,8 +251,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       MEMORY_LAYER_DISABLED(6),
       /**
-       *
-       *
        * <pre>
        * The request was executed with a transaction, which is not supported by
        * the memory layer.
@@ -316,17 +264,14 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
       static {
         com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-            com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-            /* major= */ 4,
-            /* minor= */ 33,
-            /* patch= */ 6,
-            /* suffix= */ "",
-            "RequestIneligibilityReason");
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 33,
+          /* patch= */ 6,
+          /* suffix= */ "",
+          "RequestIneligibilityReason");
       }
-
       /**
-       *
-       *
        * <pre>
        * The request was eligible to use the memory layer.
        * </pre>
@@ -334,10 +279,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>REQUEST_ELIGIBLE = 0;</code>
        */
       public static final int REQUEST_ELIGIBLE_VALUE = 0;
-
       /**
-       *
-       *
        * <pre>
        * The client library version is outdated and does not support the memory
        * layer.
@@ -346,10 +288,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>CLIENT_VERSION_OUTDATED = 1;</code>
        */
       public static final int CLIENT_VERSION_OUTDATED_VALUE = 1;
-
       /**
-       *
-       *
        * <pre>
        * The app profile used for the request does not have a memory layer
        * configured.
@@ -358,10 +297,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>APP_PROFILE_NO_MEMORY_CONFIG = 2;</code>
        */
       public static final int APP_PROFILE_NO_MEMORY_CONFIG_VALUE = 2;
-
       /**
-       *
-       *
        * <pre>
        * The request was throttled and bypassed the memory layer.
        * </pre>
@@ -369,10 +305,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>REQUEST_THROTTLED = 3;</code>
        */
       public static final int REQUEST_THROTTLED_VALUE = 3;
-
       /**
-       *
-       *
        * <pre>
        * The rowset in the request is not supported by the memory layer.
        * </pre>
@@ -380,10 +313,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>ROWSET_INELIGIBLE = 4;</code>
        */
       public static final int ROWSET_INELIGIBLE_VALUE = 4;
-
       /**
-       *
-       *
        * <pre>
        * The filter in the request is not supported by the memory layer.
        * </pre>
@@ -391,10 +321,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>FILTER_INELIGIBLE = 5;</code>
        */
       public static final int FILTER_INELIGIBLE_VALUE = 5;
-
       /**
-       *
-       *
        * <pre>
        * The memory layer is disabled or unavailable.
        * </pre>
@@ -402,10 +329,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>MEMORY_LAYER_DISABLED = 6;</code>
        */
       public static final int MEMORY_LAYER_DISABLED_VALUE = 6;
-
       /**
-       *
-       *
        * <pre>
        * The request was executed with a transaction, which is not supported by
        * the memory layer.
@@ -414,6 +338,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>TRANSACTIONS_UNSUPPORTED = 7;</code>
        */
       public static final int TRANSACTIONS_UNSUPPORTED_VALUE = 7;
+
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
@@ -439,24 +364,15 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       public static RequestIneligibilityReason forNumber(int value) {
         switch (value) {
-          case 0:
-            return REQUEST_ELIGIBLE;
-          case 1:
-            return CLIENT_VERSION_OUTDATED;
-          case 2:
-            return APP_PROFILE_NO_MEMORY_CONFIG;
-          case 3:
-            return REQUEST_THROTTLED;
-          case 4:
-            return ROWSET_INELIGIBLE;
-          case 5:
-            return FILTER_INELIGIBLE;
-          case 6:
-            return MEMORY_LAYER_DISABLED;
-          case 7:
-            return TRANSACTIONS_UNSUPPORTED;
-          default:
-            return null;
+          case 0: return REQUEST_ELIGIBLE;
+          case 1: return CLIENT_VERSION_OUTDATED;
+          case 2: return APP_PROFILE_NO_MEMORY_CONFIG;
+          case 3: return REQUEST_THROTTLED;
+          case 4: return ROWSET_INELIGIBLE;
+          case 5: return FILTER_INELIGIBLE;
+          case 6: return MEMORY_LAYER_DISABLED;
+          case 7: return TRANSACTIONS_UNSUPPORTED;
+          default: return null;
         }
       }
 
@@ -464,31 +380,29 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
           internalGetValueMap() {
         return internalValueMap;
       }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RequestIneligibilityReason> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RequestIneligibilityReason>() {
+              public RequestIneligibilityReason findValueByNumber(int number) {
+                return RequestIneligibilityReason.forNumber(number);
+              }
+            };
 
-      private static final com.google.protobuf.Internal.EnumLiteMap<RequestIneligibilityReason>
-          internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<RequestIneligibilityReason>() {
-                public RequestIneligibilityReason findValueByNumber(int number) {
-                  return RequestIneligibilityReason.forNumber(number);
-                }
-              };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
         if (this == UNRECOGNIZED) {
           throw new java.lang.IllegalStateException(
               "Can't get the descriptor of an unrecognized enum value.");
         }
         return getDescriptor().getValues().get(ordinal());
       }
-
-      public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
         return getDescriptor();
       }
-
-      public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
-        return com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDescriptor()
-            .getEnumTypes()
-            .get(0);
+      public static com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final RequestIneligibilityReason[] VALUES = values();
@@ -496,7 +410,8 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       public static RequestIneligibilityReason valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
           return UNRECOGNIZED;
@@ -515,82 +430,57 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
     public static final int REQUEST_INELIGIBILITY_REASON_FIELD_NUMBER = 1;
     private int requestIneligibilityReason_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Reason why the entire request cannot use the memory layer.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
      * @return The enum numeric value on the wire for requestIneligibilityReason.
      */
-    @java.lang.Override
-    public int getRequestIneligibilityReasonValue() {
+    @java.lang.Override public int getRequestIneligibilityReasonValue() {
       return requestIneligibilityReason_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Reason why the entire request cannot use the memory layer.
      * </pre>
      *
-     * <code>
-     * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
      * @return The requestIneligibilityReason.
      */
-    @java.lang.Override
-    public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-        getRequestIneligibilityReason() {
-      com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason result =
-          com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-              .forNumber(requestIneligibilityReason_);
-      return result == null
-          ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-              .UNRECOGNIZED
-          : result;
+    @java.lang.Override public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason getRequestIneligibilityReason() {
+      com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason result = com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason.forNumber(requestIneligibilityReason_);
+      return result == null ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason.UNRECOGNIZED : result;
     }
 
     public static final int ROW_RESULT_COUNTS_FIELD_NUMBER = 2;
-
     private static final class RowResultCountsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long> defaultEntry =
-          com.google.protobuf.MapEntry.<java.lang.Integer, java.lang.Long>newDefaultInstance(
-              com.google.bigtable.v2.RequestStatsProto
-                  .internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor,
-              com.google.protobuf.WireFormat.FieldType.INT32,
-              0,
-              com.google.protobuf.WireFormat.FieldType.INT64,
-              0L);
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, java.lang.Long> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, java.lang.Long>newDefaultInstance(
+                  com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L);
     }
-
     @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long> rowResultCounts_;
-
+    private com.google.protobuf.MapField<
+        java.lang.Integer, java.lang.Long> rowResultCounts_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long>
-        internalGetRowResultCounts() {
+    internalGetRowResultCounts() {
       if (rowResultCounts_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             RowResultCountsDefaultEntryHolder.defaultEntry);
       }
       return rowResultCounts_;
     }
-
     public int getRowResultCountsCount() {
       return internalGetRowResultCounts().getMap().size();
     }
-
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -599,21 +489,20 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
     @java.lang.Override
-    public boolean containsRowResultCounts(int key) {
+    public boolean containsRowResultCounts(
+        int key) {
 
       return internalGetRowResultCounts().getMap().containsKey(key);
     }
-
-    /** Use {@link #getRowResultCountsMap()} instead. */
+    /**
+     * Use {@link #getRowResultCountsMap()} instead.
+     */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, java.lang.Long> getRowResultCounts() {
       return getRowResultCountsMap();
     }
-
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -625,10 +514,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     public java.util.Map<java.lang.Integer, java.lang.Long> getRowResultCountsMap() {
       return internalGetRowResultCounts().getMap();
     }
-
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -637,15 +523,15 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
     @java.lang.Override
-    public long getRowResultCountsOrDefault(int key, long defaultValue) {
+    public long getRowResultCountsOrDefault(
+        int key,
+        long defaultValue) {
 
-      java.util.Map<java.lang.Integer, java.lang.Long> map = internalGetRowResultCounts().getMap();
+      java.util.Map<java.lang.Integer, java.lang.Long> map =
+          internalGetRowResultCounts().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
-
     /**
-     *
-     *
      * <pre>
      * Number of times a row access attempt resulted in a given outcome.
      * Only contains the very first result for each row.
@@ -654,9 +540,11 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
      */
     @java.lang.Override
-    public long getRowResultCountsOrThrow(int key) {
+    public long getRowResultCountsOrThrow(
+        int key) {
 
-      java.util.Map<java.lang.Integer, java.lang.Long> map = internalGetRowResultCounts().getMap();
+      java.util.Map<java.lang.Integer, java.lang.Long> map =
+          internalGetRowResultCounts().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -664,7 +552,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -676,15 +563,17 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (requestIneligibilityReason_
-          != com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-              .REQUEST_ELIGIBLE
-              .getNumber()) {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (requestIneligibilityReason_ != com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason.REQUEST_ELIGIBLE.getNumber()) {
         output.writeEnum(1, requestIneligibilityReason_);
       }
-      com.google.protobuf.GeneratedMessage.serializeIntegerMapTo(
-          output, internalGetRowResultCounts(), RowResultCountsDefaultEntryHolder.defaultEntry, 2);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetRowResultCounts(),
+          RowResultCountsDefaultEntryHolder.defaultEntry,
+          2);
       getUnknownFields().writeTo(output);
     }
 
@@ -694,22 +583,19 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       if (size != -1) return size;
 
       size = 0;
-      if (requestIneligibilityReason_
-          != com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-              .REQUEST_ELIGIBLE
-              .getNumber()) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeEnumSize(1, requestIneligibilityReason_);
+      if (requestIneligibilityReason_ != com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason.REQUEST_ELIGIBLE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, requestIneligibilityReason_);
       }
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.Long> entry :
-          internalGetRowResultCounts().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long> rowResultCounts__ =
-            RowResultCountsDefaultEntryHolder.defaultEntry
-                .newBuilderForType()
-                .setKey(entry.getKey())
-                .setValue(entry.getValue())
-                .build();
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, rowResultCounts__);
+      for (java.util.Map.Entry<java.lang.Integer, java.lang.Long> entry
+           : internalGetRowResultCounts().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long>
+        rowResultCounts__ = RowResultCountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, rowResultCounts__);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -719,16 +605,16 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats other =
-          (com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats) obj;
+      com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats other = (com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats) obj;
 
       if (requestIneligibilityReason_ != other.requestIneligibilityReason_) return false;
-      if (!internalGetRowResultCounts().equals(other.internalGetRowResultCounts())) return false;
+      if (!internalGetRowResultCounts().equals(
+          other.internalGetRowResultCounts())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -752,118 +638,111 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     }
 
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
+    public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Captures information about the usage of the memory layer during the read.
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.ReadIterationStats.MemoryLayerStats}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ReadIterationStats.MemoryLayerStats)
         com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.RequestStatsProto
-            .internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -873,10 +752,10 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
           case 2:
             return internalGetRowResultCounts();
           default:
-            throw new RuntimeException("Invalid map field number: " + number);
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
         }
       }
-
       @SuppressWarnings({"rawtypes"})
       protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
           int number) {
@@ -884,27 +763,28 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
           case 2:
             return internalGetMutableRowResultCounts();
           default:
-            throw new RuntimeException("Invalid map field number: " + number);
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
         }
       }
-
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.RequestStatsProto
-            .internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable
+        return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.class,
-                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder.class);
+                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.class, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -915,14 +795,13 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.RequestStatsProto
-            .internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats getDefaultInstanceForType() {
         return com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance();
       }
 
@@ -937,17 +816,13 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
       @java.lang.Override
       public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats buildPartial() {
-        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats result =
-            new com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats result = new com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(
-          com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats result) {
+      private void buildPartial0(com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.requestIneligibilityReason_ = requestIneligibilityReason_;
@@ -961,7 +836,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats) {
-          return mergeFrom((com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats) other);
+          return mergeFrom((com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -969,13 +844,12 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       }
 
       public Builder mergeFrom(com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats other) {
-        if (other
-            == com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance())
-          return this;
+        if (other == com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance()) return this;
         if (other.requestIneligibilityReason_ != 0) {
           setRequestIneligibilityReasonValue(other.getRequestIneligibilityReasonValue());
         }
-        internalGetMutableRowResultCounts().mergeFrom(other.internalGetRowResultCounts());
+        internalGetMutableRowResultCounts().mergeFrom(
+            other.internalGetRowResultCounts());
         bitField0_ |= 0x00000002;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1003,32 +877,26 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  requestIneligibilityReason_ = input.readEnum();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-              case 18:
-                {
-                  com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long>
-                      rowResultCounts__ =
-                          input.readMessage(
-                              RowResultCountsDefaultEntryHolder.defaultEntry.getParserForType(),
-                              extensionRegistry);
-                  internalGetMutableRowResultCounts()
-                      .getMutableMap()
-                      .put(rowResultCounts__.getKey(), rowResultCounts__.getValue());
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 18
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 8: {
+                requestIneligibilityReason_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long>
+                rowResultCounts__ = input.readMessage(
+                    RowResultCountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableRowResultCounts().getMutableMap().put(
+                    rowResultCounts__.getKey(), rowResultCounts__.getValue());
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1038,40 +906,26 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private int requestIneligibilityReason_ = 0;
-
       /**
-       *
-       *
        * <pre>
        * Reason why the entire request cannot use the memory layer.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
        * @return The enum numeric value on the wire for requestIneligibilityReason.
        */
-      @java.lang.Override
-      public int getRequestIneligibilityReasonValue() {
+      @java.lang.Override public int getRequestIneligibilityReasonValue() {
         return requestIneligibilityReason_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Reason why the entire request cannot use the memory layer.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
        * @param value The enum numeric value on the wire for requestIneligibilityReason to set.
        * @return This builder for chaining.
        */
@@ -1081,70 +935,41 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Reason why the entire request cannot use the memory layer.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
        * @return The requestIneligibilityReason.
        */
       @java.lang.Override
-      public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-          getRequestIneligibilityReason() {
-        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-            result =
-                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats
-                    .RequestIneligibilityReason.forNumber(requestIneligibilityReason_);
-        return result == null
-            ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-                .UNRECOGNIZED
-            : result;
+      public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason getRequestIneligibilityReason() {
+        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason result = com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason.forNumber(requestIneligibilityReason_);
+        return result == null ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason.UNRECOGNIZED : result;
       }
-
       /**
-       *
-       *
        * <pre>
        * Reason why the entire request cannot use the memory layer.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
        * @param value The requestIneligibilityReason to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestIneligibilityReason(
-          com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason
-              value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setRequestIneligibilityReason(com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason value) {
+        if (value == null) { throw new NullPointerException(); }
         bitField0_ |= 0x00000001;
         requestIneligibilityReason_ = value.getNumber();
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Reason why the entire request cannot use the memory layer.
        * </pre>
        *
-       * <code>
-       * .google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;
-       * </code>
-       *
+       * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.RequestIneligibilityReason request_ineligibility_reason = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRequestIneligibilityReason() {
@@ -1154,8 +979,8 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         return this;
       }
 
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long> rowResultCounts_;
-
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.Long> rowResultCounts_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long>
           internalGetRowResultCounts() {
         if (rowResultCounts_ == null) {
@@ -1164,13 +989,11 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         }
         return rowResultCounts_;
       }
-
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long>
           internalGetMutableRowResultCounts() {
         if (rowResultCounts_ == null) {
-          rowResultCounts_ =
-              com.google.protobuf.MapField.newMapField(
-                  RowResultCountsDefaultEntryHolder.defaultEntry);
+          rowResultCounts_ = com.google.protobuf.MapField.newMapField(
+              RowResultCountsDefaultEntryHolder.defaultEntry);
         }
         if (!rowResultCounts_.isMutable()) {
           rowResultCounts_ = rowResultCounts_.copy();
@@ -1179,14 +1002,10 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         onChanged();
         return rowResultCounts_;
       }
-
       public int getRowResultCountsCount() {
         return internalGetRowResultCounts().getMap().size();
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1195,21 +1014,20 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
        */
       @java.lang.Override
-      public boolean containsRowResultCounts(int key) {
+      public boolean containsRowResultCounts(
+          int key) {
 
         return internalGetRowResultCounts().getMap().containsKey(key);
       }
-
-      /** Use {@link #getRowResultCountsMap()} instead. */
+      /**
+       * Use {@link #getRowResultCountsMap()} instead.
+       */
       @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Long> getRowResultCounts() {
         return getRowResultCountsMap();
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1221,10 +1039,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       public java.util.Map<java.lang.Integer, java.lang.Long> getRowResultCountsMap() {
         return internalGetRowResultCounts().getMap();
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1233,16 +1048,15 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
        */
       @java.lang.Override
-      public long getRowResultCountsOrDefault(int key, long defaultValue) {
+      public long getRowResultCountsOrDefault(
+          int key,
+          long defaultValue) {
 
         java.util.Map<java.lang.Integer, java.lang.Long> map =
             internalGetRowResultCounts().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1251,7 +1065,8 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
        */
       @java.lang.Override
-      public long getRowResultCountsOrThrow(int key) {
+      public long getRowResultCountsOrThrow(
+          int key) {
 
         java.util.Map<java.lang.Integer, java.lang.Long> map =
             internalGetRowResultCounts().getMap();
@@ -1260,16 +1075,13 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
         }
         return map.get(key);
       }
-
       public Builder clearRowResultCounts() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        internalGetMutableRowResultCounts().getMutableMap().clear();
+        internalGetMutableRowResultCounts().getMutableMap()
+            .clear();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1277,22 +1089,23 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        *
        * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
        */
-      public Builder removeRowResultCounts(int key) {
+      public Builder removeRowResultCounts(
+          int key) {
 
-        internalGetMutableRowResultCounts().getMutableMap().remove(key);
+        internalGetMutableRowResultCounts().getMutableMap()
+            .remove(key);
         return this;
       }
-
-      /** Use alternate mutation accessors instead. */
+      /**
+       * Use alternate mutation accessors instead.
+       */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Long> getMutableRowResultCounts() {
+      public java.util.Map<java.lang.Integer, java.lang.Long>
+          getMutableRowResultCounts() {
         bitField0_ |= 0x00000002;
         return internalGetMutableRowResultCounts().getMutableMap();
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1300,16 +1113,17 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        *
        * <code>map&lt;int32, int64&gt; row_result_counts = 2;</code>
        */
-      public Builder putRowResultCounts(int key, long value) {
+      public Builder putRowResultCounts(
+          int key,
+          long value) {
 
-        internalGetMutableRowResultCounts().getMutableMap().put(key, value);
+
+        internalGetMutableRowResultCounts().getMutableMap()
+            .put(key, value);
         bitField0_ |= 0x00000002;
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times a row access attempt resulted in a given outcome.
        * Only contains the very first result for each row.
@@ -1319,7 +1133,8 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
        */
       public Builder putAllRowResultCounts(
           java.util.Map<java.lang.Integer, java.lang.Long> values) {
-        internalGetMutableRowResultCounts().getMutableMap().putAll(values);
+        internalGetMutableRowResultCounts().getMutableMap()
+            .putAll(values);
         bitField0_ |= 0x00000002;
         return this;
       }
@@ -1328,9 +1143,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     }
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.ReadIterationStats.MemoryLayerStats)
-    private static final com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats
-        DEFAULT_INSTANCE;
-
+    private static final com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats();
     }
@@ -1339,28 +1152,27 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MemoryLayerStats> PARSER =
-        new com.google.protobuf.AbstractParser<MemoryLayerStats>() {
-          @java.lang.Override
-          public MemoryLayerStats parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<MemoryLayerStats>
+        PARSER = new com.google.protobuf.AbstractParser<MemoryLayerStats>() {
+      @java.lang.Override
+      public MemoryLayerStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<MemoryLayerStats> parser() {
       return PARSER;
@@ -1375,22 +1187,19 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   private int bitField0_;
   public static final int ROWS_SEEN_COUNT_FIELD_NUMBER = 1;
   private long rowsSeenCount_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * The rows seen (scanned) as part of the request. This includes the count of
    * rows returned, as captured below.
    * </pre>
    *
    * <code>int64 rows_seen_count = 1;</code>
-   *
    * @return The rowsSeenCount.
    */
   @java.lang.Override
@@ -1400,16 +1209,12 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
   public static final int ROWS_RETURNED_COUNT_FIELD_NUMBER = 2;
   private long rowsReturnedCount_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * The rows returned as part of the request.
    * </pre>
    *
    * <code>int64 rows_returned_count = 2;</code>
-   *
    * @return The rowsReturnedCount.
    */
   @java.lang.Override
@@ -1419,17 +1224,13 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
   public static final int CELLS_SEEN_COUNT_FIELD_NUMBER = 3;
   private long cellsSeenCount_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * The cells seen (scanned) as part of the request. This includes the count of
    * cells returned, as captured below.
    * </pre>
    *
    * <code>int64 cells_seen_count = 3;</code>
-   *
    * @return The cellsSeenCount.
    */
   @java.lang.Override
@@ -1439,16 +1240,12 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
   public static final int CELLS_RETURNED_COUNT_FIELD_NUMBER = 4;
   private long cellsReturnedCount_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * The cells returned as part of the request.
    * </pre>
    *
    * <code>int64 cells_returned_count = 4;</code>
-   *
    * @return The cellsReturnedCount.
    */
   @java.lang.Override
@@ -1458,44 +1255,31 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
   public static final int MEMORY_LAYER_STATS_FIELD_NUMBER = 6;
   private com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memoryLayerStats_;
-
   /**
-   *
-   *
    * <pre>
    * Statistics about the memory layer for this read.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
-   *
    * @return Whether the memoryLayerStats field is set.
    */
   @java.lang.Override
   public boolean hasMemoryLayerStats() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Statistics about the memory layer for this read.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
-   *
    * @return The memoryLayerStats.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats getMemoryLayerStats() {
-    return memoryLayerStats_ == null
-        ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance()
-        : memoryLayerStats_;
+    return memoryLayerStats_ == null ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance() : memoryLayerStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Statistics about the memory layer for this read.
    * </pre>
@@ -1503,15 +1287,11 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
    * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder
-      getMemoryLayerStatsOrBuilder() {
-    return memoryLayerStats_ == null
-        ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance()
-        : memoryLayerStats_;
+  public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder getMemoryLayerStatsOrBuilder() {
+    return memoryLayerStats_ == null ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance() : memoryLayerStats_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1523,7 +1303,8 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (rowsSeenCount_ != 0L) {
       output.writeInt64(1, rowsSeenCount_);
     }
@@ -1549,19 +1330,24 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
     size = 0;
     if (rowsSeenCount_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, rowsSeenCount_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, rowsSeenCount_);
     }
     if (rowsReturnedCount_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, rowsReturnedCount_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, rowsReturnedCount_);
     }
     if (cellsSeenCount_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(3, cellsSeenCount_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, cellsSeenCount_);
     }
     if (cellsReturnedCount_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, cellsReturnedCount_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, cellsReturnedCount_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, getMemoryLayerStats());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getMemoryLayerStats());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1571,21 +1357,25 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ReadIterationStats)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.ReadIterationStats other =
-        (com.google.bigtable.v2.ReadIterationStats) obj;
+    com.google.bigtable.v2.ReadIterationStats other = (com.google.bigtable.v2.ReadIterationStats) obj;
 
-    if (getRowsSeenCount() != other.getRowsSeenCount()) return false;
-    if (getRowsReturnedCount() != other.getRowsReturnedCount()) return false;
-    if (getCellsSeenCount() != other.getCellsSeenCount()) return false;
-    if (getCellsReturnedCount() != other.getCellsReturnedCount()) return false;
+    if (getRowsSeenCount()
+        != other.getRowsSeenCount()) return false;
+    if (getRowsReturnedCount()
+        != other.getRowsReturnedCount()) return false;
+    if (getCellsSeenCount()
+        != other.getCellsSeenCount()) return false;
+    if (getCellsReturnedCount()
+        != other.getCellsReturnedCount()) return false;
     if (hasMemoryLayerStats() != other.hasMemoryLayerStats()) return false;
     if (hasMemoryLayerStats()) {
-      if (!getMemoryLayerStats().equals(other.getMemoryLayerStats())) return false;
+      if (!getMemoryLayerStats()
+          .equals(other.getMemoryLayerStats())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -1599,13 +1389,17 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ROWS_SEEN_COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getRowsSeenCount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getRowsSeenCount());
     hash = (37 * hash) + ROWS_RETURNED_COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getRowsReturnedCount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getRowsReturnedCount());
     hash = (37 * hash) + CELLS_SEEN_COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getCellsSeenCount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCellsSeenCount());
     hash = (37 * hash) + CELLS_RETURNED_COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getCellsReturnedCount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCellsReturnedCount());
     if (hasMemoryLayerStats()) {
       hash = (37 * hash) + MEMORY_LAYER_STATS_FIELD_NUMBER;
       hash = (53 * hash) + getMemoryLayerStats().hashCode();
@@ -1615,105 +1409,99 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     return hash;
   }
 
-  public static com.google.bigtable.v2.ReadIterationStats parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ReadIterationStats parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.ReadIterationStats parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.ReadIterationStats parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.ReadIterationStats parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ReadIterationStats parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.ReadIterationStats parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ReadIterationStats parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ReadIterationStats prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * ReadIterationStats captures information about the iteration of rows or cells
    * over the course of a read, e.g. how many results were scanned in a read
@@ -1722,23 +1510,21 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
    *
    * Protobuf type {@code google.bigtable.v2.ReadIterationStats}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ReadIterationStats)
       com.google.bigtable.v2.ReadIterationStatsOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ReadIterationStats.class,
-              com.google.bigtable.v2.ReadIterationStats.Builder.class);
+              com.google.bigtable.v2.ReadIterationStats.class, com.google.bigtable.v2.ReadIterationStats.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ReadIterationStats.newBuilder()
@@ -1746,17 +1532,17 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetMemoryLayerStatsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1774,9 +1560,9 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
     }
 
     @java.lang.Override
@@ -1795,11 +1581,8 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
     @java.lang.Override
     public com.google.bigtable.v2.ReadIterationStats buildPartial() {
-      com.google.bigtable.v2.ReadIterationStats result =
-          new com.google.bigtable.v2.ReadIterationStats(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.ReadIterationStats result = new com.google.bigtable.v2.ReadIterationStats(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -1820,8 +1603,9 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.memoryLayerStats_ =
-            memoryLayerStatsBuilder_ == null ? memoryLayerStats_ : memoryLayerStatsBuilder_.build();
+        result.memoryLayerStats_ = memoryLayerStatsBuilder_ == null
+            ? memoryLayerStats_
+            : memoryLayerStatsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -1830,7 +1614,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ReadIterationStats) {
-        return mergeFrom((com.google.bigtable.v2.ReadIterationStats) other);
+        return mergeFrom((com.google.bigtable.v2.ReadIterationStats)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1880,44 +1664,39 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                rowsSeenCount_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 16:
-              {
-                rowsReturnedCount_ = input.readInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-            case 24:
-              {
-                cellsSeenCount_ = input.readInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            case 32:
-              {
-                cellsReturnedCount_ = input.readInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-            case 50:
-              {
-                input.readMessage(
-                    internalGetMemoryLayerStatsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 50
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              rowsSeenCount_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              rowsReturnedCount_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              cellsSeenCount_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              cellsReturnedCount_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 50: {
+              input.readMessage(
+                  internalGetMemoryLayerStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1927,38 +1706,29 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private long rowsSeenCount_;
-
+    private long rowsSeenCount_ ;
     /**
-     *
-     *
      * <pre>
      * The rows seen (scanned) as part of the request. This includes the count of
      * rows returned, as captured below.
      * </pre>
      *
      * <code>int64 rows_seen_count = 1;</code>
-     *
      * @return The rowsSeenCount.
      */
     @java.lang.Override
     public long getRowsSeenCount() {
       return rowsSeenCount_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows seen (scanned) as part of the request. This includes the count of
      * rows returned, as captured below.
      * </pre>
      *
      * <code>int64 rows_seen_count = 1;</code>
-     *
      * @param value The rowsSeenCount to set.
      * @return This builder for chaining.
      */
@@ -1969,17 +1739,13 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows seen (scanned) as part of the request. This includes the count of
      * rows returned, as captured below.
      * </pre>
      *
      * <code>int64 rows_seen_count = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRowsSeenCount() {
@@ -1989,33 +1755,25 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       return this;
     }
 
-    private long rowsReturnedCount_;
-
+    private long rowsReturnedCount_ ;
     /**
-     *
-     *
      * <pre>
      * The rows returned as part of the request.
      * </pre>
      *
      * <code>int64 rows_returned_count = 2;</code>
-     *
      * @return The rowsReturnedCount.
      */
     @java.lang.Override
     public long getRowsReturnedCount() {
       return rowsReturnedCount_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows returned as part of the request.
      * </pre>
      *
      * <code>int64 rows_returned_count = 2;</code>
-     *
      * @param value The rowsReturnedCount to set.
      * @return This builder for chaining.
      */
@@ -2026,16 +1784,12 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows returned as part of the request.
      * </pre>
      *
      * <code>int64 rows_returned_count = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRowsReturnedCount() {
@@ -2045,35 +1799,27 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       return this;
     }
 
-    private long cellsSeenCount_;
-
+    private long cellsSeenCount_ ;
     /**
-     *
-     *
      * <pre>
      * The cells seen (scanned) as part of the request. This includes the count of
      * cells returned, as captured below.
      * </pre>
      *
      * <code>int64 cells_seen_count = 3;</code>
-     *
      * @return The cellsSeenCount.
      */
     @java.lang.Override
     public long getCellsSeenCount() {
       return cellsSeenCount_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The cells seen (scanned) as part of the request. This includes the count of
      * cells returned, as captured below.
      * </pre>
      *
      * <code>int64 cells_seen_count = 3;</code>
-     *
      * @param value The cellsSeenCount to set.
      * @return This builder for chaining.
      */
@@ -2084,17 +1830,13 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The cells seen (scanned) as part of the request. This includes the count of
      * cells returned, as captured below.
      * </pre>
      *
      * <code>int64 cells_seen_count = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCellsSeenCount() {
@@ -2104,33 +1846,25 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       return this;
     }
 
-    private long cellsReturnedCount_;
-
+    private long cellsReturnedCount_ ;
     /**
-     *
-     *
      * <pre>
      * The cells returned as part of the request.
      * </pre>
      *
      * <code>int64 cells_returned_count = 4;</code>
-     *
      * @return The cellsReturnedCount.
      */
     @java.lang.Override
     public long getCellsReturnedCount() {
       return cellsReturnedCount_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The cells returned as part of the request.
      * </pre>
      *
      * <code>int64 cells_returned_count = 4;</code>
-     *
      * @param value The cellsReturnedCount to set.
      * @return This builder for chaining.
      */
@@ -2141,16 +1875,12 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The cells returned as part of the request.
      * </pre>
      *
      * <code>int64 cells_returned_count = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCellsReturnedCount() {
@@ -2162,58 +1892,41 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
     private com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memoryLayerStats_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats,
-            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder,
-            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder>
-        memoryLayerStatsBuilder_;
-
+        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder> memoryLayerStatsBuilder_;
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
-     *
      * @return Whether the memoryLayerStats field is set.
      */
     public boolean hasMemoryLayerStats() {
       return ((bitField0_ & 0x00000010) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
-     *
      * @return The memoryLayerStats.
      */
     public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats getMemoryLayerStats() {
       if (memoryLayerStatsBuilder_ == null) {
-        return memoryLayerStats_ == null
-            ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance()
-            : memoryLayerStats_;
+        return memoryLayerStats_ == null ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance() : memoryLayerStats_;
       } else {
         return memoryLayerStatsBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
      */
-    public Builder setMemoryLayerStats(
-        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats value) {
+    public Builder setMemoryLayerStats(com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats value) {
       if (memoryLayerStatsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2226,10 +1939,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
@@ -2247,24 +1957,18 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
      */
-    public Builder mergeMemoryLayerStats(
-        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats value) {
+    public Builder mergeMemoryLayerStats(com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats value) {
       if (memoryLayerStatsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)
-            && memoryLayerStats_ != null
-            && memoryLayerStats_
-                != com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats
-                    .getDefaultInstance()) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          memoryLayerStats_ != null &&
+          memoryLayerStats_ != com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance()) {
           getMemoryLayerStatsBuilder().mergeFrom(value);
         } else {
           memoryLayerStats_ = value;
@@ -2278,10 +1982,7 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
@@ -2298,46 +1999,34 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
      */
-    public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder
-        getMemoryLayerStatsBuilder() {
+    public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder getMemoryLayerStatsBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return internalGetMemoryLayerStatsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
      */
-    public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder
-        getMemoryLayerStatsOrBuilder() {
+    public com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder getMemoryLayerStatsOrBuilder() {
       if (memoryLayerStatsBuilder_ != null) {
         return memoryLayerStatsBuilder_.getMessageOrBuilder();
       } else {
-        return memoryLayerStats_ == null
-            ? com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance()
-            : memoryLayerStats_;
+        return memoryLayerStats_ == null ?
+            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.getDefaultInstance() : memoryLayerStats_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Statistics about the memory layer for this read.
      * </pre>
@@ -2345,17 +2034,14 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
      * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats,
-            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder,
-            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder>
+        com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder> 
         internalGetMemoryLayerStatsFieldBuilder() {
       if (memoryLayerStatsBuilder_ == null) {
-        memoryLayerStatsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats,
-                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder,
-                com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder>(
-                getMemoryLayerStats(), getParentForChildren(), isClean());
+        memoryLayerStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats.Builder, com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder>(
+                getMemoryLayerStats(),
+                getParentForChildren(),
+                isClean());
         memoryLayerStats_ = null;
       }
       return memoryLayerStatsBuilder_;
@@ -2366,7 +2052,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ReadIterationStats)
   private static final com.google.bigtable.v2.ReadIterationStats DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ReadIterationStats();
   }
@@ -2375,27 +2060,27 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ReadIterationStats> PARSER =
-      new com.google.protobuf.AbstractParser<ReadIterationStats>() {
-        @java.lang.Override
-        public ReadIterationStats parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ReadIterationStats>
+      PARSER = new com.google.protobuf.AbstractParser<ReadIterationStats>() {
+    @java.lang.Override
+    public ReadIterationStats parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ReadIterationStats> parser() {
     return PARSER;
@@ -2410,4 +2095,6 @@ public final class ReadIterationStats extends com.google.protobuf.GeneratedMessa
   public com.google.bigtable.v2.ReadIterationStats getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

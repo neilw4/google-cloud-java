@@ -8,79 +8,67 @@ package com.google.bigtable.v2;
 @com.google.protobuf.Generated
 public final class FeatureFlagsProto extends com.google.protobuf.GeneratedFile {
   private FeatureFlagsProto() {}
-
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "FeatureFlagsProto");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "FeatureFlagsProto");
+  }
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_FeatureFlags_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_FeatureFlags_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n&google/bigtable/v2/feature_flags.proto"
-          + "\022\022google.bigtable.v2\"\306\003\n\014FeatureFlags\022\025\n"
-          + "\rreverse_scans\030\001 \001(\010\022$\n\034mutate_rows_serv"
-          + "er_stats_cpu\030\002 \001(\010\022\036\n\026mutate_rows_rate_l"
-          + "imit\030\003 \001(\010\022\037\n\027mutate_rows_rate_limit2\030\005 "
-          + "\001(\010\022\"\n\032last_scanned_row_responses\030\004 \001(\010\022"
-          + "\026\n\016routing_cookie\030\006 \001(\010\022\022\n\nretry_info\030\007 "
-          + "\001(\010\022#\n\033client_side_metrics_enabled\030\010 \001(\010"
-          + "\022 \n\030traffic_director_enabled\030\t \001(\010\022\037\n\027di"
-          + "rect_access_requested\030\n \001(\010\022\021\n\tpeer_info"
-          + "\030\013 \001(\010\022\033\n\023sessions_compatible\030\014 \001(\010\022\031\n\021s"
-          + "essions_required\030\r \001(\010\022\035\n\025microsecond_ti"
-          + "mestamp\030\016 \001(\010\022\026\n\016peer_load_info\030\017 \001(\010B\273\001"
-          + "\n\026com.google.bigtable.v2B\021FeatureFlagsPr"
-          + "otoP\001Z8cloud.google.com/go/bigtable/apiv"
-          + "2/bigtablepb;bigtablepb\252\002\030Google.Cloud.B"
-          + "igtable.V2\312\002\030Google\\Cloud\\Bigtable\\V2\352\002\033"
-          + "Google::Cloud::Bigtable::V2b\006proto3"
+      "\n&google/bigtable/v2/feature_flags.proto" +
+      "\022\022google.bigtable.v2\"\306\003\n\014FeatureFlags\022\025\n" +
+      "\rreverse_scans\030\001 \001(\010\022$\n\034mutate_rows_serv" +
+      "er_stats_cpu\030\002 \001(\010\022\036\n\026mutate_rows_rate_l" +
+      "imit\030\003 \001(\010\022\037\n\027mutate_rows_rate_limit2\030\005 " +
+      "\001(\010\022\"\n\032last_scanned_row_responses\030\004 \001(\010\022" +
+      "\026\n\016routing_cookie\030\006 \001(\010\022\022\n\nretry_info\030\007 " +
+      "\001(\010\022#\n\033client_side_metrics_enabled\030\010 \001(\010" +
+      "\022 \n\030traffic_director_enabled\030\t \001(\010\022\037\n\027di" +
+      "rect_access_requested\030\n \001(\010\022\021\n\tpeer_info" +
+      "\030\013 \001(\010\022\033\n\023sessions_compatible\030\014 \001(\010\022\031\n\021s" +
+      "essions_required\030\r \001(\010\022\035\n\025microsecond_ti" +
+      "mestamp\030\016 \001(\010\022\026\n\016peer_load_info\030\017 \001(\010B\273\001" +
+      "\n\026com.google.bigtable.v2B\021FeatureFlagsPr" +
+      "otoP\001Z8cloud.google.com/go/bigtable/apiv" +
+      "2/bigtablepb;bigtablepb\252\002\030Google.Cloud.B" +
+      "igtable.V2\312\002\030Google\\Cloud\\Bigtable\\V2\352\002\033" +
+      "Google::Cloud::Bigtable::V2b\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData, new com.google.protobuf.Descriptors.FileDescriptor[] {});
-    internal_static_google_bigtable_v2_FeatureFlags_descriptor = getDescriptor().getMessageType(0);
-    internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_FeatureFlags_descriptor,
-            new java.lang.String[] {
-              "ReverseScans",
-              "MutateRowsServerStatsCpu",
-              "MutateRowsRateLimit",
-              "MutateRowsRateLimit2",
-              "LastScannedRowResponses",
-              "RoutingCookie",
-              "RetryInfo",
-              "ClientSideMetricsEnabled",
-              "TrafficDirectorEnabled",
-              "DirectAccessRequested",
-              "PeerInfo",
-              "SessionsCompatible",
-              "SessionsRequired",
-              "MicrosecondTimestamp",
-              "PeerLoadInfo",
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        });
+    internal_static_google_bigtable_v2_FeatureFlags_descriptor =
+      getDescriptor().getMessageType(0);
+    internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_FeatureFlags_descriptor,
+        new java.lang.String[] { "ReverseScans", "MutateRowsServerStatsCpu", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested", "PeerInfo", "SessionsCompatible", "SessionsRequired", "MicrosecondTimestamp", "PeerLoadInfo", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

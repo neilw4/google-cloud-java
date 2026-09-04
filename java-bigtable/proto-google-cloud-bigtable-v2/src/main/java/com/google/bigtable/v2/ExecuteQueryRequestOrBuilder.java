@@ -6,76 +6,57 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ExecuteQueryRequestOrBuilder
-    extends
+public interface ExecuteQueryRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ExecuteQueryRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance against which the query should be
    * executed.
    * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The instanceName.
    */
   java.lang.String getInstanceName();
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance against which the query should be
    * executed.
    * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for instanceName.
    */
-  com.google.protobuf.ByteString getInstanceNameBytes();
+  com.google.protobuf.ByteString
+      getInstanceNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. This value specifies routing for replication. If not specified,
    * the `default` application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The appProfileId.
    */
   java.lang.String getAppProfileId();
-
   /**
-   *
-   *
    * <pre>
    * Optional. This value specifies routing for replication. If not specified,
    * the `default` application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for appProfileId.
    */
-  com.google.protobuf.ByteString getAppProfileIdBytes();
+  com.google.protobuf.ByteString
+      getAppProfileIdBytes();
 
   /**
-   *
-   *
    * <pre>
    * Required. The query string.
    *
@@ -84,17 +65,12 @@ public interface ExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>string query = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
-   *
-   * @deprecated google.bigtable.v2.ExecuteQueryRequest.query is deprecated. See
-   *     google/bigtable/v2/bigtable.proto;l=1308
+   * @deprecated google.bigtable.v2.ExecuteQueryRequest.query is deprecated.
+   *     See google/bigtable/v2/bigtable.proto;l=1308
    * @return The query.
    */
-  @java.lang.Deprecated
-  java.lang.String getQuery();
-
+  @java.lang.Deprecated java.lang.String getQuery();
   /**
-   *
-   *
    * <pre>
    * Required. The query string.
    *
@@ -103,17 +79,14 @@ public interface ExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>string query = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
-   *
-   * @deprecated google.bigtable.v2.ExecuteQueryRequest.query is deprecated. See
-   *     google/bigtable/v2/bigtable.proto;l=1308
+   * @deprecated google.bigtable.v2.ExecuteQueryRequest.query is deprecated.
+   *     See google/bigtable/v2/bigtable.proto;l=1308
    * @return The bytes for query.
    */
-  @java.lang.Deprecated
-  com.google.protobuf.ByteString getQueryBytes();
+  @java.lang.Deprecated com.google.protobuf.ByteString
+      getQueryBytes();
 
   /**
-   *
-   *
    * <pre>
    * A prepared query that was returned from `PrepareQueryResponse`.
    *
@@ -127,42 +100,31 @@ public interface ExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>bytes prepared_query = 9;</code>
-   *
    * @return The preparedQuery.
    */
   com.google.protobuf.ByteString getPreparedQuery();
 
   /**
-   *
-   *
    * <pre>
    * Protocol buffer format as described by ProtoSchema and ProtoRows
    * messages.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoFormat proto_format = 4;</code>
-   *
    * @return Whether the protoFormat field is set.
    */
   boolean hasProtoFormat();
-
   /**
-   *
-   *
    * <pre>
    * Protocol buffer format as described by ProtoSchema and ProtoRows
    * messages.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoFormat proto_format = 4;</code>
-   *
    * @return The protoFormat.
    */
   com.google.bigtable.v2.ProtoFormat getProtoFormat();
-
   /**
-   *
-   *
    * <pre>
    * Protocol buffer format as described by ProtoSchema and ProtoRows
    * messages.
@@ -173,8 +135,6 @@ public interface ExecuteQueryRequestOrBuilder
   com.google.bigtable.v2.ProtoFormatOrBuilder getProtoFormatOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Optional. If this request is resuming a previously interrupted query
    * execution, `resume_token` should be copied from the last
@@ -186,14 +146,11 @@ public interface ExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>bytes resume_token = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The resumeToken.
    */
   com.google.protobuf.ByteString getResumeToken();
 
   /**
-   *
-   *
    * <pre>
    * Required. params contains string type keys and Bigtable type values that
    * bind to placeholders in the query string. In query string, a parameter
@@ -220,15 +177,10 @@ public interface ExecuteQueryRequestOrBuilder
    * rejected with `INVALID_ARGUMENT`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getParamsCount();
-
   /**
-   *
-   *
    * <pre>
    * Required. params contains string type keys and Bigtable type values that
    * bind to placeholders in the query string. In query string, a parameter
@@ -255,19 +207,17 @@ public interface ExecuteQueryRequestOrBuilder
    * rejected with `INVALID_ARGUMENT`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
-  boolean containsParams(java.lang.String key);
-
-  /** Use {@link #getParamsMap()} instead. */
+  boolean containsParams(
+      java.lang.String key);
+  /**
+   * Use {@link #getParamsMap()} instead.
+   */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getParams();
-
+  java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
+  getParams();
   /**
-   *
-   *
    * <pre>
    * Required. params contains string type keys and Bigtable type values that
    * bind to placeholders in the query string. In query string, a parameter
@@ -294,15 +244,11 @@ public interface ExecuteQueryRequestOrBuilder
    * rejected with `INVALID_ARGUMENT`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
-  java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getParamsMap();
-
+  java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
+  getParamsMap();
   /**
-   *
-   *
    * <pre>
    * Required. params contains string type keys and Bigtable type values that
    * bind to placeholders in the query string. In query string, a parameter
@@ -329,19 +275,14 @@ public interface ExecuteQueryRequestOrBuilder
    * rejected with `INVALID_ARGUMENT`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   /* nullable */
-  com.google.bigtable.v2.Value getParamsOrDefault(
+com.google.bigtable.v2.Value getParamsOrDefault(
       java.lang.String key,
       /* nullable */
-      com.google.bigtable.v2.Value defaultValue);
-
+com.google.bigtable.v2.Value defaultValue);
   /**
-   *
-   *
    * <pre>
    * Required. params contains string type keys and Bigtable type values that
    * bind to placeholders in the query string. In query string, a parameter
@@ -368,15 +309,12 @@ public interface ExecuteQueryRequestOrBuilder
    * rejected with `INVALID_ARGUMENT`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; params = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
-  com.google.bigtable.v2.Value getParamsOrThrow(java.lang.String key);
+  com.google.bigtable.v2.Value getParamsOrThrow(
+      java.lang.String key);
 
   /**
-   *
-   *
    * <pre>
    * The view into RequestStats, as described above. This will default to
    * REQUEST_STATS_VIEW_NONE if not set. Request stats may still be empty
@@ -385,14 +323,10 @@ public interface ExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.ExecuteQueryRequest.RequestStatsView request_stats_view = 10;</code>
-   *
    * @return The enum numeric value on the wire for requestStatsView.
    */
   int getRequestStatsViewValue();
-
   /**
-   *
-   *
    * <pre>
    * The view into RequestStats, as described above. This will default to
    * REQUEST_STATS_VIEW_NONE if not set. Request stats may still be empty
@@ -401,14 +335,11 @@ public interface ExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.ExecuteQueryRequest.RequestStatsView request_stats_view = 10;</code>
-   *
    * @return The requestStatsView.
    */
   com.google.bigtable.v2.ExecuteQueryRequest.RequestStatsView getRequestStatsView();
 
   /**
-   *
-   *
    * <pre>
    * Optional. This map provides the runtime values returned by the
    * VIEW_PARAMETERS() function calls, typically used for user-level scoping of
@@ -418,15 +349,10 @@ public interface ExecuteQueryRequestOrBuilder
    * the value is the parameter value e.g. `alice&#64;example.com`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   int getViewParametersCount();
-
   /**
-   *
-   *
    * <pre>
    * Optional. This map provides the runtime values returned by the
    * VIEW_PARAMETERS() function calls, typically used for user-level scoping of
@@ -436,19 +362,17 @@ public interface ExecuteQueryRequestOrBuilder
    * the value is the parameter value e.g. `alice&#64;example.com`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
-  boolean containsViewParameters(java.lang.String key);
-
-  /** Use {@link #getViewParametersMap()} instead. */
+  boolean containsViewParameters(
+      java.lang.String key);
+  /**
+   * Use {@link #getViewParametersMap()} instead.
+   */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParameters();
-
+  java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
+  getViewParameters();
   /**
-   *
-   *
    * <pre>
    * Optional. This map provides the runtime values returned by the
    * VIEW_PARAMETERS() function calls, typically used for user-level scoping of
@@ -458,15 +382,11 @@ public interface ExecuteQueryRequestOrBuilder
    * the value is the parameter value e.g. `alice&#64;example.com`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
-  java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParametersMap();
-
+  java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
+  getViewParametersMap();
   /**
-   *
-   *
    * <pre>
    * Optional. This map provides the runtime values returned by the
    * VIEW_PARAMETERS() function calls, typically used for user-level scoping of
@@ -476,19 +396,14 @@ public interface ExecuteQueryRequestOrBuilder
    * the value is the parameter value e.g. `alice&#64;example.com`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   /* nullable */
-  com.google.bigtable.v2.Value getViewParametersOrDefault(
+com.google.bigtable.v2.Value getViewParametersOrDefault(
       java.lang.String key,
       /* nullable */
-      com.google.bigtable.v2.Value defaultValue);
-
+com.google.bigtable.v2.Value defaultValue);
   /**
-   *
-   *
    * <pre>
    * Optional. This map provides the runtime values returned by the
    * VIEW_PARAMETERS() function calls, typically used for user-level scoping of
@@ -498,11 +413,10 @@ public interface ExecuteQueryRequestOrBuilder
    * the value is the parameter value e.g. `alice&#64;example.com`.
    * </pre>
    *
-   * <code>
-   * map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];
-   * </code>
+   * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 12 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
-  com.google.bigtable.v2.Value getViewParametersOrThrow(java.lang.String key);
+  com.google.bigtable.v2.Value getViewParametersOrThrow(
+      java.lang.String key);
 
   com.google.bigtable.v2.ExecuteQueryRequest.DataFormatCase getDataFormatCase();
 }

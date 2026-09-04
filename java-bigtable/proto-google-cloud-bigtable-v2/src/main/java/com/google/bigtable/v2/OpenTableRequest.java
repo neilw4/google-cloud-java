@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,82 +13,93 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.OpenTableRequest}
  */
 @com.google.protobuf.Generated
-public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class OpenTableRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.OpenTableRequest)
     OpenTableRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "OpenTableRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "OpenTableRequest");
   }
-
   // Use OpenTableRequest.newBuilder() to construct.
   private OpenTableRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private OpenTableRequest() {
     tableName_ = "";
     appProfileId_ = "";
     permission_ = 0;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenTableRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenTableRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenTableRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenTableRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.OpenTableRequest.class,
-            com.google.bigtable.v2.OpenTableRequest.Builder.class);
+            com.google.bigtable.v2.OpenTableRequest.class, com.google.bigtable.v2.OpenTableRequest.Builder.class);
   }
 
-  /** Protobuf enum {@code google.bigtable.v2.OpenTableRequest.Permission} */
-  public enum Permission implements com.google.protobuf.ProtocolMessageEnum {
-    /** <code>PERMISSION_UNSET = 0;</code> */
+  /**
+   * Protobuf enum {@code google.bigtable.v2.OpenTableRequest.Permission}
+   */
+  public enum Permission
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PERMISSION_UNSET = 0;</code>
+     */
     PERMISSION_UNSET(0),
-    /** <code>PERMISSION_READ = 1;</code> */
+    /**
+     * <code>PERMISSION_READ = 1;</code>
+     */
     PERMISSION_READ(1),
-    /** <code>PERMISSION_WRITE = 2;</code> */
+    /**
+     * <code>PERMISSION_WRITE = 2;</code>
+     */
     PERMISSION_WRITE(2),
-    /** <code>PERMISSION_READ_WRITE = 3;</code> */
+    /**
+     * <code>PERMISSION_READ_WRITE = 3;</code>
+     */
     PERMISSION_READ_WRITE(3),
     UNRECOGNIZED(-1),
     ;
 
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Permission");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Permission");
     }
-
-    /** <code>PERMISSION_UNSET = 0;</code> */
+    /**
+     * <code>PERMISSION_UNSET = 0;</code>
+     */
     public static final int PERMISSION_UNSET_VALUE = 0;
-
-    /** <code>PERMISSION_READ = 1;</code> */
+    /**
+     * <code>PERMISSION_READ = 1;</code>
+     */
     public static final int PERMISSION_READ_VALUE = 1;
-
-    /** <code>PERMISSION_WRITE = 2;</code> */
+    /**
+     * <code>PERMISSION_WRITE = 2;</code>
+     */
     public static final int PERMISSION_WRITE_VALUE = 2;
-
-    /** <code>PERMISSION_READ_WRITE = 3;</code> */
+    /**
+     * <code>PERMISSION_READ_WRITE = 3;</code>
+     */
     public static final int PERMISSION_READ_WRITE_VALUE = 3;
+
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -116,51 +125,50 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
      */
     public static Permission forNumber(int value) {
       switch (value) {
-        case 0:
-          return PERMISSION_UNSET;
-        case 1:
-          return PERMISSION_READ;
-        case 2:
-          return PERMISSION_WRITE;
-        case 3:
-          return PERMISSION_READ_WRITE;
-        default:
-          return null;
+        case 0: return PERMISSION_UNSET;
+        case 1: return PERMISSION_READ;
+        case 2: return PERMISSION_WRITE;
+        case 3: return PERMISSION_READ_WRITE;
+        default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<Permission> internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<Permission>
+        internalGetValueMap() {
       return internalValueMap;
     }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Permission> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Permission>() {
+            public Permission findValueByNumber(int number) {
+              return Permission.forNumber(number);
+            }
+          };
 
-    private static final com.google.protobuf.Internal.EnumLiteMap<Permission> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Permission>() {
-          public Permission findValueByNumber(int number) {
-            return Permission.forNumber(number);
-          }
-        };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
-
-    public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+    public static com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
       return com.google.bigtable.v2.OpenTableRequest.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final Permission[] VALUES = values();
 
-    public static Permission valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static Permission valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -178,13 +186,10 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int TABLE_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object tableName_ = "";
-
   /**
    * <code>string table_name = 1;</code>
-   *
    * @return The tableName.
    */
   @java.lang.Override
@@ -193,24 +198,25 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       tableName_ = s;
       return s;
     }
   }
-
   /**
    * <code>string table_name = 1;</code>
-   *
    * @return The bytes for tableName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getTableNameBytes() {
+  public com.google.protobuf.ByteString
+      getTableNameBytes() {
     java.lang.Object ref = tableName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       tableName_ = b;
       return b;
     } else {
@@ -219,13 +225,10 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int APP_PROFILE_ID_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object appProfileId_ = "";
-
   /**
    * <code>string app_profile_id = 2;</code>
-   *
    * @return The appProfileId.
    */
   @java.lang.Override
@@ -234,24 +237,25 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       appProfileId_ = s;
       return s;
     }
   }
-
   /**
    * <code>string app_profile_id = 2;</code>
-   *
    * @return The bytes for appProfileId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAppProfileIdBytes() {
+  public com.google.protobuf.ByteString
+      getAppProfileIdBytes() {
     java.lang.Object ref = appProfileId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       appProfileId_ = b;
       return b;
     } else {
@@ -261,33 +265,23 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
 
   public static final int PERMISSION_FIELD_NUMBER = 3;
   private int permission_ = 0;
-
   /**
    * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-   *
    * @return The enum numeric value on the wire for permission.
    */
-  @java.lang.Override
-  public int getPermissionValue() {
+  @java.lang.Override public int getPermissionValue() {
     return permission_;
   }
-
   /**
    * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-   *
    * @return The permission.
    */
-  @java.lang.Override
-  public com.google.bigtable.v2.OpenTableRequest.Permission getPermission() {
-    com.google.bigtable.v2.OpenTableRequest.Permission result =
-        com.google.bigtable.v2.OpenTableRequest.Permission.forNumber(permission_);
-    return result == null
-        ? com.google.bigtable.v2.OpenTableRequest.Permission.UNRECOGNIZED
-        : result;
+  @java.lang.Override public com.google.bigtable.v2.OpenTableRequest.Permission getPermission() {
+    com.google.bigtable.v2.OpenTableRequest.Permission result = com.google.bigtable.v2.OpenTableRequest.Permission.forNumber(permission_);
+    return result == null ? com.google.bigtable.v2.OpenTableRequest.Permission.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -299,15 +293,15 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tableName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, tableName_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(appProfileId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, appProfileId_);
     }
-    if (permission_
-        != com.google.bigtable.v2.OpenTableRequest.Permission.PERMISSION_UNSET.getNumber()) {
+    if (permission_ != com.google.bigtable.v2.OpenTableRequest.Permission.PERMISSION_UNSET.getNumber()) {
       output.writeEnum(3, permission_);
     }
     getUnknownFields().writeTo(output);
@@ -325,9 +319,9 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(appProfileId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, appProfileId_);
     }
-    if (permission_
-        != com.google.bigtable.v2.OpenTableRequest.Permission.PERMISSION_UNSET.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(3, permission_);
+    if (permission_ != com.google.bigtable.v2.OpenTableRequest.Permission.PERMISSION_UNSET.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, permission_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -337,15 +331,17 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.OpenTableRequest)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.OpenTableRequest other = (com.google.bigtable.v2.OpenTableRequest) obj;
 
-    if (!getTableName().equals(other.getTableName())) return false;
-    if (!getAppProfileId().equals(other.getAppProfileId())) return false;
+    if (!getTableName()
+        .equals(other.getTableName())) return false;
+    if (!getAppProfileId()
+        .equals(other.getAppProfileId())) return false;
     if (permission_ != other.permission_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -369,137 +365,132 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.OpenTableRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.OpenTableRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.OpenTableRequest parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.OpenTableRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.OpenTableRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.OpenTableRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.OpenTableRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.OpenTableRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.OpenTableRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.OpenTableRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.OpenTableRequest)
       com.google.bigtable.v2.OpenTableRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenTableRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenTableRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenTableRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenTableRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.OpenTableRequest.class,
-              com.google.bigtable.v2.OpenTableRequest.Builder.class);
+              com.google.bigtable.v2.OpenTableRequest.class, com.google.bigtable.v2.OpenTableRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.OpenTableRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -511,9 +502,9 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenTableRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenTableRequest_descriptor;
     }
 
     @java.lang.Override
@@ -532,11 +523,8 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
 
     @java.lang.Override
     public com.google.bigtable.v2.OpenTableRequest buildPartial() {
-      com.google.bigtable.v2.OpenTableRequest result =
-          new com.google.bigtable.v2.OpenTableRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.OpenTableRequest result = new com.google.bigtable.v2.OpenTableRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -557,7 +545,7 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.OpenTableRequest) {
-        return mergeFrom((com.google.bigtable.v2.OpenTableRequest) other);
+        return mergeFrom((com.google.bigtable.v2.OpenTableRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -605,31 +593,27 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                tableName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                appProfileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 24:
-              {
-                permission_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              tableName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              appProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              permission_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -639,20 +623,18 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object tableName_ = "";
-
     /**
      * <code>string table_name = 1;</code>
-     *
      * @return The tableName.
      */
     public java.lang.String getTableName() {
       java.lang.Object ref = tableName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         tableName_ = s;
         return s;
@@ -660,43 +642,38 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <code>string table_name = 1;</code>
-     *
      * @return The bytes for tableName.
      */
-    public com.google.protobuf.ByteString getTableNameBytes() {
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
       java.lang.Object ref = tableName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         tableName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <code>string table_name = 1;</code>
-     *
      * @param value The tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       tableName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
      * <code>string table_name = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearTableName() {
@@ -705,17 +682,14 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
      * <code>string table_name = 1;</code>
-     *
      * @param value The bytes for tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       tableName_ = value;
       bitField0_ |= 0x00000001;
@@ -724,16 +698,15 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     }
 
     private java.lang.Object appProfileId_ = "";
-
     /**
      * <code>string app_profile_id = 2;</code>
-     *
      * @return The appProfileId.
      */
     public java.lang.String getAppProfileId() {
       java.lang.Object ref = appProfileId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appProfileId_ = s;
         return s;
@@ -741,43 +714,38 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <code>string app_profile_id = 2;</code>
-     *
      * @return The bytes for appProfileId.
      */
-    public com.google.protobuf.ByteString getAppProfileIdBytes() {
+    public com.google.protobuf.ByteString
+        getAppProfileIdBytes() {
       java.lang.Object ref = appProfileId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         appProfileId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <code>string app_profile_id = 2;</code>
-     *
      * @param value The appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
      * <code>string app_profile_id = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppProfileId() {
@@ -786,17 +754,14 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
      * <code>string app_profile_id = 2;</code>
-     *
      * @param value The bytes for appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
@@ -805,20 +770,15 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     }
 
     private int permission_ = 0;
-
     /**
      * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-     *
      * @return The enum numeric value on the wire for permission.
      */
-    @java.lang.Override
-    public int getPermissionValue() {
+    @java.lang.Override public int getPermissionValue() {
       return permission_;
     }
-
     /**
      * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-     *
      * @param value The enum numeric value on the wire for permission to set.
      * @return This builder for chaining.
      */
@@ -828,40 +788,29 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-     *
      * @return The permission.
      */
     @java.lang.Override
     public com.google.bigtable.v2.OpenTableRequest.Permission getPermission() {
-      com.google.bigtable.v2.OpenTableRequest.Permission result =
-          com.google.bigtable.v2.OpenTableRequest.Permission.forNumber(permission_);
-      return result == null
-          ? com.google.bigtable.v2.OpenTableRequest.Permission.UNRECOGNIZED
-          : result;
+      com.google.bigtable.v2.OpenTableRequest.Permission result = com.google.bigtable.v2.OpenTableRequest.Permission.forNumber(permission_);
+      return result == null ? com.google.bigtable.v2.OpenTableRequest.Permission.UNRECOGNIZED : result;
     }
-
     /**
      * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-     *
      * @param value The permission to set.
      * @return This builder for chaining.
      */
     public Builder setPermission(com.google.bigtable.v2.OpenTableRequest.Permission value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       bitField0_ |= 0x00000004;
       permission_ = value.getNumber();
       onChanged();
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.OpenTableRequest.Permission permission = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPermission() {
@@ -876,7 +825,6 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.OpenTableRequest)
   private static final com.google.bigtable.v2.OpenTableRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.OpenTableRequest();
   }
@@ -885,27 +833,27 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OpenTableRequest> PARSER =
-      new com.google.protobuf.AbstractParser<OpenTableRequest>() {
-        @java.lang.Override
-        public OpenTableRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<OpenTableRequest>
+      PARSER = new com.google.protobuf.AbstractParser<OpenTableRequest>() {
+    @java.lang.Override
+    public OpenTableRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<OpenTableRequest> parser() {
     return PARSER;
@@ -920,4 +868,6 @@ public final class OpenTableRequest extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.OpenTableRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

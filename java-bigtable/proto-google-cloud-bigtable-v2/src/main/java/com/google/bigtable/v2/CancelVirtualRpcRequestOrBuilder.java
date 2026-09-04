@@ -6,14 +6,12 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface CancelVirtualRpcRequestOrBuilder
-    extends
+public interface CancelVirtualRpcRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.CancelVirtualRpcRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>int64 rpc_id = 1;</code>
-   *
    * @return The rpcId.
    */
   long getRpcId();

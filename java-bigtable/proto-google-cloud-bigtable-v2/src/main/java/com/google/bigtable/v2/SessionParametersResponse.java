@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,51 +13,44 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SessionParametersResponse}
  */
 @com.google.protobuf.Generated
-public final class SessionParametersResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionParametersResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionParametersResponse)
     SessionParametersResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionParametersResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionParametersResponse");
   }
-
   // Use SessionParametersResponse.newBuilder() to construct.
   private SessionParametersResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private SessionParametersResponse() {
+  }
 
-  private SessionParametersResponse() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionParametersResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionParametersResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionParametersResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionParametersResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionParametersResponse.class,
-            com.google.bigtable.v2.SessionParametersResponse.Builder.class);
+            com.google.bigtable.v2.SessionParametersResponse.class, com.google.bigtable.v2.SessionParametersResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int KEEP_ALIVE_FIELD_NUMBER = 1;
   private com.google.protobuf.Duration keepAlive_;
-
   /**
-   *
-   *
    * <pre>
    * Maximum time between messages that the AFE will send to the client. The
    * client may use this information to determine its control-flow in relation
@@ -70,17 +61,13 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
    * </pre>
    *
    * <code>.google.protobuf.Duration keep_alive = 1;</code>
-   *
    * @return Whether the keepAlive field is set.
    */
   @java.lang.Override
   public boolean hasKeepAlive() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Maximum time between messages that the AFE will send to the client. The
    * client may use this information to determine its control-flow in relation
@@ -91,17 +78,13 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
    * </pre>
    *
    * <code>.google.protobuf.Duration keep_alive = 1;</code>
-   *
    * @return The keepAlive.
    */
   @java.lang.Override
   public com.google.protobuf.Duration getKeepAlive() {
     return keepAlive_ == null ? com.google.protobuf.Duration.getDefaultInstance() : keepAlive_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Maximum time between messages that the AFE will send to the client. The
    * client may use this information to determine its control-flow in relation
@@ -120,10 +103,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
 
   public static final int SOFTMAX_STREAMING_PREFETCH_BUFFER_SIZE_FIELD_NUMBER = 2;
   private int softmaxStreamingPrefetchBufferSize_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * Client will pull this many bytes at most to make messages for steamed
    * responses. If the last byte is mid-message, it will continue until a full
@@ -131,7 +111,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
    * </pre>
    *
    * <code>int32 softmax_streaming_prefetch_buffer_size = 2;</code>
-   *
    * @return The softmaxStreamingPrefetchBufferSize.
    */
   @java.lang.Override
@@ -140,7 +119,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -152,7 +130,8 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getKeepAlive());
     }
@@ -169,12 +148,12 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getKeepAlive());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getKeepAlive());
     }
     if (softmaxStreamingPrefetchBufferSize_ != 0) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt32Size(
-              2, softmaxStreamingPrefetchBufferSize_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, softmaxStreamingPrefetchBufferSize_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -184,20 +163,20 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionParametersResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SessionParametersResponse other =
-        (com.google.bigtable.v2.SessionParametersResponse) obj;
+    com.google.bigtable.v2.SessionParametersResponse other = (com.google.bigtable.v2.SessionParametersResponse) obj;
 
     if (hasKeepAlive() != other.hasKeepAlive()) return false;
     if (hasKeepAlive()) {
-      if (!getKeepAlive().equals(other.getKeepAlive())) return false;
+      if (!getKeepAlive()
+          .equals(other.getKeepAlive())) return false;
     }
-    if (getSoftmaxStreamingPrefetchBufferSize() != other.getSoftmaxStreamingPrefetchBufferSize())
-      return false;
+    if (getSoftmaxStreamingPrefetchBufferSize()
+        != other.getSoftmaxStreamingPrefetchBufferSize()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -220,128 +199,120 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
     return hash;
   }
 
-  public static com.google.bigtable.v2.SessionParametersResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.SessionParametersResponse parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SessionParametersResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionParametersResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SessionParametersResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionParametersResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionParametersResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionParametersResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionParametersResponse)
       com.google.bigtable.v2.SessionParametersResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionParametersResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionParametersResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionParametersResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionParametersResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionParametersResponse.class,
-              com.google.bigtable.v2.SessionParametersResponse.Builder.class);
+              com.google.bigtable.v2.SessionParametersResponse.class, com.google.bigtable.v2.SessionParametersResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionParametersResponse.newBuilder()
@@ -349,17 +320,17 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetKeepAliveFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -374,9 +345,9 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionParametersResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionParametersResponse_descriptor;
     }
 
     @java.lang.Override
@@ -395,11 +366,8 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionParametersResponse buildPartial() {
-      com.google.bigtable.v2.SessionParametersResponse result =
-          new com.google.bigtable.v2.SessionParametersResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SessionParametersResponse result = new com.google.bigtable.v2.SessionParametersResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -408,7 +376,9 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.keepAlive_ = keepAliveBuilder_ == null ? keepAlive_ : keepAliveBuilder_.build();
+        result.keepAlive_ = keepAliveBuilder_ == null
+            ? keepAlive_
+            : keepAliveBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
@@ -420,7 +390,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionParametersResponse) {
-        return mergeFrom((com.google.bigtable.v2.SessionParametersResponse) other);
+        return mergeFrom((com.google.bigtable.v2.SessionParametersResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -428,8 +398,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.SessionParametersResponse other) {
-      if (other == com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.SessionParametersResponse.getDefaultInstance()) return this;
       if (other.hasKeepAlive()) {
         mergeKeepAlive(other.getKeepAlive());
       }
@@ -462,26 +431,24 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetKeepAliveFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 16:
-              {
-                softmaxStreamingPrefetchBufferSize_ = input.readInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetKeepAliveFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              softmaxStreamingPrefetchBufferSize_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -491,19 +458,12 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.protobuf.Duration keepAlive_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
-        keepAliveBuilder_;
-
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> keepAliveBuilder_;
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -514,16 +474,12 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>.google.protobuf.Duration keep_alive = 1;</code>
-     *
      * @return Whether the keepAlive field is set.
      */
     public boolean hasKeepAlive() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -534,7 +490,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>.google.protobuf.Duration keep_alive = 1;</code>
-     *
      * @return The keepAlive.
      */
     public com.google.protobuf.Duration getKeepAlive() {
@@ -544,10 +499,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
         return keepAliveBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -572,10 +524,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -587,7 +536,8 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      *
      * <code>.google.protobuf.Duration keep_alive = 1;</code>
      */
-    public Builder setKeepAlive(com.google.protobuf.Duration.Builder builderForValue) {
+    public Builder setKeepAlive(
+        com.google.protobuf.Duration.Builder builderForValue) {
       if (keepAliveBuilder_ == null) {
         keepAlive_ = builderForValue.build();
       } else {
@@ -597,10 +547,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -614,9 +561,9 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      */
     public Builder mergeKeepAlive(com.google.protobuf.Duration value) {
       if (keepAliveBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && keepAlive_ != null
-            && keepAlive_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          keepAlive_ != null &&
+          keepAlive_ != com.google.protobuf.Duration.getDefaultInstance()) {
           getKeepAliveBuilder().mergeFrom(value);
         } else {
           keepAlive_ = value;
@@ -630,10 +577,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -655,10 +599,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -675,10 +616,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       onChanged();
       return internalGetKeepAliveFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -694,13 +632,11 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       if (keepAliveBuilder_ != null) {
         return keepAliveBuilder_.getMessageOrBuilder();
       } else {
-        return keepAlive_ == null ? com.google.protobuf.Duration.getDefaultInstance() : keepAlive_;
+        return keepAlive_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : keepAlive_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Maximum time between messages that the AFE will send to the client. The
      * client may use this information to determine its control-flow in relation
@@ -713,27 +649,21 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      * <code>.google.protobuf.Duration keep_alive = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
         internalGetKeepAliveFieldBuilder() {
       if (keepAliveBuilder_ == null) {
-        keepAliveBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>(
-                getKeepAlive(), getParentForChildren(), isClean());
+        keepAliveBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getKeepAlive(),
+                getParentForChildren(),
+                isClean());
         keepAlive_ = null;
       }
       return keepAliveBuilder_;
     }
 
-    private int softmaxStreamingPrefetchBufferSize_;
-
+    private int softmaxStreamingPrefetchBufferSize_ ;
     /**
-     *
-     *
      * <pre>
      * Client will pull this many bytes at most to make messages for steamed
      * responses. If the last byte is mid-message, it will continue until a full
@@ -741,17 +671,13 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>int32 softmax_streaming_prefetch_buffer_size = 2;</code>
-     *
      * @return The softmaxStreamingPrefetchBufferSize.
      */
     @java.lang.Override
     public int getSoftmaxStreamingPrefetchBufferSize() {
       return softmaxStreamingPrefetchBufferSize_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client will pull this many bytes at most to make messages for steamed
      * responses. If the last byte is mid-message, it will continue until a full
@@ -759,7 +685,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>int32 softmax_streaming_prefetch_buffer_size = 2;</code>
-     *
      * @param value The softmaxStreamingPrefetchBufferSize to set.
      * @return This builder for chaining.
      */
@@ -770,10 +695,7 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client will pull this many bytes at most to make messages for steamed
      * responses. If the last byte is mid-message, it will continue until a full
@@ -781,7 +703,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>int32 softmax_streaming_prefetch_buffer_size = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSoftmaxStreamingPrefetchBufferSize() {
@@ -796,7 +717,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionParametersResponse)
   private static final com.google.bigtable.v2.SessionParametersResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionParametersResponse();
   }
@@ -805,27 +725,27 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionParametersResponse> PARSER =
-      new com.google.protobuf.AbstractParser<SessionParametersResponse>() {
-        @java.lang.Override
-        public SessionParametersResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionParametersResponse>
+      PARSER = new com.google.protobuf.AbstractParser<SessionParametersResponse>() {
+    @java.lang.Override
+    public SessionParametersResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionParametersResponse> parser() {
     return PARSER;
@@ -840,4 +760,6 @@ public final class SessionParametersResponse extends com.google.protobuf.Generat
   public com.google.bigtable.v2.SessionParametersResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

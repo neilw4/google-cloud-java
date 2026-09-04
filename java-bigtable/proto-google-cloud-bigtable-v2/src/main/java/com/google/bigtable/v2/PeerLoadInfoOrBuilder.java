@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface PeerLoadInfoOrBuilder
-    extends
+public interface PeerLoadInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.PeerLoadInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * PeerLoadInfo messages with different versions cannot be safely compared.
    * For example, one version of the logic may result in a lower expected
@@ -22,42 +19,31 @@ public interface PeerLoadInfoOrBuilder
    * </pre>
    *
    * <code>int32 version = 1;</code>
-   *
    * @return The version.
    */
   int getVersion();
 
   /**
-   *
-   *
    * <pre>
    * Peer's best guess as to how long requests will take. This may be noisy.
    * This does not include network latency.
    * </pre>
    *
    * <code>.google.protobuf.Duration expected_latency = 2;</code>
-   *
    * @return Whether the expectedLatency field is set.
    */
   boolean hasExpectedLatency();
-
   /**
-   *
-   *
    * <pre>
    * Peer's best guess as to how long requests will take. This may be noisy.
    * This does not include network latency.
    * </pre>
    *
    * <code>.google.protobuf.Duration expected_latency = 2;</code>
-   *
    * @return The expectedLatency.
    */
   com.google.protobuf.Duration getExpectedLatency();
-
   /**
-   *
-   *
    * <pre>
    * Peer's best guess as to how long requests will take. This may be noisy.
    * This does not include network latency.
@@ -68,63 +54,47 @@ public interface PeerLoadInfoOrBuilder
   com.google.protobuf.DurationOrBuilder getExpectedLatencyOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Higher weight means that the peer is less healthy and traffic should be
    * reduced.
    * </pre>
    *
    * <code>float weight = 3;</code>
-   *
    * @return The weight.
    */
   float getWeight();
 
   /**
-   *
-   *
    * <pre>
    * Estimate of how many more in-flight requests the peer can handle.
    * </pre>
    *
    * <code>int32 available_in_flight_requests = 4;</code>
-   *
    * @return The availableInFlightRequests.
    */
   int getAvailableInFlightRequests();
 
   /**
-   *
-   *
    * <pre>
    * Clients should slowly move traffic over this period of time to avoid
    * sudden changes in traffic.
    * </pre>
    *
    * <code>.google.protobuf.Duration convergence_time = 5;</code>
-   *
    * @return Whether the convergenceTime field is set.
    */
   boolean hasConvergenceTime();
-
   /**
-   *
-   *
    * <pre>
    * Clients should slowly move traffic over this period of time to avoid
    * sudden changes in traffic.
    * </pre>
    *
    * <code>.google.protobuf.Duration convergence_time = 5;</code>
-   *
    * @return The convergenceTime.
    */
   com.google.protobuf.Duration getConvergenceTime();
-
   /**
-   *
-   *
    * <pre>
    * Clients should slowly move traffic over this period of time to avoid
    * sudden changes in traffic.
@@ -135,29 +105,23 @@ public interface PeerLoadInfoOrBuilder
   com.google.protobuf.DurationOrBuilder getConvergenceTimeOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Note: this is an implementation detail that may not be set in the future.
    * Current CPU utilization of the server.
    * </pre>
    *
    * <code>float utilization = 6;</code>
-   *
    * @return The utilization.
    */
   float getUtilization();
 
   /**
-   *
-   *
    * <pre>
    * Number of requests currently being handled by the server.
    * Note: this is an implementation detail that may not be set in the future.
    * </pre>
    *
    * <code>int32 outstanding_requests = 7;</code>
-   *
    * @return The outstandingRequests.
    */
   int getOutstandingRequests();

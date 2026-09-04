@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * PeerLoadInfo contains information about the peer that can be used for
  * load balancing.
@@ -16,51 +14,44 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.PeerLoadInfo}
  */
 @com.google.protobuf.Generated
-public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
-    implements
+public final class PeerLoadInfo extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.PeerLoadInfo)
     PeerLoadInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "PeerLoadInfo");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "PeerLoadInfo");
   }
-
   // Use PeerLoadInfo.newBuilder() to construct.
   private PeerLoadInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private PeerLoadInfo() {
+  }
 
-  private PeerLoadInfo() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.PeerLoadInfoProto
-        .internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.PeerLoadInfoProto.internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.PeerLoadInfoProto
-        .internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable
+    return com.google.bigtable.v2.PeerLoadInfoProto.internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.PeerLoadInfo.class,
-            com.google.bigtable.v2.PeerLoadInfo.Builder.class);
+            com.google.bigtable.v2.PeerLoadInfo.class, com.google.bigtable.v2.PeerLoadInfo.Builder.class);
   }
 
   private int bitField0_;
   public static final int VERSION_FIELD_NUMBER = 1;
   private int version_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * PeerLoadInfo messages with different versions cannot be safely compared.
    * For example, one version of the logic may result in a lower expected
@@ -69,7 +60,6 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 version = 1;</code>
-   *
    * @return The version.
    */
   @java.lang.Override
@@ -79,46 +69,33 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int EXPECTED_LATENCY_FIELD_NUMBER = 2;
   private com.google.protobuf.Duration expectedLatency_;
-
   /**
-   *
-   *
    * <pre>
    * Peer's best guess as to how long requests will take. This may be noisy.
    * This does not include network latency.
    * </pre>
    *
    * <code>.google.protobuf.Duration expected_latency = 2;</code>
-   *
    * @return Whether the expectedLatency field is set.
    */
   @java.lang.Override
   public boolean hasExpectedLatency() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Peer's best guess as to how long requests will take. This may be noisy.
    * This does not include network latency.
    * </pre>
    *
    * <code>.google.protobuf.Duration expected_latency = 2;</code>
-   *
    * @return The expectedLatency.
    */
   @java.lang.Override
   public com.google.protobuf.Duration getExpectedLatency() {
-    return expectedLatency_ == null
-        ? com.google.protobuf.Duration.getDefaultInstance()
-        : expectedLatency_;
+    return expectedLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : expectedLatency_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Peer's best guess as to how long requests will take. This may be noisy.
    * This does not include network latency.
@@ -128,24 +105,18 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
    */
   @java.lang.Override
   public com.google.protobuf.DurationOrBuilder getExpectedLatencyOrBuilder() {
-    return expectedLatency_ == null
-        ? com.google.protobuf.Duration.getDefaultInstance()
-        : expectedLatency_;
+    return expectedLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : expectedLatency_;
   }
 
   public static final int WEIGHT_FIELD_NUMBER = 3;
   private float weight_ = 0F;
-
   /**
-   *
-   *
    * <pre>
    * Higher weight means that the peer is less healthy and traffic should be
    * reduced.
    * </pre>
    *
    * <code>float weight = 3;</code>
-   *
    * @return The weight.
    */
   @java.lang.Override
@@ -155,16 +126,12 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int AVAILABLE_IN_FLIGHT_REQUESTS_FIELD_NUMBER = 4;
   private int availableInFlightRequests_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * Estimate of how many more in-flight requests the peer can handle.
    * </pre>
    *
    * <code>int32 available_in_flight_requests = 4;</code>
-   *
    * @return The availableInFlightRequests.
    */
   @java.lang.Override
@@ -174,46 +141,33 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int CONVERGENCE_TIME_FIELD_NUMBER = 5;
   private com.google.protobuf.Duration convergenceTime_;
-
   /**
-   *
-   *
    * <pre>
    * Clients should slowly move traffic over this period of time to avoid
    * sudden changes in traffic.
    * </pre>
    *
    * <code>.google.protobuf.Duration convergence_time = 5;</code>
-   *
    * @return Whether the convergenceTime field is set.
    */
   @java.lang.Override
   public boolean hasConvergenceTime() {
     return ((bitField0_ & 0x00000002) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Clients should slowly move traffic over this period of time to avoid
    * sudden changes in traffic.
    * </pre>
    *
    * <code>.google.protobuf.Duration convergence_time = 5;</code>
-   *
    * @return The convergenceTime.
    */
   @java.lang.Override
   public com.google.protobuf.Duration getConvergenceTime() {
-    return convergenceTime_ == null
-        ? com.google.protobuf.Duration.getDefaultInstance()
-        : convergenceTime_;
+    return convergenceTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : convergenceTime_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Clients should slowly move traffic over this period of time to avoid
    * sudden changes in traffic.
@@ -223,24 +177,18 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
    */
   @java.lang.Override
   public com.google.protobuf.DurationOrBuilder getConvergenceTimeOrBuilder() {
-    return convergenceTime_ == null
-        ? com.google.protobuf.Duration.getDefaultInstance()
-        : convergenceTime_;
+    return convergenceTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : convergenceTime_;
   }
 
   public static final int UTILIZATION_FIELD_NUMBER = 6;
   private float utilization_ = 0F;
-
   /**
-   *
-   *
    * <pre>
    * Note: this is an implementation detail that may not be set in the future.
    * Current CPU utilization of the server.
    * </pre>
    *
    * <code>float utilization = 6;</code>
-   *
    * @return The utilization.
    */
   @java.lang.Override
@@ -250,17 +198,13 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int OUTSTANDING_REQUESTS_FIELD_NUMBER = 7;
   private int outstandingRequests_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * Number of requests currently being handled by the server.
    * Note: this is an implementation detail that may not be set in the future.
    * </pre>
    *
    * <code>int32 outstanding_requests = 7;</code>
-   *
    * @return The outstandingRequests.
    */
   @java.lang.Override
@@ -269,7 +213,6 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -281,7 +224,8 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (version_ != 0) {
       output.writeInt32(1, version_);
     }
@@ -313,25 +257,32 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (version_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, version_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(1, version_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getExpectedLatency());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getExpectedLatency());
     }
     if (java.lang.Float.floatToRawIntBits(weight_) != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeFloatSize(3, weight_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(3, weight_);
     }
     if (availableInFlightRequests_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, availableInFlightRequests_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, availableInFlightRequests_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getConvergenceTime());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getConvergenceTime());
     }
     if (java.lang.Float.floatToRawIntBits(utilization_) != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeFloatSize(6, utilization_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(6, utilization_);
     }
     if (outstandingRequests_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(7, outstandingRequests_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, outstandingRequests_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -341,28 +292,35 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.PeerLoadInfo)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.PeerLoadInfo other = (com.google.bigtable.v2.PeerLoadInfo) obj;
 
-    if (getVersion() != other.getVersion()) return false;
+    if (getVersion()
+        != other.getVersion()) return false;
     if (hasExpectedLatency() != other.hasExpectedLatency()) return false;
     if (hasExpectedLatency()) {
-      if (!getExpectedLatency().equals(other.getExpectedLatency())) return false;
+      if (!getExpectedLatency()
+          .equals(other.getExpectedLatency())) return false;
     }
     if (java.lang.Float.floatToIntBits(getWeight())
-        != java.lang.Float.floatToIntBits(other.getWeight())) return false;
-    if (getAvailableInFlightRequests() != other.getAvailableInFlightRequests()) return false;
+        != java.lang.Float.floatToIntBits(
+            other.getWeight())) return false;
+    if (getAvailableInFlightRequests()
+        != other.getAvailableInFlightRequests()) return false;
     if (hasConvergenceTime() != other.hasConvergenceTime()) return false;
     if (hasConvergenceTime()) {
-      if (!getConvergenceTime().equals(other.getConvergenceTime())) return false;
+      if (!getConvergenceTime()
+          .equals(other.getConvergenceTime())) return false;
     }
     if (java.lang.Float.floatToIntBits(getUtilization())
-        != java.lang.Float.floatToIntBits(other.getUtilization())) return false;
-    if (getOutstandingRequests() != other.getOutstandingRequests()) return false;
+        != java.lang.Float.floatToIntBits(
+            other.getUtilization())) return false;
+    if (getOutstandingRequests()
+        != other.getOutstandingRequests()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -381,7 +339,8 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       hash = (53 * hash) + getExpectedLatency().hashCode();
     }
     hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(getWeight());
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getWeight());
     hash = (37 * hash) + AVAILABLE_IN_FLIGHT_REQUESTS_FIELD_NUMBER;
     hash = (53 * hash) + getAvailableInFlightRequests();
     if (hasConvergenceTime()) {
@@ -389,7 +348,8 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       hash = (53 * hash) + getConvergenceTime().hashCode();
     }
     hash = (37 * hash) + UTILIZATION_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(getUtilization());
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getUtilization());
     hash = (37 * hash) + OUTSTANDING_REQUESTS_FIELD_NUMBER;
     hash = (53 * hash) + getOutstandingRequests();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -397,104 +357,99 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.PeerLoadInfo parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.PeerLoadInfo parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.PeerLoadInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.PeerLoadInfo parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.PeerLoadInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.PeerLoadInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * PeerLoadInfo contains information about the peer that can be used for
    * load balancing.
@@ -502,23 +457,21 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.PeerLoadInfo}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.PeerLoadInfo)
       com.google.bigtable.v2.PeerLoadInfoOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.PeerLoadInfoProto
-          .internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.PeerLoadInfoProto.internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.PeerLoadInfoProto
-          .internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable
+      return com.google.bigtable.v2.PeerLoadInfoProto.internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.PeerLoadInfo.class,
-              com.google.bigtable.v2.PeerLoadInfo.Builder.class);
+              com.google.bigtable.v2.PeerLoadInfo.class, com.google.bigtable.v2.PeerLoadInfo.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.PeerLoadInfo.newBuilder()
@@ -526,18 +479,18 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetExpectedLatencyFieldBuilder();
         internalGetConvergenceTimeFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -561,9 +514,9 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.PeerLoadInfoProto
-          .internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.PeerLoadInfoProto.internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
     }
 
     @java.lang.Override
@@ -583,9 +536,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.PeerLoadInfo buildPartial() {
       com.google.bigtable.v2.PeerLoadInfo result = new com.google.bigtable.v2.PeerLoadInfo(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -597,8 +548,9 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.expectedLatency_ =
-            expectedLatencyBuilder_ == null ? expectedLatency_ : expectedLatencyBuilder_.build();
+        result.expectedLatency_ = expectedLatencyBuilder_ == null
+            ? expectedLatency_
+            : expectedLatencyBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -608,8 +560,9 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
         result.availableInFlightRequests_ = availableInFlightRequests_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.convergenceTime_ =
-            convergenceTimeBuilder_ == null ? convergenceTime_ : convergenceTimeBuilder_.build();
+        result.convergenceTime_ = convergenceTimeBuilder_ == null
+            ? convergenceTime_
+            : convergenceTimeBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
@@ -624,7 +577,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.PeerLoadInfo) {
-        return mergeFrom((com.google.bigtable.v2.PeerLoadInfo) other);
+        return mergeFrom((com.google.bigtable.v2.PeerLoadInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -680,57 +633,51 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                version_ = input.readInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 18:
-              {
-                input.readMessage(
-                    internalGetExpectedLatencyFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 29:
-              {
-                weight_ = input.readFloat();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 29
-            case 32:
-              {
-                availableInFlightRequests_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-            case 42:
-              {
-                input.readMessage(
-                    internalGetConvergenceTimeFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-            case 53:
-              {
-                utilization_ = input.readFloat();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 53
-            case 56:
-              {
-                outstandingRequests_ = input.readInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 56
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              version_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  internalGetExpectedLatencyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 29: {
+              weight_ = input.readFloat();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 29
+            case 32: {
+              availableInFlightRequests_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              input.readMessage(
+                  internalGetConvergenceTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 53: {
+              utilization_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
+            case 56: {
+              outstandingRequests_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -740,14 +687,10 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private int version_;
-
+    private int version_ ;
     /**
-     *
-     *
      * <pre>
      * PeerLoadInfo messages with different versions cannot be safely compared.
      * For example, one version of the logic may result in a lower expected
@@ -756,17 +699,13 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 version = 1;</code>
-     *
      * @return The version.
      */
     @java.lang.Override
     public int getVersion() {
       return version_;
     }
-
     /**
-     *
-     *
      * <pre>
      * PeerLoadInfo messages with different versions cannot be safely compared.
      * For example, one version of the logic may result in a lower expected
@@ -775,7 +714,6 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 version = 1;</code>
-     *
      * @param value The version to set.
      * @return This builder for chaining.
      */
@@ -786,10 +724,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * PeerLoadInfo messages with different versions cannot be safely compared.
      * For example, one version of the logic may result in a lower expected
@@ -798,7 +733,6 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 version = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
@@ -810,52 +744,36 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
     private com.google.protobuf.Duration expectedLatency_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
-        expectedLatencyBuilder_;
-
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> expectedLatencyBuilder_;
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
      * </pre>
      *
      * <code>.google.protobuf.Duration expected_latency = 2;</code>
-     *
      * @return Whether the expectedLatency field is set.
      */
     public boolean hasExpectedLatency() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
      * </pre>
      *
      * <code>.google.protobuf.Duration expected_latency = 2;</code>
-     *
      * @return The expectedLatency.
      */
     public com.google.protobuf.Duration getExpectedLatency() {
       if (expectedLatencyBuilder_ == null) {
-        return expectedLatency_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : expectedLatency_;
+        return expectedLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : expectedLatency_;
       } else {
         return expectedLatencyBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -876,10 +794,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -887,7 +802,8 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.protobuf.Duration expected_latency = 2;</code>
      */
-    public Builder setExpectedLatency(com.google.protobuf.Duration.Builder builderForValue) {
+    public Builder setExpectedLatency(
+        com.google.protobuf.Duration.Builder builderForValue) {
       if (expectedLatencyBuilder_ == null) {
         expectedLatency_ = builderForValue.build();
       } else {
@@ -897,10 +813,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -910,9 +823,9 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeExpectedLatency(com.google.protobuf.Duration value) {
       if (expectedLatencyBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && expectedLatency_ != null
-            && expectedLatency_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          expectedLatency_ != null &&
+          expectedLatency_ != com.google.protobuf.Duration.getDefaultInstance()) {
           getExpectedLatencyBuilder().mergeFrom(value);
         } else {
           expectedLatency_ = value;
@@ -926,10 +839,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -947,10 +857,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -963,10 +870,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return internalGetExpectedLatencyFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -978,15 +882,11 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       if (expectedLatencyBuilder_ != null) {
         return expectedLatencyBuilder_.getMessageOrBuilder();
       } else {
-        return expectedLatency_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : expectedLatency_;
+        return expectedLatency_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : expectedLatency_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Peer's best guess as to how long requests will take. This may be noisy.
      * This does not include network latency.
@@ -995,51 +895,40 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      * <code>.google.protobuf.Duration expected_latency = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
         internalGetExpectedLatencyFieldBuilder() {
       if (expectedLatencyBuilder_ == null) {
-        expectedLatencyBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>(
-                getExpectedLatency(), getParentForChildren(), isClean());
+        expectedLatencyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getExpectedLatency(),
+                getParentForChildren(),
+                isClean());
         expectedLatency_ = null;
       }
       return expectedLatencyBuilder_;
     }
 
-    private float weight_;
-
+    private float weight_ ;
     /**
-     *
-     *
      * <pre>
      * Higher weight means that the peer is less healthy and traffic should be
      * reduced.
      * </pre>
      *
      * <code>float weight = 3;</code>
-     *
      * @return The weight.
      */
     @java.lang.Override
     public float getWeight() {
       return weight_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Higher weight means that the peer is less healthy and traffic should be
      * reduced.
      * </pre>
      *
      * <code>float weight = 3;</code>
-     *
      * @param value The weight to set.
      * @return This builder for chaining.
      */
@@ -1050,17 +939,13 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Higher weight means that the peer is less healthy and traffic should be
      * reduced.
      * </pre>
      *
      * <code>float weight = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearWeight() {
@@ -1070,33 +955,25 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private int availableInFlightRequests_;
-
+    private int availableInFlightRequests_ ;
     /**
-     *
-     *
      * <pre>
      * Estimate of how many more in-flight requests the peer can handle.
      * </pre>
      *
      * <code>int32 available_in_flight_requests = 4;</code>
-     *
      * @return The availableInFlightRequests.
      */
     @java.lang.Override
     public int getAvailableInFlightRequests() {
       return availableInFlightRequests_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Estimate of how many more in-flight requests the peer can handle.
      * </pre>
      *
      * <code>int32 available_in_flight_requests = 4;</code>
-     *
      * @param value The availableInFlightRequests to set.
      * @return This builder for chaining.
      */
@@ -1107,16 +984,12 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Estimate of how many more in-flight requests the peer can handle.
      * </pre>
      *
      * <code>int32 available_in_flight_requests = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAvailableInFlightRequests() {
@@ -1128,52 +1001,36 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
     private com.google.protobuf.Duration convergenceTime_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
-        convergenceTimeBuilder_;
-
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> convergenceTimeBuilder_;
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
      * </pre>
      *
      * <code>.google.protobuf.Duration convergence_time = 5;</code>
-     *
      * @return Whether the convergenceTime field is set.
      */
     public boolean hasConvergenceTime() {
       return ((bitField0_ & 0x00000010) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
      * </pre>
      *
      * <code>.google.protobuf.Duration convergence_time = 5;</code>
-     *
      * @return The convergenceTime.
      */
     public com.google.protobuf.Duration getConvergenceTime() {
       if (convergenceTimeBuilder_ == null) {
-        return convergenceTime_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : convergenceTime_;
+        return convergenceTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : convergenceTime_;
       } else {
         return convergenceTimeBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1194,10 +1051,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1205,7 +1059,8 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.protobuf.Duration convergence_time = 5;</code>
      */
-    public Builder setConvergenceTime(com.google.protobuf.Duration.Builder builderForValue) {
+    public Builder setConvergenceTime(
+        com.google.protobuf.Duration.Builder builderForValue) {
       if (convergenceTimeBuilder_ == null) {
         convergenceTime_ = builderForValue.build();
       } else {
@@ -1215,10 +1070,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1228,9 +1080,9 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeConvergenceTime(com.google.protobuf.Duration value) {
       if (convergenceTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)
-            && convergenceTime_ != null
-            && convergenceTime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          convergenceTime_ != null &&
+          convergenceTime_ != com.google.protobuf.Duration.getDefaultInstance()) {
           getConvergenceTimeBuilder().mergeFrom(value);
         } else {
           convergenceTime_ = value;
@@ -1244,10 +1096,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1265,10 +1114,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1281,10 +1127,7 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return internalGetConvergenceTimeFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1296,15 +1139,11 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       if (convergenceTimeBuilder_ != null) {
         return convergenceTimeBuilder_.getMessageOrBuilder();
       } else {
-        return convergenceTime_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : convergenceTime_;
+        return convergenceTime_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : convergenceTime_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Clients should slowly move traffic over this period of time to avoid
      * sudden changes in traffic.
@@ -1313,51 +1152,40 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
      * <code>.google.protobuf.Duration convergence_time = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
         internalGetConvergenceTimeFieldBuilder() {
       if (convergenceTimeBuilder_ == null) {
-        convergenceTimeBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>(
-                getConvergenceTime(), getParentForChildren(), isClean());
+        convergenceTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getConvergenceTime(),
+                getParentForChildren(),
+                isClean());
         convergenceTime_ = null;
       }
       return convergenceTimeBuilder_;
     }
 
-    private float utilization_;
-
+    private float utilization_ ;
     /**
-     *
-     *
      * <pre>
      * Note: this is an implementation detail that may not be set in the future.
      * Current CPU utilization of the server.
      * </pre>
      *
      * <code>float utilization = 6;</code>
-     *
      * @return The utilization.
      */
     @java.lang.Override
     public float getUtilization() {
       return utilization_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Note: this is an implementation detail that may not be set in the future.
      * Current CPU utilization of the server.
      * </pre>
      *
      * <code>float utilization = 6;</code>
-     *
      * @param value The utilization to set.
      * @return This builder for chaining.
      */
@@ -1368,17 +1196,13 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Note: this is an implementation detail that may not be set in the future.
      * Current CPU utilization of the server.
      * </pre>
      *
      * <code>float utilization = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearUtilization() {
@@ -1388,35 +1212,27 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private int outstandingRequests_;
-
+    private int outstandingRequests_ ;
     /**
-     *
-     *
      * <pre>
      * Number of requests currently being handled by the server.
      * Note: this is an implementation detail that may not be set in the future.
      * </pre>
      *
      * <code>int32 outstanding_requests = 7;</code>
-     *
      * @return The outstandingRequests.
      */
     @java.lang.Override
     public int getOutstandingRequests() {
       return outstandingRequests_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Number of requests currently being handled by the server.
      * Note: this is an implementation detail that may not be set in the future.
      * </pre>
      *
      * <code>int32 outstanding_requests = 7;</code>
-     *
      * @param value The outstandingRequests to set.
      * @return This builder for chaining.
      */
@@ -1427,17 +1243,13 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Number of requests currently being handled by the server.
      * Note: this is an implementation detail that may not be set in the future.
      * </pre>
      *
      * <code>int32 outstanding_requests = 7;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearOutstandingRequests() {
@@ -1452,7 +1264,6 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.PeerLoadInfo)
   private static final com.google.bigtable.v2.PeerLoadInfo DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.PeerLoadInfo();
   }
@@ -1461,27 +1272,27 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PeerLoadInfo> PARSER =
-      new com.google.protobuf.AbstractParser<PeerLoadInfo>() {
-        @java.lang.Override
-        public PeerLoadInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<PeerLoadInfo>
+      PARSER = new com.google.protobuf.AbstractParser<PeerLoadInfo>() {
+    @java.lang.Override
+    public PeerLoadInfo parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<PeerLoadInfo> parser() {
     return PARSER;
@@ -1496,4 +1307,6 @@ public final class PeerLoadInfo extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.PeerLoadInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

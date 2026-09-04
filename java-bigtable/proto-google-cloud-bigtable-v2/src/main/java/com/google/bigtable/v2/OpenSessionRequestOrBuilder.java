@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface OpenSessionRequestOrBuilder
-    extends
+public interface OpenSessionRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.OpenSessionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * A version indicator from the client stating its understanding of the
    * protocol. This is to disambiguate client behavior amidst changes in
@@ -22,40 +19,29 @@ public interface OpenSessionRequestOrBuilder
    * </pre>
    *
    * <code>int64 protocol_version = 1;</code>
-   *
    * @return The protocolVersion.
    */
   long getProtocolVersion();
 
   /**
-   *
-   *
    * <pre>
    * Client settings, including a record of
    * </pre>
    *
    * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
-   *
    * @return Whether the flags field is set.
    */
   boolean hasFlags();
-
   /**
-   *
-   *
    * <pre>
    * Client settings, including a record of
    * </pre>
    *
    * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
-   *
    * @return The flags.
    */
   com.google.bigtable.v2.FeatureFlags getFlags();
-
   /**
-   *
-   *
    * <pre>
    * Client settings, including a record of
    * </pre>
@@ -65,42 +51,33 @@ public interface OpenSessionRequestOrBuilder
   com.google.bigtable.v2.FeatureFlagsOrBuilder getFlagsOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Used for serverside observability.
    * </pre>
    *
    * <code>int64 consecutive_failed_connection_attempts = 3;</code>
-   *
    * @return The consecutiveFailedConnectionAttempts.
    */
   long getConsecutiveFailedConnectionAttempts();
 
   /**
-   *
-   *
    * <pre>
    * How the request should be routed (if presented as part of a GOAWAY
    * from a previous session). Post V1.
    * </pre>
    *
    * <code>bytes routing_cookie = 4;</code>
-   *
    * @return The routingCookie.
    */
   com.google.protobuf.ByteString getRoutingCookie();
 
   /**
-   *
-   *
    * <pre>
    * Can be Open{Table,AuthorizedView,MaterializedView}Request,
    * (or in post-V1, PrepareSqlQueryRequest)
    * </pre>
    *
    * <code>bytes payload = 5;</code>
-   *
    * @return The payload.
    */
   com.google.protobuf.ByteString getPayload();

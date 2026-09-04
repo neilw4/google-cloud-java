@@ -8,70 +8,64 @@ package com.google.bigtable.v2;
 @com.google.protobuf.Generated
 public final class PeerLoadInfoProto extends com.google.protobuf.GeneratedFile {
   private PeerLoadInfoProto() {}
-
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "PeerLoadInfoProto");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "PeerLoadInfoProto");
+  }
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_PeerLoadInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\'google/bigtable/v2/peer_load_info.prot"
-          + "o\022\022google.bigtable.v2\032\036google/protobuf/d"
-          + "uration.proto\"\362\001\n\014PeerLoadInfo\022\017\n\007versio"
-          + "n\030\001 \001(\005\0223\n\020expected_latency\030\002 \001(\0132\031.goog"
-          + "le.protobuf.Duration\022\016\n\006weight\030\003 \001(\002\022$\n\034"
-          + "available_in_flight_requests\030\004 \001(\005\0223\n\020co"
-          + "nvergence_time\030\005 \001(\0132\031.google.protobuf.D"
-          + "uration\022\023\n\013utilization\030\006 \001(\002\022\034\n\024outstand"
-          + "ing_requests\030\007 \001(\005B\273\001\n\026com.google.bigtab"
-          + "le.v2B\021PeerLoadInfoProtoP\001Z8cloud.google"
-          + ".com/go/bigtable/apiv2/bigtablepb;bigtab"
-          + "lepb\252\002\030Google.Cloud.Bigtable.V2\312\002\030Google"
-          + "\\Cloud\\Bigtable\\V2\352\002\033Google::Cloud::Bigt"
-          + "able::V2b\006proto3"
+      "\n\'google/bigtable/v2/peer_load_info.prot" +
+      "o\022\022google.bigtable.v2\032\036google/protobuf/d" +
+      "uration.proto\"\362\001\n\014PeerLoadInfo\022\017\n\007versio" +
+      "n\030\001 \001(\005\0223\n\020expected_latency\030\002 \001(\0132\031.goog" +
+      "le.protobuf.Duration\022\016\n\006weight\030\003 \001(\002\022$\n\034" +
+      "available_in_flight_requests\030\004 \001(\005\0223\n\020co" +
+      "nvergence_time\030\005 \001(\0132\031.google.protobuf.D" +
+      "uration\022\023\n\013utilization\030\006 \001(\002\022\034\n\024outstand" +
+      "ing_requests\030\007 \001(\005B\273\001\n\026com.google.bigtab" +
+      "le.v2B\021PeerLoadInfoProtoP\001Z8cloud.google" +
+      ".com/go/bigtable/apiv2/bigtablepb;bigtab" +
+      "lepb\252\002\030Google.Cloud.Bigtable.V2\312\002\030Google" +
+      "\\Cloud\\Bigtable\\V2\352\002\033Google::Cloud::Bigt" +
+      "able::V2b\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.protobuf.DurationProto.getDescriptor(),
-            });
-    internal_static_google_bigtable_v2_PeerLoadInfo_descriptor = getDescriptor().getMessageType(0);
-    internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_PeerLoadInfo_descriptor,
-            new java.lang.String[] {
-              "Version",
-              "ExpectedLatency",
-              "Weight",
-              "AvailableInFlightRequests",
-              "ConvergenceTime",
-              "Utilization",
-              "OutstandingRequests",
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
+        });
+    internal_static_google_bigtable_v2_PeerLoadInfo_descriptor =
+      getDescriptor().getMessageType(0);
+    internal_static_google_bigtable_v2_PeerLoadInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_PeerLoadInfo_descriptor,
+        new java.lang.String[] { "Version", "ExpectedLatency", "Weight", "AvailableInFlightRequests", "ConvergenceTime", "Utilization", "OutstandingRequests", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.DurationProto.getDescriptor();
   }

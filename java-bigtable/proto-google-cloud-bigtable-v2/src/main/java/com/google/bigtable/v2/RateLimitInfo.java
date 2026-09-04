@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Information about how client should adjust the load to Bigtable.
  * </pre>
@@ -15,51 +13,44 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.RateLimitInfo}
  */
 @com.google.protobuf.Generated
-public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
-    implements
+public final class RateLimitInfo extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.RateLimitInfo)
     RateLimitInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "RateLimitInfo");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "RateLimitInfo");
   }
-
   // Use RateLimitInfo.newBuilder() to construct.
   private RateLimitInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private RateLimitInfo() {
+  }
 
-  private RateLimitInfo() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.RateLimitInfo.class,
-            com.google.bigtable.v2.RateLimitInfo.Builder.class);
+            com.google.bigtable.v2.RateLimitInfo.class, com.google.bigtable.v2.RateLimitInfo.Builder.class);
   }
 
   private int bitField0_;
   public static final int PERIOD_FIELD_NUMBER = 1;
   private com.google.protobuf.Duration period_;
-
   /**
-   *
-   *
    * <pre>
    * Time that clients should wait before adjusting the target rate again.
    * If clients adjust rate too frequently, the impact of the previous
@@ -70,17 +61,13 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.protobuf.Duration period = 1;</code>
-   *
    * @return Whether the period field is set.
    */
   @java.lang.Override
   public boolean hasPeriod() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Time that clients should wait before adjusting the target rate again.
    * If clients adjust rate too frequently, the impact of the previous
@@ -91,17 +78,13 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.protobuf.Duration period = 1;</code>
-   *
    * @return The period.
    */
   @java.lang.Override
   public com.google.protobuf.Duration getPeriod() {
     return period_ == null ? com.google.protobuf.Duration.getDefaultInstance() : period_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Time that clients should wait before adjusting the target rate again.
    * If clients adjust rate too frequently, the impact of the previous
@@ -120,10 +103,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int FACTOR_FIELD_NUMBER = 2;
   private double factor_ = 0D;
-
   /**
-   *
-   *
    * <pre>
    * If it has been at least one `period` since the last load adjustment, the
    * client should multiply the current load by this value to get the new target
@@ -137,7 +117,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>double factor = 2;</code>
-   *
    * @return The factor.
    */
   @java.lang.Override
@@ -146,7 +125,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -158,7 +136,8 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getPeriod());
     }
@@ -175,10 +154,12 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getPeriod());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getPeriod());
     }
     if (java.lang.Double.doubleToRawLongBits(factor_) != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeDoubleSize(2, factor_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(2, factor_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -188,7 +169,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.RateLimitInfo)) {
       return super.equals(obj);
@@ -197,10 +178,12 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
 
     if (hasPeriod() != other.hasPeriod()) return false;
     if (hasPeriod()) {
-      if (!getPeriod().equals(other.getPeriod())) return false;
+      if (!getPeriod()
+          .equals(other.getPeriod())) return false;
     }
     if (java.lang.Double.doubleToLongBits(getFactor())
-        != java.lang.Double.doubleToLongBits(other.getFactor())) return false;
+        != java.lang.Double.doubleToLongBits(
+            other.getFactor())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -217,135 +200,127 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       hash = (53 * hash) + getPeriod().hashCode();
     }
     hash = (37 * hash) + FACTOR_FIELD_NUMBER;
-    hash =
-        (53 * hash)
-            + com.google.protobuf.Internal.hashLong(java.lang.Double.doubleToLongBits(getFactor()));
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getFactor()));
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.bigtable.v2.RateLimitInfo parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.RateLimitInfo parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.RateLimitInfo parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.RateLimitInfo parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.RateLimitInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.RateLimitInfo parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RateLimitInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.RateLimitInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Information about how client should adjust the load to Bigtable.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.RateLimitInfo}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RateLimitInfo)
       com.google.bigtable.v2.RateLimitInfoOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.RateLimitInfo.class,
-              com.google.bigtable.v2.RateLimitInfo.Builder.class);
+              com.google.bigtable.v2.RateLimitInfo.class, com.google.bigtable.v2.RateLimitInfo.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.RateLimitInfo.newBuilder()
@@ -353,17 +328,17 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetPeriodFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -378,9 +353,9 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
     }
 
     @java.lang.Override
@@ -400,9 +375,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.RateLimitInfo buildPartial() {
       com.google.bigtable.v2.RateLimitInfo result = new com.google.bigtable.v2.RateLimitInfo(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -411,7 +384,9 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.period_ = periodBuilder_ == null ? period_ : periodBuilder_.build();
+        result.period_ = periodBuilder_ == null
+            ? period_
+            : periodBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
@@ -423,7 +398,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.RateLimitInfo) {
-        return mergeFrom((com.google.bigtable.v2.RateLimitInfo) other);
+        return mergeFrom((com.google.bigtable.v2.RateLimitInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -464,25 +439,24 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(internalGetPeriodFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 17:
-              {
-                factor_ = input.readDouble();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 17
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetPeriodFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 17: {
+              factor_ = input.readDouble();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 17
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -492,19 +466,12 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.protobuf.Duration period_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
-        periodBuilder_;
-
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> periodBuilder_;
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -515,16 +482,12 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.protobuf.Duration period = 1;</code>
-     *
      * @return Whether the period field is set.
      */
     public boolean hasPeriod() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -535,7 +498,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.protobuf.Duration period = 1;</code>
-     *
      * @return The period.
      */
     public com.google.protobuf.Duration getPeriod() {
@@ -545,10 +507,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
         return periodBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -573,10 +532,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -588,7 +544,8 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.protobuf.Duration period = 1;</code>
      */
-    public Builder setPeriod(com.google.protobuf.Duration.Builder builderForValue) {
+    public Builder setPeriod(
+        com.google.protobuf.Duration.Builder builderForValue) {
       if (periodBuilder_ == null) {
         period_ = builderForValue.build();
       } else {
@@ -598,10 +555,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -615,9 +569,9 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergePeriod(com.google.protobuf.Duration value) {
       if (periodBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && period_ != null
-            && period_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          period_ != null &&
+          period_ != com.google.protobuf.Duration.getDefaultInstance()) {
           getPeriodBuilder().mergeFrom(value);
         } else {
           period_ = value;
@@ -631,10 +585,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -656,10 +607,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -676,10 +624,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return internalGetPeriodFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -695,13 +640,11 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       if (periodBuilder_ != null) {
         return periodBuilder_.getMessageOrBuilder();
       } else {
-        return period_ == null ? com.google.protobuf.Duration.getDefaultInstance() : period_;
+        return period_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : period_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Time that clients should wait before adjusting the target rate again.
      * If clients adjust rate too frequently, the impact of the previous
@@ -714,27 +657,21 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      * <code>.google.protobuf.Duration period = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
         internalGetPeriodFieldBuilder() {
       if (periodBuilder_ == null) {
-        periodBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>(
-                getPeriod(), getParentForChildren(), isClean());
+        periodBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getPeriod(),
+                getParentForChildren(),
+                isClean());
         period_ = null;
       }
       return periodBuilder_;
     }
 
-    private double factor_;
-
+    private double factor_ ;
     /**
-     *
-     *
      * <pre>
      * If it has been at least one `period` since the last load adjustment, the
      * client should multiply the current load by this value to get the new target
@@ -748,17 +685,13 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>double factor = 2;</code>
-     *
      * @return The factor.
      */
     @java.lang.Override
     public double getFactor() {
       return factor_;
     }
-
     /**
-     *
-     *
      * <pre>
      * If it has been at least one `period` since the last load adjustment, the
      * client should multiply the current load by this value to get the new target
@@ -772,7 +705,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>double factor = 2;</code>
-     *
      * @param value The factor to set.
      * @return This builder for chaining.
      */
@@ -783,10 +715,7 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If it has been at least one `period` since the last load adjustment, the
      * client should multiply the current load by this value to get the new target
@@ -800,7 +729,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>double factor = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearFactor() {
@@ -815,7 +743,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.RateLimitInfo)
   private static final com.google.bigtable.v2.RateLimitInfo DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.RateLimitInfo();
   }
@@ -824,27 +751,27 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RateLimitInfo> PARSER =
-      new com.google.protobuf.AbstractParser<RateLimitInfo>() {
-        @java.lang.Override
-        public RateLimitInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<RateLimitInfo>
+      PARSER = new com.google.protobuf.AbstractParser<RateLimitInfo>() {
+    @java.lang.Override
+    public RateLimitInfo parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<RateLimitInfo> parser() {
     return PARSER;
@@ -859,4 +786,6 @@ public final class RateLimitInfo extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.RateLimitInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

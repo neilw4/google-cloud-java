@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SimpleSqlReadStatsViewOrBuilder
-    extends
+public interface SimpleSqlReadStatsViewOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SimpleSqlReadStatsView)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Iteration stats describe how efficient the read is, e.g. comparing
    * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -22,14 +19,10 @@ public interface SimpleSqlReadStatsViewOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
-   *
    * @return Whether the readIterationStats field is set.
    */
   boolean hasReadIterationStats();
-
   /**
-   *
-   *
    * <pre>
    * Iteration stats describe how efficient the read is, e.g. comparing
    * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -38,14 +31,10 @@ public interface SimpleSqlReadStatsViewOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 1;</code>
-   *
    * @return The readIterationStats.
    */
   com.google.bigtable.v2.ReadIterationStats getReadIterationStats();
-
   /**
-   *
-   *
    * <pre>
    * Iteration stats describe how efficient the read is, e.g. comparing
    * rows seen vs. rows returned or cells seen vs cells returned can provide an
@@ -58,36 +47,26 @@ public interface SimpleSqlReadStatsViewOrBuilder
   com.google.bigtable.v2.ReadIterationStatsOrBuilder getReadIterationStatsOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Request latency stats describe the time taken to complete a request, from
    * the server side.
    * </pre>
    *
    * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
-   *
    * @return Whether the requestLatencyStats field is set.
    */
   boolean hasRequestLatencyStats();
-
   /**
-   *
-   *
    * <pre>
    * Request latency stats describe the time taken to complete a request, from
    * the server side.
    * </pre>
    *
    * <code>.google.bigtable.v2.RequestLatencyStats request_latency_stats = 2;</code>
-   *
    * @return The requestLatencyStats.
    */
   com.google.bigtable.v2.RequestLatencyStats getRequestLatencyStats();
-
   /**
-   *
-   *
    * <pre>
    * Request latency stats describe the time taken to complete a request, from
    * the server side.
@@ -98,64 +77,45 @@ public interface SimpleSqlReadStatsViewOrBuilder
   com.google.bigtable.v2.RequestLatencyStatsOrBuilder getRequestLatencyStatsOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
-  java.util.List<com.google.bigtable.v2.TableReadIterationStats>
+  java.util.List<com.google.bigtable.v2.TableReadIterationStats> 
       getPerTableReadIterationStatsList();
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   com.google.bigtable.v2.TableReadIterationStats getPerTableReadIterationStats(int index);
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   int getPerTableReadIterationStatsCount();
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.TableReadIterationStatsOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.TableReadIterationStatsOrBuilder> 
       getPerTableReadIterationStatsOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * Read iteration stats broken down by table.
    * </pre>
    *
-   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;
-   * </code>
+   * <code>repeated .google.bigtable.v2.TableReadIterationStats per_table_read_iteration_stats = 3;</code>
    */
   com.google.bigtable.v2.TableReadIterationStatsOrBuilder getPerTableReadIterationStatsOrBuilder(
       int index);

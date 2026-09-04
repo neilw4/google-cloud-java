@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ProtoRowsOrBuilder
-    extends
+public interface ProtoRowsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ProtoRows)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * A proto rows message consists of a list of values. Every N complete values
    * defines a row, where N is equal to the  number of entries in the
@@ -22,11 +19,9 @@ public interface ProtoRowsOrBuilder
    *
    * <code>repeated .google.bigtable.v2.Value values = 2;</code>
    */
-  java.util.List<com.google.bigtable.v2.Value> getValuesList();
-
+  java.util.List<com.google.bigtable.v2.Value> 
+      getValuesList();
   /**
-   *
-   *
    * <pre>
    * A proto rows message consists of a list of values. Every N complete values
    * defines a row, where N is equal to the  number of entries in the
@@ -36,10 +31,7 @@ public interface ProtoRowsOrBuilder
    * <code>repeated .google.bigtable.v2.Value values = 2;</code>
    */
   com.google.bigtable.v2.Value getValues(int index);
-
   /**
-   *
-   *
    * <pre>
    * A proto rows message consists of a list of values. Every N complete values
    * defines a row, where N is equal to the  number of entries in the
@@ -49,10 +41,7 @@ public interface ProtoRowsOrBuilder
    * <code>repeated .google.bigtable.v2.Value values = 2;</code>
    */
   int getValuesCount();
-
   /**
-   *
-   *
    * <pre>
    * A proto rows message consists of a list of values. Every N complete values
    * defines a row, where N is equal to the  number of entries in the
@@ -61,11 +50,9 @@ public interface ProtoRowsOrBuilder
    *
    * <code>repeated .google.bigtable.v2.Value values = 2;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> getValuesOrBuilderList();
-
+  java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> 
+      getValuesOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * A proto rows message consists of a list of values. Every N complete values
    * defines a row, where N is equal to the  number of entries in the
@@ -74,5 +61,6 @@ public interface ProtoRowsOrBuilder
    *
    * <code>repeated .google.bigtable.v2.Value values = 2;</code>
    */
-  com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(int index);
+  com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(
+      int index);
 }

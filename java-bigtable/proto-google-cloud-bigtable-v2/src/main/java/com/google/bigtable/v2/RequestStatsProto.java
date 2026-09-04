@@ -8,186 +8,174 @@ package com.google.bigtable.v2;
 @com.google.protobuf.Generated
 public final class RequestStatsProto extends com.google.protobuf.GeneratedFile {
   private RequestStatsProto() {}
-
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "RequestStatsProto");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "RequestStatsProto");
+  }
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadIterationStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_FullReadStatsView_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_FullReadStatsView_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_FullReadStatsView_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_RequestStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_RequestStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_RequestStats_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n&google/bigtable/v2/request_stats.proto"
-          + "\022\022google.bigtable.v2\032\036google/protobuf/du"
-          + "ration.proto\"\371\005\n\022ReadIterationStats\022\027\n\017r"
-          + "ows_seen_count\030\001 \001(\003\022\033\n\023rows_returned_co"
-          + "unt\030\002 \001(\003\022\030\n\020cells_seen_count\030\003 \001(\003\022\034\n\024c"
-          + "ells_returned_count\030\004 \001(\003\022S\n\022memory_laye"
-          + "r_stats\030\006 \001(\01327.google.bigtable.v2.ReadI"
-          + "terationStats.MemoryLayerStats\032\237\004\n\020Memor"
-          + "yLayerStats\022x\n\034request_ineligibility_rea"
-          + "son\030\001 \001(\0162R.google.bigtable.v2.ReadItera"
-          + "tionStats.MemoryLayerStats.RequestInelig"
-          + "ibilityReason\022g\n\021row_result_counts\030\002 \003(\013"
-          + "2L.google.bigtable.v2.ReadIterationStats"
-          + ".MemoryLayerStats.RowResultCountsEntry\0326"
-          + "\n\024RowResultCountsEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005v"
-          + "alue\030\002 \001(\003:\0028\001\"\357\001\n\032RequestIneligibilityR"
-          + "eason\022\024\n\020REQUEST_ELIGIBLE\020\000\022\033\n\027CLIENT_VE"
-          + "RSION_OUTDATED\020\001\022 \n\034APP_PROFILE_NO_MEMOR"
-          + "Y_CONFIG\020\002\022\025\n\021REQUEST_THROTTLED\020\003\022\025\n\021ROW"
-          + "SET_INELIGIBLE\020\004\022\025\n\021FILTER_INELIGIBLE\020\005\022"
-          + "\031\n\025MEMORY_LAYER_DISABLED\020\006\022\034\n\030TRANSACTIO"
-          + "NS_UNSUPPORTED\020\007\"s\n\027TableReadIterationSt"
-          + "ats\022\022\n\ntable_name\030\001 \001(\t\022D\n\024read_iteratio"
-          + "n_stats\030\002 \001(\0132&.google.bigtable.v2.ReadI"
-          + "terationStats\"Q\n\023RequestLatencyStats\022:\n\027"
-          + "frontend_server_latency\030\001 \001(\0132\031.google.p"
-          + "rotobuf.Duration\"\241\001\n\021FullReadStatsView\022D"
-          + "\n\024read_iteration_stats\030\001 \001(\0132&.google.bi"
-          + "gtable.v2.ReadIterationStats\022F\n\025request_"
-          + "latency_stats\030\002 \001(\0132\'.google.bigtable.v2"
-          + ".RequestLatencyStats\"\373\001\n\026SimpleSqlReadSt"
-          + "atsView\022D\n\024read_iteration_stats\030\001 \001(\0132&."
-          + "google.bigtable.v2.ReadIterationStats\022F\n"
-          + "\025request_latency_stats\030\002 \001(\0132\'.google.bi"
-          + "gtable.v2.RequestLatencyStats\022S\n\036per_tab"
-          + "le_read_iteration_stats\030\003 \003(\0132+.google.b"
-          + "igtable.v2.TableReadIterationStats\"\265\001\n\014R"
-          + "equestStats\022E\n\024full_read_stats_view\030\001 \001("
-          + "\0132%.google.bigtable.v2.FullReadStatsView"
-          + "H\000\022P\n\032simple_sql_read_stats_view\030\002 \001(\0132*"
-          + ".google.bigtable.v2.SimpleSqlReadStatsVi"
-          + "ewH\000B\014\n\nstats_viewB\273\001\n\026com.google.bigtab"
-          + "le.v2B\021RequestStatsProtoP\001Z8cloud.google"
-          + ".com/go/bigtable/apiv2/bigtablepb;bigtab"
-          + "lepb\252\002\030Google.Cloud.Bigtable.V2\312\002\030Google"
-          + "\\Cloud\\Bigtable\\V2\352\002\033Google::Cloud::Bigt"
-          + "able::V2b\006proto3"
+      "\n&google/bigtable/v2/request_stats.proto" +
+      "\022\022google.bigtable.v2\032\036google/protobuf/du" +
+      "ration.proto\"\371\005\n\022ReadIterationStats\022\027\n\017r" +
+      "ows_seen_count\030\001 \001(\003\022\033\n\023rows_returned_co" +
+      "unt\030\002 \001(\003\022\030\n\020cells_seen_count\030\003 \001(\003\022\034\n\024c" +
+      "ells_returned_count\030\004 \001(\003\022S\n\022memory_laye" +
+      "r_stats\030\006 \001(\01327.google.bigtable.v2.ReadI" +
+      "terationStats.MemoryLayerStats\032\237\004\n\020Memor" +
+      "yLayerStats\022x\n\034request_ineligibility_rea" +
+      "son\030\001 \001(\0162R.google.bigtable.v2.ReadItera" +
+      "tionStats.MemoryLayerStats.RequestInelig" +
+      "ibilityReason\022g\n\021row_result_counts\030\002 \003(\013" +
+      "2L.google.bigtable.v2.ReadIterationStats" +
+      ".MemoryLayerStats.RowResultCountsEntry\0326" +
+      "\n\024RowResultCountsEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005v" +
+      "alue\030\002 \001(\003:\0028\001\"\357\001\n\032RequestIneligibilityR" +
+      "eason\022\024\n\020REQUEST_ELIGIBLE\020\000\022\033\n\027CLIENT_VE" +
+      "RSION_OUTDATED\020\001\022 \n\034APP_PROFILE_NO_MEMOR" +
+      "Y_CONFIG\020\002\022\025\n\021REQUEST_THROTTLED\020\003\022\025\n\021ROW" +
+      "SET_INELIGIBLE\020\004\022\025\n\021FILTER_INELIGIBLE\020\005\022" +
+      "\031\n\025MEMORY_LAYER_DISABLED\020\006\022\034\n\030TRANSACTIO" +
+      "NS_UNSUPPORTED\020\007\"s\n\027TableReadIterationSt" +
+      "ats\022\022\n\ntable_name\030\001 \001(\t\022D\n\024read_iteratio" +
+      "n_stats\030\002 \001(\0132&.google.bigtable.v2.ReadI" +
+      "terationStats\"Q\n\023RequestLatencyStats\022:\n\027" +
+      "frontend_server_latency\030\001 \001(\0132\031.google.p" +
+      "rotobuf.Duration\"\241\001\n\021FullReadStatsView\022D" +
+      "\n\024read_iteration_stats\030\001 \001(\0132&.google.bi" +
+      "gtable.v2.ReadIterationStats\022F\n\025request_" +
+      "latency_stats\030\002 \001(\0132\'.google.bigtable.v2" +
+      ".RequestLatencyStats\"\373\001\n\026SimpleSqlReadSt" +
+      "atsView\022D\n\024read_iteration_stats\030\001 \001(\0132&." +
+      "google.bigtable.v2.ReadIterationStats\022F\n" +
+      "\025request_latency_stats\030\002 \001(\0132\'.google.bi" +
+      "gtable.v2.RequestLatencyStats\022S\n\036per_tab" +
+      "le_read_iteration_stats\030\003 \003(\0132+.google.b" +
+      "igtable.v2.TableReadIterationStats\"\265\001\n\014R" +
+      "equestStats\022E\n\024full_read_stats_view\030\001 \001(" +
+      "\0132%.google.bigtable.v2.FullReadStatsView" +
+      "H\000\022P\n\032simple_sql_read_stats_view\030\002 \001(\0132*" +
+      ".google.bigtable.v2.SimpleSqlReadStatsVi" +
+      "ewH\000B\014\n\nstats_viewB\273\001\n\026com.google.bigtab" +
+      "le.v2B\021RequestStatsProtoP\001Z8cloud.google" +
+      ".com/go/bigtable/apiv2/bigtablepb;bigtab" +
+      "lepb\252\002\030Google.Cloud.Bigtable.V2\312\002\030Google" +
+      "\\Cloud\\Bigtable\\V2\352\002\033Google::Cloud::Bigt" +
+      "able::V2b\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.protobuf.DurationProto.getDescriptor(),
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
+        });
     internal_static_google_bigtable_v2_ReadIterationStats_descriptor =
-        getDescriptor().getMessageType(0);
-    internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadIterationStats_descriptor,
-            new java.lang.String[] {
-              "RowsSeenCount",
-              "RowsReturnedCount",
-              "CellsSeenCount",
-              "CellsReturnedCount",
-              "MemoryLayerStats",
-            });
+      getDescriptor().getMessageType(0);
+    internal_static_google_bigtable_v2_ReadIterationStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadIterationStats_descriptor,
+        new java.lang.String[] { "RowsSeenCount", "RowsReturnedCount", "CellsSeenCount", "CellsReturnedCount", "MemoryLayerStats", });
     internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor =
-        internal_static_google_bigtable_v2_ReadIterationStats_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor,
-            new java.lang.String[] {
-              "RequestIneligibilityReason", "RowResultCounts",
-            });
+      internal_static_google_bigtable_v2_ReadIterationStats_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor,
+        new java.lang.String[] { "RequestIneligibilityReason", "RowResultCounts", });
     internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor =
-        internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor
-            .getNestedType(0);
-    internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor,
-            new java.lang.String[] {
-              "Key", "Value",
-            });
+      internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadIterationStats_MemoryLayerStats_RowResultCountsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_google_bigtable_v2_TableReadIterationStats_descriptor =
-        getDescriptor().getMessageType(1);
-    internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_TableReadIterationStats_descriptor,
-            new java.lang.String[] {
-              "TableName", "ReadIterationStats",
-            });
+      getDescriptor().getMessageType(1);
+    internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_TableReadIterationStats_descriptor,
+        new java.lang.String[] { "TableName", "ReadIterationStats", });
     internal_static_google_bigtable_v2_RequestLatencyStats_descriptor =
-        getDescriptor().getMessageType(2);
-    internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_RequestLatencyStats_descriptor,
-            new java.lang.String[] {
-              "FrontendServerLatency",
-            });
+      getDescriptor().getMessageType(2);
+    internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_RequestLatencyStats_descriptor,
+        new java.lang.String[] { "FrontendServerLatency", });
     internal_static_google_bigtable_v2_FullReadStatsView_descriptor =
-        getDescriptor().getMessageType(3);
-    internal_static_google_bigtable_v2_FullReadStatsView_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_FullReadStatsView_descriptor,
-            new java.lang.String[] {
-              "ReadIterationStats", "RequestLatencyStats",
-            });
+      getDescriptor().getMessageType(3);
+    internal_static_google_bigtable_v2_FullReadStatsView_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_FullReadStatsView_descriptor,
+        new java.lang.String[] { "ReadIterationStats", "RequestLatencyStats", });
     internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor =
-        getDescriptor().getMessageType(4);
-    internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor,
-            new java.lang.String[] {
-              "ReadIterationStats", "RequestLatencyStats", "PerTableReadIterationStats",
-            });
-    internal_static_google_bigtable_v2_RequestStats_descriptor = getDescriptor().getMessageType(5);
-    internal_static_google_bigtable_v2_RequestStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_RequestStats_descriptor,
-            new java.lang.String[] {
-              "FullReadStatsView", "SimpleSqlReadStatsView", "StatsView",
-            });
+      getDescriptor().getMessageType(4);
+    internal_static_google_bigtable_v2_SimpleSqlReadStatsView_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_SimpleSqlReadStatsView_descriptor,
+        new java.lang.String[] { "ReadIterationStats", "RequestLatencyStats", "PerTableReadIterationStats", });
+    internal_static_google_bigtable_v2_RequestStats_descriptor =
+      getDescriptor().getMessageType(5);
+    internal_static_google_bigtable_v2_RequestStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_RequestStats_descriptor,
+        new java.lang.String[] { "FullReadStatsView", "SimpleSqlReadStatsView", "StatsView", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.DurationProto.getDescriptor();
   }

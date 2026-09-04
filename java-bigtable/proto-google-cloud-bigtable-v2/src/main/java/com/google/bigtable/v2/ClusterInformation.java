@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Information on which Cluster served a vRPC, e.g. for Client-Side metrics.
  * Internal usage only.
@@ -16,55 +14,47 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ClusterInformation}
  */
 @com.google.protobuf.Generated
-public final class ClusterInformation extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ClusterInformation extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ClusterInformation)
     ClusterInformationOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ClusterInformation");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ClusterInformation");
   }
-
   // Use ClusterInformation.newBuilder() to construct.
   private ClusterInformation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private ClusterInformation() {
     clusterId_ = "";
     zoneId_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_ClusterInformation_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClusterInformation_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_ClusterInformation_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClusterInformation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ClusterInformation.class,
-            com.google.bigtable.v2.ClusterInformation.Builder.class);
+            com.google.bigtable.v2.ClusterInformation.class, com.google.bigtable.v2.ClusterInformation.Builder.class);
   }
 
   public static final int CLUSTER_ID_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object clusterId_ = "";
-
   /**
    * <code>string cluster_id = 1;</code>
-   *
    * @return The clusterId.
    */
   @java.lang.Override
@@ -73,24 +63,25 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       clusterId_ = s;
       return s;
     }
   }
-
   /**
    * <code>string cluster_id = 1;</code>
-   *
    * @return The bytes for clusterId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getClusterIdBytes() {
+  public com.google.protobuf.ByteString
+      getClusterIdBytes() {
     java.lang.Object ref = clusterId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       clusterId_ = b;
       return b;
     } else {
@@ -99,13 +90,10 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
   }
 
   public static final int ZONE_ID_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object zoneId_ = "";
-
   /**
    * <code>string zone_id = 2;</code>
-   *
    * @return The zoneId.
    */
   @java.lang.Override
@@ -114,24 +102,25 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       zoneId_ = s;
       return s;
     }
   }
-
   /**
    * <code>string zone_id = 2;</code>
-   *
    * @return The bytes for zoneId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getZoneIdBytes() {
+  public com.google.protobuf.ByteString
+      getZoneIdBytes() {
     java.lang.Object ref = zoneId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       zoneId_ = b;
       return b;
     } else {
@@ -140,7 +129,6 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -152,7 +140,8 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clusterId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, clusterId_);
     }
@@ -182,16 +171,17 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ClusterInformation)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.ClusterInformation other =
-        (com.google.bigtable.v2.ClusterInformation) obj;
+    com.google.bigtable.v2.ClusterInformation other = (com.google.bigtable.v2.ClusterInformation) obj;
 
-    if (!getClusterId().equals(other.getClusterId())) return false;
-    if (!getZoneId().equals(other.getZoneId())) return false;
+    if (!getClusterId()
+        .equals(other.getClusterId())) return false;
+    if (!getZoneId()
+        .equals(other.getZoneId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -212,105 +202,99 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     return hash;
   }
 
-  public static com.google.bigtable.v2.ClusterInformation parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ClusterInformation parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.ClusterInformation parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.ClusterInformation parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.ClusterInformation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ClusterInformation parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.ClusterInformation parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ClusterInformation parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ClusterInformation prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Information on which Cluster served a vRPC, e.g. for Client-Side metrics.
    * Internal usage only.
@@ -318,32 +302,33 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
    *
    * Protobuf type {@code google.bigtable.v2.ClusterInformation}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ClusterInformation)
       com.google.bigtable.v2.ClusterInformationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClusterInformation_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClusterInformation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClusterInformation_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClusterInformation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ClusterInformation.class,
-              com.google.bigtable.v2.ClusterInformation.Builder.class);
+              com.google.bigtable.v2.ClusterInformation.class, com.google.bigtable.v2.ClusterInformation.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ClusterInformation.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -354,9 +339,9 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClusterInformation_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClusterInformation_descriptor;
     }
 
     @java.lang.Override
@@ -375,11 +360,8 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
 
     @java.lang.Override
     public com.google.bigtable.v2.ClusterInformation buildPartial() {
-      com.google.bigtable.v2.ClusterInformation result =
-          new com.google.bigtable.v2.ClusterInformation(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.ClusterInformation result = new com.google.bigtable.v2.ClusterInformation(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -397,7 +379,7 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ClusterInformation) {
-        return mergeFrom((com.google.bigtable.v2.ClusterInformation) other);
+        return mergeFrom((com.google.bigtable.v2.ClusterInformation)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -442,25 +424,22 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                clusterId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                zoneId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              clusterId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              zoneId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -470,20 +449,18 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object clusterId_ = "";
-
     /**
      * <code>string cluster_id = 1;</code>
-     *
      * @return The clusterId.
      */
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         clusterId_ = s;
         return s;
@@ -491,43 +468,38 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <code>string cluster_id = 1;</code>
-     *
      * @return The bytes for clusterId.
      */
-    public com.google.protobuf.ByteString getClusterIdBytes() {
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         clusterId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <code>string cluster_id = 1;</code>
-     *
      * @param value The clusterId to set.
      * @return This builder for chaining.
      */
-    public Builder setClusterId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setClusterId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       clusterId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
      * <code>string cluster_id = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearClusterId() {
@@ -536,17 +508,14 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
      * <code>string cluster_id = 1;</code>
-     *
      * @param value The bytes for clusterId to set.
      * @return This builder for chaining.
      */
-    public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setClusterIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       clusterId_ = value;
       bitField0_ |= 0x00000001;
@@ -555,16 +524,15 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     }
 
     private java.lang.Object zoneId_ = "";
-
     /**
      * <code>string zone_id = 2;</code>
-     *
      * @return The zoneId.
      */
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         zoneId_ = s;
         return s;
@@ -572,43 +540,38 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <code>string zone_id = 2;</code>
-     *
      * @return The bytes for zoneId.
      */
-    public com.google.protobuf.ByteString getZoneIdBytes() {
+    public com.google.protobuf.ByteString
+        getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         zoneId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <code>string zone_id = 2;</code>
-     *
      * @param value The zoneId to set.
      * @return This builder for chaining.
      */
-    public Builder setZoneId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setZoneId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       zoneId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
      * <code>string zone_id = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearZoneId() {
@@ -617,17 +580,14 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
      * <code>string zone_id = 2;</code>
-     *
      * @param value The bytes for zoneId to set.
      * @return This builder for chaining.
      */
-    public Builder setZoneIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setZoneIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       zoneId_ = value;
       bitField0_ |= 0x00000002;
@@ -640,7 +600,6 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ClusterInformation)
   private static final com.google.bigtable.v2.ClusterInformation DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ClusterInformation();
   }
@@ -649,27 +608,27 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ClusterInformation> PARSER =
-      new com.google.protobuf.AbstractParser<ClusterInformation>() {
-        @java.lang.Override
-        public ClusterInformation parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ClusterInformation>
+      PARSER = new com.google.protobuf.AbstractParser<ClusterInformation>() {
+    @java.lang.Override
+    public ClusterInformation parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ClusterInformation> parser() {
     return PARSER;
@@ -684,4 +643,6 @@ public final class ClusterInformation extends com.google.protobuf.GeneratedMessa
   public com.google.bigtable.v2.ClusterInformation getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

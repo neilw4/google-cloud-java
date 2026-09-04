@@ -6,43 +6,38 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface MaterializedViewRequestOrBuilder
-    extends
+public interface MaterializedViewRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.MaterializedViewRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
-   *
    * @return Whether the readRow field is set.
    */
   boolean hasReadRow();
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
-   *
    * @return The readRow.
    */
   com.google.bigtable.v2.SessionReadRowRequest getReadRow();
-
-  /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+   */
   com.google.bigtable.v2.SessionReadRowRequestOrBuilder getReadRowOrBuilder();
 
   /**
    * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 2;</code>
-   *
    * @return Whether the readRows field is set.
    */
   boolean hasReadRows();
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 2;</code>
-   *
    * @return The readRows.
    */
   com.google.bigtable.v2.SessionReadRowsRequest getReadRows();
-
-  /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 2;</code>
+   */
   com.google.bigtable.v2.SessionReadRowsRequestOrBuilder getReadRowsOrBuilder();
 
   com.google.bigtable.v2.MaterializedViewRequest.PayloadCase getPayloadCase();

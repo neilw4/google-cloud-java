@@ -6,7 +6,7 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface HeartbeatResponseOrBuilder
-    extends
+public interface HeartbeatResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.HeartbeatResponse)
-    com.google.protobuf.MessageOrBuilder {}
+    com.google.protobuf.MessageOrBuilder {
+}

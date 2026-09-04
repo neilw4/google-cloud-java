@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Request message for Bigtable.SampleRowKeys.
  * </pre>
@@ -15,27 +13,24 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SampleRowKeysRequest}
  */
 @com.google.protobuf.Generated
-public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SampleRowKeysRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SampleRowKeysRequest)
     SampleRowKeysRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SampleRowKeysRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SampleRowKeysRequest");
   }
-
   // Use SampleRowKeysRequest.newBuilder() to construct.
   private SampleRowKeysRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private SampleRowKeysRequest() {
     tableName_ = "";
     authorizedViewName_ = "";
@@ -43,30 +38,24 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     appProfileId_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SampleRowKeysRequest.class,
-            com.google.bigtable.v2.SampleRowKeysRequest.Builder.class);
+            com.google.bigtable.v2.SampleRowKeysRequest.class, com.google.bigtable.v2.SampleRowKeysRequest.Builder.class);
   }
 
   private int bitField0_;
   public static final int TABLE_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object tableName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. The unique name of the table from which to sample row keys.
    *
@@ -74,10 +63,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
    * </pre>
    *
-   * <code>
-   * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
    * @return The tableName.
    */
   @java.lang.Override
@@ -86,16 +72,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       tableName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The unique name of the table from which to sample row keys.
    *
@@ -103,18 +87,17 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
    * </pre>
    *
-   * <code>
-   * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for tableName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getTableNameBytes() {
+  public com.google.protobuf.ByteString
+      getTableNameBytes() {
     java.lang.Object ref = tableName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       tableName_ = b;
       return b;
     } else {
@@ -123,13 +106,9 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   }
 
   public static final int AUTHORIZED_VIEW_NAME_FIELD_NUMBER = 4;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object authorizedViewName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. The unique name of the AuthorizedView from which to sample row
    * keys.
@@ -138,10 +117,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
    * </pre>
    *
-   * <code>
-   * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
    * @return The authorizedViewName.
    */
   @java.lang.Override
@@ -150,16 +126,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       authorizedViewName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The unique name of the AuthorizedView from which to sample row
    * keys.
@@ -168,18 +142,17 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
    * </pre>
    *
-   * <code>
-   * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for authorizedViewName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAuthorizedViewNameBytes() {
+  public com.google.protobuf.ByteString
+      getAuthorizedViewNameBytes() {
     java.lang.Object ref = authorizedViewName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       authorizedViewName_ = b;
       return b;
     } else {
@@ -188,13 +161,9 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   }
 
   public static final int MATERIALIZED_VIEW_NAME_FIELD_NUMBER = 5;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object materializedViewName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. The unique name of the MaterializedView from which to read.
    *
@@ -202,10 +171,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
    * </pre>
    *
-   * <code>
-   * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
    * @return The materializedViewName.
    */
   @java.lang.Override
@@ -214,16 +180,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       materializedViewName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The unique name of the MaterializedView from which to read.
    *
@@ -231,18 +195,17 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
    * </pre>
    *
-   * <code>
-   * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for materializedViewName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getMaterializedViewNameBytes() {
+  public com.google.protobuf.ByteString
+      getMaterializedViewNameBytes() {
     java.lang.Object ref = materializedViewName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       materializedViewName_ = b;
       return b;
     } else {
@@ -251,20 +214,15 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   }
 
   public static final int APP_PROFILE_ID_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object appProfileId_ = "";
-
   /**
-   *
-   *
    * <pre>
    * This value specifies routing for replication. If not specified, the
    * "default" application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2;</code>
-   *
    * @return The appProfileId.
    */
   @java.lang.Override
@@ -273,31 +231,30 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       appProfileId_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * This value specifies routing for replication. If not specified, the
    * "default" application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2;</code>
-   *
    * @return The bytes for appProfileId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAppProfileIdBytes() {
+  public com.google.protobuf.ByteString
+      getAppProfileIdBytes() {
     java.lang.Object ref = appProfileId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       appProfileId_ = b;
       return b;
     } else {
@@ -307,10 +264,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
 
   public static final int ROW_RANGE_FIELD_NUMBER = 6;
   private com.google.bigtable.v2.RowRange rowRange_;
-
   /**
-   *
-   *
    * <pre>
    * Optional. The row range to sample. If not specified, samples
    * from all rows.
@@ -319,17 +273,13 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.RowRange row_range = 6;</code>
-   *
    * @return Whether the rowRange field is set.
    */
   @java.lang.Override
   public boolean hasRowRange() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The row range to sample. If not specified, samples
    * from all rows.
@@ -338,17 +288,13 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.RowRange row_range = 6;</code>
-   *
    * @return The rowRange.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RowRange getRowRange() {
     return rowRange_ == null ? com.google.bigtable.v2.RowRange.getDefaultInstance() : rowRange_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The row range to sample. If not specified, samples
    * from all rows.
@@ -364,7 +310,6 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -376,7 +321,8 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tableName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, tableName_);
     }
@@ -414,7 +360,8 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, materializedViewName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, getRowRange());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getRowRange());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -424,21 +371,25 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SampleRowKeysRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SampleRowKeysRequest other =
-        (com.google.bigtable.v2.SampleRowKeysRequest) obj;
+    com.google.bigtable.v2.SampleRowKeysRequest other = (com.google.bigtable.v2.SampleRowKeysRequest) obj;
 
-    if (!getTableName().equals(other.getTableName())) return false;
-    if (!getAuthorizedViewName().equals(other.getAuthorizedViewName())) return false;
-    if (!getMaterializedViewName().equals(other.getMaterializedViewName())) return false;
-    if (!getAppProfileId().equals(other.getAppProfileId())) return false;
+    if (!getTableName()
+        .equals(other.getTableName())) return false;
+    if (!getAuthorizedViewName()
+        .equals(other.getAuthorizedViewName())) return false;
+    if (!getMaterializedViewName()
+        .equals(other.getMaterializedViewName())) return false;
+    if (!getAppProfileId()
+        .equals(other.getAppProfileId())) return false;
     if (hasRowRange() != other.hasRowRange()) return false;
     if (hasRowRange()) {
-      if (!getRowRange().equals(other.getRowRange())) return false;
+      if (!getRowRange()
+          .equals(other.getRowRange())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -468,128 +419,120 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     return hash;
   }
 
-  public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SampleRowKeysRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SampleRowKeysRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SampleRowKeysRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SampleRowKeysRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SampleRowKeysRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Request message for Bigtable.SampleRowKeys.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SampleRowKeysRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SampleRowKeysRequest)
       com.google.bigtable.v2.SampleRowKeysRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SampleRowKeysRequest.class,
-              com.google.bigtable.v2.SampleRowKeysRequest.Builder.class);
+              com.google.bigtable.v2.SampleRowKeysRequest.class, com.google.bigtable.v2.SampleRowKeysRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SampleRowKeysRequest.newBuilder()
@@ -597,17 +540,17 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetRowRangeFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -625,9 +568,9 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
     }
 
     @java.lang.Override
@@ -646,11 +589,8 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
 
     @java.lang.Override
     public com.google.bigtable.v2.SampleRowKeysRequest buildPartial() {
-      com.google.bigtable.v2.SampleRowKeysRequest result =
-          new com.google.bigtable.v2.SampleRowKeysRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SampleRowKeysRequest result = new com.google.bigtable.v2.SampleRowKeysRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -671,7 +611,9 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.rowRange_ = rowRangeBuilder_ == null ? rowRange_ : rowRangeBuilder_.build();
+        result.rowRange_ = rowRangeBuilder_ == null
+            ? rowRange_
+            : rowRangeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -680,7 +622,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SampleRowKeysRequest) {
-        return mergeFrom((com.google.bigtable.v2.SampleRowKeysRequest) other);
+        return mergeFrom((com.google.bigtable.v2.SampleRowKeysRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -738,44 +680,39 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                tableName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                appProfileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 18
-            case 34:
-              {
-                authorizedViewName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 34
-            case 42:
-              {
-                materializedViewName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 42
-            case 50:
-              {
-                input.readMessage(
-                    internalGetRowRangeFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 50
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              tableName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              appProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 18
+            case 34: {
+              authorizedViewName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 34
+            case 42: {
+              materializedViewName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  internalGetRowRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -785,14 +722,10 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object tableName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the table from which to sample row keys.
      *
@@ -800,16 +733,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return The tableName.
      */
     public java.lang.String getTableName() {
       java.lang.Object ref = tableName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         tableName_ = s;
         return s;
@@ -817,10 +748,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the table from which to sample row keys.
      *
@@ -828,27 +756,23 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for tableName.
      */
-    public com.google.protobuf.ByteString getTableNameBytes() {
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
       java.lang.Object ref = tableName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         tableName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the table from which to sample row keys.
      *
@@ -856,26 +780,19 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @param value The tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       tableName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the table from which to sample row keys.
      *
@@ -883,10 +800,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearTableName() {
@@ -895,10 +809,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the table from which to sample row keys.
      *
@@ -906,17 +817,13 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
      * </pre>
      *
-     * <code>
-     * string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string table_name = 1 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       tableName_ = value;
       bitField0_ |= 0x00000001;
@@ -925,10 +832,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     }
 
     private java.lang.Object authorizedViewName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the AuthorizedView from which to sample row
      * keys.
@@ -937,16 +841,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return The authorizedViewName.
      */
     public java.lang.String getAuthorizedViewName() {
       java.lang.Object ref = authorizedViewName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         authorizedViewName_ = s;
         return s;
@@ -954,10 +856,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the AuthorizedView from which to sample row
      * keys.
@@ -966,27 +865,23 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for authorizedViewName.
      */
-    public com.google.protobuf.ByteString getAuthorizedViewNameBytes() {
+    public com.google.protobuf.ByteString
+        getAuthorizedViewNameBytes() {
       java.lang.Object ref = authorizedViewName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         authorizedViewName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the AuthorizedView from which to sample row
      * keys.
@@ -995,26 +890,19 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @param value The authorizedViewName to set.
      * @return This builder for chaining.
      */
-    public Builder setAuthorizedViewName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAuthorizedViewName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       authorizedViewName_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the AuthorizedView from which to sample row
      * keys.
@@ -1023,10 +911,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAuthorizedViewName() {
@@ -1035,10 +920,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the AuthorizedView from which to sample row
      * keys.
@@ -1047,17 +929,13 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string authorized_view_name = 4 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for authorizedViewName to set.
      * @return This builder for chaining.
      */
-    public Builder setAuthorizedViewNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAuthorizedViewNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       authorizedViewName_ = value;
       bitField0_ |= 0x00000002;
@@ -1066,10 +944,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     }
 
     private java.lang.Object materializedViewName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the MaterializedView from which to read.
      *
@@ -1077,16 +952,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return The materializedViewName.
      */
     public java.lang.String getMaterializedViewName() {
       java.lang.Object ref = materializedViewName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         materializedViewName_ = s;
         return s;
@@ -1094,10 +967,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the MaterializedView from which to read.
      *
@@ -1105,27 +975,23 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for materializedViewName.
      */
-    public com.google.protobuf.ByteString getMaterializedViewNameBytes() {
+    public com.google.protobuf.ByteString
+        getMaterializedViewNameBytes() {
       java.lang.Object ref = materializedViewName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         materializedViewName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the MaterializedView from which to read.
      *
@@ -1133,26 +999,19 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @param value The materializedViewName to set.
      * @return This builder for chaining.
      */
-    public Builder setMaterializedViewName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setMaterializedViewName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       materializedViewName_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the MaterializedView from which to read.
      *
@@ -1160,10 +1019,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearMaterializedViewName() {
@@ -1172,10 +1028,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The unique name of the MaterializedView from which to read.
      *
@@ -1183,17 +1036,13 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/materializedViews/&lt;materialized_view&gt;`.
      * </pre>
      *
-     * <code>
-     * string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string materialized_view_name = 5 [(.google.api.field_behavior) = OPTIONAL, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for materializedViewName to set.
      * @return This builder for chaining.
      */
-    public Builder setMaterializedViewNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setMaterializedViewNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       materializedViewName_ = value;
       bitField0_ |= 0x00000004;
@@ -1202,23 +1051,20 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     }
 
     private java.lang.Object appProfileId_ = "";
-
     /**
-     *
-     *
      * <pre>
      * This value specifies routing for replication. If not specified, the
      * "default" application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @return The appProfileId.
      */
     public java.lang.String getAppProfileId() {
       java.lang.Object ref = appProfileId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appProfileId_ = s;
         return s;
@@ -1226,64 +1072,53 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * This value specifies routing for replication. If not specified, the
      * "default" application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @return The bytes for appProfileId.
      */
-    public com.google.protobuf.ByteString getAppProfileIdBytes() {
+    public com.google.protobuf.ByteString
+        getAppProfileIdBytes() {
       java.lang.Object ref = appProfileId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         appProfileId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * This value specifies routing for replication. If not specified, the
      * "default" application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @param value The appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       appProfileId_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This value specifies routing for replication. If not specified, the
      * "default" application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppProfileId() {
@@ -1292,24 +1127,19 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This value specifies routing for replication. If not specified, the
      * "default" application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @param value The bytes for appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       appProfileId_ = value;
       bitField0_ |= 0x00000008;
@@ -1319,14 +1149,8 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
 
     private com.google.bigtable.v2.RowRange rowRange_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowRange,
-            com.google.bigtable.v2.RowRange.Builder,
-            com.google.bigtable.v2.RowRangeOrBuilder>
-        rowRangeBuilder_;
-
+        com.google.bigtable.v2.RowRange, com.google.bigtable.v2.RowRange.Builder, com.google.bigtable.v2.RowRangeOrBuilder> rowRangeBuilder_;
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1335,16 +1159,12 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.RowRange row_range = 6;</code>
-     *
      * @return Whether the rowRange field is set.
      */
     public boolean hasRowRange() {
       return ((bitField0_ & 0x00000010) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1353,7 +1173,6 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.RowRange row_range = 6;</code>
-     *
      * @return The rowRange.
      */
     public com.google.bigtable.v2.RowRange getRowRange() {
@@ -1363,10 +1182,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
         return rowRangeBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1389,10 +1205,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1402,7 +1215,8 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      *
      * <code>.google.bigtable.v2.RowRange row_range = 6;</code>
      */
-    public Builder setRowRange(com.google.bigtable.v2.RowRange.Builder builderForValue) {
+    public Builder setRowRange(
+        com.google.bigtable.v2.RowRange.Builder builderForValue) {
       if (rowRangeBuilder_ == null) {
         rowRange_ = builderForValue.build();
       } else {
@@ -1412,10 +1226,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1427,9 +1238,9 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      */
     public Builder mergeRowRange(com.google.bigtable.v2.RowRange value) {
       if (rowRangeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)
-            && rowRange_ != null
-            && rowRange_ != com.google.bigtable.v2.RowRange.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          rowRange_ != null &&
+          rowRange_ != com.google.bigtable.v2.RowRange.getDefaultInstance()) {
           getRowRangeBuilder().mergeFrom(value);
         } else {
           rowRange_ = value;
@@ -1443,10 +1254,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1466,10 +1274,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1484,10 +1289,7 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       onChanged();
       return internalGetRowRangeFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1501,13 +1303,11 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
       if (rowRangeBuilder_ != null) {
         return rowRangeBuilder_.getMessageOrBuilder();
       } else {
-        return rowRange_ == null ? com.google.bigtable.v2.RowRange.getDefaultInstance() : rowRange_;
+        return rowRange_ == null ?
+            com.google.bigtable.v2.RowRange.getDefaultInstance() : rowRange_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The row range to sample. If not specified, samples
      * from all rows.
@@ -1518,17 +1318,14 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
      * <code>.google.bigtable.v2.RowRange row_range = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowRange,
-            com.google.bigtable.v2.RowRange.Builder,
-            com.google.bigtable.v2.RowRangeOrBuilder>
+        com.google.bigtable.v2.RowRange, com.google.bigtable.v2.RowRange.Builder, com.google.bigtable.v2.RowRangeOrBuilder> 
         internalGetRowRangeFieldBuilder() {
       if (rowRangeBuilder_ == null) {
-        rowRangeBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RowRange,
-                com.google.bigtable.v2.RowRange.Builder,
-                com.google.bigtable.v2.RowRangeOrBuilder>(
-                getRowRange(), getParentForChildren(), isClean());
+        rowRangeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RowRange, com.google.bigtable.v2.RowRange.Builder, com.google.bigtable.v2.RowRangeOrBuilder>(
+                getRowRange(),
+                getParentForChildren(),
+                isClean());
         rowRange_ = null;
       }
       return rowRangeBuilder_;
@@ -1539,7 +1336,6 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SampleRowKeysRequest)
   private static final com.google.bigtable.v2.SampleRowKeysRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SampleRowKeysRequest();
   }
@@ -1548,27 +1344,27 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SampleRowKeysRequest> PARSER =
-      new com.google.protobuf.AbstractParser<SampleRowKeysRequest>() {
-        @java.lang.Override
-        public SampleRowKeysRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SampleRowKeysRequest>
+      PARSER = new com.google.protobuf.AbstractParser<SampleRowKeysRequest>() {
+    @java.lang.Override
+    public SampleRowKeysRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SampleRowKeysRequest> parser() {
     return PARSER;
@@ -1583,4 +1379,6 @@ public final class SampleRowKeysRequest extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.SampleRowKeysRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

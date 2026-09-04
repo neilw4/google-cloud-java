@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * `Value` represents a dynamically typed value.
  * The typed fields in `Value` are used as a transport encoding for the actual
@@ -18,51 +16,46 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.Value}
  */
 @com.google.protobuf.Generated
-public final class Value extends com.google.protobuf.GeneratedMessage
-    implements
+public final class Value extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.Value)
     ValueOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "Value");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "Value");
   }
-
   // Use Value.newBuilder() to construct.
   private Value(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private Value() {
+  }
 
-  private Value() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Value_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_Value_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Value_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.bigtable.v2.Value.class, com.google.bigtable.v2.Value.Builder.class);
   }
 
   private int bitField0_;
   private int kindCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object kind_;
-
   public enum KindCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     RAW_VALUE(8),
     RAW_TIMESTAMP_MICROS(9),
@@ -76,11 +69,9 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     ARRAY_VALUE(4),
     KIND_NOT_SET(0);
     private final int value;
-
     private KindCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -93,48 +84,34 @@ public final class Value extends com.google.protobuf.GeneratedMessage
 
     public static KindCase forNumber(int value) {
       switch (value) {
-        case 8:
-          return RAW_VALUE;
-        case 9:
-          return RAW_TIMESTAMP_MICROS;
-        case 2:
-          return BYTES_VALUE;
-        case 3:
-          return STRING_VALUE;
-        case 6:
-          return INT_VALUE;
-        case 10:
-          return BOOL_VALUE;
-        case 11:
-          return FLOAT_VALUE;
-        case 12:
-          return TIMESTAMP_VALUE;
-        case 13:
-          return DATE_VALUE;
-        case 4:
-          return ARRAY_VALUE;
-        case 0:
-          return KIND_NOT_SET;
-        default:
-          return null;
+        case 8: return RAW_VALUE;
+        case 9: return RAW_TIMESTAMP_MICROS;
+        case 2: return BYTES_VALUE;
+        case 3: return STRING_VALUE;
+        case 6: return INT_VALUE;
+        case 10: return BOOL_VALUE;
+        case 11: return FLOAT_VALUE;
+        case 12: return TIMESTAMP_VALUE;
+        case 13: return DATE_VALUE;
+        case 4: return ARRAY_VALUE;
+        case 0: return KIND_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public KindCase getKindCase() {
-    return KindCase.forNumber(kindCase_);
+  public KindCase
+  getKindCase() {
+    return KindCase.forNumber(
+        kindCase_);
   }
 
   public static final int TYPE_FIELD_NUMBER = 7;
   private com.google.bigtable.v2.Type type_;
-
   /**
-   *
-   *
    * <pre>
    * The verified `Type` of this `Value`, if it cannot be inferred.
    *
@@ -152,17 +129,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.Type type = 7;</code>
-   *
    * @return Whether the type field is set.
    */
   @java.lang.Override
   public boolean hasType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * The verified `Type` of this `Value`, if it cannot be inferred.
    *
@@ -180,17 +153,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.Type type = 7;</code>
-   *
    * @return The type.
    */
   @java.lang.Override
   public com.google.bigtable.v2.Type getType() {
     return type_ == null ? com.google.bigtable.v2.Type.getDefaultInstance() : type_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The verified `Type` of this `Value`, if it cannot be inferred.
    *
@@ -215,34 +184,26 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int RAW_VALUE_FIELD_NUMBER = 8;
-
   /**
-   *
-   *
    * <pre>
    * Represents a raw byte sequence with no type information.
    * The `type` field must be omitted.
    * </pre>
    *
    * <code>bytes raw_value = 8;</code>
-   *
    * @return Whether the rawValue field is set.
    */
   @java.lang.Override
   public boolean hasRawValue() {
     return kindCase_ == 8;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a raw byte sequence with no type information.
    * The `type` field must be omitted.
    * </pre>
    *
    * <code>bytes raw_value = 8;</code>
-   *
    * @return The rawValue.
    */
   @java.lang.Override
@@ -254,34 +215,26 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int RAW_TIMESTAMP_MICROS_FIELD_NUMBER = 9;
-
   /**
-   *
-   *
    * <pre>
    * Represents a raw cell timestamp with no type information.
    * The `type` field must be omitted.
    * </pre>
    *
    * <code>int64 raw_timestamp_micros = 9;</code>
-   *
    * @return Whether the rawTimestampMicros field is set.
    */
   @java.lang.Override
   public boolean hasRawTimestampMicros() {
     return kindCase_ == 9;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a raw cell timestamp with no type information.
    * The `type` field must be omitted.
    * </pre>
    *
    * <code>int64 raw_timestamp_micros = 9;</code>
-   *
    * @return The rawTimestampMicros.
    */
   @java.lang.Override
@@ -293,32 +246,24 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int BYTES_VALUE_FIELD_NUMBER = 2;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a byte sequence.
    * </pre>
    *
    * <code>bytes bytes_value = 2;</code>
-   *
    * @return Whether the bytesValue field is set.
    */
   @java.lang.Override
   public boolean hasBytesValue() {
     return kindCase_ == 2;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a byte sequence.
    * </pre>
    *
    * <code>bytes bytes_value = 2;</code>
-   *
    * @return The bytesValue.
    */
   @java.lang.Override
@@ -330,31 +275,23 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int STRING_VALUE_FIELD_NUMBER = 3;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a string.
    * </pre>
    *
    * <code>string string_value = 3;</code>
-   *
    * @return Whether the stringValue field is set.
    */
   public boolean hasStringValue() {
     return kindCase_ == 3;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a string.
    * </pre>
    *
    * <code>string string_value = 3;</code>
-   *
    * @return The stringValue.
    */
   public java.lang.String getStringValue() {
@@ -365,7 +302,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       if (kindCase_ == 3) {
         kind_ = s;
@@ -373,26 +311,24 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a string.
    * </pre>
    *
    * <code>string string_value = 3;</code>
-   *
    * @return The bytes for stringValue.
    */
-  public com.google.protobuf.ByteString getStringValueBytes() {
+  public com.google.protobuf.ByteString
+      getStringValueBytes() {
     java.lang.Object ref = "";
     if (kindCase_ == 3) {
       ref = kind_;
     }
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       if (kindCase_ == 3) {
         kind_ = b;
       }
@@ -403,32 +339,24 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int INT_VALUE_FIELD_NUMBER = 6;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as an integer.
    * </pre>
    *
    * <code>int64 int_value = 6;</code>
-   *
    * @return Whether the intValue field is set.
    */
   @java.lang.Override
   public boolean hasIntValue() {
     return kindCase_ == 6;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as an integer.
    * </pre>
    *
    * <code>int64 int_value = 6;</code>
-   *
    * @return The intValue.
    */
   @java.lang.Override
@@ -440,32 +368,24 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int BOOL_VALUE_FIELD_NUMBER = 10;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a boolean.
    * </pre>
    *
    * <code>bool bool_value = 10;</code>
-   *
    * @return Whether the boolValue field is set.
    */
   @java.lang.Override
   public boolean hasBoolValue() {
     return kindCase_ == 10;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a boolean.
    * </pre>
    *
    * <code>bool bool_value = 10;</code>
-   *
    * @return The boolValue.
    */
   @java.lang.Override
@@ -477,34 +397,26 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int FLOAT_VALUE_FIELD_NUMBER = 11;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a floating point number.
    * Does not support NaN or infinities.
    * </pre>
    *
    * <code>double float_value = 11;</code>
-   *
    * @return Whether the floatValue field is set.
    */
   @java.lang.Override
   public boolean hasFloatValue() {
     return kindCase_ == 11;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a floating point number.
    * Does not support NaN or infinities.
    * </pre>
    *
    * <code>double float_value = 11;</code>
-   *
    * @return The floatValue.
    */
   @java.lang.Override
@@ -516,45 +428,34 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int TIMESTAMP_VALUE_FIELD_NUMBER = 12;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a timestamp.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 12;</code>
-   *
    * @return Whether the timestampValue field is set.
    */
   @java.lang.Override
   public boolean hasTimestampValue() {
     return kindCase_ == 12;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a timestamp.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 12;</code>
-   *
    * @return The timestampValue.
    */
   @java.lang.Override
   public com.google.protobuf.Timestamp getTimestampValue() {
     if (kindCase_ == 12) {
-      return (com.google.protobuf.Timestamp) kind_;
+       return (com.google.protobuf.Timestamp) kind_;
     }
     return com.google.protobuf.Timestamp.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a timestamp.
    * </pre>
@@ -564,51 +465,40 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampValueOrBuilder() {
     if (kindCase_ == 12) {
-      return (com.google.protobuf.Timestamp) kind_;
+       return (com.google.protobuf.Timestamp) kind_;
     }
     return com.google.protobuf.Timestamp.getDefaultInstance();
   }
 
   public static final int DATE_VALUE_FIELD_NUMBER = 13;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a date.
    * </pre>
    *
    * <code>.google.type.Date date_value = 13;</code>
-   *
    * @return Whether the dateValue field is set.
    */
   @java.lang.Override
   public boolean hasDateValue() {
     return kindCase_ == 13;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a date.
    * </pre>
    *
    * <code>.google.type.Date date_value = 13;</code>
-   *
    * @return The dateValue.
    */
   @java.lang.Override
   public com.google.type.Date getDateValue() {
     if (kindCase_ == 13) {
-      return (com.google.type.Date) kind_;
+       return (com.google.type.Date) kind_;
     }
     return com.google.type.Date.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a date.
    * </pre>
@@ -618,16 +508,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.type.DateOrBuilder getDateValueOrBuilder() {
     if (kindCase_ == 13) {
-      return (com.google.type.Date) kind_;
+       return (com.google.type.Date) kind_;
     }
     return com.google.type.Date.getDefaultInstance();
   }
 
   public static final int ARRAY_VALUE_FIELD_NUMBER = 4;
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a sequence of values.
    * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -637,17 +524,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.ArrayValue array_value = 4;</code>
-   *
    * @return Whether the arrayValue field is set.
    */
   @java.lang.Override
   public boolean hasArrayValue() {
     return kindCase_ == 4;
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a sequence of values.
    * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -657,20 +540,16 @@ public final class Value extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.ArrayValue array_value = 4;</code>
-   *
    * @return The arrayValue.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ArrayValue getArrayValue() {
     if (kindCase_ == 4) {
-      return (com.google.bigtable.v2.ArrayValue) kind_;
+       return (com.google.bigtable.v2.ArrayValue) kind_;
     }
     return com.google.bigtable.v2.ArrayValue.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a typed value transported as a sequence of values.
    * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -684,13 +563,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.ArrayValueOrBuilder getArrayValueOrBuilder() {
     if (kindCase_ == 4) {
-      return (com.google.bigtable.v2.ArrayValue) kind_;
+       return (com.google.bigtable.v2.ArrayValue) kind_;
     }
     return com.google.bigtable.v2.ArrayValue.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -702,9 +580,11 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (kindCase_ == 2) {
-      output.writeBytes(2, (com.google.protobuf.ByteString) kind_);
+      output.writeBytes(
+          2, (com.google.protobuf.ByteString) kind_);
     }
     if (kindCase_ == 3) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, kind_);
@@ -713,22 +593,27 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       output.writeMessage(4, (com.google.bigtable.v2.ArrayValue) kind_);
     }
     if (kindCase_ == 6) {
-      output.writeInt64(6, (long) ((java.lang.Long) kind_));
+      output.writeInt64(
+          6, (long)((java.lang.Long) kind_));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getType());
     }
     if (kindCase_ == 8) {
-      output.writeBytes(8, (com.google.protobuf.ByteString) kind_);
+      output.writeBytes(
+          8, (com.google.protobuf.ByteString) kind_);
     }
     if (kindCase_ == 9) {
-      output.writeInt64(9, (long) ((java.lang.Long) kind_));
+      output.writeInt64(
+          9, (long)((java.lang.Long) kind_));
     }
     if (kindCase_ == 10) {
-      output.writeBool(10, (boolean) ((java.lang.Boolean) kind_));
+      output.writeBool(
+          10, (boolean)((java.lang.Boolean) kind_));
     }
     if (kindCase_ == 11) {
-      output.writeDouble(11, (double) ((java.lang.Double) kind_));
+      output.writeDouble(
+          11, (double)((java.lang.Double) kind_));
     }
     if (kindCase_ == 12) {
       output.writeMessage(12, (com.google.protobuf.Timestamp) kind_);
@@ -746,55 +631,53 @@ public final class Value extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (kindCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              2, (com.google.protobuf.ByteString) kind_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            2, (com.google.protobuf.ByteString) kind_);
     }
     if (kindCase_ == 3) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, kind_);
     }
     if (kindCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.bigtable.v2.ArrayValue) kind_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.bigtable.v2.ArrayValue) kind_);
     }
     if (kindCase_ == 6) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt64Size(
-              6, (long) ((java.lang.Long) kind_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            6, (long)((java.lang.Long) kind_));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getType());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getType());
     }
     if (kindCase_ == 8) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              8, (com.google.protobuf.ByteString) kind_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            8, (com.google.protobuf.ByteString) kind_);
     }
     if (kindCase_ == 9) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt64Size(
-              9, (long) ((java.lang.Long) kind_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            9, (long)((java.lang.Long) kind_));
     }
     if (kindCase_ == 10) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBoolSize(
-              10, (boolean) ((java.lang.Boolean) kind_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            10, (boolean)((java.lang.Boolean) kind_));
     }
     if (kindCase_ == 11) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeDoubleSize(
-              11, (double) ((java.lang.Double) kind_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(
+            11, (double)((java.lang.Double) kind_));
     }
     if (kindCase_ == 12) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              12, (com.google.protobuf.Timestamp) kind_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.google.protobuf.Timestamp) kind_);
     }
     if (kindCase_ == 13) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              13, (com.google.type.Date) kind_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.google.type.Date) kind_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -804,7 +687,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.Value)) {
       return super.equals(obj);
@@ -813,40 +696,51 @@ public final class Value extends com.google.protobuf.GeneratedMessage
 
     if (hasType() != other.hasType()) return false;
     if (hasType()) {
-      if (!getType().equals(other.getType())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
     }
     if (!getKindCase().equals(other.getKindCase())) return false;
     switch (kindCase_) {
       case 8:
-        if (!getRawValue().equals(other.getRawValue())) return false;
+        if (!getRawValue()
+            .equals(other.getRawValue())) return false;
         break;
       case 9:
-        if (getRawTimestampMicros() != other.getRawTimestampMicros()) return false;
+        if (getRawTimestampMicros()
+            != other.getRawTimestampMicros()) return false;
         break;
       case 2:
-        if (!getBytesValue().equals(other.getBytesValue())) return false;
+        if (!getBytesValue()
+            .equals(other.getBytesValue())) return false;
         break;
       case 3:
-        if (!getStringValue().equals(other.getStringValue())) return false;
+        if (!getStringValue()
+            .equals(other.getStringValue())) return false;
         break;
       case 6:
-        if (getIntValue() != other.getIntValue()) return false;
+        if (getIntValue()
+            != other.getIntValue()) return false;
         break;
       case 10:
-        if (getBoolValue() != other.getBoolValue()) return false;
+        if (getBoolValue()
+            != other.getBoolValue()) return false;
         break;
       case 11:
         if (java.lang.Double.doubleToLongBits(getFloatValue())
-            != java.lang.Double.doubleToLongBits(other.getFloatValue())) return false;
+            != java.lang.Double.doubleToLongBits(
+                other.getFloatValue())) return false;
         break;
       case 12:
-        if (!getTimestampValue().equals(other.getTimestampValue())) return false;
+        if (!getTimestampValue()
+            .equals(other.getTimestampValue())) return false;
         break;
       case 13:
-        if (!getDateValue().equals(other.getDateValue())) return false;
+        if (!getDateValue()
+            .equals(other.getDateValue())) return false;
         break;
       case 4:
-        if (!getArrayValue().equals(other.getArrayValue())) return false;
+        if (!getArrayValue()
+            .equals(other.getArrayValue())) return false;
         break;
       case 0:
       default:
@@ -873,7 +767,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         break;
       case 9:
         hash = (37 * hash) + RAW_TIMESTAMP_MICROS_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getRawTimestampMicros());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRawTimestampMicros());
         break;
       case 2:
         hash = (37 * hash) + BYTES_VALUE_FIELD_NUMBER;
@@ -885,18 +780,18 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         break;
       case 6:
         hash = (37 * hash) + INT_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getIntValue());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getIntValue());
         break;
       case 10:
         hash = (37 * hash) + BOOL_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getBoolValue());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getBoolValue());
         break;
       case 11:
         hash = (37 * hash) + FLOAT_VALUE_FIELD_NUMBER;
-        hash =
-            (53 * hash)
-                + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getFloatValue()));
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getFloatValue()));
         break;
       case 12:
         hash = (37 * hash) + TIMESTAMP_VALUE_FIELD_NUMBER;
@@ -918,104 +813,99 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.Value parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.Value parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.Value parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.Value parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.Value parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.Value parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.Value parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.bigtable.v2.Value parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.Value parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.Value prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * `Value` represents a dynamically typed value.
    * The typed fields in `Value` are used as a transport encoding for the actual
@@ -1025,19 +915,19 @@ public final class Value extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.Value}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.Value)
       com.google.bigtable.v2.ValueOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Value_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_Value_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Value_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.bigtable.v2.Value.class, com.google.bigtable.v2.Value.Builder.class);
     }
@@ -1047,17 +937,17 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetTypeFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1082,7 +972,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Value_descriptor;
     }
 
@@ -1103,9 +994,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.Value buildPartial() {
       com.google.bigtable.v2.Value result = new com.google.bigtable.v2.Value(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -1115,7 +1004,9 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.type_ = typeBuilder_ == null ? type_ : typeBuilder_.build();
+        result.type_ = typeBuilder_ == null
+            ? type_
+            : typeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -1124,13 +1015,16 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     private void buildPartialOneofs(com.google.bigtable.v2.Value result) {
       result.kindCase_ = kindCase_;
       result.kind_ = this.kind_;
-      if (kindCase_ == 12 && timestampValueBuilder_ != null) {
+      if (kindCase_ == 12 &&
+          timestampValueBuilder_ != null) {
         result.kind_ = timestampValueBuilder_.build();
       }
-      if (kindCase_ == 13 && dateValueBuilder_ != null) {
+      if (kindCase_ == 13 &&
+          dateValueBuilder_ != null) {
         result.kind_ = dateValueBuilder_.build();
       }
-      if (kindCase_ == 4 && arrayValueBuilder_ != null) {
+      if (kindCase_ == 4 &&
+          arrayValueBuilder_ != null) {
         result.kind_ = arrayValueBuilder_.build();
       }
     }
@@ -1138,7 +1032,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.Value) {
-        return mergeFrom((com.google.bigtable.v2.Value) other);
+        return mergeFrom((com.google.bigtable.v2.Value)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1151,62 +1045,51 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         mergeType(other.getType());
       }
       switch (other.getKindCase()) {
-        case RAW_VALUE:
-          {
-            setRawValue(other.getRawValue());
-            break;
-          }
-        case RAW_TIMESTAMP_MICROS:
-          {
-            setRawTimestampMicros(other.getRawTimestampMicros());
-            break;
-          }
-        case BYTES_VALUE:
-          {
-            setBytesValue(other.getBytesValue());
-            break;
-          }
-        case STRING_VALUE:
-          {
-            kindCase_ = 3;
-            kind_ = other.kind_;
-            onChanged();
-            break;
-          }
-        case INT_VALUE:
-          {
-            setIntValue(other.getIntValue());
-            break;
-          }
-        case BOOL_VALUE:
-          {
-            setBoolValue(other.getBoolValue());
-            break;
-          }
-        case FLOAT_VALUE:
-          {
-            setFloatValue(other.getFloatValue());
-            break;
-          }
-        case TIMESTAMP_VALUE:
-          {
-            mergeTimestampValue(other.getTimestampValue());
-            break;
-          }
-        case DATE_VALUE:
-          {
-            mergeDateValue(other.getDateValue());
-            break;
-          }
-        case ARRAY_VALUE:
-          {
-            mergeArrayValue(other.getArrayValue());
-            break;
-          }
-        case KIND_NOT_SET:
-          {
-            break;
-          }
+        case RAW_VALUE: {
+          setRawValue(other.getRawValue());
+          break;
+        }
+        case RAW_TIMESTAMP_MICROS: {
+          setRawTimestampMicros(other.getRawTimestampMicros());
+          break;
+        }
+        case BYTES_VALUE: {
+          setBytesValue(other.getBytesValue());
+          break;
+        }
+        case STRING_VALUE: {
+          kindCase_ = 3;
+          kind_ = other.kind_;
+          onChanged();
+          break;
+        }
+        case INT_VALUE: {
+          setIntValue(other.getIntValue());
+          break;
+        }
+        case BOOL_VALUE: {
+          setBoolValue(other.getBoolValue());
+          break;
+        }
+        case FLOAT_VALUE: {
+          setFloatValue(other.getFloatValue());
+          break;
+        }
+        case TIMESTAMP_VALUE: {
+          mergeTimestampValue(other.getTimestampValue());
+          break;
+        }
+        case DATE_VALUE: {
+          mergeDateValue(other.getDateValue());
+          break;
+        }
+        case ARRAY_VALUE: {
+          mergeArrayValue(other.getArrayValue());
+          break;
+        }
+        case KIND_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1234,83 +1117,76 @@ public final class Value extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 18:
-              {
-                kind_ = input.readBytes();
-                kindCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                kindCase_ = 3;
-                kind_ = s;
-                break;
-              } // case 26
-            case 34:
-              {
-                input.readMessage(
-                    internalGetArrayValueFieldBuilder().getBuilder(), extensionRegistry);
-                kindCase_ = 4;
-                break;
-              } // case 34
-            case 48:
-              {
-                kind_ = input.readInt64();
-                kindCase_ = 6;
-                break;
-              } // case 48
-            case 58:
-              {
-                input.readMessage(internalGetTypeFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 58
-            case 66:
-              {
-                kind_ = input.readBytes();
-                kindCase_ = 8;
-                break;
-              } // case 66
-            case 72:
-              {
-                kind_ = input.readInt64();
-                kindCase_ = 9;
-                break;
-              } // case 72
-            case 80:
-              {
-                kind_ = input.readBool();
-                kindCase_ = 10;
-                break;
-              } // case 80
-            case 89:
-              {
-                kind_ = input.readDouble();
-                kindCase_ = 11;
-                break;
-              } // case 89
-            case 98:
-              {
-                input.readMessage(
-                    internalGetTimestampValueFieldBuilder().getBuilder(), extensionRegistry);
-                kindCase_ = 12;
-                break;
-              } // case 98
-            case 106:
-              {
-                input.readMessage(
-                    internalGetDateValueFieldBuilder().getBuilder(), extensionRegistry);
-                kindCase_ = 13;
-                break;
-              } // case 106
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 18: {
+              kind_ = input.readBytes();
+              kindCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              kindCase_ = 3;
+              kind_ = s;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetArrayValueFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              kindCase_ = 4;
+              break;
+            } // case 34
+            case 48: {
+              kind_ = input.readInt64();
+              kindCase_ = 6;
+              break;
+            } // case 48
+            case 58: {
+              input.readMessage(
+                  internalGetTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 58
+            case 66: {
+              kind_ = input.readBytes();
+              kindCase_ = 8;
+              break;
+            } // case 66
+            case 72: {
+              kind_ = input.readInt64();
+              kindCase_ = 9;
+              break;
+            } // case 72
+            case 80: {
+              kind_ = input.readBool();
+              kindCase_ = 10;
+              break;
+            } // case 80
+            case 89: {
+              kind_ = input.readDouble();
+              kindCase_ = 11;
+              break;
+            } // case 89
+            case 98: {
+              input.readMessage(
+                  internalGetTimestampValueFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              kindCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  internalGetDateValueFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              kindCase_ = 13;
+              break;
+            } // case 106
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1320,12 +1196,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int kindCase_ = 0;
     private java.lang.Object kind_;
-
-    public KindCase getKindCase() {
-      return KindCase.forNumber(kindCase_);
+    public KindCase
+        getKindCase() {
+      return KindCase.forNumber(
+          kindCase_);
     }
 
     public Builder clearKind() {
@@ -1339,14 +1215,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
 
     private com.google.bigtable.v2.Type type_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.Type,
-            com.google.bigtable.v2.Type.Builder,
-            com.google.bigtable.v2.TypeOrBuilder>
-        typeBuilder_;
-
+        com.google.bigtable.v2.Type, com.google.bigtable.v2.Type.Builder, com.google.bigtable.v2.TypeOrBuilder> typeBuilder_;
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1364,16 +1234,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.Type type = 7;</code>
-     *
      * @return Whether the type field is set.
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1391,7 +1257,6 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.Type type = 7;</code>
-     *
      * @return The type.
      */
     public com.google.bigtable.v2.Type getType() {
@@ -1401,10 +1266,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return typeBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1436,10 +1298,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1458,7 +1317,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.bigtable.v2.Type type = 7;</code>
      */
-    public Builder setType(com.google.bigtable.v2.Type.Builder builderForValue) {
+    public Builder setType(
+        com.google.bigtable.v2.Type.Builder builderForValue) {
       if (typeBuilder_ == null) {
         type_ = builderForValue.build();
       } else {
@@ -1468,10 +1328,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1492,9 +1349,9 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeType(com.google.bigtable.v2.Type value) {
       if (typeBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && type_ != null
-            && type_ != com.google.bigtable.v2.Type.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          type_ != null &&
+          type_ != com.google.bigtable.v2.Type.getDefaultInstance()) {
           getTypeBuilder().mergeFrom(value);
         } else {
           type_ = value;
@@ -1508,10 +1365,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1540,10 +1394,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1567,10 +1418,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return internalGetTypeFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1593,13 +1441,11 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       if (typeBuilder_ != null) {
         return typeBuilder_.getMessageOrBuilder();
       } else {
-        return type_ == null ? com.google.bigtable.v2.Type.getDefaultInstance() : type_;
+        return type_ == null ?
+            com.google.bigtable.v2.Type.getDefaultInstance() : type_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The verified `Type` of this `Value`, if it cannot be inferred.
      *
@@ -1619,47 +1465,38 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.Type type = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.Type,
-            com.google.bigtable.v2.Type.Builder,
-            com.google.bigtable.v2.TypeOrBuilder>
+        com.google.bigtable.v2.Type, com.google.bigtable.v2.Type.Builder, com.google.bigtable.v2.TypeOrBuilder> 
         internalGetTypeFieldBuilder() {
       if (typeBuilder_ == null) {
-        typeBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.Type,
-                com.google.bigtable.v2.Type.Builder,
-                com.google.bigtable.v2.TypeOrBuilder>(getType(), getParentForChildren(), isClean());
+        typeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.Type, com.google.bigtable.v2.Type.Builder, com.google.bigtable.v2.TypeOrBuilder>(
+                getType(),
+                getParentForChildren(),
+                isClean());
         type_ = null;
       }
       return typeBuilder_;
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a raw byte sequence with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>bytes raw_value = 8;</code>
-     *
      * @return Whether the rawValue field is set.
      */
     public boolean hasRawValue() {
       return kindCase_ == 8;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a raw byte sequence with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>bytes raw_value = 8;</code>
-     *
      * @return The rawValue.
      */
     public com.google.protobuf.ByteString getRawValue() {
@@ -1668,40 +1505,30 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a raw byte sequence with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>bytes raw_value = 8;</code>
-     *
      * @param value The rawValue to set.
      * @return This builder for chaining.
      */
     public Builder setRawValue(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       kindCase_ = 8;
       kind_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a raw byte sequence with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>bytes raw_value = 8;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRawValue() {
@@ -1714,31 +1541,24 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a raw cell timestamp with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>int64 raw_timestamp_micros = 9;</code>
-     *
      * @return Whether the rawTimestampMicros field is set.
      */
     public boolean hasRawTimestampMicros() {
       return kindCase_ == 9;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a raw cell timestamp with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>int64 raw_timestamp_micros = 9;</code>
-     *
      * @return The rawTimestampMicros.
      */
     public long getRawTimestampMicros() {
@@ -1747,17 +1567,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return 0L;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a raw cell timestamp with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>int64 raw_timestamp_micros = 9;</code>
-     *
      * @param value The rawTimestampMicros to set.
      * @return This builder for chaining.
      */
@@ -1768,17 +1584,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a raw cell timestamp with no type information.
      * The `type` field must be omitted.
      * </pre>
      *
      * <code>int64 raw_timestamp_micros = 9;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRawTimestampMicros() {
@@ -1791,29 +1603,22 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a byte sequence.
      * </pre>
      *
      * <code>bytes bytes_value = 2;</code>
-     *
      * @return Whether the bytesValue field is set.
      */
     public boolean hasBytesValue() {
       return kindCase_ == 2;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a byte sequence.
      * </pre>
      *
      * <code>bytes bytes_value = 2;</code>
-     *
      * @return The bytesValue.
      */
     public com.google.protobuf.ByteString getBytesValue() {
@@ -1822,38 +1627,28 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a byte sequence.
      * </pre>
      *
      * <code>bytes bytes_value = 2;</code>
-     *
      * @param value The bytesValue to set.
      * @return This builder for chaining.
      */
     public Builder setBytesValue(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       kindCase_ = 2;
       kind_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a byte sequence.
      * </pre>
      *
      * <code>bytes bytes_value = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearBytesValue() {
@@ -1866,30 +1661,23 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a string.
      * </pre>
      *
      * <code>string string_value = 3;</code>
-     *
      * @return Whether the stringValue field is set.
      */
     @java.lang.Override
     public boolean hasStringValue() {
       return kindCase_ == 3;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a string.
      * </pre>
      *
      * <code>string string_value = 3;</code>
-     *
      * @return The stringValue.
      */
     @java.lang.Override
@@ -1899,7 +1687,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         ref = kind_;
       }
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (kindCase_ == 3) {
           kind_ = s;
@@ -1909,27 +1698,25 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a string.
      * </pre>
      *
      * <code>string string_value = 3;</code>
-     *
      * @return The bytes for stringValue.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getStringValueBytes() {
+    public com.google.protobuf.ByteString
+        getStringValueBytes() {
       java.lang.Object ref = "";
       if (kindCase_ == 3) {
         ref = kind_;
       }
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         if (kindCase_ == 3) {
           kind_ = b;
         }
@@ -1938,38 +1725,29 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a string.
      * </pre>
      *
      * <code>string string_value = 3;</code>
-     *
      * @param value The stringValue to set.
      * @return This builder for chaining.
      */
-    public Builder setStringValue(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setStringValue(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       kindCase_ = 3;
       kind_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a string.
      * </pre>
      *
      * <code>string string_value = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearStringValue() {
@@ -1980,23 +1758,18 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a string.
      * </pre>
      *
      * <code>string string_value = 3;</code>
-     *
      * @param value The bytes for stringValue to set.
      * @return This builder for chaining.
      */
-    public Builder setStringValueBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setStringValueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       kindCase_ = 3;
       kind_ = value;
@@ -2005,29 +1778,22 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as an integer.
      * </pre>
      *
      * <code>int64 int_value = 6;</code>
-     *
      * @return Whether the intValue field is set.
      */
     public boolean hasIntValue() {
       return kindCase_ == 6;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as an integer.
      * </pre>
      *
      * <code>int64 int_value = 6;</code>
-     *
      * @return The intValue.
      */
     public long getIntValue() {
@@ -2036,16 +1802,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return 0L;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as an integer.
      * </pre>
      *
      * <code>int64 int_value = 6;</code>
-     *
      * @param value The intValue to set.
      * @return This builder for chaining.
      */
@@ -2056,16 +1818,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as an integer.
      * </pre>
      *
      * <code>int64 int_value = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearIntValue() {
@@ -2078,29 +1836,22 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a boolean.
      * </pre>
      *
      * <code>bool bool_value = 10;</code>
-     *
      * @return Whether the boolValue field is set.
      */
     public boolean hasBoolValue() {
       return kindCase_ == 10;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a boolean.
      * </pre>
      *
      * <code>bool bool_value = 10;</code>
-     *
      * @return The boolValue.
      */
     public boolean getBoolValue() {
@@ -2109,16 +1860,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return false;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a boolean.
      * </pre>
      *
      * <code>bool bool_value = 10;</code>
-     *
      * @param value The boolValue to set.
      * @return This builder for chaining.
      */
@@ -2129,16 +1876,12 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a boolean.
      * </pre>
      *
      * <code>bool bool_value = 10;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearBoolValue() {
@@ -2151,31 +1894,24 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a floating point number.
      * Does not support NaN or infinities.
      * </pre>
      *
      * <code>double float_value = 11;</code>
-     *
      * @return Whether the floatValue field is set.
      */
     public boolean hasFloatValue() {
       return kindCase_ == 11;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a floating point number.
      * Does not support NaN or infinities.
      * </pre>
      *
      * <code>double float_value = 11;</code>
-     *
      * @return The floatValue.
      */
     public double getFloatValue() {
@@ -2184,17 +1920,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return 0D;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a floating point number.
      * Does not support NaN or infinities.
      * </pre>
      *
      * <code>double float_value = 11;</code>
-     *
      * @param value The floatValue to set.
      * @return This builder for chaining.
      */
@@ -2205,17 +1937,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a floating point number.
      * Does not support NaN or infinities.
      * </pre>
      *
      * <code>double float_value = 11;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearFloatValue() {
@@ -2228,36 +1956,25 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp,
-            com.google.protobuf.Timestamp.Builder,
-            com.google.protobuf.TimestampOrBuilder>
-        timestampValueBuilder_;
-
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampValueBuilder_;
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 12;</code>
-     *
      * @return Whether the timestampValue field is set.
      */
     @java.lang.Override
     public boolean hasTimestampValue() {
       return kindCase_ == 12;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 12;</code>
-     *
      * @return The timestampValue.
      */
     @java.lang.Override
@@ -2274,10 +1991,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return com.google.protobuf.Timestamp.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
@@ -2297,17 +2011,15 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 12;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 12;</code>
      */
-    public Builder setTimestampValue(com.google.protobuf.Timestamp.Builder builderForValue) {
+    public Builder setTimestampValue(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
       if (timestampValueBuilder_ == null) {
         kind_ = builderForValue.build();
         onChanged();
@@ -2317,10 +2029,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 12;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
@@ -2329,11 +2038,10 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeTimestampValue(com.google.protobuf.Timestamp value) {
       if (timestampValueBuilder_ == null) {
-        if (kindCase_ == 12 && kind_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          kind_ =
-              com.google.protobuf.Timestamp.newBuilder((com.google.protobuf.Timestamp) kind_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (kindCase_ == 12 &&
+            kind_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          kind_ = com.google.protobuf.Timestamp.newBuilder((com.google.protobuf.Timestamp) kind_)
+              .mergeFrom(value).buildPartial();
         } else {
           kind_ = value;
         }
@@ -2348,10 +2056,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 12;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
@@ -2374,10 +2079,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
@@ -2387,10 +2089,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     public com.google.protobuf.Timestamp.Builder getTimestampValueBuilder() {
       return internalGetTimestampValueFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
@@ -2408,10 +2107,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return com.google.protobuf.Timestamp.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a timestamp.
      * </pre>
@@ -2419,20 +2115,17 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * <code>.google.protobuf.Timestamp timestamp_value = 12;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp,
-            com.google.protobuf.Timestamp.Builder,
-            com.google.protobuf.TimestampOrBuilder>
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
         internalGetTimestampValueFieldBuilder() {
       if (timestampValueBuilder_ == null) {
         if (!(kindCase_ == 12)) {
           kind_ = com.google.protobuf.Timestamp.getDefaultInstance();
         }
-        timestampValueBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Timestamp,
-                com.google.protobuf.Timestamp.Builder,
-                com.google.protobuf.TimestampOrBuilder>(
-                (com.google.protobuf.Timestamp) kind_, getParentForChildren(), isClean());
+        timestampValueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                (com.google.protobuf.Timestamp) kind_,
+                getParentForChildren(),
+                isClean());
         kind_ = null;
       }
       kindCase_ = 12;
@@ -2441,34 +2134,25 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>
-        dateValueBuilder_;
-
+        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> dateValueBuilder_;
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
      *
      * <code>.google.type.Date date_value = 13;</code>
-     *
      * @return Whether the dateValue field is set.
      */
     @java.lang.Override
     public boolean hasDateValue() {
       return kindCase_ == 13;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
      *
      * <code>.google.type.Date date_value = 13;</code>
-     *
      * @return The dateValue.
      */
     @java.lang.Override
@@ -2485,10 +2169,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return com.google.type.Date.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
@@ -2508,17 +2189,15 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 13;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
      *
      * <code>.google.type.Date date_value = 13;</code>
      */
-    public Builder setDateValue(com.google.type.Date.Builder builderForValue) {
+    public Builder setDateValue(
+        com.google.type.Date.Builder builderForValue) {
       if (dateValueBuilder_ == null) {
         kind_ = builderForValue.build();
         onChanged();
@@ -2528,10 +2207,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 13;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
@@ -2540,11 +2216,10 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeDateValue(com.google.type.Date value) {
       if (dateValueBuilder_ == null) {
-        if (kindCase_ == 13 && kind_ != com.google.type.Date.getDefaultInstance()) {
-          kind_ =
-              com.google.type.Date.newBuilder((com.google.type.Date) kind_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (kindCase_ == 13 &&
+            kind_ != com.google.type.Date.getDefaultInstance()) {
+          kind_ = com.google.type.Date.newBuilder((com.google.type.Date) kind_)
+              .mergeFrom(value).buildPartial();
         } else {
           kind_ = value;
         }
@@ -2559,10 +2234,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 13;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
@@ -2585,10 +2257,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
@@ -2598,10 +2267,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     public com.google.type.Date.Builder getDateValueBuilder() {
       return internalGetDateValueFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
@@ -2619,10 +2285,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return com.google.type.Date.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a date.
      * </pre>
@@ -2630,16 +2293,17 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * <code>.google.type.Date date_value = 13;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>
+        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
         internalGetDateValueFieldBuilder() {
       if (dateValueBuilder_ == null) {
         if (!(kindCase_ == 13)) {
           kind_ = com.google.type.Date.getDefaultInstance();
         }
-        dateValueBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
-                (com.google.type.Date) kind_, getParentForChildren(), isClean());
+        dateValueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                (com.google.type.Date) kind_,
+                getParentForChildren(),
+                isClean());
         kind_ = null;
       }
       kindCase_ = 13;
@@ -2648,14 +2312,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ArrayValue,
-            com.google.bigtable.v2.ArrayValue.Builder,
-            com.google.bigtable.v2.ArrayValueOrBuilder>
-        arrayValueBuilder_;
-
+        com.google.bigtable.v2.ArrayValue, com.google.bigtable.v2.ArrayValue.Builder, com.google.bigtable.v2.ArrayValueOrBuilder> arrayValueBuilder_;
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2665,17 +2323,13 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.ArrayValue array_value = 4;</code>
-     *
      * @return Whether the arrayValue field is set.
      */
     @java.lang.Override
     public boolean hasArrayValue() {
       return kindCase_ == 4;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2685,7 +2339,6 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.ArrayValue array_value = 4;</code>
-     *
      * @return The arrayValue.
      */
     @java.lang.Override
@@ -2702,10 +2355,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ArrayValue.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2729,10 +2379,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 4;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2743,7 +2390,8 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.bigtable.v2.ArrayValue array_value = 4;</code>
      */
-    public Builder setArrayValue(com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
+    public Builder setArrayValue(
+        com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
       if (arrayValueBuilder_ == null) {
         kind_ = builderForValue.build();
         onChanged();
@@ -2753,10 +2401,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 4;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2769,12 +2414,10 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeArrayValue(com.google.bigtable.v2.ArrayValue value) {
       if (arrayValueBuilder_ == null) {
-        if (kindCase_ == 4 && kind_ != com.google.bigtable.v2.ArrayValue.getDefaultInstance()) {
-          kind_ =
-              com.google.bigtable.v2.ArrayValue.newBuilder(
-                      (com.google.bigtable.v2.ArrayValue) kind_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (kindCase_ == 4 &&
+            kind_ != com.google.bigtable.v2.ArrayValue.getDefaultInstance()) {
+          kind_ = com.google.bigtable.v2.ArrayValue.newBuilder((com.google.bigtable.v2.ArrayValue) kind_)
+              .mergeFrom(value).buildPartial();
         } else {
           kind_ = value;
         }
@@ -2789,10 +2432,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       kindCase_ = 4;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2819,10 +2459,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2836,10 +2473,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ArrayValue.Builder getArrayValueBuilder() {
       return internalGetArrayValueFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2861,10 +2495,7 @@ public final class Value extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ArrayValue.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a typed value transported as a sequence of values.
      * To differentiate between `Struct`, `Array`, and `Map`, the outermost
@@ -2876,20 +2507,17 @@ public final class Value extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.ArrayValue array_value = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ArrayValue,
-            com.google.bigtable.v2.ArrayValue.Builder,
-            com.google.bigtable.v2.ArrayValueOrBuilder>
+        com.google.bigtable.v2.ArrayValue, com.google.bigtable.v2.ArrayValue.Builder, com.google.bigtable.v2.ArrayValueOrBuilder> 
         internalGetArrayValueFieldBuilder() {
       if (arrayValueBuilder_ == null) {
         if (!(kindCase_ == 4)) {
           kind_ = com.google.bigtable.v2.ArrayValue.getDefaultInstance();
         }
-        arrayValueBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ArrayValue,
-                com.google.bigtable.v2.ArrayValue.Builder,
-                com.google.bigtable.v2.ArrayValueOrBuilder>(
-                (com.google.bigtable.v2.ArrayValue) kind_, getParentForChildren(), isClean());
+        arrayValueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ArrayValue, com.google.bigtable.v2.ArrayValue.Builder, com.google.bigtable.v2.ArrayValueOrBuilder>(
+                (com.google.bigtable.v2.ArrayValue) kind_,
+                getParentForChildren(),
+                isClean());
         kind_ = null;
       }
       kindCase_ = 4;
@@ -2902,7 +2530,6 @@ public final class Value extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.Value)
   private static final com.google.bigtable.v2.Value DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.Value();
   }
@@ -2911,27 +2538,27 @@ public final class Value extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Value> PARSER =
-      new com.google.protobuf.AbstractParser<Value>() {
-        @java.lang.Override
-        public Value parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<Value>
+      PARSER = new com.google.protobuf.AbstractParser<Value>() {
+    @java.lang.Override
+    public Value parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<Value> parser() {
     return PARSER;
@@ -2946,4 +2573,6 @@ public final class Value extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.Value getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

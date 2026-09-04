@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,50 +13,43 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.CloseSessionRequest}
  */
 @com.google.protobuf.Generated
-public final class CloseSessionRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class CloseSessionRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.CloseSessionRequest)
     CloseSessionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "CloseSessionRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "CloseSessionRequest");
   }
-
   // Use CloseSessionRequest.newBuilder() to construct.
   private CloseSessionRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private CloseSessionRequest() {
     reason_ = 0;
     description_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_CloseSessionRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_CloseSessionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_CloseSessionRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_CloseSessionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.CloseSessionRequest.class,
-            com.google.bigtable.v2.CloseSessionRequest.Builder.class);
+            com.google.bigtable.v2.CloseSessionRequest.class, com.google.bigtable.v2.CloseSessionRequest.Builder.class);
   }
 
   /**
-   *
-   *
    * <pre>
    * Client-generated reason for terminating the session, including a
    * plain-text description of why.
@@ -67,49 +58,69 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
    *
    * Protobuf enum {@code google.bigtable.v2.CloseSessionRequest.CloseSessionReason}
    */
-  public enum CloseSessionReason implements com.google.protobuf.ProtocolMessageEnum {
-    /** <code>CLOSE_SESSION_REASON_UNSET = 0;</code> */
+  public enum CloseSessionReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CLOSE_SESSION_REASON_UNSET = 0;</code>
+     */
     CLOSE_SESSION_REASON_UNSET(0),
-    /** <code>CLOSE_SESSION_REASON_GOAWAY = 1;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_GOAWAY = 1;</code>
+     */
     CLOSE_SESSION_REASON_GOAWAY(1),
-    /** <code>CLOSE_SESSION_REASON_ERROR = 2;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_ERROR = 2;</code>
+     */
     CLOSE_SESSION_REASON_ERROR(2),
-    /** <code>CLOSE_SESSION_REASON_USER = 3;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_USER = 3;</code>
+     */
     CLOSE_SESSION_REASON_USER(3),
-    /** <code>CLOSE_SESSION_REASON_DOWNSIZE = 4;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_DOWNSIZE = 4;</code>
+     */
     CLOSE_SESSION_REASON_DOWNSIZE(4),
-    /** <code>CLOSE_SESSION_REASON_MISSED_HEARTBEAT = 5;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_MISSED_HEARTBEAT = 5;</code>
+     */
     CLOSE_SESSION_REASON_MISSED_HEARTBEAT(5),
     UNRECOGNIZED(-1),
     ;
 
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "CloseSessionReason");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "CloseSessionReason");
     }
-
-    /** <code>CLOSE_SESSION_REASON_UNSET = 0;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_UNSET = 0;</code>
+     */
     public static final int CLOSE_SESSION_REASON_UNSET_VALUE = 0;
-
-    /** <code>CLOSE_SESSION_REASON_GOAWAY = 1;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_GOAWAY = 1;</code>
+     */
     public static final int CLOSE_SESSION_REASON_GOAWAY_VALUE = 1;
-
-    /** <code>CLOSE_SESSION_REASON_ERROR = 2;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_ERROR = 2;</code>
+     */
     public static final int CLOSE_SESSION_REASON_ERROR_VALUE = 2;
-
-    /** <code>CLOSE_SESSION_REASON_USER = 3;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_USER = 3;</code>
+     */
     public static final int CLOSE_SESSION_REASON_USER_VALUE = 3;
-
-    /** <code>CLOSE_SESSION_REASON_DOWNSIZE = 4;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_DOWNSIZE = 4;</code>
+     */
     public static final int CLOSE_SESSION_REASON_DOWNSIZE_VALUE = 4;
-
-    /** <code>CLOSE_SESSION_REASON_MISSED_HEARTBEAT = 5;</code> */
+    /**
+     * <code>CLOSE_SESSION_REASON_MISSED_HEARTBEAT = 5;</code>
+     */
     public static final int CLOSE_SESSION_REASON_MISSED_HEARTBEAT_VALUE = 5;
+
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -135,20 +146,13 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
      */
     public static CloseSessionReason forNumber(int value) {
       switch (value) {
-        case 0:
-          return CLOSE_SESSION_REASON_UNSET;
-        case 1:
-          return CLOSE_SESSION_REASON_GOAWAY;
-        case 2:
-          return CLOSE_SESSION_REASON_ERROR;
-        case 3:
-          return CLOSE_SESSION_REASON_USER;
-        case 4:
-          return CLOSE_SESSION_REASON_DOWNSIZE;
-        case 5:
-          return CLOSE_SESSION_REASON_MISSED_HEARTBEAT;
-        default:
-          return null;
+        case 0: return CLOSE_SESSION_REASON_UNSET;
+        case 1: return CLOSE_SESSION_REASON_GOAWAY;
+        case 2: return CLOSE_SESSION_REASON_ERROR;
+        case 3: return CLOSE_SESSION_REASON_USER;
+        case 4: return CLOSE_SESSION_REASON_DOWNSIZE;
+        case 5: return CLOSE_SESSION_REASON_MISSED_HEARTBEAT;
+        default: return null;
       }
     }
 
@@ -156,28 +160,28 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
         internalGetValueMap() {
       return internalValueMap;
     }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CloseSessionReason> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CloseSessionReason>() {
+            public CloseSessionReason findValueByNumber(int number) {
+              return CloseSessionReason.forNumber(number);
+            }
+          };
 
-    private static final com.google.protobuf.Internal.EnumLiteMap<CloseSessionReason>
-        internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<CloseSessionReason>() {
-              public CloseSessionReason findValueByNumber(int number) {
-                return CloseSessionReason.forNumber(number);
-              }
-            };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
-
-    public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+    public static com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
       return com.google.bigtable.v2.CloseSessionRequest.getDescriptor().getEnumTypes().get(0);
     }
 
@@ -186,7 +190,8 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     public static CloseSessionReason valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -205,39 +210,27 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
 
   public static final int REASON_FIELD_NUMBER = 1;
   private int reason_ = 0;
-
   /**
    * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-   *
    * @return The enum numeric value on the wire for reason.
    */
-  @java.lang.Override
-  public int getReasonValue() {
+  @java.lang.Override public int getReasonValue() {
     return reason_;
   }
-
   /**
    * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-   *
    * @return The reason.
    */
-  @java.lang.Override
-  public com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason getReason() {
-    com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason result =
-        com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.forNumber(reason_);
-    return result == null
-        ? com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.UNRECOGNIZED
-        : result;
+  @java.lang.Override public com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason getReason() {
+    com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason result = com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.forNumber(reason_);
+    return result == null ? com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.UNRECOGNIZED : result;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
-
   /**
    * <code>string description = 2;</code>
-   *
    * @return The description.
    */
   @java.lang.Override
@@ -246,24 +239,25 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
-
   /**
    * <code>string description = 2;</code>
-   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getDescriptionBytes() {
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -272,7 +266,6 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -284,10 +277,9 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (reason_
-        != com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.CLOSE_SESSION_REASON_UNSET
-            .getNumber()) {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (reason_ != com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.CLOSE_SESSION_REASON_UNSET.getNumber()) {
       output.writeEnum(1, reason_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
@@ -302,10 +294,9 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     if (size != -1) return size;
 
     size = 0;
-    if (reason_
-        != com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.CLOSE_SESSION_REASON_UNSET
-            .getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(1, reason_);
+    if (reason_ != com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.CLOSE_SESSION_REASON_UNSET.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, reason_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, description_);
@@ -318,16 +309,16 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.CloseSessionRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.CloseSessionRequest other =
-        (com.google.bigtable.v2.CloseSessionRequest) obj;
+    com.google.bigtable.v2.CloseSessionRequest other = (com.google.bigtable.v2.CloseSessionRequest) obj;
 
     if (reason_ != other.reason_) return false;
-    if (!getDescription().equals(other.getDescription())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -348,137 +339,132 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     return hash;
   }
 
-  public static com.google.bigtable.v2.CloseSessionRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.CloseSessionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.CloseSessionRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.CloseSessionRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.CloseSessionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.CloseSessionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.CloseSessionRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.CloseSessionRequest)
       com.google.bigtable.v2.CloseSessionRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_CloseSessionRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_CloseSessionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_CloseSessionRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_CloseSessionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.CloseSessionRequest.class,
-              com.google.bigtable.v2.CloseSessionRequest.Builder.class);
+              com.google.bigtable.v2.CloseSessionRequest.class, com.google.bigtable.v2.CloseSessionRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.CloseSessionRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -489,9 +475,9 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_CloseSessionRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_CloseSessionRequest_descriptor;
     }
 
     @java.lang.Override
@@ -510,11 +496,8 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
 
     @java.lang.Override
     public com.google.bigtable.v2.CloseSessionRequest buildPartial() {
-      com.google.bigtable.v2.CloseSessionRequest result =
-          new com.google.bigtable.v2.CloseSessionRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.CloseSessionRequest result = new com.google.bigtable.v2.CloseSessionRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -532,7 +515,7 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.CloseSessionRequest) {
-        return mergeFrom((com.google.bigtable.v2.CloseSessionRequest) other);
+        return mergeFrom((com.google.bigtable.v2.CloseSessionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -575,25 +558,22 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                reason_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 18:
-              {
-                description_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              reason_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -603,24 +583,18 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private int reason_ = 0;
-
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-     *
      * @return The enum numeric value on the wire for reason.
      */
-    @java.lang.Override
-    public int getReasonValue() {
+    @java.lang.Override public int getReasonValue() {
       return reason_;
     }
-
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-     *
      * @param value The enum numeric value on the wire for reason to set.
      * @return This builder for chaining.
      */
@@ -630,40 +604,29 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-     *
      * @return The reason.
      */
     @java.lang.Override
     public com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason getReason() {
-      com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason result =
-          com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.forNumber(reason_);
-      return result == null
-          ? com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.UNRECOGNIZED
-          : result;
+      com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason result = com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.forNumber(reason_);
+      return result == null ? com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason.UNRECOGNIZED : result;
     }
-
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-     *
      * @param value The reason to set.
      * @return This builder for chaining.
      */
     public Builder setReason(com.google.bigtable.v2.CloseSessionRequest.CloseSessionReason value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       bitField0_ |= 0x00000001;
       reason_ = value.getNumber();
       onChanged();
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest.CloseSessionReason reason = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearReason() {
@@ -674,16 +637,15 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     }
 
     private java.lang.Object description_ = "";
-
     /**
      * <code>string description = 2;</code>
-     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -691,43 +653,38 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString getDescriptionBytes() {
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -736,17 +693,14 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
       bitField0_ |= 0x00000002;
@@ -759,7 +713,6 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.CloseSessionRequest)
   private static final com.google.bigtable.v2.CloseSessionRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.CloseSessionRequest();
   }
@@ -768,27 +721,27 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CloseSessionRequest> PARSER =
-      new com.google.protobuf.AbstractParser<CloseSessionRequest>() {
-        @java.lang.Override
-        public CloseSessionRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<CloseSessionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CloseSessionRequest>() {
+    @java.lang.Override
+    public CloseSessionRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<CloseSessionRequest> parser() {
     return PARSER;
@@ -803,4 +756,6 @@ public final class CloseSessionRequest extends com.google.protobuf.GeneratedMess
   public com.google.bigtable.v2.CloseSessionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

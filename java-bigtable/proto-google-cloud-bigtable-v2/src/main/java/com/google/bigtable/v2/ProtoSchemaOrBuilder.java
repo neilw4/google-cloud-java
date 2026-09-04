@@ -6,25 +6,20 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ProtoSchemaOrBuilder
-    extends
+public interface ProtoSchemaOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ProtoSchema)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
-  java.util.List<com.google.bigtable.v2.ColumnMetadata> getColumnsList();
-
+  java.util.List<com.google.bigtable.v2.ColumnMetadata> 
+      getColumnsList();
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -32,10 +27,7 @@ public interface ProtoSchemaOrBuilder
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
   com.google.bigtable.v2.ColumnMetadata getColumns(int index);
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -43,27 +35,22 @@ public interface ProtoSchemaOrBuilder
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
   int getColumnsCount();
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.ColumnMetadataOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.ColumnMetadataOrBuilder> 
       getColumnsOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
-  com.google.bigtable.v2.ColumnMetadataOrBuilder getColumnsOrBuilder(int index);
+  com.google.bigtable.v2.ColumnMetadataOrBuilder getColumnsOrBuilder(
+      int index);
 }

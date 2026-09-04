@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Configuration for the Session API. Internal usage only.
  * </pre>
@@ -15,80 +13,65 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ClientConfiguration}
  */
 @com.google.protobuf.Generated
-public final class ClientConfiguration extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ClientConfiguration extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ClientConfiguration)
     ClientConfigurationOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ClientConfiguration");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ClientConfiguration");
   }
-
   // Use ClientConfiguration.newBuilder() to construct.
   private ClientConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private ClientConfiguration() {
+  }
 
-  private ClientConfiguration() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_ClientConfiguration_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_ClientConfiguration_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ClientConfiguration.class,
-            com.google.bigtable.v2.ClientConfiguration.Builder.class);
+            com.google.bigtable.v2.ClientConfiguration.class, com.google.bigtable.v2.ClientConfiguration.Builder.class);
   }
 
-  public interface PollingConfigurationOrBuilder
-      extends
+  public interface PollingConfigurationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ClientConfiguration.PollingConfiguration)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * A duration describing the time between GetClientConfiguration RPCs.
      * Only strictly positive values are permissible.
      * </pre>
      *
      * <code>.google.protobuf.Duration polling_interval = 1;</code>
-     *
      * @return Whether the pollingInterval field is set.
      */
     boolean hasPollingInterval();
-
     /**
-     *
-     *
      * <pre>
      * A duration describing the time between GetClientConfiguration RPCs.
      * Only strictly positive values are permissible.
      * </pre>
      *
      * <code>.google.protobuf.Duration polling_interval = 1;</code>
-     *
      * @return The pollingInterval.
      */
     com.google.protobuf.Duration getPollingInterval();
-
     /**
-     *
-     *
      * <pre>
      * A duration describing the time between GetClientConfiguration RPCs.
      * Only strictly positive values are permissible.
@@ -99,8 +82,6 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     com.google.protobuf.DurationOrBuilder getPollingIntervalOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * How long the client should consider the configuration it receives from
      * GetClientConfiguration valid for. Once this duration has passed, the
@@ -112,14 +93,10 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration validity_duration = 2;</code>
-     *
      * @return Whether the validityDuration field is set.
      */
     boolean hasValidityDuration();
-
     /**
-     *
-     *
      * <pre>
      * How long the client should consider the configuration it receives from
      * GetClientConfiguration valid for. Once this duration has passed, the
@@ -131,14 +108,10 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration validity_duration = 2;</code>
-     *
      * @return The validityDuration.
      */
     com.google.protobuf.Duration getValidityDuration();
-
     /**
-     *
-     *
      * <pre>
      * How long the client should consider the configuration it receives from
      * GetClientConfiguration valid for. Once this duration has passed, the
@@ -154,102 +127,83 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     com.google.protobuf.DurationOrBuilder getValidityDurationOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * Number of times the client should retry a failed
      * GetClientConfiguration RPC per polling interval before giving up.
      * </pre>
      *
      * <code>int32 max_rpc_retry_count = 6;</code>
-     *
      * @return The maxRpcRetryCount.
      */
     int getMaxRpcRetryCount();
   }
-
-  /** Protobuf type {@code google.bigtable.v2.ClientConfiguration.PollingConfiguration} */
-  public static final class PollingConfiguration extends com.google.protobuf.GeneratedMessage
-      implements
+  /**
+   * Protobuf type {@code google.bigtable.v2.ClientConfiguration.PollingConfiguration}
+   */
+  public static final class PollingConfiguration extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.ClientConfiguration.PollingConfiguration)
       PollingConfigurationOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "PollingConfiguration");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "PollingConfiguration");
     }
-
     // Use PollingConfiguration.newBuilder() to construct.
     private PollingConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private PollingConfiguration() {
+    }
 
-    private PollingConfiguration() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.class,
-              com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder.class);
+              com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.class, com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder.class);
     }
 
     private int bitField0_;
     public static final int POLLING_INTERVAL_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration pollingInterval_;
-
     /**
-     *
-     *
      * <pre>
      * A duration describing the time between GetClientConfiguration RPCs.
      * Only strictly positive values are permissible.
      * </pre>
      *
      * <code>.google.protobuf.Duration polling_interval = 1;</code>
-     *
      * @return Whether the pollingInterval field is set.
      */
     @java.lang.Override
     public boolean hasPollingInterval() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * A duration describing the time between GetClientConfiguration RPCs.
      * Only strictly positive values are permissible.
      * </pre>
      *
      * <code>.google.protobuf.Duration polling_interval = 1;</code>
-     *
      * @return The pollingInterval.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getPollingInterval() {
-      return pollingInterval_ == null
-          ? com.google.protobuf.Duration.getDefaultInstance()
-          : pollingInterval_;
+      return pollingInterval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : pollingInterval_;
     }
-
     /**
-     *
-     *
      * <pre>
      * A duration describing the time between GetClientConfiguration RPCs.
      * Only strictly positive values are permissible.
@@ -259,17 +213,12 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getPollingIntervalOrBuilder() {
-      return pollingInterval_ == null
-          ? com.google.protobuf.Duration.getDefaultInstance()
-          : pollingInterval_;
+      return pollingInterval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : pollingInterval_;
     }
 
     public static final int VALIDITY_DURATION_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration validityDuration_;
-
     /**
-     *
-     *
      * <pre>
      * How long the client should consider the configuration it receives from
      * GetClientConfiguration valid for. Once this duration has passed, the
@@ -281,17 +230,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration validity_duration = 2;</code>
-     *
      * @return Whether the validityDuration field is set.
      */
     @java.lang.Override
     public boolean hasValidityDuration() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * How long the client should consider the configuration it receives from
      * GetClientConfiguration valid for. Once this duration has passed, the
@@ -303,19 +248,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration validity_duration = 2;</code>
-     *
      * @return The validityDuration.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getValidityDuration() {
-      return validityDuration_ == null
-          ? com.google.protobuf.Duration.getDefaultInstance()
-          : validityDuration_;
+      return validityDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : validityDuration_;
     }
-
     /**
-     *
-     *
      * <pre>
      * How long the client should consider the configuration it receives from
      * GetClientConfiguration valid for. Once this duration has passed, the
@@ -330,24 +269,18 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getValidityDurationOrBuilder() {
-      return validityDuration_ == null
-          ? com.google.protobuf.Duration.getDefaultInstance()
-          : validityDuration_;
+      return validityDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : validityDuration_;
     }
 
     public static final int MAX_RPC_RETRY_COUNT_FIELD_NUMBER = 6;
     private int maxRpcRetryCount_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Number of times the client should retry a failed
      * GetClientConfiguration RPC per polling interval before giving up.
      * </pre>
      *
      * <code>int32 max_rpc_retry_count = 6;</code>
-     *
      * @return The maxRpcRetryCount.
      */
     @java.lang.Override
@@ -356,7 +289,6 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -368,7 +300,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPollingInterval());
       }
@@ -388,13 +321,16 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getPollingInterval());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPollingInterval());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getValidityDuration());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getValidityDuration());
       }
       if (maxRpcRetryCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(6, maxRpcRetryCount_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, maxRpcRetryCount_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -404,23 +340,25 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.ClientConfiguration.PollingConfiguration)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.ClientConfiguration.PollingConfiguration other =
-          (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) obj;
+      com.google.bigtable.v2.ClientConfiguration.PollingConfiguration other = (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) obj;
 
       if (hasPollingInterval() != other.hasPollingInterval()) return false;
       if (hasPollingInterval()) {
-        if (!getPollingInterval().equals(other.getPollingInterval())) return false;
+        if (!getPollingInterval()
+            .equals(other.getPollingInterval())) return false;
       }
       if (hasValidityDuration() != other.hasValidityDuration()) return false;
       if (hasValidityDuration()) {
-        if (!getValidityDuration().equals(other.getValidityDuration())) return false;
+        if (!getValidityDuration()
+            .equals(other.getValidityDuration())) return false;
       }
-      if (getMaxRpcRetryCount() != other.getMaxRpcRetryCount()) return false;
+      if (getMaxRpcRetryCount()
+          != other.getMaxRpcRetryCount()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -448,141 +386,134 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
-    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-        parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-        parseDelimitedFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
-    }
-
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.ClientConfiguration.PollingConfiguration prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
-    /** Protobuf type {@code google.bigtable.v2.ClientConfiguration.PollingConfiguration} */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    /**
+     * Protobuf type {@code google.bigtable.v2.ClientConfiguration.PollingConfiguration}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ClientConfiguration.PollingConfiguration)
         com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.class,
-                com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder.class);
+                com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.class, com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder.class);
       }
 
-      // Construct using
-      // com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.newBuilder()
+      // Construct using com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
           internalGetPollingIntervalFieldBuilder();
           internalGetValidityDurationFieldBuilder();
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -602,14 +533,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_PollingConfiguration_descriptor;
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration getDefaultInstanceForType() {
         return com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
       }
 
@@ -624,29 +554,25 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
       @java.lang.Override
       public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration buildPartial() {
-        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration result =
-            new com.google.bigtable.v2.ClientConfiguration.PollingConfiguration(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration result = new com.google.bigtable.v2.ClientConfiguration.PollingConfiguration(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(
-          com.google.bigtable.v2.ClientConfiguration.PollingConfiguration result) {
+      private void buildPartial0(com.google.bigtable.v2.ClientConfiguration.PollingConfiguration result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.pollingInterval_ =
-              pollingIntervalBuilder_ == null ? pollingInterval_ : pollingIntervalBuilder_.build();
+          result.pollingInterval_ = pollingIntervalBuilder_ == null
+              ? pollingInterval_
+              : pollingIntervalBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.validityDuration_ =
-              validityDurationBuilder_ == null
-                  ? validityDuration_
-                  : validityDurationBuilder_.build();
+          result.validityDuration_ = validityDurationBuilder_ == null
+              ? validityDuration_
+              : validityDurationBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -658,18 +584,15 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) {
-          return mergeFrom((com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) other);
+          return mergeFrom((com.google.bigtable.v2.ClientConfiguration.PollingConfiguration)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.google.bigtable.v2.ClientConfiguration.PollingConfiguration other) {
-        if (other
-            == com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.google.bigtable.v2.ClientConfiguration.PollingConfiguration other) {
+        if (other == com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance()) return this;
         if (other.hasPollingInterval()) {
           mergePollingInterval(other.getPollingInterval());
         }
@@ -705,33 +628,31 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  input.readMessage(
-                      internalGetPollingIntervalFieldBuilder().getBuilder(), extensionRegistry);
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-              case 18:
-                {
-                  input.readMessage(
-                      internalGetValidityDurationFieldBuilder().getBuilder(), extensionRegistry);
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 18
-              case 48:
-                {
-                  maxRpcRetryCount_ = input.readInt32();
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 48
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                input.readMessage(
+                    internalGetPollingIntervalFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetValidityDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 48: {
+                maxRpcRetryCount_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -741,57 +662,40 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private com.google.protobuf.Duration pollingInterval_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.protobuf.Duration,
-              com.google.protobuf.Duration.Builder,
-              com.google.protobuf.DurationOrBuilder>
-          pollingIntervalBuilder_;
-
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> pollingIntervalBuilder_;
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
        * </pre>
        *
        * <code>.google.protobuf.Duration polling_interval = 1;</code>
-       *
        * @return Whether the pollingInterval field is set.
        */
       public boolean hasPollingInterval() {
         return ((bitField0_ & 0x00000001) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
        * </pre>
        *
        * <code>.google.protobuf.Duration polling_interval = 1;</code>
-       *
        * @return The pollingInterval.
        */
       public com.google.protobuf.Duration getPollingInterval() {
         if (pollingIntervalBuilder_ == null) {
-          return pollingInterval_ == null
-              ? com.google.protobuf.Duration.getDefaultInstance()
-              : pollingInterval_;
+          return pollingInterval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : pollingInterval_;
         } else {
           return pollingIntervalBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -812,10 +716,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -823,7 +724,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        *
        * <code>.google.protobuf.Duration polling_interval = 1;</code>
        */
-      public Builder setPollingInterval(com.google.protobuf.Duration.Builder builderForValue) {
+      public Builder setPollingInterval(
+          com.google.protobuf.Duration.Builder builderForValue) {
         if (pollingIntervalBuilder_ == null) {
           pollingInterval_ = builderForValue.build();
         } else {
@@ -833,10 +735,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -846,9 +745,9 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        */
       public Builder mergePollingInterval(com.google.protobuf.Duration value) {
         if (pollingIntervalBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)
-              && pollingInterval_ != null
-              && pollingInterval_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pollingInterval_ != null &&
+            pollingInterval_ != com.google.protobuf.Duration.getDefaultInstance()) {
             getPollingIntervalBuilder().mergeFrom(value);
           } else {
             pollingInterval_ = value;
@@ -862,10 +761,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -883,10 +779,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -899,10 +792,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return internalGetPollingIntervalFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -914,15 +804,11 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         if (pollingIntervalBuilder_ != null) {
           return pollingIntervalBuilder_.getMessageOrBuilder();
         } else {
-          return pollingInterval_ == null
-              ? com.google.protobuf.Duration.getDefaultInstance()
-              : pollingInterval_;
+          return pollingInterval_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : pollingInterval_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * A duration describing the time between GetClientConfiguration RPCs.
        * Only strictly positive values are permissible.
@@ -931,17 +817,14 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        * <code>.google.protobuf.Duration polling_interval = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.protobuf.Duration,
-              com.google.protobuf.Duration.Builder,
-              com.google.protobuf.DurationOrBuilder>
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
           internalGetPollingIntervalFieldBuilder() {
         if (pollingIntervalBuilder_ == null) {
-          pollingIntervalBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.protobuf.Duration,
-                  com.google.protobuf.Duration.Builder,
-                  com.google.protobuf.DurationOrBuilder>(
-                  getPollingInterval(), getParentForChildren(), isClean());
+          pollingIntervalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getPollingInterval(),
+                  getParentForChildren(),
+                  isClean());
           pollingInterval_ = null;
         }
         return pollingIntervalBuilder_;
@@ -949,14 +832,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
       private com.google.protobuf.Duration validityDuration_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.protobuf.Duration,
-              com.google.protobuf.Duration.Builder,
-              com.google.protobuf.DurationOrBuilder>
-          validityDurationBuilder_;
-
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> validityDurationBuilder_;
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -968,16 +845,12 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        * </pre>
        *
        * <code>.google.protobuf.Duration validity_duration = 2;</code>
-       *
        * @return Whether the validityDuration field is set.
        */
       public boolean hasValidityDuration() {
         return ((bitField0_ & 0x00000002) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -989,22 +862,16 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        * </pre>
        *
        * <code>.google.protobuf.Duration validity_duration = 2;</code>
-       *
        * @return The validityDuration.
        */
       public com.google.protobuf.Duration getValidityDuration() {
         if (validityDurationBuilder_ == null) {
-          return validityDuration_ == null
-              ? com.google.protobuf.Duration.getDefaultInstance()
-              : validityDuration_;
+          return validityDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : validityDuration_;
         } else {
           return validityDurationBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1030,10 +897,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1046,7 +910,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        *
        * <code>.google.protobuf.Duration validity_duration = 2;</code>
        */
-      public Builder setValidityDuration(com.google.protobuf.Duration.Builder builderForValue) {
+      public Builder setValidityDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
         if (validityDurationBuilder_ == null) {
           validityDuration_ = builderForValue.build();
         } else {
@@ -1056,10 +921,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1074,9 +936,9 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        */
       public Builder mergeValidityDuration(com.google.protobuf.Duration value) {
         if (validityDurationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)
-              && validityDuration_ != null
-              && validityDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            validityDuration_ != null &&
+            validityDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
             getValidityDurationBuilder().mergeFrom(value);
           } else {
             validityDuration_ = value;
@@ -1090,10 +952,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1116,10 +975,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1137,10 +993,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return internalGetValidityDurationFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1157,15 +1010,11 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         if (validityDurationBuilder_ != null) {
           return validityDurationBuilder_.getMessageOrBuilder();
         } else {
-          return validityDuration_ == null
-              ? com.google.protobuf.Duration.getDefaultInstance()
-              : validityDuration_;
+          return validityDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : validityDuration_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * How long the client should consider the configuration it receives from
        * GetClientConfiguration valid for. Once this duration has passed, the
@@ -1179,51 +1028,40 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
        * <code>.google.protobuf.Duration validity_duration = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.protobuf.Duration,
-              com.google.protobuf.Duration.Builder,
-              com.google.protobuf.DurationOrBuilder>
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
           internalGetValidityDurationFieldBuilder() {
         if (validityDurationBuilder_ == null) {
-          validityDurationBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.protobuf.Duration,
-                  com.google.protobuf.Duration.Builder,
-                  com.google.protobuf.DurationOrBuilder>(
-                  getValidityDuration(), getParentForChildren(), isClean());
+          validityDurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getValidityDuration(),
+                  getParentForChildren(),
+                  isClean());
           validityDuration_ = null;
         }
         return validityDurationBuilder_;
       }
 
-      private int maxRpcRetryCount_;
-
+      private int maxRpcRetryCount_ ;
       /**
-       *
-       *
        * <pre>
        * Number of times the client should retry a failed
        * GetClientConfiguration RPC per polling interval before giving up.
        * </pre>
        *
        * <code>int32 max_rpc_retry_count = 6;</code>
-       *
        * @return The maxRpcRetryCount.
        */
       @java.lang.Override
       public int getMaxRpcRetryCount() {
         return maxRpcRetryCount_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times the client should retry a failed
        * GetClientConfiguration RPC per polling interval before giving up.
        * </pre>
        *
        * <code>int32 max_rpc_retry_count = 6;</code>
-       *
        * @param value The maxRpcRetryCount to set.
        * @return This builder for chaining.
        */
@@ -1234,17 +1072,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Number of times the client should retry a failed
        * GetClientConfiguration RPC per polling interval before giving up.
        * </pre>
        *
        * <code>int32 max_rpc_retry_count = 6;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMaxRpcRetryCount() {
@@ -1258,40 +1092,36 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.ClientConfiguration.PollingConfiguration)
-    private static final com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-        DEFAULT_INSTANCE;
-
+    private static final com.google.bigtable.v2.ClientConfiguration.PollingConfiguration DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.ClientConfiguration.PollingConfiguration();
     }
 
-    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-        getDefaultInstance() {
+    public static com.google.bigtable.v2.ClientConfiguration.PollingConfiguration getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PollingConfiguration> PARSER =
-        new com.google.protobuf.AbstractParser<PollingConfiguration>() {
-          @java.lang.Override
-          public PollingConfiguration parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<PollingConfiguration>
+        PARSER = new com.google.protobuf.AbstractParser<PollingConfiguration>() {
+      @java.lang.Override
+      public PollingConfiguration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<PollingConfiguration> parser() {
       return PARSER;
@@ -1303,32 +1133,27 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-        getDefaultInstanceForType() {
+    public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   private int bitField0_;
   private int pollingCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object polling_;
-
   public enum PollingCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     STOP_POLLING(3),
     POLLING_INTERVAL(4),
     POLLING_CONFIGURATION(5),
     POLLING_NOT_SET(0);
     private final int value;
-
     private PollingCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -1341,68 +1166,51 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
     public static PollingCase forNumber(int value) {
       switch (value) {
-        case 3:
-          return STOP_POLLING;
-        case 4:
-          return POLLING_INTERVAL;
-        case 5:
-          return POLLING_CONFIGURATION;
-        case 0:
-          return POLLING_NOT_SET;
-        default:
-          return null;
+        case 3: return STOP_POLLING;
+        case 4: return POLLING_INTERVAL;
+        case 5: return POLLING_CONFIGURATION;
+        case 0: return POLLING_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PollingCase getPollingCase() {
-    return PollingCase.forNumber(pollingCase_);
+  public PollingCase
+  getPollingCase() {
+    return PollingCase.forNumber(
+        pollingCase_);
   }
 
   public static final int SESSION_CONFIGURATION_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.SessionClientConfiguration sessionConfiguration_;
-
   /**
-   *
-   *
    * <pre>
    * The configuration for Bigtable Sessions.
    * </pre>
    *
    * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
-   *
    * @return Whether the sessionConfiguration field is set.
    */
   @java.lang.Override
   public boolean hasSessionConfiguration() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * The configuration for Bigtable Sessions.
    * </pre>
    *
    * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
-   *
    * @return The sessionConfiguration.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionClientConfiguration getSessionConfiguration() {
-    return sessionConfiguration_ == null
-        ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()
-        : sessionConfiguration_;
+    return sessionConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance() : sessionConfiguration_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The configuration for Bigtable Sessions.
    * </pre>
@@ -1410,42 +1218,31 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
    * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionClientConfigurationOrBuilder
-      getSessionConfigurationOrBuilder() {
-    return sessionConfiguration_ == null
-        ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()
-        : sessionConfiguration_;
+  public com.google.bigtable.v2.SessionClientConfigurationOrBuilder getSessionConfigurationOrBuilder() {
+    return sessionConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance() : sessionConfiguration_;
   }
 
   public static final int STOP_POLLING_FIELD_NUMBER = 3;
-
   /**
-   *
-   *
    * <pre>
    * If the client should cease to check for new configurations, e.g. a
    * backstop to prevent excessive GetClientConfiguration RPCs.
    * </pre>
    *
    * <code>bool stop_polling = 3;</code>
-   *
    * @return Whether the stopPolling field is set.
    */
   @java.lang.Override
   public boolean hasStopPolling() {
     return pollingCase_ == 3;
   }
-
   /**
-   *
-   *
    * <pre>
    * If the client should cease to check for new configurations, e.g. a
    * backstop to prevent excessive GetClientConfiguration RPCs.
    * </pre>
    *
    * <code>bool stop_polling = 3;</code>
-   *
    * @return The stopPolling.
    */
   @java.lang.Override
@@ -1457,10 +1254,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
   }
 
   public static final int POLLING_INTERVAL_FIELD_NUMBER = 4;
-
   /**
-   *
-   *
    * <pre>
    * Deprecated, prerfer polling_configuration.
    *
@@ -1469,17 +1263,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>.google.protobuf.Duration polling_interval = 4;</code>
-   *
    * @return Whether the pollingInterval field is set.
    */
   @java.lang.Override
   public boolean hasPollingInterval() {
     return pollingCase_ == 4;
   }
-
   /**
-   *
-   *
    * <pre>
    * Deprecated, prerfer polling_configuration.
    *
@@ -1488,20 +1278,16 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>.google.protobuf.Duration polling_interval = 4;</code>
-   *
    * @return The pollingInterval.
    */
   @java.lang.Override
   public com.google.protobuf.Duration getPollingInterval() {
     if (pollingCase_ == 4) {
-      return (com.google.protobuf.Duration) polling_;
+       return (com.google.protobuf.Duration) polling_;
     }
     return com.google.protobuf.Duration.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Deprecated, prerfer polling_configuration.
    *
@@ -1514,109 +1300,81 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public com.google.protobuf.DurationOrBuilder getPollingIntervalOrBuilder() {
     if (pollingCase_ == 4) {
-      return (com.google.protobuf.Duration) polling_;
+       return (com.google.protobuf.Duration) polling_;
     }
     return com.google.protobuf.Duration.getDefaultInstance();
   }
 
   public static final int POLLING_CONFIGURATION_FIELD_NUMBER = 5;
-
   /**
-   *
-   *
    * <pre>
    * If the client should continue to check for new configurations.
    * </pre>
    *
-   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
    * @return Whether the pollingConfiguration field is set.
    */
   @java.lang.Override
   public boolean hasPollingConfiguration() {
     return pollingCase_ == 5;
   }
-
   /**
-   *
-   *
    * <pre>
    * If the client should continue to check for new configurations.
    * </pre>
    *
-   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
    * @return The pollingConfiguration.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration getPollingConfiguration() {
     if (pollingCase_ == 5) {
-      return (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_;
+       return (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_;
     }
     return com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * If the client should continue to check for new configurations.
    * </pre>
    *
-   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-   * </code>
+   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder
-      getPollingConfigurationOrBuilder() {
+  public com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder getPollingConfigurationOrBuilder() {
     if (pollingCase_ == 5) {
-      return (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_;
+       return (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_;
     }
     return com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
   }
 
   public static final int TELEMETRY_CONFIGURATION_FIELD_NUMBER = 6;
   private com.google.bigtable.v2.TelemetryConfiguration telemetryConfiguration_;
-
   /**
-   *
-   *
    * <pre>
    * Configuration for telemetry.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
-   *
    * @return Whether the telemetryConfiguration field is set.
    */
   @java.lang.Override
   public boolean hasTelemetryConfiguration() {
     return ((bitField0_ & 0x00000002) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for telemetry.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
-   *
    * @return The telemetryConfiguration.
    */
   @java.lang.Override
   public com.google.bigtable.v2.TelemetryConfiguration getTelemetryConfiguration() {
-    return telemetryConfiguration_ == null
-        ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance()
-        : telemetryConfiguration_;
+    return telemetryConfiguration_ == null ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance() : telemetryConfiguration_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for telemetry.
    * </pre>
@@ -1624,15 +1382,11 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
    * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.TelemetryConfigurationOrBuilder
-      getTelemetryConfigurationOrBuilder() {
-    return telemetryConfiguration_ == null
-        ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance()
-        : telemetryConfiguration_;
+  public com.google.bigtable.v2.TelemetryConfigurationOrBuilder getTelemetryConfigurationOrBuilder() {
+    return telemetryConfiguration_ == null ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance() : telemetryConfiguration_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1644,19 +1398,20 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getSessionConfiguration());
     }
     if (pollingCase_ == 3) {
-      output.writeBool(3, (boolean) ((java.lang.Boolean) polling_));
+      output.writeBool(
+          3, (boolean)((java.lang.Boolean) polling_));
     }
     if (pollingCase_ == 4) {
       output.writeMessage(4, (com.google.protobuf.Duration) polling_);
     }
     if (pollingCase_ == 5) {
-      output.writeMessage(
-          5, (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_);
+      output.writeMessage(5, (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getTelemetryConfiguration());
@@ -1671,27 +1426,25 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(2, getSessionConfiguration());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getSessionConfiguration());
     }
     if (pollingCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBoolSize(
-              3, (boolean) ((java.lang.Boolean) polling_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            3, (boolean)((java.lang.Boolean) polling_));
     }
     if (pollingCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.protobuf.Duration) polling_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.protobuf.Duration) polling_);
     }
     if (pollingCase_ == 5) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              5, (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(6, getTelemetryConfiguration());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getTelemetryConfiguration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1701,32 +1454,36 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ClientConfiguration)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.ClientConfiguration other =
-        (com.google.bigtable.v2.ClientConfiguration) obj;
+    com.google.bigtable.v2.ClientConfiguration other = (com.google.bigtable.v2.ClientConfiguration) obj;
 
     if (hasSessionConfiguration() != other.hasSessionConfiguration()) return false;
     if (hasSessionConfiguration()) {
-      if (!getSessionConfiguration().equals(other.getSessionConfiguration())) return false;
+      if (!getSessionConfiguration()
+          .equals(other.getSessionConfiguration())) return false;
     }
     if (hasTelemetryConfiguration() != other.hasTelemetryConfiguration()) return false;
     if (hasTelemetryConfiguration()) {
-      if (!getTelemetryConfiguration().equals(other.getTelemetryConfiguration())) return false;
+      if (!getTelemetryConfiguration()
+          .equals(other.getTelemetryConfiguration())) return false;
     }
     if (!getPollingCase().equals(other.getPollingCase())) return false;
     switch (pollingCase_) {
       case 3:
-        if (getStopPolling() != other.getStopPolling()) return false;
+        if (getStopPolling()
+            != other.getStopPolling()) return false;
         break;
       case 4:
-        if (!getPollingInterval().equals(other.getPollingInterval())) return false;
+        if (!getPollingInterval()
+            .equals(other.getPollingInterval())) return false;
         break;
       case 5:
-        if (!getPollingConfiguration().equals(other.getPollingConfiguration())) return false;
+        if (!getPollingConfiguration()
+            .equals(other.getPollingConfiguration())) return false;
         break;
       case 0:
       default:
@@ -1753,7 +1510,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     switch (pollingCase_) {
       case 3:
         hash = (37 * hash) + STOP_POLLING_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getStopPolling());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStopPolling());
         break;
       case 4:
         hash = (37 * hash) + POLLING_INTERVAL_FIELD_NUMBER;
@@ -1771,128 +1529,120 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     return hash;
   }
 
-  public static com.google.bigtable.v2.ClientConfiguration parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ClientConfiguration parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.ClientConfiguration parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.ClientConfiguration parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.ClientConfiguration parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ClientConfiguration parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.ClientConfiguration parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ClientConfiguration parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ClientConfiguration prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the Session API. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ClientConfiguration}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ClientConfiguration)
       com.google.bigtable.v2.ClientConfigurationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClientConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClientConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ClientConfiguration.class,
-              com.google.bigtable.v2.ClientConfiguration.Builder.class);
+              com.google.bigtable.v2.ClientConfiguration.class, com.google.bigtable.v2.ClientConfiguration.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ClientConfiguration.newBuilder()
@@ -1900,18 +1650,18 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetSessionConfigurationFieldBuilder();
         internalGetTelemetryConfigurationFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1938,9 +1688,9 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ClientConfiguration_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ClientConfiguration_descriptor;
     }
 
     @java.lang.Override
@@ -1959,11 +1709,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
     @java.lang.Override
     public com.google.bigtable.v2.ClientConfiguration buildPartial() {
-      com.google.bigtable.v2.ClientConfiguration result =
-          new com.google.bigtable.v2.ClientConfiguration(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.ClientConfiguration result = new com.google.bigtable.v2.ClientConfiguration(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -1973,17 +1720,15 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.sessionConfiguration_ =
-            sessionConfigurationBuilder_ == null
-                ? sessionConfiguration_
-                : sessionConfigurationBuilder_.build();
+        result.sessionConfiguration_ = sessionConfigurationBuilder_ == null
+            ? sessionConfiguration_
+            : sessionConfigurationBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.telemetryConfiguration_ =
-            telemetryConfigurationBuilder_ == null
-                ? telemetryConfiguration_
-                : telemetryConfigurationBuilder_.build();
+        result.telemetryConfiguration_ = telemetryConfigurationBuilder_ == null
+            ? telemetryConfiguration_
+            : telemetryConfigurationBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
@@ -1992,10 +1737,12 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     private void buildPartialOneofs(com.google.bigtable.v2.ClientConfiguration result) {
       result.pollingCase_ = pollingCase_;
       result.polling_ = this.polling_;
-      if (pollingCase_ == 4 && pollingIntervalBuilder_ != null) {
+      if (pollingCase_ == 4 &&
+          pollingIntervalBuilder_ != null) {
         result.polling_ = pollingIntervalBuilder_.build();
       }
-      if (pollingCase_ == 5 && pollingConfigurationBuilder_ != null) {
+      if (pollingCase_ == 5 &&
+          pollingConfigurationBuilder_ != null) {
         result.polling_ = pollingConfigurationBuilder_.build();
       }
     }
@@ -2003,7 +1750,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ClientConfiguration) {
-        return mergeFrom((com.google.bigtable.v2.ClientConfiguration) other);
+        return mergeFrom((com.google.bigtable.v2.ClientConfiguration)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -2019,25 +1766,21 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         mergeTelemetryConfiguration(other.getTelemetryConfiguration());
       }
       switch (other.getPollingCase()) {
-        case STOP_POLLING:
-          {
-            setStopPolling(other.getStopPolling());
-            break;
-          }
-        case POLLING_INTERVAL:
-          {
-            mergePollingInterval(other.getPollingInterval());
-            break;
-          }
-        case POLLING_CONFIGURATION:
-          {
-            mergePollingConfiguration(other.getPollingConfiguration());
-            break;
-          }
-        case POLLING_NOT_SET:
-          {
-            break;
-          }
+        case STOP_POLLING: {
+          setStopPolling(other.getStopPolling());
+          break;
+        }
+        case POLLING_INTERVAL: {
+          mergePollingInterval(other.getPollingInterval());
+          break;
+        }
+        case POLLING_CONFIGURATION: {
+          mergePollingConfiguration(other.getPollingConfiguration());
+          break;
+        }
+        case POLLING_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2065,48 +1808,45 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
             case 0:
               done = true;
               break;
-            case 18:
-              {
-                input.readMessage(
-                    internalGetSessionConfigurationFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 18
-            case 24:
-              {
-                polling_ = input.readBool();
-                pollingCase_ = 3;
-                break;
-              } // case 24
-            case 34:
-              {
-                input.readMessage(
-                    internalGetPollingIntervalFieldBuilder().getBuilder(), extensionRegistry);
-                pollingCase_ = 4;
-                break;
-              } // case 34
-            case 42:
-              {
-                input.readMessage(
-                    internalGetPollingConfigurationFieldBuilder().getBuilder(), extensionRegistry);
-                pollingCase_ = 5;
-                break;
-              } // case 42
-            case 50:
-              {
-                input.readMessage(
-                    internalGetTelemetryConfigurationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 50
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 18: {
+              input.readMessage(
+                  internalGetSessionConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
+            case 24: {
+              polling_ = input.readBool();
+              pollingCase_ = 3;
+              break;
+            } // case 24
+            case 34: {
+              input.readMessage(
+                  internalGetPollingIntervalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pollingCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  internalGetPollingConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pollingCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  internalGetTelemetryConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2116,12 +1856,12 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       } // finally
       return this;
     }
-
     private int pollingCase_ = 0;
     private java.lang.Object polling_;
-
-    public PollingCase getPollingCase() {
-      return PollingCase.forNumber(pollingCase_);
+    public PollingCase
+        getPollingCase() {
+      return PollingCase.forNumber(
+          pollingCase_);
     }
 
     public Builder clearPolling() {
@@ -2135,58 +1875,41 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
     private com.google.bigtable.v2.SessionClientConfiguration sessionConfiguration_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionClientConfiguration,
-            com.google.bigtable.v2.SessionClientConfiguration.Builder,
-            com.google.bigtable.v2.SessionClientConfigurationOrBuilder>
-        sessionConfigurationBuilder_;
-
+        com.google.bigtable.v2.SessionClientConfiguration, com.google.bigtable.v2.SessionClientConfiguration.Builder, com.google.bigtable.v2.SessionClientConfigurationOrBuilder> sessionConfigurationBuilder_;
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
      *
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
-     *
      * @return Whether the sessionConfiguration field is set.
      */
     public boolean hasSessionConfiguration() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
      *
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
-     *
      * @return The sessionConfiguration.
      */
     public com.google.bigtable.v2.SessionClientConfiguration getSessionConfiguration() {
       if (sessionConfigurationBuilder_ == null) {
-        return sessionConfiguration_ == null
-            ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()
-            : sessionConfiguration_;
+        return sessionConfiguration_ == null ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance() : sessionConfiguration_;
       } else {
         return sessionConfigurationBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
      *
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
      */
-    public Builder setSessionConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration value) {
+    public Builder setSessionConfiguration(com.google.bigtable.v2.SessionClientConfiguration value) {
       if (sessionConfigurationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2199,10 +1922,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
@@ -2220,23 +1940,18 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
      *
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
      */
-    public Builder mergeSessionConfiguration(
-        com.google.bigtable.v2.SessionClientConfiguration value) {
+    public Builder mergeSessionConfiguration(com.google.bigtable.v2.SessionClientConfiguration value) {
       if (sessionConfigurationBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && sessionConfiguration_ != null
-            && sessionConfiguration_
-                != com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          sessionConfiguration_ != null &&
+          sessionConfiguration_ != com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()) {
           getSessionConfigurationBuilder().mergeFrom(value);
         } else {
           sessionConfiguration_ = value;
@@ -2250,10 +1965,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
@@ -2270,46 +1982,34 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
      *
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
      */
-    public com.google.bigtable.v2.SessionClientConfiguration.Builder
-        getSessionConfigurationBuilder() {
+    public com.google.bigtable.v2.SessionClientConfiguration.Builder getSessionConfigurationBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return internalGetSessionConfigurationFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
      *
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
      */
-    public com.google.bigtable.v2.SessionClientConfigurationOrBuilder
-        getSessionConfigurationOrBuilder() {
+    public com.google.bigtable.v2.SessionClientConfigurationOrBuilder getSessionConfigurationOrBuilder() {
       if (sessionConfigurationBuilder_ != null) {
         return sessionConfigurationBuilder_.getMessageOrBuilder();
       } else {
-        return sessionConfiguration_ == null
-            ? com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance()
-            : sessionConfiguration_;
+        return sessionConfiguration_ == null ?
+            com.google.bigtable.v2.SessionClientConfiguration.getDefaultInstance() : sessionConfiguration_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The configuration for Bigtable Sessions.
      * </pre>
@@ -2317,48 +2017,38 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionClientConfiguration,
-            com.google.bigtable.v2.SessionClientConfiguration.Builder,
-            com.google.bigtable.v2.SessionClientConfigurationOrBuilder>
+        com.google.bigtable.v2.SessionClientConfiguration, com.google.bigtable.v2.SessionClientConfiguration.Builder, com.google.bigtable.v2.SessionClientConfigurationOrBuilder> 
         internalGetSessionConfigurationFieldBuilder() {
       if (sessionConfigurationBuilder_ == null) {
-        sessionConfigurationBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionClientConfiguration,
-                com.google.bigtable.v2.SessionClientConfiguration.Builder,
-                com.google.bigtable.v2.SessionClientConfigurationOrBuilder>(
-                getSessionConfiguration(), getParentForChildren(), isClean());
+        sessionConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionClientConfiguration, com.google.bigtable.v2.SessionClientConfiguration.Builder, com.google.bigtable.v2.SessionClientConfigurationOrBuilder>(
+                getSessionConfiguration(),
+                getParentForChildren(),
+                isClean());
         sessionConfiguration_ = null;
       }
       return sessionConfigurationBuilder_;
     }
 
     /**
-     *
-     *
      * <pre>
      * If the client should cease to check for new configurations, e.g. a
      * backstop to prevent excessive GetClientConfiguration RPCs.
      * </pre>
      *
      * <code>bool stop_polling = 3;</code>
-     *
      * @return Whether the stopPolling field is set.
      */
     public boolean hasStopPolling() {
       return pollingCase_ == 3;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should cease to check for new configurations, e.g. a
      * backstop to prevent excessive GetClientConfiguration RPCs.
      * </pre>
      *
      * <code>bool stop_polling = 3;</code>
-     *
      * @return The stopPolling.
      */
     public boolean getStopPolling() {
@@ -2367,17 +2057,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       }
       return false;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should cease to check for new configurations, e.g. a
      * backstop to prevent excessive GetClientConfiguration RPCs.
      * </pre>
      *
      * <code>bool stop_polling = 3;</code>
-     *
      * @param value The stopPolling to set.
      * @return This builder for chaining.
      */
@@ -2388,17 +2074,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should cease to check for new configurations, e.g. a
      * backstop to prevent excessive GetClientConfiguration RPCs.
      * </pre>
      *
      * <code>bool stop_polling = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearStopPolling() {
@@ -2411,14 +2093,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
-        pollingIntervalBuilder_;
-
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> pollingIntervalBuilder_;
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2427,17 +2103,13 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration polling_interval = 4;</code>
-     *
      * @return Whether the pollingInterval field is set.
      */
     @java.lang.Override
     public boolean hasPollingInterval() {
       return pollingCase_ == 4;
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2446,7 +2118,6 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration polling_interval = 4;</code>
-     *
      * @return The pollingInterval.
      */
     @java.lang.Override
@@ -2463,10 +2134,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         return com.google.protobuf.Duration.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2489,10 +2157,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       pollingCase_ = 4;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2502,7 +2167,8 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      *
      * <code>.google.protobuf.Duration polling_interval = 4;</code>
      */
-    public Builder setPollingInterval(com.google.protobuf.Duration.Builder builderForValue) {
+    public Builder setPollingInterval(
+        com.google.protobuf.Duration.Builder builderForValue) {
       if (pollingIntervalBuilder_ == null) {
         polling_ = builderForValue.build();
         onChanged();
@@ -2512,10 +2178,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       pollingCase_ = 4;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2527,11 +2190,10 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      */
     public Builder mergePollingInterval(com.google.protobuf.Duration value) {
       if (pollingIntervalBuilder_ == null) {
-        if (pollingCase_ == 4 && polling_ != com.google.protobuf.Duration.getDefaultInstance()) {
-          polling_ =
-              com.google.protobuf.Duration.newBuilder((com.google.protobuf.Duration) polling_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (pollingCase_ == 4 &&
+            polling_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          polling_ = com.google.protobuf.Duration.newBuilder((com.google.protobuf.Duration) polling_)
+              .mergeFrom(value).buildPartial();
         } else {
           polling_ = value;
         }
@@ -2546,10 +2208,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       pollingCase_ = 4;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2575,10 +2234,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2591,10 +2247,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     public com.google.protobuf.Duration.Builder getPollingIntervalBuilder() {
       return internalGetPollingIntervalFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2615,10 +2268,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         return com.google.protobuf.Duration.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Deprecated, prerfer polling_configuration.
      *
@@ -2629,20 +2279,17 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * <code>.google.protobuf.Duration polling_interval = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
         internalGetPollingIntervalFieldBuilder() {
       if (pollingIntervalBuilder_ == null) {
         if (!(pollingCase_ == 4)) {
           polling_ = com.google.protobuf.Duration.getDefaultInstance();
         }
-        pollingIntervalBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>(
-                (com.google.protobuf.Duration) polling_, getParentForChildren(), isClean());
+        pollingIntervalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                (com.google.protobuf.Duration) polling_,
+                getParentForChildren(),
+                isClean());
         polling_ = null;
       }
       pollingCase_ = 4;
@@ -2651,43 +2298,29 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ClientConfiguration.PollingConfiguration,
-            com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder,
-            com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder>
-        pollingConfigurationBuilder_;
-
+        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration, com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder, com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder> pollingConfigurationBuilder_;
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      * @return Whether the pollingConfiguration field is set.
      */
     @java.lang.Override
     public boolean hasPollingConfiguration() {
       return pollingCase_ == 5;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
-     *
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      * @return The pollingConfiguration.
      */
     @java.lang.Override
-    public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-        getPollingConfiguration() {
+    public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration getPollingConfiguration() {
       if (pollingConfigurationBuilder_ == null) {
         if (pollingCase_ == 5) {
           return (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_;
@@ -2700,19 +2333,14 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         return com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
-    public Builder setPollingConfiguration(
-        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration value) {
+    public Builder setPollingConfiguration(com.google.bigtable.v2.ClientConfiguration.PollingConfiguration value) {
       if (pollingConfigurationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2725,16 +2353,12 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       pollingCase_ = 5;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
     public Builder setPollingConfiguration(
         com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder builderForValue) {
@@ -2747,29 +2371,19 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       pollingCase_ = 5;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
-    public Builder mergePollingConfiguration(
-        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration value) {
+    public Builder mergePollingConfiguration(com.google.bigtable.v2.ClientConfiguration.PollingConfiguration value) {
       if (pollingConfigurationBuilder_ == null) {
-        if (pollingCase_ == 5
-            && polling_
-                != com.google.bigtable.v2.ClientConfiguration.PollingConfiguration
-                    .getDefaultInstance()) {
-          polling_ =
-              com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.newBuilder(
-                      (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (pollingCase_ == 5 &&
+            polling_ != com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance()) {
+          polling_ = com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.newBuilder((com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_)
+              .mergeFrom(value).buildPartial();
         } else {
           polling_ = value;
         }
@@ -2784,16 +2398,12 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       pollingCase_ = 5;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
     public Builder clearPollingConfiguration() {
       if (pollingConfigurationBuilder_ == null) {
@@ -2811,35 +2421,25 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
-    public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder
-        getPollingConfigurationBuilder() {
+    public com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder getPollingConfigurationBuilder() {
       return internalGetPollingConfigurationFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder
-        getPollingConfigurationOrBuilder() {
+    public com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder getPollingConfigurationOrBuilder() {
       if ((pollingCase_ == 5) && (pollingConfigurationBuilder_ != null)) {
         return pollingConfigurationBuilder_.getMessageOrBuilder();
       } else {
@@ -2849,32 +2449,22 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
         return com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client should continue to check for new configurations.
      * </pre>
      *
-     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-     * </code>
+     * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ClientConfiguration.PollingConfiguration,
-            com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder,
-            com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder>
+        com.google.bigtable.v2.ClientConfiguration.PollingConfiguration, com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder, com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder> 
         internalGetPollingConfigurationFieldBuilder() {
       if (pollingConfigurationBuilder_ == null) {
         if (!(pollingCase_ == 5)) {
-          polling_ =
-              com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
+          polling_ = com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.getDefaultInstance();
         }
-        pollingConfigurationBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ClientConfiguration.PollingConfiguration,
-                com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder,
-                com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder>(
+        pollingConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ClientConfiguration.PollingConfiguration, com.google.bigtable.v2.ClientConfiguration.PollingConfiguration.Builder, com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder>(
                 (com.google.bigtable.v2.ClientConfiguration.PollingConfiguration) polling_,
                 getParentForChildren(),
                 isClean());
@@ -2887,50 +2477,34 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
     private com.google.bigtable.v2.TelemetryConfiguration telemetryConfiguration_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.TelemetryConfiguration,
-            com.google.bigtable.v2.TelemetryConfiguration.Builder,
-            com.google.bigtable.v2.TelemetryConfigurationOrBuilder>
-        telemetryConfigurationBuilder_;
-
+        com.google.bigtable.v2.TelemetryConfiguration, com.google.bigtable.v2.TelemetryConfiguration.Builder, com.google.bigtable.v2.TelemetryConfigurationOrBuilder> telemetryConfigurationBuilder_;
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
-     *
      * @return Whether the telemetryConfiguration field is set.
      */
     public boolean hasTelemetryConfiguration() {
       return ((bitField0_ & 0x00000010) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
-     *
      * @return The telemetryConfiguration.
      */
     public com.google.bigtable.v2.TelemetryConfiguration getTelemetryConfiguration() {
       if (telemetryConfigurationBuilder_ == null) {
-        return telemetryConfiguration_ == null
-            ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance()
-            : telemetryConfiguration_;
+        return telemetryConfiguration_ == null ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance() : telemetryConfiguration_;
       } else {
         return telemetryConfigurationBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
@@ -2950,10 +2524,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
@@ -2971,23 +2542,18 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
      */
-    public Builder mergeTelemetryConfiguration(
-        com.google.bigtable.v2.TelemetryConfiguration value) {
+    public Builder mergeTelemetryConfiguration(com.google.bigtable.v2.TelemetryConfiguration value) {
       if (telemetryConfigurationBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)
-            && telemetryConfiguration_ != null
-            && telemetryConfiguration_
-                != com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          telemetryConfiguration_ != null &&
+          telemetryConfiguration_ != com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance()) {
           getTelemetryConfigurationBuilder().mergeFrom(value);
         } else {
           telemetryConfiguration_ = value;
@@ -3001,10 +2567,7 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
@@ -3021,46 +2584,34 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
      */
-    public com.google.bigtable.v2.TelemetryConfiguration.Builder
-        getTelemetryConfigurationBuilder() {
+    public com.google.bigtable.v2.TelemetryConfiguration.Builder getTelemetryConfigurationBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return internalGetTelemetryConfigurationFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
      */
-    public com.google.bigtable.v2.TelemetryConfigurationOrBuilder
-        getTelemetryConfigurationOrBuilder() {
+    public com.google.bigtable.v2.TelemetryConfigurationOrBuilder getTelemetryConfigurationOrBuilder() {
       if (telemetryConfigurationBuilder_ != null) {
         return telemetryConfigurationBuilder_.getMessageOrBuilder();
       } else {
-        return telemetryConfiguration_ == null
-            ? com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance()
-            : telemetryConfiguration_;
+        return telemetryConfiguration_ == null ?
+            com.google.bigtable.v2.TelemetryConfiguration.getDefaultInstance() : telemetryConfiguration_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Configuration for telemetry.
      * </pre>
@@ -3068,17 +2619,14 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
      * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.TelemetryConfiguration,
-            com.google.bigtable.v2.TelemetryConfiguration.Builder,
-            com.google.bigtable.v2.TelemetryConfigurationOrBuilder>
+        com.google.bigtable.v2.TelemetryConfiguration, com.google.bigtable.v2.TelemetryConfiguration.Builder, com.google.bigtable.v2.TelemetryConfigurationOrBuilder> 
         internalGetTelemetryConfigurationFieldBuilder() {
       if (telemetryConfigurationBuilder_ == null) {
-        telemetryConfigurationBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.TelemetryConfiguration,
-                com.google.bigtable.v2.TelemetryConfiguration.Builder,
-                com.google.bigtable.v2.TelemetryConfigurationOrBuilder>(
-                getTelemetryConfiguration(), getParentForChildren(), isClean());
+        telemetryConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.TelemetryConfiguration, com.google.bigtable.v2.TelemetryConfiguration.Builder, com.google.bigtable.v2.TelemetryConfigurationOrBuilder>(
+                getTelemetryConfiguration(),
+                getParentForChildren(),
+                isClean());
         telemetryConfiguration_ = null;
       }
       return telemetryConfigurationBuilder_;
@@ -3089,7 +2637,6 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ClientConfiguration)
   private static final com.google.bigtable.v2.ClientConfiguration DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ClientConfiguration();
   }
@@ -3098,27 +2645,27 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ClientConfiguration> PARSER =
-      new com.google.protobuf.AbstractParser<ClientConfiguration>() {
-        @java.lang.Override
-        public ClientConfiguration parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ClientConfiguration>
+      PARSER = new com.google.protobuf.AbstractParser<ClientConfiguration>() {
+    @java.lang.Override
+    public ClientConfiguration parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ClientConfiguration> parser() {
     return PARSER;
@@ -3133,4 +2680,6 @@ public final class ClientConfiguration extends com.google.protobuf.GeneratedMess
   public com.google.bigtable.v2.ClientConfiguration getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Request message for Bigtable.SimpleExecuteQuery
  * </pre>
@@ -15,27 +13,24 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SimpleExecuteQueryRequest}
  */
 @com.google.protobuf.Generated
-public final class SimpleExecuteQueryRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SimpleExecuteQueryRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SimpleExecuteQueryRequest)
     SimpleExecuteQueryRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SimpleExecuteQueryRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SimpleExecuteQueryRequest");
   }
-
   // Use SimpleExecuteQueryRequest.newBuilder() to construct.
   private SimpleExecuteQueryRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private SimpleExecuteQueryRequest() {
     instanceName_ = "";
     appProfileId_ = "";
@@ -43,9 +38,9 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     pageToken_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -56,38 +51,29 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       case 5:
         return internalGetViewParameters();
       default:
-        throw new RuntimeException("Invalid map field number: " + number);
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
     }
   }
-
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SimpleExecuteQueryRequest.class,
-            com.google.bigtable.v2.SimpleExecuteQueryRequest.Builder.class);
+            com.google.bigtable.v2.SimpleExecuteQueryRequest.class, com.google.bigtable.v2.SimpleExecuteQueryRequest.Builder.class);
   }
 
   public static final int INSTANCE_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object instanceName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance against which the query should be
    * executed.
    * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The instanceName.
    */
   @java.lang.Override
@@ -96,34 +82,31 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       instanceName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance against which the query should be
    * executed.
    * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for instanceName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getInstanceNameBytes() {
+  public com.google.protobuf.ByteString
+      getInstanceNameBytes() {
     java.lang.Object ref = instanceName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       instanceName_ = b;
       return b;
     } else {
@@ -132,20 +115,15 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   }
 
   public static final int APP_PROFILE_ID_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object appProfileId_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. This value specifies routing for replication. If not specified,
    * the `default` application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The appProfileId.
    */
   @java.lang.Override
@@ -154,31 +132,30 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       appProfileId_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. This value specifies routing for replication. If not specified,
    * the `default` application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for appProfileId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAppProfileIdBytes() {
+  public com.google.protobuf.ByteString
+      getAppProfileIdBytes() {
     java.lang.Object ref = appProfileId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       appProfileId_ = b;
       return b;
     } else {
@@ -187,19 +164,14 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   }
 
   public static final int QUERY_FIELD_NUMBER = 3;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object query_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Required. The query string.
    * </pre>
    *
    * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-   *
    * @return The query.
    */
   @java.lang.Override
@@ -208,30 +180,29 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       query_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Required. The query string.
    * </pre>
    *
    * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-   *
    * @return The bytes for query.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getQueryBytes() {
+  public com.google.protobuf.ByteString
+      getQueryBytes() {
     java.lang.Object ref = query_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       query_ = b;
       return b;
     } else {
@@ -240,13 +211,9 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   }
 
   public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object pageToken_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. The page token, received from a previous `SimpleExecuteQuery`
    * call. Provide this to retrieve the subsequent rows of the result set.
@@ -256,7 +223,6 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
    * </pre>
    *
    * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The pageToken.
    */
   @java.lang.Override
@@ -265,16 +231,14 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       pageToken_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The page token, received from a previous `SimpleExecuteQuery`
    * call. Provide this to retrieve the subsequent rows of the result set.
@@ -284,15 +248,16 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
    * </pre>
    *
    * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for pageToken.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getPageTokenBytes() {
+  public com.google.protobuf.ByteString
+      getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       pageToken_ = b;
       return b;
     } else {
@@ -301,40 +266,32 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   }
 
   public static final int VIEW_PARAMETERS_FIELD_NUMBER = 5;
-
   private static final class ViewParametersDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<java.lang.String, com.google.bigtable.v2.Value>
-        defaultEntry =
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, com.google.bigtable.v2.Value> defaultEntry =
             com.google.protobuf.MapEntry
-                .<java.lang.String, com.google.bigtable.v2.Value>newDefaultInstance(
-                    com.google.bigtable.v2.BigtableProto
-                        .internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor,
-                    com.google.protobuf.WireFormat.FieldType.STRING,
-                    "",
-                    com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                    com.google.bigtable.v2.Value.getDefaultInstance());
+            .<java.lang.String, com.google.bigtable.v2.Value>newDefaultInstance(
+                com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                com.google.bigtable.v2.Value.getDefaultInstance());
   }
-
   @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, com.google.bigtable.v2.Value> viewParameters_;
   private com.google.protobuf.MapField<java.lang.String, com.google.bigtable.v2.Value>
-      viewParameters_;
-
-  private com.google.protobuf.MapField<java.lang.String, com.google.bigtable.v2.Value>
-      internalGetViewParameters() {
+  internalGetViewParameters() {
     if (viewParameters_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
           ViewParametersDefaultEntryHolder.defaultEntry);
     }
     return viewParameters_;
   }
-
   public int getViewParametersCount() {
     return internalGetViewParameters().getMap().size();
   }
-
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -347,23 +304,20 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
   @java.lang.Override
-  public boolean containsViewParameters(java.lang.String key) {
-    if (key == null) {
-      throw new NullPointerException("map key");
-    }
+  public boolean containsViewParameters(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetViewParameters().getMap().containsKey(key);
   }
-
-  /** Use {@link #getViewParametersMap()} instead. */
+  /**
+   * Use {@link #getViewParametersMap()} instead.
+   */
   @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParameters() {
     return getViewParametersMap();
   }
-
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -379,10 +333,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   public java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParametersMap() {
     return internalGetViewParameters().getMap();
   }
-
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -395,21 +346,17 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
   @java.lang.Override
-  public /* nullable */ com.google.bigtable.v2.Value getViewParametersOrDefault(
+  public /* nullable */
+com.google.bigtable.v2.Value getViewParametersOrDefault(
       java.lang.String key,
       /* nullable */
-      com.google.bigtable.v2.Value defaultValue) {
-    if (key == null) {
-      throw new NullPointerException("map key");
-    }
+com.google.bigtable.v2.Value defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.google.bigtable.v2.Value> map =
         internalGetViewParameters().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
-
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -422,10 +369,9 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.Value getViewParametersOrThrow(java.lang.String key) {
-    if (key == null) {
-      throw new NullPointerException("map key");
-    }
+  public com.google.bigtable.v2.Value getViewParametersOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.google.bigtable.v2.Value> map =
         internalGetViewParameters().getMap();
     if (!map.containsKey(key)) {
@@ -435,7 +381,6 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -447,7 +392,8 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(instanceName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, instanceName_);
     }
@@ -460,8 +406,12 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, pageToken_);
     }
-    com.google.protobuf.GeneratedMessage.serializeStringMapTo(
-        output, internalGetViewParameters(), ViewParametersDefaultEntryHolder.defaultEntry, 5);
+    com.google.protobuf.GeneratedMessage
+      .serializeStringMapTo(
+        output,
+        internalGetViewParameters(),
+        ViewParametersDefaultEntryHolder.defaultEntry,
+        5);
     getUnknownFields().writeTo(output);
   }
 
@@ -483,16 +433,15 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, pageToken_);
     }
-    for (java.util.Map.Entry<java.lang.String, com.google.bigtable.v2.Value> entry :
-        internalGetViewParameters().getMap().entrySet()) {
+    for (java.util.Map.Entry<java.lang.String, com.google.bigtable.v2.Value> entry
+         : internalGetViewParameters().getMap().entrySet()) {
       com.google.protobuf.MapEntry<java.lang.String, com.google.bigtable.v2.Value>
-          viewParameters__ =
-              ViewParametersDefaultEntryHolder.defaultEntry
-                  .newBuilderForType()
-                  .setKey(entry.getKey())
-                  .setValue(entry.getValue())
-                  .build();
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, viewParameters__);
+      viewParameters__ = ViewParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, viewParameters__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -502,19 +451,23 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SimpleExecuteQueryRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SimpleExecuteQueryRequest other =
-        (com.google.bigtable.v2.SimpleExecuteQueryRequest) obj;
+    com.google.bigtable.v2.SimpleExecuteQueryRequest other = (com.google.bigtable.v2.SimpleExecuteQueryRequest) obj;
 
-    if (!getInstanceName().equals(other.getInstanceName())) return false;
-    if (!getAppProfileId().equals(other.getAppProfileId())) return false;
-    if (!getQuery().equals(other.getQuery())) return false;
-    if (!getPageToken().equals(other.getPageToken())) return false;
-    if (!internalGetViewParameters().equals(other.internalGetViewParameters())) return false;
+    if (!getInstanceName()
+        .equals(other.getInstanceName())) return false;
+    if (!getAppProfileId()
+        .equals(other.getAppProfileId())) return false;
+    if (!getQuery()
+        .equals(other.getQuery())) return false;
+    if (!getPageToken()
+        .equals(other.getPageToken())) return false;
+    if (!internalGetViewParameters().equals(
+        other.internalGetViewParameters())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -543,118 +496,112 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     return hash;
   }
 
-  public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SimpleExecuteQueryRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Request message for Bigtable.SimpleExecuteQuery
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SimpleExecuteQueryRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SimpleExecuteQueryRequest)
       com.google.bigtable.v2.SimpleExecuteQueryRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -664,10 +611,10 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         case 5:
           return internalGetViewParameters();
         default:
-          throw new RuntimeException("Invalid map field number: " + number);
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
       }
     }
-
     @SuppressWarnings({"rawtypes"})
     protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
         int number) {
@@ -675,27 +622,28 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         case 5:
           return internalGetMutableViewParameters();
         default:
-          throw new RuntimeException("Invalid map field number: " + number);
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
       }
     }
-
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SimpleExecuteQueryRequest.class,
-              com.google.bigtable.v2.SimpleExecuteQueryRequest.Builder.class);
+              com.google.bigtable.v2.SimpleExecuteQueryRequest.class, com.google.bigtable.v2.SimpleExecuteQueryRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SimpleExecuteQueryRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -709,9 +657,9 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
     }
 
     @java.lang.Override
@@ -730,11 +678,8 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
 
     @java.lang.Override
     public com.google.bigtable.v2.SimpleExecuteQueryRequest buildPartial() {
-      com.google.bigtable.v2.SimpleExecuteQueryRequest result =
-          new com.google.bigtable.v2.SimpleExecuteQueryRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SimpleExecuteQueryRequest result = new com.google.bigtable.v2.SimpleExecuteQueryRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -754,15 +699,14 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         result.pageToken_ = pageToken_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.viewParameters_ =
-            internalGetViewParameters().build(ViewParametersDefaultEntryHolder.defaultEntry);
+        result.viewParameters_ = internalGetViewParameters().build(ViewParametersDefaultEntryHolder.defaultEntry);
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SimpleExecuteQueryRequest) {
-        return mergeFrom((com.google.bigtable.v2.SimpleExecuteQueryRequest) other);
+        return mergeFrom((com.google.bigtable.v2.SimpleExecuteQueryRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -770,8 +714,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.SimpleExecuteQueryRequest other) {
-      if (other == com.google.bigtable.v2.SimpleExecuteQueryRequest.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.SimpleExecuteQueryRequest.getDefaultInstance()) return this;
       if (!other.getInstanceName().isEmpty()) {
         instanceName_ = other.instanceName_;
         bitField0_ |= 0x00000001;
@@ -792,7 +735,8 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      internalGetMutableViewParameters().mergeFrom(other.internalGetViewParameters());
+      internalGetMutableViewParameters().mergeFrom(
+          other.internalGetViewParameters());
       bitField0_ |= 0x00000010;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -820,50 +764,41 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                instanceName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                appProfileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 26:
-              {
-                query_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-            case 34:
-              {
-                pageToken_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-            case 42:
-              {
-                com.google.protobuf.MapEntry<java.lang.String, com.google.bigtable.v2.Value>
-                    viewParameters__ =
-                        input.readMessage(
-                            ViewParametersDefaultEntryHolder.defaultEntry.getParserForType(),
-                            extensionRegistry);
-                internalGetMutableViewParameters()
-                    .ensureBuilderMap()
-                    .put(viewParameters__.getKey(), viewParameters__.getValue());
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              instanceName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              appProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              query_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              pageToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              com.google.protobuf.MapEntry<java.lang.String, com.google.bigtable.v2.Value>
+              viewParameters__ = input.readMessage(
+                  ViewParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableViewParameters().ensureBuilderMap().put(
+                  viewParameters__.getKey(), viewParameters__.getValue());
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -873,30 +808,24 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object instanceName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance against which the query should be
      * executed.
      * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The instanceName.
      */
     public java.lang.String getInstanceName() {
       java.lang.Object ref = instanceName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         instanceName_ = s;
         return s;
@@ -904,73 +833,56 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance against which the query should be
      * executed.
      * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for instanceName.
      */
-    public com.google.protobuf.ByteString getInstanceNameBytes() {
+    public com.google.protobuf.ByteString
+        getInstanceNameBytes() {
       java.lang.Object ref = instanceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         instanceName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance against which the query should be
      * executed.
      * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The instanceName to set.
      * @return This builder for chaining.
      */
-    public Builder setInstanceName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setInstanceName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       instanceName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance against which the query should be
      * executed.
      * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearInstanceName() {
@@ -979,27 +891,20 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance against which the query should be
      * executed.
      * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for instanceName to set.
      * @return This builder for chaining.
      */
-    public Builder setInstanceNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setInstanceNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       instanceName_ = value;
       bitField0_ |= 0x00000001;
@@ -1008,23 +913,20 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     }
 
     private java.lang.Object appProfileId_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. This value specifies routing for replication. If not specified,
      * the `default` application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The appProfileId.
      */
     public java.lang.String getAppProfileId() {
       java.lang.Object ref = appProfileId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appProfileId_ = s;
         return s;
@@ -1032,64 +934,53 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. This value specifies routing for replication. If not specified,
      * the `default` application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The bytes for appProfileId.
      */
-    public com.google.protobuf.ByteString getAppProfileIdBytes() {
+    public com.google.protobuf.ByteString
+        getAppProfileIdBytes() {
       java.lang.Object ref = appProfileId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         appProfileId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. This value specifies routing for replication. If not specified,
      * the `default` application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. This value specifies routing for replication. If not specified,
      * the `default` application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppProfileId() {
@@ -1098,24 +989,19 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. This value specifies routing for replication. If not specified,
      * the `default` application profile will be used.
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The bytes for appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
@@ -1124,22 +1010,19 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     }
 
     private java.lang.Object query_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Required. The query string.
      * </pre>
      *
      * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @return The query.
      */
     public java.lang.String getQuery() {
       java.lang.Object ref = query_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         query_ = s;
         return s;
@@ -1147,61 +1030,50 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The query string.
      * </pre>
      *
      * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @return The bytes for query.
      */
-    public com.google.protobuf.ByteString getQueryBytes() {
+    public com.google.protobuf.ByteString
+        getQueryBytes() {
       java.lang.Object ref = query_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         query_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The query string.
      * </pre>
      *
      * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @param value The query to set.
      * @return This builder for chaining.
      */
-    public Builder setQuery(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setQuery(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       query_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The query string.
      * </pre>
      *
      * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearQuery() {
@@ -1210,23 +1082,18 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The query string.
      * </pre>
      *
      * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @param value The bytes for query to set.
      * @return This builder for chaining.
      */
-    public Builder setQueryBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setQueryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       query_ = value;
       bitField0_ |= 0x00000004;
@@ -1235,10 +1102,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     }
 
     private java.lang.Object pageToken_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. The page token, received from a previous `SimpleExecuteQuery`
      * call. Provide this to retrieve the subsequent rows of the result set.
@@ -1248,13 +1112,13 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The pageToken.
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
         return s;
@@ -1262,10 +1126,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The page token, received from a previous `SimpleExecuteQuery`
      * call. Provide this to retrieve the subsequent rows of the result set.
@@ -1275,24 +1136,22 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The bytes for pageToken.
      */
-    public com.google.protobuf.ByteString getPageTokenBytes() {
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         pageToken_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The page token, received from a previous `SimpleExecuteQuery`
      * call. Provide this to retrieve the subsequent rows of the result set.
@@ -1302,23 +1161,18 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The pageToken to set.
      * @return This builder for chaining.
      */
-    public Builder setPageToken(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setPageToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       pageToken_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The page token, received from a previous `SimpleExecuteQuery`
      * call. Provide this to retrieve the subsequent rows of the result set.
@@ -1328,7 +1182,6 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPageToken() {
@@ -1337,10 +1190,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The page token, received from a previous `SimpleExecuteQuery`
      * call. Provide this to retrieve the subsequent rows of the result set.
@@ -1350,14 +1200,12 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * </pre>
      *
      * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The bytes for pageToken to set.
      * @return This builder for chaining.
      */
-    public Builder setPageTokenBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       pageToken_ = value;
       bitField0_ |= 0x00000008;
@@ -1365,52 +1213,30 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       return this;
     }
 
-    private static final class ViewParametersConverter
-        implements com.google.protobuf.MapFieldBuilder.Converter<
-            java.lang.String, com.google.bigtable.v2.ValueOrBuilder, com.google.bigtable.v2.Value> {
+    private static final class ViewParametersConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.google.bigtable.v2.ValueOrBuilder, com.google.bigtable.v2.Value> {
       @java.lang.Override
       public com.google.bigtable.v2.Value build(com.google.bigtable.v2.ValueOrBuilder val) {
-        if (val instanceof com.google.bigtable.v2.Value) {
-          return (com.google.bigtable.v2.Value) val;
-        }
+        if (val instanceof com.google.bigtable.v2.Value) { return (com.google.bigtable.v2.Value) val; }
         return ((com.google.bigtable.v2.Value.Builder) val).build();
       }
 
       @java.lang.Override
-      public com.google.protobuf.MapEntry<java.lang.String, com.google.bigtable.v2.Value>
-          defaultEntry() {
+      public com.google.protobuf.MapEntry<java.lang.String, com.google.bigtable.v2.Value> defaultEntry() {
         return ViewParametersDefaultEntryHolder.defaultEntry;
       }
-    }
-    ;
-
-    private static final ViewParametersConverter viewParametersConverter =
-        new ViewParametersConverter();
+    };
+    private static final ViewParametersConverter viewParametersConverter = new ViewParametersConverter();
 
     private com.google.protobuf.MapFieldBuilder<
-            java.lang.String,
-            com.google.bigtable.v2.ValueOrBuilder,
-            com.google.bigtable.v2.Value,
-            com.google.bigtable.v2.Value.Builder>
-        viewParameters_;
-
-    private com.google.protobuf.MapFieldBuilder<
-            java.lang.String,
-            com.google.bigtable.v2.ValueOrBuilder,
-            com.google.bigtable.v2.Value,
-            com.google.bigtable.v2.Value.Builder>
+        java.lang.String, com.google.bigtable.v2.ValueOrBuilder, com.google.bigtable.v2.Value, com.google.bigtable.v2.Value.Builder> viewParameters_;
+    private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.bigtable.v2.ValueOrBuilder, com.google.bigtable.v2.Value, com.google.bigtable.v2.Value.Builder>
         internalGetViewParameters() {
       if (viewParameters_ == null) {
         return new com.google.protobuf.MapFieldBuilder<>(viewParametersConverter);
       }
       return viewParameters_;
     }
-
-    private com.google.protobuf.MapFieldBuilder<
-            java.lang.String,
-            com.google.bigtable.v2.ValueOrBuilder,
-            com.google.bigtable.v2.Value,
-            com.google.bigtable.v2.Value.Builder>
+    private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.bigtable.v2.ValueOrBuilder, com.google.bigtable.v2.Value, com.google.bigtable.v2.Value.Builder>
         internalGetMutableViewParameters() {
       if (viewParameters_ == null) {
         viewParameters_ = new com.google.protobuf.MapFieldBuilder<>(viewParametersConverter);
@@ -1419,14 +1245,10 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
       onChanged();
       return viewParameters_;
     }
-
     public int getViewParametersCount() {
       return internalGetViewParameters().ensureBuilderMap().size();
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1439,23 +1261,20 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
      */
     @java.lang.Override
-    public boolean containsViewParameters(java.lang.String key) {
-      if (key == null) {
-        throw new NullPointerException("map key");
-      }
+    public boolean containsViewParameters(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetViewParameters().ensureBuilderMap().containsKey(key);
     }
-
-    /** Use {@link #getViewParametersMap()} instead. */
+    /**
+     * Use {@link #getViewParametersMap()} instead.
+     */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParameters() {
       return getViewParametersMap();
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1471,10 +1290,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     public java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParametersMap() {
       return internalGetViewParameters().getImmutableMap();
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1487,21 +1303,16 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
      */
     @java.lang.Override
-    public /* nullable */ com.google.bigtable.v2.Value getViewParametersOrDefault(
+    public /* nullable */
+com.google.bigtable.v2.Value getViewParametersOrDefault(
         java.lang.String key,
         /* nullable */
-        com.google.bigtable.v2.Value defaultValue) {
-      if (key == null) {
-        throw new NullPointerException("map key");
-      }
-      java.util.Map<java.lang.String, com.google.bigtable.v2.ValueOrBuilder> map =
-          internalGetMutableViewParameters().ensureBuilderMap();
+com.google.bigtable.v2.Value defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.bigtable.v2.ValueOrBuilder> map = internalGetMutableViewParameters().ensureBuilderMap();
       return map.containsKey(key) ? viewParametersConverter.build(map.get(key)) : defaultValue;
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1514,27 +1325,21 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.Value getViewParametersOrThrow(java.lang.String key) {
-      if (key == null) {
-        throw new NullPointerException("map key");
-      }
-      java.util.Map<java.lang.String, com.google.bigtable.v2.ValueOrBuilder> map =
-          internalGetMutableViewParameters().ensureBuilderMap();
+    public com.google.bigtable.v2.Value getViewParametersOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.bigtable.v2.ValueOrBuilder> map = internalGetMutableViewParameters().ensureBuilderMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return viewParametersConverter.build(map.get(key));
     }
-
     public Builder clearViewParameters() {
       bitField0_ = (bitField0_ & ~0x00000010);
       internalGetMutableViewParameters().clear();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1546,25 +1351,23 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      *
      * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
      */
-    public Builder removeViewParameters(java.lang.String key) {
-      if (key == null) {
-        throw new NullPointerException("map key");
-      }
-      internalGetMutableViewParameters().ensureBuilderMap().remove(key);
+    public Builder removeViewParameters(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableViewParameters().ensureBuilderMap()
+          .remove(key);
       return this;
     }
-
-    /** Use alternate mutation accessors instead. */
+    /**
+     * Use alternate mutation accessors instead.
+     */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
         getMutableViewParameters() {
       bitField0_ |= 0x00000010;
       return internalGetMutableViewParameters().ensureMessageMap();
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1576,21 +1379,17 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      *
      * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
      */
-    public Builder putViewParameters(java.lang.String key, com.google.bigtable.v2.Value value) {
-      if (key == null) {
-        throw new NullPointerException("map key");
-      }
-      if (value == null) {
-        throw new NullPointerException("map value");
-      }
-      internalGetMutableViewParameters().ensureBuilderMap().put(key, value);
+    public Builder putViewParameters(
+        java.lang.String key,
+        com.google.bigtable.v2.Value value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableViewParameters().ensureBuilderMap()
+          .put(key, value);
       bitField0_ |= 0x00000010;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1604,20 +1403,17 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      */
     public Builder putAllViewParameters(
         java.util.Map<java.lang.String, com.google.bigtable.v2.Value> values) {
-      for (java.util.Map.Entry<java.lang.String, com.google.bigtable.v2.Value> e :
-          values.entrySet()) {
+      for (java.util.Map.Entry<java.lang.String, com.google.bigtable.v2.Value> e : values.entrySet()) {
         if (e.getKey() == null || e.getValue() == null) {
           throw new NullPointerException();
         }
       }
-      internalGetMutableViewParameters().ensureBuilderMap().putAll(values);
+      internalGetMutableViewParameters().ensureBuilderMap()
+          .putAll(values);
       bitField0_ |= 0x00000010;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * This map provides the runtime values returned by the VIEW_PARAMETERS()
      * function calls, typically used for user-level scoping of data based on
@@ -1631,8 +1427,7 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
      */
     public com.google.bigtable.v2.Value.Builder putViewParametersBuilderIfAbsent(
         java.lang.String key) {
-      java.util.Map<java.lang.String, com.google.bigtable.v2.ValueOrBuilder> builderMap =
-          internalGetMutableViewParameters().ensureBuilderMap();
+      java.util.Map<java.lang.String, com.google.bigtable.v2.ValueOrBuilder> builderMap = internalGetMutableViewParameters().ensureBuilderMap();
       com.google.bigtable.v2.ValueOrBuilder entry = builderMap.get(key);
       if (entry == null) {
         entry = com.google.bigtable.v2.Value.newBuilder();
@@ -1650,7 +1445,6 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SimpleExecuteQueryRequest)
   private static final com.google.bigtable.v2.SimpleExecuteQueryRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SimpleExecuteQueryRequest();
   }
@@ -1659,27 +1453,27 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SimpleExecuteQueryRequest> PARSER =
-      new com.google.protobuf.AbstractParser<SimpleExecuteQueryRequest>() {
-        @java.lang.Override
-        public SimpleExecuteQueryRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SimpleExecuteQueryRequest>
+      PARSER = new com.google.protobuf.AbstractParser<SimpleExecuteQueryRequest>() {
+    @java.lang.Override
+    public SimpleExecuteQueryRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SimpleExecuteQueryRequest> parser() {
     return PARSER;
@@ -1694,4 +1488,6 @@ public final class SimpleExecuteQueryRequest extends com.google.protobuf.Generat
   public com.google.bigtable.v2.SimpleExecuteQueryRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -6,36 +6,31 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ClusterInformationOrBuilder
-    extends
+public interface ClusterInformationOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ClusterInformation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>string cluster_id = 1;</code>
-   *
    * @return The clusterId.
    */
   java.lang.String getClusterId();
-
   /**
    * <code>string cluster_id = 1;</code>
-   *
    * @return The bytes for clusterId.
    */
-  com.google.protobuf.ByteString getClusterIdBytes();
+  com.google.protobuf.ByteString
+      getClusterIdBytes();
 
   /**
    * <code>string zone_id = 2;</code>
-   *
    * @return The zoneId.
    */
   java.lang.String getZoneId();
-
   /**
    * <code>string zone_id = 2;</code>
-   *
    * @return The bytes for zoneId.
    */
-  com.google.protobuf.ByteString getZoneIdBytes();
+  com.google.protobuf.ByteString
+      getZoneIdBytes();
 }

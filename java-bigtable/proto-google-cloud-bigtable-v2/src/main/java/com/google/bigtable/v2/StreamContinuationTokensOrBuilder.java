@@ -6,25 +6,20 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface StreamContinuationTokensOrBuilder
-    extends
+public interface StreamContinuationTokensOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.StreamContinuationTokens)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
-  java.util.List<com.google.bigtable.v2.StreamContinuationToken> getTokensList();
-
+  java.util.List<com.google.bigtable.v2.StreamContinuationToken> 
+      getTokensList();
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -32,10 +27,7 @@ public interface StreamContinuationTokensOrBuilder
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
   com.google.bigtable.v2.StreamContinuationToken getTokens(int index);
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -43,27 +35,22 @@ public interface StreamContinuationTokensOrBuilder
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
   int getTokensCount();
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.StreamContinuationTokenOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.StreamContinuationTokenOrBuilder> 
       getTokensOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
-  com.google.bigtable.v2.StreamContinuationTokenOrBuilder getTokensOrBuilder(int index);
+  com.google.bigtable.v2.StreamContinuationTokenOrBuilder getTokensOrBuilder(
+      int index);
 }

@@ -6,20 +6,16 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface PingAndWarmResponseOrBuilder
-    extends
+public interface PingAndWarmResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.PingAndWarmResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Data received from the server.
    * </pre>
    *
    * <code>bytes ping_data = 1;</code>
-   *
    * @return The pingData.
    */
   com.google.protobuf.ByteString getPingData();

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Server provided instructions for enabling finer grained observability on
  * the client to help diagnose customer issues. Internal usage only.
@@ -16,59 +14,51 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.TelemetryConfiguration}
  */
 @com.google.protobuf.Generated
-public final class TelemetryConfiguration extends com.google.protobuf.GeneratedMessage
-    implements
+public final class TelemetryConfiguration extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.TelemetryConfiguration)
     TelemetryConfigurationOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "TelemetryConfiguration");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "TelemetryConfiguration");
   }
-
   // Use TelemetryConfiguration.newBuilder() to construct.
   private TelemetryConfiguration(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private TelemetryConfiguration() {
     debugTagLevel_ = 0;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_TelemetryConfiguration_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_TelemetryConfiguration_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_TelemetryConfiguration_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_TelemetryConfiguration_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.TelemetryConfiguration.class,
-            com.google.bigtable.v2.TelemetryConfiguration.Builder.class);
+            com.google.bigtable.v2.TelemetryConfiguration.class, com.google.bigtable.v2.TelemetryConfiguration.Builder.class);
   }
 
   /**
-   *
-   *
    * <pre>
    * The level of detail of telemetry to be sent from the client.
    * </pre>
    *
    * Protobuf enum {@code google.bigtable.v2.TelemetryConfiguration.Level}
    */
-  public enum Level implements com.google.protobuf.ProtocolMessageEnum {
+  public enum Level
+      implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     *
-     *
      * <pre>
      * Server did not specify a level. Should disable all debug tag counters.
      * </pre>
@@ -77,8 +67,6 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      */
     LEVEL_UNSPECIFIED(0),
     /**
-     *
-     *
      * <pre>
      * Enables all debug tag counter levels.
      * </pre>
@@ -87,8 +75,6 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      */
     DEBUG(1),
     /**
-     *
-     *
      * <pre>
      * Eables all debug tag counters except for DEBUG.
      * </pre>
@@ -97,8 +83,6 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      */
     INFO(2),
     /**
-     *
-     *
      * <pre>
      * Enables all debug tag counters except for DEBUG and INFO.
      * </pre>
@@ -107,8 +91,6 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      */
     WARN(3),
     /**
-     *
-     *
      * <pre>
      * Enables only error debug tag counters.
      * </pre>
@@ -121,17 +103,14 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
 
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Level");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Level");
     }
-
     /**
-     *
-     *
      * <pre>
      * Server did not specify a level. Should disable all debug tag counters.
      * </pre>
@@ -139,10 +118,7 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      * <code>LEVEL_UNSPECIFIED = 0;</code>
      */
     public static final int LEVEL_UNSPECIFIED_VALUE = 0;
-
     /**
-     *
-     *
      * <pre>
      * Enables all debug tag counter levels.
      * </pre>
@@ -150,10 +126,7 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      * <code>DEBUG = 1;</code>
      */
     public static final int DEBUG_VALUE = 1;
-
     /**
-     *
-     *
      * <pre>
      * Eables all debug tag counters except for DEBUG.
      * </pre>
@@ -161,10 +134,7 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      * <code>INFO = 2;</code>
      */
     public static final int INFO_VALUE = 2;
-
     /**
-     *
-     *
      * <pre>
      * Enables all debug tag counters except for DEBUG and INFO.
      * </pre>
@@ -172,10 +142,7 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      * <code>WARN = 3;</code>
      */
     public static final int WARN_VALUE = 3;
-
     /**
-     *
-     *
      * <pre>
      * Enables only error debug tag counters.
      * </pre>
@@ -183,6 +150,7 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      * <code>ERROR = 4;</code>
      */
     public static final int ERROR_VALUE = 4;
+
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -208,53 +176,51 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
      */
     public static Level forNumber(int value) {
       switch (value) {
-        case 0:
-          return LEVEL_UNSPECIFIED;
-        case 1:
-          return DEBUG;
-        case 2:
-          return INFO;
-        case 3:
-          return WARN;
-        case 4:
-          return ERROR;
-        default:
-          return null;
+        case 0: return LEVEL_UNSPECIFIED;
+        case 1: return DEBUG;
+        case 2: return INFO;
+        case 3: return WARN;
+        case 4: return ERROR;
+        default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<Level> internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<Level>
+        internalGetValueMap() {
       return internalValueMap;
     }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Level> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Level>() {
+            public Level findValueByNumber(int number) {
+              return Level.forNumber(number);
+            }
+          };
 
-    private static final com.google.protobuf.Internal.EnumLiteMap<Level> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Level>() {
-          public Level findValueByNumber(int number) {
-            return Level.forNumber(number);
-          }
-        };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
-
-    public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+    public static com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
       return com.google.bigtable.v2.TelemetryConfiguration.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final Level[] VALUES = values();
 
-    public static Level valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static Level valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -273,45 +239,31 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
 
   public static final int DEBUG_TAG_LEVEL_FIELD_NUMBER = 1;
   private int debugTagLevel_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * Selector for the debug counters that should be uploaded.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-   *
    * @return The enum numeric value on the wire for debugTagLevel.
    */
-  @java.lang.Override
-  public int getDebugTagLevelValue() {
+  @java.lang.Override public int getDebugTagLevelValue() {
     return debugTagLevel_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Selector for the debug counters that should be uploaded.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-   *
    * @return The debugTagLevel.
    */
-  @java.lang.Override
-  public com.google.bigtable.v2.TelemetryConfiguration.Level getDebugTagLevel() {
-    com.google.bigtable.v2.TelemetryConfiguration.Level result =
-        com.google.bigtable.v2.TelemetryConfiguration.Level.forNumber(debugTagLevel_);
-    return result == null
-        ? com.google.bigtable.v2.TelemetryConfiguration.Level.UNRECOGNIZED
-        : result;
+  @java.lang.Override public com.google.bigtable.v2.TelemetryConfiguration.Level getDebugTagLevel() {
+    com.google.bigtable.v2.TelemetryConfiguration.Level result = com.google.bigtable.v2.TelemetryConfiguration.Level.forNumber(debugTagLevel_);
+    return result == null ? com.google.bigtable.v2.TelemetryConfiguration.Level.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -323,9 +275,9 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (debugTagLevel_
-        != com.google.bigtable.v2.TelemetryConfiguration.Level.LEVEL_UNSPECIFIED.getNumber()) {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (debugTagLevel_ != com.google.bigtable.v2.TelemetryConfiguration.Level.LEVEL_UNSPECIFIED.getNumber()) {
       output.writeEnum(1, debugTagLevel_);
     }
     getUnknownFields().writeTo(output);
@@ -337,9 +289,9 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
     if (size != -1) return size;
 
     size = 0;
-    if (debugTagLevel_
-        != com.google.bigtable.v2.TelemetryConfiguration.Level.LEVEL_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(1, debugTagLevel_);
+    if (debugTagLevel_ != com.google.bigtable.v2.TelemetryConfiguration.Level.LEVEL_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, debugTagLevel_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -349,13 +301,12 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.TelemetryConfiguration)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.TelemetryConfiguration other =
-        (com.google.bigtable.v2.TelemetryConfiguration) obj;
+    com.google.bigtable.v2.TelemetryConfiguration other = (com.google.bigtable.v2.TelemetryConfiguration) obj;
 
     if (debugTagLevel_ != other.debugTagLevel_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -376,105 +327,99 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
     return hash;
   }
 
-  public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.TelemetryConfiguration parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.TelemetryConfiguration parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.TelemetryConfiguration parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.TelemetryConfiguration parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.TelemetryConfiguration prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Server provided instructions for enabling finer grained observability on
    * the client to help diagnose customer issues. Internal usage only.
@@ -482,32 +427,33 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
    *
    * Protobuf type {@code google.bigtable.v2.TelemetryConfiguration}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.TelemetryConfiguration)
       com.google.bigtable.v2.TelemetryConfigurationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_TelemetryConfiguration_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_TelemetryConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_TelemetryConfiguration_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_TelemetryConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.TelemetryConfiguration.class,
-              com.google.bigtable.v2.TelemetryConfiguration.Builder.class);
+              com.google.bigtable.v2.TelemetryConfiguration.class, com.google.bigtable.v2.TelemetryConfiguration.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.TelemetryConfiguration.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -517,9 +463,9 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_TelemetryConfiguration_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_TelemetryConfiguration_descriptor;
     }
 
     @java.lang.Override
@@ -538,11 +484,8 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
 
     @java.lang.Override
     public com.google.bigtable.v2.TelemetryConfiguration buildPartial() {
-      com.google.bigtable.v2.TelemetryConfiguration result =
-          new com.google.bigtable.v2.TelemetryConfiguration(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.TelemetryConfiguration result = new com.google.bigtable.v2.TelemetryConfiguration(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -557,7 +500,7 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.TelemetryConfiguration) {
-        return mergeFrom((com.google.bigtable.v2.TelemetryConfiguration) other);
+        return mergeFrom((com.google.bigtable.v2.TelemetryConfiguration)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -595,19 +538,17 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                debugTagLevel_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              debugTagLevel_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -617,36 +558,26 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private int debugTagLevel_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Selector for the debug counters that should be uploaded.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-     *
      * @return The enum numeric value on the wire for debugTagLevel.
      */
-    @java.lang.Override
-    public int getDebugTagLevelValue() {
+    @java.lang.Override public int getDebugTagLevelValue() {
       return debugTagLevel_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Selector for the debug counters that should be uploaded.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-     *
      * @param value The enum numeric value on the wire for debugTagLevel to set.
      * @return This builder for chaining.
      */
@@ -656,58 +587,41 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Selector for the debug counters that should be uploaded.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-     *
      * @return The debugTagLevel.
      */
     @java.lang.Override
     public com.google.bigtable.v2.TelemetryConfiguration.Level getDebugTagLevel() {
-      com.google.bigtable.v2.TelemetryConfiguration.Level result =
-          com.google.bigtable.v2.TelemetryConfiguration.Level.forNumber(debugTagLevel_);
-      return result == null
-          ? com.google.bigtable.v2.TelemetryConfiguration.Level.UNRECOGNIZED
-          : result;
+      com.google.bigtable.v2.TelemetryConfiguration.Level result = com.google.bigtable.v2.TelemetryConfiguration.Level.forNumber(debugTagLevel_);
+      return result == null ? com.google.bigtable.v2.TelemetryConfiguration.Level.UNRECOGNIZED : result;
     }
-
     /**
-     *
-     *
      * <pre>
      * Selector for the debug counters that should be uploaded.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-     *
      * @param value The debugTagLevel to set.
      * @return This builder for chaining.
      */
     public Builder setDebugTagLevel(com.google.bigtable.v2.TelemetryConfiguration.Level value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       bitField0_ |= 0x00000001;
       debugTagLevel_ = value.getNumber();
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Selector for the debug counters that should be uploaded.
      * </pre>
      *
      * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDebugTagLevel() {
@@ -722,7 +636,6 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.TelemetryConfiguration)
   private static final com.google.bigtable.v2.TelemetryConfiguration DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.TelemetryConfiguration();
   }
@@ -731,27 +644,27 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TelemetryConfiguration> PARSER =
-      new com.google.protobuf.AbstractParser<TelemetryConfiguration>() {
-        @java.lang.Override
-        public TelemetryConfiguration parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<TelemetryConfiguration>
+      PARSER = new com.google.protobuf.AbstractParser<TelemetryConfiguration>() {
+    @java.lang.Override
+    public TelemetryConfiguration parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<TelemetryConfiguration> parser() {
     return PARSER;
@@ -766,4 +679,6 @@ public final class TelemetryConfiguration extends com.google.protobuf.GeneratedM
   public com.google.bigtable.v2.TelemetryConfiguration getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

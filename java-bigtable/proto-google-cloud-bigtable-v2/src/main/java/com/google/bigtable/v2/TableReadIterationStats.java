@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * TableReadIterationStats captures iteration stats for a single table in a
  * query.
@@ -16,62 +14,52 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.TableReadIterationStats}
  */
 @com.google.protobuf.Generated
-public final class TableReadIterationStats extends com.google.protobuf.GeneratedMessage
-    implements
+public final class TableReadIterationStats extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.TableReadIterationStats)
     TableReadIterationStatsOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "TableReadIterationStats");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "TableReadIterationStats");
   }
-
   // Use TableReadIterationStats.newBuilder() to construct.
   private TableReadIterationStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private TableReadIterationStats() {
     tableName_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.TableReadIterationStats.class,
-            com.google.bigtable.v2.TableReadIterationStats.Builder.class);
+            com.google.bigtable.v2.TableReadIterationStats.class, com.google.bigtable.v2.TableReadIterationStats.Builder.class);
   }
 
   private int bitField0_;
   public static final int TABLE_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object tableName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The full resource name of the table
    * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
    * </pre>
    *
    * <code>string table_name = 1;</code>
-   *
    * @return The tableName.
    */
   @java.lang.Override
@@ -80,31 +68,30 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       tableName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The full resource name of the table
    * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
    * </pre>
    *
    * <code>string table_name = 1;</code>
-   *
    * @return The bytes for tableName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getTableNameBytes() {
+  public com.google.protobuf.ByteString
+      getTableNameBytes() {
     java.lang.Object ref = tableName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       tableName_ = b;
       return b;
     } else {
@@ -114,44 +101,31 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
 
   public static final int READ_ITERATION_STATS_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.ReadIterationStats readIterationStats_;
-
   /**
-   *
-   *
    * <pre>
    * The iteration statistics captured for this table during query execution.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
-   *
    * @return Whether the readIterationStats field is set.
    */
   @java.lang.Override
   public boolean hasReadIterationStats() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * The iteration statistics captured for this table during query execution.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
-   *
    * @return The readIterationStats.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ReadIterationStats getReadIterationStats() {
-    return readIterationStats_ == null
-        ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-        : readIterationStats_;
+    return readIterationStats_ == null ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The iteration statistics captured for this table during query execution.
    * </pre>
@@ -160,13 +134,10 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
    */
   @java.lang.Override
   public com.google.bigtable.v2.ReadIterationStatsOrBuilder getReadIterationStatsOrBuilder() {
-    return readIterationStats_ == null
-        ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-        : readIterationStats_;
+    return readIterationStats_ == null ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -178,7 +149,8 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tableName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, tableName_);
     }
@@ -198,7 +170,8 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, tableName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getReadIterationStats());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getReadIterationStats());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -208,18 +181,19 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.TableReadIterationStats)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.TableReadIterationStats other =
-        (com.google.bigtable.v2.TableReadIterationStats) obj;
+    com.google.bigtable.v2.TableReadIterationStats other = (com.google.bigtable.v2.TableReadIterationStats) obj;
 
-    if (!getTableName().equals(other.getTableName())) return false;
+    if (!getTableName()
+        .equals(other.getTableName())) return false;
     if (hasReadIterationStats() != other.hasReadIterationStats()) return false;
     if (hasReadIterationStats()) {
-      if (!getReadIterationStats().equals(other.getReadIterationStats())) return false;
+      if (!getReadIterationStats()
+          .equals(other.getReadIterationStats())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -243,105 +217,99 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
     return hash;
   }
 
-  public static com.google.bigtable.v2.TableReadIterationStats parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.TableReadIterationStats parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.TableReadIterationStats parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.TableReadIterationStats parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.TableReadIterationStats parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.TableReadIterationStats prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * TableReadIterationStats captures iteration stats for a single table in a
    * query.
@@ -349,23 +317,21 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
    *
    * Protobuf type {@code google.bigtable.v2.TableReadIterationStats}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.TableReadIterationStats)
       com.google.bigtable.v2.TableReadIterationStatsOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_TableReadIterationStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.TableReadIterationStats.class,
-              com.google.bigtable.v2.TableReadIterationStats.Builder.class);
+              com.google.bigtable.v2.TableReadIterationStats.class, com.google.bigtable.v2.TableReadIterationStats.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.TableReadIterationStats.newBuilder()
@@ -373,17 +339,17 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetReadIterationStatsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -398,9 +364,9 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_TableReadIterationStats_descriptor;
     }
 
     @java.lang.Override
@@ -419,11 +385,8 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
 
     @java.lang.Override
     public com.google.bigtable.v2.TableReadIterationStats buildPartial() {
-      com.google.bigtable.v2.TableReadIterationStats result =
-          new com.google.bigtable.v2.TableReadIterationStats(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.TableReadIterationStats result = new com.google.bigtable.v2.TableReadIterationStats(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -435,10 +398,9 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.readIterationStats_ =
-            readIterationStatsBuilder_ == null
-                ? readIterationStats_
-                : readIterationStatsBuilder_.build();
+        result.readIterationStats_ = readIterationStatsBuilder_ == null
+            ? readIterationStats_
+            : readIterationStatsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -447,7 +409,7 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.TableReadIterationStats) {
-        return mergeFrom((com.google.bigtable.v2.TableReadIterationStats) other);
+        return mergeFrom((com.google.bigtable.v2.TableReadIterationStats)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -490,26 +452,24 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                tableName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetReadIterationStatsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              tableName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetReadIterationStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -519,27 +479,23 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object tableName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The full resource name of the table
      * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
      * </pre>
      *
      * <code>string table_name = 1;</code>
-     *
      * @return The tableName.
      */
     public java.lang.String getTableName() {
       java.lang.Object ref = tableName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         tableName_ = s;
         return s;
@@ -547,64 +503,53 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The full resource name of the table
      * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
      * </pre>
      *
      * <code>string table_name = 1;</code>
-     *
      * @return The bytes for tableName.
      */
-    public com.google.protobuf.ByteString getTableNameBytes() {
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
       java.lang.Object ref = tableName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         tableName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The full resource name of the table
      * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
      * </pre>
      *
      * <code>string table_name = 1;</code>
-     *
      * @param value The tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       tableName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The full resource name of the table
      * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
      * </pre>
      *
      * <code>string table_name = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearTableName() {
@@ -613,24 +558,19 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The full resource name of the table
      * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
      * </pre>
      *
      * <code>string table_name = 1;</code>
-     *
      * @param value The bytes for tableName to set.
      * @return This builder for chaining.
      */
-    public Builder setTableNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setTableNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       tableName_ = value;
       bitField0_ |= 0x00000001;
@@ -640,50 +580,34 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
 
     private com.google.bigtable.v2.ReadIterationStats readIterationStats_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ReadIterationStats,
-            com.google.bigtable.v2.ReadIterationStats.Builder,
-            com.google.bigtable.v2.ReadIterationStatsOrBuilder>
-        readIterationStatsBuilder_;
-
+        com.google.bigtable.v2.ReadIterationStats, com.google.bigtable.v2.ReadIterationStats.Builder, com.google.bigtable.v2.ReadIterationStatsOrBuilder> readIterationStatsBuilder_;
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
-     *
      * @return Whether the readIterationStats field is set.
      */
     public boolean hasReadIterationStats() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
      *
      * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
-     *
      * @return The readIterationStats.
      */
     public com.google.bigtable.v2.ReadIterationStats getReadIterationStats() {
       if (readIterationStatsBuilder_ == null) {
-        return readIterationStats_ == null
-            ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-            : readIterationStats_;
+        return readIterationStats_ == null ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
       } else {
         return readIterationStatsBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -703,10 +627,7 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -724,10 +645,7 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -736,10 +654,9 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
      */
     public Builder mergeReadIterationStats(com.google.bigtable.v2.ReadIterationStats value) {
       if (readIterationStatsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && readIterationStats_ != null
-            && readIterationStats_
-                != com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          readIterationStats_ != null &&
+          readIterationStats_ != com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()) {
           getReadIterationStatsBuilder().mergeFrom(value);
         } else {
           readIterationStats_ = value;
@@ -753,10 +670,7 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -773,10 +687,7 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -788,10 +699,7 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       onChanged();
       return internalGetReadIterationStatsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -802,15 +710,11 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
       if (readIterationStatsBuilder_ != null) {
         return readIterationStatsBuilder_.getMessageOrBuilder();
       } else {
-        return readIterationStats_ == null
-            ? com.google.bigtable.v2.ReadIterationStats.getDefaultInstance()
-            : readIterationStats_;
+        return readIterationStats_ == null ?
+            com.google.bigtable.v2.ReadIterationStats.getDefaultInstance() : readIterationStats_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The iteration statistics captured for this table during query execution.
      * </pre>
@@ -818,17 +722,14 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
      * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ReadIterationStats,
-            com.google.bigtable.v2.ReadIterationStats.Builder,
-            com.google.bigtable.v2.ReadIterationStatsOrBuilder>
+        com.google.bigtable.v2.ReadIterationStats, com.google.bigtable.v2.ReadIterationStats.Builder, com.google.bigtable.v2.ReadIterationStatsOrBuilder> 
         internalGetReadIterationStatsFieldBuilder() {
       if (readIterationStatsBuilder_ == null) {
-        readIterationStatsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ReadIterationStats,
-                com.google.bigtable.v2.ReadIterationStats.Builder,
-                com.google.bigtable.v2.ReadIterationStatsOrBuilder>(
-                getReadIterationStats(), getParentForChildren(), isClean());
+        readIterationStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ReadIterationStats, com.google.bigtable.v2.ReadIterationStats.Builder, com.google.bigtable.v2.ReadIterationStatsOrBuilder>(
+                getReadIterationStats(),
+                getParentForChildren(),
+                isClean());
         readIterationStats_ = null;
       }
       return readIterationStatsBuilder_;
@@ -839,7 +740,6 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.TableReadIterationStats)
   private static final com.google.bigtable.v2.TableReadIterationStats DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.TableReadIterationStats();
   }
@@ -848,27 +748,27 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TableReadIterationStats> PARSER =
-      new com.google.protobuf.AbstractParser<TableReadIterationStats>() {
-        @java.lang.Override
-        public TableReadIterationStats parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<TableReadIterationStats>
+      PARSER = new com.google.protobuf.AbstractParser<TableReadIterationStats>() {
+    @java.lang.Override
+    public TableReadIterationStats parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<TableReadIterationStats> parser() {
     return PARSER;
@@ -883,4 +783,6 @@ public final class TableReadIterationStats extends com.google.protobuf.Generated
   public com.google.bigtable.v2.TableReadIterationStats getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

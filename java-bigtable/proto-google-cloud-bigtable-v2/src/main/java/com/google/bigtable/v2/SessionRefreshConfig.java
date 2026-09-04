@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,94 +13,76 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SessionRefreshConfig}
  */
 @com.google.protobuf.Generated
-public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionRefreshConfig extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionRefreshConfig)
     SessionRefreshConfigOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionRefreshConfig");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionRefreshConfig");
   }
-
   // Use SessionRefreshConfig.newBuilder() to construct.
   private SessionRefreshConfig(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private SessionRefreshConfig() {
     metadata_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionRefreshConfig_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionRefreshConfig_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionRefreshConfig.class,
-            com.google.bigtable.v2.SessionRefreshConfig.Builder.class);
+            com.google.bigtable.v2.SessionRefreshConfig.class, com.google.bigtable.v2.SessionRefreshConfig.Builder.class);
   }
 
-  public interface MetadataOrBuilder
-      extends
+  public interface MetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionRefreshConfig.Metadata)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Output only. The key for the metadata entry.
      * </pre>
      *
      * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     *
      * @return The key.
      */
     java.lang.String getKey();
-
     /**
-     *
-     *
      * <pre>
      * Output only. The key for the metadata entry.
      * </pre>
      *
      * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     *
      * @return The bytes for key.
      */
-    com.google.protobuf.ByteString getKeyBytes();
+    com.google.protobuf.ByteString
+        getKeyBytes();
 
     /**
-     *
-     *
      * <pre>
      * Output only. The value for the metadata entry.
      * </pre>
      *
      * <code>bytes value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     *
      * @return The value.
      */
     com.google.protobuf.ByteString getValue();
   }
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting. Not a `map&lt;&gt;` type as
    * this can be a multimap.
@@ -110,61 +90,51 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
    *
    * Protobuf type {@code google.bigtable.v2.SessionRefreshConfig.Metadata}
    */
-  public static final class Metadata extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Metadata extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionRefreshConfig.Metadata)
       MetadataOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Metadata");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Metadata");
     }
-
     // Use Metadata.newBuilder() to construct.
     private Metadata(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private Metadata() {
       key_ = "";
       value_ = com.google.protobuf.ByteString.EMPTY;
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionRefreshConfig.Metadata.class,
-              com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder.class);
+              com.google.bigtable.v2.SessionRefreshConfig.Metadata.class, com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder.class);
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-
     @SuppressWarnings("serial")
     private volatile java.lang.Object key_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Output only. The key for the metadata entry.
      * </pre>
      *
      * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     *
      * @return The key.
      */
     @java.lang.Override
@@ -173,30 +143,29 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         key_ = s;
         return s;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Output only. The key for the metadata entry.
      * </pre>
      *
      * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     *
      * @return The bytes for key.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getKeyBytes() {
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         key_ = b;
         return b;
       } else {
@@ -206,16 +175,12 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
 
     public static final int VALUE_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * Output only. The value for the metadata entry.
      * </pre>
      *
      * <code>bytes value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     *
      * @return The value.
      */
     @java.lang.Override
@@ -224,7 +189,6 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -236,7 +200,8 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(key_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, key_);
       }
@@ -256,7 +221,8 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, key_);
       }
       if (!value_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, value_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, value_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -266,16 +232,17 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.SessionRefreshConfig.Metadata)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.SessionRefreshConfig.Metadata other =
-          (com.google.bigtable.v2.SessionRefreshConfig.Metadata) obj;
+      com.google.bigtable.v2.SessionRefreshConfig.Metadata other = (com.google.bigtable.v2.SessionRefreshConfig.Metadata) obj;
 
-      if (!getKey().equals(other.getKey())) return false;
-      if (!getValue().equals(other.getValue())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -297,105 +264,98 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     }
 
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
+    public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.SessionRefreshConfig.Metadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.SessionRefreshConfig.Metadata prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.SessionRefreshConfig.Metadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting. Not a `map&lt;&gt;` type as
      * this can be a multimap.
@@ -403,32 +363,33 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      *
      * Protobuf type {@code google.bigtable.v2.SessionRefreshConfig.Metadata}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionRefreshConfig.Metadata)
         com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.SessionRefreshConfig.Metadata.class,
-                com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder.class);
+                com.google.bigtable.v2.SessionRefreshConfig.Metadata.class, com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.SessionRefreshConfig.Metadata.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -439,9 +400,9 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_Metadata_descriptor;
       }
 
       @java.lang.Override
@@ -460,11 +421,8 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
 
       @java.lang.Override
       public com.google.bigtable.v2.SessionRefreshConfig.Metadata buildPartial() {
-        com.google.bigtable.v2.SessionRefreshConfig.Metadata result =
-            new com.google.bigtable.v2.SessionRefreshConfig.Metadata(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.SessionRefreshConfig.Metadata result = new com.google.bigtable.v2.SessionRefreshConfig.Metadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -482,7 +440,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.SessionRefreshConfig.Metadata) {
-          return mergeFrom((com.google.bigtable.v2.SessionRefreshConfig.Metadata) other);
+          return mergeFrom((com.google.bigtable.v2.SessionRefreshConfig.Metadata)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -490,8 +448,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
 
       public Builder mergeFrom(com.google.bigtable.v2.SessionRefreshConfig.Metadata other) {
-        if (other == com.google.bigtable.v2.SessionRefreshConfig.Metadata.getDefaultInstance())
-          return this;
+        if (other == com.google.bigtable.v2.SessionRefreshConfig.Metadata.getDefaultInstance()) return this;
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
           bitField0_ |= 0x00000001;
@@ -526,25 +483,22 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  key_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-              case 18:
-                {
-                  value_ = input.readBytes();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 18
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -554,26 +508,22 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private java.lang.Object key_ = "";
-
       /**
-       *
-       *
        * <pre>
        * Output only. The key for the metadata entry.
        * </pre>
        *
        * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @return The key.
        */
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           key_ = s;
           return s;
@@ -581,61 +531,50 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
           return (java.lang.String) ref;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * Output only. The key for the metadata entry.
        * </pre>
        *
        * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @return The bytes for key.
        */
-      public com.google.protobuf.ByteString getKeyBytes() {
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
         java.lang.Object ref = key_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           key_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * Output only. The key for the metadata entry.
        * </pre>
        *
        * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @param value The key to set.
        * @return This builder for chaining.
        */
-      public Builder setKey(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         key_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Output only. The key for the metadata entry.
        * </pre>
        *
        * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearKey() {
@@ -644,23 +583,18 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Output only. The key for the metadata entry.
        * </pre>
        *
        * <code>string key = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @param value The bytes for key to set.
        * @return This builder for chaining.
        */
-      public Builder setKeyBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         key_ = value;
         bitField0_ |= 0x00000001;
@@ -669,54 +603,40 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
 
       private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
-
       /**
-       *
-       *
        * <pre>
        * Output only. The value for the metadata entry.
        * </pre>
        *
        * <code>bytes value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @return The value.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Output only. The value for the metadata entry.
        * </pre>
        *
        * <code>bytes value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @param value The value to set.
        * @return This builder for chaining.
        */
       public Builder setValue(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Output only. The value for the metadata entry.
        * </pre>
        *
        * <code>bytes value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -731,7 +651,6 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionRefreshConfig.Metadata)
     private static final com.google.bigtable.v2.SessionRefreshConfig.Metadata DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionRefreshConfig.Metadata();
     }
@@ -740,28 +659,27 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Metadata> PARSER =
-        new com.google.protobuf.AbstractParser<Metadata>() {
-          @java.lang.Override
-          public Metadata parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Metadata>
+        PARSER = new com.google.protobuf.AbstractParser<Metadata>() {
+      @java.lang.Override
+      public Metadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Metadata> parser() {
       return PARSER;
@@ -776,15 +694,13 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.SessionRefreshConfig.Metadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   private int bitField0_;
   public static final int OPTIMIZED_OPEN_REQUEST_FIELD_NUMBER = 1;
   private com.google.bigtable.v2.OpenSessionRequest optimizedOpenRequest_;
-
   /**
-   *
-   *
    * <pre>
    * An optimized Open request that the session may use on a retry when
    * establishing this session again. This can be sent from the AFE to
@@ -792,17 +708,13 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
-   *
    * @return Whether the optimizedOpenRequest field is set.
    */
   @java.lang.Override
   public boolean hasOptimizedOpenRequest() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * An optimized Open request that the session may use on a retry when
    * establishing this session again. This can be sent from the AFE to
@@ -810,19 +722,13 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
-   *
    * @return The optimizedOpenRequest.
    */
   @java.lang.Override
   public com.google.bigtable.v2.OpenSessionRequest getOptimizedOpenRequest() {
-    return optimizedOpenRequest_ == null
-        ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()
-        : optimizedOpenRequest_;
+    return optimizedOpenRequest_ == null ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance() : optimizedOpenRequest_;
   }
-
   /**
-   *
-   *
    * <pre>
    * An optimized Open request that the session may use on a retry when
    * establishing this session again. This can be sent from the AFE to
@@ -833,19 +739,13 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
    */
   @java.lang.Override
   public com.google.bigtable.v2.OpenSessionRequestOrBuilder getOptimizedOpenRequestOrBuilder() {
-    return optimizedOpenRequest_ == null
-        ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()
-        : optimizedOpenRequest_;
+    return optimizedOpenRequest_ == null ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance() : optimizedOpenRequest_;
   }
 
   public static final int METADATA_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata> metadata_;
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -856,10 +756,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   public java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata> getMetadataList() {
     return metadata_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -867,14 +764,11 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
    * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder> 
       getMetadataOrBuilderList() {
     return metadata_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -885,10 +779,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   public int getMetadataCount() {
     return metadata_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -899,10 +790,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.SessionRefreshConfig.Metadata getMetadata(int index) {
     return metadata_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -916,7 +804,6 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -928,7 +815,8 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getOptimizedOpenRequest());
     }
@@ -945,11 +833,12 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(1, getOptimizedOpenRequest());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getOptimizedOpenRequest());
     }
     for (int i = 0; i < metadata_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, metadata_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, metadata_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -959,19 +848,20 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionRefreshConfig)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SessionRefreshConfig other =
-        (com.google.bigtable.v2.SessionRefreshConfig) obj;
+    com.google.bigtable.v2.SessionRefreshConfig other = (com.google.bigtable.v2.SessionRefreshConfig) obj;
 
     if (hasOptimizedOpenRequest() != other.hasOptimizedOpenRequest()) return false;
     if (hasOptimizedOpenRequest()) {
-      if (!getOptimizedOpenRequest().equals(other.getOptimizedOpenRequest())) return false;
+      if (!getOptimizedOpenRequest()
+          .equals(other.getOptimizedOpenRequest())) return false;
     }
-    if (!getMetadataList().equals(other.getMetadataList())) return false;
+    if (!getMetadataList()
+        .equals(other.getMetadataList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -996,128 +886,120 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     return hash;
   }
 
-  public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SessionRefreshConfig parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionRefreshConfig parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SessionRefreshConfig parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionRefreshConfig parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionRefreshConfig prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionRefreshConfig}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionRefreshConfig)
       com.google.bigtable.v2.SessionRefreshConfigOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRefreshConfig_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRefreshConfig_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionRefreshConfig.class,
-              com.google.bigtable.v2.SessionRefreshConfig.Builder.class);
+              com.google.bigtable.v2.SessionRefreshConfig.class, com.google.bigtable.v2.SessionRefreshConfig.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionRefreshConfig.newBuilder()
@@ -1125,18 +1007,18 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetOptimizedOpenRequestFieldBuilder();
         internalGetMetadataFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1157,9 +1039,9 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRefreshConfig_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRefreshConfig_descriptor;
     }
 
     @java.lang.Override
@@ -1178,12 +1060,9 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionRefreshConfig buildPartial() {
-      com.google.bigtable.v2.SessionRefreshConfig result =
-          new com.google.bigtable.v2.SessionRefreshConfig(this);
+      com.google.bigtable.v2.SessionRefreshConfig result = new com.google.bigtable.v2.SessionRefreshConfig(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -1204,10 +1083,9 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.optimizedOpenRequest_ =
-            optimizedOpenRequestBuilder_ == null
-                ? optimizedOpenRequest_
-                : optimizedOpenRequestBuilder_.build();
+        result.optimizedOpenRequest_ = optimizedOpenRequestBuilder_ == null
+            ? optimizedOpenRequest_
+            : optimizedOpenRequestBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -1216,7 +1094,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionRefreshConfig) {
-        return mergeFrom((com.google.bigtable.v2.SessionRefreshConfig) other);
+        return mergeFrom((com.google.bigtable.v2.SessionRefreshConfig)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1246,10 +1124,9 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
             metadataBuilder_ = null;
             metadata_ = other.metadata_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            metadataBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetMetadataFieldBuilder()
-                    : null;
+            metadataBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetMetadataFieldBuilder() : null;
           } else {
             metadataBuilder_.addAllMessages(other.metadata_);
           }
@@ -1281,34 +1158,32 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetOptimizedOpenRequestFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                com.google.bigtable.v2.SessionRefreshConfig.Metadata m =
-                    input.readMessage(
-                        com.google.bigtable.v2.SessionRefreshConfig.Metadata.parser(),
-                        extensionRegistry);
-                if (metadataBuilder_ == null) {
-                  ensureMetadataIsMutable();
-                  metadata_.add(m);
-                } else {
-                  metadataBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetOptimizedOpenRequestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.google.bigtable.v2.SessionRefreshConfig.Metadata m =
+                  input.readMessage(
+                      com.google.bigtable.v2.SessionRefreshConfig.Metadata.parser(),
+                      extensionRegistry);
+              if (metadataBuilder_ == null) {
+                ensureMetadataIsMutable();
+                metadata_.add(m);
+              } else {
+                metadataBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1318,19 +1193,12 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.bigtable.v2.OpenSessionRequest optimizedOpenRequest_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.OpenSessionRequest,
-            com.google.bigtable.v2.OpenSessionRequest.Builder,
-            com.google.bigtable.v2.OpenSessionRequestOrBuilder>
-        optimizedOpenRequestBuilder_;
-
+        com.google.bigtable.v2.OpenSessionRequest, com.google.bigtable.v2.OpenSessionRequest.Builder, com.google.bigtable.v2.OpenSessionRequestOrBuilder> optimizedOpenRequestBuilder_;
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1338,16 +1206,12 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
-     *
      * @return Whether the optimizedOpenRequest field is set.
      */
     public boolean hasOptimizedOpenRequest() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1355,22 +1219,16 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
-     *
      * @return The optimizedOpenRequest.
      */
     public com.google.bigtable.v2.OpenSessionRequest getOptimizedOpenRequest() {
       if (optimizedOpenRequestBuilder_ == null) {
-        return optimizedOpenRequest_ == null
-            ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()
-            : optimizedOpenRequest_;
+        return optimizedOpenRequest_ == null ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance() : optimizedOpenRequest_;
       } else {
         return optimizedOpenRequestBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1392,10 +1250,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1415,10 +1270,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1429,10 +1281,9 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      */
     public Builder mergeOptimizedOpenRequest(com.google.bigtable.v2.OpenSessionRequest value) {
       if (optimizedOpenRequestBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && optimizedOpenRequest_ != null
-            && optimizedOpenRequest_
-                != com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          optimizedOpenRequest_ != null &&
+          optimizedOpenRequest_ != com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()) {
           getOptimizedOpenRequestBuilder().mergeFrom(value);
         } else {
           optimizedOpenRequest_ = value;
@@ -1446,10 +1297,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1468,10 +1316,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1485,10 +1330,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       onChanged();
       return internalGetOptimizedOpenRequestFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1501,15 +1343,11 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       if (optimizedOpenRequestBuilder_ != null) {
         return optimizedOpenRequestBuilder_.getMessageOrBuilder();
       } else {
-        return optimizedOpenRequest_ == null
-            ? com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()
-            : optimizedOpenRequest_;
+        return optimizedOpenRequest_ == null ?
+            com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance() : optimizedOpenRequest_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * An optimized Open request that the session may use on a retry when
      * establishing this session again. This can be sent from the AFE to
@@ -1519,43 +1357,32 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.OpenSessionRequest,
-            com.google.bigtable.v2.OpenSessionRequest.Builder,
-            com.google.bigtable.v2.OpenSessionRequestOrBuilder>
+        com.google.bigtable.v2.OpenSessionRequest, com.google.bigtable.v2.OpenSessionRequest.Builder, com.google.bigtable.v2.OpenSessionRequestOrBuilder> 
         internalGetOptimizedOpenRequestFieldBuilder() {
       if (optimizedOpenRequestBuilder_ == null) {
-        optimizedOpenRequestBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.OpenSessionRequest,
-                com.google.bigtable.v2.OpenSessionRequest.Builder,
-                com.google.bigtable.v2.OpenSessionRequestOrBuilder>(
-                getOptimizedOpenRequest(), getParentForChildren(), isClean());
+        optimizedOpenRequestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.OpenSessionRequest, com.google.bigtable.v2.OpenSessionRequest.Builder, com.google.bigtable.v2.OpenSessionRequestOrBuilder>(
+                getOptimizedOpenRequest(),
+                getParentForChildren(),
+                isClean());
         optimizedOpenRequest_ = null;
       }
       return optimizedOpenRequestBuilder_;
     }
 
     private java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata> metadata_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureMetadataIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        metadata_ =
-            new java.util.ArrayList<com.google.bigtable.v2.SessionRefreshConfig.Metadata>(
-                metadata_);
+        metadata_ = new java.util.ArrayList<com.google.bigtable.v2.SessionRefreshConfig.Metadata>(metadata_);
         bitField0_ |= 0x00000002;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.SessionRefreshConfig.Metadata,
-            com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder,
-            com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>
-        metadataBuilder_;
+        com.google.bigtable.v2.SessionRefreshConfig.Metadata, com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder, com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder> metadataBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1569,10 +1396,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         return metadataBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1586,10 +1410,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         return metadataBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1603,10 +1424,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         return metadataBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1627,10 +1445,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1648,10 +1463,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1671,10 +1483,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1695,10 +1504,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1716,10 +1522,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1737,10 +1540,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1751,17 +1551,15 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         java.lang.Iterable<? extends com.google.bigtable.v2.SessionRefreshConfig.Metadata> values) {
       if (metadataBuilder_ == null) {
         ensureMetadataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, metadata_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, metadata_);
         onChanged();
       } else {
         metadataBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1778,10 +1576,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1798,10 +1593,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1812,10 +1604,7 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
         int index) {
       return internalGetMetadataFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1825,33 +1614,26 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder getMetadataOrBuilder(
         int index) {
       if (metadataBuilder_ == null) {
-        return metadata_.get(index);
-      } else {
+        return metadata_.get(index);  } else {
         return metadataBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>
-        getMetadataOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder> 
+         getMetadataOrBuilderList() {
       if (metadataBuilder_ != null) {
         return metadataBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(metadata_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1859,13 +1641,10 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
      */
     public com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder addMetadataBuilder() {
-      return internalGetMetadataFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.SessionRefreshConfig.Metadata.getDefaultInstance());
+      return internalGetMetadataFieldBuilder().addBuilder(
+          com.google.bigtable.v2.SessionRefreshConfig.Metadata.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
@@ -1874,37 +1653,30 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
      */
     public com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder addMetadataBuilder(
         int index) {
-      return internalGetMetadataFieldBuilder()
-          .addBuilder(
-              index, com.google.bigtable.v2.SessionRefreshConfig.Metadata.getDefaultInstance());
+      return internalGetMetadataFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.SessionRefreshConfig.Metadata.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Any additional metadata to include when reconnecting.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
      */
-    public java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder>
-        getMetadataBuilderList() {
+    public java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder> 
+         getMetadataBuilderList() {
       return internalGetMetadataFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.SessionRefreshConfig.Metadata,
-            com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder,
-            com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>
+        com.google.bigtable.v2.SessionRefreshConfig.Metadata, com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder, com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder> 
         internalGetMetadataFieldBuilder() {
       if (metadataBuilder_ == null) {
-        metadataBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.SessionRefreshConfig.Metadata,
-                com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder,
-                com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>(
-                metadata_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
+        metadataBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.SessionRefreshConfig.Metadata, com.google.bigtable.v2.SessionRefreshConfig.Metadata.Builder, com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>(
+                metadata_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
         metadata_ = null;
       }
       return metadataBuilder_;
@@ -1915,7 +1687,6 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionRefreshConfig)
   private static final com.google.bigtable.v2.SessionRefreshConfig DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionRefreshConfig();
   }
@@ -1924,27 +1695,27 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionRefreshConfig> PARSER =
-      new com.google.protobuf.AbstractParser<SessionRefreshConfig>() {
-        @java.lang.Override
-        public SessionRefreshConfig parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionRefreshConfig>
+      PARSER = new com.google.protobuf.AbstractParser<SessionRefreshConfig>() {
+    @java.lang.Override
+    public SessionRefreshConfig parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionRefreshConfig> parser() {
     return PARSER;
@@ -1959,4 +1730,6 @@ public final class SessionRefreshConfig extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.SessionRefreshConfig getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

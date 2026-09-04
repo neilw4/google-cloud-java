@@ -6,14 +6,12 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionCheckAndMutateRowResponseOrBuilder
-    extends
+public interface SessionCheckAndMutateRowResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionCheckAndMutateRowResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>bool predicate_matched = 1;</code>
-   *
    * @return The predicateMatched.
    */
   boolean getPredicateMatched();

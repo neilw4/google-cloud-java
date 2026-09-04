@@ -6,7 +6,7 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface OpenTableResponseOrBuilder
-    extends
+public interface OpenTableResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.OpenTableResponse)
-    com.google.protobuf.MessageOrBuilder {}
+    com.google.protobuf.MessageOrBuilder {
+}

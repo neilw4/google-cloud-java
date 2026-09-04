@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ColumnOrBuilder
-    extends
+public interface ColumnOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.Column)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The unique key which identifies this column within its family. This is the
    * same key that's used to identify the column in, for example, a RowFilter
@@ -23,25 +20,20 @@ public interface ColumnOrBuilder
    * </pre>
    *
    * <code>bytes qualifier = 1;</code>
-   *
    * @return The qualifier.
    */
   com.google.protobuf.ByteString getQualifier();
 
   /**
-   *
-   *
    * <pre>
    * Must not be empty. Sorted in order of decreasing "timestamp_micros".
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.Cell cells = 2;</code>
    */
-  java.util.List<com.google.bigtable.v2.Cell> getCellsList();
-
+  java.util.List<com.google.bigtable.v2.Cell> 
+      getCellsList();
   /**
-   *
-   *
    * <pre>
    * Must not be empty. Sorted in order of decreasing "timestamp_micros".
    * </pre>
@@ -49,10 +41,7 @@ public interface ColumnOrBuilder
    * <code>repeated .google.bigtable.v2.Cell cells = 2;</code>
    */
   com.google.bigtable.v2.Cell getCells(int index);
-
   /**
-   *
-   *
    * <pre>
    * Must not be empty. Sorted in order of decreasing "timestamp_micros".
    * </pre>
@@ -60,26 +49,22 @@ public interface ColumnOrBuilder
    * <code>repeated .google.bigtable.v2.Cell cells = 2;</code>
    */
   int getCellsCount();
-
   /**
-   *
-   *
    * <pre>
    * Must not be empty. Sorted in order of decreasing "timestamp_micros".
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.Cell cells = 2;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.CellOrBuilder> getCellsOrBuilderList();
-
+  java.util.List<? extends com.google.bigtable.v2.CellOrBuilder> 
+      getCellsOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * Must not be empty. Sorted in order of decreasing "timestamp_micros".
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.Cell cells = 2;</code>
    */
-  com.google.bigtable.v2.CellOrBuilder getCellsOrBuilder(int index);
+  com.google.bigtable.v2.CellOrBuilder getCellsOrBuilder(
+      int index);
 }

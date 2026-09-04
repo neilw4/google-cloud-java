@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionDiversionConfigurationOrBuilder
-    extends
+public interface SessionDiversionConfigurationOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionDiversionConfiguration)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * What share of requests should operate on a session,. The rest
    * should operate on the old-style API. If provided, this should apply to
@@ -21,14 +18,10 @@ public interface SessionDiversionConfigurationOrBuilder
    * </pre>
    *
    * <code>float session_load = 1;</code>
-   *
    * @return Whether the sessionLoad field is set.
    */
   boolean hasSessionLoad();
-
   /**
-   *
-   *
    * <pre>
    * What share of requests should operate on a session,. The rest
    * should operate on the old-style API. If provided, this should apply to
@@ -36,40 +29,29 @@ public interface SessionDiversionConfigurationOrBuilder
    * </pre>
    *
    * <code>float session_load = 1;</code>
-   *
    * @return The sessionLoad.
    */
   float getSessionLoad();
 
   /**
-   *
-   *
    * <pre>
    * The session load per method.
    * </pre>
    *
    * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
-   *
    * @return Whether the perMethodSessionLoad field is set.
    */
   boolean hasPerMethodSessionLoad();
-
   /**
-   *
-   *
    * <pre>
    * The session load per method.
    * </pre>
    *
    * <code>.google.bigtable.v2.PerMethodSessionLoad per_method_session_load = 2;</code>
-   *
    * @return The perMethodSessionLoad.
    */
   com.google.bigtable.v2.PerMethodSessionLoad getPerMethodSessionLoad();
-
   /**
-   *
-   *
    * <pre>
    * The session load per method.
    * </pre>
@@ -78,6 +60,5 @@ public interface SessionDiversionConfigurationOrBuilder
    */
   com.google.bigtable.v2.PerMethodSessionLoadOrBuilder getPerMethodSessionLoadOrBuilder();
 
-  com.google.bigtable.v2.SessionDiversionConfiguration.DiversionStrategyCase
-      getDiversionStrategyCase();
+  com.google.bigtable.v2.SessionDiversionConfiguration.DiversionStrategyCase getDiversionStrategyCase();
 }

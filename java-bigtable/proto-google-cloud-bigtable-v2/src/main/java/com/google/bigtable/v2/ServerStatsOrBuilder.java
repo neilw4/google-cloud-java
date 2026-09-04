@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ServerStatsOrBuilder
-    extends
+public interface ServerStatsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ServerStats)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -22,11 +19,9 @@ public interface ServerStatsOrBuilder
    *
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
-  java.util.List<com.google.bigtable.v2.ServerStats.CPUStats> getCpuStatsList();
-
+  java.util.List<com.google.bigtable.v2.ServerStats.CPUStats> 
+      getCpuStatsList();
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -36,10 +31,7 @@ public interface ServerStatsOrBuilder
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
   com.google.bigtable.v2.ServerStats.CPUStats getCpuStats(int index);
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -49,10 +41,7 @@ public interface ServerStatsOrBuilder
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
   int getCpuStatsCount();
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -61,12 +50,9 @@ public interface ServerStatsOrBuilder
    *
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder> 
       getCpuStatsOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -75,5 +61,6 @@ public interface ServerStatsOrBuilder
    *
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
-  com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder getCpuStatsOrBuilder(int index);
+  com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder getCpuStatsOrBuilder(
+      int index);
 }

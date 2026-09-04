@@ -6,32 +6,28 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionReadRowRequestOrBuilder
-    extends
+public interface SessionReadRowRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionReadRowRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>bytes key = 1;</code>
-   *
    * @return The key.
    */
   com.google.protobuf.ByteString getKey();
 
   /**
    * <code>.google.bigtable.v2.RowFilter filter = 2;</code>
-   *
    * @return Whether the filter field is set.
    */
   boolean hasFilter();
-
   /**
    * <code>.google.bigtable.v2.RowFilter filter = 2;</code>
-   *
    * @return The filter.
    */
   com.google.bigtable.v2.RowFilter getFilter();
-
-  /** <code>.google.bigtable.v2.RowFilter filter = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.RowFilter filter = 2;</code>
+   */
   com.google.bigtable.v2.RowFilterOrBuilder getFilterOrBuilder();
 }

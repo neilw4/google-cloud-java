@@ -264,13 +264,8 @@ public class ChannelPoolDpImpl implements ChannelPool {
                 synchronized (ChannelPoolDpImpl.this) {
                   channelWrapper.consecutiveFailures = 0;
                   recycleBackoff = INITIAL_RECYCLE_BACKOFF;
-                  rehomeChannel(channelWrapper, afeId, peerInfo.getLoadInfo());
+                  rehomeChannel(channelWrapper, afeId);
                   sessionsPerAfeId.add(afeId);
-                }
-                if (!peerInfo.hasLoadInfo()) {
-                  LOGGER.warning("T-- no peer info present");
-                } else {
-                  LOGGER.warning("T--" + peerInfo.getLoadInfo().toString());
                 }
                 super.onBeforeSessionStart(peerInfo);
               }
@@ -319,7 +314,7 @@ public class ChannelPoolDpImpl implements ChannelPool {
   }
 
   @GuardedBy("this")
-  private void rehomeChannel(ChannelWrapper channelWrapper, AfeId afeId, PeerLoadInfo loadInfo) {
+  private void rehomeChannel(ChannelWrapper channelWrapper, AfeId afeId) {
     // No need to rehome recycled channels.
     if (channelWrapper.channel.isShutdown()) {
       return;
@@ -352,7 +347,6 @@ public class ChannelPoolDpImpl implements ChannelPool {
     origGroup.numStreams -= channelWrapper.numOutstanding;
     newGroup.channels.add(channelWrapper);
     newGroup.numStreams += channelWrapper.numOutstanding;
-    newGroup.afeLoad = loadInfo;
 
     return;
   }

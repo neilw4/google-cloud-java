@@ -32,6 +32,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
+import com.google.protobuf.util.Durations;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -272,7 +273,7 @@ class SessionList {
                 alreadyPickedBonus = 1.0 + 0.5 * afe.weight / (double) maxWeight;
               }
               double expectedTotalLatency =
-                  loadInfo.getExpectedLatencyMs() + afesByNetworkLatency.get(afe);
+                  Durations.toMillis(loadInfo.getExpectedLatency()) + afesByNetworkLatency.get(afe);
 
               return Optional.of(
                   expectedTotalLatency
@@ -300,7 +301,7 @@ class SessionList {
                           Math.min(
                               // RIFs that the server reports it can handle (plus requests from the
                               // client that the server was already handling).
-                              afe.afeLoad.getAvailableRif(),
+                              afe.afeLoad.getAvailableInFlightRequests(),
                               // RIFs that the client can send to this server, i.e. number of
                               // sessions (because sessions aren't multiplexed).
                               afe.refCount))));
@@ -347,7 +348,7 @@ class SessionList {
     for (AfeHandle afe : sortedAfes) {
       if ((tempRifRemaining > 0 || tempMinAfesLeft > 0)
           && afe.refCount > 0
-          && (afe.afeLoad.getVersion() != preferredVersion || afe.afeLoad.getAvailableRif() > 0)) {
+          && (afe.afeLoad.getVersion() != preferredVersion || afe.afeLoad.getAvailableInFlightRequests() > 0)) {
         maxPickedWeight = Math.max(maxPickedWeight, afe.weight);
         tempRifRemaining -= afesByPotentialRif.get(afe);
         tempMinAfesLeft--;
@@ -372,16 +373,16 @@ class SessionList {
                     * ms_since_last_update
                     / Math.max(
                         1,
-                        afe.afeLoad.getConvergenceTimeMs() == 0
-                            ? 1000
-                            : afe.afeLoad.getConvergenceTimeMs()));
+                        Durations.isPositive(afe.afeLoad.getConvergenceTime())
+                            ? Durations.toMillis(afe.afeLoad.getConvergenceTime()) :
+                            1000));
       }
 
       float oldWeight = afe.weight;
 
       if ((rifRemaining > 0 || minAfesLeftToPick > 0)
           && afe.refCount > 0
-          && (afe.afeLoad.getVersion() != preferredVersion || afe.afeLoad.getAvailableRif() > 0)) {
+          && (afe.afeLoad.getVersion() != preferredVersion || afe.afeLoad.getAvailableInFlightRequests() > 0)) {
         // Ensure that at least one AFE gets a weight of 1.0.
         deltaWeight = Math.max(deltaWeight, 1.0f - (float) maxPickedWeight);
         // Pick AFE to use, it's a good one.
@@ -414,7 +415,7 @@ class SessionList {
       double peerLoadWeight = 1.0;
       if (afe.afeLoad.getVersion() == preferredVersion) {
         PeerLoadInfo loadInfo = afe.afeLoad;
-        expectedLatency = loadInfo.getExpectedLatencyMs();
+        expectedLatency = Durations.toMillis(loadInfo.getExpectedLatency());
         peerLoadWeight = loadInfo.getWeight();
       }
 
@@ -501,7 +502,6 @@ class SessionList {
       if (afeHandle.sessions.size() == 1) {
         afesWithReadySessions.add(afeHandle);
       }
-      afeHandle.setAfeLoad(peerInfo.getLoadInfo());
 
       poolStats.startingCount--;
       poolStats.readyCount++;
@@ -758,14 +758,14 @@ class SessionList {
     void setAfeLoad(PeerLoadInfo newAfeLoad) {
       PeerLoadInfo.Builder afeLoadBuilder = newAfeLoad.toBuilder();
 
-      if (afeLoadBuilder.getConvergenceTimeMs() == 0) {
-        afeLoadBuilder.setConvergenceTimeMs(1000);
+      if (!Durations.isPositive(afeLoadBuilder.getConvergenceTime())) {
+        afeLoadBuilder.setConvergenceTime(Durations.fromMillis(1000));
       }
       // The available RIF reported by the AFE doesn't factor in requests already in-flight from the
       // client.
       // Factoring this in makes it easier to reason about the number of in-flight requests we can
       // have.
-      afeLoadBuilder.setAvailableRif(afeLoadBuilder.getAvailableRif() + getNumOutstanding());
+      afeLoadBuilder.setAvailableInFlightRequests(afeLoadBuilder.getAvailableInFlightRequests() + getNumOutstanding());
       this.afeLoad = afeLoadBuilder.build();
     }
   }

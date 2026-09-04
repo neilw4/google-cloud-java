@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * A response wrapper for operations on a materialized view. Internal usage
  * only.
@@ -16,62 +14,53 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.MaterializedViewResponse}
  */
 @com.google.protobuf.Generated
-public final class MaterializedViewResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class MaterializedViewResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.MaterializedViewResponse)
     MaterializedViewResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "MaterializedViewResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "MaterializedViewResponse");
   }
-
   // Use MaterializedViewResponse.newBuilder() to construct.
   private MaterializedViewResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private MaterializedViewResponse() {
+  }
 
-  private MaterializedViewResponse() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_MaterializedViewResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_MaterializedViewResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_MaterializedViewResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_MaterializedViewResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.MaterializedViewResponse.class,
-            com.google.bigtable.v2.MaterializedViewResponse.Builder.class);
+            com.google.bigtable.v2.MaterializedViewResponse.class, com.google.bigtable.v2.MaterializedViewResponse.Builder.class);
   }
 
   private int payloadCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object payload_;
-
   public enum PayloadCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     READ_ROW(1),
     READ_ROWS(2),
     PAYLOAD_NOT_SET(0);
     private final int value;
-
     private PayloadCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -84,96 +73,86 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
 
     public static PayloadCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return READ_ROW;
-        case 2:
-          return READ_ROWS;
-        case 0:
-          return PAYLOAD_NOT_SET;
-        default:
-          return null;
+        case 1: return READ_ROW;
+        case 2: return READ_ROWS;
+        case 0: return PAYLOAD_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PayloadCase getPayloadCase() {
-    return PayloadCase.forNumber(payloadCase_);
+  public PayloadCase
+  getPayloadCase() {
+    return PayloadCase.forNumber(
+        payloadCase_);
   }
 
   public static final int READ_ROW_FIELD_NUMBER = 1;
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
-   *
    * @return Whether the readRow field is set.
    */
   @java.lang.Override
   public boolean hasReadRow() {
     return payloadCase_ == 1;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
-   *
    * @return The readRow.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowResponse getReadRow() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.SessionReadRowResponse) payload_;
+       return (com.google.bigtable.v2.SessionReadRowResponse) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowResponseOrBuilder getReadRowOrBuilder() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.SessionReadRowResponse) payload_;
+       return (com.google.bigtable.v2.SessionReadRowResponse) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance();
   }
 
   public static final int READ_ROWS_FIELD_NUMBER = 2;
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
-   *
    * @return Whether the readRows field is set.
    */
   @java.lang.Override
   public boolean hasReadRows() {
     return payloadCase_ == 2;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
-   *
    * @return The readRows.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowsResponse getReadRows() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.SessionReadRowsResponse) payload_;
+       return (com.google.bigtable.v2.SessionReadRowsResponse) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowsResponseOrBuilder getReadRowsOrBuilder() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.SessionReadRowsResponse) payload_;
+       return (com.google.bigtable.v2.SessionReadRowsResponse) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -185,7 +164,8 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (payloadCase_ == 1) {
       output.writeMessage(1, (com.google.bigtable.v2.SessionReadRowResponse) payload_);
     }
@@ -202,14 +182,12 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
 
     size = 0;
     if (payloadCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1, (com.google.bigtable.v2.SessionReadRowResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.SessionReadRowResponse) payload_);
     }
     if (payloadCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.SessionReadRowsResponse) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.SessionReadRowsResponse) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -219,21 +197,22 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.MaterializedViewResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.MaterializedViewResponse other =
-        (com.google.bigtable.v2.MaterializedViewResponse) obj;
+    com.google.bigtable.v2.MaterializedViewResponse other = (com.google.bigtable.v2.MaterializedViewResponse) obj;
 
     if (!getPayloadCase().equals(other.getPayloadCase())) return false;
     switch (payloadCase_) {
       case 1:
-        if (!getReadRow().equals(other.getReadRow())) return false;
+        if (!getReadRow()
+            .equals(other.getReadRow())) return false;
         break;
       case 2:
-        if (!getReadRows().equals(other.getReadRows())) return false;
+        if (!getReadRows()
+            .equals(other.getReadRows())) return false;
         break;
       case 0:
       default:
@@ -266,105 +245,99 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     return hash;
   }
 
-  public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.MaterializedViewResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.MaterializedViewResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.MaterializedViewResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.MaterializedViewResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.MaterializedViewResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * A response wrapper for operations on a materialized view. Internal usage
    * only.
@@ -372,32 +345,33 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
    *
    * Protobuf type {@code google.bigtable.v2.MaterializedViewResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.MaterializedViewResponse)
       com.google.bigtable.v2.MaterializedViewResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_MaterializedViewResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_MaterializedViewResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_MaterializedViewResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_MaterializedViewResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.MaterializedViewResponse.class,
-              com.google.bigtable.v2.MaterializedViewResponse.Builder.class);
+              com.google.bigtable.v2.MaterializedViewResponse.class, com.google.bigtable.v2.MaterializedViewResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.MaterializedViewResponse.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -414,9 +388,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_MaterializedViewResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_MaterializedViewResponse_descriptor;
     }
 
     @java.lang.Override
@@ -435,11 +409,8 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
 
     @java.lang.Override
     public com.google.bigtable.v2.MaterializedViewResponse buildPartial() {
-      com.google.bigtable.v2.MaterializedViewResponse result =
-          new com.google.bigtable.v2.MaterializedViewResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.MaterializedViewResponse result = new com.google.bigtable.v2.MaterializedViewResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -452,10 +423,12 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     private void buildPartialOneofs(com.google.bigtable.v2.MaterializedViewResponse result) {
       result.payloadCase_ = payloadCase_;
       result.payload_ = this.payload_;
-      if (payloadCase_ == 1 && readRowBuilder_ != null) {
+      if (payloadCase_ == 1 &&
+          readRowBuilder_ != null) {
         result.payload_ = readRowBuilder_.build();
       }
-      if (payloadCase_ == 2 && readRowsBuilder_ != null) {
+      if (payloadCase_ == 2 &&
+          readRowsBuilder_ != null) {
         result.payload_ = readRowsBuilder_.build();
       }
     }
@@ -463,7 +436,7 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.MaterializedViewResponse) {
-        return mergeFrom((com.google.bigtable.v2.MaterializedViewResponse) other);
+        return mergeFrom((com.google.bigtable.v2.MaterializedViewResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -471,23 +444,19 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.MaterializedViewResponse other) {
-      if (other == com.google.bigtable.v2.MaterializedViewResponse.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.MaterializedViewResponse.getDefaultInstance()) return this;
       switch (other.getPayloadCase()) {
-        case READ_ROW:
-          {
-            mergeReadRow(other.getReadRow());
-            break;
-          }
-        case READ_ROWS:
-          {
-            mergeReadRows(other.getReadRows());
-            break;
-          }
-        case PAYLOAD_NOT_SET:
-          {
-            break;
-          }
+        case READ_ROW: {
+          mergeReadRow(other.getReadRow());
+          break;
+        }
+        case READ_ROWS: {
+          mergeReadRows(other.getReadRows());
+          break;
+        }
+        case PAYLOAD_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -515,26 +484,26 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(internalGetReadRowFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetReadRowsFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 2;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetReadRowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetReadRowsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 2;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -544,12 +513,12 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       } // finally
       return this;
     }
-
     private int payloadCase_ = 0;
     private java.lang.Object payload_;
-
-    public PayloadCase getPayloadCase() {
-      return PayloadCase.forNumber(payloadCase_);
+    public PayloadCase
+        getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
     }
 
     public Builder clearPayload() {
@@ -562,24 +531,17 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowResponse,
-            com.google.bigtable.v2.SessionReadRowResponse.Builder,
-            com.google.bigtable.v2.SessionReadRowResponseOrBuilder>
-        readRowBuilder_;
-
+        com.google.bigtable.v2.SessionReadRowResponse, com.google.bigtable.v2.SessionReadRowResponse.Builder, com.google.bigtable.v2.SessionReadRowResponseOrBuilder> readRowBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
-     *
      * @return Whether the readRow field is set.
      */
     @java.lang.Override
     public boolean hasReadRow() {
       return payloadCase_ == 1;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
-     *
      * @return The readRow.
      */
     @java.lang.Override
@@ -596,8 +558,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
         return com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     public Builder setReadRow(com.google.bigtable.v2.SessionReadRowResponse value) {
       if (readRowBuilder_ == null) {
         if (value == null) {
@@ -611,8 +574,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     public Builder setReadRow(
         com.google.bigtable.v2.SessionReadRowResponse.Builder builderForValue) {
       if (readRowBuilder_ == null) {
@@ -624,17 +588,15 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     public Builder mergeReadRow(com.google.bigtable.v2.SessionReadRowResponse value) {
       if (readRowBuilder_ == null) {
-        if (payloadCase_ == 1
-            && payload_ != com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionReadRowResponse.newBuilder(
-                      (com.google.bigtable.v2.SessionReadRowResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 1 &&
+            payload_ != com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionReadRowResponse.newBuilder((com.google.bigtable.v2.SessionReadRowResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -649,8 +611,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     public Builder clearReadRow() {
       if (readRowBuilder_ == null) {
         if (payloadCase_ == 1) {
@@ -667,13 +630,15 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     public com.google.bigtable.v2.SessionReadRowResponse.Builder getReadRowBuilder() {
       return internalGetReadRowFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.SessionReadRowResponseOrBuilder getReadRowOrBuilder() {
       if ((payloadCase_ == 1) && (readRowBuilder_ != null)) {
@@ -685,22 +650,18 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
         return com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowResponse read_row = 1;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowResponse,
-            com.google.bigtable.v2.SessionReadRowResponse.Builder,
-            com.google.bigtable.v2.SessionReadRowResponseOrBuilder>
+        com.google.bigtable.v2.SessionReadRowResponse, com.google.bigtable.v2.SessionReadRowResponse.Builder, com.google.bigtable.v2.SessionReadRowResponseOrBuilder> 
         internalGetReadRowFieldBuilder() {
       if (readRowBuilder_ == null) {
         if (!(payloadCase_ == 1)) {
           payload_ = com.google.bigtable.v2.SessionReadRowResponse.getDefaultInstance();
         }
-        readRowBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionReadRowResponse,
-                com.google.bigtable.v2.SessionReadRowResponse.Builder,
-                com.google.bigtable.v2.SessionReadRowResponseOrBuilder>(
+        readRowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionReadRowResponse, com.google.bigtable.v2.SessionReadRowResponse.Builder, com.google.bigtable.v2.SessionReadRowResponseOrBuilder>(
                 (com.google.bigtable.v2.SessionReadRowResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -712,24 +673,17 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowsResponse,
-            com.google.bigtable.v2.SessionReadRowsResponse.Builder,
-            com.google.bigtable.v2.SessionReadRowsResponseOrBuilder>
-        readRowsBuilder_;
-
+        com.google.bigtable.v2.SessionReadRowsResponse, com.google.bigtable.v2.SessionReadRowsResponse.Builder, com.google.bigtable.v2.SessionReadRowsResponseOrBuilder> readRowsBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
-     *
      * @return Whether the readRows field is set.
      */
     @java.lang.Override
     public boolean hasReadRows() {
       return payloadCase_ == 2;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
-     *
      * @return The readRows.
      */
     @java.lang.Override
@@ -746,8 +700,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
         return com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     public Builder setReadRows(com.google.bigtable.v2.SessionReadRowsResponse value) {
       if (readRowsBuilder_ == null) {
         if (value == null) {
@@ -761,8 +716,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     public Builder setReadRows(
         com.google.bigtable.v2.SessionReadRowsResponse.Builder builderForValue) {
       if (readRowsBuilder_ == null) {
@@ -774,17 +730,15 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     public Builder mergeReadRows(com.google.bigtable.v2.SessionReadRowsResponse value) {
       if (readRowsBuilder_ == null) {
-        if (payloadCase_ == 2
-            && payload_ != com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionReadRowsResponse.newBuilder(
-                      (com.google.bigtable.v2.SessionReadRowsResponse) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 2 &&
+            payload_ != com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionReadRowsResponse.newBuilder((com.google.bigtable.v2.SessionReadRowsResponse) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -799,8 +753,9 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     public Builder clearReadRows() {
       if (readRowsBuilder_ == null) {
         if (payloadCase_ == 2) {
@@ -817,13 +772,15 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     public com.google.bigtable.v2.SessionReadRowsResponse.Builder getReadRowsBuilder() {
       return internalGetReadRowsFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.SessionReadRowsResponseOrBuilder getReadRowsOrBuilder() {
       if ((payloadCase_ == 2) && (readRowsBuilder_ != null)) {
@@ -835,22 +792,18 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
         return com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsResponse read_rows = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowsResponse,
-            com.google.bigtable.v2.SessionReadRowsResponse.Builder,
-            com.google.bigtable.v2.SessionReadRowsResponseOrBuilder>
+        com.google.bigtable.v2.SessionReadRowsResponse, com.google.bigtable.v2.SessionReadRowsResponse.Builder, com.google.bigtable.v2.SessionReadRowsResponseOrBuilder> 
         internalGetReadRowsFieldBuilder() {
       if (readRowsBuilder_ == null) {
         if (!(payloadCase_ == 2)) {
           payload_ = com.google.bigtable.v2.SessionReadRowsResponse.getDefaultInstance();
         }
-        readRowsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionReadRowsResponse,
-                com.google.bigtable.v2.SessionReadRowsResponse.Builder,
-                com.google.bigtable.v2.SessionReadRowsResponseOrBuilder>(
+        readRowsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionReadRowsResponse, com.google.bigtable.v2.SessionReadRowsResponse.Builder, com.google.bigtable.v2.SessionReadRowsResponseOrBuilder>(
                 (com.google.bigtable.v2.SessionReadRowsResponse) payload_,
                 getParentForChildren(),
                 isClean());
@@ -866,7 +819,6 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.MaterializedViewResponse)
   private static final com.google.bigtable.v2.MaterializedViewResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.MaterializedViewResponse();
   }
@@ -875,27 +827,27 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<MaterializedViewResponse> PARSER =
-      new com.google.protobuf.AbstractParser<MaterializedViewResponse>() {
-        @java.lang.Override
-        public MaterializedViewResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<MaterializedViewResponse>
+      PARSER = new com.google.protobuf.AbstractParser<MaterializedViewResponse>() {
+    @java.lang.Override
+    public MaterializedViewResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<MaterializedViewResponse> parser() {
     return PARSER;
@@ -910,4 +862,6 @@ public final class MaterializedViewResponse extends com.google.protobuf.Generate
   public com.google.bigtable.v2.MaterializedViewResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

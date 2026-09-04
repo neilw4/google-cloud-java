@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,52 +13,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SessionRequest}
  */
 @com.google.protobuf.Generated
-public final class SessionRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SessionRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SessionRequest)
     SessionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionRequest");
   }
-
   // Use SessionRequest.newBuilder() to construct.
   private SessionRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private SessionRequest() {
+  }
 
-  private SessionRequest() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_SessionRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SessionRequest.class,
-            com.google.bigtable.v2.SessionRequest.Builder.class);
+            com.google.bigtable.v2.SessionRequest.class, com.google.bigtable.v2.SessionRequest.Builder.class);
   }
 
   private int payloadCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object payload_;
-
   public enum PayloadCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     OPEN_SESSION(1),
     CLOSE_SESSION(2),
@@ -69,11 +60,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     CANCEL_VIRTUAL_RPC(5),
     PAYLOAD_NOT_SET(0);
     private final int value;
-
     private PayloadCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -86,205 +75,182 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
 
     public static PayloadCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return OPEN_SESSION;
-        case 2:
-          return CLOSE_SESSION;
-        case 3:
-          return VIRTUAL_RPC;
-        case 4:
-          return CONTINUE_VIRTUAL_RPC;
-        case 5:
-          return CANCEL_VIRTUAL_RPC;
-        case 0:
-          return PAYLOAD_NOT_SET;
-        default:
-          return null;
+        case 1: return OPEN_SESSION;
+        case 2: return CLOSE_SESSION;
+        case 3: return VIRTUAL_RPC;
+        case 4: return CONTINUE_VIRTUAL_RPC;
+        case 5: return CANCEL_VIRTUAL_RPC;
+        case 0: return PAYLOAD_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PayloadCase getPayloadCase() {
-    return PayloadCase.forNumber(payloadCase_);
+  public PayloadCase
+  getPayloadCase() {
+    return PayloadCase.forNumber(
+        payloadCase_);
   }
 
   public static final int OPEN_SESSION_FIELD_NUMBER = 1;
-
   /**
    * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
-   *
    * @return Whether the openSession field is set.
    */
   @java.lang.Override
   public boolean hasOpenSession() {
     return payloadCase_ == 1;
   }
-
   /**
    * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
-   *
    * @return The openSession.
    */
   @java.lang.Override
   public com.google.bigtable.v2.OpenSessionRequest getOpenSession() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.OpenSessionRequest) payload_;
+       return (com.google.bigtable.v2.OpenSessionRequest) payload_;
     }
     return com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+  /**
+   * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.OpenSessionRequestOrBuilder getOpenSessionOrBuilder() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.OpenSessionRequest) payload_;
+       return (com.google.bigtable.v2.OpenSessionRequest) payload_;
     }
     return com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance();
   }
 
   public static final int CLOSE_SESSION_FIELD_NUMBER = 2;
-
   /**
    * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
-   *
    * @return Whether the closeSession field is set.
    */
   @java.lang.Override
   public boolean hasCloseSession() {
     return payloadCase_ == 2;
   }
-
   /**
    * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
-   *
    * @return The closeSession.
    */
   @java.lang.Override
   public com.google.bigtable.v2.CloseSessionRequest getCloseSession() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.CloseSessionRequest) payload_;
+       return (com.google.bigtable.v2.CloseSessionRequest) payload_;
     }
     return com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.CloseSessionRequestOrBuilder getCloseSessionOrBuilder() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.CloseSessionRequest) payload_;
+       return (com.google.bigtable.v2.CloseSessionRequest) payload_;
     }
     return com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance();
   }
 
   public static final int VIRTUAL_RPC_FIELD_NUMBER = 3;
-
   /**
    * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
-   *
    * @return Whether the virtualRpc field is set.
    */
   @java.lang.Override
   public boolean hasVirtualRpc() {
     return payloadCase_ == 3;
   }
-
   /**
    * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
-   *
    * @return The virtualRpc.
    */
   @java.lang.Override
   public com.google.bigtable.v2.VirtualRpcRequest getVirtualRpc() {
     if (payloadCase_ == 3) {
-      return (com.google.bigtable.v2.VirtualRpcRequest) payload_;
+       return (com.google.bigtable.v2.VirtualRpcRequest) payload_;
     }
     return com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+  /**
+   * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.VirtualRpcRequestOrBuilder getVirtualRpcOrBuilder() {
     if (payloadCase_ == 3) {
-      return (com.google.bigtable.v2.VirtualRpcRequest) payload_;
+       return (com.google.bigtable.v2.VirtualRpcRequest) payload_;
     }
     return com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance();
   }
 
   public static final int CONTINUE_VIRTUAL_RPC_FIELD_NUMBER = 4;
-
   /**
    * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
-   *
    * @return Whether the continueVirtualRpc field is set.
    */
   @java.lang.Override
   public boolean hasContinueVirtualRpc() {
     return payloadCase_ == 4;
   }
-
   /**
    * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
-   *
    * @return The continueVirtualRpc.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ContinueVirtualRpcRequest getContinueVirtualRpc() {
     if (payloadCase_ == 4) {
-      return (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_;
+       return (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_;
     }
     return com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+  /**
+   * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+   */
   @java.lang.Override
-  public com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder
-      getContinueVirtualRpcOrBuilder() {
+  public com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder getContinueVirtualRpcOrBuilder() {
     if (payloadCase_ == 4) {
-      return (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_;
+       return (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_;
     }
     return com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance();
   }
 
   public static final int CANCEL_VIRTUAL_RPC_FIELD_NUMBER = 5;
-
   /**
    * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
-   *
    * @return Whether the cancelVirtualRpc field is set.
    */
   @java.lang.Override
   public boolean hasCancelVirtualRpc() {
     return payloadCase_ == 5;
   }
-
   /**
    * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
-   *
    * @return The cancelVirtualRpc.
    */
   @java.lang.Override
   public com.google.bigtable.v2.CancelVirtualRpcRequest getCancelVirtualRpc() {
     if (payloadCase_ == 5) {
-      return (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_;
+       return (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_;
     }
     return com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+  /**
+   * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder getCancelVirtualRpcOrBuilder() {
     if (payloadCase_ == 5) {
-      return (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_;
+       return (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_;
     }
     return com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -296,7 +262,8 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (payloadCase_ == 1) {
       output.writeMessage(1, (com.google.bigtable.v2.OpenSessionRequest) payload_);
     }
@@ -322,29 +289,24 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (payloadCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1, (com.google.bigtable.v2.OpenSessionRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.OpenSessionRequest) payload_);
     }
     if (payloadCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.CloseSessionRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.CloseSessionRequest) payload_);
     }
     if (payloadCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              3, (com.google.bigtable.v2.VirtualRpcRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.bigtable.v2.VirtualRpcRequest) payload_);
     }
     if (payloadCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_);
     }
     if (payloadCase_ == 5) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              5, (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -354,7 +316,7 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SessionRequest)) {
       return super.equals(obj);
@@ -364,19 +326,24 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     if (!getPayloadCase().equals(other.getPayloadCase())) return false;
     switch (payloadCase_) {
       case 1:
-        if (!getOpenSession().equals(other.getOpenSession())) return false;
+        if (!getOpenSession()
+            .equals(other.getOpenSession())) return false;
         break;
       case 2:
-        if (!getCloseSession().equals(other.getCloseSession())) return false;
+        if (!getCloseSession()
+            .equals(other.getCloseSession())) return false;
         break;
       case 3:
-        if (!getVirtualRpc().equals(other.getVirtualRpc())) return false;
+        if (!getVirtualRpc()
+            .equals(other.getVirtualRpc())) return false;
         break;
       case 4:
-        if (!getContinueVirtualRpc().equals(other.getContinueVirtualRpc())) return false;
+        if (!getContinueVirtualRpc()
+            .equals(other.getContinueVirtualRpc())) return false;
         break;
       case 5:
-        if (!getCancelVirtualRpc().equals(other.getCancelVirtualRpc())) return false;
+        if (!getCancelVirtualRpc()
+            .equals(other.getCancelVirtualRpc())) return false;
         break;
       case 0:
       default:
@@ -421,136 +388,132 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.SessionRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.SessionRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.SessionRequest parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.SessionRequest parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.SessionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SessionRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SessionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SessionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SessionRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SessionRequest)
       com.google.bigtable.v2.SessionRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SessionRequest.class,
-              com.google.bigtable.v2.SessionRequest.Builder.class);
+              com.google.bigtable.v2.SessionRequest.class, com.google.bigtable.v2.SessionRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SessionRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -576,9 +539,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_SessionRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_SessionRequest_descriptor;
     }
 
     @java.lang.Override
@@ -597,11 +560,8 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
 
     @java.lang.Override
     public com.google.bigtable.v2.SessionRequest buildPartial() {
-      com.google.bigtable.v2.SessionRequest result =
-          new com.google.bigtable.v2.SessionRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.SessionRequest result = new com.google.bigtable.v2.SessionRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -614,19 +574,24 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     private void buildPartialOneofs(com.google.bigtable.v2.SessionRequest result) {
       result.payloadCase_ = payloadCase_;
       result.payload_ = this.payload_;
-      if (payloadCase_ == 1 && openSessionBuilder_ != null) {
+      if (payloadCase_ == 1 &&
+          openSessionBuilder_ != null) {
         result.payload_ = openSessionBuilder_.build();
       }
-      if (payloadCase_ == 2 && closeSessionBuilder_ != null) {
+      if (payloadCase_ == 2 &&
+          closeSessionBuilder_ != null) {
         result.payload_ = closeSessionBuilder_.build();
       }
-      if (payloadCase_ == 3 && virtualRpcBuilder_ != null) {
+      if (payloadCase_ == 3 &&
+          virtualRpcBuilder_ != null) {
         result.payload_ = virtualRpcBuilder_.build();
       }
-      if (payloadCase_ == 4 && continueVirtualRpcBuilder_ != null) {
+      if (payloadCase_ == 4 &&
+          continueVirtualRpcBuilder_ != null) {
         result.payload_ = continueVirtualRpcBuilder_.build();
       }
-      if (payloadCase_ == 5 && cancelVirtualRpcBuilder_ != null) {
+      if (payloadCase_ == 5 &&
+          cancelVirtualRpcBuilder_ != null) {
         result.payload_ = cancelVirtualRpcBuilder_.build();
       }
     }
@@ -634,7 +599,7 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SessionRequest) {
-        return mergeFrom((com.google.bigtable.v2.SessionRequest) other);
+        return mergeFrom((com.google.bigtable.v2.SessionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -644,35 +609,29 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     public Builder mergeFrom(com.google.bigtable.v2.SessionRequest other) {
       if (other == com.google.bigtable.v2.SessionRequest.getDefaultInstance()) return this;
       switch (other.getPayloadCase()) {
-        case OPEN_SESSION:
-          {
-            mergeOpenSession(other.getOpenSession());
-            break;
-          }
-        case CLOSE_SESSION:
-          {
-            mergeCloseSession(other.getCloseSession());
-            break;
-          }
-        case VIRTUAL_RPC:
-          {
-            mergeVirtualRpc(other.getVirtualRpc());
-            break;
-          }
-        case CONTINUE_VIRTUAL_RPC:
-          {
-            mergeContinueVirtualRpc(other.getContinueVirtualRpc());
-            break;
-          }
-        case CANCEL_VIRTUAL_RPC:
-          {
-            mergeCancelVirtualRpc(other.getCancelVirtualRpc());
-            break;
-          }
-        case PAYLOAD_NOT_SET:
-          {
-            break;
-          }
+        case OPEN_SESSION: {
+          mergeOpenSession(other.getOpenSession());
+          break;
+        }
+        case CLOSE_SESSION: {
+          mergeCloseSession(other.getCloseSession());
+          break;
+        }
+        case VIRTUAL_RPC: {
+          mergeVirtualRpc(other.getVirtualRpc());
+          break;
+        }
+        case CONTINUE_VIRTUAL_RPC: {
+          mergeContinueVirtualRpc(other.getContinueVirtualRpc());
+          break;
+        }
+        case CANCEL_VIRTUAL_RPC: {
+          mergeCancelVirtualRpc(other.getCancelVirtualRpc());
+          break;
+        }
+        case PAYLOAD_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -700,48 +659,47 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetOpenSessionFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetCloseSessionFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(
-                    internalGetVirtualRpcFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 3;
-                break;
-              } // case 26
-            case 34:
-              {
-                input.readMessage(
-                    internalGetContinueVirtualRpcFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 4;
-                break;
-              } // case 34
-            case 42:
-              {
-                input.readMessage(
-                    internalGetCancelVirtualRpcFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 5;
-                break;
-              } // case 42
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetOpenSessionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetCloseSessionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetVirtualRpcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetContinueVirtualRpcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  internalGetCancelVirtualRpcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 5;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -751,12 +709,12 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int payloadCase_ = 0;
     private java.lang.Object payload_;
-
-    public PayloadCase getPayloadCase() {
-      return PayloadCase.forNumber(payloadCase_);
+    public PayloadCase
+        getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
     }
 
     public Builder clearPayload() {
@@ -769,24 +727,17 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.OpenSessionRequest,
-            com.google.bigtable.v2.OpenSessionRequest.Builder,
-            com.google.bigtable.v2.OpenSessionRequestOrBuilder>
-        openSessionBuilder_;
-
+        com.google.bigtable.v2.OpenSessionRequest, com.google.bigtable.v2.OpenSessionRequest.Builder, com.google.bigtable.v2.OpenSessionRequestOrBuilder> openSessionBuilder_;
     /**
      * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
-     *
      * @return Whether the openSession field is set.
      */
     @java.lang.Override
     public boolean hasOpenSession() {
       return payloadCase_ == 1;
     }
-
     /**
      * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
-     *
      * @return The openSession.
      */
     @java.lang.Override
@@ -803,8 +754,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     public Builder setOpenSession(com.google.bigtable.v2.OpenSessionRequest value) {
       if (openSessionBuilder_ == null) {
         if (value == null) {
@@ -818,8 +770,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     public Builder setOpenSession(
         com.google.bigtable.v2.OpenSessionRequest.Builder builderForValue) {
       if (openSessionBuilder_ == null) {
@@ -831,17 +784,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     public Builder mergeOpenSession(com.google.bigtable.v2.OpenSessionRequest value) {
       if (openSessionBuilder_ == null) {
-        if (payloadCase_ == 1
-            && payload_ != com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.OpenSessionRequest.newBuilder(
-                      (com.google.bigtable.v2.OpenSessionRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 1 &&
+            payload_ != com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.OpenSessionRequest.newBuilder((com.google.bigtable.v2.OpenSessionRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -856,8 +807,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     public Builder clearOpenSession() {
       if (openSessionBuilder_ == null) {
         if (payloadCase_ == 1) {
@@ -874,13 +826,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     public com.google.bigtable.v2.OpenSessionRequest.Builder getOpenSessionBuilder() {
       return internalGetOpenSessionFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.OpenSessionRequestOrBuilder getOpenSessionOrBuilder() {
       if ((payloadCase_ == 1) && (openSessionBuilder_ != null)) {
@@ -892,22 +846,18 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.OpenSessionRequest open_session = 1;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.OpenSessionRequest,
-            com.google.bigtable.v2.OpenSessionRequest.Builder,
-            com.google.bigtable.v2.OpenSessionRequestOrBuilder>
+        com.google.bigtable.v2.OpenSessionRequest, com.google.bigtable.v2.OpenSessionRequest.Builder, com.google.bigtable.v2.OpenSessionRequestOrBuilder> 
         internalGetOpenSessionFieldBuilder() {
       if (openSessionBuilder_ == null) {
         if (!(payloadCase_ == 1)) {
           payload_ = com.google.bigtable.v2.OpenSessionRequest.getDefaultInstance();
         }
-        openSessionBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.OpenSessionRequest,
-                com.google.bigtable.v2.OpenSessionRequest.Builder,
-                com.google.bigtable.v2.OpenSessionRequestOrBuilder>(
+        openSessionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.OpenSessionRequest, com.google.bigtable.v2.OpenSessionRequest.Builder, com.google.bigtable.v2.OpenSessionRequestOrBuilder>(
                 (com.google.bigtable.v2.OpenSessionRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -919,24 +869,17 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.CloseSessionRequest,
-            com.google.bigtable.v2.CloseSessionRequest.Builder,
-            com.google.bigtable.v2.CloseSessionRequestOrBuilder>
-        closeSessionBuilder_;
-
+        com.google.bigtable.v2.CloseSessionRequest, com.google.bigtable.v2.CloseSessionRequest.Builder, com.google.bigtable.v2.CloseSessionRequestOrBuilder> closeSessionBuilder_;
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
-     *
      * @return Whether the closeSession field is set.
      */
     @java.lang.Override
     public boolean hasCloseSession() {
       return payloadCase_ == 2;
     }
-
     /**
      * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
-     *
      * @return The closeSession.
      */
     @java.lang.Override
@@ -953,8 +896,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     public Builder setCloseSession(com.google.bigtable.v2.CloseSessionRequest value) {
       if (closeSessionBuilder_ == null) {
         if (value == null) {
@@ -968,8 +912,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     public Builder setCloseSession(
         com.google.bigtable.v2.CloseSessionRequest.Builder builderForValue) {
       if (closeSessionBuilder_ == null) {
@@ -981,17 +926,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     public Builder mergeCloseSession(com.google.bigtable.v2.CloseSessionRequest value) {
       if (closeSessionBuilder_ == null) {
-        if (payloadCase_ == 2
-            && payload_ != com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.CloseSessionRequest.newBuilder(
-                      (com.google.bigtable.v2.CloseSessionRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 2 &&
+            payload_ != com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.CloseSessionRequest.newBuilder((com.google.bigtable.v2.CloseSessionRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1006,8 +949,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     public Builder clearCloseSession() {
       if (closeSessionBuilder_ == null) {
         if (payloadCase_ == 2) {
@@ -1024,13 +968,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     public com.google.bigtable.v2.CloseSessionRequest.Builder getCloseSessionBuilder() {
       return internalGetCloseSessionFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.CloseSessionRequestOrBuilder getCloseSessionOrBuilder() {
       if ((payloadCase_ == 2) && (closeSessionBuilder_ != null)) {
@@ -1042,22 +988,18 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.CloseSessionRequest close_session = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.CloseSessionRequest,
-            com.google.bigtable.v2.CloseSessionRequest.Builder,
-            com.google.bigtable.v2.CloseSessionRequestOrBuilder>
+        com.google.bigtable.v2.CloseSessionRequest, com.google.bigtable.v2.CloseSessionRequest.Builder, com.google.bigtable.v2.CloseSessionRequestOrBuilder> 
         internalGetCloseSessionFieldBuilder() {
       if (closeSessionBuilder_ == null) {
         if (!(payloadCase_ == 2)) {
           payload_ = com.google.bigtable.v2.CloseSessionRequest.getDefaultInstance();
         }
-        closeSessionBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.CloseSessionRequest,
-                com.google.bigtable.v2.CloseSessionRequest.Builder,
-                com.google.bigtable.v2.CloseSessionRequestOrBuilder>(
+        closeSessionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.CloseSessionRequest, com.google.bigtable.v2.CloseSessionRequest.Builder, com.google.bigtable.v2.CloseSessionRequestOrBuilder>(
                 (com.google.bigtable.v2.CloseSessionRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1069,24 +1011,17 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.VirtualRpcRequest,
-            com.google.bigtable.v2.VirtualRpcRequest.Builder,
-            com.google.bigtable.v2.VirtualRpcRequestOrBuilder>
-        virtualRpcBuilder_;
-
+        com.google.bigtable.v2.VirtualRpcRequest, com.google.bigtable.v2.VirtualRpcRequest.Builder, com.google.bigtable.v2.VirtualRpcRequestOrBuilder> virtualRpcBuilder_;
     /**
      * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
-     *
      * @return Whether the virtualRpc field is set.
      */
     @java.lang.Override
     public boolean hasVirtualRpc() {
       return payloadCase_ == 3;
     }
-
     /**
      * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
-     *
      * @return The virtualRpc.
      */
     @java.lang.Override
@@ -1103,8 +1038,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
     public Builder setVirtualRpc(com.google.bigtable.v2.VirtualRpcRequest value) {
       if (virtualRpcBuilder_ == null) {
         if (value == null) {
@@ -1118,9 +1054,11 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
-    public Builder setVirtualRpc(com.google.bigtable.v2.VirtualRpcRequest.Builder builderForValue) {
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
+    public Builder setVirtualRpc(
+        com.google.bigtable.v2.VirtualRpcRequest.Builder builderForValue) {
       if (virtualRpcBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
@@ -1130,17 +1068,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
     public Builder mergeVirtualRpc(com.google.bigtable.v2.VirtualRpcRequest value) {
       if (virtualRpcBuilder_ == null) {
-        if (payloadCase_ == 3
-            && payload_ != com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.VirtualRpcRequest.newBuilder(
-                      (com.google.bigtable.v2.VirtualRpcRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 3 &&
+            payload_ != com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.VirtualRpcRequest.newBuilder((com.google.bigtable.v2.VirtualRpcRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1155,8 +1091,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
     public Builder clearVirtualRpc() {
       if (virtualRpcBuilder_ == null) {
         if (payloadCase_ == 3) {
@@ -1173,13 +1110,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
     public com.google.bigtable.v2.VirtualRpcRequest.Builder getVirtualRpcBuilder() {
       return internalGetVirtualRpcFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.VirtualRpcRequestOrBuilder getVirtualRpcOrBuilder() {
       if ((payloadCase_ == 3) && (virtualRpcBuilder_ != null)) {
@@ -1191,22 +1130,18 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.VirtualRpcRequest virtual_rpc = 3;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.VirtualRpcRequest,
-            com.google.bigtable.v2.VirtualRpcRequest.Builder,
-            com.google.bigtable.v2.VirtualRpcRequestOrBuilder>
+        com.google.bigtable.v2.VirtualRpcRequest, com.google.bigtable.v2.VirtualRpcRequest.Builder, com.google.bigtable.v2.VirtualRpcRequestOrBuilder> 
         internalGetVirtualRpcFieldBuilder() {
       if (virtualRpcBuilder_ == null) {
         if (!(payloadCase_ == 3)) {
           payload_ = com.google.bigtable.v2.VirtualRpcRequest.getDefaultInstance();
         }
-        virtualRpcBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.VirtualRpcRequest,
-                com.google.bigtable.v2.VirtualRpcRequest.Builder,
-                com.google.bigtable.v2.VirtualRpcRequestOrBuilder>(
+        virtualRpcBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.VirtualRpcRequest, com.google.bigtable.v2.VirtualRpcRequest.Builder, com.google.bigtable.v2.VirtualRpcRequestOrBuilder>(
                 (com.google.bigtable.v2.VirtualRpcRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1218,24 +1153,17 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ContinueVirtualRpcRequest,
-            com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder,
-            com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder>
-        continueVirtualRpcBuilder_;
-
+        com.google.bigtable.v2.ContinueVirtualRpcRequest, com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder, com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder> continueVirtualRpcBuilder_;
     /**
      * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
-     *
      * @return Whether the continueVirtualRpc field is set.
      */
     @java.lang.Override
     public boolean hasContinueVirtualRpc() {
       return payloadCase_ == 4;
     }
-
     /**
      * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
-     *
      * @return The continueVirtualRpc.
      */
     @java.lang.Override
@@ -1252,8 +1180,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     public Builder setContinueVirtualRpc(com.google.bigtable.v2.ContinueVirtualRpcRequest value) {
       if (continueVirtualRpcBuilder_ == null) {
         if (value == null) {
@@ -1267,8 +1196,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     public Builder setContinueVirtualRpc(
         com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder builderForValue) {
       if (continueVirtualRpcBuilder_ == null) {
@@ -1280,17 +1210,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     public Builder mergeContinueVirtualRpc(com.google.bigtable.v2.ContinueVirtualRpcRequest value) {
       if (continueVirtualRpcBuilder_ == null) {
-        if (payloadCase_ == 4
-            && payload_ != com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.ContinueVirtualRpcRequest.newBuilder(
-                      (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 4 &&
+            payload_ != com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.ContinueVirtualRpcRequest.newBuilder((com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1305,8 +1233,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     public Builder clearContinueVirtualRpc() {
       if (continueVirtualRpcBuilder_ == null) {
         if (payloadCase_ == 4) {
@@ -1323,16 +1252,17 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     public com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder getContinueVirtualRpcBuilder() {
       return internalGetContinueVirtualRpcFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     @java.lang.Override
-    public com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder
-        getContinueVirtualRpcOrBuilder() {
+    public com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder getContinueVirtualRpcOrBuilder() {
       if ((payloadCase_ == 4) && (continueVirtualRpcBuilder_ != null)) {
         return continueVirtualRpcBuilder_.getMessageOrBuilder();
       } else {
@@ -1342,22 +1272,18 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.ContinueVirtualRpcRequest continue_virtual_rpc = 4;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ContinueVirtualRpcRequest,
-            com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder,
-            com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder>
+        com.google.bigtable.v2.ContinueVirtualRpcRequest, com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder, com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder> 
         internalGetContinueVirtualRpcFieldBuilder() {
       if (continueVirtualRpcBuilder_ == null) {
         if (!(payloadCase_ == 4)) {
           payload_ = com.google.bigtable.v2.ContinueVirtualRpcRequest.getDefaultInstance();
         }
-        continueVirtualRpcBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ContinueVirtualRpcRequest,
-                com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder,
-                com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder>(
+        continueVirtualRpcBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ContinueVirtualRpcRequest, com.google.bigtable.v2.ContinueVirtualRpcRequest.Builder, com.google.bigtable.v2.ContinueVirtualRpcRequestOrBuilder>(
                 (com.google.bigtable.v2.ContinueVirtualRpcRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1369,24 +1295,17 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.CancelVirtualRpcRequest,
-            com.google.bigtable.v2.CancelVirtualRpcRequest.Builder,
-            com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder>
-        cancelVirtualRpcBuilder_;
-
+        com.google.bigtable.v2.CancelVirtualRpcRequest, com.google.bigtable.v2.CancelVirtualRpcRequest.Builder, com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder> cancelVirtualRpcBuilder_;
     /**
      * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
-     *
      * @return Whether the cancelVirtualRpc field is set.
      */
     @java.lang.Override
     public boolean hasCancelVirtualRpc() {
       return payloadCase_ == 5;
     }
-
     /**
      * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
-     *
      * @return The cancelVirtualRpc.
      */
     @java.lang.Override
@@ -1403,8 +1322,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     public Builder setCancelVirtualRpc(com.google.bigtable.v2.CancelVirtualRpcRequest value) {
       if (cancelVirtualRpcBuilder_ == null) {
         if (value == null) {
@@ -1418,8 +1338,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 5;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     public Builder setCancelVirtualRpc(
         com.google.bigtable.v2.CancelVirtualRpcRequest.Builder builderForValue) {
       if (cancelVirtualRpcBuilder_ == null) {
@@ -1431,17 +1352,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 5;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     public Builder mergeCancelVirtualRpc(com.google.bigtable.v2.CancelVirtualRpcRequest value) {
       if (cancelVirtualRpcBuilder_ == null) {
-        if (payloadCase_ == 5
-            && payload_ != com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.CancelVirtualRpcRequest.newBuilder(
-                      (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 5 &&
+            payload_ != com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.CancelVirtualRpcRequest.newBuilder((com.google.bigtable.v2.CancelVirtualRpcRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1456,8 +1375,9 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       payloadCase_ = 5;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     public Builder clearCancelVirtualRpc() {
       if (cancelVirtualRpcBuilder_ == null) {
         if (payloadCase_ == 5) {
@@ -1474,13 +1394,15 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     public com.google.bigtable.v2.CancelVirtualRpcRequest.Builder getCancelVirtualRpcBuilder() {
       return internalGetCancelVirtualRpcFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder getCancelVirtualRpcOrBuilder() {
       if ((payloadCase_ == 5) && (cancelVirtualRpcBuilder_ != null)) {
@@ -1492,22 +1414,18 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code> */
+    /**
+     * <code>.google.bigtable.v2.CancelVirtualRpcRequest cancel_virtual_rpc = 5;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.CancelVirtualRpcRequest,
-            com.google.bigtable.v2.CancelVirtualRpcRequest.Builder,
-            com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder>
+        com.google.bigtable.v2.CancelVirtualRpcRequest, com.google.bigtable.v2.CancelVirtualRpcRequest.Builder, com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder> 
         internalGetCancelVirtualRpcFieldBuilder() {
       if (cancelVirtualRpcBuilder_ == null) {
         if (!(payloadCase_ == 5)) {
           payload_ = com.google.bigtable.v2.CancelVirtualRpcRequest.getDefaultInstance();
         }
-        cancelVirtualRpcBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.CancelVirtualRpcRequest,
-                com.google.bigtable.v2.CancelVirtualRpcRequest.Builder,
-                com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder>(
+        cancelVirtualRpcBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.CancelVirtualRpcRequest, com.google.bigtable.v2.CancelVirtualRpcRequest.Builder, com.google.bigtable.v2.CancelVirtualRpcRequestOrBuilder>(
                 (com.google.bigtable.v2.CancelVirtualRpcRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1523,7 +1441,6 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SessionRequest)
   private static final com.google.bigtable.v2.SessionRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SessionRequest();
   }
@@ -1532,27 +1449,27 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SessionRequest> PARSER =
-      new com.google.protobuf.AbstractParser<SessionRequest>() {
-        @java.lang.Override
-        public SessionRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SessionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<SessionRequest>() {
+    @java.lang.Override
+    public SessionRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SessionRequest> parser() {
     return PARSER;
@@ -1567,4 +1484,6 @@ public final class SessionRequest extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.SessionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * `ArrayValue` is an ordered list of `Value`.
  * </pre>
@@ -15,54 +13,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ArrayValue}
  */
 @com.google.protobuf.Generated
-public final class ArrayValue extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ArrayValue extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ArrayValue)
     ArrayValueOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ArrayValue");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ArrayValue");
   }
-
   // Use ArrayValue.newBuilder() to construct.
   private ArrayValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private ArrayValue() {
     values_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ArrayValue_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ArrayValue_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ArrayValue_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ArrayValue_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ArrayValue.class,
-            com.google.bigtable.v2.ArrayValue.Builder.class);
+            com.google.bigtable.v2.ArrayValue.class, com.google.bigtable.v2.ArrayValue.Builder.class);
   }
 
   public static final int VALUES_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.Value> values_;
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -73,10 +62,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
   public java.util.List<com.google.bigtable.v2.Value> getValuesList() {
     return values_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -84,13 +70,11 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> getValuesOrBuilderList() {
+  public java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> 
+      getValuesOrBuilderList() {
     return values_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -101,10 +85,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
   public int getValuesCount() {
     return values_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -115,10 +96,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.Value getValues(int index) {
     return values_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -126,12 +104,12 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(int index) {
+  public com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(
+      int index) {
     return values_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -143,7 +121,8 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < values_.size(); i++) {
       output.writeMessage(1, values_.get(i));
     }
@@ -157,7 +136,8 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     for (int i = 0; i < values_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, values_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, values_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -167,14 +147,15 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ArrayValue)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.ArrayValue other = (com.google.bigtable.v2.ArrayValue) obj;
 
-    if (!getValuesList().equals(other.getValuesList())) return false;
+    if (!getValuesList()
+        .equals(other.getValuesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -195,136 +176,132 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.ArrayValue parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ArrayValue parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.ArrayValue parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.ArrayValue parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.ArrayValue parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ArrayValue parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ArrayValue parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ArrayValue prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * `ArrayValue` is an ordered list of `Value`.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ArrayValue}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ArrayValue)
       com.google.bigtable.v2.ArrayValueOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ArrayValue_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ArrayValue_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ArrayValue_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ArrayValue_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ArrayValue.class,
-              com.google.bigtable.v2.ArrayValue.Builder.class);
+              com.google.bigtable.v2.ArrayValue.class, com.google.bigtable.v2.ArrayValue.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ArrayValue.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -340,9 +317,9 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ArrayValue_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ArrayValue_descriptor;
     }
 
     @java.lang.Override
@@ -363,9 +340,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ArrayValue buildPartial() {
       com.google.bigtable.v2.ArrayValue result = new com.google.bigtable.v2.ArrayValue(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -389,7 +364,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ArrayValue) {
-        return mergeFrom((com.google.bigtable.v2.ArrayValue) other);
+        return mergeFrom((com.google.bigtable.v2.ArrayValue)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -416,10 +391,9 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
             valuesBuilder_ = null;
             values_ = other.values_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            valuesBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetValuesFieldBuilder()
-                    : null;
+            valuesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetValuesFieldBuilder() : null;
           } else {
             valuesBuilder_.addAllMessages(other.values_);
           }
@@ -451,25 +425,25 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.Value m =
-                    input.readMessage(com.google.bigtable.v2.Value.parser(), extensionRegistry);
-                if (valuesBuilder_ == null) {
-                  ensureValuesIsMutable();
-                  values_.add(m);
-                } else {
-                  valuesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.Value m =
+                  input.readMessage(
+                      com.google.bigtable.v2.Value.parser(),
+                      extensionRegistry);
+              if (valuesBuilder_ == null) {
+                ensureValuesIsMutable();
+                values_.add(m);
+              } else {
+                valuesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -479,28 +453,21 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.bigtable.v2.Value> values_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureValuesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         values_ = new java.util.ArrayList<com.google.bigtable.v2.Value>(values_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.Value,
-            com.google.bigtable.v2.Value.Builder,
-            com.google.bigtable.v2.ValueOrBuilder>
-        valuesBuilder_;
+        com.google.bigtable.v2.Value, com.google.bigtable.v2.Value.Builder, com.google.bigtable.v2.ValueOrBuilder> valuesBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -514,10 +481,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
         return valuesBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -531,10 +495,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
         return valuesBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -548,17 +509,15 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
         return valuesBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public Builder setValues(int index, com.google.bigtable.v2.Value value) {
+    public Builder setValues(
+        int index, com.google.bigtable.v2.Value value) {
       if (valuesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -571,17 +530,15 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public Builder setValues(int index, com.google.bigtable.v2.Value.Builder builderForValue) {
+    public Builder setValues(
+        int index, com.google.bigtable.v2.Value.Builder builderForValue) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         values_.set(index, builderForValue.build());
@@ -591,10 +548,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -614,17 +568,15 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public Builder addValues(int index, com.google.bigtable.v2.Value value) {
+    public Builder addValues(
+        int index, com.google.bigtable.v2.Value value) {
       if (valuesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -637,17 +589,15 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public Builder addValues(com.google.bigtable.v2.Value.Builder builderForValue) {
+    public Builder addValues(
+        com.google.bigtable.v2.Value.Builder builderForValue) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         values_.add(builderForValue.build());
@@ -657,17 +607,15 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public Builder addValues(int index, com.google.bigtable.v2.Value.Builder builderForValue) {
+    public Builder addValues(
+        int index, com.google.bigtable.v2.Value.Builder builderForValue) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         values_.add(index, builderForValue.build());
@@ -677,30 +625,26 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public Builder addAllValues(java.lang.Iterable<? extends com.google.bigtable.v2.Value> values) {
+    public Builder addAllValues(
+        java.lang.Iterable<? extends com.google.bigtable.v2.Value> values) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, values_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
         onChanged();
       } else {
         valuesBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -717,10 +661,7 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -737,58 +678,47 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public com.google.bigtable.v2.Value.Builder getValuesBuilder(int index) {
+    public com.google.bigtable.v2.Value.Builder getValuesBuilder(
+        int index) {
       return internalGetValuesFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(int index) {
+    public com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(
+        int index) {
       if (valuesBuilder_ == null) {
-        return values_.get(index);
-      } else {
+        return values_.get(index);  } else {
         return valuesBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder>
-        getValuesOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> 
+         getValuesOrBuilderList() {
       if (valuesBuilder_ != null) {
         return valuesBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(values_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
@@ -796,49 +726,42 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
     public com.google.bigtable.v2.Value.Builder addValuesBuilder() {
-      return internalGetValuesFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.Value.getDefaultInstance());
+      return internalGetValuesFieldBuilder().addBuilder(
+          com.google.bigtable.v2.Value.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public com.google.bigtable.v2.Value.Builder addValuesBuilder(int index) {
-      return internalGetValuesFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.Value.getDefaultInstance());
+    public com.google.bigtable.v2.Value.Builder addValuesBuilder(
+        int index) {
+      return internalGetValuesFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.Value.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * The ordered elements in the array.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.Value values = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.Value.Builder> getValuesBuilderList() {
+    public java.util.List<com.google.bigtable.v2.Value.Builder> 
+         getValuesBuilderList() {
       return internalGetValuesFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.Value,
-            com.google.bigtable.v2.Value.Builder,
-            com.google.bigtable.v2.ValueOrBuilder>
+        com.google.bigtable.v2.Value, com.google.bigtable.v2.Value.Builder, com.google.bigtable.v2.ValueOrBuilder> 
         internalGetValuesFieldBuilder() {
       if (valuesBuilder_ == null) {
-        valuesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.Value,
-                com.google.bigtable.v2.Value.Builder,
-                com.google.bigtable.v2.ValueOrBuilder>(
-                values_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.Value, com.google.bigtable.v2.Value.Builder, com.google.bigtable.v2.ValueOrBuilder>(
+                values_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         values_ = null;
       }
       return valuesBuilder_;
@@ -849,7 +772,6 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ArrayValue)
   private static final com.google.bigtable.v2.ArrayValue DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ArrayValue();
   }
@@ -858,27 +780,27 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ArrayValue> PARSER =
-      new com.google.protobuf.AbstractParser<ArrayValue>() {
-        @java.lang.Override
-        public ArrayValue parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ArrayValue>
+      PARSER = new com.google.protobuf.AbstractParser<ArrayValue>() {
+    @java.lang.Override
+    public ArrayValue parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ArrayValue> parser() {
     return PARSER;
@@ -893,4 +815,6 @@ public final class ArrayValue extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ArrayValue getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

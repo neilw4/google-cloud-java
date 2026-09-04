@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * PeerInfo contains information about the peer that the client is
  * connecting to.
@@ -16,27 +14,24 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.PeerInfo}
  */
 @com.google.protobuf.Generated
-public final class PeerInfo extends com.google.protobuf.GeneratedMessage
-    implements
+public final class PeerInfo extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.PeerInfo)
     PeerInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "PeerInfo");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "PeerInfo");
   }
-
   // Use PeerInfo.newBuilder() to construct.
   private PeerInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private PeerInfo() {
     applicationFrontendRegion_ = "";
     applicationFrontendZone_ = "";
@@ -44,33 +39,29 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     transportType_ = 0;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.PeerInfoProto
-        .internal_static_google_bigtable_v2_PeerInfo_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.PeerInfoProto.internal_static_google_bigtable_v2_PeerInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.PeerInfoProto
-        .internal_static_google_bigtable_v2_PeerInfo_fieldAccessorTable
+    return com.google.bigtable.v2.PeerInfoProto.internal_static_google_bigtable_v2_PeerInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.bigtable.v2.PeerInfo.class, com.google.bigtable.v2.PeerInfo.Builder.class);
   }
 
   /**
-   *
-   *
    * <pre>
    * The transport type that the client used to connect to this peer.
    * </pre>
    *
    * Protobuf enum {@code google.bigtable.v2.PeerInfo.TransportType}
    */
-  public enum TransportType implements com.google.protobuf.ProtocolMessageEnum {
+  public enum TransportType
+      implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     *
-     *
      * <pre>
      * The transport type is unknown.
      * </pre>
@@ -79,8 +70,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_UNKNOWN(0),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via an external network
      * (e.g. outside Google Cloud).
@@ -90,8 +79,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_EXTERNAL(1),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via CloudPath.
      * </pre>
@@ -100,8 +87,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_CLOUD_PATH(2),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via DirectAccess.
      * </pre>
@@ -110,8 +95,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_DIRECT_ACCESS(3),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions using an unknown
      * transport type.
@@ -121,8 +104,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_SESSION_UNKNOWN(4),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions on an external
      * network (e.g. outside Google Cloud).
@@ -132,8 +113,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_SESSION_EXTERNAL(5),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions using CloudPath.
      * </pre>
@@ -142,8 +121,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     TRANSPORT_TYPE_SESSION_CLOUD_PATH(6),
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions using
      * DirectAccess.
@@ -157,17 +134,14 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
 
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "TransportType");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "TransportType");
     }
-
     /**
-     *
-     *
      * <pre>
      * The transport type is unknown.
      * </pre>
@@ -175,10 +149,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_UNKNOWN = 0;</code>
      */
     public static final int TRANSPORT_TYPE_UNKNOWN_VALUE = 0;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via an external network
      * (e.g. outside Google Cloud).
@@ -187,10 +158,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_EXTERNAL = 1;</code>
      */
     public static final int TRANSPORT_TYPE_EXTERNAL_VALUE = 1;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via CloudPath.
      * </pre>
@@ -198,10 +166,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_CLOUD_PATH = 2;</code>
      */
     public static final int TRANSPORT_TYPE_CLOUD_PATH_VALUE = 2;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via DirectAccess.
      * </pre>
@@ -209,10 +174,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_DIRECT_ACCESS = 3;</code>
      */
     public static final int TRANSPORT_TYPE_DIRECT_ACCESS_VALUE = 3;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions using an unknown
      * transport type.
@@ -221,10 +183,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_SESSION_UNKNOWN = 4;</code>
      */
     public static final int TRANSPORT_TYPE_SESSION_UNKNOWN_VALUE = 4;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions on an external
      * network (e.g. outside Google Cloud).
@@ -233,10 +192,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_SESSION_EXTERNAL = 5;</code>
      */
     public static final int TRANSPORT_TYPE_SESSION_EXTERNAL_VALUE = 5;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions using CloudPath.
      * </pre>
@@ -244,10 +200,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_SESSION_CLOUD_PATH = 6;</code>
      */
     public static final int TRANSPORT_TYPE_SESSION_CLOUD_PATH_VALUE = 6;
-
     /**
-     *
-     *
      * <pre>
      * The client connected to this peer via Bigtable Sessions using
      * DirectAccess.
@@ -256,6 +209,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * <code>TRANSPORT_TYPE_SESSION_DIRECT_ACCESS = 7;</code>
      */
     public static final int TRANSPORT_TYPE_SESSION_DIRECT_ACCESS_VALUE = 7;
+
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -281,59 +235,54 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      */
     public static TransportType forNumber(int value) {
       switch (value) {
-        case 0:
-          return TRANSPORT_TYPE_UNKNOWN;
-        case 1:
-          return TRANSPORT_TYPE_EXTERNAL;
-        case 2:
-          return TRANSPORT_TYPE_CLOUD_PATH;
-        case 3:
-          return TRANSPORT_TYPE_DIRECT_ACCESS;
-        case 4:
-          return TRANSPORT_TYPE_SESSION_UNKNOWN;
-        case 5:
-          return TRANSPORT_TYPE_SESSION_EXTERNAL;
-        case 6:
-          return TRANSPORT_TYPE_SESSION_CLOUD_PATH;
-        case 7:
-          return TRANSPORT_TYPE_SESSION_DIRECT_ACCESS;
-        default:
-          return null;
+        case 0: return TRANSPORT_TYPE_UNKNOWN;
+        case 1: return TRANSPORT_TYPE_EXTERNAL;
+        case 2: return TRANSPORT_TYPE_CLOUD_PATH;
+        case 3: return TRANSPORT_TYPE_DIRECT_ACCESS;
+        case 4: return TRANSPORT_TYPE_SESSION_UNKNOWN;
+        case 5: return TRANSPORT_TYPE_SESSION_EXTERNAL;
+        case 6: return TRANSPORT_TYPE_SESSION_CLOUD_PATH;
+        case 7: return TRANSPORT_TYPE_SESSION_DIRECT_ACCESS;
+        default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<TransportType> internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<TransportType>
+        internalGetValueMap() {
       return internalValueMap;
     }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TransportType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TransportType>() {
+            public TransportType findValueByNumber(int number) {
+              return TransportType.forNumber(number);
+            }
+          };
 
-    private static final com.google.protobuf.Internal.EnumLiteMap<TransportType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<TransportType>() {
-          public TransportType findValueByNumber(int number) {
-            return TransportType.forNumber(number);
-          }
-        };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
-
-    public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+    public static com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
       return com.google.bigtable.v2.PeerInfo.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final TransportType[] VALUES = values();
 
-    public static TransportType valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static TransportType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -352,17 +301,13 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int GOOGLE_FRONTEND_ID_FIELD_NUMBER = 1;
   private long googleFrontendId_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the Google Frontend which serviced this request.
    * Only set when not using DirectAccess.
    * </pre>
    *
    * <code>int64 google_frontend_id = 1;</code>
-   *
    * @return The googleFrontendId.
    */
   @java.lang.Override
@@ -372,17 +317,13 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int APPLICATION_FRONTEND_ID_FIELD_NUMBER = 2;
   private long applicationFrontendId_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the application frontend which serviced this
    * request.
    * </pre>
    *
    * <code>int64 application_frontend_id = 2;</code>
-   *
    * @return The applicationFrontendId.
    */
   @java.lang.Override
@@ -391,19 +332,14 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int APPLICATION_FRONTEND_REGION_FIELD_NUMBER = 6;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object applicationFrontendRegion_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The Cloud region of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_region = 6;</code>
-   *
    * @return The applicationFrontendRegion.
    */
   @java.lang.Override
@@ -412,30 +348,29 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       applicationFrontendRegion_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The Cloud region of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_region = 6;</code>
-   *
    * @return The bytes for applicationFrontendRegion.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getApplicationFrontendRegionBytes() {
+  public com.google.protobuf.ByteString
+      getApplicationFrontendRegionBytes() {
     java.lang.Object ref = applicationFrontendRegion_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       applicationFrontendRegion_ = b;
       return b;
     } else {
@@ -444,19 +379,14 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int APPLICATION_FRONTEND_ZONE_FIELD_NUMBER = 3;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object applicationFrontendZone_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The Cloud zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The applicationFrontendZone.
    */
   @java.lang.Override
@@ -465,30 +395,29 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       applicationFrontendZone_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The Cloud zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The bytes for applicationFrontendZone.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getApplicationFrontendZoneBytes() {
+  public com.google.protobuf.ByteString
+      getApplicationFrontendZoneBytes() {
     java.lang.Object ref = applicationFrontendZone_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       applicationFrontendZone_ = b;
       return b;
     } else {
@@ -497,13 +426,9 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int APPLICATION_FRONTEND_SUBZONE_FIELD_NUMBER = 4;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object applicationFrontendSubzone_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The subzone of the application frontend that served this request, e.g. an
    * identifier for where within a zone (within the reported region) the
@@ -511,7 +436,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string application_frontend_subzone = 4;</code>
-   *
    * @return The applicationFrontendSubzone.
    */
   @java.lang.Override
@@ -520,16 +444,14 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       applicationFrontendSubzone_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The subzone of the application frontend that served this request, e.g. an
    * identifier for where within a zone (within the reported region) the
@@ -537,15 +459,16 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string application_frontend_subzone = 4;</code>
-   *
    * @return The bytes for applicationFrontendSubzone.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getApplicationFrontendSubzoneBytes() {
+  public com.google.protobuf.ByteString
+      getApplicationFrontendSubzoneBytes() {
     java.lang.Object ref = applicationFrontendSubzone_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       applicationFrontendSubzone_ = b;
       return b;
     } else {
@@ -555,31 +478,23 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
 
   public static final int TRANSPORT_TYPE_FIELD_NUMBER = 5;
   private int transportType_ = 0;
-
   /**
    * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-   *
    * @return The enum numeric value on the wire for transportType.
    */
-  @java.lang.Override
-  public int getTransportTypeValue() {
+  @java.lang.Override public int getTransportTypeValue() {
     return transportType_;
   }
-
   /**
    * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-   *
    * @return The transportType.
    */
-  @java.lang.Override
-  public com.google.bigtable.v2.PeerInfo.TransportType getTransportType() {
-    com.google.bigtable.v2.PeerInfo.TransportType result =
-        com.google.bigtable.v2.PeerInfo.TransportType.forNumber(transportType_);
+  @java.lang.Override public com.google.bigtable.v2.PeerInfo.TransportType getTransportType() {
+    com.google.bigtable.v2.PeerInfo.TransportType result = com.google.bigtable.v2.PeerInfo.TransportType.forNumber(transportType_);
     return result == null ? com.google.bigtable.v2.PeerInfo.TransportType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -591,7 +506,8 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (googleFrontendId_ != 0L) {
       output.writeInt64(1, googleFrontendId_);
     }
@@ -604,8 +520,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(applicationFrontendSubzone_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, applicationFrontendSubzone_);
     }
-    if (transportType_
-        != com.google.bigtable.v2.PeerInfo.TransportType.TRANSPORT_TYPE_UNKNOWN.getNumber()) {
+    if (transportType_ != com.google.bigtable.v2.PeerInfo.TransportType.TRANSPORT_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(5, transportType_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(applicationFrontendRegion_)) {
@@ -621,21 +536,22 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (googleFrontendId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, googleFrontendId_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, googleFrontendId_);
     }
     if (applicationFrontendId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, applicationFrontendId_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, applicationFrontendId_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(applicationFrontendZone_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, applicationFrontendZone_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(applicationFrontendSubzone_)) {
-      size +=
-          com.google.protobuf.GeneratedMessage.computeStringSize(4, applicationFrontendSubzone_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, applicationFrontendSubzone_);
     }
-    if (transportType_
-        != com.google.bigtable.v2.PeerInfo.TransportType.TRANSPORT_TYPE_UNKNOWN.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(5, transportType_);
+    if (transportType_ != com.google.bigtable.v2.PeerInfo.TransportType.TRANSPORT_TYPE_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, transportType_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(applicationFrontendRegion_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, applicationFrontendRegion_);
@@ -648,19 +564,23 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.PeerInfo)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.PeerInfo other = (com.google.bigtable.v2.PeerInfo) obj;
 
-    if (getGoogleFrontendId() != other.getGoogleFrontendId()) return false;
-    if (getApplicationFrontendId() != other.getApplicationFrontendId()) return false;
-    if (!getApplicationFrontendRegion().equals(other.getApplicationFrontendRegion())) return false;
-    if (!getApplicationFrontendZone().equals(other.getApplicationFrontendZone())) return false;
-    if (!getApplicationFrontendSubzone().equals(other.getApplicationFrontendSubzone()))
-      return false;
+    if (getGoogleFrontendId()
+        != other.getGoogleFrontendId()) return false;
+    if (getApplicationFrontendId()
+        != other.getApplicationFrontendId()) return false;
+    if (!getApplicationFrontendRegion()
+        .equals(other.getApplicationFrontendRegion())) return false;
+    if (!getApplicationFrontendZone()
+        .equals(other.getApplicationFrontendZone())) return false;
+    if (!getApplicationFrontendSubzone()
+        .equals(other.getApplicationFrontendSubzone())) return false;
     if (transportType_ != other.transportType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -674,9 +594,11 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + GOOGLE_FRONTEND_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getGoogleFrontendId());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getGoogleFrontendId());
     hash = (37 * hash) + APPLICATION_FRONTEND_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getApplicationFrontendId());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getApplicationFrontendId());
     hash = (37 * hash) + APPLICATION_FRONTEND_REGION_FIELD_NUMBER;
     hash = (53 * hash) + getApplicationFrontendRegion().hashCode();
     hash = (37 * hash) + APPLICATION_FRONTEND_ZONE_FIELD_NUMBER;
@@ -690,104 +612,99 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.PeerInfo parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.PeerInfo parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.PeerInfo parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.PeerInfo parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.PeerInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.PeerInfo parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.PeerInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.PeerInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * PeerInfo contains information about the peer that the client is
    * connecting to.
@@ -795,31 +712,33 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.PeerInfo}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.PeerInfo)
       com.google.bigtable.v2.PeerInfoOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.PeerInfoProto
-          .internal_static_google_bigtable_v2_PeerInfo_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.PeerInfoProto.internal_static_google_bigtable_v2_PeerInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.PeerInfoProto
-          .internal_static_google_bigtable_v2_PeerInfo_fieldAccessorTable
+      return com.google.bigtable.v2.PeerInfoProto.internal_static_google_bigtable_v2_PeerInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.bigtable.v2.PeerInfo.class, com.google.bigtable.v2.PeerInfo.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.PeerInfo.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -834,9 +753,9 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.PeerInfoProto
-          .internal_static_google_bigtable_v2_PeerInfo_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.PeerInfoProto.internal_static_google_bigtable_v2_PeerInfo_descriptor;
     }
 
     @java.lang.Override
@@ -856,9 +775,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.PeerInfo buildPartial() {
       com.google.bigtable.v2.PeerInfo result = new com.google.bigtable.v2.PeerInfo(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -888,7 +805,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.PeerInfo) {
-        return mergeFrom((com.google.bigtable.v2.PeerInfo) other);
+        return mergeFrom((com.google.bigtable.v2.PeerInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -947,49 +864,42 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                googleFrontendId_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 16:
-              {
-                applicationFrontendId_ = input.readInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-            case 26:
-              {
-                applicationFrontendZone_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 26
-            case 34:
-              {
-                applicationFrontendSubzone_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 34
-            case 40:
-              {
-                transportType_ = input.readEnum();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 40
-            case 50:
-              {
-                applicationFrontendRegion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 50
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              googleFrontendId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              applicationFrontendId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              applicationFrontendZone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 26
+            case 34: {
+              applicationFrontendSubzone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 34
+            case 40: {
+              transportType_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 40
+            case 50: {
+              applicationFrontendRegion_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -999,38 +909,29 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private long googleFrontendId_;
-
+    private long googleFrontendId_ ;
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the Google Frontend which serviced this request.
      * Only set when not using DirectAccess.
      * </pre>
      *
      * <code>int64 google_frontend_id = 1;</code>
-     *
      * @return The googleFrontendId.
      */
     @java.lang.Override
     public long getGoogleFrontendId() {
       return googleFrontendId_;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the Google Frontend which serviced this request.
      * Only set when not using DirectAccess.
      * </pre>
      *
      * <code>int64 google_frontend_id = 1;</code>
-     *
      * @param value The googleFrontendId to set.
      * @return This builder for chaining.
      */
@@ -1041,17 +942,13 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the Google Frontend which serviced this request.
      * Only set when not using DirectAccess.
      * </pre>
      *
      * <code>int64 google_frontend_id = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearGoogleFrontendId() {
@@ -1061,35 +958,27 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private long applicationFrontendId_;
-
+    private long applicationFrontendId_ ;
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the application frontend which serviced this
      * request.
      * </pre>
      *
      * <code>int64 application_frontend_id = 2;</code>
-     *
      * @return The applicationFrontendId.
      */
     @java.lang.Override
     public long getApplicationFrontendId() {
       return applicationFrontendId_;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the application frontend which serviced this
      * request.
      * </pre>
      *
      * <code>int64 application_frontend_id = 2;</code>
-     *
      * @param value The applicationFrontendId to set.
      * @return This builder for chaining.
      */
@@ -1100,17 +989,13 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque identifier for the application frontend which serviced this
      * request.
      * </pre>
      *
      * <code>int64 application_frontend_id = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplicationFrontendId() {
@@ -1121,22 +1006,19 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     }
 
     private java.lang.Object applicationFrontendRegion_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The Cloud region of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_region = 6;</code>
-     *
      * @return The applicationFrontendRegion.
      */
     public java.lang.String getApplicationFrontendRegion() {
       java.lang.Object ref = applicationFrontendRegion_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         applicationFrontendRegion_ = s;
         return s;
@@ -1144,61 +1026,50 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud region of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_region = 6;</code>
-     *
      * @return The bytes for applicationFrontendRegion.
      */
-    public com.google.protobuf.ByteString getApplicationFrontendRegionBytes() {
+    public com.google.protobuf.ByteString
+        getApplicationFrontendRegionBytes() {
       java.lang.Object ref = applicationFrontendRegion_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         applicationFrontendRegion_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud region of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_region = 6;</code>
-     *
      * @param value The applicationFrontendRegion to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendRegion(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendRegion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       applicationFrontendRegion_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud region of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_region = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplicationFrontendRegion() {
@@ -1207,23 +1078,18 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud region of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_region = 6;</code>
-     *
      * @param value The bytes for applicationFrontendRegion to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendRegionBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendRegionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       applicationFrontendRegion_ = value;
       bitField0_ |= 0x00000004;
@@ -1232,22 +1098,19 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     }
 
     private java.lang.Object applicationFrontendZone_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The Cloud zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @return The applicationFrontendZone.
      */
     public java.lang.String getApplicationFrontendZone() {
       java.lang.Object ref = applicationFrontendZone_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         applicationFrontendZone_ = s;
         return s;
@@ -1255,61 +1118,50 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @return The bytes for applicationFrontendZone.
      */
-    public com.google.protobuf.ByteString getApplicationFrontendZoneBytes() {
+    public com.google.protobuf.ByteString
+        getApplicationFrontendZoneBytes() {
       java.lang.Object ref = applicationFrontendZone_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         applicationFrontendZone_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @param value The applicationFrontendZone to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendZone(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendZone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       applicationFrontendZone_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplicationFrontendZone() {
@@ -1318,23 +1170,18 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The Cloud zone of the application frontend that served this request.
      * </pre>
      *
      * <code>string application_frontend_zone = 3;</code>
-     *
      * @param value The bytes for applicationFrontendZone to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendZoneBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendZoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       applicationFrontendZone_ = value;
       bitField0_ |= 0x00000008;
@@ -1343,10 +1190,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     }
 
     private java.lang.Object applicationFrontendSubzone_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The subzone of the application frontend that served this request, e.g. an
      * identifier for where within a zone (within the reported region) the
@@ -1354,13 +1198,13 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string application_frontend_subzone = 4;</code>
-     *
      * @return The applicationFrontendSubzone.
      */
     public java.lang.String getApplicationFrontendSubzone() {
       java.lang.Object ref = applicationFrontendSubzone_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         applicationFrontendSubzone_ = s;
         return s;
@@ -1368,10 +1212,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The subzone of the application frontend that served this request, e.g. an
      * identifier for where within a zone (within the reported region) the
@@ -1379,24 +1220,22 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string application_frontend_subzone = 4;</code>
-     *
      * @return The bytes for applicationFrontendSubzone.
      */
-    public com.google.protobuf.ByteString getApplicationFrontendSubzoneBytes() {
+    public com.google.protobuf.ByteString
+        getApplicationFrontendSubzoneBytes() {
       java.lang.Object ref = applicationFrontendSubzone_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         applicationFrontendSubzone_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The subzone of the application frontend that served this request, e.g. an
      * identifier for where within a zone (within the reported region) the
@@ -1404,23 +1243,18 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string application_frontend_subzone = 4;</code>
-     *
      * @param value The applicationFrontendSubzone to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendSubzone(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendSubzone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       applicationFrontendSubzone_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The subzone of the application frontend that served this request, e.g. an
      * identifier for where within a zone (within the reported region) the
@@ -1428,7 +1262,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string application_frontend_subzone = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplicationFrontendSubzone() {
@@ -1437,10 +1270,7 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The subzone of the application frontend that served this request, e.g. an
      * identifier for where within a zone (within the reported region) the
@@ -1448,14 +1278,12 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string application_frontend_subzone = 4;</code>
-     *
      * @param value The bytes for applicationFrontendSubzone to set.
      * @return This builder for chaining.
      */
-    public Builder setApplicationFrontendSubzoneBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplicationFrontendSubzoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       applicationFrontendSubzone_ = value;
       bitField0_ |= 0x00000010;
@@ -1464,20 +1292,15 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     }
 
     private int transportType_ = 0;
-
     /**
      * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-     *
      * @return The enum numeric value on the wire for transportType.
      */
-    @java.lang.Override
-    public int getTransportTypeValue() {
+    @java.lang.Override public int getTransportTypeValue() {
       return transportType_;
     }
-
     /**
      * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-     *
      * @param value The enum numeric value on the wire for transportType to set.
      * @return This builder for chaining.
      */
@@ -1487,38 +1310,29 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-     *
      * @return The transportType.
      */
     @java.lang.Override
     public com.google.bigtable.v2.PeerInfo.TransportType getTransportType() {
-      com.google.bigtable.v2.PeerInfo.TransportType result =
-          com.google.bigtable.v2.PeerInfo.TransportType.forNumber(transportType_);
+      com.google.bigtable.v2.PeerInfo.TransportType result = com.google.bigtable.v2.PeerInfo.TransportType.forNumber(transportType_);
       return result == null ? com.google.bigtable.v2.PeerInfo.TransportType.UNRECOGNIZED : result;
     }
-
     /**
      * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-     *
      * @param value The transportType to set.
      * @return This builder for chaining.
      */
     public Builder setTransportType(com.google.bigtable.v2.PeerInfo.TransportType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       bitField0_ |= 0x00000020;
       transportType_ = value.getNumber();
       onChanged();
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearTransportType() {
@@ -1533,7 +1347,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.PeerInfo)
   private static final com.google.bigtable.v2.PeerInfo DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.PeerInfo();
   }
@@ -1542,27 +1355,27 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PeerInfo> PARSER =
-      new com.google.protobuf.AbstractParser<PeerInfo>() {
-        @java.lang.Override
-        public PeerInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<PeerInfo>
+      PARSER = new com.google.protobuf.AbstractParser<PeerInfo>() {
+    @java.lang.Override
+    public PeerInfo parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<PeerInfo> parser() {
     return PARSER;
@@ -1577,4 +1390,6 @@ public final class PeerInfo extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.PeerInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

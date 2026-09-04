@@ -6,7 +6,7 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ProtoFormatOrBuilder
-    extends
+public interface ProtoFormatOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ProtoFormat)
-    com.google.protobuf.MessageOrBuilder {}
+    com.google.protobuf.MessageOrBuilder {
+}

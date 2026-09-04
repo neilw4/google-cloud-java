@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * A partial result set from the streaming query API.
  * Cloud Bigtable clients buffer partial results received in this message until
@@ -47,64 +45,54 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.PartialResultSet}
  */
 @com.google.protobuf.Generated
-public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
-    implements
+public final class PartialResultSet extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.PartialResultSet)
     PartialResultSetOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "PartialResultSet");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "PartialResultSet");
   }
-
   // Use PartialResultSet.newBuilder() to construct.
   private PartialResultSet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private PartialResultSet() {
     resumeToken_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_PartialResultSet_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_PartialResultSet_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_PartialResultSet_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_PartialResultSet_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.PartialResultSet.class,
-            com.google.bigtable.v2.PartialResultSet.Builder.class);
+            com.google.bigtable.v2.PartialResultSet.class, com.google.bigtable.v2.PartialResultSet.Builder.class);
   }
 
   private int bitField0_;
   private int partialRowsCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object partialRows_;
-
   public enum PartialRowsCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PROTO_ROWS_BATCH(3),
     PARTIALROWS_NOT_SET(0);
     private final int value;
-
     private PartialRowsCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -117,64 +105,51 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
     public static PartialRowsCase forNumber(int value) {
       switch (value) {
-        case 3:
-          return PROTO_ROWS_BATCH;
-        case 0:
-          return PARTIALROWS_NOT_SET;
-        default:
-          return null;
+        case 3: return PROTO_ROWS_BATCH;
+        case 0: return PARTIALROWS_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PartialRowsCase getPartialRowsCase() {
-    return PartialRowsCase.forNumber(partialRowsCase_);
+  public PartialRowsCase
+  getPartialRowsCase() {
+    return PartialRowsCase.forNumber(
+        partialRowsCase_);
   }
 
   public static final int PROTO_ROWS_BATCH_FIELD_NUMBER = 3;
-
   /**
-   *
-   *
    * <pre>
    * Partial rows in serialized ProtoRows format.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoRowsBatch proto_rows_batch = 3;</code>
-   *
    * @return Whether the protoRowsBatch field is set.
    */
   @java.lang.Override
   public boolean hasProtoRowsBatch() {
     return partialRowsCase_ == 3;
   }
-
   /**
-   *
-   *
    * <pre>
    * Partial rows in serialized ProtoRows format.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoRowsBatch proto_rows_batch = 3;</code>
-   *
    * @return The protoRowsBatch.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ProtoRowsBatch getProtoRowsBatch() {
     if (partialRowsCase_ == 3) {
-      return (com.google.bigtable.v2.ProtoRowsBatch) partialRows_;
+       return (com.google.bigtable.v2.ProtoRowsBatch) partialRows_;
     }
     return com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Partial rows in serialized ProtoRows format.
    * </pre>
@@ -184,17 +159,14 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.ProtoRowsBatchOrBuilder getProtoRowsBatchOrBuilder() {
     if (partialRowsCase_ == 3) {
-      return (com.google.bigtable.v2.ProtoRowsBatch) partialRows_;
+       return (com.google.bigtable.v2.ProtoRowsBatch) partialRows_;
     }
     return com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance();
   }
 
   public static final int BATCH_CHECKSUM_FIELD_NUMBER = 6;
   private int batchChecksum_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * CRC32C checksum of concatenated `partial_rows` data for the current batch.
    *
@@ -215,17 +187,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>optional uint32 batch_checksum = 6;</code>
-   *
    * @return Whether the batchChecksum field is set.
    */
   @java.lang.Override
   public boolean hasBatchChecksum() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * CRC32C checksum of concatenated `partial_rows` data for the current batch.
    *
@@ -246,7 +214,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>optional uint32 batch_checksum = 6;</code>
-   *
    * @return The batchChecksum.
    */
   @java.lang.Override
@@ -256,10 +223,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
   public static final int RESUME_TOKEN_FIELD_NUMBER = 5;
   private com.google.protobuf.ByteString resumeToken_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * An opaque token sent by the server to allow query resumption and signal
    * that the buffered values constructed from received `partial_rows` can be
@@ -286,7 +250,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes resume_token = 5;</code>
-   *
    * @return The resumeToken.
    */
   @java.lang.Override
@@ -296,17 +259,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
   public static final int RESET_FIELD_NUMBER = 7;
   private boolean reset_ = false;
-
   /**
-   *
-   *
    * <pre>
    * If `true`, any data buffered since the last non-empty `resume_token` must
    * be discarded before the other parts of this message, if any, are handled.
    * </pre>
    *
    * <code>bool reset = 7;</code>
-   *
    * @return The reset.
    */
   @java.lang.Override
@@ -316,10 +275,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
   public static final int ESTIMATED_BATCH_SIZE_FIELD_NUMBER = 4;
   private int estimatedBatchSize_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * Estimated size of the buffer required to hold the next batch of results.
    *
@@ -333,7 +289,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 estimated_batch_size = 4;</code>
-   *
    * @return The estimatedBatchSize.
    */
   @java.lang.Override
@@ -342,7 +297,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -354,7 +308,8 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (partialRowsCase_ == 3) {
       output.writeMessage(3, (com.google.bigtable.v2.ProtoRowsBatch) partialRows_);
     }
@@ -380,21 +335,24 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (partialRowsCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              3, (com.google.bigtable.v2.ProtoRowsBatch) partialRows_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.bigtable.v2.ProtoRowsBatch) partialRows_);
     }
     if (estimatedBatchSize_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, estimatedBatchSize_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, estimatedBatchSize_);
     }
     if (!resumeToken_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(5, resumeToken_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(5, resumeToken_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeUInt32Size(6, batchChecksum_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(6, batchChecksum_);
     }
     if (reset_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(7, reset_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, reset_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -404,7 +362,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.PartialResultSet)) {
       return super.equals(obj);
@@ -413,15 +371,20 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
     if (hasBatchChecksum() != other.hasBatchChecksum()) return false;
     if (hasBatchChecksum()) {
-      if (getBatchChecksum() != other.getBatchChecksum()) return false;
+      if (getBatchChecksum()
+          != other.getBatchChecksum()) return false;
     }
-    if (!getResumeToken().equals(other.getResumeToken())) return false;
-    if (getReset() != other.getReset()) return false;
-    if (getEstimatedBatchSize() != other.getEstimatedBatchSize()) return false;
+    if (!getResumeToken()
+        .equals(other.getResumeToken())) return false;
+    if (getReset()
+        != other.getReset()) return false;
+    if (getEstimatedBatchSize()
+        != other.getEstimatedBatchSize()) return false;
     if (!getPartialRowsCase().equals(other.getPartialRowsCase())) return false;
     switch (partialRowsCase_) {
       case 3:
-        if (!getProtoRowsBatch().equals(other.getProtoRowsBatch())) return false;
+        if (!getProtoRowsBatch()
+            .equals(other.getProtoRowsBatch())) return false;
         break;
       case 0:
       default:
@@ -444,7 +407,8 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     hash = (37 * hash) + RESUME_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getResumeToken().hashCode();
     hash = (37 * hash) + RESET_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getReset());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getReset());
     hash = (37 * hash) + ESTIMATED_BATCH_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + getEstimatedBatchSize();
     switch (partialRowsCase_) {
@@ -460,105 +424,99 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.PartialResultSet parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.PartialResultSet parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.PartialResultSet parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.PartialResultSet parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.PartialResultSet parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.PartialResultSet parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.PartialResultSet parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.PartialResultSet parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.PartialResultSet prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * A partial result set from the streaming query API.
    * Cloud Bigtable clients buffer partial results received in this message until
@@ -597,32 +555,33 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.PartialResultSet}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.PartialResultSet)
       com.google.bigtable.v2.PartialResultSetOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_PartialResultSet_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_PartialResultSet_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_PartialResultSet_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_PartialResultSet_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.PartialResultSet.class,
-              com.google.bigtable.v2.PartialResultSet.Builder.class);
+              com.google.bigtable.v2.PartialResultSet.class, com.google.bigtable.v2.PartialResultSet.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.PartialResultSet.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -640,9 +599,9 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_PartialResultSet_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_PartialResultSet_descriptor;
     }
 
     @java.lang.Override
@@ -661,11 +620,8 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
     @java.lang.Override
     public com.google.bigtable.v2.PartialResultSet buildPartial() {
-      com.google.bigtable.v2.PartialResultSet result =
-          new com.google.bigtable.v2.PartialResultSet(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.PartialResultSet result = new com.google.bigtable.v2.PartialResultSet(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -693,7 +649,8 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     private void buildPartialOneofs(com.google.bigtable.v2.PartialResultSet result) {
       result.partialRowsCase_ = partialRowsCase_;
       result.partialRows_ = this.partialRows_;
-      if (partialRowsCase_ == 3 && protoRowsBatchBuilder_ != null) {
+      if (partialRowsCase_ == 3 &&
+          protoRowsBatchBuilder_ != null) {
         result.partialRows_ = protoRowsBatchBuilder_.build();
       }
     }
@@ -701,7 +658,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.PartialResultSet) {
-        return mergeFrom((com.google.bigtable.v2.PartialResultSet) other);
+        return mergeFrom((com.google.bigtable.v2.PartialResultSet)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -723,15 +680,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
         setEstimatedBatchSize(other.getEstimatedBatchSize());
       }
       switch (other.getPartialRowsCase()) {
-        case PROTO_ROWS_BATCH:
-          {
-            mergeProtoRowsBatch(other.getProtoRowsBatch());
-            break;
-          }
-        case PARTIALROWS_NOT_SET:
-          {
-            break;
-          }
+        case PROTO_ROWS_BATCH: {
+          mergeProtoRowsBatch(other.getProtoRowsBatch());
+          break;
+        }
+        case PARTIALROWS_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -759,44 +714,39 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 26:
-              {
-                input.readMessage(
-                    internalGetProtoRowsBatchFieldBuilder().getBuilder(), extensionRegistry);
-                partialRowsCase_ = 3;
-                break;
-              } // case 26
-            case 32:
-              {
-                estimatedBatchSize_ = input.readInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 32
-            case 42:
-              {
-                resumeToken_ = input.readBytes();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 42
-            case 48:
-              {
-                batchChecksum_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 48
-            case 56:
-              {
-                reset_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 56
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 26: {
+              input.readMessage(
+                  internalGetProtoRowsBatchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              partialRowsCase_ = 3;
+              break;
+            } // case 26
+            case 32: {
+              estimatedBatchSize_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 32
+            case 42: {
+              resumeToken_ = input.readBytes();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 42
+            case 48: {
+              batchChecksum_ = input.readUInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 48
+            case 56: {
+              reset_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 56
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -806,12 +756,12 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int partialRowsCase_ = 0;
     private java.lang.Object partialRows_;
-
-    public PartialRowsCase getPartialRowsCase() {
-      return PartialRowsCase.forNumber(partialRowsCase_);
+    public PartialRowsCase
+        getPartialRowsCase() {
+      return PartialRowsCase.forNumber(
+          partialRowsCase_);
     }
 
     public Builder clearPartialRows() {
@@ -824,36 +774,25 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ProtoRowsBatch,
-            com.google.bigtable.v2.ProtoRowsBatch.Builder,
-            com.google.bigtable.v2.ProtoRowsBatchOrBuilder>
-        protoRowsBatchBuilder_;
-
+        com.google.bigtable.v2.ProtoRowsBatch, com.google.bigtable.v2.ProtoRowsBatch.Builder, com.google.bigtable.v2.ProtoRowsBatchOrBuilder> protoRowsBatchBuilder_;
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
      *
      * <code>.google.bigtable.v2.ProtoRowsBatch proto_rows_batch = 3;</code>
-     *
      * @return Whether the protoRowsBatch field is set.
      */
     @java.lang.Override
     public boolean hasProtoRowsBatch() {
       return partialRowsCase_ == 3;
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
      *
      * <code>.google.bigtable.v2.ProtoRowsBatch proto_rows_batch = 3;</code>
-     *
      * @return The protoRowsBatch.
      */
     @java.lang.Override
@@ -870,10 +809,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -893,10 +829,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       partialRowsCase_ = 3;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -914,10 +847,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       partialRowsCase_ = 3;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -926,13 +856,10 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeProtoRowsBatch(com.google.bigtable.v2.ProtoRowsBatch value) {
       if (protoRowsBatchBuilder_ == null) {
-        if (partialRowsCase_ == 3
-            && partialRows_ != com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance()) {
-          partialRows_ =
-              com.google.bigtable.v2.ProtoRowsBatch.newBuilder(
-                      (com.google.bigtable.v2.ProtoRowsBatch) partialRows_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (partialRowsCase_ == 3 &&
+            partialRows_ != com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance()) {
+          partialRows_ = com.google.bigtable.v2.ProtoRowsBatch.newBuilder((com.google.bigtable.v2.ProtoRowsBatch) partialRows_)
+              .mergeFrom(value).buildPartial();
         } else {
           partialRows_ = value;
         }
@@ -947,10 +874,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       partialRowsCase_ = 3;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -973,10 +897,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -986,10 +907,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ProtoRowsBatch.Builder getProtoRowsBatchBuilder() {
       return internalGetProtoRowsBatchFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -1007,10 +925,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Partial rows in serialized ProtoRows format.
      * </pre>
@@ -1018,19 +933,14 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.ProtoRowsBatch proto_rows_batch = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ProtoRowsBatch,
-            com.google.bigtable.v2.ProtoRowsBatch.Builder,
-            com.google.bigtable.v2.ProtoRowsBatchOrBuilder>
+        com.google.bigtable.v2.ProtoRowsBatch, com.google.bigtable.v2.ProtoRowsBatch.Builder, com.google.bigtable.v2.ProtoRowsBatchOrBuilder> 
         internalGetProtoRowsBatchFieldBuilder() {
       if (protoRowsBatchBuilder_ == null) {
         if (!(partialRowsCase_ == 3)) {
           partialRows_ = com.google.bigtable.v2.ProtoRowsBatch.getDefaultInstance();
         }
-        protoRowsBatchBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ProtoRowsBatch,
-                com.google.bigtable.v2.ProtoRowsBatch.Builder,
-                com.google.bigtable.v2.ProtoRowsBatchOrBuilder>(
+        protoRowsBatchBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ProtoRowsBatch, com.google.bigtable.v2.ProtoRowsBatch.Builder, com.google.bigtable.v2.ProtoRowsBatchOrBuilder>(
                 (com.google.bigtable.v2.ProtoRowsBatch) partialRows_,
                 getParentForChildren(),
                 isClean());
@@ -1041,11 +951,8 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       return protoRowsBatchBuilder_;
     }
 
-    private int batchChecksum_;
-
+    private int batchChecksum_ ;
     /**
-     *
-     *
      * <pre>
      * CRC32C checksum of concatenated `partial_rows` data for the current batch.
      *
@@ -1066,17 +973,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>optional uint32 batch_checksum = 6;</code>
-     *
      * @return Whether the batchChecksum field is set.
      */
     @java.lang.Override
     public boolean hasBatchChecksum() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * CRC32C checksum of concatenated `partial_rows` data for the current batch.
      *
@@ -1097,17 +1000,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>optional uint32 batch_checksum = 6;</code>
-     *
      * @return The batchChecksum.
      */
     @java.lang.Override
     public int getBatchChecksum() {
       return batchChecksum_;
     }
-
     /**
-     *
-     *
      * <pre>
      * CRC32C checksum of concatenated `partial_rows` data for the current batch.
      *
@@ -1128,7 +1027,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>optional uint32 batch_checksum = 6;</code>
-     *
      * @param value The batchChecksum to set.
      * @return This builder for chaining.
      */
@@ -1139,10 +1037,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * CRC32C checksum of concatenated `partial_rows` data for the current batch.
      *
@@ -1163,7 +1058,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>optional uint32 batch_checksum = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearBatchChecksum() {
@@ -1174,10 +1068,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.ByteString resumeToken_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * An opaque token sent by the server to allow query resumption and signal
      * that the buffered values constructed from received `partial_rows` can be
@@ -1204,17 +1095,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes resume_token = 5;</code>
-     *
      * @return The resumeToken.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getResumeToken() {
       return resumeToken_;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque token sent by the server to allow query resumption and signal
      * that the buffered values constructed from received `partial_rows` can be
@@ -1241,23 +1128,17 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes resume_token = 5;</code>
-     *
      * @param value The resumeToken to set.
      * @return This builder for chaining.
      */
     public Builder setResumeToken(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       resumeToken_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * An opaque token sent by the server to allow query resumption and signal
      * that the buffered values constructed from received `partial_rows` can be
@@ -1284,7 +1165,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes resume_token = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearResumeToken() {
@@ -1294,35 +1174,27 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean reset_;
-
+    private boolean reset_ ;
     /**
-     *
-     *
      * <pre>
      * If `true`, any data buffered since the last non-empty `resume_token` must
      * be discarded before the other parts of this message, if any, are handled.
      * </pre>
      *
      * <code>bool reset = 7;</code>
-     *
      * @return The reset.
      */
     @java.lang.Override
     public boolean getReset() {
       return reset_;
     }
-
     /**
-     *
-     *
      * <pre>
      * If `true`, any data buffered since the last non-empty `resume_token` must
      * be discarded before the other parts of this message, if any, are handled.
      * </pre>
      *
      * <code>bool reset = 7;</code>
-     *
      * @param value The reset to set.
      * @return This builder for chaining.
      */
@@ -1333,17 +1205,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If `true`, any data buffered since the last non-empty `resume_token` must
      * be discarded before the other parts of this message, if any, are handled.
      * </pre>
      *
      * <code>bool reset = 7;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearReset() {
@@ -1353,11 +1221,8 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private int estimatedBatchSize_;
-
+    private int estimatedBatchSize_ ;
     /**
-     *
-     *
      * <pre>
      * Estimated size of the buffer required to hold the next batch of results.
      *
@@ -1371,17 +1236,13 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 estimated_batch_size = 4;</code>
-     *
      * @return The estimatedBatchSize.
      */
     @java.lang.Override
     public int getEstimatedBatchSize() {
       return estimatedBatchSize_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Estimated size of the buffer required to hold the next batch of results.
      *
@@ -1395,7 +1256,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 estimated_batch_size = 4;</code>
-     *
      * @param value The estimatedBatchSize to set.
      * @return This builder for chaining.
      */
@@ -1406,10 +1266,7 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Estimated size of the buffer required to hold the next batch of results.
      *
@@ -1423,7 +1280,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 estimated_batch_size = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearEstimatedBatchSize() {
@@ -1438,7 +1294,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.PartialResultSet)
   private static final com.google.bigtable.v2.PartialResultSet DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.PartialResultSet();
   }
@@ -1447,27 +1302,27 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PartialResultSet> PARSER =
-      new com.google.protobuf.AbstractParser<PartialResultSet>() {
-        @java.lang.Override
-        public PartialResultSet parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<PartialResultSet>
+      PARSER = new com.google.protobuf.AbstractParser<PartialResultSet>() {
+    @java.lang.Override
+    public PartialResultSet parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<PartialResultSet> parser() {
     return PARSER;
@@ -1482,4 +1337,6 @@ public final class PartialResultSet extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.PartialResultSet getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

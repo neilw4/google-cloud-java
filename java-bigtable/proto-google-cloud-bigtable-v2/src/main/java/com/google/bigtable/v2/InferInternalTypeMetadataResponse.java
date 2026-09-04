@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Note: This API is not generally available. Users must be allowlisted
  * Response message for InferInternalTypeMetadata
@@ -16,60 +14,51 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataResponse}
  */
 @com.google.protobuf.Generated
-public final class InferInternalTypeMetadataResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class InferInternalTypeMetadataResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.InferInternalTypeMetadataResponse)
     InferInternalTypeMetadataResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "InferInternalTypeMetadataResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "InferInternalTypeMetadataResponse");
   }
-
   // Use InferInternalTypeMetadataResponse.newBuilder() to construct.
-  private InferInternalTypeMetadataResponse(
-      com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  private InferInternalTypeMetadataResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private InferInternalTypeMetadataResponse() {
     family_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.class,
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Builder.class);
+            com.google.bigtable.v2.InferInternalTypeMetadataResponse.class, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Builder.class);
   }
 
   /**
-   *
-   *
    * <pre>
    * Type metadata definition
    * </pre>
    *
    * Protobuf enum {@code google.bigtable.v2.InferInternalTypeMetadataResponse.Type}
    */
-  public enum Type implements com.google.protobuf.ProtocolMessageEnum {
+  public enum Type
+      implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     *
-     *
      * <pre>
      * Bytes as default type
      * </pre>
@@ -78,8 +67,6 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      */
     TYPE_BYTES(0),
     /**
-     *
-     *
      * <pre>
      * UTF-8 encoded string
      * </pre>
@@ -88,8 +75,6 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      */
     TYPE_STRING(1),
     /**
-     *
-     *
      * <pre>
      * The following case-insensitive strings are interpreted as boolean
      * `true`: "true", "t", "yes", "y", "1".
@@ -101,8 +86,6 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      */
     TYPE_BOOLEAN(2),
     /**
-     *
-     *
      * <pre>
      * For integer that is UTF-8 encoded. The string must reflect a
      * base-10 integer whose value falls within the range [−9223372036854775808,
@@ -113,8 +96,6 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      */
     TYPE_INTEGER(3),
     /**
-     *
-     *
      * <pre>
      * For float that is UTF-8 encoded. The string must reflect a base-10
      * floating point number. For number that overflow a double, e.g. big
@@ -131,17 +112,14 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Type");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Type");
     }
-
     /**
-     *
-     *
      * <pre>
      * Bytes as default type
      * </pre>
@@ -149,10 +127,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      * <code>TYPE_BYTES = 0;</code>
      */
     public static final int TYPE_BYTES_VALUE = 0;
-
     /**
-     *
-     *
      * <pre>
      * UTF-8 encoded string
      * </pre>
@@ -160,10 +135,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      * <code>TYPE_STRING = 1;</code>
      */
     public static final int TYPE_STRING_VALUE = 1;
-
     /**
-     *
-     *
      * <pre>
      * The following case-insensitive strings are interpreted as boolean
      * `true`: "true", "t", "yes", "y", "1".
@@ -174,10 +146,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      * <code>TYPE_BOOLEAN = 2;</code>
      */
     public static final int TYPE_BOOLEAN_VALUE = 2;
-
     /**
-     *
-     *
      * <pre>
      * For integer that is UTF-8 encoded. The string must reflect a
      * base-10 integer whose value falls within the range [−9223372036854775808,
@@ -187,10 +156,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      * <code>TYPE_INTEGER = 3;</code>
      */
     public static final int TYPE_INTEGER_VALUE = 3;
-
     /**
-     *
-     *
      * <pre>
      * For float that is UTF-8 encoded. The string must reflect a base-10
      * floating point number. For number that overflow a double, e.g. big
@@ -202,6 +168,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      * <code>TYPE_FLOAT = 4;</code>
      */
     public static final int TYPE_FLOAT_VALUE = 4;
+
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -227,55 +194,51 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
      */
     public static Type forNumber(int value) {
       switch (value) {
-        case 0:
-          return TYPE_BYTES;
-        case 1:
-          return TYPE_STRING;
-        case 2:
-          return TYPE_BOOLEAN;
-        case 3:
-          return TYPE_INTEGER;
-        case 4:
-          return TYPE_FLOAT;
-        default:
-          return null;
+        case 0: return TYPE_BYTES;
+        case 1: return TYPE_STRING;
+        case 2: return TYPE_BOOLEAN;
+        case 3: return TYPE_INTEGER;
+        case 4: return TYPE_FLOAT;
+        default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<Type> internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<Type>
+        internalGetValueMap() {
       return internalValueMap;
     }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Type> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+            public Type findValueByNumber(int number) {
+              return Type.forNumber(number);
+            }
+          };
 
-    private static final com.google.protobuf.Internal.EnumLiteMap<Type> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Type>() {
-          public Type findValueByNumber(int number) {
-            return Type.forNumber(number);
-          }
-        };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
-
-    public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
-      return com.google.bigtable.v2.InferInternalTypeMetadataResponse.getDescriptor()
-          .getEnumTypes()
-          .get(0);
+    public static com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.InferInternalTypeMetadataResponse.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final Type[] VALUES = values();
 
-    public static Type valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static Type valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -292,166 +255,126 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     // @@protoc_insertion_point(enum_scope:google.bigtable.v2.InferInternalTypeMetadataResponse.Type)
   }
 
-  public interface FamilyOrBuilder
-      extends
+  public interface FamilyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.InferInternalTypeMetadataResponse.Family)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Column family name
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return The familyName.
      */
     java.lang.String getFamilyName();
-
     /**
-     *
-     *
      * <pre>
      * Column family name
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return The bytes for familyName.
      */
-    com.google.protobuf.ByteString getFamilyNameBytes();
+    com.google.protobuf.ByteString
+        getFamilyNameBytes();
 
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
-    java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>
+    java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column> 
         getColumnsList();
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column getColumns(int index);
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     int getColumnsCount();
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
-    java.util.List<
-            ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>
+    java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder> 
         getColumnsOrBuilderList();
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder getColumnsOrBuilder(
         int index);
   }
-
   /**
-   *
-   *
    * <pre>
    * Represent a column family
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataResponse.Family}
    */
-  public static final class Family extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Family extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.InferInternalTypeMetadataResponse.Family)
       FamilyOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Family");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Family");
     }
-
     // Use Family.newBuilder() to construct.
     private Family(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private Family() {
       familyName_ = "";
       columns_ = java.util.Collections.emptyList();
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.class,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder.class);
+              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.class, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder.class);
     }
 
     public static final int FAMILY_NAME_FIELD_NUMBER = 1;
-
     @SuppressWarnings("serial")
     private volatile java.lang.Object familyName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Column family name
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return The familyName.
      */
     @java.lang.Override
@@ -460,30 +383,29 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         familyName_ = s;
         return s;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Column family name
      * </pre>
      *
      * <code>string family_name = 1;</code>
-     *
      * @return The bytes for familyName.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getFamilyNameBytes() {
+    public com.google.protobuf.ByteString
+        getFamilyNameBytes() {
       java.lang.Object ref = familyName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         familyName_ = b;
         return b;
       } else {
@@ -492,92 +414,67 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     public static final int COLUMNS_FIELD_NUMBER = 2;
-
     @SuppressWarnings("serial")
-    private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>
-        columns_;
-
+    private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column> columns_;
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>
-        getColumnsList() {
+    public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column> getColumnsList() {
       return columns_;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<
-            ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>
+    public java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder> 
         getColumnsOrBuilderList() {
       return columns_;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     @java.lang.Override
     public int getColumnsCount() {
       return columns_.size();
     }
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     @java.lang.Override
     public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column getColumns(int index) {
       return columns_.get(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * List of columns in the column family
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder
-        getColumnsOrBuilder(int index) {
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder getColumnsOrBuilder(
+        int index) {
       return columns_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -589,7 +486,8 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(familyName_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, familyName_);
       }
@@ -609,7 +507,8 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, familyName_);
       }
       for (int i = 0; i < columns_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, columns_.get(i));
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, columns_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -619,16 +518,17 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family other =
-          (com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family) obj;
+      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family other = (com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family) obj;
 
-      if (!getFamilyName().equals(other.getFamilyName())) return false;
-      if (!getColumnsList().equals(other.getColumnsList())) return false;
+      if (!getFamilyName()
+          .equals(other.getFamilyName())) return false;
+      if (!getColumnsList()
+          .equals(other.getColumnsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -652,139 +552,131 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family
-        parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family
-        parseDelimitedFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
-    }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represent a column family
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataResponse.Family}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.InferInternalTypeMetadataResponse.Family)
         com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.class,
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder.class);
+                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.class, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder.class);
       }
 
-      // Construct using
-      // com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.newBuilder()
-      private Builder() {}
+      // Construct using com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.newBuilder()
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-      }
 
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -801,14 +693,13 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family getDefaultInstanceForType() {
         return com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance();
       }
 
@@ -823,18 +714,14 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
       @java.lang.Override
       public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family buildPartial() {
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family result =
-            new com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family(this);
+        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family result = new com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family(this);
         buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family result) {
+      private void buildPartialRepeatedFields(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family result) {
         if (columnsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             columns_ = java.util.Collections.unmodifiableList(columns_);
@@ -846,8 +733,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
       }
 
-      private void buildPartial0(
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family result) {
+      private void buildPartial0(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.familyName_ = familyName_;
@@ -857,18 +743,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family) {
-          return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family) other);
+          return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family other) {
-        if (other
-            == com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family other) {
+        if (other == com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance()) return this;
         if (!other.getFamilyName().isEmpty()) {
           familyName_ = other.familyName_;
           bitField0_ |= 0x00000001;
@@ -892,10 +775,9 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
               columnsBuilder_ = null;
               columns_ = other.columns_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              columnsBuilder_ =
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                      ? internalGetColumnsFieldBuilder()
-                      : null;
+              columnsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetColumnsFieldBuilder() : null;
             } else {
               columnsBuilder_.addAllMessages(other.columns_);
             }
@@ -927,33 +809,30 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  familyName_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-              case 18:
-                {
-                  com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column m =
-                      input.readMessage(
-                          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.parser(),
-                          extensionRegistry);
-                  if (columnsBuilder_ == null) {
-                    ensureColumnsIsMutable();
-                    columns_.add(m);
-                  } else {
-                    columnsBuilder_.addMessage(m);
-                  }
-                  break;
-                } // case 18
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                familyName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column m =
+                    input.readMessage(
+                        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.parser(),
+                        extensionRegistry);
+                if (columnsBuilder_ == null) {
+                  ensureColumnsIsMutable();
+                  columns_.add(m);
+                } else {
+                  columnsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -963,26 +842,22 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private java.lang.Object familyName_ = "";
-
       /**
-       *
-       *
        * <pre>
        * Column family name
        * </pre>
        *
        * <code>string family_name = 1;</code>
-       *
        * @return The familyName.
        */
       public java.lang.String getFamilyName() {
         java.lang.Object ref = familyName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           familyName_ = s;
           return s;
@@ -990,61 +865,50 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
           return (java.lang.String) ref;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * Column family name
        * </pre>
        *
        * <code>string family_name = 1;</code>
-       *
        * @return The bytes for familyName.
        */
-      public com.google.protobuf.ByteString getFamilyNameBytes() {
+      public com.google.protobuf.ByteString
+          getFamilyNameBytes() {
         java.lang.Object ref = familyName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           familyName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * Column family name
        * </pre>
        *
        * <code>string family_name = 1;</code>
-       *
        * @param value The familyName to set.
        * @return This builder for chaining.
        */
-      public Builder setFamilyName(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setFamilyName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         familyName_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Column family name
        * </pre>
        *
        * <code>string family_name = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearFamilyName() {
@@ -1053,23 +917,18 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Column family name
        * </pre>
        *
        * <code>string family_name = 1;</code>
-       *
        * @param value The bytes for familyName to set.
        * @return This builder for chaining.
        */
-      public Builder setFamilyNameBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setFamilyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         familyName_ = value;
         bitField0_ |= 0x00000001;
@@ -1077,52 +936,38 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         return this;
       }
 
-      private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>
-          columns_ = java.util.Collections.emptyList();
-
+      private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column> columns_ =
+        java.util.Collections.emptyList();
       private void ensureColumnsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          columns_ =
-              new java.util.ArrayList<
-                  com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>(columns_);
+          columns_ = new java.util.ArrayList<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>(columns_);
           bitField0_ |= 0x00000002;
-        }
+         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>
-          columnsBuilder_;
+          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder, com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder> columnsBuilder_;
 
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>
-          getColumnsList() {
+      public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column> getColumnsList() {
         if (columnsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(columns_);
         } else {
           return columnsBuilder_.getMessageList();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public int getColumnsCount() {
         if (columnsBuilder_ == null) {
@@ -1131,16 +976,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
           return columnsBuilder_.getCount();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column getColumns(int index) {
         if (columnsBuilder_ == null) {
@@ -1149,16 +990,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
           return columnsBuilder_.getMessage(index);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder setColumns(
           int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column value) {
@@ -1174,20 +1011,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder setColumns(
-          int index,
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder builderForValue) {
+          int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder builderForValue) {
         if (columnsBuilder_ == null) {
           ensureColumnsIsMutable();
           columns_.set(index, builderForValue.build());
@@ -1197,19 +1029,14 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public Builder addColumns(
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column value) {
+      public Builder addColumns(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column value) {
         if (columnsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1222,16 +1049,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder addColumns(
           int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column value) {
@@ -1247,16 +1070,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder addColumns(
           com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder builderForValue) {
@@ -1269,20 +1088,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder addColumns(
-          int index,
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder builderForValue) {
+          int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder builderForValue) {
         if (columnsBuilder_ == null) {
           ensureColumnsIsMutable();
           columns_.add(index, builderForValue.build());
@@ -1292,40 +1106,31 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder addAllColumns(
-          java.lang.Iterable<
-                  ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column>
-              values) {
+          java.lang.Iterable<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column> values) {
         if (columnsBuilder_ == null) {
           ensureColumnsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, columns_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, columns_);
           onChanged();
         } else {
           columnsBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder clearColumns() {
         if (columnsBuilder_ == null) {
@@ -1337,16 +1142,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
       public Builder removeColumns(int index) {
         if (columnsBuilder_ == null) {
@@ -1358,125 +1159,90 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder
-          getColumnsBuilder(int index) {
+      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder getColumnsBuilder(
+          int index) {
         return internalGetColumnsFieldBuilder().getBuilder(index);
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder
-          getColumnsOrBuilder(int index) {
+      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder getColumnsOrBuilder(
+          int index) {
         if (columnsBuilder_ == null) {
-          return columns_.get(index);
-        } else {
+          return columns_.get(index);  } else {
           return columnsBuilder_.getMessageOrBuilder(index);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public java.util.List<
-              ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>
-          getColumnsOrBuilderList() {
+      public java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder> 
+           getColumnsOrBuilderList() {
         if (columnsBuilder_ != null) {
           return columnsBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(columns_);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder
-          addColumnsBuilder() {
-        return internalGetColumnsFieldBuilder()
-            .addBuilder(
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-                    .getDefaultInstance());
+      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder addColumnsBuilder() {
+        return internalGetColumnsFieldBuilder().addBuilder(
+            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.getDefaultInstance());
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder
-          addColumnsBuilder(int index) {
-        return internalGetColumnsFieldBuilder()
-            .addBuilder(
-                index,
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-                    .getDefaultInstance());
+      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder addColumnsBuilder(
+          int index) {
+        return internalGetColumnsFieldBuilder().addBuilder(
+            index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.getDefaultInstance());
       }
-
       /**
-       *
-       *
        * <pre>
        * List of columns in the column family
        * </pre>
        *
-       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;
-       * </code>
+       * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Column columns = 2;</code>
        */
-      public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder>
-          getColumnsBuilderList() {
+      public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder> 
+           getColumnsBuilderList() {
         return internalGetColumnsFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilder<
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>
+          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder, com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder> 
           internalGetColumnsFieldBuilder() {
         if (columnsBuilder_ == null) {
-          columnsBuilder_ =
-              new com.google.protobuf.RepeatedFieldBuilder<
-                  com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column,
-                  com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder,
-                  com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>(
-                  columns_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
+          columnsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder, com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder>(
+                  columns_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
           columns_ = null;
         }
         return columnsBuilder_;
@@ -1486,40 +1252,36 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.InferInternalTypeMetadataResponse.Family)
-    private static final com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family
-        DEFAULT_INSTANCE;
-
+    private static final com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family();
     }
 
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family
-        getDefaultInstance() {
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Family> PARSER =
-        new com.google.protobuf.AbstractParser<Family>() {
-          @java.lang.Override
-          public Family parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Family>
+        PARSER = new com.google.protobuf.AbstractParser<Family>() {
+      @java.lang.Override
+      public Family parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Family> parser() {
       return PARSER;
@@ -1531,119 +1293,96 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family
-        getDefaultInstanceForType() {
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface ColumnOrBuilder
-      extends
+  public interface ColumnOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.InferInternalTypeMetadataResponse.Column)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Column qualifier
      * </pre>
      *
      * <code>bytes qualifier = 1;</code>
-     *
      * @return The qualifier.
      */
     com.google.protobuf.ByteString getQualifier();
 
     /**
-     *
-     *
      * <pre>
      * Type metadata of the column
      * </pre>
      *
      * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-     *
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
-
     /**
-     *
-     *
      * <pre>
      * Type metadata of the column
      * </pre>
      *
      * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-     *
      * @return The type.
      */
     com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type getType();
   }
-
   /**
-   *
-   *
    * <pre>
    * Represents a column
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataResponse.Column}
    */
-  public static final class Column extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Column extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.InferInternalTypeMetadataResponse.Column)
       ColumnOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Column");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Column");
     }
-
     // Use Column.newBuilder() to construct.
     private Column(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private Column() {
       qualifier_ = com.google.protobuf.ByteString.EMPTY;
       type_ = 0;
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.class,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder.class);
+              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.class, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder.class);
     }
 
     public static final int QUALIFIER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString qualifier_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * Column qualifier
      * </pre>
      *
      * <code>bytes qualifier = 1;</code>
-     *
      * @return The qualifier.
      */
     @java.lang.Override
@@ -1653,45 +1392,31 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
     public static final int TYPE_FIELD_NUMBER = 2;
     private int type_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Type metadata of the column
      * </pre>
      *
      * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-     *
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Type metadata of the column
      * </pre>
      *
      * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-     *
      * @return The type.
      */
-    @java.lang.Override
-    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type getType() {
-      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type result =
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.forNumber(type_);
-      return result == null
-          ? com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.UNRECOGNIZED
-          : result;
+    @java.lang.Override public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type getType() {
+      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type result = com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.forNumber(type_);
+      return result == null ? com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1703,12 +1428,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (!qualifier_.isEmpty()) {
         output.writeBytes(1, qualifier_);
       }
-      if (type_
-          != com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.TYPE_BYTES.getNumber()) {
+      if (type_ != com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.TYPE_BYTES.getNumber()) {
         output.writeEnum(2, type_);
       }
       getUnknownFields().writeTo(output);
@@ -1721,11 +1446,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
       size = 0;
       if (!qualifier_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, qualifier_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, qualifier_);
       }
-      if (type_
-          != com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.TYPE_BYTES.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream.computeEnumSize(2, type_);
+      if (type_ != com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.TYPE_BYTES.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1735,15 +1461,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column other =
-          (com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column) obj;
+      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column other = (com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column) obj;
 
-      if (!getQualifier().equals(other.getQualifier())) return false;
+      if (!getQualifier()
+          .equals(other.getQualifier())) return false;
       if (type_ != other.type_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1766,139 +1492,131 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-        parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-        parseDelimitedFrom(
-            java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
-    }
-
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Represents a column
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataResponse.Column}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.InferInternalTypeMetadataResponse.Column)
         com.google.bigtable.v2.InferInternalTypeMetadataResponse.ColumnOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.class,
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder.class);
+                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.class, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.Builder.class);
       }
 
-      // Construct using
-      // com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.newBuilder()
-      private Builder() {}
+      // Construct using com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.newBuilder()
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-      }
 
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1909,14 +1627,13 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
       }
 
       @java.lang.Override
-      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-          getDefaultInstanceForType() {
+      public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column getDefaultInstanceForType() {
         return com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.getDefaultInstance();
       }
 
@@ -1931,17 +1648,13 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
       @java.lang.Override
       public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column buildPartial() {
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column result =
-            new com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column result = new com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column result) {
+      private void buildPartial0(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.qualifier_ = qualifier_;
@@ -1954,18 +1667,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column) {
-          return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column) other);
+          return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column other) {
-        if (other
-            == com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column other) {
+        if (other == com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column.getDefaultInstance()) return this;
         if (!other.getQualifier().isEmpty()) {
           setQualifier(other.getQualifier());
         }
@@ -1998,25 +1708,22 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  qualifier_ = input.readBytes();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-              case 16:
-                {
-                  type_ = input.readEnum();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 16
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                qualifier_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2026,58 +1733,43 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private com.google.protobuf.ByteString qualifier_ = com.google.protobuf.ByteString.EMPTY;
-
       /**
-       *
-       *
        * <pre>
        * Column qualifier
        * </pre>
        *
        * <code>bytes qualifier = 1;</code>
-       *
        * @return The qualifier.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getQualifier() {
         return qualifier_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Column qualifier
        * </pre>
        *
        * <code>bytes qualifier = 1;</code>
-       *
        * @param value The qualifier to set.
        * @return This builder for chaining.
        */
       public Builder setQualifier(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+        if (value == null) { throw new NullPointerException(); }
         qualifier_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Column qualifier
        * </pre>
        *
        * <code>bytes qualifier = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearQualifier() {
@@ -2088,32 +1780,23 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
 
       private int type_ = 0;
-
       /**
-       *
-       *
        * <pre>
        * Type metadata of the column
        * </pre>
        *
        * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-       *
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Type metadata of the column
        * </pre>
        *
        * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-       *
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -2123,58 +1806,41 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Type metadata of the column
        * </pre>
        *
        * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-       *
        * @return The type.
        */
       @java.lang.Override
       public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type getType() {
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type result =
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.forNumber(type_);
-        return result == null
-            ? com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.UNRECOGNIZED
-            : result;
+        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type result = com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.forNumber(type_);
+        return result == null ? com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type.UNRECOGNIZED : result;
       }
-
       /**
-       *
-       *
        * <pre>
        * Type metadata of the column
        * </pre>
        *
        * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-       *
        * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setType(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Type value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+        if (value == null) { throw new NullPointerException(); }
         bitField0_ |= 0x00000002;
         type_ = value.getNumber();
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Type metadata of the column
        * </pre>
        *
        * <code>.google.bigtable.v2.InferInternalTypeMetadataResponse.Type type = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -2188,40 +1854,36 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.InferInternalTypeMetadataResponse.Column)
-    private static final com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-        DEFAULT_INSTANCE;
-
+    private static final com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column();
     }
 
-    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-        getDefaultInstance() {
+    public static com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Column> PARSER =
-        new com.google.protobuf.AbstractParser<Column>() {
-          @java.lang.Override
-          public Column parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Column>
+        PARSER = new com.google.protobuf.AbstractParser<Column>() {
+      @java.lang.Override
+      public Column parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Column> parser() {
       return PARSER;
@@ -2233,20 +1895,16 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column
-        getDefaultInstanceForType() {
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Column getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   public static final int FAMILY_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> family_;
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -2254,14 +1912,10 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family>
-      getFamilyList() {
+  public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> getFamilyList() {
     return family_;
   }
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -2269,15 +1923,11 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<
-          ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder> 
       getFamilyOrBuilderList() {
     return family_;
   }
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -2288,10 +1938,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
   public int getFamilyCount() {
     return family_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -2302,10 +1949,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
   public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family getFamily(int index) {
     return family_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -2313,13 +1957,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder
-      getFamilyOrBuilder(int index) {
+  public com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder getFamilyOrBuilder(
+      int index) {
     return family_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -2331,7 +1974,8 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < family_.size(); i++) {
       output.writeMessage(1, family_.get(i));
     }
@@ -2345,7 +1989,8 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
     size = 0;
     for (int i = 0; i < family_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, family_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, family_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2355,15 +2000,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.InferInternalTypeMetadataResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.InferInternalTypeMetadataResponse other =
-        (com.google.bigtable.v2.InferInternalTypeMetadataResponse) obj;
+    com.google.bigtable.v2.InferInternalTypeMetadataResponse other = (com.google.bigtable.v2.InferInternalTypeMetadataResponse) obj;
 
-    if (!getFamilyList().equals(other.getFamilyList())) return false;
+    if (!getFamilyList()
+        .equals(other.getFamilyList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2385,105 +2030,98 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
   }
 
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.InferInternalTypeMetadataResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
-  public static Builder newBuilder(
-      com.google.bigtable.v2.InferInternalTypeMetadataResponse prototype) {
+  public static Builder newBuilder(com.google.bigtable.v2.InferInternalTypeMetadataResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Note: This API is not generally available. Users must be allowlisted
    * Response message for InferInternalTypeMetadata
@@ -2491,32 +2129,33 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
    *
    * Protobuf type {@code google.bigtable.v2.InferInternalTypeMetadataResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.InferInternalTypeMetadataResponse)
       com.google.bigtable.v2.InferInternalTypeMetadataResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.class,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Builder.class);
+              com.google.bigtable.v2.InferInternalTypeMetadataResponse.class, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.InferInternalTypeMetadataResponse.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -2532,9 +2171,9 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
     }
 
     @java.lang.Override
@@ -2553,18 +2192,14 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
     @java.lang.Override
     public com.google.bigtable.v2.InferInternalTypeMetadataResponse buildPartial() {
-      com.google.bigtable.v2.InferInternalTypeMetadataResponse result =
-          new com.google.bigtable.v2.InferInternalTypeMetadataResponse(this);
+      com.google.bigtable.v2.InferInternalTypeMetadataResponse result = new com.google.bigtable.v2.InferInternalTypeMetadataResponse(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse result) {
+    private void buildPartialRepeatedFields(com.google.bigtable.v2.InferInternalTypeMetadataResponse result) {
       if (familyBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           family_ = java.util.Collections.unmodifiableList(family_);
@@ -2583,7 +2218,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.InferInternalTypeMetadataResponse) {
-        return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataResponse) other);
+        return mergeFrom((com.google.bigtable.v2.InferInternalTypeMetadataResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -2591,8 +2226,7 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.InferInternalTypeMetadataResponse other) {
-      if (other == com.google.bigtable.v2.InferInternalTypeMetadataResponse.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.InferInternalTypeMetadataResponse.getDefaultInstance()) return this;
       if (familyBuilder_ == null) {
         if (!other.family_.isEmpty()) {
           if (family_.isEmpty()) {
@@ -2611,10 +2245,9 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
             familyBuilder_ = null;
             family_ = other.family_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            familyBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetFamilyFieldBuilder()
-                    : null;
+            familyBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetFamilyFieldBuilder() : null;
           } else {
             familyBuilder_.addAllMessages(other.family_);
           }
@@ -2646,27 +2279,25 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family m =
-                    input.readMessage(
-                        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.parser(),
-                        extensionRegistry);
-                if (familyBuilder_ == null) {
-                  ensureFamilyIsMutable();
-                  family_.add(m);
-                } else {
-                  familyBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family m =
+                  input.readMessage(
+                      com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.parser(),
+                      extensionRegistry);
+              if (familyBuilder_ == null) {
+                ensureFamilyIsMutable();
+                family_.add(m);
+              } else {
+                familyBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2676,55 +2307,40 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family>
-        family_ = java.util.Collections.emptyList();
-
+    private java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> family_ =
+      java.util.Collections.emptyList();
     private void ensureFamilyIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        family_ =
-            new java.util.ArrayList<
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family>(family_);
+        family_ = new java.util.ArrayList<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family>(family_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family,
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder,
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>
-        familyBuilder_;
+        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder, com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder> familyBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family>
-        getFamilyList() {
+    public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> getFamilyList() {
       if (familyBuilder_ == null) {
         return java.util.Collections.unmodifiableList(family_);
       } else {
         return familyBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public int getFamilyCount() {
       if (familyBuilder_ == null) {
@@ -2733,16 +2349,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         return familyBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family getFamily(int index) {
       if (familyBuilder_ == null) {
@@ -2751,16 +2363,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
         return familyBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder setFamily(
         int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family value) {
@@ -2776,20 +2384,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder setFamily(
-        int index,
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder builderForValue) {
+        int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder builderForValue) {
       if (familyBuilder_ == null) {
         ensureFamilyIsMutable();
         family_.set(index, builderForValue.build());
@@ -2799,19 +2402,14 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
-    public Builder addFamily(
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family value) {
+    public Builder addFamily(com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family value) {
       if (familyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2824,16 +2422,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder addFamily(
         int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family value) {
@@ -2849,16 +2443,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder addFamily(
         com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder builderForValue) {
@@ -2871,20 +2461,15 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder addFamily(
-        int index,
-        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder builderForValue) {
+        int index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder builderForValue) {
       if (familyBuilder_ == null) {
         ensureFamilyIsMutable();
         family_.add(index, builderForValue.build());
@@ -2894,40 +2479,31 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder addAllFamily(
-        java.lang.Iterable<
-                ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family>
-            values) {
+        java.lang.Iterable<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> values) {
       if (familyBuilder_ == null) {
         ensureFamilyIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, family_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, family_);
         onChanged();
       } else {
         familyBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder clearFamily() {
       if (familyBuilder_ == null) {
@@ -2939,16 +2515,12 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public Builder removeFamily(int index) {
       if (familyBuilder_ == null) {
@@ -2960,123 +2532,90 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder getFamilyBuilder(
         int index) {
       return internalGetFamilyFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
-    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder
-        getFamilyOrBuilder(int index) {
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder getFamilyOrBuilder(
+        int index) {
       if (familyBuilder_ == null) {
-        return family_.get(index);
-      } else {
+        return family_.get(index);  } else {
         return familyBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
-    public java.util.List<
-            ? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>
-        getFamilyOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder> 
+         getFamilyOrBuilderList() {
       if (familyBuilder_ != null) {
         return familyBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(family_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
-    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder
-        addFamilyBuilder() {
-      return internalGetFamilyFieldBuilder()
-          .addBuilder(
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance());
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder addFamilyBuilder() {
+      return internalGetFamilyFieldBuilder().addBuilder(
+          com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
     public com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder addFamilyBuilder(
         int index) {
-      return internalGetFamilyFieldBuilder()
-          .addBuilder(
-              index,
-              com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance());
+      return internalGetFamilyFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * List of column families in the response
      * </pre>
      *
-     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;
-     * </code>
+     * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder>
-        getFamilyBuilderList() {
+    public java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder> 
+         getFamilyBuilderList() {
       return internalGetFamilyFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family,
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder,
-            com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>
+        com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder, com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder> 
         internalGetFamilyFieldBuilder() {
       if (familyBuilder_ == null) {
-        familyBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family,
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder,
-                com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>(
-                family_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        familyBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family, com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family.Builder, com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>(
+                family_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         family_ = null;
       }
       return familyBuilder_;
@@ -3087,7 +2626,6 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.InferInternalTypeMetadataResponse)
   private static final com.google.bigtable.v2.InferInternalTypeMetadataResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.InferInternalTypeMetadataResponse();
   }
@@ -3096,27 +2634,27 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<InferInternalTypeMetadataResponse> PARSER =
-      new com.google.protobuf.AbstractParser<InferInternalTypeMetadataResponse>() {
-        @java.lang.Override
-        public InferInternalTypeMetadataResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<InferInternalTypeMetadataResponse>
+      PARSER = new com.google.protobuf.AbstractParser<InferInternalTypeMetadataResponse>() {
+    @java.lang.Override
+    public InferInternalTypeMetadataResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<InferInternalTypeMetadataResponse> parser() {
     return PARSER;
@@ -3131,4 +2669,6 @@ public final class InferInternalTypeMetadataResponse extends com.google.protobuf
   public com.google.bigtable.v2.InferInternalTypeMetadataResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

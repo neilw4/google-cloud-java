@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * RequestLatencyStats provides a measurement of the latency of the request as
  * it interacts with different systems over its lifetime, e.g. how long the
@@ -17,51 +15,44 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.RequestLatencyStats}
  */
 @com.google.protobuf.Generated
-public final class RequestLatencyStats extends com.google.protobuf.GeneratedMessage
-    implements
+public final class RequestLatencyStats extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.RequestLatencyStats)
     RequestLatencyStatsOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "RequestLatencyStats");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "RequestLatencyStats");
   }
-
   // Use RequestLatencyStats.newBuilder() to construct.
   private RequestLatencyStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private RequestLatencyStats() {
+  }
 
-  private RequestLatencyStats() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.RequestStatsProto
-        .internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable
+    return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.RequestLatencyStats.class,
-            com.google.bigtable.v2.RequestLatencyStats.Builder.class);
+            com.google.bigtable.v2.RequestLatencyStats.class, com.google.bigtable.v2.RequestLatencyStats.Builder.class);
   }
 
   private int bitField0_;
   public static final int FRONTEND_SERVER_LATENCY_FIELD_NUMBER = 1;
   private com.google.protobuf.Duration frontendServerLatency_;
-
   /**
-   *
-   *
    * <pre>
    * The latency measured by the frontend server handling this request, from
    * when the request was received, to when this value is sent back in the
@@ -83,17 +74,13 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>.google.protobuf.Duration frontend_server_latency = 1;</code>
-   *
    * @return Whether the frontendServerLatency field is set.
    */
   @java.lang.Override
   public boolean hasFrontendServerLatency() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * The latency measured by the frontend server handling this request, from
    * when the request was received, to when this value is sent back in the
@@ -115,19 +102,13 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>.google.protobuf.Duration frontend_server_latency = 1;</code>
-   *
    * @return The frontendServerLatency.
    */
   @java.lang.Override
   public com.google.protobuf.Duration getFrontendServerLatency() {
-    return frontendServerLatency_ == null
-        ? com.google.protobuf.Duration.getDefaultInstance()
-        : frontendServerLatency_;
+    return frontendServerLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : frontendServerLatency_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The latency measured by the frontend server handling this request, from
    * when the request was received, to when this value is sent back in the
@@ -152,13 +133,10 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
    */
   @java.lang.Override
   public com.google.protobuf.DurationOrBuilder getFrontendServerLatencyOrBuilder() {
-    return frontendServerLatency_ == null
-        ? com.google.protobuf.Duration.getDefaultInstance()
-        : frontendServerLatency_;
+    return frontendServerLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : frontendServerLatency_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -170,7 +148,8 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getFrontendServerLatency());
     }
@@ -184,8 +163,8 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(1, getFrontendServerLatency());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getFrontendServerLatency());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -195,17 +174,17 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.RequestLatencyStats)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.RequestLatencyStats other =
-        (com.google.bigtable.v2.RequestLatencyStats) obj;
+    com.google.bigtable.v2.RequestLatencyStats other = (com.google.bigtable.v2.RequestLatencyStats) obj;
 
     if (hasFrontendServerLatency() != other.hasFrontendServerLatency()) return false;
     if (hasFrontendServerLatency()) {
-      if (!getFrontendServerLatency().equals(other.getFrontendServerLatency())) return false;
+      if (!getFrontendServerLatency()
+          .equals(other.getFrontendServerLatency())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -227,105 +206,99 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
     return hash;
   }
 
-  public static com.google.bigtable.v2.RequestLatencyStats parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.RequestLatencyStats parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.RequestLatencyStats parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.RequestLatencyStats parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RequestLatencyStats parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.RequestLatencyStats prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * RequestLatencyStats provides a measurement of the latency of the request as
    * it interacts with different systems over its lifetime, e.g. how long the
@@ -334,23 +307,21 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
    *
    * Protobuf type {@code google.bigtable.v2.RequestLatencyStats}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RequestLatencyStats)
       com.google.bigtable.v2.RequestLatencyStatsOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_RequestLatencyStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.RequestLatencyStats.class,
-              com.google.bigtable.v2.RequestLatencyStats.Builder.class);
+              com.google.bigtable.v2.RequestLatencyStats.class, com.google.bigtable.v2.RequestLatencyStats.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.RequestLatencyStats.newBuilder()
@@ -358,17 +329,17 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetFrontendServerLatencyFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -382,9 +353,9 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.RequestStatsProto
-          .internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.RequestStatsProto.internal_static_google_bigtable_v2_RequestLatencyStats_descriptor;
     }
 
     @java.lang.Override
@@ -403,11 +374,8 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
 
     @java.lang.Override
     public com.google.bigtable.v2.RequestLatencyStats buildPartial() {
-      com.google.bigtable.v2.RequestLatencyStats result =
-          new com.google.bigtable.v2.RequestLatencyStats(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.RequestLatencyStats result = new com.google.bigtable.v2.RequestLatencyStats(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -416,10 +384,9 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.frontendServerLatency_ =
-            frontendServerLatencyBuilder_ == null
-                ? frontendServerLatency_
-                : frontendServerLatencyBuilder_.build();
+        result.frontendServerLatency_ = frontendServerLatencyBuilder_ == null
+            ? frontendServerLatency_
+            : frontendServerLatencyBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -428,7 +395,7 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.RequestLatencyStats) {
-        return mergeFrom((com.google.bigtable.v2.RequestLatencyStats) other);
+        return mergeFrom((com.google.bigtable.v2.RequestLatencyStats)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -466,20 +433,19 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetFrontendServerLatencyFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetFrontendServerLatencyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -489,19 +455,12 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.protobuf.Duration frontendServerLatency_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
-        frontendServerLatencyBuilder_;
-
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> frontendServerLatencyBuilder_;
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -523,16 +482,12 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration frontend_server_latency = 1;</code>
-     *
      * @return Whether the frontendServerLatency field is set.
      */
     public boolean hasFrontendServerLatency() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -554,22 +509,16 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>.google.protobuf.Duration frontend_server_latency = 1;</code>
-     *
      * @return The frontendServerLatency.
      */
     public com.google.protobuf.Duration getFrontendServerLatency() {
       if (frontendServerLatencyBuilder_ == null) {
-        return frontendServerLatency_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : frontendServerLatency_;
+        return frontendServerLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : frontendServerLatency_;
       } else {
         return frontendServerLatencyBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -605,10 +554,7 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -631,7 +577,8 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
      *
      * <code>.google.protobuf.Duration frontend_server_latency = 1;</code>
      */
-    public Builder setFrontendServerLatency(com.google.protobuf.Duration.Builder builderForValue) {
+    public Builder setFrontendServerLatency(
+        com.google.protobuf.Duration.Builder builderForValue) {
       if (frontendServerLatencyBuilder_ == null) {
         frontendServerLatency_ = builderForValue.build();
       } else {
@@ -641,10 +588,7 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -669,9 +613,9 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
      */
     public Builder mergeFrontendServerLatency(com.google.protobuf.Duration value) {
       if (frontendServerLatencyBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && frontendServerLatency_ != null
-            && frontendServerLatency_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          frontendServerLatency_ != null &&
+          frontendServerLatency_ != com.google.protobuf.Duration.getDefaultInstance()) {
           getFrontendServerLatencyBuilder().mergeFrom(value);
         } else {
           frontendServerLatency_ = value;
@@ -685,10 +629,7 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -721,10 +662,7 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -752,10 +690,7 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       onChanged();
       return internalGetFrontendServerLatencyFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -782,15 +717,11 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
       if (frontendServerLatencyBuilder_ != null) {
         return frontendServerLatencyBuilder_.getMessageOrBuilder();
       } else {
-        return frontendServerLatency_ == null
-            ? com.google.protobuf.Duration.getDefaultInstance()
-            : frontendServerLatency_;
+        return frontendServerLatency_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : frontendServerLatency_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The latency measured by the frontend server handling this request, from
      * when the request was received, to when this value is sent back in the
@@ -814,17 +745,14 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
      * <code>.google.protobuf.Duration frontend_server_latency = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Duration,
-            com.google.protobuf.Duration.Builder,
-            com.google.protobuf.DurationOrBuilder>
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
         internalGetFrontendServerLatencyFieldBuilder() {
       if (frontendServerLatencyBuilder_ == null) {
-        frontendServerLatencyBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Duration,
-                com.google.protobuf.Duration.Builder,
-                com.google.protobuf.DurationOrBuilder>(
-                getFrontendServerLatency(), getParentForChildren(), isClean());
+        frontendServerLatencyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getFrontendServerLatency(),
+                getParentForChildren(),
+                isClean());
         frontendServerLatency_ = null;
       }
       return frontendServerLatencyBuilder_;
@@ -835,7 +763,6 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.RequestLatencyStats)
   private static final com.google.bigtable.v2.RequestLatencyStats DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.RequestLatencyStats();
   }
@@ -844,27 +771,27 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RequestLatencyStats> PARSER =
-      new com.google.protobuf.AbstractParser<RequestLatencyStats>() {
-        @java.lang.Override
-        public RequestLatencyStats parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<RequestLatencyStats>
+      PARSER = new com.google.protobuf.AbstractParser<RequestLatencyStats>() {
+    @java.lang.Override
+    public RequestLatencyStats parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<RequestLatencyStats> parser() {
     return PARSER;
@@ -879,4 +806,6 @@ public final class RequestLatencyStats extends com.google.protobuf.GeneratedMess
   public com.google.bigtable.v2.RequestLatencyStats getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

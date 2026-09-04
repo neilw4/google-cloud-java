@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Restricts the output to cells whose values match the given bitmask.
  * </pre>
@@ -15,52 +13,44 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ValueBitmask}
  */
 @com.google.protobuf.Generated
-public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ValueBitmask extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ValueBitmask)
     ValueBitmaskOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ValueBitmask");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ValueBitmask");
   }
-
   // Use ValueBitmask.newBuilder() to construct.
   private ValueBitmask(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private ValueBitmask() {
     mask_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ValueBitmask_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ValueBitmask_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ValueBitmask_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ValueBitmask_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ValueBitmask.class,
-            com.google.bigtable.v2.ValueBitmask.Builder.class);
+            com.google.bigtable.v2.ValueBitmask.class, com.google.bigtable.v2.ValueBitmask.Builder.class);
   }
 
   public static final int MASK_FIELD_NUMBER = 1;
   private com.google.protobuf.ByteString mask_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * Required. Mask applied to the value.
    * Evaluated as: `(value &amp; mask) == mask`
@@ -69,7 +59,6 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes mask = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-   *
    * @return The mask.
    */
   @java.lang.Override
@@ -78,7 +67,6 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -90,7 +78,8 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!mask_.isEmpty()) {
       output.writeBytes(1, mask_);
     }
@@ -104,7 +93,8 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (!mask_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, mask_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(1, mask_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -114,14 +104,15 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ValueBitmask)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.ValueBitmask other = (com.google.bigtable.v2.ValueBitmask) obj;
 
-    if (!getMask().equals(other.getMask())) return false;
+    if (!getMask()
+        .equals(other.getMask())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -140,136 +131,132 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.ValueBitmask parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ValueBitmask parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.ValueBitmask parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.ValueBitmask parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.ValueBitmask parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ValueBitmask parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ValueBitmask parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ValueBitmask prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Restricts the output to cells whose values match the given bitmask.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ValueBitmask}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ValueBitmask)
       com.google.bigtable.v2.ValueBitmaskOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ValueBitmask_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ValueBitmask_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ValueBitmask_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ValueBitmask_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ValueBitmask.class,
-              com.google.bigtable.v2.ValueBitmask.Builder.class);
+              com.google.bigtable.v2.ValueBitmask.class, com.google.bigtable.v2.ValueBitmask.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ValueBitmask.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -279,9 +266,9 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ValueBitmask_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ValueBitmask_descriptor;
     }
 
     @java.lang.Override
@@ -301,9 +288,7 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.ValueBitmask buildPartial() {
       com.google.bigtable.v2.ValueBitmask result = new com.google.bigtable.v2.ValueBitmask(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -318,7 +303,7 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ValueBitmask) {
-        return mergeFrom((com.google.bigtable.v2.ValueBitmask) other);
+        return mergeFrom((com.google.bigtable.v2.ValueBitmask)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -356,19 +341,17 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                mask_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              mask_ = input.readBytes();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -378,14 +361,10 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.protobuf.ByteString mask_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * Required. Mask applied to the value.
      * Evaluated as: `(value &amp; mask) == mask`
@@ -394,17 +373,13 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes mask = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @return The mask.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getMask() {
       return mask_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. Mask applied to the value.
      * Evaluated as: `(value &amp; mask) == mask`
@@ -413,23 +388,17 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes mask = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @param value The mask to set.
      * @return This builder for chaining.
      */
     public Builder setMask(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       mask_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. Mask applied to the value.
      * Evaluated as: `(value &amp; mask) == mask`
@@ -438,7 +407,6 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes mask = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMask() {
@@ -453,7 +421,6 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ValueBitmask)
   private static final com.google.bigtable.v2.ValueBitmask DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ValueBitmask();
   }
@@ -462,27 +429,27 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ValueBitmask> PARSER =
-      new com.google.protobuf.AbstractParser<ValueBitmask>() {
-        @java.lang.Override
-        public ValueBitmask parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ValueBitmask>
+      PARSER = new com.google.protobuf.AbstractParser<ValueBitmask>() {
+    @java.lang.Override
+    public ValueBitmask parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ValueBitmask> parser() {
     return PARSER;
@@ -497,4 +464,6 @@ public final class ValueBitmask extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ValueBitmask getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

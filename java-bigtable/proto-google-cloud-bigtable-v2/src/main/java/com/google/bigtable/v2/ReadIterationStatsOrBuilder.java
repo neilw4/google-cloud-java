@@ -6,100 +6,76 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ReadIterationStatsOrBuilder
-    extends
+public interface ReadIterationStatsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ReadIterationStats)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The rows seen (scanned) as part of the request. This includes the count of
    * rows returned, as captured below.
    * </pre>
    *
    * <code>int64 rows_seen_count = 1;</code>
-   *
    * @return The rowsSeenCount.
    */
   long getRowsSeenCount();
 
   /**
-   *
-   *
    * <pre>
    * The rows returned as part of the request.
    * </pre>
    *
    * <code>int64 rows_returned_count = 2;</code>
-   *
    * @return The rowsReturnedCount.
    */
   long getRowsReturnedCount();
 
   /**
-   *
-   *
    * <pre>
    * The cells seen (scanned) as part of the request. This includes the count of
    * cells returned, as captured below.
    * </pre>
    *
    * <code>int64 cells_seen_count = 3;</code>
-   *
    * @return The cellsSeenCount.
    */
   long getCellsSeenCount();
 
   /**
-   *
-   *
    * <pre>
    * The cells returned as part of the request.
    * </pre>
    *
    * <code>int64 cells_returned_count = 4;</code>
-   *
    * @return The cellsReturnedCount.
    */
   long getCellsReturnedCount();
 
   /**
-   *
-   *
    * <pre>
    * Statistics about the memory layer for this read.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
-   *
    * @return Whether the memoryLayerStats field is set.
    */
   boolean hasMemoryLayerStats();
-
   /**
-   *
-   *
    * <pre>
    * Statistics about the memory layer for this read.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
-   *
    * @return The memoryLayerStats.
    */
   com.google.bigtable.v2.ReadIterationStats.MemoryLayerStats getMemoryLayerStats();
-
   /**
-   *
-   *
    * <pre>
    * Statistics about the memory layer for this read.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats.MemoryLayerStats memory_layer_stats = 6;</code>
    */
-  com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder
-      getMemoryLayerStatsOrBuilder();
+  com.google.bigtable.v2.ReadIterationStats.MemoryLayerStatsOrBuilder getMemoryLayerStatsOrBuilder();
 }

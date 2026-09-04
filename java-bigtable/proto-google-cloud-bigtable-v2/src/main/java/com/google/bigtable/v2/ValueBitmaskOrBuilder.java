@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ValueBitmaskOrBuilder
-    extends
+public interface ValueBitmaskOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ValueBitmask)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Required. Mask applied to the value.
    * Evaluated as: `(value &amp; mask) == mask`
@@ -22,7 +19,6 @@ public interface ValueBitmaskOrBuilder
    * </pre>
    *
    * <code>bytes mask = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-   *
    * @return The mask.
    */
   com.google.protobuf.ByteString getMask();

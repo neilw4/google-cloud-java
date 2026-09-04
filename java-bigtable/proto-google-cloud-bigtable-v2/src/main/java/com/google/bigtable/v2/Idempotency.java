@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Parameters on mutations where clients want to ensure idempotency (i.e.
  * at-most-once semantics). This is currently only needed for certain aggregate
@@ -17,60 +15,51 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.Idempotency}
  */
 @com.google.protobuf.Generated
-public final class Idempotency extends com.google.protobuf.GeneratedMessage
-    implements
+public final class Idempotency extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.Idempotency)
     IdempotencyOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "Idempotency");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "Idempotency");
   }
-
   // Use Idempotency.newBuilder() to construct.
   private Idempotency(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private Idempotency() {
     token_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_Idempotency_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Idempotency_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_Idempotency_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Idempotency_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.Idempotency.class,
-            com.google.bigtable.v2.Idempotency.Builder.class);
+            com.google.bigtable.v2.Idempotency.class, com.google.bigtable.v2.Idempotency.Builder.class);
   }
 
   private int bitField0_;
   public static final int TOKEN_FIELD_NUMBER = 1;
   private com.google.protobuf.ByteString token_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * Unique token used to identify replays of this mutation.
    * Must be at least 8 bytes long.
    * </pre>
    *
    * <code>bytes token = 1;</code>
-   *
    * @return The token.
    */
   @java.lang.Override
@@ -80,10 +69,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
 
   public static final int START_TIME_FIELD_NUMBER = 2;
   private com.google.protobuf.Timestamp startTime_;
-
   /**
-   *
-   *
    * <pre>
    * Client-assigned timestamp when the mutation's first attempt was sent.
    * Used to reject mutations that arrive after idempotency protection may
@@ -94,17 +80,13 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 2;</code>
-   *
    * @return Whether the startTime field is set.
    */
   @java.lang.Override
   public boolean hasStartTime() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Client-assigned timestamp when the mutation's first attempt was sent.
    * Used to reject mutations that arrive after idempotency protection may
@@ -115,17 +97,13 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 2;</code>
-   *
    * @return The startTime.
    */
   @java.lang.Override
   public com.google.protobuf.Timestamp getStartTime() {
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Client-assigned timestamp when the mutation's first attempt was sent.
    * Used to reject mutations that arrive after idempotency protection may
@@ -143,7 +121,6 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -155,7 +132,8 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!token_.isEmpty()) {
       output.writeBytes(1, token_);
     }
@@ -172,10 +150,12 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (!token_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, token_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(1, token_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getStartTime());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getStartTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -185,17 +165,19 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.Idempotency)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.Idempotency other = (com.google.bigtable.v2.Idempotency) obj;
 
-    if (!getToken().equals(other.getToken())) return false;
+    if (!getToken()
+        .equals(other.getToken())) return false;
     if (hasStartTime() != other.hasStartTime()) return false;
     if (hasStartTime()) {
-      if (!getStartTime().equals(other.getStartTime())) return false;
+      if (!getStartTime()
+          .equals(other.getStartTime())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -219,104 +201,99 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.Idempotency parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.Idempotency parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.Idempotency parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.Idempotency parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.Idempotency parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.Idempotency parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.Idempotency parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.Idempotency prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Parameters on mutations where clients want to ensure idempotency (i.e.
    * at-most-once semantics). This is currently only needed for certain aggregate
@@ -325,23 +302,21 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.Idempotency}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.Idempotency)
       com.google.bigtable.v2.IdempotencyOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_Idempotency_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Idempotency_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_Idempotency_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Idempotency_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.Idempotency.class,
-              com.google.bigtable.v2.Idempotency.Builder.class);
+              com.google.bigtable.v2.Idempotency.class, com.google.bigtable.v2.Idempotency.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.Idempotency.newBuilder()
@@ -349,17 +324,17 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetStartTimeFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -374,9 +349,9 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_Idempotency_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_Idempotency_descriptor;
     }
 
     @java.lang.Override
@@ -396,9 +371,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.Idempotency buildPartial() {
       com.google.bigtable.v2.Idempotency result = new com.google.bigtable.v2.Idempotency(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -410,7 +383,9 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.startTime_ = startTimeBuilder_ == null ? startTime_ : startTimeBuilder_.build();
+        result.startTime_ = startTimeBuilder_ == null
+            ? startTime_
+            : startTimeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -419,7 +394,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.Idempotency) {
-        return mergeFrom((com.google.bigtable.v2.Idempotency) other);
+        return mergeFrom((com.google.bigtable.v2.Idempotency)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -460,26 +435,24 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                token_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetStartTimeFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              token_ = input.readBytes();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetStartTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -489,61 +462,46 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.protobuf.ByteString token_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * Unique token used to identify replays of this mutation.
      * Must be at least 8 bytes long.
      * </pre>
      *
      * <code>bytes token = 1;</code>
-     *
      * @return The token.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getToken() {
       return token_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Unique token used to identify replays of this mutation.
      * Must be at least 8 bytes long.
      * </pre>
      *
      * <code>bytes token = 1;</code>
-     *
      * @param value The token to set.
      * @return This builder for chaining.
      */
     public Builder setToken(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       token_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Unique token used to identify replays of this mutation.
      * Must be at least 8 bytes long.
      * </pre>
      *
      * <code>bytes token = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearToken() {
@@ -555,14 +513,8 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
 
     private com.google.protobuf.Timestamp startTime_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp,
-            com.google.protobuf.Timestamp.Builder,
-            com.google.protobuf.TimestampOrBuilder>
-        startTimeBuilder_;
-
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -573,16 +525,12 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 2;</code>
-     *
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -593,7 +541,6 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 2;</code>
-     *
      * @return The startTime.
      */
     public com.google.protobuf.Timestamp getStartTime() {
@@ -603,10 +550,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
         return startTimeBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -631,10 +575,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -646,7 +587,8 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.protobuf.Timestamp start_time = 2;</code>
      */
-    public Builder setStartTime(com.google.protobuf.Timestamp.Builder builderForValue) {
+    public Builder setStartTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
       if (startTimeBuilder_ == null) {
         startTime_ = builderForValue.build();
       } else {
@@ -656,10 +598,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -673,9 +612,9 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && startTime_ != null
-            && startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartTimeBuilder().mergeFrom(value);
         } else {
           startTime_ = value;
@@ -689,10 +628,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -714,10 +650,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -734,10 +667,7 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       onChanged();
       return internalGetStartTimeFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -753,13 +683,11 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
       if (startTimeBuilder_ != null) {
         return startTimeBuilder_.getMessageOrBuilder();
       } else {
-        return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        return startTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Client-assigned timestamp when the mutation's first attempt was sent.
      * Used to reject mutations that arrive after idempotency protection may
@@ -772,17 +700,14 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
      * <code>.google.protobuf.Timestamp start_time = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp,
-            com.google.protobuf.Timestamp.Builder,
-            com.google.protobuf.TimestampOrBuilder>
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
         internalGetStartTimeFieldBuilder() {
       if (startTimeBuilder_ == null) {
-        startTimeBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.protobuf.Timestamp,
-                com.google.protobuf.Timestamp.Builder,
-                com.google.protobuf.TimestampOrBuilder>(
-                getStartTime(), getParentForChildren(), isClean());
+        startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getStartTime(),
+                getParentForChildren(),
+                isClean());
         startTime_ = null;
       }
       return startTimeBuilder_;
@@ -793,7 +718,6 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.Idempotency)
   private static final com.google.bigtable.v2.Idempotency DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.Idempotency();
   }
@@ -802,27 +726,27 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Idempotency> PARSER =
-      new com.google.protobuf.AbstractParser<Idempotency>() {
-        @java.lang.Override
-        public Idempotency parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<Idempotency>
+      PARSER = new com.google.protobuf.AbstractParser<Idempotency>() {
+    @java.lang.Override
+    public Idempotency parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<Idempotency> parser() {
     return PARSER;
@@ -837,4 +761,6 @@ public final class Idempotency extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.Idempotency getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

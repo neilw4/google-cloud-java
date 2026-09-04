@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * See GetClientConfiguration() RPC in bigtable.proto. Internal usage only.
  * </pre>
@@ -15,55 +13,46 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.GetClientConfigurationRequest}
  */
 @com.google.protobuf.Generated
-public final class GetClientConfigurationRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class GetClientConfigurationRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.GetClientConfigurationRequest)
     GetClientConfigurationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "GetClientConfigurationRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "GetClientConfigurationRequest");
   }
-
   // Use GetClientConfigurationRequest.newBuilder() to construct.
   private GetClientConfigurationRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private GetClientConfigurationRequest() {
     instanceName_ = "";
     appProfileId_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_GetClientConfigurationRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GetClientConfigurationRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_GetClientConfigurationRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GetClientConfigurationRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.GetClientConfigurationRequest.class,
-            com.google.bigtable.v2.GetClientConfigurationRequest.Builder.class);
+            com.google.bigtable.v2.GetClientConfigurationRequest.class, com.google.bigtable.v2.GetClientConfigurationRequest.Builder.class);
   }
 
   public static final int INSTANCE_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object instanceName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance for which the client will target
    * with Data API requests.
@@ -71,10 +60,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
    * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The instanceName.
    */
   @java.lang.Override
@@ -83,16 +69,14 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       instanceName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance for which the client will target
    * with Data API requests.
@@ -100,18 +84,17 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
    * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for instanceName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getInstanceNameBytes() {
+  public com.google.protobuf.ByteString
+      getInstanceNameBytes() {
     java.lang.Object ref = instanceName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       instanceName_ = b;
       return b;
     } else {
@@ -120,13 +103,9 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
   }
 
   public static final int APP_PROFILE_ID_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object appProfileId_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. The name of the AppProfile which will be used by the client when
    * sending requests in the Data API.
@@ -135,7 +114,6 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The appProfileId.
    */
   @java.lang.Override
@@ -144,16 +122,14 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       appProfileId_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. The name of the AppProfile which will be used by the client when
    * sending requests in the Data API.
@@ -162,15 +138,16 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for appProfileId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAppProfileIdBytes() {
+  public com.google.protobuf.ByteString
+      getAppProfileIdBytes() {
     java.lang.Object ref = appProfileId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       appProfileId_ = b;
       return b;
     } else {
@@ -179,7 +156,6 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -191,7 +167,8 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(instanceName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, instanceName_);
     }
@@ -221,16 +198,17 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.GetClientConfigurationRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.GetClientConfigurationRequest other =
-        (com.google.bigtable.v2.GetClientConfigurationRequest) obj;
+    com.google.bigtable.v2.GetClientConfigurationRequest other = (com.google.bigtable.v2.GetClientConfigurationRequest) obj;
 
-    if (!getInstanceName().equals(other.getInstanceName())) return false;
-    if (!getAppProfileId().equals(other.getAppProfileId())) return false;
+    if (!getInstanceName()
+        .equals(other.getInstanceName())) return false;
+    if (!getAppProfileId()
+        .equals(other.getAppProfileId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -252,136 +230,131 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
   }
 
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.GetClientConfigurationRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.GetClientConfigurationRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.GetClientConfigurationRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.GetClientConfigurationRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * See GetClientConfiguration() RPC in bigtable.proto. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.GetClientConfigurationRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.GetClientConfigurationRequest)
       com.google.bigtable.v2.GetClientConfigurationRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_GetClientConfigurationRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GetClientConfigurationRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_GetClientConfigurationRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GetClientConfigurationRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.GetClientConfigurationRequest.class,
-              com.google.bigtable.v2.GetClientConfigurationRequest.Builder.class);
+              com.google.bigtable.v2.GetClientConfigurationRequest.class, com.google.bigtable.v2.GetClientConfigurationRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.GetClientConfigurationRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -392,9 +365,9 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_GetClientConfigurationRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GetClientConfigurationRequest_descriptor;
     }
 
     @java.lang.Override
@@ -413,11 +386,8 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
 
     @java.lang.Override
     public com.google.bigtable.v2.GetClientConfigurationRequest buildPartial() {
-      com.google.bigtable.v2.GetClientConfigurationRequest result =
-          new com.google.bigtable.v2.GetClientConfigurationRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.GetClientConfigurationRequest result = new com.google.bigtable.v2.GetClientConfigurationRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -435,7 +405,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.GetClientConfigurationRequest) {
-        return mergeFrom((com.google.bigtable.v2.GetClientConfigurationRequest) other);
+        return mergeFrom((com.google.bigtable.v2.GetClientConfigurationRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -443,8 +413,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.GetClientConfigurationRequest other) {
-      if (other == com.google.bigtable.v2.GetClientConfigurationRequest.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.GetClientConfigurationRequest.getDefaultInstance()) return this;
       if (!other.getInstanceName().isEmpty()) {
         instanceName_ = other.instanceName_;
         bitField0_ |= 0x00000001;
@@ -481,25 +450,22 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                instanceName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                appProfileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              instanceName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              appProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -509,14 +475,10 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object instanceName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance for which the client will target
      * with Data API requests.
@@ -524,16 +486,14 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The instanceName.
      */
     public java.lang.String getInstanceName() {
       java.lang.Object ref = instanceName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         instanceName_ = s;
         return s;
@@ -541,10 +501,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance for which the client will target
      * with Data API requests.
@@ -552,27 +509,23 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for instanceName.
      */
-    public com.google.protobuf.ByteString getInstanceNameBytes() {
+    public com.google.protobuf.ByteString
+        getInstanceNameBytes() {
       java.lang.Object ref = instanceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         instanceName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance for which the client will target
      * with Data API requests.
@@ -580,26 +533,19 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The instanceName to set.
      * @return This builder for chaining.
      */
-    public Builder setInstanceName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setInstanceName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       instanceName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance for which the client will target
      * with Data API requests.
@@ -607,10 +553,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearInstanceName() {
@@ -619,10 +562,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Required. The unique name of the instance for which the client will target
      * with Data API requests.
@@ -630,17 +570,13 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
      * </pre>
      *
-     * <code>
-     * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-     * </code>
-     *
+     * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for instanceName to set.
      * @return This builder for chaining.
      */
-    public Builder setInstanceNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setInstanceNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       instanceName_ = value;
       bitField0_ |= 0x00000001;
@@ -649,10 +585,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     }
 
     private java.lang.Object appProfileId_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. The name of the AppProfile which will be used by the client when
      * sending requests in the Data API.
@@ -661,13 +594,13 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The appProfileId.
      */
     public java.lang.String getAppProfileId() {
       java.lang.Object ref = appProfileId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appProfileId_ = s;
         return s;
@@ -675,10 +608,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The name of the AppProfile which will be used by the client when
      * sending requests in the Data API.
@@ -687,24 +617,22 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The bytes for appProfileId.
      */
-    public com.google.protobuf.ByteString getAppProfileIdBytes() {
+    public com.google.protobuf.ByteString
+        getAppProfileIdBytes() {
       java.lang.Object ref = appProfileId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         appProfileId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The name of the AppProfile which will be used by the client when
      * sending requests in the Data API.
@@ -713,23 +641,18 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The name of the AppProfile which will be used by the client when
      * sending requests in the Data API.
@@ -738,7 +661,6 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppProfileId() {
@@ -747,10 +669,7 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. The name of the AppProfile which will be used by the client when
      * sending requests in the Data API.
@@ -759,14 +678,12 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
      * </pre>
      *
      * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The bytes for appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
@@ -779,7 +696,6 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.GetClientConfigurationRequest)
   private static final com.google.bigtable.v2.GetClientConfigurationRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.GetClientConfigurationRequest();
   }
@@ -788,27 +704,27 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetClientConfigurationRequest> PARSER =
-      new com.google.protobuf.AbstractParser<GetClientConfigurationRequest>() {
-        @java.lang.Override
-        public GetClientConfigurationRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<GetClientConfigurationRequest>
+      PARSER = new com.google.protobuf.AbstractParser<GetClientConfigurationRequest>() {
+    @java.lang.Override
+    public GetClientConfigurationRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<GetClientConfigurationRequest> parser() {
     return PARSER;
@@ -823,4 +739,6 @@ public final class GetClientConfigurationRequest extends com.google.protobuf.Gen
   public com.google.bigtable.v2.GetClientConfigurationRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

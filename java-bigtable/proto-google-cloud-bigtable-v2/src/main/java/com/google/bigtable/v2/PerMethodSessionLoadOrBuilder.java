@@ -6,25 +6,20 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface PerMethodSessionLoadOrBuilder
-    extends
+public interface PerMethodSessionLoadOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.PerMethodSessionLoad)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
-  java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry> getEntriesList();
-
+  java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry> 
+      getEntriesList();
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -32,10 +27,7 @@ public interface PerMethodSessionLoadOrBuilder
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
   com.google.bigtable.v2.PerMethodSessionLoad.Entry getEntries(int index);
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -43,27 +35,22 @@ public interface PerMethodSessionLoadOrBuilder
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
   int getEntriesCount();
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder> 
       getEntriesOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
-  com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder getEntriesOrBuilder(int index);
+  com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder getEntriesOrBuilder(
+      int index);
 }

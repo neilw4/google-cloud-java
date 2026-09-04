@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Feature flags supported or enabled by a client.
  * This is intended to be sent as part of request metadata to assure the server
@@ -22,57 +20,49 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.FeatureFlags}
  */
 @com.google.protobuf.Generated
-public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
-    implements
+public final class FeatureFlags extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.FeatureFlags)
     FeatureFlagsOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "FeatureFlags");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "FeatureFlags");
   }
-
   // Use FeatureFlags.newBuilder() to construct.
   private FeatureFlags(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private FeatureFlags() {
+  }
 
-  private FeatureFlags() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.FeatureFlagsProto
-        .internal_static_google_bigtable_v2_FeatureFlags_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.FeatureFlagsProto.internal_static_google_bigtable_v2_FeatureFlags_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.FeatureFlagsProto
-        .internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable
+    return com.google.bigtable.v2.FeatureFlagsProto.internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.FeatureFlags.class,
-            com.google.bigtable.v2.FeatureFlags.Builder.class);
+            com.google.bigtable.v2.FeatureFlags.class, com.google.bigtable.v2.FeatureFlags.Builder.class);
   }
 
   public static final int REVERSE_SCANS_FIELD_NUMBER = 1;
   private boolean reverseScans_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client supports reverse scans. The server will
    * reject ReadRowsRequests with the reverse bit set when this is absent.
    * </pre>
    *
    * <code>bool reverse_scans = 1;</code>
-   *
    * @return The reverseScans.
    */
   @java.lang.Override
@@ -82,10 +72,8 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int MUTATE_ROWS_SERVER_STATS_CPU_FIELD_NUMBER = 2;
   private boolean mutateRowsServerStatsCpu_ = false;
-
   /**
    * <code>bool mutate_rows_server_stats_cpu = 2;</code>
-   *
    * @return The mutateRowsServerStatsCpu.
    */
   @java.lang.Override
@@ -95,10 +83,7 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int MUTATE_ROWS_RATE_LIMIT_FIELD_NUMBER = 3;
   private boolean mutateRowsRateLimit_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client enables batch write flow control by
    * requesting RateLimitInfo from MutateRowsResponse. Due to technical reasons,
@@ -106,7 +91,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bool mutate_rows_rate_limit = 3;</code>
-   *
    * @return The mutateRowsRateLimit.
    */
   @java.lang.Override
@@ -116,10 +100,7 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int MUTATE_ROWS_RATE_LIMIT2_FIELD_NUMBER = 5;
   private boolean mutateRowsRateLimit2_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client enables batch write flow control by
    * requesting RateLimitInfo from MutateRowsResponse. With partial retries
@@ -127,7 +108,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bool mutate_rows_rate_limit2 = 5;</code>
-   *
    * @return The mutateRowsRateLimit2.
    */
   @java.lang.Override
@@ -137,17 +117,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int LAST_SCANNED_ROW_RESPONSES_FIELD_NUMBER = 4;
   private boolean lastScannedRowResponses_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client supports the last_scanned_row field
    * in ReadRowsResponse for long-running scans.
    * </pre>
    *
    * <code>bool last_scanned_row_responses = 4;</code>
-   *
    * @return The lastScannedRowResponses.
    */
   @java.lang.Override
@@ -157,17 +133,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int ROUTING_COOKIE_FIELD_NUMBER = 6;
   private boolean routingCookie_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client supports using encoded routing cookie
    * strings to retry requests with.
    * </pre>
    *
    * <code>bool routing_cookie = 6;</code>
-   *
    * @return The routingCookie.
    */
   @java.lang.Override
@@ -177,17 +149,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int RETRY_INFO_FIELD_NUMBER = 7;
   private boolean retryInfo_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client supports using retry info back off
    * durations to retry requests with.
    * </pre>
    *
    * <code>bool retry_info = 7;</code>
-   *
    * @return The retryInfo.
    */
   @java.lang.Override
@@ -197,16 +165,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int CLIENT_SIDE_METRICS_ENABLED_FIELD_NUMBER = 8;
   private boolean clientSideMetricsEnabled_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client has client side metrics enabled.
    * </pre>
    *
    * <code>bool client_side_metrics_enabled = 8;</code>
-   *
    * @return The clientSideMetricsEnabled.
    */
   @java.lang.Override
@@ -216,16 +180,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int TRAFFIC_DIRECTOR_ENABLED_FIELD_NUMBER = 9;
   private boolean trafficDirectorEnabled_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client using Traffic Director endpoint.
    * </pre>
    *
    * <code>bool traffic_director_enabled = 9;</code>
-   *
    * @return The trafficDirectorEnabled.
    */
   @java.lang.Override
@@ -235,16 +195,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int DIRECT_ACCESS_REQUESTED_FIELD_NUMBER = 10;
   private boolean directAccessRequested_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Notify the server that the client explicitly opted in for Direct Access.
    * </pre>
    *
    * <code>bool direct_access_requested = 10;</code>
-   *
    * @return The directAccessRequested.
    */
   @java.lang.Override
@@ -254,16 +210,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int PEER_INFO_FIELD_NUMBER = 11;
   private boolean peerInfo_ = false;
-
   /**
-   *
-   *
    * <pre>
    * If the client can support using BigtablePeerInfo.
    * </pre>
    *
    * <code>bool peer_info = 11;</code>
-   *
    * @return The peerInfo.
    */
   @java.lang.Override
@@ -273,16 +225,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int SESSIONS_COMPATIBLE_FIELD_NUMBER = 12;
   private boolean sessionsCompatible_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Indicates whether the client supports the Bigtable Sessions API.
    * </pre>
    *
    * <code>bool sessions_compatible = 12;</code>
-   *
    * @return The sessionsCompatible.
    */
   @java.lang.Override
@@ -292,16 +240,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int SESSIONS_REQUIRED_FIELD_NUMBER = 13;
   private boolean sessionsRequired_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Internal flag to force sessions for internal projects.
    * </pre>
    *
    * <code>bool sessions_required = 13;</code>
-   *
    * @return The sessionsRequired.
    */
   @java.lang.Override
@@ -311,16 +255,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int MICROSECOND_TIMESTAMP_FIELD_NUMBER = 14;
   private boolean microsecondTimestamp_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Indicates whether the client supports microsecond precision timestamps.
    * </pre>
    *
    * <code>bool microsecond_timestamp = 14;</code>
-   *
    * @return The microsecondTimestamp.
    */
   @java.lang.Override
@@ -330,16 +270,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   public static final int PEER_LOAD_INFO_FIELD_NUMBER = 15;
   private boolean peerLoadInfo_ = false;
-
   /**
-   *
-   *
    * <pre>
    * Indicates whether the client can ingest peer load info from the server.
    * </pre>
    *
    * <code>bool peer_load_info = 15;</code>
-   *
    * @return The peerLoadInfo.
    */
   @java.lang.Override
@@ -348,7 +284,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -360,7 +295,8 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (reverseScans_ != false) {
       output.writeBool(1, reverseScans_);
     }
@@ -416,49 +352,64 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (reverseScans_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(1, reverseScans_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, reverseScans_);
     }
     if (mutateRowsServerStatsCpu_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(2, mutateRowsServerStatsCpu_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, mutateRowsServerStatsCpu_);
     }
     if (mutateRowsRateLimit_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(3, mutateRowsRateLimit_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, mutateRowsRateLimit_);
     }
     if (lastScannedRowResponses_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, lastScannedRowResponses_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, lastScannedRowResponses_);
     }
     if (mutateRowsRateLimit2_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, mutateRowsRateLimit2_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, mutateRowsRateLimit2_);
     }
     if (routingCookie_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(6, routingCookie_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, routingCookie_);
     }
     if (retryInfo_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(7, retryInfo_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, retryInfo_);
     }
     if (clientSideMetricsEnabled_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(8, clientSideMetricsEnabled_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, clientSideMetricsEnabled_);
     }
     if (trafficDirectorEnabled_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(9, trafficDirectorEnabled_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(9, trafficDirectorEnabled_);
     }
     if (directAccessRequested_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(10, directAccessRequested_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, directAccessRequested_);
     }
     if (peerInfo_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(11, peerInfo_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, peerInfo_);
     }
     if (sessionsCompatible_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(12, sessionsCompatible_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(12, sessionsCompatible_);
     }
     if (sessionsRequired_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(13, sessionsRequired_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(13, sessionsRequired_);
     }
     if (microsecondTimestamp_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(14, microsecondTimestamp_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(14, microsecondTimestamp_);
     }
     if (peerLoadInfo_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(15, peerLoadInfo_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(15, peerLoadInfo_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -468,28 +419,43 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.FeatureFlags)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.FeatureFlags other = (com.google.bigtable.v2.FeatureFlags) obj;
 
-    if (getReverseScans() != other.getReverseScans()) return false;
-    if (getMutateRowsServerStatsCpu() != other.getMutateRowsServerStatsCpu()) return false;
-    if (getMutateRowsRateLimit() != other.getMutateRowsRateLimit()) return false;
-    if (getMutateRowsRateLimit2() != other.getMutateRowsRateLimit2()) return false;
-    if (getLastScannedRowResponses() != other.getLastScannedRowResponses()) return false;
-    if (getRoutingCookie() != other.getRoutingCookie()) return false;
-    if (getRetryInfo() != other.getRetryInfo()) return false;
-    if (getClientSideMetricsEnabled() != other.getClientSideMetricsEnabled()) return false;
-    if (getTrafficDirectorEnabled() != other.getTrafficDirectorEnabled()) return false;
-    if (getDirectAccessRequested() != other.getDirectAccessRequested()) return false;
-    if (getPeerInfo() != other.getPeerInfo()) return false;
-    if (getSessionsCompatible() != other.getSessionsCompatible()) return false;
-    if (getSessionsRequired() != other.getSessionsRequired()) return false;
-    if (getMicrosecondTimestamp() != other.getMicrosecondTimestamp()) return false;
-    if (getPeerLoadInfo() != other.getPeerLoadInfo()) return false;
+    if (getReverseScans()
+        != other.getReverseScans()) return false;
+    if (getMutateRowsServerStatsCpu()
+        != other.getMutateRowsServerStatsCpu()) return false;
+    if (getMutateRowsRateLimit()
+        != other.getMutateRowsRateLimit()) return false;
+    if (getMutateRowsRateLimit2()
+        != other.getMutateRowsRateLimit2()) return false;
+    if (getLastScannedRowResponses()
+        != other.getLastScannedRowResponses()) return false;
+    if (getRoutingCookie()
+        != other.getRoutingCookie()) return false;
+    if (getRetryInfo()
+        != other.getRetryInfo()) return false;
+    if (getClientSideMetricsEnabled()
+        != other.getClientSideMetricsEnabled()) return false;
+    if (getTrafficDirectorEnabled()
+        != other.getTrafficDirectorEnabled()) return false;
+    if (getDirectAccessRequested()
+        != other.getDirectAccessRequested()) return false;
+    if (getPeerInfo()
+        != other.getPeerInfo()) return false;
+    if (getSessionsCompatible()
+        != other.getSessionsCompatible()) return false;
+    if (getSessionsRequired()
+        != other.getSessionsRequired()) return false;
+    if (getMicrosecondTimestamp()
+        != other.getMicrosecondTimestamp()) return false;
+    if (getPeerLoadInfo()
+        != other.getPeerLoadInfo()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -502,138 +468,148 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + REVERSE_SCANS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getReverseScans());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getReverseScans());
     hash = (37 * hash) + MUTATE_ROWS_SERVER_STATS_CPU_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getMutateRowsServerStatsCpu());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMutateRowsServerStatsCpu());
     hash = (37 * hash) + MUTATE_ROWS_RATE_LIMIT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getMutateRowsRateLimit());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMutateRowsRateLimit());
     hash = (37 * hash) + MUTATE_ROWS_RATE_LIMIT2_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getMutateRowsRateLimit2());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMutateRowsRateLimit2());
     hash = (37 * hash) + LAST_SCANNED_ROW_RESPONSES_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getLastScannedRowResponses());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getLastScannedRowResponses());
     hash = (37 * hash) + ROUTING_COOKIE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getRoutingCookie());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getRoutingCookie());
     hash = (37 * hash) + RETRY_INFO_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getRetryInfo());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getRetryInfo());
     hash = (37 * hash) + CLIENT_SIDE_METRICS_ENABLED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getClientSideMetricsEnabled());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getClientSideMetricsEnabled());
     hash = (37 * hash) + TRAFFIC_DIRECTOR_ENABLED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getTrafficDirectorEnabled());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getTrafficDirectorEnabled());
     hash = (37 * hash) + DIRECT_ACCESS_REQUESTED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getDirectAccessRequested());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDirectAccessRequested());
     hash = (37 * hash) + PEER_INFO_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getPeerInfo());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPeerInfo());
     hash = (37 * hash) + SESSIONS_COMPATIBLE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSessionsCompatible());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSessionsCompatible());
     hash = (37 * hash) + SESSIONS_REQUIRED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSessionsRequired());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSessionsRequired());
     hash = (37 * hash) + MICROSECOND_TIMESTAMP_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getMicrosecondTimestamp());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMicrosecondTimestamp());
     hash = (37 * hash) + PEER_LOAD_INFO_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getPeerLoadInfo());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPeerLoadInfo());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.bigtable.v2.FeatureFlags parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.FeatureFlags parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.FeatureFlags parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.FeatureFlags parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.FeatureFlags parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.FeatureFlags parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.FeatureFlags parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.FeatureFlags prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Feature flags supported or enabled by a client.
    * This is intended to be sent as part of request metadata to assure the server
@@ -647,32 +623,33 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.FeatureFlags}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.FeatureFlags)
       com.google.bigtable.v2.FeatureFlagsOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.FeatureFlagsProto
-          .internal_static_google_bigtable_v2_FeatureFlags_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.FeatureFlagsProto.internal_static_google_bigtable_v2_FeatureFlags_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.FeatureFlagsProto
-          .internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable
+      return com.google.bigtable.v2.FeatureFlagsProto.internal_static_google_bigtable_v2_FeatureFlags_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.FeatureFlags.class,
-              com.google.bigtable.v2.FeatureFlags.Builder.class);
+              com.google.bigtable.v2.FeatureFlags.class, com.google.bigtable.v2.FeatureFlags.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.FeatureFlags.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -696,9 +673,9 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.FeatureFlagsProto
-          .internal_static_google_bigtable_v2_FeatureFlags_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.FeatureFlagsProto.internal_static_google_bigtable_v2_FeatureFlags_descriptor;
     }
 
     @java.lang.Override
@@ -718,9 +695,7 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.FeatureFlags buildPartial() {
       com.google.bigtable.v2.FeatureFlags result = new com.google.bigtable.v2.FeatureFlags(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -777,7 +752,7 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.FeatureFlags) {
-        return mergeFrom((com.google.bigtable.v2.FeatureFlags) other);
+        return mergeFrom((com.google.bigtable.v2.FeatureFlags)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -857,103 +832,87 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                reverseScans_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 16:
-              {
-                mutateRowsServerStatsCpu_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-            case 24:
-              {
-                mutateRowsRateLimit_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            case 32:
-              {
-                lastScannedRowResponses_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 32
-            case 40:
-              {
-                mutateRowsRateLimit2_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 40
-            case 48:
-              {
-                routingCookie_ = input.readBool();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 48
-            case 56:
-              {
-                retryInfo_ = input.readBool();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 56
-            case 64:
-              {
-                clientSideMetricsEnabled_ = input.readBool();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 64
-            case 72:
-              {
-                trafficDirectorEnabled_ = input.readBool();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 72
-            case 80:
-              {
-                directAccessRequested_ = input.readBool();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 80
-            case 88:
-              {
-                peerInfo_ = input.readBool();
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 88
-            case 96:
-              {
-                sessionsCompatible_ = input.readBool();
-                bitField0_ |= 0x00000800;
-                break;
-              } // case 96
-            case 104:
-              {
-                sessionsRequired_ = input.readBool();
-                bitField0_ |= 0x00001000;
-                break;
-              } // case 104
-            case 112:
-              {
-                microsecondTimestamp_ = input.readBool();
-                bitField0_ |= 0x00002000;
-                break;
-              } // case 112
-            case 120:
-              {
-                peerLoadInfo_ = input.readBool();
-                bitField0_ |= 0x00004000;
-                break;
-              } // case 120
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              reverseScans_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              mutateRowsServerStatsCpu_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              mutateRowsRateLimit_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              lastScannedRowResponses_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 32
+            case 40: {
+              mutateRowsRateLimit2_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
+            case 48: {
+              routingCookie_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              retryInfo_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              clientSideMetricsEnabled_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              trafficDirectorEnabled_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              directAccessRequested_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              peerInfo_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 96: {
+              sessionsCompatible_ = input.readBool();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            case 104: {
+              sessionsRequired_ = input.readBool();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              microsecondTimestamp_ = input.readBool();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
+            case 120: {
+              peerLoadInfo_ = input.readBool();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 120
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -963,38 +922,29 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private boolean reverseScans_;
-
+    private boolean reverseScans_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports reverse scans. The server will
      * reject ReadRowsRequests with the reverse bit set when this is absent.
      * </pre>
      *
      * <code>bool reverse_scans = 1;</code>
-     *
      * @return The reverseScans.
      */
     @java.lang.Override
     public boolean getReverseScans() {
       return reverseScans_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports reverse scans. The server will
      * reject ReadRowsRequests with the reverse bit set when this is absent.
      * </pre>
      *
      * <code>bool reverse_scans = 1;</code>
-     *
      * @param value The reverseScans to set.
      * @return This builder for chaining.
      */
@@ -1005,17 +955,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports reverse scans. The server will
      * reject ReadRowsRequests with the reverse bit set when this is absent.
      * </pre>
      *
      * <code>bool reverse_scans = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearReverseScans() {
@@ -1025,21 +971,17 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean mutateRowsServerStatsCpu_;
-
+    private boolean mutateRowsServerStatsCpu_ ;
     /**
      * <code>bool mutate_rows_server_stats_cpu = 2;</code>
-     *
      * @return The mutateRowsServerStatsCpu.
      */
     @java.lang.Override
     public boolean getMutateRowsServerStatsCpu() {
       return mutateRowsServerStatsCpu_;
     }
-
     /**
      * <code>bool mutate_rows_server_stats_cpu = 2;</code>
-     *
      * @param value The mutateRowsServerStatsCpu to set.
      * @return This builder for chaining.
      */
@@ -1050,10 +992,8 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
      * <code>bool mutate_rows_server_stats_cpu = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMutateRowsServerStatsCpu() {
@@ -1063,11 +1003,8 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean mutateRowsRateLimit_;
-
+    private boolean mutateRowsRateLimit_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client enables batch write flow control by
      * requesting RateLimitInfo from MutateRowsResponse. Due to technical reasons,
@@ -1075,17 +1012,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool mutate_rows_rate_limit = 3;</code>
-     *
      * @return The mutateRowsRateLimit.
      */
     @java.lang.Override
     public boolean getMutateRowsRateLimit() {
       return mutateRowsRateLimit_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client enables batch write flow control by
      * requesting RateLimitInfo from MutateRowsResponse. Due to technical reasons,
@@ -1093,7 +1026,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool mutate_rows_rate_limit = 3;</code>
-     *
      * @param value The mutateRowsRateLimit to set.
      * @return This builder for chaining.
      */
@@ -1104,10 +1036,7 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client enables batch write flow control by
      * requesting RateLimitInfo from MutateRowsResponse. Due to technical reasons,
@@ -1115,7 +1044,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool mutate_rows_rate_limit = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMutateRowsRateLimit() {
@@ -1125,11 +1053,8 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean mutateRowsRateLimit2_;
-
+    private boolean mutateRowsRateLimit2_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client enables batch write flow control by
      * requesting RateLimitInfo from MutateRowsResponse. With partial retries
@@ -1137,17 +1062,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool mutate_rows_rate_limit2 = 5;</code>
-     *
      * @return The mutateRowsRateLimit2.
      */
     @java.lang.Override
     public boolean getMutateRowsRateLimit2() {
       return mutateRowsRateLimit2_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client enables batch write flow control by
      * requesting RateLimitInfo from MutateRowsResponse. With partial retries
@@ -1155,7 +1076,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool mutate_rows_rate_limit2 = 5;</code>
-     *
      * @param value The mutateRowsRateLimit2 to set.
      * @return This builder for chaining.
      */
@@ -1166,10 +1086,7 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client enables batch write flow control by
      * requesting RateLimitInfo from MutateRowsResponse. With partial retries
@@ -1177,7 +1094,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool mutate_rows_rate_limit2 = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMutateRowsRateLimit2() {
@@ -1187,35 +1103,27 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean lastScannedRowResponses_;
-
+    private boolean lastScannedRowResponses_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports the last_scanned_row field
      * in ReadRowsResponse for long-running scans.
      * </pre>
      *
      * <code>bool last_scanned_row_responses = 4;</code>
-     *
      * @return The lastScannedRowResponses.
      */
     @java.lang.Override
     public boolean getLastScannedRowResponses() {
       return lastScannedRowResponses_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports the last_scanned_row field
      * in ReadRowsResponse for long-running scans.
      * </pre>
      *
      * <code>bool last_scanned_row_responses = 4;</code>
-     *
      * @param value The lastScannedRowResponses to set.
      * @return This builder for chaining.
      */
@@ -1226,17 +1134,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports the last_scanned_row field
      * in ReadRowsResponse for long-running scans.
      * </pre>
      *
      * <code>bool last_scanned_row_responses = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearLastScannedRowResponses() {
@@ -1246,35 +1150,27 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean routingCookie_;
-
+    private boolean routingCookie_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports using encoded routing cookie
      * strings to retry requests with.
      * </pre>
      *
      * <code>bool routing_cookie = 6;</code>
-     *
      * @return The routingCookie.
      */
     @java.lang.Override
     public boolean getRoutingCookie() {
       return routingCookie_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports using encoded routing cookie
      * strings to retry requests with.
      * </pre>
      *
      * <code>bool routing_cookie = 6;</code>
-     *
      * @param value The routingCookie to set.
      * @return This builder for chaining.
      */
@@ -1285,17 +1181,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports using encoded routing cookie
      * strings to retry requests with.
      * </pre>
      *
      * <code>bool routing_cookie = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRoutingCookie() {
@@ -1305,35 +1197,27 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean retryInfo_;
-
+    private boolean retryInfo_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports using retry info back off
      * durations to retry requests with.
      * </pre>
      *
      * <code>bool retry_info = 7;</code>
-     *
      * @return The retryInfo.
      */
     @java.lang.Override
     public boolean getRetryInfo() {
       return retryInfo_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports using retry info back off
      * durations to retry requests with.
      * </pre>
      *
      * <code>bool retry_info = 7;</code>
-     *
      * @param value The retryInfo to set.
      * @return This builder for chaining.
      */
@@ -1344,17 +1228,13 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client supports using retry info back off
      * durations to retry requests with.
      * </pre>
      *
      * <code>bool retry_info = 7;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRetryInfo() {
@@ -1364,33 +1244,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean clientSideMetricsEnabled_;
-
+    private boolean clientSideMetricsEnabled_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client has client side metrics enabled.
      * </pre>
      *
      * <code>bool client_side_metrics_enabled = 8;</code>
-     *
      * @return The clientSideMetricsEnabled.
      */
     @java.lang.Override
     public boolean getClientSideMetricsEnabled() {
       return clientSideMetricsEnabled_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client has client side metrics enabled.
      * </pre>
      *
      * <code>bool client_side_metrics_enabled = 8;</code>
-     *
      * @param value The clientSideMetricsEnabled to set.
      * @return This builder for chaining.
      */
@@ -1401,16 +1273,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client has client side metrics enabled.
      * </pre>
      *
      * <code>bool client_side_metrics_enabled = 8;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearClientSideMetricsEnabled() {
@@ -1420,33 +1288,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean trafficDirectorEnabled_;
-
+    private boolean trafficDirectorEnabled_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client using Traffic Director endpoint.
      * </pre>
      *
      * <code>bool traffic_director_enabled = 9;</code>
-     *
      * @return The trafficDirectorEnabled.
      */
     @java.lang.Override
     public boolean getTrafficDirectorEnabled() {
       return trafficDirectorEnabled_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client using Traffic Director endpoint.
      * </pre>
      *
      * <code>bool traffic_director_enabled = 9;</code>
-     *
      * @param value The trafficDirectorEnabled to set.
      * @return This builder for chaining.
      */
@@ -1457,16 +1317,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client using Traffic Director endpoint.
      * </pre>
      *
      * <code>bool traffic_director_enabled = 9;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearTrafficDirectorEnabled() {
@@ -1476,33 +1332,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean directAccessRequested_;
-
+    private boolean directAccessRequested_ ;
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client explicitly opted in for Direct Access.
      * </pre>
      *
      * <code>bool direct_access_requested = 10;</code>
-     *
      * @return The directAccessRequested.
      */
     @java.lang.Override
     public boolean getDirectAccessRequested() {
       return directAccessRequested_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client explicitly opted in for Direct Access.
      * </pre>
      *
      * <code>bool direct_access_requested = 10;</code>
-     *
      * @param value The directAccessRequested to set.
      * @return This builder for chaining.
      */
@@ -1513,16 +1361,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Notify the server that the client explicitly opted in for Direct Access.
      * </pre>
      *
      * <code>bool direct_access_requested = 10;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDirectAccessRequested() {
@@ -1532,33 +1376,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean peerInfo_;
-
+    private boolean peerInfo_ ;
     /**
-     *
-     *
      * <pre>
      * If the client can support using BigtablePeerInfo.
      * </pre>
      *
      * <code>bool peer_info = 11;</code>
-     *
      * @return The peerInfo.
      */
     @java.lang.Override
     public boolean getPeerInfo() {
       return peerInfo_;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client can support using BigtablePeerInfo.
      * </pre>
      *
      * <code>bool peer_info = 11;</code>
-     *
      * @param value The peerInfo to set.
      * @return This builder for chaining.
      */
@@ -1569,16 +1405,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * If the client can support using BigtablePeerInfo.
      * </pre>
      *
      * <code>bool peer_info = 11;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPeerInfo() {
@@ -1588,33 +1420,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean sessionsCompatible_;
-
+    private boolean sessionsCompatible_ ;
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client supports the Bigtable Sessions API.
      * </pre>
      *
      * <code>bool sessions_compatible = 12;</code>
-     *
      * @return The sessionsCompatible.
      */
     @java.lang.Override
     public boolean getSessionsCompatible() {
       return sessionsCompatible_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client supports the Bigtable Sessions API.
      * </pre>
      *
      * <code>bool sessions_compatible = 12;</code>
-     *
      * @param value The sessionsCompatible to set.
      * @return This builder for chaining.
      */
@@ -1625,16 +1449,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client supports the Bigtable Sessions API.
      * </pre>
      *
      * <code>bool sessions_compatible = 12;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSessionsCompatible() {
@@ -1644,33 +1464,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean sessionsRequired_;
-
+    private boolean sessionsRequired_ ;
     /**
-     *
-     *
      * <pre>
      * Internal flag to force sessions for internal projects.
      * </pre>
      *
      * <code>bool sessions_required = 13;</code>
-     *
      * @return The sessionsRequired.
      */
     @java.lang.Override
     public boolean getSessionsRequired() {
       return sessionsRequired_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Internal flag to force sessions for internal projects.
      * </pre>
      *
      * <code>bool sessions_required = 13;</code>
-     *
      * @param value The sessionsRequired to set.
      * @return This builder for chaining.
      */
@@ -1681,16 +1493,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Internal flag to force sessions for internal projects.
      * </pre>
      *
      * <code>bool sessions_required = 13;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSessionsRequired() {
@@ -1700,33 +1508,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean microsecondTimestamp_;
-
+    private boolean microsecondTimestamp_ ;
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client supports microsecond precision timestamps.
      * </pre>
      *
      * <code>bool microsecond_timestamp = 14;</code>
-     *
      * @return The microsecondTimestamp.
      */
     @java.lang.Override
     public boolean getMicrosecondTimestamp() {
       return microsecondTimestamp_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client supports microsecond precision timestamps.
      * </pre>
      *
      * <code>bool microsecond_timestamp = 14;</code>
-     *
      * @param value The microsecondTimestamp to set.
      * @return This builder for chaining.
      */
@@ -1737,16 +1537,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client supports microsecond precision timestamps.
      * </pre>
      *
      * <code>bool microsecond_timestamp = 14;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMicrosecondTimestamp() {
@@ -1756,33 +1552,25 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private boolean peerLoadInfo_;
-
+    private boolean peerLoadInfo_ ;
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client can ingest peer load info from the server.
      * </pre>
      *
      * <code>bool peer_load_info = 15;</code>
-     *
      * @return The peerLoadInfo.
      */
     @java.lang.Override
     public boolean getPeerLoadInfo() {
       return peerLoadInfo_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client can ingest peer load info from the server.
      * </pre>
      *
      * <code>bool peer_load_info = 15;</code>
-     *
      * @param value The peerLoadInfo to set.
      * @return This builder for chaining.
      */
@@ -1793,16 +1581,12 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Indicates whether the client can ingest peer load info from the server.
      * </pre>
      *
      * <code>bool peer_load_info = 15;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPeerLoadInfo() {
@@ -1817,7 +1601,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.FeatureFlags)
   private static final com.google.bigtable.v2.FeatureFlags DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.FeatureFlags();
   }
@@ -1826,27 +1609,27 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FeatureFlags> PARSER =
-      new com.google.protobuf.AbstractParser<FeatureFlags>() {
-        @java.lang.Override
-        public FeatureFlags parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<FeatureFlags>
+      PARSER = new com.google.protobuf.AbstractParser<FeatureFlags>() {
+    @java.lang.Override
+    public FeatureFlags parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<FeatureFlags> parser() {
     return PARSER;
@@ -1861,4 +1644,6 @@ public final class FeatureFlags extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.FeatureFlags getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

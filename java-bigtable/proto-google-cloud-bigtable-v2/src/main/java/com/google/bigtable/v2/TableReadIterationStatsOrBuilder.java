@@ -6,68 +6,51 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface TableReadIterationStatsOrBuilder
-    extends
+public interface TableReadIterationStatsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.TableReadIterationStats)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The full resource name of the table
    * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
    * </pre>
    *
    * <code>string table_name = 1;</code>
-   *
    * @return The tableName.
    */
   java.lang.String getTableName();
-
   /**
-   *
-   *
    * <pre>
    * The full resource name of the table
    * (`projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`).
    * </pre>
    *
    * <code>string table_name = 1;</code>
-   *
    * @return The bytes for tableName.
    */
-  com.google.protobuf.ByteString getTableNameBytes();
+  com.google.protobuf.ByteString
+      getTableNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * The iteration statistics captured for this table during query execution.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
-   *
    * @return Whether the readIterationStats field is set.
    */
   boolean hasReadIterationStats();
-
   /**
-   *
-   *
    * <pre>
    * The iteration statistics captured for this table during query execution.
    * </pre>
    *
    * <code>.google.bigtable.v2.ReadIterationStats read_iteration_stats = 2;</code>
-   *
    * @return The readIterationStats.
    */
   com.google.bigtable.v2.ReadIterationStats getReadIterationStats();
-
   /**
-   *
-   *
    * <pre>
    * The iteration statistics captured for this table during query execution.
    * </pre>

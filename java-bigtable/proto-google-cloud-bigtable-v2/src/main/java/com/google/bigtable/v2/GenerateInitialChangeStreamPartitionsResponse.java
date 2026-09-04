@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * NOTE: This API is intended to be used by Apache Beam BigtableIO.
  * Response message for Bigtable.GenerateInitialChangeStreamPartitions.
@@ -16,87 +14,68 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse}
  */
 @com.google.protobuf.Generated
-public final class GenerateInitialChangeStreamPartitionsResponse
-    extends com.google.protobuf.GeneratedMessage
-    implements
+public final class GenerateInitialChangeStreamPartitionsResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse)
     GenerateInitialChangeStreamPartitionsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "GenerateInitialChangeStreamPartitionsResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "GenerateInitialChangeStreamPartitionsResponse");
   }
-
   // Use GenerateInitialChangeStreamPartitionsResponse.newBuilder() to construct.
-  private GenerateInitialChangeStreamPartitionsResponse(
-      com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  private GenerateInitialChangeStreamPartitionsResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private GenerateInitialChangeStreamPartitionsResponse() {
+  }
 
-  private GenerateInitialChangeStreamPartitionsResponse() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.class,
-            com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.Builder.class);
+            com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.class, com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int PARTITION_FIELD_NUMBER = 1;
   private com.google.bigtable.v2.StreamPartition partition_;
-
   /**
-   *
-   *
    * <pre>
    * A partition of the change stream.
    * </pre>
    *
    * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-   *
    * @return Whether the partition field is set.
    */
   @java.lang.Override
   public boolean hasPartition() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * A partition of the change stream.
    * </pre>
    *
    * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-   *
    * @return The partition.
    */
   @java.lang.Override
   public com.google.bigtable.v2.StreamPartition getPartition() {
-    return partition_ == null
-        ? com.google.bigtable.v2.StreamPartition.getDefaultInstance()
-        : partition_;
+    return partition_ == null ? com.google.bigtable.v2.StreamPartition.getDefaultInstance() : partition_;
   }
-
   /**
-   *
-   *
    * <pre>
    * A partition of the change stream.
    * </pre>
@@ -105,13 +84,10 @@ public final class GenerateInitialChangeStreamPartitionsResponse
    */
   @java.lang.Override
   public com.google.bigtable.v2.StreamPartitionOrBuilder getPartitionOrBuilder() {
-    return partition_ == null
-        ? com.google.bigtable.v2.StreamPartition.getDefaultInstance()
-        : partition_;
+    return partition_ == null ? com.google.bigtable.v2.StreamPartition.getDefaultInstance() : partition_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -123,7 +99,8 @@ public final class GenerateInitialChangeStreamPartitionsResponse
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getPartition());
     }
@@ -137,7 +114,8 @@ public final class GenerateInitialChangeStreamPartitionsResponse
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getPartition());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getPartition());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -147,17 +125,17 @@ public final class GenerateInitialChangeStreamPartitionsResponse
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse other =
-        (com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse) obj;
+    com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse other = (com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse) obj;
 
     if (hasPartition() != other.hasPartition()) return false;
     if (hasPartition()) {
-      if (!getPartition().equals(other.getPartition())) return false;
+      if (!getPartition()
+          .equals(other.getPartition())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -180,106 +158,98 @@ public final class GenerateInitialChangeStreamPartitionsResponse
   }
 
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
-  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-      parseDelimitedFrom(java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-      parseDelimitedFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
-  }
-
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseDelimitedFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+
+  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
-  public static Builder newBuilder(
-      com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse prototype) {
+  public static Builder newBuilder(com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * NOTE: This API is intended to be used by Apache Beam BigtableIO.
    * Response message for Bigtable.GenerateInitialChangeStreamPartitions.
@@ -287,42 +257,39 @@ public final class GenerateInitialChangeStreamPartitionsResponse
    *
    * Protobuf type {@code google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse)
       com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.class,
-              com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.Builder.class);
+              com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.class, com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.Builder.class);
     }
 
-    // Construct using
-    // com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.newBuilder()
+    // Construct using com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetPartitionFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -336,16 +303,14 @@ public final class GenerateInitialChangeStreamPartitionsResponse
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-        getDefaultInstanceForType() {
-      return com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-          .getDefaultInstance();
+    public com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse getDefaultInstanceForType() {
+      return com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
@@ -359,21 +324,19 @@ public final class GenerateInitialChangeStreamPartitionsResponse
 
     @java.lang.Override
     public com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse buildPartial() {
-      com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse result =
-          new com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse result = new com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(
-        com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse result) {
+    private void buildPartial0(com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.partition_ = partitionBuilder_ == null ? partition_ : partitionBuilder_.build();
+        result.partition_ = partitionBuilder_ == null
+            ? partition_
+            : partitionBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -382,19 +345,15 @@ public final class GenerateInitialChangeStreamPartitionsResponse
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse) {
-        return mergeFrom(
-            (com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse) other);
+        return mergeFrom((com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(
-        com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse other) {
-      if (other
-          == com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-              .getDefaultInstance()) return this;
+    public Builder mergeFrom(com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse other) {
+      if (other == com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse.getDefaultInstance()) return this;
       if (other.hasPartition()) {
         mergePartition(other.getPartition());
       }
@@ -424,20 +383,19 @@ public final class GenerateInitialChangeStreamPartitionsResponse
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetPartitionFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetPartitionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -447,55 +405,38 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.bigtable.v2.StreamPartition partition_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.StreamPartition,
-            com.google.bigtable.v2.StreamPartition.Builder,
-            com.google.bigtable.v2.StreamPartitionOrBuilder>
-        partitionBuilder_;
-
+        com.google.bigtable.v2.StreamPartition, com.google.bigtable.v2.StreamPartition.Builder, com.google.bigtable.v2.StreamPartitionOrBuilder> partitionBuilder_;
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
      *
      * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-     *
      * @return Whether the partition field is set.
      */
     public boolean hasPartition() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
      *
      * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-     *
      * @return The partition.
      */
     public com.google.bigtable.v2.StreamPartition getPartition() {
       if (partitionBuilder_ == null) {
-        return partition_ == null
-            ? com.google.bigtable.v2.StreamPartition.getDefaultInstance()
-            : partition_;
+        return partition_ == null ? com.google.bigtable.v2.StreamPartition.getDefaultInstance() : partition_;
       } else {
         return partitionBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
@@ -515,17 +456,15 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
      *
      * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
      */
-    public Builder setPartition(com.google.bigtable.v2.StreamPartition.Builder builderForValue) {
+    public Builder setPartition(
+        com.google.bigtable.v2.StreamPartition.Builder builderForValue) {
       if (partitionBuilder_ == null) {
         partition_ = builderForValue.build();
       } else {
@@ -535,10 +474,7 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
@@ -547,9 +483,9 @@ public final class GenerateInitialChangeStreamPartitionsResponse
      */
     public Builder mergePartition(com.google.bigtable.v2.StreamPartition value) {
       if (partitionBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && partition_ != null
-            && partition_ != com.google.bigtable.v2.StreamPartition.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          partition_ != null &&
+          partition_ != com.google.bigtable.v2.StreamPartition.getDefaultInstance()) {
           getPartitionBuilder().mergeFrom(value);
         } else {
           partition_ = value;
@@ -563,10 +499,7 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
@@ -583,10 +516,7 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
@@ -598,10 +528,7 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       onChanged();
       return internalGetPartitionFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
@@ -612,15 +539,11 @@ public final class GenerateInitialChangeStreamPartitionsResponse
       if (partitionBuilder_ != null) {
         return partitionBuilder_.getMessageOrBuilder();
       } else {
-        return partition_ == null
-            ? com.google.bigtable.v2.StreamPartition.getDefaultInstance()
-            : partition_;
+        return partition_ == null ?
+            com.google.bigtable.v2.StreamPartition.getDefaultInstance() : partition_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * A partition of the change stream.
      * </pre>
@@ -628,17 +551,14 @@ public final class GenerateInitialChangeStreamPartitionsResponse
      * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.StreamPartition,
-            com.google.bigtable.v2.StreamPartition.Builder,
-            com.google.bigtable.v2.StreamPartitionOrBuilder>
+        com.google.bigtable.v2.StreamPartition, com.google.bigtable.v2.StreamPartition.Builder, com.google.bigtable.v2.StreamPartitionOrBuilder> 
         internalGetPartitionFieldBuilder() {
       if (partitionBuilder_ == null) {
-        partitionBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.StreamPartition,
-                com.google.bigtable.v2.StreamPartition.Builder,
-                com.google.bigtable.v2.StreamPartitionOrBuilder>(
-                getPartition(), getParentForChildren(), isClean());
+        partitionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.StreamPartition, com.google.bigtable.v2.StreamPartition.Builder, com.google.bigtable.v2.StreamPartitionOrBuilder>(
+                getPartition(),
+                getParentForChildren(),
+                isClean());
         partition_ = null;
       }
       return partitionBuilder_;
@@ -648,55 +568,50 @@ public final class GenerateInitialChangeStreamPartitionsResponse
   }
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse)
-  private static final com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-      DEFAULT_INSTANCE;
-
+  private static final com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse();
   }
 
-  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-      getDefaultInstance() {
+  public static com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<GenerateInitialChangeStreamPartitionsResponse>
-      PARSER =
-          new com.google.protobuf.AbstractParser<GenerateInitialChangeStreamPartitionsResponse>() {
-            @java.lang.Override
-            public GenerateInitialChangeStreamPartitionsResponse parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              Builder builder = newBuilder();
-              try {
-                builder.mergeFrom(input, extensionRegistry);
-              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                throw e.setUnfinishedMessage(builder.buildPartial());
-              } catch (com.google.protobuf.UninitializedMessageException e) {
-                throw e.asInvalidProtocolBufferException()
-                    .setUnfinishedMessage(builder.buildPartial());
-              } catch (java.io.IOException e) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                    .setUnfinishedMessage(builder.buildPartial());
-              }
-              return builder.buildPartial();
-            }
-          };
+      PARSER = new com.google.protobuf.AbstractParser<GenerateInitialChangeStreamPartitionsResponse>() {
+    @java.lang.Override
+    public GenerateInitialChangeStreamPartitionsResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<GenerateInitialChangeStreamPartitionsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GenerateInitialChangeStreamPartitionsResponse>
-      getParserForType() {
+  public com.google.protobuf.Parser<GenerateInitialChangeStreamPartitionsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse
-      getDefaultInstanceForType() {
+  public com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -6,80 +6,66 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface VirtualRpcResponseOrBuilder
-    extends
+public interface VirtualRpcResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.VirtualRpcResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Which vRPC this response is for.
    * </pre>
    *
    * <code>int64 rpc_id = 1;</code>
-   *
    * @return The rpcId.
    */
   long getRpcId();
 
   /**
    * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-   *
    * @return Whether the clusterInfo field is set.
    */
   boolean hasClusterInfo();
-
   /**
    * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-   *
    * @return The clusterInfo.
    */
   com.google.bigtable.v2.ClusterInformation getClusterInfo();
-
-  /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+   */
   com.google.bigtable.v2.ClusterInformationOrBuilder getClusterInfoOrBuilder();
 
   /**
    * <code>.google.bigtable.v2.SessionRequestStats stats = 4;</code>
-   *
    * @return Whether the stats field is set.
    */
   boolean hasStats();
-
   /**
    * <code>.google.bigtable.v2.SessionRequestStats stats = 4;</code>
-   *
    * @return The stats.
    */
   com.google.bigtable.v2.SessionRequestStats getStats();
-
-  /** <code>.google.bigtable.v2.SessionRequestStats stats = 4;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionRequestStats stats = 4;</code>
+   */
   com.google.bigtable.v2.SessionRequestStatsOrBuilder getStatsOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Could be TableResponse (or in post-V1, SqlResponse)
    * </pre>
    *
    * <code>bytes payload = 3;</code>
-   *
    * @return The payload.
    */
   com.google.protobuf.ByteString getPayload();
 
   /**
-   *
-   *
    * <pre>
    * If there are more responses for this rpc_id coming.
    * </pre>
    *
    * <code>bool has_more = 5;</code>
-   *
    * @return The hasMore.
    */
   boolean getHasMore();

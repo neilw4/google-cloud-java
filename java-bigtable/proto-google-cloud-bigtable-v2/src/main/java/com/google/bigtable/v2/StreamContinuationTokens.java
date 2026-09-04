@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * NOTE: This API is intended to be used by Apache Beam BigtableIO.
  * The information required to continue reading the data from multiple
@@ -17,54 +15,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.StreamContinuationTokens}
  */
 @com.google.protobuf.Generated
-public final class StreamContinuationTokens extends com.google.protobuf.GeneratedMessage
-    implements
+public final class StreamContinuationTokens extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.StreamContinuationTokens)
     StreamContinuationTokensOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "StreamContinuationTokens");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "StreamContinuationTokens");
   }
-
   // Use StreamContinuationTokens.newBuilder() to construct.
   private StreamContinuationTokens(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private StreamContinuationTokens() {
     tokens_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_StreamContinuationTokens_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_StreamContinuationTokens_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_StreamContinuationTokens_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_StreamContinuationTokens_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.StreamContinuationTokens.class,
-            com.google.bigtable.v2.StreamContinuationTokens.Builder.class);
+            com.google.bigtable.v2.StreamContinuationTokens.class, com.google.bigtable.v2.StreamContinuationTokens.Builder.class);
   }
 
   public static final int TOKENS_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.StreamContinuationToken> tokens_;
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -75,10 +64,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
   public java.util.List<com.google.bigtable.v2.StreamContinuationToken> getTokensList() {
     return tokens_;
   }
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -86,14 +72,11 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.StreamContinuationTokenOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.StreamContinuationTokenOrBuilder> 
       getTokensOrBuilderList() {
     return tokens_;
   }
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -104,10 +87,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
   public int getTokensCount() {
     return tokens_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -118,10 +98,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
   public com.google.bigtable.v2.StreamContinuationToken getTokens(int index) {
     return tokens_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * List of continuation tokens.
    * </pre>
@@ -129,12 +106,12 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
    * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.StreamContinuationTokenOrBuilder getTokensOrBuilder(int index) {
+  public com.google.bigtable.v2.StreamContinuationTokenOrBuilder getTokensOrBuilder(
+      int index) {
     return tokens_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -146,7 +123,8 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < tokens_.size(); i++) {
       output.writeMessage(1, tokens_.get(i));
     }
@@ -160,7 +138,8 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
 
     size = 0;
     for (int i = 0; i < tokens_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, tokens_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, tokens_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -170,15 +149,15 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.StreamContinuationTokens)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.StreamContinuationTokens other =
-        (com.google.bigtable.v2.StreamContinuationTokens) obj;
+    com.google.bigtable.v2.StreamContinuationTokens other = (com.google.bigtable.v2.StreamContinuationTokens) obj;
 
-    if (!getTokensList().equals(other.getTokensList())) return false;
+    if (!getTokensList()
+        .equals(other.getTokensList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -199,105 +178,99 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
     return hash;
   }
 
-  public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.StreamContinuationTokens parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.StreamContinuationTokens parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.StreamContinuationTokens parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.StreamContinuationTokens parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.StreamContinuationTokens prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * NOTE: This API is intended to be used by Apache Beam BigtableIO.
    * The information required to continue reading the data from multiple
@@ -306,32 +279,33 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
    *
    * Protobuf type {@code google.bigtable.v2.StreamContinuationTokens}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.StreamContinuationTokens)
       com.google.bigtable.v2.StreamContinuationTokensOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_StreamContinuationTokens_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_StreamContinuationTokens_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_StreamContinuationTokens_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_StreamContinuationTokens_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.StreamContinuationTokens.class,
-              com.google.bigtable.v2.StreamContinuationTokens.Builder.class);
+              com.google.bigtable.v2.StreamContinuationTokens.class, com.google.bigtable.v2.StreamContinuationTokens.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.StreamContinuationTokens.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -347,9 +321,9 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_StreamContinuationTokens_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_StreamContinuationTokens_descriptor;
     }
 
     @java.lang.Override
@@ -368,18 +342,14 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
 
     @java.lang.Override
     public com.google.bigtable.v2.StreamContinuationTokens buildPartial() {
-      com.google.bigtable.v2.StreamContinuationTokens result =
-          new com.google.bigtable.v2.StreamContinuationTokens(this);
+      com.google.bigtable.v2.StreamContinuationTokens result = new com.google.bigtable.v2.StreamContinuationTokens(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.bigtable.v2.StreamContinuationTokens result) {
+    private void buildPartialRepeatedFields(com.google.bigtable.v2.StreamContinuationTokens result) {
       if (tokensBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           tokens_ = java.util.Collections.unmodifiableList(tokens_);
@@ -398,7 +368,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.StreamContinuationTokens) {
-        return mergeFrom((com.google.bigtable.v2.StreamContinuationTokens) other);
+        return mergeFrom((com.google.bigtable.v2.StreamContinuationTokens)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -406,8 +376,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.StreamContinuationTokens other) {
-      if (other == com.google.bigtable.v2.StreamContinuationTokens.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.StreamContinuationTokens.getDefaultInstance()) return this;
       if (tokensBuilder_ == null) {
         if (!other.tokens_.isEmpty()) {
           if (tokens_.isEmpty()) {
@@ -426,10 +395,9 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
             tokensBuilder_ = null;
             tokens_ = other.tokens_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            tokensBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetTokensFieldBuilder()
-                    : null;
+            tokensBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetTokensFieldBuilder() : null;
           } else {
             tokensBuilder_.addAllMessages(other.tokens_);
           }
@@ -461,26 +429,25 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.StreamContinuationToken m =
-                    input.readMessage(
-                        com.google.bigtable.v2.StreamContinuationToken.parser(), extensionRegistry);
-                if (tokensBuilder_ == null) {
-                  ensureTokensIsMutable();
-                  tokens_.add(m);
-                } else {
-                  tokensBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.StreamContinuationToken m =
+                  input.readMessage(
+                      com.google.bigtable.v2.StreamContinuationToken.parser(),
+                      extensionRegistry);
+              if (tokensBuilder_ == null) {
+                ensureTokensIsMutable();
+                tokens_.add(m);
+              } else {
+                tokensBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -490,28 +457,21 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.bigtable.v2.StreamContinuationToken> tokens_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureTokensIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         tokens_ = new java.util.ArrayList<com.google.bigtable.v2.StreamContinuationToken>(tokens_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.StreamContinuationToken,
-            com.google.bigtable.v2.StreamContinuationToken.Builder,
-            com.google.bigtable.v2.StreamContinuationTokenOrBuilder>
-        tokensBuilder_;
+        com.google.bigtable.v2.StreamContinuationToken, com.google.bigtable.v2.StreamContinuationToken.Builder, com.google.bigtable.v2.StreamContinuationTokenOrBuilder> tokensBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -525,10 +485,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
         return tokensBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -542,10 +499,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
         return tokensBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -559,17 +513,15 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
         return tokensBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public Builder setTokens(int index, com.google.bigtable.v2.StreamContinuationToken value) {
+    public Builder setTokens(
+        int index, com.google.bigtable.v2.StreamContinuationToken value) {
       if (tokensBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -582,10 +534,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -603,10 +552,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -626,17 +572,15 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public Builder addTokens(int index, com.google.bigtable.v2.StreamContinuationToken value) {
+    public Builder addTokens(
+        int index, com.google.bigtable.v2.StreamContinuationToken value) {
       if (tokensBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -649,10 +593,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -670,10 +611,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -691,10 +629,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -705,17 +640,15 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
         java.lang.Iterable<? extends com.google.bigtable.v2.StreamContinuationToken> values) {
       if (tokensBuilder_ == null) {
         ensureTokensIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, tokens_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tokens_);
         onChanged();
       } else {
         tokensBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -732,10 +665,7 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -752,58 +682,47 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public com.google.bigtable.v2.StreamContinuationToken.Builder getTokensBuilder(int index) {
+    public com.google.bigtable.v2.StreamContinuationToken.Builder getTokensBuilder(
+        int index) {
       return internalGetTokensFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public com.google.bigtable.v2.StreamContinuationTokenOrBuilder getTokensOrBuilder(int index) {
+    public com.google.bigtable.v2.StreamContinuationTokenOrBuilder getTokensOrBuilder(
+        int index) {
       if (tokensBuilder_ == null) {
-        return tokens_.get(index);
-      } else {
+        return tokens_.get(index);  } else {
         return tokensBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.StreamContinuationTokenOrBuilder>
-        getTokensOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.StreamContinuationTokenOrBuilder> 
+         getTokensOrBuilderList() {
       if (tokensBuilder_ != null) {
         return tokensBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(tokens_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
@@ -811,50 +730,42 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
     public com.google.bigtable.v2.StreamContinuationToken.Builder addTokensBuilder() {
-      return internalGetTokensFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.StreamContinuationToken.getDefaultInstance());
+      return internalGetTokensFieldBuilder().addBuilder(
+          com.google.bigtable.v2.StreamContinuationToken.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public com.google.bigtable.v2.StreamContinuationToken.Builder addTokensBuilder(int index) {
-      return internalGetTokensFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.StreamContinuationToken.getDefaultInstance());
+    public com.google.bigtable.v2.StreamContinuationToken.Builder addTokensBuilder(
+        int index) {
+      return internalGetTokensFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.StreamContinuationToken.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * List of continuation tokens.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.StreamContinuationToken tokens = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.StreamContinuationToken.Builder>
-        getTokensBuilderList() {
+    public java.util.List<com.google.bigtable.v2.StreamContinuationToken.Builder> 
+         getTokensBuilderList() {
       return internalGetTokensFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.StreamContinuationToken,
-            com.google.bigtable.v2.StreamContinuationToken.Builder,
-            com.google.bigtable.v2.StreamContinuationTokenOrBuilder>
+        com.google.bigtable.v2.StreamContinuationToken, com.google.bigtable.v2.StreamContinuationToken.Builder, com.google.bigtable.v2.StreamContinuationTokenOrBuilder> 
         internalGetTokensFieldBuilder() {
       if (tokensBuilder_ == null) {
-        tokensBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.StreamContinuationToken,
-                com.google.bigtable.v2.StreamContinuationToken.Builder,
-                com.google.bigtable.v2.StreamContinuationTokenOrBuilder>(
-                tokens_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.StreamContinuationToken, com.google.bigtable.v2.StreamContinuationToken.Builder, com.google.bigtable.v2.StreamContinuationTokenOrBuilder>(
+                tokens_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         tokens_ = null;
       }
       return tokensBuilder_;
@@ -865,7 +776,6 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.StreamContinuationTokens)
   private static final com.google.bigtable.v2.StreamContinuationTokens DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.StreamContinuationTokens();
   }
@@ -874,27 +784,27 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<StreamContinuationTokens> PARSER =
-      new com.google.protobuf.AbstractParser<StreamContinuationTokens>() {
-        @java.lang.Override
-        public StreamContinuationTokens parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<StreamContinuationTokens>
+      PARSER = new com.google.protobuf.AbstractParser<StreamContinuationTokens>() {
+    @java.lang.Override
+    public StreamContinuationTokens parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<StreamContinuationTokens> parser() {
     return PARSER;
@@ -909,4 +819,6 @@ public final class StreamContinuationTokens extends com.google.protobuf.Generate
   public com.google.bigtable.v2.StreamContinuationTokens getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

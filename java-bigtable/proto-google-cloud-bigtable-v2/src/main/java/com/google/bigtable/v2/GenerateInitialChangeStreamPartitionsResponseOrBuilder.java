@@ -6,40 +6,29 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface GenerateInitialChangeStreamPartitionsResponseOrBuilder
-    extends
+public interface GenerateInitialChangeStreamPartitionsResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * A partition of the change stream.
    * </pre>
    *
    * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-   *
    * @return Whether the partition field is set.
    */
   boolean hasPartition();
-
   /**
-   *
-   *
    * <pre>
    * A partition of the change stream.
    * </pre>
    *
    * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-   *
    * @return The partition.
    */
   com.google.bigtable.v2.StreamPartition getPartition();
-
   /**
-   *
-   *
    * <pre>
    * A partition of the change stream.
    * </pre>

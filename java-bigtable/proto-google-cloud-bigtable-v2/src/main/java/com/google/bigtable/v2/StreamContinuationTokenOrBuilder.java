@@ -6,40 +6,29 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface StreamContinuationTokenOrBuilder
-    extends
+public interface StreamContinuationTokenOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.StreamContinuationToken)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The partition that this token applies to.
    * </pre>
    *
    * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-   *
    * @return Whether the partition field is set.
    */
   boolean hasPartition();
-
   /**
-   *
-   *
    * <pre>
    * The partition that this token applies to.
    * </pre>
    *
    * <code>.google.bigtable.v2.StreamPartition partition = 1;</code>
-   *
    * @return The partition.
    */
   com.google.bigtable.v2.StreamPartition getPartition();
-
   /**
-   *
-   *
    * <pre>
    * The partition that this token applies to.
    * </pre>
@@ -49,28 +38,22 @@ public interface StreamContinuationTokenOrBuilder
   com.google.bigtable.v2.StreamPartitionOrBuilder getPartitionOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * An encoded position in the stream to restart reading from.
    * </pre>
    *
    * <code>string token = 2;</code>
-   *
    * @return The token.
    */
   java.lang.String getToken();
-
   /**
-   *
-   *
    * <pre>
    * An encoded position in the stream to restart reading from.
    * </pre>
    *
    * <code>string token = 2;</code>
-   *
    * @return The bytes for token.
    */
-  com.google.protobuf.ByteString getTokenBytes();
+  com.google.protobuf.ByteString
+      getTokenBytes();
 }

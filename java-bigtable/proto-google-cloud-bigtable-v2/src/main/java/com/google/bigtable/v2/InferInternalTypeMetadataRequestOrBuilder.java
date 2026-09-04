@@ -6,74 +6,55 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface InferInternalTypeMetadataRequestOrBuilder
-    extends
+public interface InferInternalTypeMetadataRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.InferInternalTypeMetadataRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the requested table.
    * Values are of the form
    * `projects/{project}/instances/{instance}/tables/{table}`.
    * </pre>
    *
-   * <code>
-   * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The tableName.
    */
   java.lang.String getTableName();
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the requested table.
    * Values are of the form
    * `projects/{project}/instances/{instance}/tables/{table}`.
    * </pre>
    *
-   * <code>
-   * string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string table_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for tableName.
    */
-  com.google.protobuf.ByteString getTableNameBytes();
+  com.google.protobuf.ByteString
+      getTableNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * This API only accepts the empty value of app_profile_id.
    * </pre>
    *
    * <code>string app_profile_id = 5;</code>
-   *
    * @return The appProfileId.
    */
   java.lang.String getAppProfileId();
-
   /**
-   *
-   *
    * <pre>
    * This API only accepts the empty value of app_profile_id.
    * </pre>
    *
    * <code>string app_profile_id = 5;</code>
-   *
    * @return The bytes for appProfileId.
    */
-  com.google.protobuf.ByteString getAppProfileIdBytes();
+  com.google.protobuf.ByteString
+      getAppProfileIdBytes();
 
   /**
-   *
-   *
    * <pre>
    * The API will scan the first `rows_limit` rows in the table. The limit must
    * be greater than 0 and less than or equal to 1000, otherwise the request
@@ -81,14 +62,11 @@ public interface InferInternalTypeMetadataRequestOrBuilder
    * </pre>
    *
    * <code>int32 rows_limit = 3;</code>
-   *
    * @return The rowsLimit.
    */
   int getRowsLimit();
 
   /**
-   *
-   *
    * <pre>
    * The API will scan the first `columns_per_row_limit` columns in each row.
    * The limit must be greater than 0 and less than or equal to 1000, otherwise
@@ -96,7 +74,6 @@ public interface InferInternalTypeMetadataRequestOrBuilder
    * </pre>
    *
    * <code>int32 columns_per_row_limit = 4;</code>
-   *
    * @return The columnsPerRowLimit.
    */
   int getColumnsPerRowLimit();

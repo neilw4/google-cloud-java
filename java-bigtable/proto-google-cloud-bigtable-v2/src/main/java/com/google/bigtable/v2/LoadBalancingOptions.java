@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Configuration for how to balance vRPCs over sessions. Internal usage only.
  * </pre>
@@ -15,67 +13,56 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions}
  */
 @com.google.protobuf.Generated
-public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMessage
-    implements
+public final class LoadBalancingOptions extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.LoadBalancingOptions)
     LoadBalancingOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "LoadBalancingOptions");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "LoadBalancingOptions");
   }
-
   // Use LoadBalancingOptions.newBuilder() to construct.
   private LoadBalancingOptions(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private LoadBalancingOptions() {
+  }
 
-  private LoadBalancingOptions() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_LoadBalancingOptions_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_LoadBalancingOptions_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.LoadBalancingOptions.class,
-            com.google.bigtable.v2.LoadBalancingOptions.Builder.class);
+            com.google.bigtable.v2.LoadBalancingOptions.class, com.google.bigtable.v2.LoadBalancingOptions.Builder.class);
   }
 
-  public interface LeastInFlightOrBuilder
-      extends
+  public interface LeastInFlightOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.LoadBalancingOptions.LeastInFlight)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Of all connected AFEs, the size of the random subset to run the algorithm
      * on. Zero implies all connected AFEs.
      * </pre>
      *
      * <code>int64 random_subset_size = 1;</code>
-     *
      * @return The randomSubsetSize.
      */
     long getRandomSubsetSize();
   }
-
   /**
-   *
-   *
    * <pre>
    * Balances vRPCs over backends, preferring to send new vRPCs to AFEs with the
    * least number of active vRPCs.
@@ -83,57 +70,49 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
    *
    * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions.LeastInFlight}
    */
-  public static final class LeastInFlight extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class LeastInFlight extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.LoadBalancingOptions.LeastInFlight)
       LeastInFlightOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "LeastInFlight");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "LeastInFlight");
     }
-
     // Use LeastInFlight.newBuilder() to construct.
     private LeastInFlight(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private LeastInFlight() {
+    }
 
-    private LeastInFlight() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.class,
-              com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder.class);
+              com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.class, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder.class);
     }
 
     public static final int RANDOM_SUBSET_SIZE_FIELD_NUMBER = 1;
     private long randomSubsetSize_ = 0L;
-
     /**
-     *
-     *
      * <pre>
      * Of all connected AFEs, the size of the random subset to run the algorithm
      * on. Zero implies all connected AFEs.
      * </pre>
      *
      * <code>int64 random_subset_size = 1;</code>
-     *
      * @return The randomSubsetSize.
      */
     @java.lang.Override
@@ -142,7 +121,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -154,7 +132,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (randomSubsetSize_ != 0L) {
         output.writeInt64(1, randomSubsetSize_);
       }
@@ -168,7 +147,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
       size = 0;
       if (randomSubsetSize_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, randomSubsetSize_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, randomSubsetSize_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -178,15 +158,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight other =
-          (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) obj;
+      com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight other = (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) obj;
 
-      if (getRandomSubsetSize() != other.getRandomSubsetSize()) return false;
+      if (getRandomSubsetSize()
+          != other.getRandomSubsetSize()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -199,112 +179,106 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RANDOM_SUBSET_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getRandomSubsetSize());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRandomSubsetSize());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
+    public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Balances vRPCs over backends, preferring to send new vRPCs to AFEs with the
      * least number of active vRPCs.
@@ -312,32 +286,33 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
      *
      * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions.LeastInFlight}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.LoadBalancingOptions.LeastInFlight)
         com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.class,
-                com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder.class);
+                com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.class, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -347,9 +322,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_LeastInFlight_descriptor;
       }
 
       @java.lang.Override
@@ -368,11 +343,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
       @java.lang.Override
       public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight buildPartial() {
-        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight result =
-            new com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight result = new com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -387,7 +359,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) {
-          return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) other);
+          return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -395,8 +367,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
 
       public Builder mergeFrom(com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight other) {
-        if (other == com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance())
-          return this;
+        if (other == com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance()) return this;
         if (other.getRandomSubsetSize() != 0L) {
           setRandomSubsetSize(other.getRandomSubsetSize());
         }
@@ -426,19 +397,17 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  randomSubsetSize_ = input.readInt64();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 8: {
+                randomSubsetSize_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -448,38 +417,29 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         } // finally
         return this;
       }
-
       private int bitField0_;
 
-      private long randomSubsetSize_;
-
+      private long randomSubsetSize_ ;
       /**
-       *
-       *
        * <pre>
        * Of all connected AFEs, the size of the random subset to run the algorithm
        * on. Zero implies all connected AFEs.
        * </pre>
        *
        * <code>int64 random_subset_size = 1;</code>
-       *
        * @return The randomSubsetSize.
        */
       @java.lang.Override
       public long getRandomSubsetSize() {
         return randomSubsetSize_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Of all connected AFEs, the size of the random subset to run the algorithm
        * on. Zero implies all connected AFEs.
        * </pre>
        *
        * <code>int64 random_subset_size = 1;</code>
-       *
        * @param value The randomSubsetSize to set.
        * @return This builder for chaining.
        */
@@ -490,17 +450,13 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Of all connected AFEs, the size of the random subset to run the algorithm
        * on. Zero implies all connected AFEs.
        * </pre>
        *
        * <code>int64 random_subset_size = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearRandomSubsetSize() {
@@ -515,7 +471,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.LoadBalancingOptions.LeastInFlight)
     private static final com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight();
     }
@@ -524,28 +479,27 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<LeastInFlight> PARSER =
-        new com.google.protobuf.AbstractParser<LeastInFlight>() {
-          @java.lang.Override
-          public LeastInFlight parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<LeastInFlight>
+        PARSER = new com.google.protobuf.AbstractParser<LeastInFlight>() {
+      @java.lang.Override
+      public LeastInFlight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<LeastInFlight> parser() {
       return PARSER;
@@ -560,31 +514,25 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface PeakEwmaOrBuilder
-      extends
+  public interface PeakEwmaOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.LoadBalancingOptions.PeakEwma)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Of all connected AFEs, the size of the random subset to compare costs
      * over. Zero implies all connected AFEs.
      * </pre>
      *
      * <code>int64 random_subset_size = 1;</code>
-     *
      * @return The randomSubsetSize.
      */
     long getRandomSubsetSize();
   }
-
   /**
-   *
-   *
    * <pre>
    * Balances vRPCs over backends, by maintaining a moving average of each AFE's
    * round-trip time, weighted by the number of outstanding vRPCs, and
@@ -596,57 +544,49 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
    *
    * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions.PeakEwma}
    */
-  public static final class PeakEwma extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class PeakEwma extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.LoadBalancingOptions.PeakEwma)
       PeakEwmaOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "PeakEwma");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "PeakEwma");
     }
-
     // Use PeakEwma.newBuilder() to construct.
     private PeakEwma(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private PeakEwma() {
+    }
 
-    private PeakEwma() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.class,
-              com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder.class);
+              com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.class, com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder.class);
     }
 
     public static final int RANDOM_SUBSET_SIZE_FIELD_NUMBER = 1;
     private long randomSubsetSize_ = 0L;
-
     /**
-     *
-     *
      * <pre>
      * Of all connected AFEs, the size of the random subset to compare costs
      * over. Zero implies all connected AFEs.
      * </pre>
      *
      * <code>int64 random_subset_size = 1;</code>
-     *
      * @return The randomSubsetSize.
      */
     @java.lang.Override
@@ -655,7 +595,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -667,7 +606,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (randomSubsetSize_ != 0L) {
         output.writeInt64(1, randomSubsetSize_);
       }
@@ -681,7 +621,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
       size = 0;
       if (randomSubsetSize_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, randomSubsetSize_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, randomSubsetSize_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -691,15 +632,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.LoadBalancingOptions.PeakEwma)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.LoadBalancingOptions.PeakEwma other =
-          (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) obj;
+      com.google.bigtable.v2.LoadBalancingOptions.PeakEwma other = (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) obj;
 
-      if (getRandomSubsetSize() != other.getRandomSubsetSize()) return false;
+      if (getRandomSubsetSize()
+          != other.getRandomSubsetSize()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -712,112 +653,106 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RANDOM_SUBSET_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getRandomSubsetSize());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRandomSubsetSize());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
+    public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.PeakEwma parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
-    public static Builder newBuilder(
-        com.google.bigtable.v2.LoadBalancingOptions.PeakEwma prototype) {
+    public static Builder newBuilder(com.google.bigtable.v2.LoadBalancingOptions.PeakEwma prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Balances vRPCs over backends, by maintaining a moving average of each AFE's
      * round-trip time, weighted by the number of outstanding vRPCs, and
@@ -829,32 +764,33 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
      *
      * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions.PeakEwma}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.LoadBalancingOptions.PeakEwma)
         com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.class,
-                com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder.class);
+                com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.class, com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -864,9 +800,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_PeakEwma_descriptor;
       }
 
       @java.lang.Override
@@ -885,11 +821,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
       @java.lang.Override
       public com.google.bigtable.v2.LoadBalancingOptions.PeakEwma buildPartial() {
-        com.google.bigtable.v2.LoadBalancingOptions.PeakEwma result =
-            new com.google.bigtable.v2.LoadBalancingOptions.PeakEwma(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.LoadBalancingOptions.PeakEwma result = new com.google.bigtable.v2.LoadBalancingOptions.PeakEwma(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -904,7 +837,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) {
-          return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) other);
+          return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions.PeakEwma)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -912,8 +845,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
 
       public Builder mergeFrom(com.google.bigtable.v2.LoadBalancingOptions.PeakEwma other) {
-        if (other == com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance())
-          return this;
+        if (other == com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance()) return this;
         if (other.getRandomSubsetSize() != 0L) {
           setRandomSubsetSize(other.getRandomSubsetSize());
         }
@@ -943,19 +875,17 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  randomSubsetSize_ = input.readInt64();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 8: {
+                randomSubsetSize_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -965,38 +895,29 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         } // finally
         return this;
       }
-
       private int bitField0_;
 
-      private long randomSubsetSize_;
-
+      private long randomSubsetSize_ ;
       /**
-       *
-       *
        * <pre>
        * Of all connected AFEs, the size of the random subset to compare costs
        * over. Zero implies all connected AFEs.
        * </pre>
        *
        * <code>int64 random_subset_size = 1;</code>
-       *
        * @return The randomSubsetSize.
        */
       @java.lang.Override
       public long getRandomSubsetSize() {
         return randomSubsetSize_;
       }
-
       /**
-       *
-       *
        * <pre>
        * Of all connected AFEs, the size of the random subset to compare costs
        * over. Zero implies all connected AFEs.
        * </pre>
        *
        * <code>int64 random_subset_size = 1;</code>
-       *
        * @param value The randomSubsetSize to set.
        * @return This builder for chaining.
        */
@@ -1007,17 +928,13 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * Of all connected AFEs, the size of the random subset to compare costs
        * over. Zero implies all connected AFEs.
        * </pre>
        *
        * <code>int64 random_subset_size = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearRandomSubsetSize() {
@@ -1032,7 +949,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.LoadBalancingOptions.PeakEwma)
     private static final com.google.bigtable.v2.LoadBalancingOptions.PeakEwma DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.LoadBalancingOptions.PeakEwma();
     }
@@ -1041,28 +957,27 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PeakEwma> PARSER =
-        new com.google.protobuf.AbstractParser<PeakEwma>() {
-          @java.lang.Override
-          public PeakEwma parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<PeakEwma>
+        PARSER = new com.google.protobuf.AbstractParser<PeakEwma>() {
+      @java.lang.Override
+      public PeakEwma parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<PeakEwma> parser() {
       return PARSER;
@@ -1077,62 +992,55 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.LoadBalancingOptions.PeakEwma getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface RandomOrBuilder
-      extends
+  public interface RandomOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.LoadBalancingOptions.Random)
-      com.google.protobuf.MessageOrBuilder {}
-
+      com.google.protobuf.MessageOrBuilder {
+  }
   /**
-   *
-   *
    * <pre>
    * Balances vRPCs over backends, by randomly selecting a backend.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions.Random}
    */
-  public static final class Random extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Random extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.LoadBalancingOptions.Random)
       RandomOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Random");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Random");
     }
-
     // Use Random.newBuilder() to construct.
     private Random(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private Random() {
+    }
 
-    private Random() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_Random_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_Random_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_Random_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_Random_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.LoadBalancingOptions.Random.class,
-              com.google.bigtable.v2.LoadBalancingOptions.Random.Builder.class);
+              com.google.bigtable.v2.LoadBalancingOptions.Random.class, com.google.bigtable.v2.LoadBalancingOptions.Random.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1144,7 +1052,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       getUnknownFields().writeTo(output);
     }
 
@@ -1162,13 +1071,12 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.LoadBalancingOptions.Random)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.LoadBalancingOptions.Random other =
-          (com.google.bigtable.v2.LoadBalancingOptions.Random) obj;
+      com.google.bigtable.v2.LoadBalancingOptions.Random other = (com.google.bigtable.v2.LoadBalancingOptions.Random) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1187,136 +1095,131 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
+    public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.LoadBalancingOptions.Random parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.LoadBalancingOptions.Random parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.LoadBalancingOptions.Random parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.bigtable.v2.LoadBalancingOptions.Random prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Balances vRPCs over backends, by randomly selecting a backend.
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions.Random}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.LoadBalancingOptions.Random)
         com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_Random_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_Random_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_Random_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_Random_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.LoadBalancingOptions.Random.class,
-                com.google.bigtable.v2.LoadBalancingOptions.Random.Builder.class);
+                com.google.bigtable.v2.LoadBalancingOptions.Random.class, com.google.bigtable.v2.LoadBalancingOptions.Random.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.LoadBalancingOptions.Random.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1324,9 +1227,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_LoadBalancingOptions_Random_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_Random_descriptor;
       }
 
       @java.lang.Override
@@ -1345,8 +1248,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
       @java.lang.Override
       public com.google.bigtable.v2.LoadBalancingOptions.Random buildPartial() {
-        com.google.bigtable.v2.LoadBalancingOptions.Random result =
-            new com.google.bigtable.v2.LoadBalancingOptions.Random(this);
+        com.google.bigtable.v2.LoadBalancingOptions.Random result = new com.google.bigtable.v2.LoadBalancingOptions.Random(this);
         onBuilt();
         return result;
       }
@@ -1354,7 +1256,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.LoadBalancingOptions.Random) {
-          return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions.Random) other);
+          return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions.Random)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1362,8 +1264,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
 
       public Builder mergeFrom(com.google.bigtable.v2.LoadBalancingOptions.Random other) {
-        if (other == com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance())
-          return this;
+        if (other == com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1390,13 +1291,12 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
               case 0:
                 done = true;
                 break;
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1412,7 +1312,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.LoadBalancingOptions.Random)
     private static final com.google.bigtable.v2.LoadBalancingOptions.Random DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.LoadBalancingOptions.Random();
     }
@@ -1421,28 +1320,27 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Random> PARSER =
-        new com.google.protobuf.AbstractParser<Random>() {
-          @java.lang.Override
-          public Random parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Random>
+        PARSER = new com.google.protobuf.AbstractParser<Random>() {
+      @java.lang.Override
+      public Random parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Random> parser() {
       return PARSER;
@@ -1457,27 +1355,23 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.LoadBalancingOptions.Random getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   private int loadBalancingStrategyCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object loadBalancingStrategy_;
-
   public enum LoadBalancingStrategyCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     LEAST_IN_FLIGHT(1),
     PEAK_EWMA(2),
     RANDOM(4),
     LOADBALANCINGSTRATEGY_NOT_SET(0);
     private final int value;
-
     private LoadBalancingStrategyCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -1490,133 +1384,118 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
     public static LoadBalancingStrategyCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return LEAST_IN_FLIGHT;
-        case 2:
-          return PEAK_EWMA;
-        case 4:
-          return RANDOM;
-        case 0:
-          return LOADBALANCINGSTRATEGY_NOT_SET;
-        default:
-          return null;
+        case 1: return LEAST_IN_FLIGHT;
+        case 2: return PEAK_EWMA;
+        case 4: return RANDOM;
+        case 0: return LOADBALANCINGSTRATEGY_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public LoadBalancingStrategyCase getLoadBalancingStrategyCase() {
-    return LoadBalancingStrategyCase.forNumber(loadBalancingStrategyCase_);
+  public LoadBalancingStrategyCase
+  getLoadBalancingStrategyCase() {
+    return LoadBalancingStrategyCase.forNumber(
+        loadBalancingStrategyCase_);
   }
 
   public static final int LEAST_IN_FLIGHT_FIELD_NUMBER = 1;
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
-   *
    * @return Whether the leastInFlight field is set.
    */
   @java.lang.Override
   public boolean hasLeastInFlight() {
     return loadBalancingStrategyCase_ == 1;
   }
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
-   *
    * @return The leastInFlight.
    */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight getLeastInFlight() {
     if (loadBalancingStrategyCase_ == 1) {
-      return (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_;
+       return (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_;
     }
     return com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
+  /**
+   * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+   */
   @java.lang.Override
-  public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder
-      getLeastInFlightOrBuilder() {
+  public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder getLeastInFlightOrBuilder() {
     if (loadBalancingStrategyCase_ == 1) {
-      return (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_;
+       return (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_;
     }
     return com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance();
   }
 
   public static final int PEAK_EWMA_FIELD_NUMBER = 2;
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
-   *
    * @return Whether the peakEwma field is set.
    */
   @java.lang.Override
   public boolean hasPeakEwma() {
     return loadBalancingStrategyCase_ == 2;
   }
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
-   *
    * @return The peakEwma.
    */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptions.PeakEwma getPeakEwma() {
     if (loadBalancingStrategyCase_ == 2) {
-      return (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_;
+       return (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_;
     }
     return com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder getPeakEwmaOrBuilder() {
     if (loadBalancingStrategyCase_ == 2) {
-      return (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_;
+       return (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_;
     }
     return com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance();
   }
 
   public static final int RANDOM_FIELD_NUMBER = 4;
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
-   *
    * @return Whether the random field is set.
    */
   @java.lang.Override
   public boolean hasRandom() {
     return loadBalancingStrategyCase_ == 4;
   }
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
-   *
    * @return The random.
    */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptions.Random getRandom() {
     if (loadBalancingStrategyCase_ == 4) {
-      return (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_;
+       return (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_;
     }
     return com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+  /**
+   * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder getRandomOrBuilder() {
     if (loadBalancingStrategyCase_ == 4) {
-      return (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_;
+       return (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_;
     }
     return com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1628,18 +1507,16 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (loadBalancingStrategyCase_ == 1) {
-      output.writeMessage(
-          1, (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_);
+      output.writeMessage(1, (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_);
     }
     if (loadBalancingStrategyCase_ == 2) {
-      output.writeMessage(
-          2, (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_);
+      output.writeMessage(2, (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_);
     }
     if (loadBalancingStrategyCase_ == 4) {
-      output.writeMessage(
-          4, (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_);
+      output.writeMessage(4, (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1651,20 +1528,16 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
     size = 0;
     if (loadBalancingStrategyCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1,
-              (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_);
     }
     if (loadBalancingStrategyCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_);
     }
     if (loadBalancingStrategyCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1674,24 +1547,26 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.LoadBalancingOptions)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.LoadBalancingOptions other =
-        (com.google.bigtable.v2.LoadBalancingOptions) obj;
+    com.google.bigtable.v2.LoadBalancingOptions other = (com.google.bigtable.v2.LoadBalancingOptions) obj;
 
     if (!getLoadBalancingStrategyCase().equals(other.getLoadBalancingStrategyCase())) return false;
     switch (loadBalancingStrategyCase_) {
       case 1:
-        if (!getLeastInFlight().equals(other.getLeastInFlight())) return false;
+        if (!getLeastInFlight()
+            .equals(other.getLeastInFlight())) return false;
         break;
       case 2:
-        if (!getPeakEwma().equals(other.getPeakEwma())) return false;
+        if (!getPeakEwma()
+            .equals(other.getPeakEwma())) return false;
         break;
       case 4:
-        if (!getRandom().equals(other.getRandom())) return false;
+        if (!getRandom()
+            .equals(other.getRandom())) return false;
         break;
       case 0:
       default:
@@ -1728,137 +1603,132 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     return hash;
   }
 
-  public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.LoadBalancingOptions parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.LoadBalancingOptions parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.LoadBalancingOptions parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.LoadBalancingOptions parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.LoadBalancingOptions prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for how to balance vRPCs over sessions. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.LoadBalancingOptions}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.LoadBalancingOptions)
       com.google.bigtable.v2.LoadBalancingOptionsOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.LoadBalancingOptions.class,
-              com.google.bigtable.v2.LoadBalancingOptions.Builder.class);
+              com.google.bigtable.v2.LoadBalancingOptions.class, com.google.bigtable.v2.LoadBalancingOptions.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.LoadBalancingOptions.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1878,9 +1748,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_LoadBalancingOptions_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_LoadBalancingOptions_descriptor;
     }
 
     @java.lang.Override
@@ -1899,11 +1769,8 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
     @java.lang.Override
     public com.google.bigtable.v2.LoadBalancingOptions buildPartial() {
-      com.google.bigtable.v2.LoadBalancingOptions result =
-          new com.google.bigtable.v2.LoadBalancingOptions(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.LoadBalancingOptions result = new com.google.bigtable.v2.LoadBalancingOptions(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -1916,13 +1783,16 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     private void buildPartialOneofs(com.google.bigtable.v2.LoadBalancingOptions result) {
       result.loadBalancingStrategyCase_ = loadBalancingStrategyCase_;
       result.loadBalancingStrategy_ = this.loadBalancingStrategy_;
-      if (loadBalancingStrategyCase_ == 1 && leastInFlightBuilder_ != null) {
+      if (loadBalancingStrategyCase_ == 1 &&
+          leastInFlightBuilder_ != null) {
         result.loadBalancingStrategy_ = leastInFlightBuilder_.build();
       }
-      if (loadBalancingStrategyCase_ == 2 && peakEwmaBuilder_ != null) {
+      if (loadBalancingStrategyCase_ == 2 &&
+          peakEwmaBuilder_ != null) {
         result.loadBalancingStrategy_ = peakEwmaBuilder_.build();
       }
-      if (loadBalancingStrategyCase_ == 4 && randomBuilder_ != null) {
+      if (loadBalancingStrategyCase_ == 4 &&
+          randomBuilder_ != null) {
         result.loadBalancingStrategy_ = randomBuilder_.build();
       }
     }
@@ -1930,7 +1800,7 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.LoadBalancingOptions) {
-        return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions) other);
+        return mergeFrom((com.google.bigtable.v2.LoadBalancingOptions)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1940,25 +1810,21 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     public Builder mergeFrom(com.google.bigtable.v2.LoadBalancingOptions other) {
       if (other == com.google.bigtable.v2.LoadBalancingOptions.getDefaultInstance()) return this;
       switch (other.getLoadBalancingStrategyCase()) {
-        case LEAST_IN_FLIGHT:
-          {
-            mergeLeastInFlight(other.getLeastInFlight());
-            break;
-          }
-        case PEAK_EWMA:
-          {
-            mergePeakEwma(other.getPeakEwma());
-            break;
-          }
-        case RANDOM:
-          {
-            mergeRandom(other.getRandom());
-            break;
-          }
-        case LOADBALANCINGSTRATEGY_NOT_SET:
-          {
-            break;
-          }
+        case LEAST_IN_FLIGHT: {
+          mergeLeastInFlight(other.getLeastInFlight());
+          break;
+        }
+        case PEAK_EWMA: {
+          mergePeakEwma(other.getPeakEwma());
+          break;
+        }
+        case RANDOM: {
+          mergeRandom(other.getRandom());
+          break;
+        }
+        case LOADBALANCINGSTRATEGY_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1986,33 +1852,33 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetLeastInFlightFieldBuilder().getBuilder(), extensionRegistry);
-                loadBalancingStrategyCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetPeakEwmaFieldBuilder().getBuilder(), extensionRegistry);
-                loadBalancingStrategyCase_ = 2;
-                break;
-              } // case 18
-            case 34:
-              {
-                input.readMessage(internalGetRandomFieldBuilder().getBuilder(), extensionRegistry);
-                loadBalancingStrategyCase_ = 4;
-                break;
-              } // case 34
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetLeastInFlightFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              loadBalancingStrategyCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetPeakEwmaFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              loadBalancingStrategyCase_ = 2;
+              break;
+            } // case 18
+            case 34: {
+              input.readMessage(
+                  internalGetRandomFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              loadBalancingStrategyCase_ = 4;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2022,12 +1888,12 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       } // finally
       return this;
     }
-
     private int loadBalancingStrategyCase_ = 0;
     private java.lang.Object loadBalancingStrategy_;
-
-    public LoadBalancingStrategyCase getLoadBalancingStrategyCase() {
-      return LoadBalancingStrategyCase.forNumber(loadBalancingStrategyCase_);
+    public LoadBalancingStrategyCase
+        getLoadBalancingStrategyCase() {
+      return LoadBalancingStrategyCase.forNumber(
+          loadBalancingStrategyCase_);
     }
 
     public Builder clearLoadBalancingStrategy() {
@@ -2040,24 +1906,17 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight,
-            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder,
-            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder>
-        leastInFlightBuilder_;
-
+        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder> leastInFlightBuilder_;
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
-     *
      * @return Whether the leastInFlight field is set.
      */
     @java.lang.Override
     public boolean hasLeastInFlight() {
       return loadBalancingStrategyCase_ == 1;
     }
-
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
-     *
      * @return The leastInFlight.
      */
     @java.lang.Override
@@ -2074,10 +1933,10 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
-    public Builder setLeastInFlight(
-        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight value) {
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
+    public Builder setLeastInFlight(com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight value) {
       if (leastInFlightBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2090,8 +1949,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
     public Builder setLeastInFlight(
         com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder builderForValue) {
       if (leastInFlightBuilder_ == null) {
@@ -2103,20 +1963,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
-    public Builder mergeLeastInFlight(
-        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight value) {
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
+    public Builder mergeLeastInFlight(com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight value) {
       if (leastInFlightBuilder_ == null) {
-        if (loadBalancingStrategyCase_ == 1
-            && loadBalancingStrategy_
-                != com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance()) {
-          loadBalancingStrategy_ =
-              com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.newBuilder(
-                      (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight)
-                          loadBalancingStrategy_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (loadBalancingStrategyCase_ == 1 &&
+            loadBalancingStrategy_ != com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance()) {
+          loadBalancingStrategy_ = com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.newBuilder((com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_)
+              .mergeFrom(value).buildPartial();
         } else {
           loadBalancingStrategy_ = value;
         }
@@ -2131,8 +1986,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
     public Builder clearLeastInFlight() {
       if (leastInFlightBuilder_ == null) {
         if (loadBalancingStrategyCase_ == 1) {
@@ -2149,17 +2005,17 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
-    public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder
-        getLeastInFlightBuilder() {
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
+    public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder getLeastInFlightBuilder() {
       return internalGetLeastInFlightFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
     @java.lang.Override
-    public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder
-        getLeastInFlightOrBuilder() {
+    public com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder getLeastInFlightOrBuilder() {
       if ((loadBalancingStrategyCase_ == 1) && (leastInFlightBuilder_ != null)) {
         return leastInFlightBuilder_.getMessageOrBuilder();
       } else {
@@ -2169,23 +2025,18 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.LeastInFlight least_in_flight = 1;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight,
-            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder,
-            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder>
+        com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder> 
         internalGetLeastInFlightFieldBuilder() {
       if (leastInFlightBuilder_ == null) {
         if (!(loadBalancingStrategyCase_ == 1)) {
-          loadBalancingStrategy_ =
-              com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance();
+          loadBalancingStrategy_ = com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.getDefaultInstance();
         }
-        leastInFlightBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight,
-                com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder,
-                com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder>(
+        leastInFlightBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight.Builder, com.google.bigtable.v2.LoadBalancingOptions.LeastInFlightOrBuilder>(
                 (com.google.bigtable.v2.LoadBalancingOptions.LeastInFlight) loadBalancingStrategy_,
                 getParentForChildren(),
                 isClean());
@@ -2197,24 +2048,17 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions.PeakEwma,
-            com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder,
-            com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder>
-        peakEwmaBuilder_;
-
+        com.google.bigtable.v2.LoadBalancingOptions.PeakEwma, com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder, com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder> peakEwmaBuilder_;
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
-     *
      * @return Whether the peakEwma field is set.
      */
     @java.lang.Override
     public boolean hasPeakEwma() {
       return loadBalancingStrategyCase_ == 2;
     }
-
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
-     *
      * @return The peakEwma.
      */
     @java.lang.Override
@@ -2231,8 +2075,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     public Builder setPeakEwma(com.google.bigtable.v2.LoadBalancingOptions.PeakEwma value) {
       if (peakEwmaBuilder_ == null) {
         if (value == null) {
@@ -2246,8 +2091,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     public Builder setPeakEwma(
         com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder builderForValue) {
       if (peakEwmaBuilder_ == null) {
@@ -2259,18 +2105,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     public Builder mergePeakEwma(com.google.bigtable.v2.LoadBalancingOptions.PeakEwma value) {
       if (peakEwmaBuilder_ == null) {
-        if (loadBalancingStrategyCase_ == 2
-            && loadBalancingStrategy_
-                != com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance()) {
-          loadBalancingStrategy_ =
-              com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.newBuilder(
-                      (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (loadBalancingStrategyCase_ == 2 &&
+            loadBalancingStrategy_ != com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance()) {
+          loadBalancingStrategy_ = com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.newBuilder((com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_)
+              .mergeFrom(value).buildPartial();
         } else {
           loadBalancingStrategy_ = value;
         }
@@ -2285,8 +2128,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     public Builder clearPeakEwma() {
       if (peakEwmaBuilder_ == null) {
         if (loadBalancingStrategyCase_ == 2) {
@@ -2303,13 +2147,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     public com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder getPeakEwmaBuilder() {
       return internalGetPeakEwmaFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder getPeakEwmaOrBuilder() {
       if ((loadBalancingStrategyCase_ == 2) && (peakEwmaBuilder_ != null)) {
@@ -2321,23 +2167,18 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.PeakEwma peak_ewma = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions.PeakEwma,
-            com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder,
-            com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder>
+        com.google.bigtable.v2.LoadBalancingOptions.PeakEwma, com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder, com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder> 
         internalGetPeakEwmaFieldBuilder() {
       if (peakEwmaBuilder_ == null) {
         if (!(loadBalancingStrategyCase_ == 2)) {
-          loadBalancingStrategy_ =
-              com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance();
+          loadBalancingStrategy_ = com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.getDefaultInstance();
         }
-        peakEwmaBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.LoadBalancingOptions.PeakEwma,
-                com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder,
-                com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder>(
+        peakEwmaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.LoadBalancingOptions.PeakEwma, com.google.bigtable.v2.LoadBalancingOptions.PeakEwma.Builder, com.google.bigtable.v2.LoadBalancingOptions.PeakEwmaOrBuilder>(
                 (com.google.bigtable.v2.LoadBalancingOptions.PeakEwma) loadBalancingStrategy_,
                 getParentForChildren(),
                 isClean());
@@ -2349,24 +2190,17 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions.Random,
-            com.google.bigtable.v2.LoadBalancingOptions.Random.Builder,
-            com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder>
-        randomBuilder_;
-
+        com.google.bigtable.v2.LoadBalancingOptions.Random, com.google.bigtable.v2.LoadBalancingOptions.Random.Builder, com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder> randomBuilder_;
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
-     *
      * @return Whether the random field is set.
      */
     @java.lang.Override
     public boolean hasRandom() {
       return loadBalancingStrategyCase_ == 4;
     }
-
     /**
      * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
-     *
      * @return The random.
      */
     @java.lang.Override
@@ -2383,8 +2217,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     public Builder setRandom(com.google.bigtable.v2.LoadBalancingOptions.Random value) {
       if (randomBuilder_ == null) {
         if (value == null) {
@@ -2398,8 +2233,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     public Builder setRandom(
         com.google.bigtable.v2.LoadBalancingOptions.Random.Builder builderForValue) {
       if (randomBuilder_ == null) {
@@ -2411,18 +2247,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     public Builder mergeRandom(com.google.bigtable.v2.LoadBalancingOptions.Random value) {
       if (randomBuilder_ == null) {
-        if (loadBalancingStrategyCase_ == 4
-            && loadBalancingStrategy_
-                != com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance()) {
-          loadBalancingStrategy_ =
-              com.google.bigtable.v2.LoadBalancingOptions.Random.newBuilder(
-                      (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (loadBalancingStrategyCase_ == 4 &&
+            loadBalancingStrategy_ != com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance()) {
+          loadBalancingStrategy_ = com.google.bigtable.v2.LoadBalancingOptions.Random.newBuilder((com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_)
+              .mergeFrom(value).buildPartial();
         } else {
           loadBalancingStrategy_ = value;
         }
@@ -2437,8 +2270,9 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       loadBalancingStrategyCase_ = 4;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     public Builder clearRandom() {
       if (randomBuilder_ == null) {
         if (loadBalancingStrategyCase_ == 4) {
@@ -2455,13 +2289,15 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     public com.google.bigtable.v2.LoadBalancingOptions.Random.Builder getRandomBuilder() {
       return internalGetRandomFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder getRandomOrBuilder() {
       if ((loadBalancingStrategyCase_ == 4) && (randomBuilder_ != null)) {
@@ -2473,23 +2309,18 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code> */
+    /**
+     * <code>.google.bigtable.v2.LoadBalancingOptions.Random random = 4;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.LoadBalancingOptions.Random,
-            com.google.bigtable.v2.LoadBalancingOptions.Random.Builder,
-            com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder>
+        com.google.bigtable.v2.LoadBalancingOptions.Random, com.google.bigtable.v2.LoadBalancingOptions.Random.Builder, com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder> 
         internalGetRandomFieldBuilder() {
       if (randomBuilder_ == null) {
         if (!(loadBalancingStrategyCase_ == 4)) {
-          loadBalancingStrategy_ =
-              com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance();
+          loadBalancingStrategy_ = com.google.bigtable.v2.LoadBalancingOptions.Random.getDefaultInstance();
         }
-        randomBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.LoadBalancingOptions.Random,
-                com.google.bigtable.v2.LoadBalancingOptions.Random.Builder,
-                com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder>(
+        randomBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.LoadBalancingOptions.Random, com.google.bigtable.v2.LoadBalancingOptions.Random.Builder, com.google.bigtable.v2.LoadBalancingOptions.RandomOrBuilder>(
                 (com.google.bigtable.v2.LoadBalancingOptions.Random) loadBalancingStrategy_,
                 getParentForChildren(),
                 isClean());
@@ -2505,7 +2336,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.LoadBalancingOptions)
   private static final com.google.bigtable.v2.LoadBalancingOptions DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.LoadBalancingOptions();
   }
@@ -2514,27 +2344,27 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<LoadBalancingOptions> PARSER =
-      new com.google.protobuf.AbstractParser<LoadBalancingOptions>() {
-        @java.lang.Override
-        public LoadBalancingOptions parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<LoadBalancingOptions>
+      PARSER = new com.google.protobuf.AbstractParser<LoadBalancingOptions>() {
+    @java.lang.Override
+    public LoadBalancingOptions parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<LoadBalancingOptions> parser() {
     return PARSER;
@@ -2549,4 +2379,6 @@ public final class LoadBalancingOptions extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.LoadBalancingOptions getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

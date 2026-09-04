@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface RowOrBuilder
-    extends
+public interface RowOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.Row)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The unique key which identifies this row within its table. This is the same
    * key that's used to identify the row in, for example, a MutateRowRequest.
@@ -21,14 +18,11 @@ public interface RowOrBuilder
    * </pre>
    *
    * <code>bytes key = 1;</code>
-   *
    * @return The key.
    */
   com.google.protobuf.ByteString getKey();
 
   /**
-   *
-   *
    * <pre>
    * May be empty, but only if the entire row is empty.
    * The mutual ordering of column families is not specified.
@@ -36,11 +30,9 @@ public interface RowOrBuilder
    *
    * <code>repeated .google.bigtable.v2.Family families = 2;</code>
    */
-  java.util.List<com.google.bigtable.v2.Family> getFamiliesList();
-
+  java.util.List<com.google.bigtable.v2.Family> 
+      getFamiliesList();
   /**
-   *
-   *
    * <pre>
    * May be empty, but only if the entire row is empty.
    * The mutual ordering of column families is not specified.
@@ -49,10 +41,7 @@ public interface RowOrBuilder
    * <code>repeated .google.bigtable.v2.Family families = 2;</code>
    */
   com.google.bigtable.v2.Family getFamilies(int index);
-
   /**
-   *
-   *
    * <pre>
    * May be empty, but only if the entire row is empty.
    * The mutual ordering of column families is not specified.
@@ -61,10 +50,7 @@ public interface RowOrBuilder
    * <code>repeated .google.bigtable.v2.Family families = 2;</code>
    */
   int getFamiliesCount();
-
   /**
-   *
-   *
    * <pre>
    * May be empty, but only if the entire row is empty.
    * The mutual ordering of column families is not specified.
@@ -72,11 +58,9 @@ public interface RowOrBuilder
    *
    * <code>repeated .google.bigtable.v2.Family families = 2;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.FamilyOrBuilder> getFamiliesOrBuilderList();
-
+  java.util.List<? extends com.google.bigtable.v2.FamilyOrBuilder> 
+      getFamiliesOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * May be empty, but only if the entire row is empty.
    * The mutual ordering of column families is not specified.
@@ -84,5 +68,6 @@ public interface RowOrBuilder
    *
    * <code>repeated .google.bigtable.v2.Family families = 2;</code>
    */
-  com.google.bigtable.v2.FamilyOrBuilder getFamiliesOrBuilder(int index);
+  com.google.bigtable.v2.FamilyOrBuilder getFamiliesOrBuilder(
+      int index);
 }

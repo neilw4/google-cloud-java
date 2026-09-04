@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionClientConfigurationOrBuilder
-    extends
+public interface SessionClientConfigurationOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionClientConfiguration)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * What share of requests should operate on a session,. The rest should
    * operate on the old-style API. If provided, this should apply to all
@@ -21,156 +18,103 @@ public interface SessionClientConfigurationOrBuilder
    * </pre>
    *
    * <code>float session_load = 1;</code>
-   *
    * @return The sessionLoad.
    */
   float getSessionLoad();
 
   /**
-   *
-   *
    * <pre>
    * How load should be divered to sessions.
    * </pre>
    *
-   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
    * @return Whether the sessionDiversionConfiguration field is set.
    */
   boolean hasSessionDiversionConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * How load should be divered to sessions.
    * </pre>
    *
-   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
    * @return The sessionDiversionConfiguration.
    */
   com.google.bigtable.v2.SessionDiversionConfiguration getSessionDiversionConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * How load should be divered to sessions.
    * </pre>
    *
-   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;
-   * </code>
+   * <code>.google.bigtable.v2.SessionDiversionConfiguration session_diversion_configuration = 5;</code>
    */
-  com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder
-      getSessionDiversionConfigurationOrBuilder();
+  com.google.bigtable.v2.SessionDiversionConfigurationOrBuilder getSessionDiversionConfigurationOrBuilder();
 
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
-   *
    * @return Whether the loadBalancingOptions field is set.
    */
   boolean hasLoadBalancingOptions();
-
   /**
    * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
-   *
    * @return The loadBalancingOptions.
    */
   com.google.bigtable.v2.LoadBalancingOptions getLoadBalancingOptions();
-
-  /** <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.LoadBalancingOptions load_balancing_options = 2;</code>
+   */
   com.google.bigtable.v2.LoadBalancingOptionsOrBuilder getLoadBalancingOptionsOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
    * @return Whether the channelConfiguration field is set.
    */
   boolean hasChannelConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
    * @return The channelConfiguration.
    */
-  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration
-      getChannelConfiguration();
-
+  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration getChannelConfiguration();
   /**
-   *
-   *
    * <pre>
    * Configuration for the channel pool.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;
-   * </code>
+   * <code>.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfiguration channel_configuration = 3;</code>
    */
-  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder
-      getChannelConfigurationOrBuilder();
+  com.google.bigtable.v2.SessionClientConfiguration.ChannelPoolConfigurationOrBuilder getChannelConfigurationOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
    * @return Whether the sessionPoolConfiguration field is set.
    */
   boolean hasSessionPoolConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
    * @return The sessionPoolConfiguration.
    */
-  com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration
-      getSessionPoolConfiguration();
-
+  com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration getSessionPoolConfiguration();
   /**
-   *
-   *
    * <pre>
    * Configuration for the session pools.
    * </pre>
    *
-   * <code>
-   * .google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;
-   * </code>
+   * <code>.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfiguration session_pool_configuration = 4;</code>
    */
-  com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder
-      getSessionPoolConfigurationOrBuilder();
+  com.google.bigtable.v2.SessionClientConfiguration.SessionPoolConfigurationOrBuilder getSessionPoolConfigurationOrBuilder();
 }

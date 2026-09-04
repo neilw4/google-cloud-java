@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Open sessions for an AuthorizedView. Internal usage only.
  * </pre>
@@ -15,82 +13,93 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.OpenAuthorizedViewRequest}
  */
 @com.google.protobuf.Generated
-public final class OpenAuthorizedViewRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class OpenAuthorizedViewRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.OpenAuthorizedViewRequest)
     OpenAuthorizedViewRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "OpenAuthorizedViewRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "OpenAuthorizedViewRequest");
   }
-
   // Use OpenAuthorizedViewRequest.newBuilder() to construct.
   private OpenAuthorizedViewRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private OpenAuthorizedViewRequest() {
     authorizedViewName_ = "";
     appProfileId_ = "";
     permission_ = 0;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.OpenAuthorizedViewRequest.class,
-            com.google.bigtable.v2.OpenAuthorizedViewRequest.Builder.class);
+            com.google.bigtable.v2.OpenAuthorizedViewRequest.class, com.google.bigtable.v2.OpenAuthorizedViewRequest.Builder.class);
   }
 
-  /** Protobuf enum {@code google.bigtable.v2.OpenAuthorizedViewRequest.Permission} */
-  public enum Permission implements com.google.protobuf.ProtocolMessageEnum {
-    /** <code>PERMISSION_UNSET = 0;</code> */
+  /**
+   * Protobuf enum {@code google.bigtable.v2.OpenAuthorizedViewRequest.Permission}
+   */
+  public enum Permission
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PERMISSION_UNSET = 0;</code>
+     */
     PERMISSION_UNSET(0),
-    /** <code>PERMISSION_READ = 1;</code> */
+    /**
+     * <code>PERMISSION_READ = 1;</code>
+     */
     PERMISSION_READ(1),
-    /** <code>PERMISSION_WRITE = 2;</code> */
+    /**
+     * <code>PERMISSION_WRITE = 2;</code>
+     */
     PERMISSION_WRITE(2),
-    /** <code>PERMISSION_READ_WRITE = 3;</code> */
+    /**
+     * <code>PERMISSION_READ_WRITE = 3;</code>
+     */
     PERMISSION_READ_WRITE(3),
     UNRECOGNIZED(-1),
     ;
 
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Permission");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Permission");
     }
-
-    /** <code>PERMISSION_UNSET = 0;</code> */
+    /**
+     * <code>PERMISSION_UNSET = 0;</code>
+     */
     public static final int PERMISSION_UNSET_VALUE = 0;
-
-    /** <code>PERMISSION_READ = 1;</code> */
+    /**
+     * <code>PERMISSION_READ = 1;</code>
+     */
     public static final int PERMISSION_READ_VALUE = 1;
-
-    /** <code>PERMISSION_WRITE = 2;</code> */
+    /**
+     * <code>PERMISSION_WRITE = 2;</code>
+     */
     public static final int PERMISSION_WRITE_VALUE = 2;
-
-    /** <code>PERMISSION_READ_WRITE = 3;</code> */
+    /**
+     * <code>PERMISSION_READ_WRITE = 3;</code>
+     */
     public static final int PERMISSION_READ_WRITE_VALUE = 3;
+
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -116,51 +125,50 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
      */
     public static Permission forNumber(int value) {
       switch (value) {
-        case 0:
-          return PERMISSION_UNSET;
-        case 1:
-          return PERMISSION_READ;
-        case 2:
-          return PERMISSION_WRITE;
-        case 3:
-          return PERMISSION_READ_WRITE;
-        default:
-          return null;
+        case 0: return PERMISSION_UNSET;
+        case 1: return PERMISSION_READ;
+        case 2: return PERMISSION_WRITE;
+        case 3: return PERMISSION_READ_WRITE;
+        default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<Permission> internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<Permission>
+        internalGetValueMap() {
       return internalValueMap;
     }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Permission> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Permission>() {
+            public Permission findValueByNumber(int number) {
+              return Permission.forNumber(number);
+            }
+          };
 
-    private static final com.google.protobuf.Internal.EnumLiteMap<Permission> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Permission>() {
-          public Permission findValueByNumber(int number) {
-            return Permission.forNumber(number);
-          }
-        };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
-
-    public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+    public static com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
       return com.google.bigtable.v2.OpenAuthorizedViewRequest.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final Permission[] VALUES = values();
 
-    public static Permission valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static Permission valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -178,20 +186,15 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
   }
 
   public static final int AUTHORIZED_VIEW_NAME_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object authorizedViewName_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The Authorized view name to read and write from. Values are of the form
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
    * </pre>
    *
    * <code>string authorized_view_name = 1;</code>
-   *
    * @return The authorizedViewName.
    */
   @java.lang.Override
@@ -200,31 +203,30 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       authorizedViewName_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The Authorized view name to read and write from. Values are of the form
    * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
    * </pre>
    *
    * <code>string authorized_view_name = 1;</code>
-   *
    * @return The bytes for authorizedViewName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAuthorizedViewNameBytes() {
+  public com.google.protobuf.ByteString
+      getAuthorizedViewNameBytes() {
     java.lang.Object ref = authorizedViewName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       authorizedViewName_ = b;
       return b;
     } else {
@@ -233,19 +235,14 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
   }
 
   public static final int APP_PROFILE_ID_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object appProfileId_ = "";
-
   /**
-   *
-   *
    * <pre>
    * The app profile id to use for the authorized view sessions.
    * </pre>
    *
    * <code>string app_profile_id = 2;</code>
-   *
    * @return The appProfileId.
    */
   @java.lang.Override
@@ -254,30 +251,29 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       appProfileId_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * The app profile id to use for the authorized view sessions.
    * </pre>
    *
    * <code>string app_profile_id = 2;</code>
-   *
    * @return The bytes for appProfileId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getAppProfileIdBytes() {
+  public com.google.protobuf.ByteString
+      getAppProfileIdBytes() {
     java.lang.Object ref = appProfileId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       appProfileId_ = b;
       return b;
     } else {
@@ -287,45 +283,31 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
 
   public static final int PERMISSION_FIELD_NUMBER = 3;
   private int permission_ = 0;
-
   /**
-   *
-   *
    * <pre>
    * Permission for the session.
    * </pre>
    *
    * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-   *
    * @return The enum numeric value on the wire for permission.
    */
-  @java.lang.Override
-  public int getPermissionValue() {
+  @java.lang.Override public int getPermissionValue() {
     return permission_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Permission for the session.
    * </pre>
    *
    * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-   *
    * @return The permission.
    */
-  @java.lang.Override
-  public com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission getPermission() {
-    com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission result =
-        com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.forNumber(permission_);
-    return result == null
-        ? com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.UNRECOGNIZED
-        : result;
+  @java.lang.Override public com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission getPermission() {
+    com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission result = com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.forNumber(permission_);
+    return result == null ? com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -337,16 +319,15 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(authorizedViewName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, authorizedViewName_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(appProfileId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, appProfileId_);
     }
-    if (permission_
-        != com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.PERMISSION_UNSET
-            .getNumber()) {
+    if (permission_ != com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.PERMISSION_UNSET.getNumber()) {
       output.writeEnum(3, permission_);
     }
     getUnknownFields().writeTo(output);
@@ -364,10 +345,9 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(appProfileId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, appProfileId_);
     }
-    if (permission_
-        != com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.PERMISSION_UNSET
-            .getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(3, permission_);
+    if (permission_ != com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.PERMISSION_UNSET.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, permission_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -377,16 +357,17 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.OpenAuthorizedViewRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.OpenAuthorizedViewRequest other =
-        (com.google.bigtable.v2.OpenAuthorizedViewRequest) obj;
+    com.google.bigtable.v2.OpenAuthorizedViewRequest other = (com.google.bigtable.v2.OpenAuthorizedViewRequest) obj;
 
-    if (!getAuthorizedViewName().equals(other.getAuthorizedViewName())) return false;
-    if (!getAppProfileId().equals(other.getAppProfileId())) return false;
+    if (!getAuthorizedViewName()
+        .equals(other.getAuthorizedViewName())) return false;
+    if (!getAppProfileId()
+        .equals(other.getAppProfileId())) return false;
     if (permission_ != other.permission_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -410,137 +391,132 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     return hash;
   }
 
-  public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.OpenAuthorizedViewRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.OpenAuthorizedViewRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Open sessions for an AuthorizedView. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.OpenAuthorizedViewRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.OpenAuthorizedViewRequest)
       com.google.bigtable.v2.OpenAuthorizedViewRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.OpenAuthorizedViewRequest.class,
-              com.google.bigtable.v2.OpenAuthorizedViewRequest.Builder.class);
+              com.google.bigtable.v2.OpenAuthorizedViewRequest.class, com.google.bigtable.v2.OpenAuthorizedViewRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.OpenAuthorizedViewRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -552,9 +528,9 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenAuthorizedViewRequest_descriptor;
     }
 
     @java.lang.Override
@@ -573,11 +549,8 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
 
     @java.lang.Override
     public com.google.bigtable.v2.OpenAuthorizedViewRequest buildPartial() {
-      com.google.bigtable.v2.OpenAuthorizedViewRequest result =
-          new com.google.bigtable.v2.OpenAuthorizedViewRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.OpenAuthorizedViewRequest result = new com.google.bigtable.v2.OpenAuthorizedViewRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -598,7 +571,7 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.OpenAuthorizedViewRequest) {
-        return mergeFrom((com.google.bigtable.v2.OpenAuthorizedViewRequest) other);
+        return mergeFrom((com.google.bigtable.v2.OpenAuthorizedViewRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -606,8 +579,7 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.OpenAuthorizedViewRequest other) {
-      if (other == com.google.bigtable.v2.OpenAuthorizedViewRequest.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.OpenAuthorizedViewRequest.getDefaultInstance()) return this;
       if (!other.getAuthorizedViewName().isEmpty()) {
         authorizedViewName_ = other.authorizedViewName_;
         bitField0_ |= 0x00000001;
@@ -647,31 +619,27 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                authorizedViewName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                appProfileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 24:
-              {
-                permission_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              authorizedViewName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              appProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              permission_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -681,27 +649,23 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object authorizedViewName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The Authorized view name to read and write from. Values are of the form
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
      * <code>string authorized_view_name = 1;</code>
-     *
      * @return The authorizedViewName.
      */
     public java.lang.String getAuthorizedViewName() {
       java.lang.Object ref = authorizedViewName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         authorizedViewName_ = s;
         return s;
@@ -709,64 +673,53 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The Authorized view name to read and write from. Values are of the form
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
      * <code>string authorized_view_name = 1;</code>
-     *
      * @return The bytes for authorizedViewName.
      */
-    public com.google.protobuf.ByteString getAuthorizedViewNameBytes() {
+    public com.google.protobuf.ByteString
+        getAuthorizedViewNameBytes() {
       java.lang.Object ref = authorizedViewName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         authorizedViewName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The Authorized view name to read and write from. Values are of the form
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
      * <code>string authorized_view_name = 1;</code>
-     *
      * @param value The authorizedViewName to set.
      * @return This builder for chaining.
      */
-    public Builder setAuthorizedViewName(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAuthorizedViewName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       authorizedViewName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The Authorized view name to read and write from. Values are of the form
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
      * <code>string authorized_view_name = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAuthorizedViewName() {
@@ -775,24 +728,19 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The Authorized view name to read and write from. Values are of the form
      * `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;`.
      * </pre>
      *
      * <code>string authorized_view_name = 1;</code>
-     *
      * @param value The bytes for authorizedViewName to set.
      * @return This builder for chaining.
      */
-    public Builder setAuthorizedViewNameBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAuthorizedViewNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       authorizedViewName_ = value;
       bitField0_ |= 0x00000001;
@@ -801,22 +749,19 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     }
 
     private java.lang.Object appProfileId_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The app profile id to use for the authorized view sessions.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @return The appProfileId.
      */
     public java.lang.String getAppProfileId() {
       java.lang.Object ref = appProfileId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appProfileId_ = s;
         return s;
@@ -824,61 +769,50 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The app profile id to use for the authorized view sessions.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @return The bytes for appProfileId.
      */
-    public com.google.protobuf.ByteString getAppProfileIdBytes() {
+    public com.google.protobuf.ByteString
+        getAppProfileIdBytes() {
       java.lang.Object ref = appProfileId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         appProfileId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The app profile id to use for the authorized view sessions.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @param value The appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileId(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The app profile id to use for the authorized view sessions.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearAppProfileId() {
@@ -887,23 +821,18 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The app profile id to use for the authorized view sessions.
      * </pre>
      *
      * <code>string app_profile_id = 2;</code>
-     *
      * @param value The bytes for appProfileId to set.
      * @return This builder for chaining.
      */
-    public Builder setAppProfileIdBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setAppProfileIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       appProfileId_ = value;
       bitField0_ |= 0x00000002;
@@ -912,32 +841,23 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     }
 
     private int permission_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * Permission for the session.
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-     *
      * @return The enum numeric value on the wire for permission.
      */
-    @java.lang.Override
-    public int getPermissionValue() {
+    @java.lang.Override public int getPermissionValue() {
       return permission_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Permission for the session.
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-     *
      * @param value The enum numeric value on the wire for permission to set.
      * @return This builder for chaining.
      */
@@ -947,59 +867,41 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Permission for the session.
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-     *
      * @return The permission.
      */
     @java.lang.Override
     public com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission getPermission() {
-      com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission result =
-          com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.forNumber(permission_);
-      return result == null
-          ? com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.UNRECOGNIZED
-          : result;
+      com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission result = com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.forNumber(permission_);
+      return result == null ? com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission.UNRECOGNIZED : result;
     }
-
     /**
-     *
-     *
      * <pre>
      * Permission for the session.
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-     *
      * @param value The permission to set.
      * @return This builder for chaining.
      */
-    public Builder setPermission(
-        com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setPermission(com.google.bigtable.v2.OpenAuthorizedViewRequest.Permission value) {
+      if (value == null) { throw new NullPointerException(); }
       bitField0_ |= 0x00000004;
       permission_ = value.getNumber();
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Permission for the session.
      * </pre>
      *
      * <code>.google.bigtable.v2.OpenAuthorizedViewRequest.Permission permission = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPermission() {
@@ -1014,7 +916,6 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.OpenAuthorizedViewRequest)
   private static final com.google.bigtable.v2.OpenAuthorizedViewRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.OpenAuthorizedViewRequest();
   }
@@ -1023,27 +924,27 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OpenAuthorizedViewRequest> PARSER =
-      new com.google.protobuf.AbstractParser<OpenAuthorizedViewRequest>() {
-        @java.lang.Override
-        public OpenAuthorizedViewRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<OpenAuthorizedViewRequest>
+      PARSER = new com.google.protobuf.AbstractParser<OpenAuthorizedViewRequest>() {
+    @java.lang.Override
+    public OpenAuthorizedViewRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<OpenAuthorizedViewRequest> parser() {
     return PARSER;
@@ -1058,4 +959,6 @@ public final class OpenAuthorizedViewRequest extends com.google.protobuf.Generat
   public com.google.bigtable.v2.OpenAuthorizedViewRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

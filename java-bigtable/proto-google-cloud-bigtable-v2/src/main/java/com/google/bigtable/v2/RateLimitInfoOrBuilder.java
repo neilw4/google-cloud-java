@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface RateLimitInfoOrBuilder
-    extends
+public interface RateLimitInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.RateLimitInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Time that clients should wait before adjusting the target rate again.
    * If clients adjust rate too frequently, the impact of the previous
@@ -24,14 +21,10 @@ public interface RateLimitInfoOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration period = 1;</code>
-   *
    * @return Whether the period field is set.
    */
   boolean hasPeriod();
-
   /**
-   *
-   *
    * <pre>
    * Time that clients should wait before adjusting the target rate again.
    * If clients adjust rate too frequently, the impact of the previous
@@ -42,14 +35,10 @@ public interface RateLimitInfoOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration period = 1;</code>
-   *
    * @return The period.
    */
   com.google.protobuf.Duration getPeriod();
-
   /**
-   *
-   *
    * <pre>
    * Time that clients should wait before adjusting the target rate again.
    * If clients adjust rate too frequently, the impact of the previous
@@ -64,8 +53,6 @@ public interface RateLimitInfoOrBuilder
   com.google.protobuf.DurationOrBuilder getPeriodOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * If it has been at least one `period` since the last load adjustment, the
    * client should multiply the current load by this value to get the new target
@@ -79,7 +66,6 @@ public interface RateLimitInfoOrBuilder
    * </pre>
    *
    * <code>double factor = 2;</code>
-   *
    * @return The factor.
    */
   double getFactor();

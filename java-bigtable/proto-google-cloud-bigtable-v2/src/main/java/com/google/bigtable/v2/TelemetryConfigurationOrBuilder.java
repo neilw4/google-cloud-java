@@ -6,33 +6,25 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface TelemetryConfigurationOrBuilder
-    extends
+public interface TelemetryConfigurationOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.TelemetryConfiguration)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Selector for the debug counters that should be uploaded.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-   *
    * @return The enum numeric value on the wire for debugTagLevel.
    */
   int getDebugTagLevelValue();
-
   /**
-   *
-   *
    * <pre>
    * Selector for the debug counters that should be uploaded.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration.Level debug_tag_level = 1;</code>
-   *
    * @return The debugTagLevel.
    */
   com.google.bigtable.v2.TelemetryConfiguration.Level getDebugTagLevel();

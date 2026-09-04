@@ -6,40 +6,46 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionReadRowsResponseOrBuilder
-    extends
+public interface SessionReadRowsResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionReadRowsResponse)
     com.google.protobuf.MessageOrBuilder {
 
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-  java.util.List<com.google.bigtable.v2.Row> getRowList();
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
+  java.util.List<com.google.bigtable.v2.Row> 
+      getRowList();
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   com.google.bigtable.v2.Row getRow(int index);
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
   int getRowCount();
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-  java.util.List<? extends com.google.bigtable.v2.RowOrBuilder> getRowOrBuilderList();
-
-  /** <code>repeated .google.bigtable.v2.Row row = 1;</code> */
-  com.google.bigtable.v2.RowOrBuilder getRowOrBuilder(int index);
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
+  java.util.List<? extends com.google.bigtable.v2.RowOrBuilder> 
+      getRowOrBuilderList();
+  /**
+   * <code>repeated .google.bigtable.v2.Row row = 1;</code>
+   */
+  com.google.bigtable.v2.RowOrBuilder getRowOrBuilder(
+      int index);
 
   /**
    * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
-   *
    * @return Whether the stats field is set.
    */
   boolean hasStats();
-
   /**
    * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
-   *
    * @return The stats.
    */
   com.google.bigtable.v2.RequestStats getStats();
-
-  /** <code>.google.bigtable.v2.RequestStats stats = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.RequestStats stats = 2;</code>
+   */
   com.google.bigtable.v2.RequestStatsOrBuilder getStatsOrBuilder();
 }

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * A request wrapper for operations on an authorized view. Internal usage only.
  * </pre>
@@ -15,52 +13,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.AuthorizedViewRequest}
  */
 @com.google.protobuf.Generated
-public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class AuthorizedViewRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.AuthorizedViewRequest)
     AuthorizedViewRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "AuthorizedViewRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "AuthorizedViewRequest");
   }
-
   // Use AuthorizedViewRequest.newBuilder() to construct.
   private AuthorizedViewRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private AuthorizedViewRequest() {
+  }
 
-  private AuthorizedViewRequest() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_AuthorizedViewRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_AuthorizedViewRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_AuthorizedViewRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_AuthorizedViewRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.AuthorizedViewRequest.class,
-            com.google.bigtable.v2.AuthorizedViewRequest.Builder.class);
+            com.google.bigtable.v2.AuthorizedViewRequest.class, com.google.bigtable.v2.AuthorizedViewRequest.Builder.class);
   }
 
   private int payloadCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object payload_;
-
   public enum PayloadCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     READ_ROW(1),
     MUTATE_ROW(2),
@@ -68,11 +59,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     CHECK_AND_MUTATE_ROW(4),
     PAYLOAD_NOT_SET(0);
     private final int value;
-
     private PayloadCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -85,169 +74,150 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
 
     public static PayloadCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return READ_ROW;
-        case 2:
-          return MUTATE_ROW;
-        case 3:
-          return READ_ROWS;
-        case 4:
-          return CHECK_AND_MUTATE_ROW;
-        case 0:
-          return PAYLOAD_NOT_SET;
-        default:
-          return null;
+        case 1: return READ_ROW;
+        case 2: return MUTATE_ROW;
+        case 3: return READ_ROWS;
+        case 4: return CHECK_AND_MUTATE_ROW;
+        case 0: return PAYLOAD_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public PayloadCase getPayloadCase() {
-    return PayloadCase.forNumber(payloadCase_);
+  public PayloadCase
+  getPayloadCase() {
+    return PayloadCase.forNumber(
+        payloadCase_);
   }
 
   public static final int READ_ROW_FIELD_NUMBER = 1;
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
-   *
    * @return Whether the readRow field is set.
    */
   @java.lang.Override
   public boolean hasReadRow() {
     return payloadCase_ == 1;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
-   *
    * @return The readRow.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowRequest getReadRow() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.SessionReadRowRequest) payload_;
+       return (com.google.bigtable.v2.SessionReadRowRequest) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowRequestOrBuilder getReadRowOrBuilder() {
     if (payloadCase_ == 1) {
-      return (com.google.bigtable.v2.SessionReadRowRequest) payload_;
+       return (com.google.bigtable.v2.SessionReadRowRequest) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance();
   }
 
   public static final int MUTATE_ROW_FIELD_NUMBER = 2;
-
   /**
    * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
-   *
    * @return Whether the mutateRow field is set.
    */
   @java.lang.Override
   public boolean hasMutateRow() {
     return payloadCase_ == 2;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
-   *
    * @return The mutateRow.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionMutateRowRequest getMutateRow() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.SessionMutateRowRequest) payload_;
+       return (com.google.bigtable.v2.SessionMutateRowRequest) payload_;
     }
     return com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionMutateRowRequestOrBuilder getMutateRowOrBuilder() {
     if (payloadCase_ == 2) {
-      return (com.google.bigtable.v2.SessionMutateRowRequest) payload_;
+       return (com.google.bigtable.v2.SessionMutateRowRequest) payload_;
     }
     return com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance();
   }
 
   public static final int READ_ROWS_FIELD_NUMBER = 3;
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
-   *
    * @return Whether the readRows field is set.
    */
   @java.lang.Override
   public boolean hasReadRows() {
     return payloadCase_ == 3;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
-   *
    * @return The readRows.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowsRequest getReadRows() {
     if (payloadCase_ == 3) {
-      return (com.google.bigtable.v2.SessionReadRowsRequest) payload_;
+       return (com.google.bigtable.v2.SessionReadRowsRequest) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.SessionReadRowsRequestOrBuilder getReadRowsOrBuilder() {
     if (payloadCase_ == 3) {
-      return (com.google.bigtable.v2.SessionReadRowsRequest) payload_;
+       return (com.google.bigtable.v2.SessionReadRowsRequest) payload_;
     }
     return com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance();
   }
 
   public static final int CHECK_AND_MUTATE_ROW_FIELD_NUMBER = 4;
-
   /**
    * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
-   *
    * @return Whether the checkAndMutateRow field is set.
    */
   @java.lang.Override
   public boolean hasCheckAndMutateRow() {
     return payloadCase_ == 4;
   }
-
   /**
    * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
-   *
    * @return The checkAndMutateRow.
    */
   @java.lang.Override
   public com.google.bigtable.v2.SessionCheckAndMutateRowRequest getCheckAndMutateRow() {
     if (payloadCase_ == 4) {
-      return (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_;
+       return (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_;
     }
     return com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance();
   }
-
-  /** <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code> */
+  /**
+   * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
+   */
   @java.lang.Override
-  public com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder
-      getCheckAndMutateRowOrBuilder() {
+  public com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder getCheckAndMutateRowOrBuilder() {
     if (payloadCase_ == 4) {
-      return (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_;
+       return (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_;
     }
     return com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -259,7 +229,8 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (payloadCase_ == 1) {
       output.writeMessage(1, (com.google.bigtable.v2.SessionReadRowRequest) payload_);
     }
@@ -282,24 +253,20 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
 
     size = 0;
     if (payloadCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1, (com.google.bigtable.v2.SessionReadRowRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.SessionReadRowRequest) payload_);
     }
     if (payloadCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.SessionMutateRowRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.SessionMutateRowRequest) payload_);
     }
     if (payloadCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              3, (com.google.bigtable.v2.SessionReadRowsRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.bigtable.v2.SessionReadRowsRequest) payload_);
     }
     if (payloadCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -309,27 +276,30 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.AuthorizedViewRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.AuthorizedViewRequest other =
-        (com.google.bigtable.v2.AuthorizedViewRequest) obj;
+    com.google.bigtable.v2.AuthorizedViewRequest other = (com.google.bigtable.v2.AuthorizedViewRequest) obj;
 
     if (!getPayloadCase().equals(other.getPayloadCase())) return false;
     switch (payloadCase_) {
       case 1:
-        if (!getReadRow().equals(other.getReadRow())) return false;
+        if (!getReadRow()
+            .equals(other.getReadRow())) return false;
         break;
       case 2:
-        if (!getMutateRow().equals(other.getMutateRow())) return false;
+        if (!getMutateRow()
+            .equals(other.getMutateRow())) return false;
         break;
       case 3:
-        if (!getReadRows().equals(other.getReadRows())) return false;
+        if (!getReadRows()
+            .equals(other.getReadRows())) return false;
         break;
       case 4:
-        if (!getCheckAndMutateRow().equals(other.getCheckAndMutateRow())) return false;
+        if (!getCheckAndMutateRow()
+            .equals(other.getCheckAndMutateRow())) return false;
         break;
       case 0:
       default:
@@ -370,137 +340,132 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     return hash;
   }
 
-  public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.AuthorizedViewRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.AuthorizedViewRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.AuthorizedViewRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.AuthorizedViewRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.AuthorizedViewRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * A request wrapper for operations on an authorized view. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.AuthorizedViewRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.AuthorizedViewRequest)
       com.google.bigtable.v2.AuthorizedViewRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_AuthorizedViewRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_AuthorizedViewRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_AuthorizedViewRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_AuthorizedViewRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.AuthorizedViewRequest.class,
-              com.google.bigtable.v2.AuthorizedViewRequest.Builder.class);
+              com.google.bigtable.v2.AuthorizedViewRequest.class, com.google.bigtable.v2.AuthorizedViewRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.AuthorizedViewRequest.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -523,9 +488,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_AuthorizedViewRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_AuthorizedViewRequest_descriptor;
     }
 
     @java.lang.Override
@@ -544,11 +509,8 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
 
     @java.lang.Override
     public com.google.bigtable.v2.AuthorizedViewRequest buildPartial() {
-      com.google.bigtable.v2.AuthorizedViewRequest result =
-          new com.google.bigtable.v2.AuthorizedViewRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.AuthorizedViewRequest result = new com.google.bigtable.v2.AuthorizedViewRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -561,16 +523,20 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     private void buildPartialOneofs(com.google.bigtable.v2.AuthorizedViewRequest result) {
       result.payloadCase_ = payloadCase_;
       result.payload_ = this.payload_;
-      if (payloadCase_ == 1 && readRowBuilder_ != null) {
+      if (payloadCase_ == 1 &&
+          readRowBuilder_ != null) {
         result.payload_ = readRowBuilder_.build();
       }
-      if (payloadCase_ == 2 && mutateRowBuilder_ != null) {
+      if (payloadCase_ == 2 &&
+          mutateRowBuilder_ != null) {
         result.payload_ = mutateRowBuilder_.build();
       }
-      if (payloadCase_ == 3 && readRowsBuilder_ != null) {
+      if (payloadCase_ == 3 &&
+          readRowsBuilder_ != null) {
         result.payload_ = readRowsBuilder_.build();
       }
-      if (payloadCase_ == 4 && checkAndMutateRowBuilder_ != null) {
+      if (payloadCase_ == 4 &&
+          checkAndMutateRowBuilder_ != null) {
         result.payload_ = checkAndMutateRowBuilder_.build();
       }
     }
@@ -578,7 +544,7 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.AuthorizedViewRequest) {
-        return mergeFrom((com.google.bigtable.v2.AuthorizedViewRequest) other);
+        return mergeFrom((com.google.bigtable.v2.AuthorizedViewRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -588,30 +554,25 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     public Builder mergeFrom(com.google.bigtable.v2.AuthorizedViewRequest other) {
       if (other == com.google.bigtable.v2.AuthorizedViewRequest.getDefaultInstance()) return this;
       switch (other.getPayloadCase()) {
-        case READ_ROW:
-          {
-            mergeReadRow(other.getReadRow());
-            break;
-          }
-        case MUTATE_ROW:
-          {
-            mergeMutateRow(other.getMutateRow());
-            break;
-          }
-        case READ_ROWS:
-          {
-            mergeReadRows(other.getReadRows());
-            break;
-          }
-        case CHECK_AND_MUTATE_ROW:
-          {
-            mergeCheckAndMutateRow(other.getCheckAndMutateRow());
-            break;
-          }
-        case PAYLOAD_NOT_SET:
-          {
-            break;
-          }
+        case READ_ROW: {
+          mergeReadRow(other.getReadRow());
+          break;
+        }
+        case MUTATE_ROW: {
+          mergeMutateRow(other.getMutateRow());
+          break;
+        }
+        case READ_ROWS: {
+          mergeReadRows(other.getReadRows());
+          break;
+        }
+        case CHECK_AND_MUTATE_ROW: {
+          mergeCheckAndMutateRow(other.getCheckAndMutateRow());
+          break;
+        }
+        case PAYLOAD_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -639,40 +600,40 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(internalGetReadRowFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetMutateRowFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(
-                    internalGetReadRowsFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 3;
-                break;
-              } // case 26
-            case 34:
-              {
-                input.readMessage(
-                    internalGetCheckAndMutateRowFieldBuilder().getBuilder(), extensionRegistry);
-                payloadCase_ = 4;
-                break;
-              } // case 34
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetReadRowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetMutateRowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetReadRowsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetCheckAndMutateRowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 4;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -682,12 +643,12 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       } // finally
       return this;
     }
-
     private int payloadCase_ = 0;
     private java.lang.Object payload_;
-
-    public PayloadCase getPayloadCase() {
-      return PayloadCase.forNumber(payloadCase_);
+    public PayloadCase
+        getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
     }
 
     public Builder clearPayload() {
@@ -700,24 +661,17 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowRequest,
-            com.google.bigtable.v2.SessionReadRowRequest.Builder,
-            com.google.bigtable.v2.SessionReadRowRequestOrBuilder>
-        readRowBuilder_;
-
+        com.google.bigtable.v2.SessionReadRowRequest, com.google.bigtable.v2.SessionReadRowRequest.Builder, com.google.bigtable.v2.SessionReadRowRequestOrBuilder> readRowBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
-     *
      * @return Whether the readRow field is set.
      */
     @java.lang.Override
     public boolean hasReadRow() {
       return payloadCase_ == 1;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
-     *
      * @return The readRow.
      */
     @java.lang.Override
@@ -734,8 +688,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     public Builder setReadRow(com.google.bigtable.v2.SessionReadRowRequest value) {
       if (readRowBuilder_ == null) {
         if (value == null) {
@@ -749,8 +704,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     public Builder setReadRow(
         com.google.bigtable.v2.SessionReadRowRequest.Builder builderForValue) {
       if (readRowBuilder_ == null) {
@@ -762,17 +718,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     public Builder mergeReadRow(com.google.bigtable.v2.SessionReadRowRequest value) {
       if (readRowBuilder_ == null) {
-        if (payloadCase_ == 1
-            && payload_ != com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionReadRowRequest.newBuilder(
-                      (com.google.bigtable.v2.SessionReadRowRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 1 &&
+            payload_ != com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionReadRowRequest.newBuilder((com.google.bigtable.v2.SessionReadRowRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -787,8 +741,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 1;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     public Builder clearReadRow() {
       if (readRowBuilder_ == null) {
         if (payloadCase_ == 1) {
@@ -805,13 +760,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     public com.google.bigtable.v2.SessionReadRowRequest.Builder getReadRowBuilder() {
       return internalGetReadRowFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.SessionReadRowRequestOrBuilder getReadRowOrBuilder() {
       if ((payloadCase_ == 1) && (readRowBuilder_ != null)) {
@@ -823,22 +780,18 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowRequest read_row = 1;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowRequest,
-            com.google.bigtable.v2.SessionReadRowRequest.Builder,
-            com.google.bigtable.v2.SessionReadRowRequestOrBuilder>
+        com.google.bigtable.v2.SessionReadRowRequest, com.google.bigtable.v2.SessionReadRowRequest.Builder, com.google.bigtable.v2.SessionReadRowRequestOrBuilder> 
         internalGetReadRowFieldBuilder() {
       if (readRowBuilder_ == null) {
         if (!(payloadCase_ == 1)) {
           payload_ = com.google.bigtable.v2.SessionReadRowRequest.getDefaultInstance();
         }
-        readRowBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionReadRowRequest,
-                com.google.bigtable.v2.SessionReadRowRequest.Builder,
-                com.google.bigtable.v2.SessionReadRowRequestOrBuilder>(
+        readRowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionReadRowRequest, com.google.bigtable.v2.SessionReadRowRequest.Builder, com.google.bigtable.v2.SessionReadRowRequestOrBuilder>(
                 (com.google.bigtable.v2.SessionReadRowRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -850,24 +803,17 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionMutateRowRequest,
-            com.google.bigtable.v2.SessionMutateRowRequest.Builder,
-            com.google.bigtable.v2.SessionMutateRowRequestOrBuilder>
-        mutateRowBuilder_;
-
+        com.google.bigtable.v2.SessionMutateRowRequest, com.google.bigtable.v2.SessionMutateRowRequest.Builder, com.google.bigtable.v2.SessionMutateRowRequestOrBuilder> mutateRowBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
-     *
      * @return Whether the mutateRow field is set.
      */
     @java.lang.Override
     public boolean hasMutateRow() {
       return payloadCase_ == 2;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
-     *
      * @return The mutateRow.
      */
     @java.lang.Override
@@ -884,8 +830,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     public Builder setMutateRow(com.google.bigtable.v2.SessionMutateRowRequest value) {
       if (mutateRowBuilder_ == null) {
         if (value == null) {
@@ -899,8 +846,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     public Builder setMutateRow(
         com.google.bigtable.v2.SessionMutateRowRequest.Builder builderForValue) {
       if (mutateRowBuilder_ == null) {
@@ -912,17 +860,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     public Builder mergeMutateRow(com.google.bigtable.v2.SessionMutateRowRequest value) {
       if (mutateRowBuilder_ == null) {
-        if (payloadCase_ == 2
-            && payload_ != com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionMutateRowRequest.newBuilder(
-                      (com.google.bigtable.v2.SessionMutateRowRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 2 &&
+            payload_ != com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionMutateRowRequest.newBuilder((com.google.bigtable.v2.SessionMutateRowRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -937,8 +883,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 2;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     public Builder clearMutateRow() {
       if (mutateRowBuilder_ == null) {
         if (payloadCase_ == 2) {
@@ -955,13 +902,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     public com.google.bigtable.v2.SessionMutateRowRequest.Builder getMutateRowBuilder() {
       return internalGetMutateRowFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.SessionMutateRowRequestOrBuilder getMutateRowOrBuilder() {
       if ((payloadCase_ == 2) && (mutateRowBuilder_ != null)) {
@@ -973,22 +922,18 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionMutateRowRequest mutate_row = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionMutateRowRequest,
-            com.google.bigtable.v2.SessionMutateRowRequest.Builder,
-            com.google.bigtable.v2.SessionMutateRowRequestOrBuilder>
+        com.google.bigtable.v2.SessionMutateRowRequest, com.google.bigtable.v2.SessionMutateRowRequest.Builder, com.google.bigtable.v2.SessionMutateRowRequestOrBuilder> 
         internalGetMutateRowFieldBuilder() {
       if (mutateRowBuilder_ == null) {
         if (!(payloadCase_ == 2)) {
           payload_ = com.google.bigtable.v2.SessionMutateRowRequest.getDefaultInstance();
         }
-        mutateRowBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionMutateRowRequest,
-                com.google.bigtable.v2.SessionMutateRowRequest.Builder,
-                com.google.bigtable.v2.SessionMutateRowRequestOrBuilder>(
+        mutateRowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionMutateRowRequest, com.google.bigtable.v2.SessionMutateRowRequest.Builder, com.google.bigtable.v2.SessionMutateRowRequestOrBuilder>(
                 (com.google.bigtable.v2.SessionMutateRowRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1000,24 +945,17 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowsRequest,
-            com.google.bigtable.v2.SessionReadRowsRequest.Builder,
-            com.google.bigtable.v2.SessionReadRowsRequestOrBuilder>
-        readRowsBuilder_;
-
+        com.google.bigtable.v2.SessionReadRowsRequest, com.google.bigtable.v2.SessionReadRowsRequest.Builder, com.google.bigtable.v2.SessionReadRowsRequestOrBuilder> readRowsBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
-     *
      * @return Whether the readRows field is set.
      */
     @java.lang.Override
     public boolean hasReadRows() {
       return payloadCase_ == 3;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
-     *
      * @return The readRows.
      */
     @java.lang.Override
@@ -1034,8 +972,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     public Builder setReadRows(com.google.bigtable.v2.SessionReadRowsRequest value) {
       if (readRowsBuilder_ == null) {
         if (value == null) {
@@ -1049,8 +988,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     public Builder setReadRows(
         com.google.bigtable.v2.SessionReadRowsRequest.Builder builderForValue) {
       if (readRowsBuilder_ == null) {
@@ -1062,17 +1002,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     public Builder mergeReadRows(com.google.bigtable.v2.SessionReadRowsRequest value) {
       if (readRowsBuilder_ == null) {
-        if (payloadCase_ == 3
-            && payload_ != com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionReadRowsRequest.newBuilder(
-                      (com.google.bigtable.v2.SessionReadRowsRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 3 &&
+            payload_ != com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionReadRowsRequest.newBuilder((com.google.bigtable.v2.SessionReadRowsRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1087,8 +1025,9 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 3;
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     public Builder clearReadRows() {
       if (readRowsBuilder_ == null) {
         if (payloadCase_ == 3) {
@@ -1105,13 +1044,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     public com.google.bigtable.v2.SessionReadRowsRequest.Builder getReadRowsBuilder() {
       return internalGetReadRowsFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     @java.lang.Override
     public com.google.bigtable.v2.SessionReadRowsRequestOrBuilder getReadRowsOrBuilder() {
       if ((payloadCase_ == 3) && (readRowsBuilder_ != null)) {
@@ -1123,22 +1064,18 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance();
       }
     }
-
-    /** <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code> */
+    /**
+     * <code>.google.bigtable.v2.SessionReadRowsRequest read_rows = 3;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionReadRowsRequest,
-            com.google.bigtable.v2.SessionReadRowsRequest.Builder,
-            com.google.bigtable.v2.SessionReadRowsRequestOrBuilder>
+        com.google.bigtable.v2.SessionReadRowsRequest, com.google.bigtable.v2.SessionReadRowsRequest.Builder, com.google.bigtable.v2.SessionReadRowsRequestOrBuilder> 
         internalGetReadRowsFieldBuilder() {
       if (readRowsBuilder_ == null) {
         if (!(payloadCase_ == 3)) {
           payload_ = com.google.bigtable.v2.SessionReadRowsRequest.getDefaultInstance();
         }
-        readRowsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionReadRowsRequest,
-                com.google.bigtable.v2.SessionReadRowsRequest.Builder,
-                com.google.bigtable.v2.SessionReadRowsRequestOrBuilder>(
+        readRowsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionReadRowsRequest, com.google.bigtable.v2.SessionReadRowsRequest.Builder, com.google.bigtable.v2.SessionReadRowsRequestOrBuilder>(
                 (com.google.bigtable.v2.SessionReadRowsRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1150,24 +1087,17 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionCheckAndMutateRowRequest,
-            com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder,
-            com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder>
-        checkAndMutateRowBuilder_;
-
+        com.google.bigtable.v2.SessionCheckAndMutateRowRequest, com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder, com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder> checkAndMutateRowBuilder_;
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
-     *
      * @return Whether the checkAndMutateRow field is set.
      */
     @java.lang.Override
     public boolean hasCheckAndMutateRow() {
       return payloadCase_ == 4;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
-     *
      * @return The checkAndMutateRow.
      */
     @java.lang.Override
@@ -1184,12 +1114,10 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance();
       }
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
-    public Builder setCheckAndMutateRow(
-        com.google.bigtable.v2.SessionCheckAndMutateRowRequest value) {
+    public Builder setCheckAndMutateRow(com.google.bigtable.v2.SessionCheckAndMutateRowRequest value) {
       if (checkAndMutateRowBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1202,7 +1130,6 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 4;
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
@@ -1217,21 +1144,15 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 4;
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
-    public Builder mergeCheckAndMutateRow(
-        com.google.bigtable.v2.SessionCheckAndMutateRowRequest value) {
+    public Builder mergeCheckAndMutateRow(com.google.bigtable.v2.SessionCheckAndMutateRowRequest value) {
       if (checkAndMutateRowBuilder_ == null) {
-        if (payloadCase_ == 4
-            && payload_
-                != com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance()) {
-          payload_ =
-              com.google.bigtable.v2.SessionCheckAndMutateRowRequest.newBuilder(
-                      (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (payloadCase_ == 4 &&
+            payload_ != com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance()) {
+          payload_ = com.google.bigtable.v2.SessionCheckAndMutateRowRequest.newBuilder((com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_)
+              .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
@@ -1246,7 +1167,6 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       payloadCase_ = 4;
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
@@ -1266,21 +1186,17 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
       }
       return this;
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
-    public com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder
-        getCheckAndMutateRowBuilder() {
+    public com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder getCheckAndMutateRowBuilder() {
       return internalGetCheckAndMutateRowFieldBuilder().getBuilder();
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder
-        getCheckAndMutateRowOrBuilder() {
+    public com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder getCheckAndMutateRowOrBuilder() {
       if ((payloadCase_ == 4) && (checkAndMutateRowBuilder_ != null)) {
         return checkAndMutateRowBuilder_.getMessageOrBuilder();
       } else {
@@ -1290,24 +1206,18 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
         return com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance();
       }
     }
-
     /**
      * <code>.google.bigtable.v2.SessionCheckAndMutateRowRequest check_and_mutate_row = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.SessionCheckAndMutateRowRequest,
-            com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder,
-            com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder>
+        com.google.bigtable.v2.SessionCheckAndMutateRowRequest, com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder, com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder> 
         internalGetCheckAndMutateRowFieldBuilder() {
       if (checkAndMutateRowBuilder_ == null) {
         if (!(payloadCase_ == 4)) {
           payload_ = com.google.bigtable.v2.SessionCheckAndMutateRowRequest.getDefaultInstance();
         }
-        checkAndMutateRowBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.SessionCheckAndMutateRowRequest,
-                com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder,
-                com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder>(
+        checkAndMutateRowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.SessionCheckAndMutateRowRequest, com.google.bigtable.v2.SessionCheckAndMutateRowRequest.Builder, com.google.bigtable.v2.SessionCheckAndMutateRowRequestOrBuilder>(
                 (com.google.bigtable.v2.SessionCheckAndMutateRowRequest) payload_,
                 getParentForChildren(),
                 isClean());
@@ -1323,7 +1233,6 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.AuthorizedViewRequest)
   private static final com.google.bigtable.v2.AuthorizedViewRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.AuthorizedViewRequest();
   }
@@ -1332,27 +1241,27 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AuthorizedViewRequest> PARSER =
-      new com.google.protobuf.AbstractParser<AuthorizedViewRequest>() {
-        @java.lang.Override
-        public AuthorizedViewRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<AuthorizedViewRequest>
+      PARSER = new com.google.protobuf.AbstractParser<AuthorizedViewRequest>() {
+    @java.lang.Override
+    public AuthorizedViewRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<AuthorizedViewRequest> parser() {
     return PARSER;
@@ -1367,4 +1276,6 @@ public final class AuthorizedViewRequest extends com.google.protobuf.GeneratedMe
   public com.google.bigtable.v2.AuthorizedViewRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

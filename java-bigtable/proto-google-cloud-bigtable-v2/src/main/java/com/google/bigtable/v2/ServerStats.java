@@ -5,56 +5,50 @@
 
 package com.google.bigtable.v2;
 
-/** Protobuf type {@code google.bigtable.v2.ServerStats} */
+/**
+ * Protobuf type {@code google.bigtable.v2.ServerStats}
+ */
 @com.google.protobuf.Generated
-public final class ServerStats extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ServerStats extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ServerStats)
     ServerStatsOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ServerStats");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ServerStats");
   }
-
   // Use ServerStats.newBuilder() to construct.
   private ServerStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private ServerStats() {
     cpuStats_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_ServerStats_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ServerStats.class,
-            com.google.bigtable.v2.ServerStats.Builder.class);
+            com.google.bigtable.v2.ServerStats.class, com.google.bigtable.v2.ServerStats.Builder.class);
   }
 
-  public interface CPUStatsOrBuilder
-      extends
+  public interface CPUStatsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ServerStats.CPUStats)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * This is the recent CPU utilization for one of the tabletservers that this
      * request touched, in unit of milli-GCU seconds per second. The duration of
@@ -62,79 +56,65 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 recent_gcu_milliseconds_per_second = 1;</code>
-     *
      * @return The recentGcuMillisecondsPerSecond.
      */
     int getRecentGcuMillisecondsPerSecond();
 
     /**
-     *
-     *
      * <pre>
      * This is the CPU capacity of the tabletserver, measured in milli-GCU. For
      * our regular CBT nodes, it's 8000.
      * </pre>
      *
      * <code>int32 milligcu_limit = 2;</code>
-     *
      * @return The milligcuLimit.
      */
     int getMilligcuLimit();
   }
-
   /**
-   *
-   *
    * <pre>
    * Contains tabletserver stats, e.g. CPU utilization.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ServerStats.CPUStats}
    */
-  public static final class CPUStats extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class CPUStats extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.ServerStats.CPUStats)
       CPUStatsOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "CPUStats");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "CPUStats");
     }
-
     // Use CPUStats.newBuilder() to construct.
     private CPUStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private CPUStats() {
+    }
 
-    private CPUStats() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ServerStats.CPUStats.class,
-              com.google.bigtable.v2.ServerStats.CPUStats.Builder.class);
+              com.google.bigtable.v2.ServerStats.CPUStats.class, com.google.bigtable.v2.ServerStats.CPUStats.Builder.class);
     }
 
     public static final int RECENT_GCU_MILLISECONDS_PER_SECOND_FIELD_NUMBER = 1;
     private int recentGcuMillisecondsPerSecond_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * This is the recent CPU utilization for one of the tabletservers that this
      * request touched, in unit of milli-GCU seconds per second. The duration of
@@ -142,7 +122,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 recent_gcu_milliseconds_per_second = 1;</code>
-     *
      * @return The recentGcuMillisecondsPerSecond.
      */
     @java.lang.Override
@@ -152,17 +131,13 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
 
     public static final int MILLIGCU_LIMIT_FIELD_NUMBER = 2;
     private int milligcuLimit_ = 0;
-
     /**
-     *
-     *
      * <pre>
      * This is the CPU capacity of the tabletserver, measured in milli-GCU. For
      * our regular CBT nodes, it's 8000.
      * </pre>
      *
      * <code>int32 milligcu_limit = 2;</code>
-     *
      * @return The milligcuLimit.
      */
     @java.lang.Override
@@ -171,7 +146,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -183,7 +157,8 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (recentGcuMillisecondsPerSecond_ != 0) {
         output.writeInt32(1, recentGcuMillisecondsPerSecond_);
       }
@@ -200,12 +175,12 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
 
       size = 0;
       if (recentGcuMillisecondsPerSecond_ != 0) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeInt32Size(
-                1, recentGcuMillisecondsPerSecond_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, recentGcuMillisecondsPerSecond_);
       }
       if (milligcuLimit_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, milligcuLimit_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, milligcuLimit_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -215,17 +190,17 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.ServerStats.CPUStats)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.ServerStats.CPUStats other =
-          (com.google.bigtable.v2.ServerStats.CPUStats) obj;
+      com.google.bigtable.v2.ServerStats.CPUStats other = (com.google.bigtable.v2.ServerStats.CPUStats) obj;
 
-      if (getRecentGcuMillisecondsPerSecond() != other.getRecentGcuMillisecondsPerSecond())
-        return false;
-      if (getMilligcuLimit() != other.getMilligcuLimit()) return false;
+      if (getRecentGcuMillisecondsPerSecond()
+          != other.getRecentGcuMillisecondsPerSecond()) return false;
+      if (getMilligcuLimit()
+          != other.getMilligcuLimit()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -246,137 +221,132 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       return hash;
     }
 
-    public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(java.nio.ByteBuffer data)
+    public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.ServerStats.CPUStats parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.ServerStats.CPUStats parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.ServerStats.CPUStats parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.ServerStats.CPUStats parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.bigtable.v2.ServerStats.CPUStats prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * Contains tabletserver stats, e.g. CPU utilization.
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.ServerStats.CPUStats}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ServerStats.CPUStats)
         com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.ServerStats.CPUStats.class,
-                com.google.bigtable.v2.ServerStats.CPUStats.Builder.class);
+                com.google.bigtable.v2.ServerStats.CPUStats.class, com.google.bigtable.v2.ServerStats.CPUStats.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.ServerStats.CPUStats.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -387,9 +357,9 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.BigtableProto
-            .internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
       }
 
       @java.lang.Override
@@ -408,11 +378,8 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
 
       @java.lang.Override
       public com.google.bigtable.v2.ServerStats.CPUStats buildPartial() {
-        com.google.bigtable.v2.ServerStats.CPUStats result =
-            new com.google.bigtable.v2.ServerStats.CPUStats(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.ServerStats.CPUStats result = new com.google.bigtable.v2.ServerStats.CPUStats(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -430,7 +397,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.ServerStats.CPUStats) {
-          return mergeFrom((com.google.bigtable.v2.ServerStats.CPUStats) other);
+          return mergeFrom((com.google.bigtable.v2.ServerStats.CPUStats)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -471,25 +438,22 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  recentGcuMillisecondsPerSecond_ = input.readInt32();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-              case 16:
-                {
-                  milligcuLimit_ = input.readInt32();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 16
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 8: {
+                recentGcuMillisecondsPerSecond_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                milligcuLimit_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -499,14 +463,10 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         } // finally
         return this;
       }
-
       private int bitField0_;
 
-      private int recentGcuMillisecondsPerSecond_;
-
+      private int recentGcuMillisecondsPerSecond_ ;
       /**
-       *
-       *
        * <pre>
        * This is the recent CPU utilization for one of the tabletservers that this
        * request touched, in unit of milli-GCU seconds per second. The duration of
@@ -514,17 +474,13 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
        * </pre>
        *
        * <code>int32 recent_gcu_milliseconds_per_second = 1;</code>
-       *
        * @return The recentGcuMillisecondsPerSecond.
        */
       @java.lang.Override
       public int getRecentGcuMillisecondsPerSecond() {
         return recentGcuMillisecondsPerSecond_;
       }
-
       /**
-       *
-       *
        * <pre>
        * This is the recent CPU utilization for one of the tabletservers that this
        * request touched, in unit of milli-GCU seconds per second. The duration of
@@ -532,7 +488,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
        * </pre>
        *
        * <code>int32 recent_gcu_milliseconds_per_second = 1;</code>
-       *
        * @param value The recentGcuMillisecondsPerSecond to set.
        * @return This builder for chaining.
        */
@@ -543,10 +498,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * This is the recent CPU utilization for one of the tabletservers that this
        * request touched, in unit of milli-GCU seconds per second. The duration of
@@ -554,7 +506,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
        * </pre>
        *
        * <code>int32 recent_gcu_milliseconds_per_second = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearRecentGcuMillisecondsPerSecond() {
@@ -564,35 +515,27 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         return this;
       }
 
-      private int milligcuLimit_;
-
+      private int milligcuLimit_ ;
       /**
-       *
-       *
        * <pre>
        * This is the CPU capacity of the tabletserver, measured in milli-GCU. For
        * our regular CBT nodes, it's 8000.
        * </pre>
        *
        * <code>int32 milligcu_limit = 2;</code>
-       *
        * @return The milligcuLimit.
        */
       @java.lang.Override
       public int getMilligcuLimit() {
         return milligcuLimit_;
       }
-
       /**
-       *
-       *
        * <pre>
        * This is the CPU capacity of the tabletserver, measured in milli-GCU. For
        * our regular CBT nodes, it's 8000.
        * </pre>
        *
        * <code>int32 milligcu_limit = 2;</code>
-       *
        * @param value The milligcuLimit to set.
        * @return This builder for chaining.
        */
@@ -603,17 +546,13 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * This is the CPU capacity of the tabletserver, measured in milli-GCU. For
        * our regular CBT nodes, it's 8000.
        * </pre>
        *
        * <code>int32 milligcu_limit = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMilligcuLimit() {
@@ -628,7 +567,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.ServerStats.CPUStats)
     private static final com.google.bigtable.v2.ServerStats.CPUStats DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.ServerStats.CPUStats();
     }
@@ -637,28 +575,27 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CPUStats> PARSER =
-        new com.google.protobuf.AbstractParser<CPUStats>() {
-          @java.lang.Override
-          public CPUStats parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<CPUStats>
+        PARSER = new com.google.protobuf.AbstractParser<CPUStats>() {
+      @java.lang.Override
+      public CPUStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<CPUStats> parser() {
       return PARSER;
@@ -673,16 +610,13 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ServerStats.CPUStats getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   public static final int CPU_STATS_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.ServerStats.CPUStats> cpuStats_;
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -695,10 +629,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
   public java.util.List<com.google.bigtable.v2.ServerStats.CPUStats> getCpuStatsList() {
     return cpuStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -708,14 +639,11 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder> 
       getCpuStatsOrBuilderList() {
     return cpuStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -728,10 +656,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
   public int getCpuStatsCount() {
     return cpuStats_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -744,10 +669,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ServerStats.CPUStats getCpuStats(int index) {
     return cpuStats_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
    * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -757,12 +679,12 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
    * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder getCpuStatsOrBuilder(int index) {
+  public com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder getCpuStatsOrBuilder(
+      int index) {
     return cpuStats_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -774,7 +696,8 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < cpuStats_.size(); i++) {
       output.writeMessage(1, cpuStats_.get(i));
     }
@@ -788,7 +711,8 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     for (int i = 0; i < cpuStats_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, cpuStats_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, cpuStats_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -798,14 +722,15 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ServerStats)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.ServerStats other = (com.google.bigtable.v2.ServerStats) obj;
 
-    if (!getCpuStatsList().equals(other.getCpuStatsList())) return false;
+    if (!getCpuStatsList()
+        .equals(other.getCpuStatsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -826,128 +751,128 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.ServerStats parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ServerStats parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.ServerStats parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.ServerStats parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.ServerStats parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ServerStats parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ServerStats parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ServerStats prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
-  /** Protobuf type {@code google.bigtable.v2.ServerStats} */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  /**
+   * Protobuf type {@code google.bigtable.v2.ServerStats}
+   */
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ServerStats)
       com.google.bigtable.v2.ServerStatsOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ServerStats_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ServerStats.class,
-              com.google.bigtable.v2.ServerStats.Builder.class);
+              com.google.bigtable.v2.ServerStats.class, com.google.bigtable.v2.ServerStats.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ServerStats.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -963,9 +888,9 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ServerStats_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ServerStats_descriptor;
     }
 
     @java.lang.Override
@@ -986,9 +911,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ServerStats buildPartial() {
       com.google.bigtable.v2.ServerStats result = new com.google.bigtable.v2.ServerStats(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -1012,7 +935,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ServerStats) {
-        return mergeFrom((com.google.bigtable.v2.ServerStats) other);
+        return mergeFrom((com.google.bigtable.v2.ServerStats)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1039,10 +962,9 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
             cpuStatsBuilder_ = null;
             cpuStats_ = other.cpuStats_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            cpuStatsBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetCpuStatsFieldBuilder()
-                    : null;
+            cpuStatsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetCpuStatsFieldBuilder() : null;
           } else {
             cpuStatsBuilder_.addAllMessages(other.cpuStats_);
           }
@@ -1074,26 +996,25 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.ServerStats.CPUStats m =
-                    input.readMessage(
-                        com.google.bigtable.v2.ServerStats.CPUStats.parser(), extensionRegistry);
-                if (cpuStatsBuilder_ == null) {
-                  ensureCpuStatsIsMutable();
-                  cpuStats_.add(m);
-                } else {
-                  cpuStatsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.ServerStats.CPUStats m =
+                  input.readMessage(
+                      com.google.bigtable.v2.ServerStats.CPUStats.parser(),
+                      extensionRegistry);
+              if (cpuStatsBuilder_ == null) {
+                ensureCpuStatsIsMutable();
+                cpuStats_.add(m);
+              } else {
+                cpuStatsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1103,28 +1024,21 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.bigtable.v2.ServerStats.CPUStats> cpuStats_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureCpuStatsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         cpuStats_ = new java.util.ArrayList<com.google.bigtable.v2.ServerStats.CPUStats>(cpuStats_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.ServerStats.CPUStats,
-            com.google.bigtable.v2.ServerStats.CPUStats.Builder,
-            com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>
-        cpuStatsBuilder_;
+        com.google.bigtable.v2.ServerStats.CPUStats, com.google.bigtable.v2.ServerStats.CPUStats.Builder, com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder> cpuStatsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1140,10 +1054,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         return cpuStatsBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1159,10 +1070,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         return cpuStatsBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1178,10 +1086,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         return cpuStatsBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1190,7 +1095,8 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public Builder setCpuStats(int index, com.google.bigtable.v2.ServerStats.CPUStats value) {
+    public Builder setCpuStats(
+        int index, com.google.bigtable.v2.ServerStats.CPUStats value) {
       if (cpuStatsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1203,10 +1109,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1226,10 +1129,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1251,10 +1151,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1263,7 +1160,8 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public Builder addCpuStats(int index, com.google.bigtable.v2.ServerStats.CPUStats value) {
+    public Builder addCpuStats(
+        int index, com.google.bigtable.v2.ServerStats.CPUStats value) {
       if (cpuStatsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1276,10 +1174,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1299,10 +1194,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1322,10 +1214,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1338,17 +1227,15 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
         java.lang.Iterable<? extends com.google.bigtable.v2.ServerStats.CPUStats> values) {
       if (cpuStatsBuilder_ == null) {
         ensureCpuStatsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, cpuStats_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cpuStats_);
         onChanged();
       } else {
         cpuStatsBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1367,10 +1254,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1389,10 +1273,7 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1401,13 +1282,11 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public com.google.bigtable.v2.ServerStats.CPUStats.Builder getCpuStatsBuilder(int index) {
+    public com.google.bigtable.v2.ServerStats.CPUStats.Builder getCpuStatsBuilder(
+        int index) {
       return internalGetCpuStatsFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1416,17 +1295,14 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder getCpuStatsOrBuilder(int index) {
+    public com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder getCpuStatsOrBuilder(
+        int index) {
       if (cpuStatsBuilder_ == null) {
-        return cpuStats_.get(index);
-      } else {
+        return cpuStats_.get(index);  } else {
         return cpuStatsBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1435,18 +1311,15 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>
-        getCpuStatsOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder> 
+         getCpuStatsOrBuilderList() {
       if (cpuStatsBuilder_ != null) {
         return cpuStatsBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(cpuStats_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1456,13 +1329,10 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
     public com.google.bigtable.v2.ServerStats.CPUStats.Builder addCpuStatsBuilder() {
-      return internalGetCpuStatsFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.ServerStats.CPUStats.getDefaultInstance());
+      return internalGetCpuStatsFieldBuilder().addBuilder(
+          com.google.bigtable.v2.ServerStats.CPUStats.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1471,14 +1341,12 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public com.google.bigtable.v2.ServerStats.CPUStats.Builder addCpuStatsBuilder(int index) {
-      return internalGetCpuStatsFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.ServerStats.CPUStats.getDefaultInstance());
+    public com.google.bigtable.v2.ServerStats.CPUStats.Builder addCpuStatsBuilder(
+        int index) {
+      return internalGetCpuStatsFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.ServerStats.CPUStats.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
      * be sent to the same tabletserver and we don't de-duplicate. We only get the
@@ -1487,23 +1355,20 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.ServerStats.CPUStats cpu_stats = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.ServerStats.CPUStats.Builder>
-        getCpuStatsBuilderList() {
+    public java.util.List<com.google.bigtable.v2.ServerStats.CPUStats.Builder> 
+         getCpuStatsBuilderList() {
       return internalGetCpuStatsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.ServerStats.CPUStats,
-            com.google.bigtable.v2.ServerStats.CPUStats.Builder,
-            com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>
+        com.google.bigtable.v2.ServerStats.CPUStats, com.google.bigtable.v2.ServerStats.CPUStats.Builder, com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder> 
         internalGetCpuStatsFieldBuilder() {
       if (cpuStatsBuilder_ == null) {
-        cpuStatsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.ServerStats.CPUStats,
-                com.google.bigtable.v2.ServerStats.CPUStats.Builder,
-                com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>(
-                cpuStats_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        cpuStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.ServerStats.CPUStats, com.google.bigtable.v2.ServerStats.CPUStats.Builder, com.google.bigtable.v2.ServerStats.CPUStatsOrBuilder>(
+                cpuStats_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         cpuStats_ = null;
       }
       return cpuStatsBuilder_;
@@ -1514,7 +1379,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ServerStats)
   private static final com.google.bigtable.v2.ServerStats DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ServerStats();
   }
@@ -1523,27 +1387,27 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ServerStats> PARSER =
-      new com.google.protobuf.AbstractParser<ServerStats>() {
-        @java.lang.Override
-        public ServerStats parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ServerStats>
+      PARSER = new com.google.protobuf.AbstractParser<ServerStats>() {
+    @java.lang.Override
+    public ServerStats parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ServerStats> parser() {
     return PARSER;
@@ -1558,4 +1422,6 @@ public final class ServerStats extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ServerStats getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

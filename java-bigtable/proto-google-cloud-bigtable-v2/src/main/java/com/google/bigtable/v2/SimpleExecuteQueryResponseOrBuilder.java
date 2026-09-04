@@ -6,40 +6,29 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SimpleExecuteQueryResponseOrBuilder
-    extends
+public interface SimpleExecuteQueryResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SimpleExecuteQueryResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Schema of the columns in the result set.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
-   *
    * @return Whether the schema field is set.
    */
   boolean hasSchema();
-
   /**
-   *
-   *
    * <pre>
    * Schema of the columns in the result set.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
-   *
    * @return The schema.
    */
   com.google.bigtable.v2.ProtoSchema getSchema();
-
   /**
-   *
-   *
    * <pre>
    * Schema of the columns in the result set.
    * </pre>
@@ -49,8 +38,6 @@ public interface SimpleExecuteQueryResponseOrBuilder
   com.google.bigtable.v2.ProtoSchemaOrBuilder getSchemaOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -58,11 +45,9 @@ public interface SimpleExecuteQueryResponseOrBuilder
    *
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
-  java.util.List<com.google.bigtable.v2.ArrayValue> getRowsList();
-
+  java.util.List<com.google.bigtable.v2.ArrayValue> 
+      getRowsList();
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -71,10 +56,7 @@ public interface SimpleExecuteQueryResponseOrBuilder
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
   com.google.bigtable.v2.ArrayValue getRows(int index);
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -83,10 +65,7 @@ public interface SimpleExecuteQueryResponseOrBuilder
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
   int getRowsCount();
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -94,11 +73,9 @@ public interface SimpleExecuteQueryResponseOrBuilder
    *
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.ArrayValueOrBuilder> getRowsOrBuilderList();
-
+  java.util.List<? extends com.google.bigtable.v2.ArrayValueOrBuilder> 
+      getRowsOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -106,11 +83,10 @@ public interface SimpleExecuteQueryResponseOrBuilder
    *
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
-  com.google.bigtable.v2.ArrayValueOrBuilder getRowsOrBuilder(int index);
+  com.google.bigtable.v2.ArrayValueOrBuilder getRowsOrBuilder(
+      int index);
 
   /**
-   *
-   *
    * <pre>
    * Optional. A token that can be sent as `page_token` to retrieve the next
    * rows in the result set. If this field is omitted, there are no subsequent
@@ -118,14 +94,10 @@ public interface SimpleExecuteQueryResponseOrBuilder
    * </pre>
    *
    * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The nextPageToken.
    */
   java.lang.String getNextPageToken();
-
   /**
-   *
-   *
    * <pre>
    * Optional. A token that can be sent as `page_token` to retrieve the next
    * rows in the result set. If this field is omitted, there are no subsequent
@@ -133,8 +105,8 @@ public interface SimpleExecuteQueryResponseOrBuilder
    * </pre>
    *
    * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for nextPageToken.
    */
-  com.google.protobuf.ByteString getNextPageTokenBytes();
+  com.google.protobuf.ByteString
+      getNextPageTokenBytes();
 }

@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface CellOrBuilder
-    extends
+public interface CellOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.Cell)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The cell's stored timestamp, which also uniquely identifies it within
    * its column.
@@ -24,14 +21,11 @@ public interface CellOrBuilder
    * </pre>
    *
    * <code>int64 timestamp_micros = 1;</code>
-   *
    * @return The timestampMicros.
    */
   long getTimestampMicros();
 
   /**
-   *
-   *
    * <pre>
    * The value stored in the cell.
    * May contain any byte string, including the empty string, up to 100MiB in
@@ -39,62 +33,48 @@ public interface CellOrBuilder
    * </pre>
    *
    * <code>bytes value = 2;</code>
-   *
    * @return The value.
    */
   com.google.protobuf.ByteString getValue();
 
   /**
-   *
-   *
    * <pre>
    * Labels applied to the cell by a.
    * </pre>
    *
    * <code>repeated string labels = 3;</code>
-   *
    * @return A list containing the labels.
    */
-  java.util.List<java.lang.String> getLabelsList();
-
+  java.util.List<java.lang.String>
+      getLabelsList();
   /**
-   *
-   *
    * <pre>
    * Labels applied to the cell by a.
    * </pre>
    *
    * <code>repeated string labels = 3;</code>
-   *
    * @return The count of labels.
    */
   int getLabelsCount();
-
   /**
-   *
-   *
    * <pre>
    * Labels applied to the cell by a.
    * </pre>
    *
    * <code>repeated string labels = 3;</code>
-   *
    * @param index The index of the element to return.
    * @return The labels at the given index.
    */
   java.lang.String getLabels(int index);
-
   /**
-   *
-   *
    * <pre>
    * Labels applied to the cell by a.
    * </pre>
    *
    * <code>repeated string labels = 3;</code>
-   *
    * @param index The index of the value to return.
    * @return The bytes of the labels at the given index.
    */
-  com.google.protobuf.ByteString getLabelsBytes(int index);
+  com.google.protobuf.ByteString
+      getLabelsBytes(int index);
 }

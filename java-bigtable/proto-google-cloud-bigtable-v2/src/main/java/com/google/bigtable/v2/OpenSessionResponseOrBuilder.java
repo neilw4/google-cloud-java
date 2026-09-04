@@ -6,40 +6,29 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface OpenSessionResponseOrBuilder
-    extends
+public interface OpenSessionResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.OpenSessionResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Information on the backend(s) that are hosting this session.
    * </pre>
    *
    * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
-   *
    * @return Whether the backend field is set.
    */
   boolean hasBackend();
-
   /**
-   *
-   *
    * <pre>
    * Information on the backend(s) that are hosting this session.
    * </pre>
    *
    * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
-   *
    * @return The backend.
    */
   com.google.bigtable.v2.BackendIdentifier getBackend();
-
   /**
-   *
-   *
    * <pre>
    * Information on the backend(s) that are hosting this session.
    * </pre>
@@ -49,15 +38,12 @@ public interface OpenSessionResponseOrBuilder
   com.google.bigtable.v2.BackendIdentifierOrBuilder getBackendOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Can be Open{Table,AuthorizedView,MaterializedView}Response,
    * (or in post-V1, PrepareSqlQueryResponse)
    * </pre>
    *
    * <code>bytes payload = 1;</code>
-   *
    * @return The payload.
    */
   com.google.protobuf.ByteString getPayload();

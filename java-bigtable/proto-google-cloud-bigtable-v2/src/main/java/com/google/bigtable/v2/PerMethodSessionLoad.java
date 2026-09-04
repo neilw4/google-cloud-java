@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Configuration for how to balance sessions per method. Internal usage only.
  * </pre>
@@ -15,155 +13,127 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.PerMethodSessionLoad}
  */
 @com.google.protobuf.Generated
-public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMessage
-    implements
+public final class PerMethodSessionLoad extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.PerMethodSessionLoad)
     PerMethodSessionLoadOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "PerMethodSessionLoad");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "PerMethodSessionLoad");
   }
-
   // Use PerMethodSessionLoad.newBuilder() to construct.
   private PerMethodSessionLoad(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private PerMethodSessionLoad() {
     entries_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_PerMethodSessionLoad_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_PerMethodSessionLoad_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.PerMethodSessionLoad.class,
-            com.google.bigtable.v2.PerMethodSessionLoad.Builder.class);
+            com.google.bigtable.v2.PerMethodSessionLoad.class, com.google.bigtable.v2.PerMethodSessionLoad.Builder.class);
   }
 
-  public interface EntryOrBuilder
-      extends
+  public interface EntryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.PerMethodSessionLoad.Entry)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
      * </pre>
      *
      * <code>string method_name = 1;</code>
-     *
      * @return The methodName.
      */
     java.lang.String getMethodName();
-
     /**
-     *
-     *
      * <pre>
      * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
      * </pre>
      *
      * <code>string method_name = 1;</code>
-     *
      * @return The bytes for methodName.
      */
-    com.google.protobuf.ByteString getMethodNameBytes();
+    com.google.protobuf.ByteString
+        getMethodNameBytes();
 
     /**
-     *
-     *
      * <pre>
      * The fraction of requests to this method that should be routed to
      * sessions,. The rest should operate on the old-style API.
      * </pre>
      *
      * <code>float session_load = 2;</code>
-     *
      * @return The sessionLoad.
      */
     float getSessionLoad();
   }
-
   /**
-   *
-   *
    * <pre>
    * An entry for a single method.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.PerMethodSessionLoad.Entry}
    */
-  public static final class Entry extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Entry extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.PerMethodSessionLoad.Entry)
       EntryOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Entry");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Entry");
     }
-
     // Use Entry.newBuilder() to construct.
     private Entry(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private Entry() {
       methodName_ = "";
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.PerMethodSessionLoad.Entry.class,
-              com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder.class);
+              com.google.bigtable.v2.PerMethodSessionLoad.Entry.class, com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder.class);
     }
 
     public static final int METHOD_NAME_FIELD_NUMBER = 1;
-
     @SuppressWarnings("serial")
     private volatile java.lang.Object methodName_ = "";
-
     /**
-     *
-     *
      * <pre>
      * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
      * </pre>
      *
      * <code>string method_name = 1;</code>
-     *
      * @return The methodName.
      */
     @java.lang.Override
@@ -172,30 +142,29 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         methodName_ = s;
         return s;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
      * </pre>
      *
      * <code>string method_name = 1;</code>
-     *
      * @return The bytes for methodName.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getMethodNameBytes() {
+    public com.google.protobuf.ByteString
+        getMethodNameBytes() {
       java.lang.Object ref = methodName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         methodName_ = b;
         return b;
       } else {
@@ -205,17 +174,13 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
 
     public static final int SESSION_LOAD_FIELD_NUMBER = 2;
     private float sessionLoad_ = 0F;
-
     /**
-     *
-     *
      * <pre>
      * The fraction of requests to this method that should be routed to
      * sessions,. The rest should operate on the old-style API.
      * </pre>
      *
      * <code>float session_load = 2;</code>
-     *
      * @return The sessionLoad.
      */
     @java.lang.Override
@@ -224,7 +189,6 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -236,7 +200,8 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(methodName_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, methodName_);
       }
@@ -256,7 +221,8 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, methodName_);
       }
       if (java.lang.Float.floatToRawIntBits(sessionLoad_) != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeFloatSize(2, sessionLoad_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, sessionLoad_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -266,17 +232,18 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.PerMethodSessionLoad.Entry)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.PerMethodSessionLoad.Entry other =
-          (com.google.bigtable.v2.PerMethodSessionLoad.Entry) obj;
+      com.google.bigtable.v2.PerMethodSessionLoad.Entry other = (com.google.bigtable.v2.PerMethodSessionLoad.Entry) obj;
 
-      if (!getMethodName().equals(other.getMethodName())) return false;
+      if (!getMethodName()
+          .equals(other.getMethodName())) return false;
       if (java.lang.Float.floatToIntBits(getSessionLoad())
-          != java.lang.Float.floatToIntBits(other.getSessionLoad())) return false;
+          != java.lang.Float.floatToIntBits(
+              other.getSessionLoad())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -291,143 +258,139 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       hash = (37 * hash) + METHOD_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getMethodName().hashCode();
       hash = (37 * hash) + SESSION_LOAD_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(getSessionLoad());
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSessionLoad());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
+    public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.PerMethodSessionLoad.Entry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.bigtable.v2.PerMethodSessionLoad.Entry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * An entry for a single method.
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.PerMethodSessionLoad.Entry}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.PerMethodSessionLoad.Entry)
         com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_fieldAccessorTable
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.PerMethodSessionLoad.Entry.class,
-                com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder.class);
+                com.google.bigtable.v2.PerMethodSessionLoad.Entry.class, com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.PerMethodSessionLoad.Entry.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -438,9 +401,9 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.SessionProto
-            .internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_Entry_descriptor;
       }
 
       @java.lang.Override
@@ -459,11 +422,8 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
 
       @java.lang.Override
       public com.google.bigtable.v2.PerMethodSessionLoad.Entry buildPartial() {
-        com.google.bigtable.v2.PerMethodSessionLoad.Entry result =
-            new com.google.bigtable.v2.PerMethodSessionLoad.Entry(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.PerMethodSessionLoad.Entry result = new com.google.bigtable.v2.PerMethodSessionLoad.Entry(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -481,7 +441,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.PerMethodSessionLoad.Entry) {
-          return mergeFrom((com.google.bigtable.v2.PerMethodSessionLoad.Entry) other);
+          return mergeFrom((com.google.bigtable.v2.PerMethodSessionLoad.Entry)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -489,8 +449,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
 
       public Builder mergeFrom(com.google.bigtable.v2.PerMethodSessionLoad.Entry other) {
-        if (other == com.google.bigtable.v2.PerMethodSessionLoad.Entry.getDefaultInstance())
-          return this;
+        if (other == com.google.bigtable.v2.PerMethodSessionLoad.Entry.getDefaultInstance()) return this;
         if (!other.getMethodName().isEmpty()) {
           methodName_ = other.methodName_;
           bitField0_ |= 0x00000001;
@@ -525,25 +484,22 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  methodName_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-              case 21:
-                {
-                  sessionLoad_ = input.readFloat();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 21
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                methodName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 21: {
+                sessionLoad_ = input.readFloat();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 21
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -553,26 +509,22 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private java.lang.Object methodName_ = "";
-
       /**
-       *
-       *
        * <pre>
        * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
        * </pre>
        *
        * <code>string method_name = 1;</code>
-       *
        * @return The methodName.
        */
       public java.lang.String getMethodName() {
         java.lang.Object ref = methodName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           methodName_ = s;
           return s;
@@ -580,61 +532,50 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
           return (java.lang.String) ref;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
        * </pre>
        *
        * <code>string method_name = 1;</code>
-       *
        * @return The bytes for methodName.
        */
-      public com.google.protobuf.ByteString getMethodNameBytes() {
+      public com.google.protobuf.ByteString
+          getMethodNameBytes() {
         java.lang.Object ref = methodName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           methodName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
        * </pre>
        *
        * <code>string method_name = 1;</code>
-       *
        * @param value The methodName to set.
        * @return This builder for chaining.
        */
-      public Builder setMethodName(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setMethodName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         methodName_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
        * </pre>
        *
        * <code>string method_name = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMethodName() {
@@ -643,23 +584,18 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The name of the method ("&lt;service&gt;.&lt;method&gt;"). e.g. "Bigtable.ReadRows".
        * </pre>
        *
        * <code>string method_name = 1;</code>
-       *
        * @param value The bytes for methodName to set.
        * @return This builder for chaining.
        */
-      public Builder setMethodNameBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setMethodNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         methodName_ = value;
         bitField0_ |= 0x00000001;
@@ -667,35 +603,27 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         return this;
       }
 
-      private float sessionLoad_;
-
+      private float sessionLoad_ ;
       /**
-       *
-       *
        * <pre>
        * The fraction of requests to this method that should be routed to
        * sessions,. The rest should operate on the old-style API.
        * </pre>
        *
        * <code>float session_load = 2;</code>
-       *
        * @return The sessionLoad.
        */
       @java.lang.Override
       public float getSessionLoad() {
         return sessionLoad_;
       }
-
       /**
-       *
-       *
        * <pre>
        * The fraction of requests to this method that should be routed to
        * sessions,. The rest should operate on the old-style API.
        * </pre>
        *
        * <code>float session_load = 2;</code>
-       *
        * @param value The sessionLoad to set.
        * @return This builder for chaining.
        */
@@ -706,17 +634,13 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The fraction of requests to this method that should be routed to
        * sessions,. The rest should operate on the old-style API.
        * </pre>
        *
        * <code>float session_load = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearSessionLoad() {
@@ -731,7 +655,6 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.PerMethodSessionLoad.Entry)
     private static final com.google.bigtable.v2.PerMethodSessionLoad.Entry DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.PerMethodSessionLoad.Entry();
     }
@@ -740,28 +663,27 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Entry> PARSER =
-        new com.google.protobuf.AbstractParser<Entry>() {
-          @java.lang.Override
-          public Entry parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Entry>
+        PARSER = new com.google.protobuf.AbstractParser<Entry>() {
+      @java.lang.Override
+      public Entry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Entry> parser() {
       return PARSER;
@@ -776,16 +698,13 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.PerMethodSessionLoad.Entry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   public static final int ENTRIES_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry> entries_;
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -796,10 +715,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
   public java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry> getEntriesList() {
     return entries_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -807,14 +723,11 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder> 
       getEntriesOrBuilderList() {
     return entries_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -825,10 +738,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
   public int getEntriesCount() {
     return entries_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -839,10 +749,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.PerMethodSessionLoad.Entry getEntries(int index) {
     return entries_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * Entries for the session load per method. Last entry wins per method name.
    * </pre>
@@ -850,12 +757,12 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
    * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder getEntriesOrBuilder(int index) {
+  public com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder getEntriesOrBuilder(
+      int index) {
     return entries_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -867,7 +774,8 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < entries_.size(); i++) {
       output.writeMessage(1, entries_.get(i));
     }
@@ -881,7 +789,8 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
 
     size = 0;
     for (int i = 0; i < entries_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, entries_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, entries_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -891,15 +800,15 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.PerMethodSessionLoad)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.PerMethodSessionLoad other =
-        (com.google.bigtable.v2.PerMethodSessionLoad) obj;
+    com.google.bigtable.v2.PerMethodSessionLoad other = (com.google.bigtable.v2.PerMethodSessionLoad) obj;
 
-    if (!getEntriesList().equals(other.getEntriesList())) return false;
+    if (!getEntriesList()
+        .equals(other.getEntriesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -920,137 +829,132 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     return hash;
   }
 
-  public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.PerMethodSessionLoad parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.PerMethodSessionLoad parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.PerMethodSessionLoad parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.PerMethodSessionLoad parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.PerMethodSessionLoad prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Configuration for how to balance sessions per method. Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.PerMethodSessionLoad}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.PerMethodSessionLoad)
       com.google.bigtable.v2.PerMethodSessionLoadOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_PerMethodSessionLoad_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_PerMethodSessionLoad_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.PerMethodSessionLoad.class,
-              com.google.bigtable.v2.PerMethodSessionLoad.Builder.class);
+              com.google.bigtable.v2.PerMethodSessionLoad.class, com.google.bigtable.v2.PerMethodSessionLoad.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.PerMethodSessionLoad.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1066,9 +970,9 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_PerMethodSessionLoad_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_PerMethodSessionLoad_descriptor;
     }
 
     @java.lang.Override
@@ -1087,12 +991,9 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
 
     @java.lang.Override
     public com.google.bigtable.v2.PerMethodSessionLoad buildPartial() {
-      com.google.bigtable.v2.PerMethodSessionLoad result =
-          new com.google.bigtable.v2.PerMethodSessionLoad(this);
+      com.google.bigtable.v2.PerMethodSessionLoad result = new com.google.bigtable.v2.PerMethodSessionLoad(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -1116,7 +1017,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.PerMethodSessionLoad) {
-        return mergeFrom((com.google.bigtable.v2.PerMethodSessionLoad) other);
+        return mergeFrom((com.google.bigtable.v2.PerMethodSessionLoad)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1143,10 +1044,9 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
             entriesBuilder_ = null;
             entries_ = other.entries_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            entriesBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetEntriesFieldBuilder()
-                    : null;
+            entriesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetEntriesFieldBuilder() : null;
           } else {
             entriesBuilder_.addAllMessages(other.entries_);
           }
@@ -1178,27 +1078,25 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.PerMethodSessionLoad.Entry m =
-                    input.readMessage(
-                        com.google.bigtable.v2.PerMethodSessionLoad.Entry.parser(),
-                        extensionRegistry);
-                if (entriesBuilder_ == null) {
-                  ensureEntriesIsMutable();
-                  entries_.add(m);
-                } else {
-                  entriesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.PerMethodSessionLoad.Entry m =
+                  input.readMessage(
+                      com.google.bigtable.v2.PerMethodSessionLoad.Entry.parser(),
+                      extensionRegistry);
+              if (entriesBuilder_ == null) {
+                ensureEntriesIsMutable();
+                entries_.add(m);
+              } else {
+                entriesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1208,29 +1106,21 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry> entries_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureEntriesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        entries_ =
-            new java.util.ArrayList<com.google.bigtable.v2.PerMethodSessionLoad.Entry>(entries_);
+        entries_ = new java.util.ArrayList<com.google.bigtable.v2.PerMethodSessionLoad.Entry>(entries_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.PerMethodSessionLoad.Entry,
-            com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder,
-            com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>
-        entriesBuilder_;
+        com.google.bigtable.v2.PerMethodSessionLoad.Entry, com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder, com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder> entriesBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1244,10 +1134,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         return entriesBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1261,10 +1148,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         return entriesBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1278,17 +1162,15 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         return entriesBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
-    public Builder setEntries(int index, com.google.bigtable.v2.PerMethodSessionLoad.Entry value) {
+    public Builder setEntries(
+        int index, com.google.bigtable.v2.PerMethodSessionLoad.Entry value) {
       if (entriesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1301,10 +1183,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1322,10 +1201,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1345,17 +1221,15 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
-    public Builder addEntries(int index, com.google.bigtable.v2.PerMethodSessionLoad.Entry value) {
+    public Builder addEntries(
+        int index, com.google.bigtable.v2.PerMethodSessionLoad.Entry value) {
       if (entriesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1368,10 +1242,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1389,10 +1260,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1410,10 +1278,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1424,17 +1289,15 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
         java.lang.Iterable<? extends com.google.bigtable.v2.PerMethodSessionLoad.Entry> values) {
       if (entriesBuilder_ == null) {
         ensureEntriesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, entries_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, entries_);
         onChanged();
       } else {
         entriesBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1451,10 +1314,7 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1471,23 +1331,18 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
-    public com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder getEntriesBuilder(int index) {
+    public com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder getEntriesBuilder(
+        int index) {
       return internalGetEntriesFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1497,33 +1352,26 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder getEntriesOrBuilder(
         int index) {
       if (entriesBuilder_ == null) {
-        return entries_.get(index);
-      } else {
+        return entries_.get(index);  } else {
         return entriesBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>
-        getEntriesOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder> 
+         getEntriesOrBuilderList() {
       if (entriesBuilder_ != null) {
         return entriesBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(entries_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
@@ -1531,51 +1379,42 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
     public com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder addEntriesBuilder() {
-      return internalGetEntriesFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.PerMethodSessionLoad.Entry.getDefaultInstance());
+      return internalGetEntriesFieldBuilder().addBuilder(
+          com.google.bigtable.v2.PerMethodSessionLoad.Entry.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
-    public com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder addEntriesBuilder(int index) {
-      return internalGetEntriesFieldBuilder()
-          .addBuilder(
-              index, com.google.bigtable.v2.PerMethodSessionLoad.Entry.getDefaultInstance());
+    public com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder addEntriesBuilder(
+        int index) {
+      return internalGetEntriesFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.PerMethodSessionLoad.Entry.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * Entries for the session load per method. Last entry wins per method name.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.PerMethodSessionLoad.Entry entries = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder>
-        getEntriesBuilderList() {
+    public java.util.List<com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder> 
+         getEntriesBuilderList() {
       return internalGetEntriesFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.PerMethodSessionLoad.Entry,
-            com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder,
-            com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>
+        com.google.bigtable.v2.PerMethodSessionLoad.Entry, com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder, com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder> 
         internalGetEntriesFieldBuilder() {
       if (entriesBuilder_ == null) {
-        entriesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.PerMethodSessionLoad.Entry,
-                com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder,
-                com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>(
-                entries_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.PerMethodSessionLoad.Entry, com.google.bigtable.v2.PerMethodSessionLoad.Entry.Builder, com.google.bigtable.v2.PerMethodSessionLoad.EntryOrBuilder>(
+                entries_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         entries_ = null;
       }
       return entriesBuilder_;
@@ -1586,7 +1425,6 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.PerMethodSessionLoad)
   private static final com.google.bigtable.v2.PerMethodSessionLoad DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.PerMethodSessionLoad();
   }
@@ -1595,27 +1433,27 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PerMethodSessionLoad> PARSER =
-      new com.google.protobuf.AbstractParser<PerMethodSessionLoad>() {
-        @java.lang.Override
-        public PerMethodSessionLoad parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<PerMethodSessionLoad>
+      PARSER = new com.google.protobuf.AbstractParser<PerMethodSessionLoad>() {
+    @java.lang.Override
+    public PerMethodSessionLoad parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<PerMethodSessionLoad> parser() {
     return PARSER;
@@ -1630,4 +1468,6 @@ public final class PerMethodSessionLoad extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.PerMethodSessionLoad getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

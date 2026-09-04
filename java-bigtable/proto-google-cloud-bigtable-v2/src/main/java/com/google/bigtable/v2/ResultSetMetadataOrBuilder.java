@@ -6,40 +6,29 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ResultSetMetadataOrBuilder
-    extends
+public interface ResultSetMetadataOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ResultSetMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Schema in proto format
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoSchema proto_schema = 1;</code>
-   *
    * @return Whether the protoSchema field is set.
    */
   boolean hasProtoSchema();
-
   /**
-   *
-   *
    * <pre>
    * Schema in proto format
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoSchema proto_schema = 1;</code>
-   *
    * @return The protoSchema.
    */
   com.google.bigtable.v2.ProtoSchema getProtoSchema();
-
   /**
-   *
-   *
    * <pre>
    * Schema in proto format
    * </pre>

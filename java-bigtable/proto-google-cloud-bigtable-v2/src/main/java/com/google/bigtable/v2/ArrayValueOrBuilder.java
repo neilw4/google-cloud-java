@@ -6,25 +6,20 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ArrayValueOrBuilder
-    extends
+public interface ArrayValueOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ArrayValue)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
-  java.util.List<com.google.bigtable.v2.Value> getValuesList();
-
+  java.util.List<com.google.bigtable.v2.Value> 
+      getValuesList();
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -32,10 +27,7 @@ public interface ArrayValueOrBuilder
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
   com.google.bigtable.v2.Value getValues(int index);
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
@@ -43,26 +35,22 @@ public interface ArrayValueOrBuilder
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
   int getValuesCount();
-
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> getValuesOrBuilderList();
-
+  java.util.List<? extends com.google.bigtable.v2.ValueOrBuilder> 
+      getValuesOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * The ordered elements in the array.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.Value values = 1;</code>
    */
-  com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(int index);
+  com.google.bigtable.v2.ValueOrBuilder getValuesOrBuilder(
+      int index);
 }

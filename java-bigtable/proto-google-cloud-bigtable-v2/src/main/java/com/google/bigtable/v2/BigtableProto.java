@@ -8,1021 +8,911 @@ package com.google.bigtable.v2;
 @com.google.protobuf.Generated
 public final class BigtableProto extends com.google.protobuf.GeneratedFile {
   private BigtableProto() {}
-
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "BigtableProto");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "BigtableProto");
+  }
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadRowsRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadRowsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadRowsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadRowsResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadRowsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadRowsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_SampleRowKeysResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_SampleRowKeysResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_SampleRowKeysResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_MutateRowRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_MutateRowRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_MutateRowRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_MutateRowResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_MutateRowResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_MutateRowResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_MutateRowsRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_MutateRowsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_MutateRowsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_MutateRowsRequest_Entry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_MutateRowsRequest_Entry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_MutateRowsRequest_Entry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_MutateRowsResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_MutateRowsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_MutateRowsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_MutateRowsResponse_Entry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_MutateRowsResponse_Entry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_MutateRowsResponse_Entry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_RateLimitInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ServerStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ServerStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_CheckAndMutateRowRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_CheckAndMutateRowRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_CheckAndMutateRowRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_CheckAndMutateRowResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_CheckAndMutateRowResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_CheckAndMutateRowResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_PingAndWarmRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_PingAndWarmRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_PingAndWarmRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_PingAndWarmResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_PingAndWarmResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_PingAndWarmResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ExecuteQueryRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_PrepareQueryRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_bigtable_v2_PrepareQueryResponse_descriptor;
-  static final com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    internal_static_google_bigtable_v2_PrepareQueryResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_bigtable_v2_PrepareQueryResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n"
-          + "!google/bigtable/v2/bigtable.proto\022\022goo"
-          + "gle.bigtable.v2\032\034google/api/annotations."
-          + "proto\032\027google/api/client.proto\032\037google/a"
-          + "pi/field_behavior.proto\032\031google/api/reso"
-          + "urce.proto\032\030google/api/routing.proto\032\035go"
-          + "ogle/bigtable/v2/data.proto\032&google/bigtable/v2/request_stats.proto\032 google/bigt"
-          + "able/v2/session.proto\032\036google/bigtable/v"
-          + "2/types.proto\032\036google/protobuf/duration."
-          + "proto\032\037google/protobuf/timestamp.proto\032\036"
-          + "google/protobuf/wrappers.proto\032\027google/rpc/status.proto\"\314\004\n"
-          + "\017ReadRowsRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\001\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022Q\n"
-          + "\024authorized_view_name\030\t \001(\tB3\340A\001\372A-\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022U\n"
-          + "\026materialized_view_name\030\013 \001(\tB5\340A\001\372A/\n"
-          + "-bigtableadmin.googleapis.com/MaterializedView\022\026\n"
-          + "\016app_profile_id\030\005 \001(\t\022(\n"
-          + "\004rows\030\002 \001(\0132\032.google.bigtable.v2.RowSet\022-\n"
-          + "\006filter\030\003 \001(\0132\035.google.bigtable.v2.RowFilter\022\022\n\n"
-          + "rows_limit\030\004 \001(\003\022P\n"
-          + "\022request_stats_view\030\006 \001(\01624.google."
-          + "bigtable.v2.ReadRowsRequest.RequestStatsView\022\020\n"
-          + "\010reversed\030\007 \001(\010\"f\n"
-          + "\020RequestStatsView\022\"\n"
-          + "\036REQUEST_STATS_VIEW_UNSPECIFIED\020\000\022\026\n"
-          + "\022REQUEST_STATS_NONE\020\001\022\026\n"
-          + "\022REQUEST_STATS_FULL\020\002\"\261\003\n"
-          + "\020ReadRowsResponse\022>\n"
-          + "\006chunks\030\001 \003(\0132..google.bigtable.v2.ReadRowsResponse.CellChunk\022\034\n"
-          + "\024last_scanned_row_key\030\002 \001(\014\0227\n\r"
-          + "request_stats\030\003 \001(\0132 .google.bigtable.v2.RequestStats\032\205\002\n"
-          + "\tCellChunk\022\017\n"
-          + "\007row_key\030\001 \001(\014\0221\n"
-          + "\013family_name\030\002 \001(\0132\034.google.protobuf.StringValue\022.\n"
-          + "\tqualifier\030\003 \001(\0132\033.google.protobuf.BytesValue\022\030\n"
-          + "\020timestamp_micros\030\004 \001(\003\022\016\n"
-          + "\006labels\030\005 \003(\t\022\r\n"
-          + "\005value\030\006 \001(\014\022\022\n\n"
-          + "value_size\030\007 \001(\005\022\023\n"
-          + "\treset_row\030\010 \001(\010H\000\022\024\n\n"
-          + "commit_row\030\t \001(\010H\000B\014\n\n"
-          + "row_status\"\311\002\n"
-          + "\024SampleRowKeysRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\001\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022Q\n"
-          + "\024authorized_view_name\030\004 \001(\tB3\340A\001\372A-\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022U\n"
-          + "\026materialized_view_name\030\005 \001(\tB5\340A\001\372A/\n"
-          + "-bigtableadmin.googleapis.com/MaterializedView\022\026\n"
-          + "\016app_profile_id\030\002 \001(\t\022/\n"
-          + "\trow_range\030\006 \001(\0132\034.google.bigtable.v2.RowRange\">\n"
-          + "\025SampleRowKeysResponse\022\017\n"
-          + "\007row_key\030\001 \001(\014\022\024\n"
-          + "\014offset_bytes\030\002 \001(\003\"\277\002\n"
-          + "\020MutateRowRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\001\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022Q\n"
-          + "\024authorized_view_name\030\006 \001(\tB3\340A\001\372A-\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022\026\n"
-          + "\016app_profile_id\030\004 \001(\t\022\024\n"
-          + "\007row_key\030\002 \001(\014B\003\340A\002\0224\n"
-          + "\tmutations\030\003 \003(\0132\034.google.bigtable.v2.MutationB\003\340A\002\0224\n"
-          + "\013idempotency\030\010 \001(\0132\037.google.bigtable.v2.Idempotency\"\023\n"
-          + "\021MutateRowResponse\"\210\003\n"
-          + "\021MutateRowsRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\001\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022Q\n"
-          + "\024authorized_view_name\030\005 \001(\tB3\340A\001\372A-\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022\026\n"
-          + "\016app_profile_id\030\003 \001(\t\022A\n"
-          + "\007entries\030\002 \003(\0132+.google"
-          + ".bigtable.v2.MutateRowsRequest.EntryB\003\340A\002\032\204\001\n"
-          + "\005Entry\022\017\n"
-          + "\007row_key\030\001 \001(\014\0224\n"
-          + "\tmutations\030\002 \003(\0132\034.google.bigtable.v2.MutationB\003\340A\002\0224\n"
-          + "\013idempotency\030\003 \001(\0132\037.google.bigtable.v2.Idempotency\"\233\002\n"
-          + "\022MutateRowsResponse\022=\n"
-          + "\007entries\030\001 \003(\0132,.google.bigtable.v2.MutateRowsResponse.Entry\0225\n"
-          + "\014server_stats\030\002 \001(\0132\037.google.bigtable.v2.ServerStats\022?\n"
-          + "\017rate_limit_info\030\003"
-          + " \001(\0132!.google.bigtable.v2.RateLimitInfoH\000\210\001\001\032:\n"
-          + "\005Entry\022\r\n"
-          + "\005index\030\001 \001(\003\022\"\n"
-          + "\006status\030\002 \001(\0132\022.google.rpc.StatusB\022\n"
-          + "\020_rate_limit_info\"J\n\r"
-          + "RateLimitInfo\022)\n"
-          + "\006period\030\001 \001(\0132\031.google.protobuf.Duration\022\016\n"
-          + "\006factor\030\002 \001(\001\"\232\001\n"
-          + "\013ServerStats\022;\n"
-          + "\tcpu_stats\030\001 \003(\0132(.google.bigtable.v2.ServerStats.CPUStats\032N\n"
-          + "\010CPUStats\022*\n"
-          + "\"recent_gcu_milliseconds_per_second\030\001 \001(\005\022\026\n"
-          + "\016milligcu_limit\030\002 \001(\005\"\201\003\n"
-          + "\030CheckAndMutateRowRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\001\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022Q\n"
-          + "\024authorized_view_name\030\t \001(\tB3\340A\001\372A-\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022\026\n"
-          + "\016app_profile_id\030\007 \001(\t\022\024\n"
-          + "\007row_key\030\002 \001(\014B\003\340A\002\0227\n"
-          + "\020predicate_filter\030\006 \001(\0132\035.google.bigtable.v2.RowFilter\0224\n"
-          + "\016true_mutations\030\004 \003(\0132\034.google.bigtable.v2.Mutation\0225\n"
-          + "\017false_mutations\030\005 \003(\0132\034.google.bigtable.v2.Mutation\"6\n"
-          + "\031CheckAndMutateRowResponse\022\031\n"
-          + "\021predicate_matched\030\001 \001(\010\"i\n"
-          + "\022PingAndWarmRequest\022;\n"
-          + "\004name\030\001 \001(\tB-\340A\002\372A\'\n"
-          + "%bigtableadmin.googleapis.com/Instance\022\026\n"
-          + "\016app_profile_id\030\002 \001(\t\"(\n"
-          + "\023PingAndWarmResponse\022\021\n"
-          + "\tping_data\030\001 \001(\014\"\231\002\n"
-          + "\031ReadModifyWriteRowRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\001\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022Q\n"
-          + "\024authorized_view_name\030\006 \001(\tB3\340A\001\372A-\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022\026\n"
-          + "\016app_profile_id\030\004 \001(\t\022\024\n"
-          + "\007row_key\030\002 \001(\014B\003\340A\002\022;\n"
-          + "\005rules\030\003"
-          + " \003(\0132\'.google.bigtable.v2.ReadModifyWriteRuleB\003\340A\002\"B\n"
-          + "\032ReadModifyWriteRowResponse\022$\n"
-          + "\003row\030\001 \001(\0132\027.google.bigtable.v2.Row\"\206\001\n"
-          + ",GenerateInitialChangeStreamPartitionsRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\002\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022\026\n"
-          + "\016app_profile_id\030\002 \001(\t\"g\n"
-          + "-GenerateInitialChangeStreamPartitionsResponse\0226\n"
-          + "\tpartition\030\001 \001(\0132#.google.bigtable.v2.StreamPartition\"\233\003\n"
-          + "\027ReadChangeStreamRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\002\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022\026\n"
-          + "\016app_profile_id\030\002 \001(\t\0226\n"
-          + "\tpartition\030\003 \001(\0132#.google.bigtable.v2.StreamPartition\0220\n\n"
-          + "start_time\030\004 \001(\0132\032.google.protobuf.TimestampH\000\022K\n"
-          + "\023continuation_tokens\030\006"
-          + " \001(\0132,.google.bigtable.v2.StreamContinuationTokensH\000\022,\n"
-          + "\010end_time\030\005 \001(\0132\032.google.protobuf.Timestamp\0225\n"
-          + "\022heartbeat_duration\030\007 \001(\0132\031.google.protobuf.DurationB\014\n\n"
-          + "start_from\"\251\n\n"
-          + "\030ReadChangeStreamResponse\022N\n"
-          + "\013data_change\030\001 \001(\01327.google.bigt"
-          + "able.v2.ReadChangeStreamResponse.DataChangeH\000\022K\n"
-          + "\theartbeat\030\002 \001(\01326.google.bigtab"
-          + "le.v2.ReadChangeStreamResponse.HeartbeatH\000\022P\n"
-          + "\014close_stream\030\003 \001(\01328.google.bigtab"
-          + "le.v2.ReadChangeStreamResponse.CloseStreamH\000\032\364\001\n\r"
-          + "MutationChunk\022X\n\n"
-          + "chunk_info\030\001 \001"
-          + "(\0132D.google.bigtable.v2.ReadChangeStreamResponse.MutationChunk.ChunkInfo\022.\n"
-          + "\010mutation\030\002 \001(\0132\034.google.bigtable.v2.Mutation\032Y\n"
-          + "\tChunkInfo\022\032\n"
-          + "\022chunked_value_size\030\001 \001(\005\022\034\n"
-          + "\024chunked_value_offset\030\002 \001(\005\022\022\n\n"
-          + "last_chunk\030\003 \001(\010\032\306\003\n\n"
-          + "DataChange\022J\n"
-          + "\004type\030\001 \001(\016"
-          + "2<.google.bigtable.v2.ReadChangeStreamResponse.DataChange.Type\022\031\n"
-          + "\021source_cluster_id\030\002 \001(\t\022\017\n"
-          + "\007row_key\030\003 \001(\014\0224\n"
-          + "\020commit_timestamp\030\004 \001(\0132\032.google.protobuf.Timestamp\022\022\n\n"
-          + "tiebreaker\030\005 \001(\005\022J\n"
-          + "\006chunks\030\006 \003(\0132:.g"
-          + "oogle.bigtable.v2.ReadChangeStreamResponse.MutationChunk\022\014\n"
-          + "\004done\030\010 \001(\010\022\r\n"
-          + "\005token\030\t \001(\t\022;\n"
-          + "\027estimated_low_watermark\030\n"
-          + " \001(\0132\032.google.protobuf.Timestamp\"P\n"
-          + "\004Type\022\024\n"
-          + "\020TYPE_UNSPECIFIED\020\000\022\010\n"
-          + "\004USER\020\001\022\026\n"
-          + "\022GARBAGE_COLLECTION\020\002\022\020\n"
-          + "\014CONTINUATION\020\003\032\221\001\n"
-          + "\tHeartbeat\022G\n"
-          + "\022continuation_token\030\001"
-          + " \001(\0132+.google.bigtable.v2.StreamContinuationToken\022;\n"
-          + "\027estimated_low_watermark\030\002"
-          + " \001(\0132\032.google.protobuf.Timestamp\032\270\001\n"
-          + "\013CloseStream\022\"\n"
-          + "\006status\030\001 \001(\0132\022.google.rpc.Status\022H\n"
-          + "\023continuation_tokens\030\002"
-          + " \003(\0132+.google.bigtable.v2.StreamContinuationToken\022;\n"
-          + "\016new_partitions\030\003 \003(\0132#.google.bigtable.v2.StreamPartitionB\017\n\r"
-          + "stream_record\"\255\001\n"
-          + " InferInternalTypeMetadataRequest\022>\n\n"
-          + "table_name\030\001 \001(\tB*\340A\002\372A$\n"
-          + "\"bigtableadmin.googleapis.com/Table\022\026\n"
-          + "\016app_profile_id\030\005 \001(\t\022\022\n\n"
-          + "rows_limit\030\003 \001(\005\022\035\n"
-          + "\025columns_per_row_limit\030\004 \001(\005\"\243\003\n"
-          + "!InferInternalTypeMetadataResponse\022L\n"
-          + "\006family\030\001"
-          + " \003(\0132<.google.bigtable.v2.InferInternalTypeMetadataResponse.Family\032l\n"
-          + "\006Family\022\023\n"
-          + "\013family_name\030\001 \001(\t\022M\n"
-          + "\007columns\030\002 \003(\013"
-          + "2<.google.bigtable.v2.InferInternalTypeMetadataResponse.Column\032e\n"
-          + "\006Column\022\021\n"
-          + "\tqualifier\030\001 \001(\014\022H\n"
-          + "\004type\030\002 \001(\0162:.google.bigta"
-          + "ble.v2.InferInternalTypeMetadataResponse.Type\"[\n"
-          + "\004Type\022\016\n\n"
-          + "TYPE_BYTES\020\000\022\017\n"
-          + "\013TYPE_STRING\020\001\022\020\n"
-          + "\014TYPE_BOOLEAN\020\002\022\020\n"
-          + "\014TYPE_INTEGER\020\003\022\016\n\n"
-          + "TYPE_FLOAT\020\004\"\224\006\n"
-          + "\023ExecuteQueryRequest\022D\n\r"
-          + "instance_name\030\001 \001(\tB-\340A\002\372A\'\n"
-          + "%bigtableadmin.googleapis.com/Instance\022\033\n"
-          + "\016app_profile_id\030\002 \001(\tB\003\340A\001\022\024\n"
-          + "\005query\030\003 \001(\tB\005\030\001\340A\002\022\026\n"
-          + "\016prepared_query\030\t \001(\014\0227\n"
-          + "\014proto_format\030\004 \001(\0132\037.google.bigtable.v2.ProtoFormatH\000\022\031\n"
-          + "\014resume_token\030\010 \001(\014B\003\340A\001\022H\n"
-          + "\006params\030\007"
-          + " \003(\01323.google.bigtable.v2.ExecuteQueryRequest.ParamsEntryB\003\340A\002\022T\n"
-          + "\022request_stats_view\030\n"
-          + " \001(\01628.google.bigtable.v2.ExecuteQueryRequest.RequestStatsView\022Y\n"
-          + "\017view_parameters\030\014 \003(\0132;.google.bigtable.v2.Ex"
-          + "ecuteQueryRequest.ViewParametersEntryB\003\340A\001\032H\n"
-          + "\013ParamsEntry\022\013\n"
-          + "\003key\030\001 \001(\t\022(\n"
-          + "\005value\030\002 \001(\0132\031.google.bigtable.v2.Value:\0028\001\032P\n"
-          + "\023ViewParametersEntry\022\013\n"
-          + "\003key\030\001 \001(\t\022(\n"
-          + "\005value\030\002 \001(\0132\031.google.bigtable.v2.Value:\0028\001\"r\n"
-          + "\020RequestStatsView\022\"\n"
-          + "\036REQUEST_STATS_VIEW_UNSPECIFIED\020\000\022\033\n"
-          + "\027REQUEST_STATS_VIEW_NONE\020\001\022\035\n"
-          + "\031REQUEST_STATS_VIEW_SIMPLE\020\002B\r\n"
-          + "\013data_format\"\317\001\n"
-          + "\024ExecuteQueryResponse\0229\n"
-          + "\010metadata\030\001 \001(\0132%.google.bigtable.v2.ResultSetMetadataH\000\0227\n"
-          + "\007results\030\002 \001(\0132$.google.bigtable.v2.PartialResultSetH\000\0227\n\r"
-          + "request_stats\030\003 \001(\0132 .google.bigtable.v2.RequestStatsB\n\n"
-          + "\010response\"\331\002\n"
-          + "\031SimpleExecuteQueryRequest\022D\n\r"
-          + "instance_name\030\001 \001(\tB-\340A\002\372A\'\n"
-          + "%bigtableadmin.googleapis.com/Instance\022\033\n"
-          + "\016app_profile_id\030\002 \001(\tB\003\340A\001\022\022\n"
-          + "\005query\030\003 \001(\tB\003\340A\002\022\027\n\n"
-          + "page_token\030\004 \001(\tB\003\340A\001\022Z\n"
-          + "\017view_parameters\030\005 \003(\0132A.google.bigtable.v2."
-          + "SimpleExecuteQueryRequest.ViewParametersEntry\032P\n"
-          + "\023ViewParametersEntry\022\013\n"
-          + "\003key\030\001 \001(\t\022(\n"
-          + "\005value\030\002 \001(\0132\031.google.bigtable.v2.Value:\0028\001\"\231\001\n"
-          + "\032SimpleExecuteQueryResponse\022/\n"
-          + "\006schema\030\001 \001(\0132\037.google.bigtable.v2.ProtoSchema\022,\n"
-          + "\004rows\030\002 \003(\0132\036.google.bigtable.v2.ArrayValue\022\034\n"
-          + "\017next_page_token\030\003 \001(\tB\003\340A\001\"\364\002\n"
-          + "\023PrepareQueryRequest\022D\n\r"
-          + "instance_name\030\001 \001(\tB-\340A\002\372A\'\n"
-          + "%bigtableadmin.googleapis.com/Instance\022\033\n"
-          + "\016app_profile_id\030\002 \001(\tB\003\340A\001\022\022\n"
-          + "\005query\030\003 \001(\tB\003\340A\002\0227\n"
-          + "\014proto_format\030\004 \001(\0132\037.google.bigtable.v2.ProtoFormatH\000\022Q\n"
-          + "\013param_types\030\006 \003(\01327.google.bigtab"
-          + "le.v2.PrepareQueryRequest.ParamTypesEntryB\003\340A\002\032K\n"
-          + "\017ParamTypesEntry\022\013\n"
-          + "\003key\030\001 \001(\t\022\'\n"
-          + "\005value\030\002 \001(\0132\030.google.bigtable.v2.Type:\0028\001B\r\n"
-          + "\013data_format\"\230\001\n"
-          + "\024PrepareQueryResponse\0227\n"
-          + "\010metadata\030\001 \001(\0132%.google.bigtable.v2.ResultSetMetadata\022\026\n"
-          + "\016prepared_query\030\002 \001(\014\022/\n"
-          + "\013valid_until\030\003 \001(\0132\032.google.protobuf.Timestamp2\353/\n"
-          + "\010Bigtable\022\325\004\n"
-          + "\010ReadRows\022"
-          + "#.google.bigtable.v2.ReadRowsRequest\032$.google.bigtable.v2.ReadRowsResponse\"\373\003\332A\n"
-          + "table_name\332A\031table_name,app_profile_id\202\323"
-          + "\344\223\002\361\001\"9/v2/{table_name=projects/*/instan"
-          + "ces/*/tables/*}:readRows:\001*ZZ\"U/v2/{authorized_view_name=projects/*/instances/*/"
-          + "tables/*/authorizedViews/*}:readRows:\001*ZU\"P/v2/{materialized_view_name=projects/"
-          + "*/instances/*/materializedViews/*}:readRows:\001*\212\323\344\223\002\323\001\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022G\n"
-          + "\024authorized_view_name\022/{table_name=projects/*/instances/*/tables/*}/**\022:\n"
-          + "\026materialized_view_name\022 {name=projects/*/instances/*}/**0\001\022\352\004\n\r"
-          + "SampleRowKeys\022(.google.bigtable.v2.SampleRowKeysR"
-          + "equest\032).google.bigtable.v2.SampleRowKeysResponse\"\201\004\332A\n"
-          + "table_name\332A\031table_name,a"
-          + "pp_profile_id\202\323\344\223\002\367\001\022>/v2/{table_name=pr"
-          + "ojects/*/instances/*/tables/*}:sampleRowKeysZ\\\022Z/v2/{authorized_view_name=projec"
-          + "ts/*/instances/*/tables/*/authorizedViews/*}:sampleRowKeysZW\022U/v2/{materialized_"
-          + "view_name=projects/*/instances/*/materializedViews/*}:sampleRowKeys\212\323\344\223\002\323\001\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022G\n"
-          + "\024authorized_view_name\022/{table_name=projects/*/instances/*/tables/*}/**\022:\n"
-          + "\026materialized_view_name\022 {name=projects/*/instances/*}/**0\001\022\351\003\n"
-          + "\tMutateRow\022$.google.bigtable.v2.MutateRowRequest\032%.google.bigtable.v2"
-          + ".MutateRowResponse\"\216\003\332A\034table_name,row_k"
-          + "ey,mutations\332A+table_name,row_key,mutati"
-          + "ons,app_profile_id\202\323\344\223\002\234\001\":/v2/{table_na"
-          + "me=projects/*/instances/*/tables/*}:mutateRow:\001*Z[\"V/v2/{authorized_view_name=pr"
-          + "ojects/*/instances/*/tables/*/authorizedViews/*}:mutateRow:\001*\212\323\344\223\002\227\001\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022G\n"
-          + "\024authorized"
-          + "_view_name\022/{table_name=projects/*/instances/*/tables/*}/**\022\334\003\n\n"
-          + "MutateRows\022%.google.bigtable.v2.MutateRowsRequest\032&.goog"
-          + "le.bigtable.v2.MutateRowsResponse\"\374\002\332A\022t"
-          + "able_name,entries\332A!table_name,entries,a"
-          + "pp_profile_id\202\323\344\223\002\236\001\";/v2/{table_name=pr"
-          + "ojects/*/instances/*/tables/*}:mutateRows:\001*Z\\\"W/v2/{authorized_view_name=projec"
-          + "ts/*/instances/*/tables/*/authorizedViews/*}:mutateRows:\001*\212\323\344\223\002\227\001\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022G\n"
-          + "\024authorized_vi"
-          + "ew_name\022/{table_name=projects/*/instances/*/tables/*}/**0\001\022\335\004\n"
-          + "\021CheckAndMutateRow\022,.google.bigtable.v2.CheckAndMutateRowR"
-          + "equest\032-.google.bigtable.v2.CheckAndMuta"
-          + "teRowResponse\"\352\003\332ABtable_name,row_key,pr"
-          + "edicate_filter,true_mutations,false_mutations\332AQtable_name,row_key,predicate_fil"
-          + "ter,true_mutations,false_mutations,app_p"
-          + "rofile_id\202\323\344\223\002\254\001\"B/v2/{table_name=projec"
-          + "ts/*/instances/*/tables/*}:checkAndMutateRow:\001*Zc\"^/v2/{authorized_view_name=pro"
-          + "jects/*/instances/*/tables/*/authorizedViews/*}:checkAndMutateRow:\001*\212\323\344\223\002\227\001\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022G\n"
-          + "\024aut"
-          + "horized_view_name\022/{table_name=projects/*/instances/*/tables/*}/**\022\356\001\n"
-          + "\013PingAndWarm\022&.google.bigtable.v2.PingAndWarmReque"
-          + "st\032\'.google.bigtable.v2.PingAndWarmRespo"
-          + "nse\"\215\001\332A\004name\332A\023name,app_profile_id\202\323\344\223\002"
-          + "+\"&/v2/{name=projects/*/instances/*}:ping:\001*\212\323\344\223\0029\022%\n"
-          + "\004name\022\035{name=projects/*/instances/*}\022\020\n"
-          + "\016app_profile_id\022\216\004\n"
-          + "\022ReadModifyWriteRow\022-.google.bigtable.v2.ReadModi"
-          + "fyWriteRowRequest\032..google.bigtable.v2.R"
-          + "eadModifyWriteRowResponse\"\230\003\332A\030table_nam"
-          + "e,row_key,rules\332A\'table_name,row_key,rul"
-          + "es,app_profile_id\202\323\344\223\002\256\001\"C/v2/{table_nam"
-          + "e=projects/*/instances/*/tables/*}:readModifyWriteRow:\001*Zd\"_/v2/{authorized_view"
-          + "_name=projects/*/instances/*/tables/*/au"
-          + "thorizedViews/*}:readModifyWriteRow:\001*\212\323\344\223\002\227\001\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022G\n"
-          + "\024authorized_view_name\022/{table_name=projects/*/instances/*/tables/*}/**\022\273\002\n"
-          + "%GenerateInitialChangeStreamPartitions\022@.google.bigtable.v2.GenerateInitialChang"
-          + "eStreamPartitionsRequest\032A.google.bigtab"
-          + "le.v2.GenerateInitialChangeStreamPartitionsResponse\"\212\001\332A\n"
-          + "table_name\332A\031table_name,app_profile_id\202\323\344\223\002[\"V/v2/{table_name=p"
-          + "rojects/*/instances/*/tables/*}:generateInitialChangeStreamPartitions:\001*0\001\022\346\001\n"
-          + "\020ReadChangeStream\022+.google.bigtable.v2.Rea"
-          + "dChangeStreamRequest\032,.google.bigtable.v2.ReadChangeStreamResponse\"u\332A\n"
-          + "table_name\332A\031table_name,app_profile_id\202\323\344\223\002F\"A/v2"
-          + "/{table_name=projects/*/instances/*/tables/*}:readChangeStream:\001*0\001\022\251\002\n"
-          + "\014PrepareQuery\022\'.google.bigtable.v2.PrepareQueryRe"
-          + "quest\032(.google.bigtable.v2.PrepareQueryR"
-          + "esponse\"\305\001\332A\023instance_name,query\332A\"insta"
-          + "nce_name,query,app_profile_id\202\323\344\223\002<\"7/v2"
-          + "/{instance_name=projects/*/instances/*}:prepareQuery:\001*\212\323\344\223\002B\022.\n\r"
-          + "instance_name\022\035{name=projects/*/instances/*}\022\020\n"
-          + "\016app_profile_id\022\337\002\n"
-          + "\031InferInternalTypeMetadata\0224.google.bigtable.v2.InferInternalTypeMeta"
-          + "dataRequest\0325.google.bigtable.v2.InferIn"
-          + "ternalTypeMetadataResponse\"\324\001\332A+table_na"
-          + "me,rows_limit,columns_per_row_limit\202\323\344\223\002"
-          + "L\022J/v2/{table_name=projects/*/instances/"
-          + "*/tables/*}:inferInternalTypeMetadata\212\323\344\223\002N\022:\n\n"
-          + "table_name\022,{table_name=projects/*/instances/*/tables/*}\022\020\n"
-          + "\016app_profile_id\022\253\002\n"
-          + "\014ExecuteQuery\022\'.google.bigtable.v2.ExecuteQueryRequest\032(.google.bigtable.v2"
-          + ".ExecuteQueryResponse\"\305\001\332A\023instance_name"
-          + ",query\332A\"instance_name,query,app_profile"
-          + "_id\202\323\344\223\002<\"7/v2/{instance_name=projects/*/instances/*}:executeQuery:\001*\212\323\344\223\002B\022.\n\r"
-          + "instance_name\022\035{name=projects/*/instances/*}\022\020\n"
-          + "\016app_profile_id0\001\022\371\001\n"
-          + "\022SimpleExecuteQuery\022-.google.bigtable.v2.SimpleExecut"
-          + "eQueryRequest\032..google.bigtable.v2.Simpl"
-          + "eExecuteQueryResponse\"\203\001\332A\023instance_name"
-          + ",query\332A\"instance_name,query,app_profile"
-          + "_id\202\323\344\223\002B\"=/v2/{instance_name=projects/*/instances/*}:simpleExecuteQuery:\001*\022v\n"
-          + "\026GetClientConfiguration\0221.google.bigtable."
-          + "v2.GetClientConfigurationRequest\032\'.google.bigtable.v2.ClientConfiguration\"\000\022`\n"
-          + "\tOpenTable\022\".google.bigtable.v2.SessionReq"
-          + "uest\032#.google.bigtable.v2.SessionResponse\"\006\240\320\245\216\004\001(\0010\001\022i\n"
-          + "\022OpenAuthorizedView\022\".google.bigtable.v2.SessionRequest\032#.google"
-          + ".bigtable.v2.SessionResponse\"\006\240\320\245\216\004\002(\0010\001\022k\n"
-          + "\024OpenMaterializedView\022\".google.bigtab"
-          + "le.v2.SessionRequest\032#.google.bigtable.v"
-          + "2.SessionResponse\"\006\240\320\245\216\004\003(\0010\001\032\333\002\312A\027bigta"
-          + "ble.googleapis.com\322A\275\002https://www.google"
-          + "apis.com/auth/bigtable.data,https://www.googleapis.com/auth/bigtable.data.readon"
-          + "ly,https://www.googleapis.com/auth/cloud-bigtable.data,https://www.googleapis.co"
-          + "m/auth/cloud-bigtable.data.readonly,https://www.googleapis.com/auth/cloud-platfo"
-          + "rm,https://www.googleapis.com/auth/cloud-platform.read-onlyB\365\004\n"
-          + "\026com.google.bigtable.v2B\r"
-          + "BigtableProtoP\001Z8cloud.google.com/go/bigtable/apiv2/bigtablepb;bigtablep"
-          + "b\252\002\030Google.Cloud.Bigtable.V2\312\002\030Google\\Cl"
-          + "oud\\Bigtable\\V2\352\002\033Google::Cloud::Bigtable::V2\352AP\n"
-          + "%bigtableadmin.googleapis.com/I"
-          + "nstance\022\'projects/{project}/instances/{instance}\352A\\\n"
-          + "\"bigtableadmin.googleapis.co"
-          + "m/Table\0226projects/{project}/instances/{instance}/tables/{table}\352A\207\001\n"
-          + "+bigtableadmin.googleapis.com/AuthorizedView\022Xprojec"
-          + "ts/{project}/instances/{instance}/tables"
-          + "/{table}/authorizedViews/{authorized_view}\352A~\n"
-          + "-bigtableadmin.googleapis.com/MaterializedView\022Mprojects/{project}/instanc"
-          + "es/{instance}/materializedViews/{materialized_view}b\006proto3"
+      "\n!google/bigtable/v2/bigtable.proto\022\022goo" +
+      "gle.bigtable.v2\032\034google/api/annotations." +
+      "proto\032\027google/api/client.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\032\030google/api/routing.proto\032\035go" +
+      "ogle/bigtable/v2/data.proto\032&google/bigt" +
+      "able/v2/request_stats.proto\032 google/bigt" +
+      "able/v2/session.proto\032\036google/bigtable/v" +
+      "2/types.proto\032\036google/protobuf/duration." +
+      "proto\032\037google/protobuf/timestamp.proto\032\036" +
+      "google/protobuf/wrappers.proto\032\027google/r" +
+      "pc/status.proto\"\314\004\n\017ReadRowsRequest\022>\n\nt" +
+      "able_name\030\001 \001(\tB*\340A\001\372A$\n\"bigtableadmin.g" +
+      "oogleapis.com/Table\022Q\n\024authorized_view_n" +
+      "ame\030\t \001(\tB3\340A\001\372A-\n+bigtableadmin.googlea" +
+      "pis.com/AuthorizedView\022U\n\026materialized_v" +
+      "iew_name\030\013 \001(\tB5\340A\001\372A/\n-bigtableadmin.go" +
+      "ogleapis.com/MaterializedView\022\026\n\016app_pro" +
+      "file_id\030\005 \001(\t\022(\n\004rows\030\002 \001(\0132\032.google.big" +
+      "table.v2.RowSet\022-\n\006filter\030\003 \001(\0132\035.google" +
+      ".bigtable.v2.RowFilter\022\022\n\nrows_limit\030\004 \001" +
+      "(\003\022P\n\022request_stats_view\030\006 \001(\01624.google." +
+      "bigtable.v2.ReadRowsRequest.RequestStats" +
+      "View\022\020\n\010reversed\030\007 \001(\010\"f\n\020RequestStatsVi" +
+      "ew\022\"\n\036REQUEST_STATS_VIEW_UNSPECIFIED\020\000\022\026" +
+      "\n\022REQUEST_STATS_NONE\020\001\022\026\n\022REQUEST_STATS_" +
+      "FULL\020\002\"\261\003\n\020ReadRowsResponse\022>\n\006chunks\030\001 " +
+      "\003(\0132..google.bigtable.v2.ReadRowsRespons" +
+      "e.CellChunk\022\034\n\024last_scanned_row_key\030\002 \001(" +
+      "\014\0227\n\rrequest_stats\030\003 \001(\0132 .google.bigtab" +
+      "le.v2.RequestStats\032\205\002\n\tCellChunk\022\017\n\007row_" +
+      "key\030\001 \001(\014\0221\n\013family_name\030\002 \001(\0132\034.google." +
+      "protobuf.StringValue\022.\n\tqualifier\030\003 \001(\0132" +
+      "\033.google.protobuf.BytesValue\022\030\n\020timestam" +
+      "p_micros\030\004 \001(\003\022\016\n\006labels\030\005 \003(\t\022\r\n\005value\030" +
+      "\006 \001(\014\022\022\n\nvalue_size\030\007 \001(\005\022\023\n\treset_row\030\010" +
+      " \001(\010H\000\022\024\n\ncommit_row\030\t \001(\010H\000B\014\n\nrow_stat" +
+      "us\"\311\002\n\024SampleRowKeysRequest\022>\n\ntable_nam" +
+      "e\030\001 \001(\tB*\340A\001\372A$\n\"bigtableadmin.googleapi" +
+      "s.com/Table\022Q\n\024authorized_view_name\030\004 \001(" +
+      "\tB3\340A\001\372A-\n+bigtableadmin.googleapis.com/" +
+      "AuthorizedView\022U\n\026materialized_view_name" +
+      "\030\005 \001(\tB5\340A\001\372A/\n-bigtableadmin.googleapis" +
+      ".com/MaterializedView\022\026\n\016app_profile_id\030" +
+      "\002 \001(\t\022/\n\trow_range\030\006 \001(\0132\034.google.bigtab" +
+      "le.v2.RowRange\">\n\025SampleRowKeysResponse\022" +
+      "\017\n\007row_key\030\001 \001(\014\022\024\n\014offset_bytes\030\002 \001(\003\"\277" +
+      "\002\n\020MutateRowRequest\022>\n\ntable_name\030\001 \001(\tB" +
+      "*\340A\001\372A$\n\"bigtableadmin.googleapis.com/Ta" +
+      "ble\022Q\n\024authorized_view_name\030\006 \001(\tB3\340A\001\372A" +
+      "-\n+bigtableadmin.googleapis.com/Authoriz" +
+      "edView\022\026\n\016app_profile_id\030\004 \001(\t\022\024\n\007row_ke" +
+      "y\030\002 \001(\014B\003\340A\002\0224\n\tmutations\030\003 \003(\0132\034.google" +
+      ".bigtable.v2.MutationB\003\340A\002\0224\n\013idempotenc" +
+      "y\030\010 \001(\0132\037.google.bigtable.v2.Idempotency" +
+      "\"\023\n\021MutateRowResponse\"\210\003\n\021MutateRowsRequ" +
+      "est\022>\n\ntable_name\030\001 \001(\tB*\340A\001\372A$\n\"bigtabl" +
+      "eadmin.googleapis.com/Table\022Q\n\024authorize" +
+      "d_view_name\030\005 \001(\tB3\340A\001\372A-\n+bigtableadmin" +
+      ".googleapis.com/AuthorizedView\022\026\n\016app_pr" +
+      "ofile_id\030\003 \001(\t\022A\n\007entries\030\002 \003(\0132+.google" +
+      ".bigtable.v2.MutateRowsRequest.EntryB\003\340A" +
+      "\002\032\204\001\n\005Entry\022\017\n\007row_key\030\001 \001(\014\0224\n\tmutation" +
+      "s\030\002 \003(\0132\034.google.bigtable.v2.MutationB\003\340" +
+      "A\002\0224\n\013idempotency\030\003 \001(\0132\037.google.bigtabl" +
+      "e.v2.Idempotency\"\233\002\n\022MutateRowsResponse\022" +
+      "=\n\007entries\030\001 \003(\0132,.google.bigtable.v2.Mu" +
+      "tateRowsResponse.Entry\0225\n\014server_stats\030\002" +
+      " \001(\0132\037.google.bigtable.v2.ServerStats\022?\n" +
+      "\017rate_limit_info\030\003 \001(\0132!.google.bigtable" +
+      ".v2.RateLimitInfoH\000\210\001\001\032:\n\005Entry\022\r\n\005index" +
+      "\030\001 \001(\003\022\"\n\006status\030\002 \001(\0132\022.google.rpc.Stat" +
+      "usB\022\n\020_rate_limit_info\"J\n\rRateLimitInfo\022" +
+      ")\n\006period\030\001 \001(\0132\031.google.protobuf.Durati" +
+      "on\022\016\n\006factor\030\002 \001(\001\"\232\001\n\013ServerStats\022;\n\tcp" +
+      "u_stats\030\001 \003(\0132(.google.bigtable.v2.Serve" +
+      "rStats.CPUStats\032N\n\010CPUStats\022*\n\"recent_gc" +
+      "u_milliseconds_per_second\030\001 \001(\005\022\026\n\016milli" +
+      "gcu_limit\030\002 \001(\005\"\201\003\n\030CheckAndMutateRowReq" +
+      "uest\022>\n\ntable_name\030\001 \001(\tB*\340A\001\372A$\n\"bigtab" +
+      "leadmin.googleapis.com/Table\022Q\n\024authoriz" +
+      "ed_view_name\030\t \001(\tB3\340A\001\372A-\n+bigtableadmi" +
+      "n.googleapis.com/AuthorizedView\022\026\n\016app_p" +
+      "rofile_id\030\007 \001(\t\022\024\n\007row_key\030\002 \001(\014B\003\340A\002\0227\n" +
+      "\020predicate_filter\030\006 \001(\0132\035.google.bigtabl" +
+      "e.v2.RowFilter\0224\n\016true_mutations\030\004 \003(\0132\034" +
+      ".google.bigtable.v2.Mutation\0225\n\017false_mu" +
+      "tations\030\005 \003(\0132\034.google.bigtable.v2.Mutat" +
+      "ion\"6\n\031CheckAndMutateRowResponse\022\031\n\021pred" +
+      "icate_matched\030\001 \001(\010\"i\n\022PingAndWarmReques" +
+      "t\022;\n\004name\030\001 \001(\tB-\340A\002\372A\'\n%bigtableadmin.g" +
+      "oogleapis.com/Instance\022\026\n\016app_profile_id" +
+      "\030\002 \001(\t\"(\n\023PingAndWarmResponse\022\021\n\tping_da" +
+      "ta\030\001 \001(\014\"\231\002\n\031ReadModifyWriteRowRequest\022>" +
+      "\n\ntable_name\030\001 \001(\tB*\340A\001\372A$\n\"bigtableadmi" +
+      "n.googleapis.com/Table\022Q\n\024authorized_vie" +
+      "w_name\030\006 \001(\tB3\340A\001\372A-\n+bigtableadmin.goog" +
+      "leapis.com/AuthorizedView\022\026\n\016app_profile" +
+      "_id\030\004 \001(\t\022\024\n\007row_key\030\002 \001(\014B\003\340A\002\022;\n\005rules" +
+      "\030\003 \003(\0132\'.google.bigtable.v2.ReadModifyWr" +
+      "iteRuleB\003\340A\002\"B\n\032ReadModifyWriteRowRespon" +
+      "se\022$\n\003row\030\001 \001(\0132\027.google.bigtable.v2.Row" +
+      "\"\206\001\n,GenerateInitialChangeStreamPartitio" +
+      "nsRequest\022>\n\ntable_name\030\001 \001(\tB*\340A\002\372A$\n\"b" +
+      "igtableadmin.googleapis.com/Table\022\026\n\016app" +
+      "_profile_id\030\002 \001(\t\"g\n-GenerateInitialChan" +
+      "geStreamPartitionsResponse\0226\n\tpartition\030" +
+      "\001 \001(\0132#.google.bigtable.v2.StreamPartiti" +
+      "on\"\233\003\n\027ReadChangeStreamRequest\022>\n\ntable_" +
+      "name\030\001 \001(\tB*\340A\002\372A$\n\"bigtableadmin.google" +
+      "apis.com/Table\022\026\n\016app_profile_id\030\002 \001(\t\0226" +
+      "\n\tpartition\030\003 \001(\0132#.google.bigtable.v2.S" +
+      "treamPartition\0220\n\nstart_time\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampH\000\022K\n\023continuation" +
+      "_tokens\030\006 \001(\0132,.google.bigtable.v2.Strea" +
+      "mContinuationTokensH\000\022,\n\010end_time\030\005 \001(\0132" +
+      "\032.google.protobuf.Timestamp\0225\n\022heartbeat" +
+      "_duration\030\007 \001(\0132\031.google.protobuf.Durati" +
+      "onB\014\n\nstart_from\"\251\n\n\030ReadChangeStreamRes" +
+      "ponse\022N\n\013data_change\030\001 \001(\01327.google.bigt" +
+      "able.v2.ReadChangeStreamResponse.DataCha" +
+      "ngeH\000\022K\n\theartbeat\030\002 \001(\01326.google.bigtab" +
+      "le.v2.ReadChangeStreamResponse.Heartbeat" +
+      "H\000\022P\n\014close_stream\030\003 \001(\01328.google.bigtab" +
+      "le.v2.ReadChangeStreamResponse.CloseStre" +
+      "amH\000\032\364\001\n\rMutationChunk\022X\n\nchunk_info\030\001 \001" +
+      "(\0132D.google.bigtable.v2.ReadChangeStream" +
+      "Response.MutationChunk.ChunkInfo\022.\n\010muta" +
+      "tion\030\002 \001(\0132\034.google.bigtable.v2.Mutation" +
+      "\032Y\n\tChunkInfo\022\032\n\022chunked_value_size\030\001 \001(" +
+      "\005\022\034\n\024chunked_value_offset\030\002 \001(\005\022\022\n\nlast_" +
+      "chunk\030\003 \001(\010\032\306\003\n\nDataChange\022J\n\004type\030\001 \001(\016" +
+      "2<.google.bigtable.v2.ReadChangeStreamRe" +
+      "sponse.DataChange.Type\022\031\n\021source_cluster" +
+      "_id\030\002 \001(\t\022\017\n\007row_key\030\003 \001(\014\0224\n\020commit_tim" +
+      "estamp\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\022\n\ntiebreaker\030\005 \001(\005\022J\n\006chunks\030\006 \003(\0132:.g" +
+      "oogle.bigtable.v2.ReadChangeStreamRespon" +
+      "se.MutationChunk\022\014\n\004done\030\010 \001(\010\022\r\n\005token\030" +
+      "\t \001(\t\022;\n\027estimated_low_watermark\030\n \001(\0132\032" +
+      ".google.protobuf.Timestamp\"P\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\010\n\004USER\020\001\022\026\n\022GARBAGE_CO" +
+      "LLECTION\020\002\022\020\n\014CONTINUATION\020\003\032\221\001\n\tHeartbe" +
+      "at\022G\n\022continuation_token\030\001 \001(\0132+.google." +
+      "bigtable.v2.StreamContinuationToken\022;\n\027e" +
+      "stimated_low_watermark\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\032\270\001\n\013CloseStream\022\"\n\006stat" +
+      "us\030\001 \001(\0132\022.google.rpc.Status\022H\n\023continua" +
+      "tion_tokens\030\002 \003(\0132+.google.bigtable.v2.S" +
+      "treamContinuationToken\022;\n\016new_partitions" +
+      "\030\003 \003(\0132#.google.bigtable.v2.StreamPartit" +
+      "ionB\017\n\rstream_record\"\255\001\n InferInternalTy" +
+      "peMetadataRequest\022>\n\ntable_name\030\001 \001(\tB*\340" +
+      "A\002\372A$\n\"bigtableadmin.googleapis.com/Tabl" +
+      "e\022\026\n\016app_profile_id\030\005 \001(\t\022\022\n\nrows_limit\030" +
+      "\003 \001(\005\022\035\n\025columns_per_row_limit\030\004 \001(\005\"\243\003\n" +
+      "!InferInternalTypeMetadataResponse\022L\n\006fa" +
+      "mily\030\001 \003(\0132<.google.bigtable.v2.InferInt" +
+      "ernalTypeMetadataResponse.Family\032l\n\006Fami" +
+      "ly\022\023\n\013family_name\030\001 \001(\t\022M\n\007columns\030\002 \003(\013" +
+      "2<.google.bigtable.v2.InferInternalTypeM" +
+      "etadataResponse.Column\032e\n\006Column\022\021\n\tqual" +
+      "ifier\030\001 \001(\014\022H\n\004type\030\002 \001(\0162:.google.bigta" +
+      "ble.v2.InferInternalTypeMetadataResponse" +
+      ".Type\"[\n\004Type\022\016\n\nTYPE_BYTES\020\000\022\017\n\013TYPE_ST" +
+      "RING\020\001\022\020\n\014TYPE_BOOLEAN\020\002\022\020\n\014TYPE_INTEGER" +
+      "\020\003\022\016\n\nTYPE_FLOAT\020\004\"\224\006\n\023ExecuteQueryReque" +
+      "st\022D\n\rinstance_name\030\001 \001(\tB-\340A\002\372A\'\n%bigta" +
+      "bleadmin.googleapis.com/Instance\022\033\n\016app_" +
+      "profile_id\030\002 \001(\tB\003\340A\001\022\024\n\005query\030\003 \001(\tB\005\030\001" +
+      "\340A\002\022\026\n\016prepared_query\030\t \001(\014\0227\n\014proto_for" +
+      "mat\030\004 \001(\0132\037.google.bigtable.v2.ProtoForm" +
+      "atH\000\022\031\n\014resume_token\030\010 \001(\014B\003\340A\001\022H\n\006param" +
+      "s\030\007 \003(\01323.google.bigtable.v2.ExecuteQuer" +
+      "yRequest.ParamsEntryB\003\340A\002\022T\n\022request_sta" +
+      "ts_view\030\n \001(\01628.google.bigtable.v2.Execu" +
+      "teQueryRequest.RequestStatsView\022Y\n\017view_" +
+      "parameters\030\014 \003(\0132;.google.bigtable.v2.Ex" +
+      "ecuteQueryRequest.ViewParametersEntryB\003\340" +
+      "A\001\032H\n\013ParamsEntry\022\013\n\003key\030\001 \001(\t\022(\n\005value\030" +
+      "\002 \001(\0132\031.google.bigtable.v2.Value:\0028\001\032P\n\023" +
+      "ViewParametersEntry\022\013\n\003key\030\001 \001(\t\022(\n\005valu" +
+      "e\030\002 \001(\0132\031.google.bigtable.v2.Value:\0028\001\"r" +
+      "\n\020RequestStatsView\022\"\n\036REQUEST_STATS_VIEW" +
+      "_UNSPECIFIED\020\000\022\033\n\027REQUEST_STATS_VIEW_NON" +
+      "E\020\001\022\035\n\031REQUEST_STATS_VIEW_SIMPLE\020\002B\r\n\013da" +
+      "ta_format\"\317\001\n\024ExecuteQueryResponse\0229\n\010me" +
+      "tadata\030\001 \001(\0132%.google.bigtable.v2.Result" +
+      "SetMetadataH\000\0227\n\007results\030\002 \001(\0132$.google." +
+      "bigtable.v2.PartialResultSetH\000\0227\n\rreques" +
+      "t_stats\030\003 \001(\0132 .google.bigtable.v2.Reque" +
+      "stStatsB\n\n\010response\"\331\002\n\031SimpleExecuteQue" +
+      "ryRequest\022D\n\rinstance_name\030\001 \001(\tB-\340A\002\372A\'" +
+      "\n%bigtableadmin.googleapis.com/Instance\022" +
+      "\033\n\016app_profile_id\030\002 \001(\tB\003\340A\001\022\022\n\005query\030\003 " +
+      "\001(\tB\003\340A\002\022\027\n\npage_token\030\004 \001(\tB\003\340A\001\022Z\n\017vie" +
+      "w_parameters\030\005 \003(\0132A.google.bigtable.v2." +
+      "SimpleExecuteQueryRequest.ViewParameters" +
+      "Entry\032P\n\023ViewParametersEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022(\n\005value\030\002 \001(\0132\031.google.bigtable.v2.Va" +
+      "lue:\0028\001\"\231\001\n\032SimpleExecuteQueryResponse\022/" +
+      "\n\006schema\030\001 \001(\0132\037.google.bigtable.v2.Prot" +
+      "oSchema\022,\n\004rows\030\002 \003(\0132\036.google.bigtable." +
+      "v2.ArrayValue\022\034\n\017next_page_token\030\003 \001(\tB\003" +
+      "\340A\001\"\364\002\n\023PrepareQueryRequest\022D\n\rinstance_" +
+      "name\030\001 \001(\tB-\340A\002\372A\'\n%bigtableadmin.google" +
+      "apis.com/Instance\022\033\n\016app_profile_id\030\002 \001(" +
+      "\tB\003\340A\001\022\022\n\005query\030\003 \001(\tB\003\340A\002\0227\n\014proto_form" +
+      "at\030\004 \001(\0132\037.google.bigtable.v2.ProtoForma" +
+      "tH\000\022Q\n\013param_types\030\006 \003(\01327.google.bigtab" +
+      "le.v2.PrepareQueryRequest.ParamTypesEntr" +
+      "yB\003\340A\002\032K\n\017ParamTypesEntry\022\013\n\003key\030\001 \001(\t\022\'" +
+      "\n\005value\030\002 \001(\0132\030.google.bigtable.v2.Type:" +
+      "\0028\001B\r\n\013data_format\"\230\001\n\024PrepareQueryRespo" +
+      "nse\0227\n\010metadata\030\001 \001(\0132%.google.bigtable." +
+      "v2.ResultSetMetadata\022\026\n\016prepared_query\030\002" +
+      " \001(\014\022/\n\013valid_until\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp2\353/\n\010Bigtable\022\325\004\n\010ReadRows\022" +
+      "#.google.bigtable.v2.ReadRowsRequest\032$.g" +
+      "oogle.bigtable.v2.ReadRowsResponse\"\373\003\332A\n" +
+      "table_name\332A\031table_name,app_profile_id\202\323" +
+      "\344\223\002\361\001\"9/v2/{table_name=projects/*/instan" +
+      "ces/*/tables/*}:readRows:\001*ZZ\"U/v2/{auth" +
+      "orized_view_name=projects/*/instances/*/" +
+      "tables/*/authorizedViews/*}:readRows:\001*Z" +
+      "U\"P/v2/{materialized_view_name=projects/" +
+      "*/instances/*/materializedViews/*}:readR" +
+      "ows:\001*\212\323\344\223\002\323\001\022:\n\ntable_name\022,{table_name" +
+      "=projects/*/instances/*/tables/*}\022\020\n\016app" +
+      "_profile_id\022G\n\024authorized_view_name\022/{ta" +
+      "ble_name=projects/*/instances/*/tables/*" +
+      "}/**\022:\n\026materialized_view_name\022 {name=pr" +
+      "ojects/*/instances/*}/**0\001\022\352\004\n\rSampleRow" +
+      "Keys\022(.google.bigtable.v2.SampleRowKeysR" +
+      "equest\032).google.bigtable.v2.SampleRowKey" +
+      "sResponse\"\201\004\332A\ntable_name\332A\031table_name,a" +
+      "pp_profile_id\202\323\344\223\002\367\001\022>/v2/{table_name=pr" +
+      "ojects/*/instances/*/tables/*}:sampleRow" +
+      "KeysZ\\\022Z/v2/{authorized_view_name=projec" +
+      "ts/*/instances/*/tables/*/authorizedView" +
+      "s/*}:sampleRowKeysZW\022U/v2/{materialized_" +
+      "view_name=projects/*/instances/*/materia" +
+      "lizedViews/*}:sampleRowKeys\212\323\344\223\002\323\001\022:\n\nta" +
+      "ble_name\022,{table_name=projects/*/instanc" +
+      "es/*/tables/*}\022\020\n\016app_profile_id\022G\n\024auth" +
+      "orized_view_name\022/{table_name=projects/*" +
+      "/instances/*/tables/*}/**\022:\n\026materialize" +
+      "d_view_name\022 {name=projects/*/instances/" +
+      "*}/**0\001\022\351\003\n\tMutateRow\022$.google.bigtable." +
+      "v2.MutateRowRequest\032%.google.bigtable.v2" +
+      ".MutateRowResponse\"\216\003\332A\034table_name,row_k" +
+      "ey,mutations\332A+table_name,row_key,mutati" +
+      "ons,app_profile_id\202\323\344\223\002\234\001\":/v2/{table_na" +
+      "me=projects/*/instances/*/tables/*}:muta" +
+      "teRow:\001*Z[\"V/v2/{authorized_view_name=pr" +
+      "ojects/*/instances/*/tables/*/authorized" +
+      "Views/*}:mutateRow:\001*\212\323\344\223\002\227\001\022:\n\ntable_na" +
+      "me\022,{table_name=projects/*/instances/*/t" +
+      "ables/*}\022\020\n\016app_profile_id\022G\n\024authorized" +
+      "_view_name\022/{table_name=projects/*/insta" +
+      "nces/*/tables/*}/**\022\334\003\n\nMutateRows\022%.goo" +
+      "gle.bigtable.v2.MutateRowsRequest\032&.goog" +
+      "le.bigtable.v2.MutateRowsResponse\"\374\002\332A\022t" +
+      "able_name,entries\332A!table_name,entries,a" +
+      "pp_profile_id\202\323\344\223\002\236\001\";/v2/{table_name=pr" +
+      "ojects/*/instances/*/tables/*}:mutateRow" +
+      "s:\001*Z\\\"W/v2/{authorized_view_name=projec" +
+      "ts/*/instances/*/tables/*/authorizedView" +
+      "s/*}:mutateRows:\001*\212\323\344\223\002\227\001\022:\n\ntable_name\022" +
+      ",{table_name=projects/*/instances/*/tabl" +
+      "es/*}\022\020\n\016app_profile_id\022G\n\024authorized_vi" +
+      "ew_name\022/{table_name=projects/*/instance" +
+      "s/*/tables/*}/**0\001\022\335\004\n\021CheckAndMutateRow" +
+      "\022,.google.bigtable.v2.CheckAndMutateRowR" +
+      "equest\032-.google.bigtable.v2.CheckAndMuta" +
+      "teRowResponse\"\352\003\332ABtable_name,row_key,pr" +
+      "edicate_filter,true_mutations,false_muta" +
+      "tions\332AQtable_name,row_key,predicate_fil" +
+      "ter,true_mutations,false_mutations,app_p" +
+      "rofile_id\202\323\344\223\002\254\001\"B/v2/{table_name=projec" +
+      "ts/*/instances/*/tables/*}:checkAndMutat" +
+      "eRow:\001*Zc\"^/v2/{authorized_view_name=pro" +
+      "jects/*/instances/*/tables/*/authorizedV" +
+      "iews/*}:checkAndMutateRow:\001*\212\323\344\223\002\227\001\022:\n\nt" +
+      "able_name\022,{table_name=projects/*/instan" +
+      "ces/*/tables/*}\022\020\n\016app_profile_id\022G\n\024aut" +
+      "horized_view_name\022/{table_name=projects/" +
+      "*/instances/*/tables/*}/**\022\356\001\n\013PingAndWa" +
+      "rm\022&.google.bigtable.v2.PingAndWarmReque" +
+      "st\032\'.google.bigtable.v2.PingAndWarmRespo" +
+      "nse\"\215\001\332A\004name\332A\023name,app_profile_id\202\323\344\223\002" +
+      "+\"&/v2/{name=projects/*/instances/*}:pin" +
+      "g:\001*\212\323\344\223\0029\022%\n\004name\022\035{name=projects/*/ins" +
+      "tances/*}\022\020\n\016app_profile_id\022\216\004\n\022ReadModi" +
+      "fyWriteRow\022-.google.bigtable.v2.ReadModi" +
+      "fyWriteRowRequest\032..google.bigtable.v2.R" +
+      "eadModifyWriteRowResponse\"\230\003\332A\030table_nam" +
+      "e,row_key,rules\332A\'table_name,row_key,rul" +
+      "es,app_profile_id\202\323\344\223\002\256\001\"C/v2/{table_nam" +
+      "e=projects/*/instances/*/tables/*}:readM" +
+      "odifyWriteRow:\001*Zd\"_/v2/{authorized_view" +
+      "_name=projects/*/instances/*/tables/*/au" +
+      "thorizedViews/*}:readModifyWriteRow:\001*\212\323" +
+      "\344\223\002\227\001\022:\n\ntable_name\022,{table_name=project" +
+      "s/*/instances/*/tables/*}\022\020\n\016app_profile" +
+      "_id\022G\n\024authorized_view_name\022/{table_name" +
+      "=projects/*/instances/*/tables/*}/**\022\273\002\n" +
+      "%GenerateInitialChangeStreamPartitions\022@" +
+      ".google.bigtable.v2.GenerateInitialChang" +
+      "eStreamPartitionsRequest\032A.google.bigtab" +
+      "le.v2.GenerateInitialChangeStreamPartiti" +
+      "onsResponse\"\212\001\332A\ntable_name\332A\031table_name" +
+      ",app_profile_id\202\323\344\223\002[\"V/v2/{table_name=p" +
+      "rojects/*/instances/*/tables/*}:generate" +
+      "InitialChangeStreamPartitions:\001*0\001\022\346\001\n\020R" +
+      "eadChangeStream\022+.google.bigtable.v2.Rea" +
+      "dChangeStreamRequest\032,.google.bigtable.v" +
+      "2.ReadChangeStreamResponse\"u\332A\ntable_nam" +
+      "e\332A\031table_name,app_profile_id\202\323\344\223\002F\"A/v2" +
+      "/{table_name=projects/*/instances/*/tabl" +
+      "es/*}:readChangeStream:\001*0\001\022\251\002\n\014PrepareQ" +
+      "uery\022\'.google.bigtable.v2.PrepareQueryRe" +
+      "quest\032(.google.bigtable.v2.PrepareQueryR" +
+      "esponse\"\305\001\332A\023instance_name,query\332A\"insta" +
+      "nce_name,query,app_profile_id\202\323\344\223\002<\"7/v2" +
+      "/{instance_name=projects/*/instances/*}:" +
+      "prepareQuery:\001*\212\323\344\223\002B\022.\n\rinstance_name\022\035" +
+      "{name=projects/*/instances/*}\022\020\n\016app_pro" +
+      "file_id\022\337\002\n\031InferInternalTypeMetadata\0224." +
+      "google.bigtable.v2.InferInternalTypeMeta" +
+      "dataRequest\0325.google.bigtable.v2.InferIn" +
+      "ternalTypeMetadataResponse\"\324\001\332A+table_na" +
+      "me,rows_limit,columns_per_row_limit\202\323\344\223\002" +
+      "L\022J/v2/{table_name=projects/*/instances/" +
+      "*/tables/*}:inferInternalTypeMetadata\212\323\344" +
+      "\223\002N\022:\n\ntable_name\022,{table_name=projects/" +
+      "*/instances/*/tables/*}\022\020\n\016app_profile_i" +
+      "d\022\253\002\n\014ExecuteQuery\022\'.google.bigtable.v2." +
+      "ExecuteQueryRequest\032(.google.bigtable.v2" +
+      ".ExecuteQueryResponse\"\305\001\332A\023instance_name" +
+      ",query\332A\"instance_name,query,app_profile" +
+      "_id\202\323\344\223\002<\"7/v2/{instance_name=projects/*" +
+      "/instances/*}:executeQuery:\001*\212\323\344\223\002B\022.\n\ri" +
+      "nstance_name\022\035{name=projects/*/instances" +
+      "/*}\022\020\n\016app_profile_id0\001\022\371\001\n\022SimpleExecut" +
+      "eQuery\022-.google.bigtable.v2.SimpleExecut" +
+      "eQueryRequest\032..google.bigtable.v2.Simpl" +
+      "eExecuteQueryResponse\"\203\001\332A\023instance_name" +
+      ",query\332A\"instance_name,query,app_profile" +
+      "_id\202\323\344\223\002B\"=/v2/{instance_name=projects/*" +
+      "/instances/*}:simpleExecuteQuery:\001*\022v\n\026G" +
+      "etClientConfiguration\0221.google.bigtable." +
+      "v2.GetClientConfigurationRequest\032\'.googl" +
+      "e.bigtable.v2.ClientConfiguration\"\000\022`\n\tO" +
+      "penTable\022\".google.bigtable.v2.SessionReq" +
+      "uest\032#.google.bigtable.v2.SessionRespons" +
+      "e\"\006\240\320\245\216\004\001(\0010\001\022i\n\022OpenAuthorizedView\022\".go" +
+      "ogle.bigtable.v2.SessionRequest\032#.google" +
+      ".bigtable.v2.SessionResponse\"\006\240\320\245\216\004\002(\0010\001" +
+      "\022k\n\024OpenMaterializedView\022\".google.bigtab" +
+      "le.v2.SessionRequest\032#.google.bigtable.v" +
+      "2.SessionResponse\"\006\240\320\245\216\004\003(\0010\001\032\333\002\312A\027bigta" +
+      "ble.googleapis.com\322A\275\002https://www.google" +
+      "apis.com/auth/bigtable.data,https://www." +
+      "googleapis.com/auth/bigtable.data.readon" +
+      "ly,https://www.googleapis.com/auth/cloud" +
+      "-bigtable.data,https://www.googleapis.co" +
+      "m/auth/cloud-bigtable.data.readonly,http" +
+      "s://www.googleapis.com/auth/cloud-platfo" +
+      "rm,https://www.googleapis.com/auth/cloud" +
+      "-platform.read-onlyB\365\004\n\026com.google.bigta" +
+      "ble.v2B\rBigtableProtoP\001Z8cloud.google.co" +
+      "m/go/bigtable/apiv2/bigtablepb;bigtablep" +
+      "b\252\002\030Google.Cloud.Bigtable.V2\312\002\030Google\\Cl" +
+      "oud\\Bigtable\\V2\352\002\033Google::Cloud::Bigtabl" +
+      "e::V2\352AP\n%bigtableadmin.googleapis.com/I" +
+      "nstance\022\'projects/{project}/instances/{i" +
+      "nstance}\352A\\\n\"bigtableadmin.googleapis.co" +
+      "m/Table\0226projects/{project}/instances/{i" +
+      "nstance}/tables/{table}\352A\207\001\n+bigtableadm" +
+      "in.googleapis.com/AuthorizedView\022Xprojec" +
+      "ts/{project}/instances/{instance}/tables" +
+      "/{table}/authorizedViews/{authorized_vie" +
+      "w}\352A~\n-bigtableadmin.googleapis.com/Mate" +
+      "rializedView\022Mprojects/{project}/instanc" +
+      "es/{instance}/materializedViews/{materia" +
+      "lized_view}b\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.api.AnnotationsProto.getDescriptor(),
-              com.google.api.ClientProto.getDescriptor(),
-              com.google.api.FieldBehaviorProto.getDescriptor(),
-              com.google.api.ResourceProto.getDescriptor(),
-              com.google.api.RoutingProto.getDescriptor(),
-              com.google.bigtable.v2.DataProto.getDescriptor(),
-              com.google.bigtable.v2.RequestStatsProto.getDescriptor(),
-              com.google.bigtable.v2.SessionProto.getDescriptor(),
-              com.google.bigtable.v2.TypesProto.getDescriptor(),
-              com.google.protobuf.DurationProto.getDescriptor(),
-              com.google.protobuf.TimestampProto.getDescriptor(),
-              com.google.protobuf.WrappersProto.getDescriptor(),
-              com.google.rpc.StatusProto.getDescriptor(),
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.api.RoutingProto.getDescriptor(),
+          com.google.bigtable.v2.DataProto.getDescriptor(),
+          com.google.bigtable.v2.RequestStatsProto.getDescriptor(),
+          com.google.bigtable.v2.SessionProto.getDescriptor(),
+          com.google.bigtable.v2.TypesProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_bigtable_v2_ReadRowsRequest_descriptor =
-        getDescriptor().getMessageType(0);
-    internal_static_google_bigtable_v2_ReadRowsRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadRowsRequest_descriptor,
-            new java.lang.String[] {
-              "TableName",
-              "AuthorizedViewName",
-              "MaterializedViewName",
-              "AppProfileId",
-              "Rows",
-              "Filter",
-              "RowsLimit",
-              "RequestStatsView",
-              "Reversed",
-            });
+      getDescriptor().getMessageType(0);
+    internal_static_google_bigtable_v2_ReadRowsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadRowsRequest_descriptor,
+        new java.lang.String[] { "TableName", "AuthorizedViewName", "MaterializedViewName", "AppProfileId", "Rows", "Filter", "RowsLimit", "RequestStatsView", "Reversed", });
     internal_static_google_bigtable_v2_ReadRowsResponse_descriptor =
-        getDescriptor().getMessageType(1);
-    internal_static_google_bigtable_v2_ReadRowsResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadRowsResponse_descriptor,
-            new java.lang.String[] {
-              "Chunks", "LastScannedRowKey", "RequestStats",
-            });
+      getDescriptor().getMessageType(1);
+    internal_static_google_bigtable_v2_ReadRowsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadRowsResponse_descriptor,
+        new java.lang.String[] { "Chunks", "LastScannedRowKey", "RequestStats", });
     internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_descriptor =
-        internal_static_google_bigtable_v2_ReadRowsResponse_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_descriptor,
-            new java.lang.String[] {
-              "RowKey",
-              "FamilyName",
-              "Qualifier",
-              "TimestampMicros",
-              "Labels",
-              "Value",
-              "ValueSize",
-              "ResetRow",
-              "CommitRow",
-              "RowStatus",
-            });
+      internal_static_google_bigtable_v2_ReadRowsResponse_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadRowsResponse_CellChunk_descriptor,
+        new java.lang.String[] { "RowKey", "FamilyName", "Qualifier", "TimestampMicros", "Labels", "Value", "ValueSize", "ResetRow", "CommitRow", "RowStatus", });
     internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor =
-        getDescriptor().getMessageType(2);
-    internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor,
-            new java.lang.String[] {
-              "TableName", "AuthorizedViewName", "MaterializedViewName", "AppProfileId", "RowRange",
-            });
+      getDescriptor().getMessageType(2);
+    internal_static_google_bigtable_v2_SampleRowKeysRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_SampleRowKeysRequest_descriptor,
+        new java.lang.String[] { "TableName", "AuthorizedViewName", "MaterializedViewName", "AppProfileId", "RowRange", });
     internal_static_google_bigtable_v2_SampleRowKeysResponse_descriptor =
-        getDescriptor().getMessageType(3);
-    internal_static_google_bigtable_v2_SampleRowKeysResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_SampleRowKeysResponse_descriptor,
-            new java.lang.String[] {
-              "RowKey", "OffsetBytes",
-            });
+      getDescriptor().getMessageType(3);
+    internal_static_google_bigtable_v2_SampleRowKeysResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_SampleRowKeysResponse_descriptor,
+        new java.lang.String[] { "RowKey", "OffsetBytes", });
     internal_static_google_bigtable_v2_MutateRowRequest_descriptor =
-        getDescriptor().getMessageType(4);
-    internal_static_google_bigtable_v2_MutateRowRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_MutateRowRequest_descriptor,
-            new java.lang.String[] {
-              "TableName",
-              "AuthorizedViewName",
-              "AppProfileId",
-              "RowKey",
-              "Mutations",
-              "Idempotency",
-            });
+      getDescriptor().getMessageType(4);
+    internal_static_google_bigtable_v2_MutateRowRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_MutateRowRequest_descriptor,
+        new java.lang.String[] { "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "Mutations", "Idempotency", });
     internal_static_google_bigtable_v2_MutateRowResponse_descriptor =
-        getDescriptor().getMessageType(5);
-    internal_static_google_bigtable_v2_MutateRowResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_MutateRowResponse_descriptor,
-            new java.lang.String[] {});
+      getDescriptor().getMessageType(5);
+    internal_static_google_bigtable_v2_MutateRowResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_MutateRowResponse_descriptor,
+        new java.lang.String[] { });
     internal_static_google_bigtable_v2_MutateRowsRequest_descriptor =
-        getDescriptor().getMessageType(6);
-    internal_static_google_bigtable_v2_MutateRowsRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_MutateRowsRequest_descriptor,
-            new java.lang.String[] {
-              "TableName", "AuthorizedViewName", "AppProfileId", "Entries",
-            });
+      getDescriptor().getMessageType(6);
+    internal_static_google_bigtable_v2_MutateRowsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_MutateRowsRequest_descriptor,
+        new java.lang.String[] { "TableName", "AuthorizedViewName", "AppProfileId", "Entries", });
     internal_static_google_bigtable_v2_MutateRowsRequest_Entry_descriptor =
-        internal_static_google_bigtable_v2_MutateRowsRequest_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_MutateRowsRequest_Entry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_MutateRowsRequest_Entry_descriptor,
-            new java.lang.String[] {
-              "RowKey", "Mutations", "Idempotency",
-            });
+      internal_static_google_bigtable_v2_MutateRowsRequest_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_MutateRowsRequest_Entry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_MutateRowsRequest_Entry_descriptor,
+        new java.lang.String[] { "RowKey", "Mutations", "Idempotency", });
     internal_static_google_bigtable_v2_MutateRowsResponse_descriptor =
-        getDescriptor().getMessageType(7);
-    internal_static_google_bigtable_v2_MutateRowsResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_MutateRowsResponse_descriptor,
-            new java.lang.String[] {
-              "Entries", "ServerStats", "RateLimitInfo",
-            });
+      getDescriptor().getMessageType(7);
+    internal_static_google_bigtable_v2_MutateRowsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_MutateRowsResponse_descriptor,
+        new java.lang.String[] { "Entries", "ServerStats", "RateLimitInfo", });
     internal_static_google_bigtable_v2_MutateRowsResponse_Entry_descriptor =
-        internal_static_google_bigtable_v2_MutateRowsResponse_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_MutateRowsResponse_Entry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_MutateRowsResponse_Entry_descriptor,
-            new java.lang.String[] {
-              "Index", "Status",
-            });
-    internal_static_google_bigtable_v2_RateLimitInfo_descriptor = getDescriptor().getMessageType(8);
-    internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_RateLimitInfo_descriptor,
-            new java.lang.String[] {
-              "Period", "Factor",
-            });
-    internal_static_google_bigtable_v2_ServerStats_descriptor = getDescriptor().getMessageType(9);
-    internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ServerStats_descriptor,
-            new java.lang.String[] {
-              "CpuStats",
-            });
+      internal_static_google_bigtable_v2_MutateRowsResponse_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_MutateRowsResponse_Entry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_MutateRowsResponse_Entry_descriptor,
+        new java.lang.String[] { "Index", "Status", });
+    internal_static_google_bigtable_v2_RateLimitInfo_descriptor =
+      getDescriptor().getMessageType(8);
+    internal_static_google_bigtable_v2_RateLimitInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_RateLimitInfo_descriptor,
+        new java.lang.String[] { "Period", "Factor", });
+    internal_static_google_bigtable_v2_ServerStats_descriptor =
+      getDescriptor().getMessageType(9);
+    internal_static_google_bigtable_v2_ServerStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ServerStats_descriptor,
+        new java.lang.String[] { "CpuStats", });
     internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor =
-        internal_static_google_bigtable_v2_ServerStats_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor,
-            new java.lang.String[] {
-              "RecentGcuMillisecondsPerSecond", "MilligcuLimit",
-            });
+      internal_static_google_bigtable_v2_ServerStats_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ServerStats_CPUStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ServerStats_CPUStats_descriptor,
+        new java.lang.String[] { "RecentGcuMillisecondsPerSecond", "MilligcuLimit", });
     internal_static_google_bigtable_v2_CheckAndMutateRowRequest_descriptor =
-        getDescriptor().getMessageType(10);
-    internal_static_google_bigtable_v2_CheckAndMutateRowRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_CheckAndMutateRowRequest_descriptor,
-            new java.lang.String[] {
-              "TableName",
-              "AuthorizedViewName",
-              "AppProfileId",
-              "RowKey",
-              "PredicateFilter",
-              "TrueMutations",
-              "FalseMutations",
-            });
+      getDescriptor().getMessageType(10);
+    internal_static_google_bigtable_v2_CheckAndMutateRowRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_CheckAndMutateRowRequest_descriptor,
+        new java.lang.String[] { "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "PredicateFilter", "TrueMutations", "FalseMutations", });
     internal_static_google_bigtable_v2_CheckAndMutateRowResponse_descriptor =
-        getDescriptor().getMessageType(11);
-    internal_static_google_bigtable_v2_CheckAndMutateRowResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_CheckAndMutateRowResponse_descriptor,
-            new java.lang.String[] {
-              "PredicateMatched",
-            });
+      getDescriptor().getMessageType(11);
+    internal_static_google_bigtable_v2_CheckAndMutateRowResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_CheckAndMutateRowResponse_descriptor,
+        new java.lang.String[] { "PredicateMatched", });
     internal_static_google_bigtable_v2_PingAndWarmRequest_descriptor =
-        getDescriptor().getMessageType(12);
-    internal_static_google_bigtable_v2_PingAndWarmRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_PingAndWarmRequest_descriptor,
-            new java.lang.String[] {
-              "Name", "AppProfileId",
-            });
+      getDescriptor().getMessageType(12);
+    internal_static_google_bigtable_v2_PingAndWarmRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_PingAndWarmRequest_descriptor,
+        new java.lang.String[] { "Name", "AppProfileId", });
     internal_static_google_bigtable_v2_PingAndWarmResponse_descriptor =
-        getDescriptor().getMessageType(13);
-    internal_static_google_bigtable_v2_PingAndWarmResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_PingAndWarmResponse_descriptor,
-            new java.lang.String[] {
-              "PingData",
-            });
+      getDescriptor().getMessageType(13);
+    internal_static_google_bigtable_v2_PingAndWarmResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_PingAndWarmResponse_descriptor,
+        new java.lang.String[] { "PingData", });
     internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_descriptor =
-        getDescriptor().getMessageType(14);
-    internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_descriptor,
-            new java.lang.String[] {
-              "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "Rules",
-            });
+      getDescriptor().getMessageType(14);
+    internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadModifyWriteRowRequest_descriptor,
+        new java.lang.String[] { "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "Rules", });
     internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_descriptor =
-        getDescriptor().getMessageType(15);
-    internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_descriptor,
-            new java.lang.String[] {
-              "Row",
-            });
+      getDescriptor().getMessageType(15);
+    internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadModifyWriteRowResponse_descriptor,
+        new java.lang.String[] { "Row", });
     internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_descriptor =
-        getDescriptor().getMessageType(16);
-    internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_descriptor,
-            new java.lang.String[] {
-              "TableName", "AppProfileId",
-            });
+      getDescriptor().getMessageType(16);
+    internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest_descriptor,
+        new java.lang.String[] { "TableName", "AppProfileId", });
     internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor =
-        getDescriptor().getMessageType(17);
-    internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor,
-            new java.lang.String[] {
-              "Partition",
-            });
+      getDescriptor().getMessageType(17);
+    internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse_descriptor,
+        new java.lang.String[] { "Partition", });
     internal_static_google_bigtable_v2_ReadChangeStreamRequest_descriptor =
-        getDescriptor().getMessageType(18);
-    internal_static_google_bigtable_v2_ReadChangeStreamRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamRequest_descriptor,
-            new java.lang.String[] {
-              "TableName",
-              "AppProfileId",
-              "Partition",
-              "StartTime",
-              "ContinuationTokens",
-              "EndTime",
-              "HeartbeatDuration",
-              "StartFrom",
-            });
+      getDescriptor().getMessageType(18);
+    internal_static_google_bigtable_v2_ReadChangeStreamRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamRequest_descriptor,
+        new java.lang.String[] { "TableName", "AppProfileId", "Partition", "StartTime", "ContinuationTokens", "EndTime", "HeartbeatDuration", "StartFrom", });
     internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor =
-        getDescriptor().getMessageType(19);
-    internal_static_google_bigtable_v2_ReadChangeStreamResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor,
-            new java.lang.String[] {
-              "DataChange", "Heartbeat", "CloseStream", "StreamRecord",
-            });
+      getDescriptor().getMessageType(19);
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor,
+        new java.lang.String[] { "DataChange", "Heartbeat", "CloseStream", "StreamRecord", });
     internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor =
-        internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor,
-            new java.lang.String[] {
-              "ChunkInfo", "Mutation",
-            });
+      internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor,
+        new java.lang.String[] { "ChunkInfo", "Mutation", });
     internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_descriptor =
-        internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor
-            .getNestedType(0);
-    internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_descriptor,
-            new java.lang.String[] {
-              "ChunkedValueSize", "ChunkedValueOffset", "LastChunk",
-            });
+      internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamResponse_MutationChunk_ChunkInfo_descriptor,
+        new java.lang.String[] { "ChunkedValueSize", "ChunkedValueOffset", "LastChunk", });
     internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_descriptor =
-        internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(1);
-    internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_descriptor,
-            new java.lang.String[] {
-              "Type",
-              "SourceClusterId",
-              "RowKey",
-              "CommitTimestamp",
-              "Tiebreaker",
-              "Chunks",
-              "Done",
-              "Token",
-              "EstimatedLowWatermark",
-            });
+      internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(1);
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamResponse_DataChange_descriptor,
+        new java.lang.String[] { "Type", "SourceClusterId", "RowKey", "CommitTimestamp", "Tiebreaker", "Chunks", "Done", "Token", "EstimatedLowWatermark", });
     internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_descriptor =
-        internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(2);
-    internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_descriptor,
-            new java.lang.String[] {
-              "ContinuationToken", "EstimatedLowWatermark",
-            });
+      internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(2);
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamResponse_Heartbeat_descriptor,
+        new java.lang.String[] { "ContinuationToken", "EstimatedLowWatermark", });
     internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_descriptor =
-        internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(3);
-    internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_descriptor,
-            new java.lang.String[] {
-              "Status", "ContinuationTokens", "NewPartitions",
-            });
+      internal_static_google_bigtable_v2_ReadChangeStreamResponse_descriptor.getNestedType(3);
+    internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ReadChangeStreamResponse_CloseStream_descriptor,
+        new java.lang.String[] { "Status", "ContinuationTokens", "NewPartitions", });
     internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor =
-        getDescriptor().getMessageType(20);
-    internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor,
-            new java.lang.String[] {
-              "TableName", "AppProfileId", "RowsLimit", "ColumnsPerRowLimit",
-            });
+      getDescriptor().getMessageType(20);
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_InferInternalTypeMetadataRequest_descriptor,
+        new java.lang.String[] { "TableName", "AppProfileId", "RowsLimit", "ColumnsPerRowLimit", });
     internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor =
-        getDescriptor().getMessageType(21);
-    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor,
-            new java.lang.String[] {
-              "Family",
-            });
+      getDescriptor().getMessageType(21);
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor,
+        new java.lang.String[] { "Family", });
     internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor =
-        internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor
-            .getNestedType(0);
-    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor,
-            new java.lang.String[] {
-              "FamilyName", "Columns",
-            });
+      internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Family_descriptor,
+        new java.lang.String[] { "FamilyName", "Columns", });
     internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor =
-        internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor
-            .getNestedType(1);
-    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor,
-            new java.lang.String[] {
-              "Qualifier", "Type",
-            });
+      internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_descriptor.getNestedType(1);
+    internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_InferInternalTypeMetadataResponse_Column_descriptor,
+        new java.lang.String[] { "Qualifier", "Type", });
     internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor =
-        getDescriptor().getMessageType(22);
-    internal_static_google_bigtable_v2_ExecuteQueryRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor,
-            new java.lang.String[] {
-              "InstanceName",
-              "AppProfileId",
-              "Query",
-              "PreparedQuery",
-              "ProtoFormat",
-              "ResumeToken",
-              "Params",
-              "RequestStatsView",
-              "ViewParameters",
-              "DataFormat",
-            });
+      getDescriptor().getMessageType(22);
+    internal_static_google_bigtable_v2_ExecuteQueryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor,
+        new java.lang.String[] { "InstanceName", "AppProfileId", "Query", "PreparedQuery", "ProtoFormat", "ResumeToken", "Params", "RequestStatsView", "ViewParameters", "DataFormat", });
     internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_descriptor =
-        internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_descriptor,
-            new java.lang.String[] {
-              "Key", "Value",
-            });
+      internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ExecuteQueryRequest_ParamsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_descriptor =
-        internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor.getNestedType(1);
-    internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_descriptor,
-            new java.lang.String[] {
-              "Key", "Value",
-            });
+      internal_static_google_bigtable_v2_ExecuteQueryRequest_descriptor.getNestedType(1);
+    internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ExecuteQueryRequest_ViewParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor =
-        getDescriptor().getMessageType(23);
-    internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor,
-            new java.lang.String[] {
-              "Metadata", "Results", "RequestStats", "Response",
-            });
+      getDescriptor().getMessageType(23);
+    internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor,
+        new java.lang.String[] { "Metadata", "Results", "RequestStats", "Response", });
     internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor =
-        getDescriptor().getMessageType(24);
-    internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor,
-            new java.lang.String[] {
-              "InstanceName", "AppProfileId", "Query", "PageToken", "ViewParameters",
-            });
+      getDescriptor().getMessageType(24);
+    internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor,
+        new java.lang.String[] { "InstanceName", "AppProfileId", "Query", "PageToken", "ViewParameters", });
     internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor =
-        internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor,
-            new java.lang.String[] {
-              "Key", "Value",
-            });
+      internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_SimpleExecuteQueryRequest_ViewParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor =
-        getDescriptor().getMessageType(25);
-    internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor,
-            new java.lang.String[] {
-              "Schema", "Rows", "NextPageToken",
-            });
+      getDescriptor().getMessageType(25);
+    internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor,
+        new java.lang.String[] { "Schema", "Rows", "NextPageToken", });
     internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor =
-        getDescriptor().getMessageType(26);
-    internal_static_google_bigtable_v2_PrepareQueryRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor,
-            new java.lang.String[] {
-              "InstanceName", "AppProfileId", "Query", "ProtoFormat", "ParamTypes", "DataFormat",
-            });
+      getDescriptor().getMessageType(26);
+    internal_static_google_bigtable_v2_PrepareQueryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor,
+        new java.lang.String[] { "InstanceName", "AppProfileId", "Query", "ProtoFormat", "ParamTypes", "DataFormat", });
     internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_descriptor =
-        internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor.getNestedType(0);
-    internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_descriptor,
-            new java.lang.String[] {
-              "Key", "Value",
-            });
+      internal_static_google_bigtable_v2_PrepareQueryRequest_descriptor.getNestedType(0);
+    internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_PrepareQueryRequest_ParamTypesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_google_bigtable_v2_PrepareQueryResponse_descriptor =
-        getDescriptor().getMessageType(27);
-    internal_static_google_bigtable_v2_PrepareQueryResponse_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_google_bigtable_v2_PrepareQueryResponse_descriptor,
-            new java.lang.String[] {
-              "Metadata", "PreparedQuery", "ValidUntil",
-            });
+      getDescriptor().getMessageType(27);
+    internal_static_google_bigtable_v2_PrepareQueryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_bigtable_v2_PrepareQueryResponse_descriptor,
+        new java.lang.String[] { "Metadata", "PreparedQuery", "ValidUntil", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
@@ -1048,8 +938,8 @@ public final class BigtableProto extends com.google.protobuf.GeneratedFile {
     registry.add(com.google.api.ResourceProto.resourceReference);
     registry.add(com.google.api.RoutingProto.routing);
     registry.add(com.google.bigtable.v2.SessionProto.rpcSessionType);
-    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
-        descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

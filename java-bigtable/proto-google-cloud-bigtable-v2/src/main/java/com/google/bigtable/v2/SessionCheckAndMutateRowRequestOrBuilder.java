@@ -6,64 +6,76 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionCheckAndMutateRowRequestOrBuilder
-    extends
+public interface SessionCheckAndMutateRowRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionCheckAndMutateRowRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>bytes key = 1;</code>
-   *
    * @return The key.
    */
   com.google.protobuf.ByteString getKey();
 
   /**
    * <code>.google.bigtable.v2.RowFilter predicate_filter = 2;</code>
-   *
    * @return Whether the predicateFilter field is set.
    */
   boolean hasPredicateFilter();
-
   /**
    * <code>.google.bigtable.v2.RowFilter predicate_filter = 2;</code>
-   *
    * @return The predicateFilter.
    */
   com.google.bigtable.v2.RowFilter getPredicateFilter();
-
-  /** <code>.google.bigtable.v2.RowFilter predicate_filter = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.RowFilter predicate_filter = 2;</code>
+   */
   com.google.bigtable.v2.RowFilterOrBuilder getPredicateFilterOrBuilder();
 
-  /** <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code> */
-  java.util.List<com.google.bigtable.v2.Mutation> getTrueMutationsList();
-
-  /** <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code>
+   */
+  java.util.List<com.google.bigtable.v2.Mutation> 
+      getTrueMutationsList();
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code>
+   */
   com.google.bigtable.v2.Mutation getTrueMutations(int index);
-
-  /** <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code>
+   */
   int getTrueMutationsCount();
-
-  /** <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code> */
-  java.util.List<? extends com.google.bigtable.v2.MutationOrBuilder>
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code>
+   */
+  java.util.List<? extends com.google.bigtable.v2.MutationOrBuilder> 
       getTrueMutationsOrBuilderList();
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code>
+   */
+  com.google.bigtable.v2.MutationOrBuilder getTrueMutationsOrBuilder(
+      int index);
 
-  /** <code>repeated .google.bigtable.v2.Mutation true_mutations = 3;</code> */
-  com.google.bigtable.v2.MutationOrBuilder getTrueMutationsOrBuilder(int index);
-
-  /** <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code> */
-  java.util.List<com.google.bigtable.v2.Mutation> getFalseMutationsList();
-
-  /** <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code>
+   */
+  java.util.List<com.google.bigtable.v2.Mutation> 
+      getFalseMutationsList();
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code>
+   */
   com.google.bigtable.v2.Mutation getFalseMutations(int index);
-
-  /** <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code>
+   */
   int getFalseMutationsCount();
-
-  /** <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code> */
-  java.util.List<? extends com.google.bigtable.v2.MutationOrBuilder>
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code>
+   */
+  java.util.List<? extends com.google.bigtable.v2.MutationOrBuilder> 
       getFalseMutationsOrBuilderList();
-
-  /** <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code> */
-  com.google.bigtable.v2.MutationOrBuilder getFalseMutationsOrBuilder(int index);
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation false_mutations = 4;</code>
+   */
+  com.google.bigtable.v2.MutationOrBuilder getFalseMutationsOrBuilder(
+      int index);
 }

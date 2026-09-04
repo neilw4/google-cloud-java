@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Takes a row as input and produces an alternate view of the row based on
  * specified rules. For example, a RowFilter might trim down a row to include
@@ -46,50 +44,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.RowFilter}
  */
 @com.google.protobuf.Generated
-public final class RowFilter extends com.google.protobuf.GeneratedMessage
-    implements
+public final class RowFilter extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.RowFilter)
     RowFilterOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "RowFilter");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "RowFilter");
   }
-
   // Use RowFilter.newBuilder() to construct.
   private RowFilter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private RowFilter() {
+  }
 
-  private RowFilter() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_RowFilter_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.bigtable.v2.RowFilter.class, com.google.bigtable.v2.RowFilter.Builder.class);
   }
 
-  public interface ChainOrBuilder
-      extends
+  public interface ChainOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.RowFilter.Chain)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -98,11 +91,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
-    java.util.List<com.google.bigtable.v2.RowFilter> getFiltersList();
-
+    java.util.List<com.google.bigtable.v2.RowFilter> 
+        getFiltersList();
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -112,10 +103,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     com.google.bigtable.v2.RowFilter getFilters(int index);
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -125,10 +113,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     int getFiltersCount();
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -137,11 +122,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
-    java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> getFiltersOrBuilderList();
-
+    java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> 
+        getFiltersOrBuilderList();
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -150,66 +133,55 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
-    com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(int index);
+    com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(
+        int index);
   }
-
   /**
-   *
-   *
    * <pre>
    * A RowFilter which sends rows through several RowFilters in sequence.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.RowFilter.Chain}
    */
-  public static final class Chain extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Chain extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.RowFilter.Chain)
       ChainOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Chain");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Chain");
     }
-
     // Use Chain.newBuilder() to construct.
     private Chain(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private Chain() {
       filters_ = java.util.Collections.emptyList();
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_Chain_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Chain_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_Chain_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Chain_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.RowFilter.Chain.class,
-              com.google.bigtable.v2.RowFilter.Chain.Builder.class);
+              com.google.bigtable.v2.RowFilter.Chain.class, com.google.bigtable.v2.RowFilter.Chain.Builder.class);
     }
 
     public static final int FILTERS_FIELD_NUMBER = 1;
-
     @SuppressWarnings("serial")
     private java.util.List<com.google.bigtable.v2.RowFilter> filters_;
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -222,10 +194,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public java.util.List<com.google.bigtable.v2.RowFilter> getFiltersList() {
       return filters_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -235,14 +204,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder>
+    public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> 
         getFiltersOrBuilderList() {
       return filters_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -255,10 +221,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public int getFiltersCount() {
       return filters_.size();
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -271,10 +234,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter getFilters(int index) {
       return filters_.get(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" are chained together to process the input row:
      * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -284,12 +244,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(int index) {
+    public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(
+        int index) {
       return filters_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -301,7 +261,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       for (int i = 0; i < filters_.size(); i++) {
         output.writeMessage(1, filters_.get(i));
       }
@@ -315,7 +276,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       size = 0;
       for (int i = 0; i < filters_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, filters_.get(i));
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, filters_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -325,14 +287,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.RowFilter.Chain)) {
         return super.equals(obj);
       }
       com.google.bigtable.v2.RowFilter.Chain other = (com.google.bigtable.v2.RowFilter.Chain) obj;
 
-      if (!getFiltersList().equals(other.getFiltersList())) return false;
+      if (!getFiltersList()
+          .equals(other.getFiltersList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -353,137 +316,132 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return hash;
     }
 
-    public static com.google.bigtable.v2.RowFilter.Chain parseFrom(java.nio.ByteBuffer data)
+    public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.RowFilter.Chain parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.RowFilter.Chain parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.RowFilter.Chain parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.RowFilter.Chain parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.bigtable.v2.RowFilter.Chain prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * A RowFilter which sends rows through several RowFilters in sequence.
      * </pre>
      *
      * Protobuf type {@code google.bigtable.v2.RowFilter.Chain}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RowFilter.Chain)
         com.google.bigtable.v2.RowFilter.ChainOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Chain_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Chain_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Chain_fieldAccessorTable
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Chain_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.RowFilter.Chain.class,
-                com.google.bigtable.v2.RowFilter.Chain.Builder.class);
+                com.google.bigtable.v2.RowFilter.Chain.class, com.google.bigtable.v2.RowFilter.Chain.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.RowFilter.Chain.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -499,9 +457,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Chain_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Chain_descriptor;
       }
 
       @java.lang.Override
@@ -520,12 +478,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       @java.lang.Override
       public com.google.bigtable.v2.RowFilter.Chain buildPartial() {
-        com.google.bigtable.v2.RowFilter.Chain result =
-            new com.google.bigtable.v2.RowFilter.Chain(this);
+        com.google.bigtable.v2.RowFilter.Chain result = new com.google.bigtable.v2.RowFilter.Chain(this);
         buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -549,7 +504,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.RowFilter.Chain) {
-          return mergeFrom((com.google.bigtable.v2.RowFilter.Chain) other);
+          return mergeFrom((com.google.bigtable.v2.RowFilter.Chain)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -576,10 +531,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
               filtersBuilder_ = null;
               filters_ = other.filters_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              filtersBuilder_ =
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                      ? internalGetFiltersFieldBuilder()
-                      : null;
+              filtersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetFiltersFieldBuilder() : null;
             } else {
               filtersBuilder_.addAllMessages(other.filters_);
             }
@@ -611,26 +565,25 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  com.google.bigtable.v2.RowFilter m =
-                      input.readMessage(
-                          com.google.bigtable.v2.RowFilter.parser(), extensionRegistry);
-                  if (filtersBuilder_ == null) {
-                    ensureFiltersIsMutable();
-                    filters_.add(m);
-                  } else {
-                    filtersBuilder_.addMessage(m);
-                  }
-                  break;
-                } // case 10
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                com.google.bigtable.v2.RowFilter m =
+                    input.readMessage(
+                        com.google.bigtable.v2.RowFilter.parser(),
+                        extensionRegistry);
+                if (filtersBuilder_ == null) {
+                  ensureFiltersIsMutable();
+                  filters_.add(m);
+                } else {
+                  filtersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -640,28 +593,21 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private java.util.List<com.google.bigtable.v2.RowFilter> filters_ =
-          java.util.Collections.emptyList();
-
+        java.util.Collections.emptyList();
       private void ensureFiltersIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           filters_ = new java.util.ArrayList<com.google.bigtable.v2.RowFilter>(filters_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
-          filtersBuilder_;
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> filtersBuilder_;
 
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -677,10 +623,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           return filtersBuilder_.getMessageList();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -696,10 +639,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           return filtersBuilder_.getCount();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -715,10 +655,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           return filtersBuilder_.getMessage(index);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -727,7 +664,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public Builder setFilters(int index, com.google.bigtable.v2.RowFilter value) {
+      public Builder setFilters(
+          int index, com.google.bigtable.v2.RowFilter value) {
         if (filtersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -740,10 +678,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -763,10 +698,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -788,10 +720,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -800,7 +729,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public Builder addFilters(int index, com.google.bigtable.v2.RowFilter value) {
+      public Builder addFilters(
+          int index, com.google.bigtable.v2.RowFilter value) {
         if (filtersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -813,10 +743,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -825,7 +752,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public Builder addFilters(com.google.bigtable.v2.RowFilter.Builder builderForValue) {
+      public Builder addFilters(
+          com.google.bigtable.v2.RowFilter.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           ensureFiltersIsMutable();
           filters_.add(builderForValue.build());
@@ -835,10 +763,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -858,10 +783,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -874,17 +796,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           java.lang.Iterable<? extends com.google.bigtable.v2.RowFilter> values) {
         if (filtersBuilder_ == null) {
           ensureFiltersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, filters_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, filters_);
           onChanged();
         } else {
           filtersBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -903,10 +823,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -925,10 +842,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -937,13 +851,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public com.google.bigtable.v2.RowFilter.Builder getFiltersBuilder(int index) {
+      public com.google.bigtable.v2.RowFilter.Builder getFiltersBuilder(
+          int index) {
         return internalGetFiltersFieldBuilder().getBuilder(index);
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -952,17 +864,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(int index) {
+      public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(
+          int index) {
         if (filtersBuilder_ == null) {
-          return filters_.get(index);
-        } else {
+          return filters_.get(index);  } else {
           return filtersBuilder_.getMessageOrBuilder(index);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -971,18 +880,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder>
-          getFiltersOrBuilderList() {
+      public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> 
+           getFiltersOrBuilderList() {
         if (filtersBuilder_ != null) {
           return filtersBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(filters_);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -992,13 +898,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
       public com.google.bigtable.v2.RowFilter.Builder addFiltersBuilder() {
-        return internalGetFiltersFieldBuilder()
-            .addBuilder(com.google.bigtable.v2.RowFilter.getDefaultInstance());
+        return internalGetFiltersFieldBuilder().addBuilder(
+            com.google.bigtable.v2.RowFilter.getDefaultInstance());
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -1007,14 +910,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public com.google.bigtable.v2.RowFilter.Builder addFiltersBuilder(int index) {
-        return internalGetFiltersFieldBuilder()
-            .addBuilder(index, com.google.bigtable.v2.RowFilter.getDefaultInstance());
+      public com.google.bigtable.v2.RowFilter.Builder addFiltersBuilder(
+          int index) {
+        return internalGetFiltersFieldBuilder().addBuilder(
+            index, com.google.bigtable.v2.RowFilter.getDefaultInstance());
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" are chained together to process the input row:
        * in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
@@ -1023,22 +924,20 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public java.util.List<com.google.bigtable.v2.RowFilter.Builder> getFiltersBuilderList() {
+      public java.util.List<com.google.bigtable.v2.RowFilter.Builder> 
+           getFiltersBuilderList() {
         return internalGetFiltersFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> 
           internalGetFiltersFieldBuilder() {
         if (filtersBuilder_ == null) {
-          filtersBuilder_ =
-              new com.google.protobuf.RepeatedFieldBuilder<
-                  com.google.bigtable.v2.RowFilter,
-                  com.google.bigtable.v2.RowFilter.Builder,
-                  com.google.bigtable.v2.RowFilterOrBuilder>(
-                  filters_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+          filtersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder>(
+                  filters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
           filters_ = null;
         }
         return filtersBuilder_;
@@ -1049,7 +948,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.RowFilter.Chain)
     private static final com.google.bigtable.v2.RowFilter.Chain DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.RowFilter.Chain();
     }
@@ -1058,28 +956,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Chain> PARSER =
-        new com.google.protobuf.AbstractParser<Chain>() {
-          @java.lang.Override
-          public Chain parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Chain>
+        PARSER = new com.google.protobuf.AbstractParser<Chain>() {
+      @java.lang.Override
+      public Chain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Chain> parser() {
       return PARSER;
@@ -1094,16 +991,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter.Chain getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface InterleaveOrBuilder
-      extends
+  public interface InterleaveOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.RowFilter.Interleave)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1134,11 +1029,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
-    java.util.List<com.google.bigtable.v2.RowFilter> getFiltersList();
-
+    java.util.List<com.google.bigtable.v2.RowFilter> 
+        getFiltersList();
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1170,10 +1063,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     com.google.bigtable.v2.RowFilter getFilters(int index);
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1205,10 +1095,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     int getFiltersCount();
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1239,11 +1126,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
-    java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> getFiltersOrBuilderList();
-
+    java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> 
+        getFiltersOrBuilderList();
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1274,12 +1159,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
-    com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(int index);
+    com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(
+        int index);
   }
-
   /**
-   *
-   *
    * <pre>
    * A RowFilter which sends each row to each of several component
    * RowFilters and interleaves the results.
@@ -1287,54 +1170,45 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.RowFilter.Interleave}
    */
-  public static final class Interleave extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Interleave extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.RowFilter.Interleave)
       InterleaveOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Interleave");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Interleave");
     }
-
     // Use Interleave.newBuilder() to construct.
     private Interleave(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-
     private Interleave() {
       filters_ = java.util.Collections.emptyList();
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_Interleave_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Interleave_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_Interleave_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Interleave_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.RowFilter.Interleave.class,
-              com.google.bigtable.v2.RowFilter.Interleave.Builder.class);
+              com.google.bigtable.v2.RowFilter.Interleave.class, com.google.bigtable.v2.RowFilter.Interleave.Builder.class);
     }
 
     public static final int FILTERS_FIELD_NUMBER = 1;
-
     @SuppressWarnings("serial")
     private java.util.List<com.google.bigtable.v2.RowFilter> filters_;
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1369,10 +1243,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public java.util.List<com.google.bigtable.v2.RowFilter> getFiltersList() {
       return filters_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1404,14 +1275,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder>
+    public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> 
         getFiltersOrBuilderList() {
       return filters_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1446,10 +1314,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public int getFiltersCount() {
       return filters_.size();
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1484,10 +1349,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter getFilters(int index) {
       return filters_.get(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * The elements of "filters" all process a copy of the input row, and the
      * results are pooled, sorted, and combined into a single output row.
@@ -1519,12 +1381,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
      */
     @java.lang.Override
-    public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(int index) {
+    public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(
+        int index) {
       return filters_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1536,7 +1398,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       for (int i = 0; i < filters_.size(); i++) {
         output.writeMessage(1, filters_.get(i));
       }
@@ -1550,7 +1413,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       size = 0;
       for (int i = 0; i < filters_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, filters_.get(i));
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, filters_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1560,15 +1424,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.RowFilter.Interleave)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.RowFilter.Interleave other =
-          (com.google.bigtable.v2.RowFilter.Interleave) obj;
+      com.google.bigtable.v2.RowFilter.Interleave other = (com.google.bigtable.v2.RowFilter.Interleave) obj;
 
-      if (!getFiltersList().equals(other.getFiltersList())) return false;
+      if (!getFiltersList()
+          .equals(other.getFiltersList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1589,105 +1453,99 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return hash;
     }
 
-    public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(java.nio.ByteBuffer data)
+    public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.RowFilter.Interleave parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.RowFilter.Interleave parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.RowFilter.Interleave parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.RowFilter.Interleave parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.bigtable.v2.RowFilter.Interleave prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * A RowFilter which sends each row to each of several component
      * RowFilters and interleaves the results.
@@ -1695,32 +1553,33 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * Protobuf type {@code google.bigtable.v2.RowFilter.Interleave}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RowFilter.Interleave)
         com.google.bigtable.v2.RowFilter.InterleaveOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Interleave_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Interleave_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Interleave_fieldAccessorTable
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Interleave_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.RowFilter.Interleave.class,
-                com.google.bigtable.v2.RowFilter.Interleave.Builder.class);
+                com.google.bigtable.v2.RowFilter.Interleave.class, com.google.bigtable.v2.RowFilter.Interleave.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.RowFilter.Interleave.newBuilder()
-      private Builder() {}
+      private Builder() {
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
       }
 
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1736,9 +1595,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Interleave_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Interleave_descriptor;
       }
 
       @java.lang.Override
@@ -1757,12 +1616,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       @java.lang.Override
       public com.google.bigtable.v2.RowFilter.Interleave buildPartial() {
-        com.google.bigtable.v2.RowFilter.Interleave result =
-            new com.google.bigtable.v2.RowFilter.Interleave(this);
+        com.google.bigtable.v2.RowFilter.Interleave result = new com.google.bigtable.v2.RowFilter.Interleave(this);
         buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -1786,7 +1642,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.RowFilter.Interleave) {
-          return mergeFrom((com.google.bigtable.v2.RowFilter.Interleave) other);
+          return mergeFrom((com.google.bigtable.v2.RowFilter.Interleave)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1813,10 +1669,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
               filtersBuilder_ = null;
               filters_ = other.filters_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              filtersBuilder_ =
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                      ? internalGetFiltersFieldBuilder()
-                      : null;
+              filtersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetFiltersFieldBuilder() : null;
             } else {
               filtersBuilder_.addAllMessages(other.filters_);
             }
@@ -1848,26 +1703,25 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  com.google.bigtable.v2.RowFilter m =
-                      input.readMessage(
-                          com.google.bigtable.v2.RowFilter.parser(), extensionRegistry);
-                  if (filtersBuilder_ == null) {
-                    ensureFiltersIsMutable();
-                    filters_.add(m);
-                  } else {
-                    filtersBuilder_.addMessage(m);
-                  }
-                  break;
-                } // case 10
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                com.google.bigtable.v2.RowFilter m =
+                    input.readMessage(
+                        com.google.bigtable.v2.RowFilter.parser(),
+                        extensionRegistry);
+                if (filtersBuilder_ == null) {
+                  ensureFiltersIsMutable();
+                  filters_.add(m);
+                } else {
+                  filtersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1877,28 +1731,21 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private java.util.List<com.google.bigtable.v2.RowFilter> filters_ =
-          java.util.Collections.emptyList();
-
+        java.util.Collections.emptyList();
       private void ensureFiltersIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           filters_ = new java.util.ArrayList<com.google.bigtable.v2.RowFilter>(filters_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
-          filtersBuilder_;
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> filtersBuilder_;
 
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -1936,10 +1783,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           return filtersBuilder_.getMessageList();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -1977,10 +1821,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           return filtersBuilder_.getCount();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2018,10 +1859,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           return filtersBuilder_.getMessage(index);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2052,7 +1890,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public Builder setFilters(int index, com.google.bigtable.v2.RowFilter value) {
+      public Builder setFilters(
+          int index, com.google.bigtable.v2.RowFilter value) {
         if (filtersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2065,10 +1904,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2110,10 +1946,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2157,10 +1990,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2191,7 +2021,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public Builder addFilters(int index, com.google.bigtable.v2.RowFilter value) {
+      public Builder addFilters(
+          int index, com.google.bigtable.v2.RowFilter value) {
         if (filtersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2204,10 +2035,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2238,7 +2066,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public Builder addFilters(com.google.bigtable.v2.RowFilter.Builder builderForValue) {
+      public Builder addFilters(
+          com.google.bigtable.v2.RowFilter.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           ensureFiltersIsMutable();
           filters_.add(builderForValue.build());
@@ -2248,10 +2077,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2293,10 +2119,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2331,17 +2154,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
           java.lang.Iterable<? extends com.google.bigtable.v2.RowFilter> values) {
         if (filtersBuilder_ == null) {
           ensureFiltersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, filters_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, filters_);
           onChanged();
         } else {
           filtersBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2382,10 +2203,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2426,10 +2244,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2460,13 +2275,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public com.google.bigtable.v2.RowFilter.Builder getFiltersBuilder(int index) {
+      public com.google.bigtable.v2.RowFilter.Builder getFiltersBuilder(
+          int index) {
         return internalGetFiltersFieldBuilder().getBuilder(index);
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2497,17 +2310,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(int index) {
+      public com.google.bigtable.v2.RowFilterOrBuilder getFiltersOrBuilder(
+          int index) {
         if (filtersBuilder_ == null) {
-          return filters_.get(index);
-        } else {
+          return filters_.get(index);  } else {
           return filtersBuilder_.getMessageOrBuilder(index);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2538,18 +2348,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder>
-          getFiltersOrBuilderList() {
+      public java.util.List<? extends com.google.bigtable.v2.RowFilterOrBuilder> 
+           getFiltersOrBuilderList() {
         if (filtersBuilder_ != null) {
           return filtersBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(filters_);
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2581,13 +2388,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
       public com.google.bigtable.v2.RowFilter.Builder addFiltersBuilder() {
-        return internalGetFiltersFieldBuilder()
-            .addBuilder(com.google.bigtable.v2.RowFilter.getDefaultInstance());
+        return internalGetFiltersFieldBuilder().addBuilder(
+            com.google.bigtable.v2.RowFilter.getDefaultInstance());
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2618,14 +2422,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public com.google.bigtable.v2.RowFilter.Builder addFiltersBuilder(int index) {
-        return internalGetFiltersFieldBuilder()
-            .addBuilder(index, com.google.bigtable.v2.RowFilter.getDefaultInstance());
+      public com.google.bigtable.v2.RowFilter.Builder addFiltersBuilder(
+          int index) {
+        return internalGetFiltersFieldBuilder().addBuilder(
+            index, com.google.bigtable.v2.RowFilter.getDefaultInstance());
       }
-
       /**
-       *
-       *
        * <pre>
        * The elements of "filters" all process a copy of the input row, and the
        * results are pooled, sorted, and combined into a single output row.
@@ -2656,22 +2458,20 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>repeated .google.bigtable.v2.RowFilter filters = 1;</code>
        */
-      public java.util.List<com.google.bigtable.v2.RowFilter.Builder> getFiltersBuilderList() {
+      public java.util.List<com.google.bigtable.v2.RowFilter.Builder> 
+           getFiltersBuilderList() {
         return internalGetFiltersFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> 
           internalGetFiltersFieldBuilder() {
         if (filtersBuilder_ == null) {
-          filtersBuilder_ =
-              new com.google.protobuf.RepeatedFieldBuilder<
-                  com.google.bigtable.v2.RowFilter,
-                  com.google.bigtable.v2.RowFilter.Builder,
-                  com.google.bigtable.v2.RowFilterOrBuilder>(
-                  filters_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+          filtersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder>(
+                  filters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
           filters_ = null;
         }
         return filtersBuilder_;
@@ -2682,7 +2482,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.RowFilter.Interleave)
     private static final com.google.bigtable.v2.RowFilter.Interleave DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.RowFilter.Interleave();
     }
@@ -2691,28 +2490,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Interleave> PARSER =
-        new com.google.protobuf.AbstractParser<Interleave>() {
-          @java.lang.Override
-          public Interleave parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Interleave>
+        PARSER = new com.google.protobuf.AbstractParser<Interleave>() {
+      @java.lang.Override
+      public Interleave parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Interleave> parser() {
       return PARSER;
@@ -2727,44 +2525,34 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter.Interleave getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface ConditionOrBuilder
-      extends
+  public interface ConditionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.bigtable.v2.RowFilter.Condition)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * If `predicate_filter` outputs any cells, then `true_filter` will be
      * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
-     *
      * @return Whether the predicateFilter field is set.
      */
     boolean hasPredicateFilter();
-
     /**
-     *
-     *
      * <pre>
      * If `predicate_filter` outputs any cells, then `true_filter` will be
      * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
-     *
      * @return The predicateFilter.
      */
     com.google.bigtable.v2.RowFilter getPredicateFilter();
-
     /**
-     *
-     *
      * <pre>
      * If `predicate_filter` outputs any cells, then `true_filter` will be
      * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -2775,36 +2563,26 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     com.google.bigtable.v2.RowFilterOrBuilder getPredicateFilterOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` returns any
      * results. If not provided, no results will be returned in the true case.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
-     *
      * @return Whether the trueFilter field is set.
      */
     boolean hasTrueFilter();
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` returns any
      * results. If not provided, no results will be returned in the true case.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
-     *
      * @return The trueFilter.
      */
     com.google.bigtable.v2.RowFilter getTrueFilter();
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` returns any
      * results. If not provided, no results will be returned in the true case.
@@ -2815,8 +2593,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     com.google.bigtable.v2.RowFilterOrBuilder getTrueFilterOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` does not
      * return any results. If not provided, no results will be returned in the
@@ -2824,14 +2600,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
-     *
      * @return Whether the falseFilter field is set.
      */
     boolean hasFalseFilter();
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` does not
      * return any results. If not provided, no results will be returned in the
@@ -2839,14 +2611,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
-     *
      * @return The falseFilter.
      */
     com.google.bigtable.v2.RowFilter getFalseFilter();
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` does not
      * return any results. If not provided, no results will be returned in the
@@ -2857,10 +2625,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     com.google.bigtable.v2.RowFilterOrBuilder getFalseFilterOrBuilder();
   }
-
   /**
-   *
-   *
    * <pre>
    * A RowFilter which evaluates one of two possible RowFilters, depending on
    * whether or not a predicate RowFilter outputs any cells from the input row.
@@ -2873,87 +2638,70 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.RowFilter.Condition}
    */
-  public static final class Condition extends com.google.protobuf.GeneratedMessage
-      implements
+  public static final class Condition extends
+      com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:google.bigtable.v2.RowFilter.Condition)
       ConditionOrBuilder {
-    private static final long serialVersionUID = 0L;
-
+  private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 33,
-          /* patch= */ 6,
-          /* suffix= */ "",
-          "Condition");
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 6,
+        /* suffix= */ "",
+        "Condition");
     }
-
     // Use Condition.newBuilder() to construct.
     private Condition(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
+    private Condition() {
+    }
 
-    private Condition() {}
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_Condition_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Condition_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_Condition_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Condition_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.RowFilter.Condition.class,
-              com.google.bigtable.v2.RowFilter.Condition.Builder.class);
+              com.google.bigtable.v2.RowFilter.Condition.class, com.google.bigtable.v2.RowFilter.Condition.Builder.class);
     }
 
     private int bitField0_;
     public static final int PREDICATE_FILTER_FIELD_NUMBER = 1;
     private com.google.bigtable.v2.RowFilter predicateFilter_;
-
     /**
-     *
-     *
      * <pre>
      * If `predicate_filter` outputs any cells, then `true_filter` will be
      * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
-     *
      * @return Whether the predicateFilter field is set.
      */
     @java.lang.Override
     public boolean hasPredicateFilter() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * If `predicate_filter` outputs any cells, then `true_filter` will be
      * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
-     *
      * @return The predicateFilter.
      */
     @java.lang.Override
     public com.google.bigtable.v2.RowFilter getPredicateFilter() {
-      return predicateFilter_ == null
-          ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-          : predicateFilter_;
+      return predicateFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : predicateFilter_;
     }
-
     /**
-     *
-     *
      * <pre>
      * If `predicate_filter` outputs any cells, then `true_filter` will be
      * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -2963,53 +2711,38 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     @java.lang.Override
     public com.google.bigtable.v2.RowFilterOrBuilder getPredicateFilterOrBuilder() {
-      return predicateFilter_ == null
-          ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-          : predicateFilter_;
+      return predicateFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : predicateFilter_;
     }
 
     public static final int TRUE_FILTER_FIELD_NUMBER = 2;
     private com.google.bigtable.v2.RowFilter trueFilter_;
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` returns any
      * results. If not provided, no results will be returned in the true case.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
-     *
      * @return Whether the trueFilter field is set.
      */
     @java.lang.Override
     public boolean hasTrueFilter() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` returns any
      * results. If not provided, no results will be returned in the true case.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
-     *
      * @return The trueFilter.
      */
     @java.lang.Override
     public com.google.bigtable.v2.RowFilter getTrueFilter() {
-      return trueFilter_ == null
-          ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-          : trueFilter_;
+      return trueFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : trueFilter_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` returns any
      * results. If not provided, no results will be returned in the true case.
@@ -3019,17 +2752,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     @java.lang.Override
     public com.google.bigtable.v2.RowFilterOrBuilder getTrueFilterOrBuilder() {
-      return trueFilter_ == null
-          ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-          : trueFilter_;
+      return trueFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : trueFilter_;
     }
 
     public static final int FALSE_FILTER_FIELD_NUMBER = 3;
     private com.google.bigtable.v2.RowFilter falseFilter_;
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` does not
      * return any results. If not provided, no results will be returned in the
@@ -3037,17 +2765,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
-     *
      * @return Whether the falseFilter field is set.
      */
     @java.lang.Override
     public boolean hasFalseFilter() {
       return ((bitField0_ & 0x00000004) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` does not
      * return any results. If not provided, no results will be returned in the
@@ -3055,19 +2779,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
-     *
      * @return The falseFilter.
      */
     @java.lang.Override
     public com.google.bigtable.v2.RowFilter getFalseFilter() {
-      return falseFilter_ == null
-          ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-          : falseFilter_;
+      return falseFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : falseFilter_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The filter to apply to the input row if `predicate_filter` does not
      * return any results. If not provided, no results will be returned in the
@@ -3078,13 +2796,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     @java.lang.Override
     public com.google.bigtable.v2.RowFilterOrBuilder getFalseFilterOrBuilder() {
-      return falseFilter_ == null
-          ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-          : falseFilter_;
+      return falseFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : falseFilter_;
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3096,7 +2811,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPredicateFilter());
       }
@@ -3116,13 +2832,16 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getPredicateFilter());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPredicateFilter());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getTrueFilter());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTrueFilter());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getFalseFilter());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFalseFilter());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3132,25 +2851,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.bigtable.v2.RowFilter.Condition)) {
         return super.equals(obj);
       }
-      com.google.bigtable.v2.RowFilter.Condition other =
-          (com.google.bigtable.v2.RowFilter.Condition) obj;
+      com.google.bigtable.v2.RowFilter.Condition other = (com.google.bigtable.v2.RowFilter.Condition) obj;
 
       if (hasPredicateFilter() != other.hasPredicateFilter()) return false;
       if (hasPredicateFilter()) {
-        if (!getPredicateFilter().equals(other.getPredicateFilter())) return false;
+        if (!getPredicateFilter()
+            .equals(other.getPredicateFilter())) return false;
       }
       if (hasTrueFilter() != other.hasTrueFilter()) return false;
       if (hasTrueFilter()) {
-        if (!getTrueFilter().equals(other.getTrueFilter())) return false;
+        if (!getTrueFilter()
+            .equals(other.getTrueFilter())) return false;
       }
       if (hasFalseFilter() != other.hasFalseFilter()) return false;
       if (hasFalseFilter()) {
-        if (!getFalseFilter().equals(other.getFalseFilter())) return false;
+        if (!getFalseFilter()
+            .equals(other.getFalseFilter())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3180,105 +2901,99 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return hash;
     }
 
-    public static com.google.bigtable.v2.RowFilter.Condition parseFrom(java.nio.ByteBuffer data)
+    public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.bigtable.v2.RowFilter.Condition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
     public static com.google.bigtable.v2.RowFilter.Condition parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.bigtable.v2.RowFilter.Condition parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.bigtable.v2.RowFilter.Condition parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.bigtable.v2.RowFilter.Condition prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
-    protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
-     *
-     *
      * <pre>
      * A RowFilter which evaluates one of two possible RowFilters, depending on
      * whether or not a predicate RowFilter outputs any cells from the input row.
@@ -3291,23 +3006,21 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * Protobuf type {@code google.bigtable.v2.RowFilter.Condition}
      */
-    public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RowFilter.Condition)
         com.google.bigtable.v2.RowFilter.ConditionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Condition_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Condition_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Condition_fieldAccessorTable
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Condition_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.bigtable.v2.RowFilter.Condition.class,
-                com.google.bigtable.v2.RowFilter.Condition.Builder.class);
+                com.google.bigtable.v2.RowFilter.Condition.class, com.google.bigtable.v2.RowFilter.Condition.Builder.class);
       }
 
       // Construct using com.google.bigtable.v2.RowFilter.Condition.newBuilder()
@@ -3315,19 +3028,19 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
           internalGetPredicateFilterFieldBuilder();
           internalGetTrueFilterFieldBuilder();
           internalGetFalseFilterFieldBuilder();
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -3351,9 +3064,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.bigtable.v2.DataProto
-            .internal_static_google_bigtable_v2_RowFilter_Condition_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_Condition_descriptor;
       }
 
       @java.lang.Override
@@ -3372,11 +3085,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       @java.lang.Override
       public com.google.bigtable.v2.RowFilter.Condition buildPartial() {
-        com.google.bigtable.v2.RowFilter.Condition result =
-            new com.google.bigtable.v2.RowFilter.Condition(this);
-        if (bitField0_ != 0) {
-          buildPartial0(result);
-        }
+        com.google.bigtable.v2.RowFilter.Condition result = new com.google.bigtable.v2.RowFilter.Condition(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
@@ -3385,18 +3095,21 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.predicateFilter_ =
-              predicateFilterBuilder_ == null ? predicateFilter_ : predicateFilterBuilder_.build();
+          result.predicateFilter_ = predicateFilterBuilder_ == null
+              ? predicateFilter_
+              : predicateFilterBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.trueFilter_ =
-              trueFilterBuilder_ == null ? trueFilter_ : trueFilterBuilder_.build();
+          result.trueFilter_ = trueFilterBuilder_ == null
+              ? trueFilter_
+              : trueFilterBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.falseFilter_ =
-              falseFilterBuilder_ == null ? falseFilter_ : falseFilterBuilder_.build();
+          result.falseFilter_ = falseFilterBuilder_ == null
+              ? falseFilter_
+              : falseFilterBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
@@ -3405,7 +3118,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.bigtable.v2.RowFilter.Condition) {
-          return mergeFrom((com.google.bigtable.v2.RowFilter.Condition) other);
+          return mergeFrom((com.google.bigtable.v2.RowFilter.Condition)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -3449,34 +3162,33 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
               case 0:
                 done = true;
                 break;
-              case 10:
-                {
-                  input.readMessage(
-                      internalGetPredicateFilterFieldBuilder().getBuilder(), extensionRegistry);
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-              case 18:
-                {
-                  input.readMessage(
-                      internalGetTrueFilterFieldBuilder().getBuilder(), extensionRegistry);
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 18
-              case 26:
-                {
-                  input.readMessage(
-                      internalGetFalseFilterFieldBuilder().getBuilder(), extensionRegistry);
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 26
-              default:
-                {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
+              case 10: {
+                input.readMessage(
+                    internalGetPredicateFilterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetTrueFilterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    internalGetFalseFilterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
             } // switch (tag)
           } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3486,57 +3198,40 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         } // finally
         return this;
       }
-
       private int bitField0_;
 
       private com.google.bigtable.v2.RowFilter predicateFilter_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
-          predicateFilterBuilder_;
-
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> predicateFilterBuilder_;
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
        * </pre>
        *
        * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
-       *
        * @return Whether the predicateFilter field is set.
        */
       public boolean hasPredicateFilter() {
         return ((bitField0_ & 0x00000001) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
        * </pre>
        *
        * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
-       *
        * @return The predicateFilter.
        */
       public com.google.bigtable.v2.RowFilter getPredicateFilter() {
         if (predicateFilterBuilder_ == null) {
-          return predicateFilter_ == null
-              ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-              : predicateFilter_;
+          return predicateFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : predicateFilter_;
         } else {
           return predicateFilterBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3557,10 +3252,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3568,7 +3260,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
        */
-      public Builder setPredicateFilter(com.google.bigtable.v2.RowFilter.Builder builderForValue) {
+      public Builder setPredicateFilter(
+          com.google.bigtable.v2.RowFilter.Builder builderForValue) {
         if (predicateFilterBuilder_ == null) {
           predicateFilter_ = builderForValue.build();
         } else {
@@ -3578,10 +3271,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3591,9 +3281,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        */
       public Builder mergePredicateFilter(com.google.bigtable.v2.RowFilter value) {
         if (predicateFilterBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)
-              && predicateFilter_ != null
-              && predicateFilter_ != com.google.bigtable.v2.RowFilter.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            predicateFilter_ != null &&
+            predicateFilter_ != com.google.bigtable.v2.RowFilter.getDefaultInstance()) {
             getPredicateFilterBuilder().mergeFrom(value);
           } else {
             predicateFilter_ = value;
@@ -3607,10 +3297,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3628,10 +3315,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3644,10 +3328,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return internalGetPredicateFilterFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3659,15 +3340,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         if (predicateFilterBuilder_ != null) {
           return predicateFilterBuilder_.getMessageOrBuilder();
         } else {
-          return predicateFilter_ == null
-              ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-              : predicateFilter_;
+          return predicateFilter_ == null ?
+              com.google.bigtable.v2.RowFilter.getDefaultInstance() : predicateFilter_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * If `predicate_filter` outputs any cells, then `true_filter` will be
        * evaluated on the input row. Otherwise, `false_filter` will be evaluated.
@@ -3676,17 +3353,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * <code>.google.bigtable.v2.RowFilter predicate_filter = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> 
           internalGetPredicateFilterFieldBuilder() {
         if (predicateFilterBuilder_ == null) {
-          predicateFilterBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.RowFilter,
-                  com.google.bigtable.v2.RowFilter.Builder,
-                  com.google.bigtable.v2.RowFilterOrBuilder>(
-                  getPredicateFilter(), getParentForChildren(), isClean());
+          predicateFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder>(
+                  getPredicateFilter(),
+                  getParentForChildren(),
+                  isClean());
           predicateFilter_ = null;
         }
         return predicateFilterBuilder_;
@@ -3694,52 +3368,36 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       private com.google.bigtable.v2.RowFilter trueFilter_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
-          trueFilterBuilder_;
-
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> trueFilterBuilder_;
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
        * </pre>
        *
        * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
-       *
        * @return Whether the trueFilter field is set.
        */
       public boolean hasTrueFilter() {
         return ((bitField0_ & 0x00000002) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
        * </pre>
        *
        * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
-       *
        * @return The trueFilter.
        */
       public com.google.bigtable.v2.RowFilter getTrueFilter() {
         if (trueFilterBuilder_ == null) {
-          return trueFilter_ == null
-              ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-              : trueFilter_;
+          return trueFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : trueFilter_;
         } else {
           return trueFilterBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3760,10 +3418,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3771,7 +3426,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
        */
-      public Builder setTrueFilter(com.google.bigtable.v2.RowFilter.Builder builderForValue) {
+      public Builder setTrueFilter(
+          com.google.bigtable.v2.RowFilter.Builder builderForValue) {
         if (trueFilterBuilder_ == null) {
           trueFilter_ = builderForValue.build();
         } else {
@@ -3781,10 +3437,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3794,9 +3447,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        */
       public Builder mergeTrueFilter(com.google.bigtable.v2.RowFilter value) {
         if (trueFilterBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)
-              && trueFilter_ != null
-              && trueFilter_ != com.google.bigtable.v2.RowFilter.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            trueFilter_ != null &&
+            trueFilter_ != com.google.bigtable.v2.RowFilter.getDefaultInstance()) {
             getTrueFilterBuilder().mergeFrom(value);
           } else {
             trueFilter_ = value;
@@ -3810,10 +3463,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3831,10 +3481,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3847,10 +3494,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return internalGetTrueFilterFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3862,15 +3506,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         if (trueFilterBuilder_ != null) {
           return trueFilterBuilder_.getMessageOrBuilder();
         } else {
-          return trueFilter_ == null
-              ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-              : trueFilter_;
+          return trueFilter_ == null ?
+              com.google.bigtable.v2.RowFilter.getDefaultInstance() : trueFilter_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` returns any
        * results. If not provided, no results will be returned in the true case.
@@ -3879,17 +3519,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * <code>.google.bigtable.v2.RowFilter true_filter = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> 
           internalGetTrueFilterFieldBuilder() {
         if (trueFilterBuilder_ == null) {
-          trueFilterBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.RowFilter,
-                  com.google.bigtable.v2.RowFilter.Builder,
-                  com.google.bigtable.v2.RowFilterOrBuilder>(
-                  getTrueFilter(), getParentForChildren(), isClean());
+          trueFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder>(
+                  getTrueFilter(),
+                  getParentForChildren(),
+                  isClean());
           trueFilter_ = null;
         }
         return trueFilterBuilder_;
@@ -3897,14 +3534,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
       private com.google.bigtable.v2.RowFilter falseFilter_;
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
-          falseFilterBuilder_;
-
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> falseFilterBuilder_;
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -3912,16 +3543,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * </pre>
        *
        * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
-       *
        * @return Whether the falseFilter field is set.
        */
       public boolean hasFalseFilter() {
         return ((bitField0_ & 0x00000004) != 0);
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -3929,22 +3556,16 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * </pre>
        *
        * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
-       *
        * @return The falseFilter.
        */
       public com.google.bigtable.v2.RowFilter getFalseFilter() {
         if (falseFilterBuilder_ == null) {
-          return falseFilter_ == null
-              ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-              : falseFilter_;
+          return falseFilter_ == null ? com.google.bigtable.v2.RowFilter.getDefaultInstance() : falseFilter_;
         } else {
           return falseFilterBuilder_.getMessage();
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -3966,10 +3587,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -3978,7 +3596,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        *
        * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
        */
-      public Builder setFalseFilter(com.google.bigtable.v2.RowFilter.Builder builderForValue) {
+      public Builder setFalseFilter(
+          com.google.bigtable.v2.RowFilter.Builder builderForValue) {
         if (falseFilterBuilder_ == null) {
           falseFilter_ = builderForValue.build();
         } else {
@@ -3988,10 +3607,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -4002,9 +3618,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        */
       public Builder mergeFalseFilter(com.google.bigtable.v2.RowFilter value) {
         if (falseFilterBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)
-              && falseFilter_ != null
-              && falseFilter_ != com.google.bigtable.v2.RowFilter.getDefaultInstance()) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            falseFilter_ != null &&
+            falseFilter_ != com.google.bigtable.v2.RowFilter.getDefaultInstance()) {
             getFalseFilterBuilder().mergeFrom(value);
           } else {
             falseFilter_ = value;
@@ -4018,10 +3634,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         }
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -4040,10 +3653,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return this;
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -4057,10 +3667,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         onChanged();
         return internalGetFalseFilterFieldBuilder().getBuilder();
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -4073,15 +3680,11 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         if (falseFilterBuilder_ != null) {
           return falseFilterBuilder_.getMessageOrBuilder();
         } else {
-          return falseFilter_ == null
-              ? com.google.bigtable.v2.RowFilter.getDefaultInstance()
-              : falseFilter_;
+          return falseFilter_ == null ?
+              com.google.bigtable.v2.RowFilter.getDefaultInstance() : falseFilter_;
         }
       }
-
       /**
-       *
-       *
        * <pre>
        * The filter to apply to the input row if `predicate_filter` does not
        * return any results. If not provided, no results will be returned in the
@@ -4091,17 +3694,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
        * <code>.google.bigtable.v2.RowFilter false_filter = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-              com.google.bigtable.v2.RowFilter,
-              com.google.bigtable.v2.RowFilter.Builder,
-              com.google.bigtable.v2.RowFilterOrBuilder>
+          com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder> 
           internalGetFalseFilterFieldBuilder() {
         if (falseFilterBuilder_ == null) {
-          falseFilterBuilder_ =
-              new com.google.protobuf.SingleFieldBuilder<
-                  com.google.bigtable.v2.RowFilter,
-                  com.google.bigtable.v2.RowFilter.Builder,
-                  com.google.bigtable.v2.RowFilterOrBuilder>(
-                  getFalseFilter(), getParentForChildren(), isClean());
+          falseFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.bigtable.v2.RowFilter, com.google.bigtable.v2.RowFilter.Builder, com.google.bigtable.v2.RowFilterOrBuilder>(
+                  getFalseFilter(),
+                  getParentForChildren(),
+                  isClean());
           falseFilter_ = null;
         }
         return falseFilterBuilder_;
@@ -4112,7 +3712,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
     // @@protoc_insertion_point(class_scope:google.bigtable.v2.RowFilter.Condition)
     private static final com.google.bigtable.v2.RowFilter.Condition DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.bigtable.v2.RowFilter.Condition();
     }
@@ -4121,28 +3720,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Condition> PARSER =
-        new com.google.protobuf.AbstractParser<Condition>() {
-          @java.lang.Override
-          public Condition parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            Builder builder = newBuilder();
-            try {
-              builder.mergeFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              throw e.setUnfinishedMessage(builder.buildPartial());
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException()
-                  .setUnfinishedMessage(builder.buildPartial());
-            } catch (java.io.IOException e) {
-              throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                  .setUnfinishedMessage(builder.buildPartial());
-            }
-            return builder.buildPartial();
-          }
-        };
+    private static final com.google.protobuf.Parser<Condition>
+        PARSER = new com.google.protobuf.AbstractParser<Condition>() {
+      @java.lang.Override
+      public Condition parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
 
     public static com.google.protobuf.Parser<Condition> parser() {
       return PARSER;
@@ -4157,16 +3755,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter.Condition getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   private int filterCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object filter_;
-
   public enum FilterCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CHAIN(1),
     INTERLEAVE(2),
@@ -4190,11 +3786,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     VALUE_BITMASK_FILTER(20),
     FILTER_NOT_SET(0);
     private final int value;
-
     private FilterCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -4207,104 +3801,72 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
     public static FilterCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return CHAIN;
-        case 2:
-          return INTERLEAVE;
-        case 3:
-          return CONDITION;
-        case 16:
-          return SINK;
-        case 17:
-          return PASS_ALL_FILTER;
-        case 18:
-          return BLOCK_ALL_FILTER;
-        case 4:
-          return ROW_KEY_REGEX_FILTER;
-        case 14:
-          return ROW_SAMPLE_FILTER;
-        case 5:
-          return FAMILY_NAME_REGEX_FILTER;
-        case 6:
-          return COLUMN_QUALIFIER_REGEX_FILTER;
-        case 7:
-          return COLUMN_RANGE_FILTER;
-        case 8:
-          return TIMESTAMP_RANGE_FILTER;
-        case 9:
-          return VALUE_REGEX_FILTER;
-        case 15:
-          return VALUE_RANGE_FILTER;
-        case 10:
-          return CELLS_PER_ROW_OFFSET_FILTER;
-        case 11:
-          return CELLS_PER_ROW_LIMIT_FILTER;
-        case 12:
-          return CELLS_PER_COLUMN_LIMIT_FILTER;
-        case 13:
-          return STRIP_VALUE_TRANSFORMER;
-        case 19:
-          return APPLY_LABEL_TRANSFORMER;
-        case 20:
-          return VALUE_BITMASK_FILTER;
-        case 0:
-          return FILTER_NOT_SET;
-        default:
-          return null;
+        case 1: return CHAIN;
+        case 2: return INTERLEAVE;
+        case 3: return CONDITION;
+        case 16: return SINK;
+        case 17: return PASS_ALL_FILTER;
+        case 18: return BLOCK_ALL_FILTER;
+        case 4: return ROW_KEY_REGEX_FILTER;
+        case 14: return ROW_SAMPLE_FILTER;
+        case 5: return FAMILY_NAME_REGEX_FILTER;
+        case 6: return COLUMN_QUALIFIER_REGEX_FILTER;
+        case 7: return COLUMN_RANGE_FILTER;
+        case 8: return TIMESTAMP_RANGE_FILTER;
+        case 9: return VALUE_REGEX_FILTER;
+        case 15: return VALUE_RANGE_FILTER;
+        case 10: return CELLS_PER_ROW_OFFSET_FILTER;
+        case 11: return CELLS_PER_ROW_LIMIT_FILTER;
+        case 12: return CELLS_PER_COLUMN_LIMIT_FILTER;
+        case 13: return STRIP_VALUE_TRANSFORMER;
+        case 19: return APPLY_LABEL_TRANSFORMER;
+        case 20: return VALUE_BITMASK_FILTER;
+        case 0: return FILTER_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public FilterCase getFilterCase() {
-    return FilterCase.forNumber(filterCase_);
+  public FilterCase
+  getFilterCase() {
+    return FilterCase.forNumber(
+        filterCase_);
   }
 
   public static final int CHAIN_FIELD_NUMBER = 1;
-
   /**
-   *
-   *
    * <pre>
    * Applies several RowFilters to the data in sequence, progressively
    * narrowing the results.
    * </pre>
    *
    * <code>.google.bigtable.v2.RowFilter.Chain chain = 1;</code>
-   *
    * @return Whether the chain field is set.
    */
   @java.lang.Override
   public boolean hasChain() {
     return filterCase_ == 1;
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies several RowFilters to the data in sequence, progressively
    * narrowing the results.
    * </pre>
    *
    * <code>.google.bigtable.v2.RowFilter.Chain chain = 1;</code>
-   *
    * @return The chain.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RowFilter.Chain getChain() {
     if (filterCase_ == 1) {
-      return (com.google.bigtable.v2.RowFilter.Chain) filter_;
+       return (com.google.bigtable.v2.RowFilter.Chain) filter_;
     }
     return com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies several RowFilters to the data in sequence, progressively
    * narrowing the results.
@@ -4315,53 +3877,42 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.RowFilter.ChainOrBuilder getChainOrBuilder() {
     if (filterCase_ == 1) {
-      return (com.google.bigtable.v2.RowFilter.Chain) filter_;
+       return (com.google.bigtable.v2.RowFilter.Chain) filter_;
     }
     return com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance();
   }
 
   public static final int INTERLEAVE_FIELD_NUMBER = 2;
-
   /**
-   *
-   *
    * <pre>
    * Applies several RowFilters to the data in parallel and combines the
    * results.
    * </pre>
    *
    * <code>.google.bigtable.v2.RowFilter.Interleave interleave = 2;</code>
-   *
    * @return Whether the interleave field is set.
    */
   @java.lang.Override
   public boolean hasInterleave() {
     return filterCase_ == 2;
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies several RowFilters to the data in parallel and combines the
    * results.
    * </pre>
    *
    * <code>.google.bigtable.v2.RowFilter.Interleave interleave = 2;</code>
-   *
    * @return The interleave.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RowFilter.Interleave getInterleave() {
     if (filterCase_ == 2) {
-      return (com.google.bigtable.v2.RowFilter.Interleave) filter_;
+       return (com.google.bigtable.v2.RowFilter.Interleave) filter_;
     }
     return com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies several RowFilters to the data in parallel and combines the
    * results.
@@ -4372,53 +3923,42 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.RowFilter.InterleaveOrBuilder getInterleaveOrBuilder() {
     if (filterCase_ == 2) {
-      return (com.google.bigtable.v2.RowFilter.Interleave) filter_;
+       return (com.google.bigtable.v2.RowFilter.Interleave) filter_;
     }
     return com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance();
   }
 
   public static final int CONDITION_FIELD_NUMBER = 3;
-
   /**
-   *
-   *
    * <pre>
    * Applies one of two possible RowFilters to the data based on the output of
    * a predicate RowFilter.
    * </pre>
    *
    * <code>.google.bigtable.v2.RowFilter.Condition condition = 3;</code>
-   *
    * @return Whether the condition field is set.
    */
   @java.lang.Override
   public boolean hasCondition() {
     return filterCase_ == 3;
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies one of two possible RowFilters to the data based on the output of
    * a predicate RowFilter.
    * </pre>
    *
    * <code>.google.bigtable.v2.RowFilter.Condition condition = 3;</code>
-   *
    * @return The condition.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RowFilter.Condition getCondition() {
     if (filterCase_ == 3) {
-      return (com.google.bigtable.v2.RowFilter.Condition) filter_;
+       return (com.google.bigtable.v2.RowFilter.Condition) filter_;
     }
     return com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies one of two possible RowFilters to the data based on the output of
    * a predicate RowFilter.
@@ -4429,16 +3969,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.RowFilter.ConditionOrBuilder getConditionOrBuilder() {
     if (filterCase_ == 3) {
-      return (com.google.bigtable.v2.RowFilter.Condition) filter_;
+       return (com.google.bigtable.v2.RowFilter.Condition) filter_;
     }
     return com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance();
   }
 
   public static final int SINK_FIELD_NUMBER = 16;
-
   /**
-   *
-   *
    * <pre>
    * ADVANCED USE ONLY.
    * Hook for introspection into the RowFilter. Outputs all cells directly to
@@ -4502,17 +4039,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bool sink = 16;</code>
-   *
    * @return Whether the sink field is set.
    */
   @java.lang.Override
   public boolean hasSink() {
     return filterCase_ == 16;
   }
-
   /**
-   *
-   *
    * <pre>
    * ADVANCED USE ONLY.
    * Hook for introspection into the RowFilter. Outputs all cells directly to
@@ -4576,7 +4109,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bool sink = 16;</code>
-   *
    * @return The sink.
    */
   @java.lang.Override
@@ -4588,34 +4120,26 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int PASS_ALL_FILTER_FIELD_NUMBER = 17;
-
   /**
-   *
-   *
    * <pre>
    * Matches all cells, regardless of input. Functionally equivalent to
    * leaving `filter` unset, but included for completeness.
    * </pre>
    *
    * <code>bool pass_all_filter = 17;</code>
-   *
    * @return Whether the passAllFilter field is set.
    */
   @java.lang.Override
   public boolean hasPassAllFilter() {
     return filterCase_ == 17;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches all cells, regardless of input. Functionally equivalent to
    * leaving `filter` unset, but included for completeness.
    * </pre>
    *
    * <code>bool pass_all_filter = 17;</code>
-   *
    * @return The passAllFilter.
    */
   @java.lang.Override
@@ -4627,34 +4151,26 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int BLOCK_ALL_FILTER_FIELD_NUMBER = 18;
-
   /**
-   *
-   *
    * <pre>
    * Does not match any cells, regardless of input. Useful for temporarily
    * disabling just part of a filter.
    * </pre>
    *
    * <code>bool block_all_filter = 18;</code>
-   *
    * @return Whether the blockAllFilter field is set.
    */
   @java.lang.Override
   public boolean hasBlockAllFilter() {
     return filterCase_ == 18;
   }
-
   /**
-   *
-   *
    * <pre>
    * Does not match any cells, regardless of input. Useful for temporarily
    * disabling just part of a filter.
    * </pre>
    *
    * <code>bool block_all_filter = 18;</code>
-   *
    * @return The blockAllFilter.
    */
   @java.lang.Override
@@ -4666,10 +4182,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int ROW_KEY_REGEX_FILTER_FIELD_NUMBER = 4;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from rows whose keys satisfy the given RE2 regex. In
    * other words, passes through the entire row when the key matches, and
@@ -4681,17 +4194,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes row_key_regex_filter = 4;</code>
-   *
    * @return Whether the rowKeyRegexFilter field is set.
    */
   @java.lang.Override
   public boolean hasRowKeyRegexFilter() {
     return filterCase_ == 4;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from rows whose keys satisfy the given RE2 regex. In
    * other words, passes through the entire row when the key matches, and
@@ -4703,7 +4212,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes row_key_regex_filter = 4;</code>
-   *
    * @return The rowKeyRegexFilter.
    */
   @java.lang.Override
@@ -4715,34 +4223,26 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int ROW_SAMPLE_FILTER_FIELD_NUMBER = 14;
-
   /**
-   *
-   *
    * <pre>
    * Matches all cells from a row with probability p, and matches no cells
    * from the row with probability 1-p.
    * </pre>
    *
    * <code>double row_sample_filter = 14;</code>
-   *
    * @return Whether the rowSampleFilter field is set.
    */
   @java.lang.Override
   public boolean hasRowSampleFilter() {
     return filterCase_ == 14;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches all cells from a row with probability p, and matches no cells
    * from the row with probability 1-p.
    * </pre>
    *
    * <code>double row_sample_filter = 14;</code>
-   *
    * @return The rowSampleFilter.
    */
   @java.lang.Override
@@ -4754,10 +4254,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int FAMILY_NAME_REGEX_FILTER_FIELD_NUMBER = 5;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns whose families satisfy the given RE2
    * regex. For technical reasons, the regex must not contain the `:`
@@ -4768,16 +4265,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string family_name_regex_filter = 5;</code>
-   *
    * @return Whether the familyNameRegexFilter field is set.
    */
   public boolean hasFamilyNameRegexFilter() {
     return filterCase_ == 5;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns whose families satisfy the given RE2
    * regex. For technical reasons, the regex must not contain the `:`
@@ -4788,7 +4281,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string family_name_regex_filter = 5;</code>
-   *
    * @return The familyNameRegexFilter.
    */
   public java.lang.String getFamilyNameRegexFilter() {
@@ -4799,7 +4291,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       if (filterCase_ == 5) {
         filter_ = s;
@@ -4807,10 +4300,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns whose families satisfy the given RE2
    * regex. For technical reasons, the regex must not contain the `:`
@@ -4821,17 +4311,18 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string family_name_regex_filter = 5;</code>
-   *
    * @return The bytes for familyNameRegexFilter.
    */
-  public com.google.protobuf.ByteString getFamilyNameRegexFilterBytes() {
+  public com.google.protobuf.ByteString
+      getFamilyNameRegexFilterBytes() {
     java.lang.Object ref = "";
     if (filterCase_ == 5) {
       ref = filter_;
     }
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       if (filterCase_ == 5) {
         filter_ = b;
       }
@@ -4842,10 +4333,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int COLUMN_QUALIFIER_REGEX_FILTER_FIELD_NUMBER = 6;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns whose qualifiers satisfy the given RE2
    * regex.
@@ -4856,17 +4344,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes column_qualifier_regex_filter = 6;</code>
-   *
    * @return Whether the columnQualifierRegexFilter field is set.
    */
   @java.lang.Override
   public boolean hasColumnQualifierRegexFilter() {
     return filterCase_ == 6;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns whose qualifiers satisfy the given RE2
    * regex.
@@ -4877,7 +4361,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes column_qualifier_regex_filter = 6;</code>
-   *
    * @return The columnQualifierRegexFilter.
    */
   @java.lang.Override
@@ -4889,45 +4372,34 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int COLUMN_RANGE_FILTER_FIELD_NUMBER = 7;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns within the given range.
    * </pre>
    *
    * <code>.google.bigtable.v2.ColumnRange column_range_filter = 7;</code>
-   *
    * @return Whether the columnRangeFilter field is set.
    */
   @java.lang.Override
   public boolean hasColumnRangeFilter() {
     return filterCase_ == 7;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns within the given range.
    * </pre>
    *
    * <code>.google.bigtable.v2.ColumnRange column_range_filter = 7;</code>
-   *
    * @return The columnRangeFilter.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ColumnRange getColumnRangeFilter() {
     if (filterCase_ == 7) {
-      return (com.google.bigtable.v2.ColumnRange) filter_;
+       return (com.google.bigtable.v2.ColumnRange) filter_;
     }
     return com.google.bigtable.v2.ColumnRange.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells from columns within the given range.
    * </pre>
@@ -4937,51 +4409,40 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.ColumnRangeOrBuilder getColumnRangeFilterOrBuilder() {
     if (filterCase_ == 7) {
-      return (com.google.bigtable.v2.ColumnRange) filter_;
+       return (com.google.bigtable.v2.ColumnRange) filter_;
     }
     return com.google.bigtable.v2.ColumnRange.getDefaultInstance();
   }
 
   public static final int TIMESTAMP_RANGE_FILTER_FIELD_NUMBER = 8;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with timestamps within the given range.
    * </pre>
    *
    * <code>.google.bigtable.v2.TimestampRange timestamp_range_filter = 8;</code>
-   *
    * @return Whether the timestampRangeFilter field is set.
    */
   @java.lang.Override
   public boolean hasTimestampRangeFilter() {
     return filterCase_ == 8;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with timestamps within the given range.
    * </pre>
    *
    * <code>.google.bigtable.v2.TimestampRange timestamp_range_filter = 8;</code>
-   *
    * @return The timestampRangeFilter.
    */
   @java.lang.Override
   public com.google.bigtable.v2.TimestampRange getTimestampRangeFilter() {
     if (filterCase_ == 8) {
-      return (com.google.bigtable.v2.TimestampRange) filter_;
+       return (com.google.bigtable.v2.TimestampRange) filter_;
     }
     return com.google.bigtable.v2.TimestampRange.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with timestamps within the given range.
    * </pre>
@@ -4991,16 +4452,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.TimestampRangeOrBuilder getTimestampRangeFilterOrBuilder() {
     if (filterCase_ == 8) {
-      return (com.google.bigtable.v2.TimestampRange) filter_;
+       return (com.google.bigtable.v2.TimestampRange) filter_;
     }
     return com.google.bigtable.v2.TimestampRange.getDefaultInstance();
   }
 
   public static final int VALUE_REGEX_FILTER_FIELD_NUMBER = 9;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that satisfy the given regular expression.
    * Note that, since cell values can contain arbitrary bytes, the `&#92;C` escape
@@ -5010,17 +4468,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes value_regex_filter = 9;</code>
-   *
    * @return Whether the valueRegexFilter field is set.
    */
   @java.lang.Override
   public boolean hasValueRegexFilter() {
     return filterCase_ == 9;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that satisfy the given regular expression.
    * Note that, since cell values can contain arbitrary bytes, the `&#92;C` escape
@@ -5030,7 +4484,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>bytes value_regex_filter = 9;</code>
-   *
    * @return The valueRegexFilter.
    */
   @java.lang.Override
@@ -5042,45 +4495,34 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int VALUE_RANGE_FILTER_FIELD_NUMBER = 15;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that fall within the given range.
    * </pre>
    *
    * <code>.google.bigtable.v2.ValueRange value_range_filter = 15;</code>
-   *
    * @return Whether the valueRangeFilter field is set.
    */
   @java.lang.Override
   public boolean hasValueRangeFilter() {
     return filterCase_ == 15;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that fall within the given range.
    * </pre>
    *
    * <code>.google.bigtable.v2.ValueRange value_range_filter = 15;</code>
-   *
    * @return The valueRangeFilter.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ValueRange getValueRangeFilter() {
     if (filterCase_ == 15) {
-      return (com.google.bigtable.v2.ValueRange) filter_;
+       return (com.google.bigtable.v2.ValueRange) filter_;
     }
     return com.google.bigtable.v2.ValueRange.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that fall within the given range.
    * </pre>
@@ -5090,16 +4532,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.ValueRangeOrBuilder getValueRangeFilterOrBuilder() {
     if (filterCase_ == 15) {
-      return (com.google.bigtable.v2.ValueRange) filter_;
+       return (com.google.bigtable.v2.ValueRange) filter_;
     }
     return com.google.bigtable.v2.ValueRange.getDefaultInstance();
   }
 
   public static final int CELLS_PER_ROW_OFFSET_FILTER_FIELD_NUMBER = 10;
-
   /**
-   *
-   *
    * <pre>
    * Skips the first N cells of each row, matching all subsequent cells.
    * If duplicate cells are present, as is possible when using an Interleave,
@@ -5107,17 +4546,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 cells_per_row_offset_filter = 10;</code>
-   *
    * @return Whether the cellsPerRowOffsetFilter field is set.
    */
   @java.lang.Override
   public boolean hasCellsPerRowOffsetFilter() {
     return filterCase_ == 10;
   }
-
   /**
-   *
-   *
    * <pre>
    * Skips the first N cells of each row, matching all subsequent cells.
    * If duplicate cells are present, as is possible when using an Interleave,
@@ -5125,7 +4560,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 cells_per_row_offset_filter = 10;</code>
-   *
    * @return The cellsPerRowOffsetFilter.
    */
   @java.lang.Override
@@ -5137,10 +4571,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int CELLS_PER_ROW_LIMIT_FILTER_FIELD_NUMBER = 11;
-
   /**
-   *
-   *
    * <pre>
    * Matches only the first N cells of each row.
    * If duplicate cells are present, as is possible when using an Interleave,
@@ -5148,17 +4579,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 cells_per_row_limit_filter = 11;</code>
-   *
    * @return Whether the cellsPerRowLimitFilter field is set.
    */
   @java.lang.Override
   public boolean hasCellsPerRowLimitFilter() {
     return filterCase_ == 11;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only the first N cells of each row.
    * If duplicate cells are present, as is possible when using an Interleave,
@@ -5166,7 +4593,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 cells_per_row_limit_filter = 11;</code>
-   *
    * @return The cellsPerRowLimitFilter.
    */
   @java.lang.Override
@@ -5178,10 +4604,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int CELLS_PER_COLUMN_LIMIT_FILTER_FIELD_NUMBER = 12;
-
   /**
-   *
-   *
    * <pre>
    * Matches only the most recent N cells within each column. For example,
    * if N=2, this filter would match column `foo:bar` at timestamps 10 and 9,
@@ -5192,17 +4615,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 cells_per_column_limit_filter = 12;</code>
-   *
    * @return Whether the cellsPerColumnLimitFilter field is set.
    */
   @java.lang.Override
   public boolean hasCellsPerColumnLimitFilter() {
     return filterCase_ == 12;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only the most recent N cells within each column. For example,
    * if N=2, this filter would match column `foo:bar` at timestamps 10 and 9,
@@ -5213,7 +4632,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int32 cells_per_column_limit_filter = 12;</code>
-   *
    * @return The cellsPerColumnLimitFilter.
    */
   @java.lang.Override
@@ -5225,32 +4643,24 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int STRIP_VALUE_TRANSFORMER_FIELD_NUMBER = 13;
-
   /**
-   *
-   *
    * <pre>
    * Replaces each cell's value with the empty string.
    * </pre>
    *
    * <code>bool strip_value_transformer = 13;</code>
-   *
    * @return Whether the stripValueTransformer field is set.
    */
   @java.lang.Override
   public boolean hasStripValueTransformer() {
     return filterCase_ == 13;
   }
-
   /**
-   *
-   *
    * <pre>
    * Replaces each cell's value with the empty string.
    * </pre>
    *
    * <code>bool strip_value_transformer = 13;</code>
-   *
    * @return The stripValueTransformer.
    */
   @java.lang.Override
@@ -5262,10 +4672,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int APPLY_LABEL_TRANSFORMER_FIELD_NUMBER = 19;
-
   /**
-   *
-   *
    * <pre>
    * Applies the given label to all cells in the output row. This allows
    * the client to determine which results were produced from which part of
@@ -5283,16 +4690,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string apply_label_transformer = 19;</code>
-   *
    * @return Whether the applyLabelTransformer field is set.
    */
   public boolean hasApplyLabelTransformer() {
     return filterCase_ == 19;
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies the given label to all cells in the output row. This allows
    * the client to determine which results were produced from which part of
@@ -5310,7 +4713,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string apply_label_transformer = 19;</code>
-   *
    * @return The applyLabelTransformer.
    */
   public java.lang.String getApplyLabelTransformer() {
@@ -5321,7 +4723,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       if (filterCase_ == 19) {
         filter_ = s;
@@ -5329,10 +4732,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Applies the given label to all cells in the output row. This allows
    * the client to determine which results were produced from which part of
@@ -5350,17 +4750,18 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>string apply_label_transformer = 19;</code>
-   *
    * @return The bytes for applyLabelTransformer.
    */
-  public com.google.protobuf.ByteString getApplyLabelTransformerBytes() {
+  public com.google.protobuf.ByteString
+      getApplyLabelTransformerBytes() {
     java.lang.Object ref = "";
     if (filterCase_ == 19) {
       ref = filter_;
     }
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       if (filterCase_ == 19) {
         filter_ = b;
       }
@@ -5371,10 +4772,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int VALUE_BITMASK_FILTER_FIELD_NUMBER = 20;
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that satisfy the condition `(value &amp; mask)
    * == mask`.
@@ -5383,17 +4781,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.ValueBitmask value_bitmask_filter = 20;</code>
-   *
    * @return Whether the valueBitmaskFilter field is set.
    */
   @java.lang.Override
   public boolean hasValueBitmaskFilter() {
     return filterCase_ == 20;
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that satisfy the condition `(value &amp; mask)
    * == mask`.
@@ -5402,20 +4796,16 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>.google.bigtable.v2.ValueBitmask value_bitmask_filter = 20;</code>
-   *
    * @return The valueBitmaskFilter.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ValueBitmask getValueBitmaskFilter() {
     if (filterCase_ == 20) {
-      return (com.google.bigtable.v2.ValueBitmask) filter_;
+       return (com.google.bigtable.v2.ValueBitmask) filter_;
     }
     return com.google.bigtable.v2.ValueBitmask.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Matches only cells with values that satisfy the condition `(value &amp; mask)
    * == mask`.
@@ -5428,13 +4818,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public com.google.bigtable.v2.ValueBitmaskOrBuilder getValueBitmaskFilterOrBuilder() {
     if (filterCase_ == 20) {
-      return (com.google.bigtable.v2.ValueBitmask) filter_;
+       return (com.google.bigtable.v2.ValueBitmask) filter_;
     }
     return com.google.bigtable.v2.ValueBitmask.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -5446,7 +4835,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (filterCase_ == 1) {
       output.writeMessage(1, (com.google.bigtable.v2.RowFilter.Chain) filter_);
     }
@@ -5457,13 +4847,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       output.writeMessage(3, (com.google.bigtable.v2.RowFilter.Condition) filter_);
     }
     if (filterCase_ == 4) {
-      output.writeBytes(4, (com.google.protobuf.ByteString) filter_);
+      output.writeBytes(
+          4, (com.google.protobuf.ByteString) filter_);
     }
     if (filterCase_ == 5) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, filter_);
     }
     if (filterCase_ == 6) {
-      output.writeBytes(6, (com.google.protobuf.ByteString) filter_);
+      output.writeBytes(
+          6, (com.google.protobuf.ByteString) filter_);
     }
     if (filterCase_ == 7) {
       output.writeMessage(7, (com.google.bigtable.v2.ColumnRange) filter_);
@@ -5472,34 +4864,43 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       output.writeMessage(8, (com.google.bigtable.v2.TimestampRange) filter_);
     }
     if (filterCase_ == 9) {
-      output.writeBytes(9, (com.google.protobuf.ByteString) filter_);
+      output.writeBytes(
+          9, (com.google.protobuf.ByteString) filter_);
     }
     if (filterCase_ == 10) {
-      output.writeInt32(10, (int) ((java.lang.Integer) filter_));
+      output.writeInt32(
+          10, (int)((java.lang.Integer) filter_));
     }
     if (filterCase_ == 11) {
-      output.writeInt32(11, (int) ((java.lang.Integer) filter_));
+      output.writeInt32(
+          11, (int)((java.lang.Integer) filter_));
     }
     if (filterCase_ == 12) {
-      output.writeInt32(12, (int) ((java.lang.Integer) filter_));
+      output.writeInt32(
+          12, (int)((java.lang.Integer) filter_));
     }
     if (filterCase_ == 13) {
-      output.writeBool(13, (boolean) ((java.lang.Boolean) filter_));
+      output.writeBool(
+          13, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 14) {
-      output.writeDouble(14, (double) ((java.lang.Double) filter_));
+      output.writeDouble(
+          14, (double)((java.lang.Double) filter_));
     }
     if (filterCase_ == 15) {
       output.writeMessage(15, (com.google.bigtable.v2.ValueRange) filter_);
     }
     if (filterCase_ == 16) {
-      output.writeBool(16, (boolean) ((java.lang.Boolean) filter_));
+      output.writeBool(
+          16, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 17) {
-      output.writeBool(17, (boolean) ((java.lang.Boolean) filter_));
+      output.writeBool(
+          17, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 18) {
-      output.writeBool(18, (boolean) ((java.lang.Boolean) filter_));
+      output.writeBool(
+          18, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 19) {
       com.google.protobuf.GeneratedMessage.writeString(output, 19, filter_);
@@ -5517,100 +4918,93 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (filterCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1, (com.google.bigtable.v2.RowFilter.Chain) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.RowFilter.Chain) filter_);
     }
     if (filterCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.RowFilter.Interleave) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.RowFilter.Interleave) filter_);
     }
     if (filterCase_ == 3) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              3, (com.google.bigtable.v2.RowFilter.Condition) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.bigtable.v2.RowFilter.Condition) filter_);
     }
     if (filterCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              4, (com.google.protobuf.ByteString) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            4, (com.google.protobuf.ByteString) filter_);
     }
     if (filterCase_ == 5) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, filter_);
     }
     if (filterCase_ == 6) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              6, (com.google.protobuf.ByteString) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            6, (com.google.protobuf.ByteString) filter_);
     }
     if (filterCase_ == 7) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              7, (com.google.bigtable.v2.ColumnRange) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (com.google.bigtable.v2.ColumnRange) filter_);
     }
     if (filterCase_ == 8) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              8, (com.google.bigtable.v2.TimestampRange) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.bigtable.v2.TimestampRange) filter_);
     }
     if (filterCase_ == 9) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBytesSize(
-              9, (com.google.protobuf.ByteString) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(
+            9, (com.google.protobuf.ByteString) filter_);
     }
     if (filterCase_ == 10) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt32Size(
-              10, (int) ((java.lang.Integer) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(
+            10, (int)((java.lang.Integer) filter_));
     }
     if (filterCase_ == 11) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt32Size(
-              11, (int) ((java.lang.Integer) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(
+            11, (int)((java.lang.Integer) filter_));
     }
     if (filterCase_ == 12) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt32Size(
-              12, (int) ((java.lang.Integer) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(
+            12, (int)((java.lang.Integer) filter_));
     }
     if (filterCase_ == 13) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBoolSize(
-              13, (boolean) ((java.lang.Boolean) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            13, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 14) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeDoubleSize(
-              14, (double) ((java.lang.Double) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(
+            14, (double)((java.lang.Double) filter_));
     }
     if (filterCase_ == 15) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              15, (com.google.bigtable.v2.ValueRange) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (com.google.bigtable.v2.ValueRange) filter_);
     }
     if (filterCase_ == 16) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBoolSize(
-              16, (boolean) ((java.lang.Boolean) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            16, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 17) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBoolSize(
-              17, (boolean) ((java.lang.Boolean) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            17, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 18) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeBoolSize(
-              18, (boolean) ((java.lang.Boolean) filter_));
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            18, (boolean)((java.lang.Boolean) filter_));
     }
     if (filterCase_ == 19) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(19, filter_);
     }
     if (filterCase_ == 20) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              20, (com.google.bigtable.v2.ValueBitmask) filter_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, (com.google.bigtable.v2.ValueBitmask) filter_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5620,7 +5014,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.RowFilter)) {
       return super.equals(obj);
@@ -5630,66 +5024,85 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     if (!getFilterCase().equals(other.getFilterCase())) return false;
     switch (filterCase_) {
       case 1:
-        if (!getChain().equals(other.getChain())) return false;
+        if (!getChain()
+            .equals(other.getChain())) return false;
         break;
       case 2:
-        if (!getInterleave().equals(other.getInterleave())) return false;
+        if (!getInterleave()
+            .equals(other.getInterleave())) return false;
         break;
       case 3:
-        if (!getCondition().equals(other.getCondition())) return false;
+        if (!getCondition()
+            .equals(other.getCondition())) return false;
         break;
       case 16:
-        if (getSink() != other.getSink()) return false;
+        if (getSink()
+            != other.getSink()) return false;
         break;
       case 17:
-        if (getPassAllFilter() != other.getPassAllFilter()) return false;
+        if (getPassAllFilter()
+            != other.getPassAllFilter()) return false;
         break;
       case 18:
-        if (getBlockAllFilter() != other.getBlockAllFilter()) return false;
+        if (getBlockAllFilter()
+            != other.getBlockAllFilter()) return false;
         break;
       case 4:
-        if (!getRowKeyRegexFilter().equals(other.getRowKeyRegexFilter())) return false;
+        if (!getRowKeyRegexFilter()
+            .equals(other.getRowKeyRegexFilter())) return false;
         break;
       case 14:
         if (java.lang.Double.doubleToLongBits(getRowSampleFilter())
-            != java.lang.Double.doubleToLongBits(other.getRowSampleFilter())) return false;
+            != java.lang.Double.doubleToLongBits(
+                other.getRowSampleFilter())) return false;
         break;
       case 5:
-        if (!getFamilyNameRegexFilter().equals(other.getFamilyNameRegexFilter())) return false;
+        if (!getFamilyNameRegexFilter()
+            .equals(other.getFamilyNameRegexFilter())) return false;
         break;
       case 6:
-        if (!getColumnQualifierRegexFilter().equals(other.getColumnQualifierRegexFilter()))
-          return false;
+        if (!getColumnQualifierRegexFilter()
+            .equals(other.getColumnQualifierRegexFilter())) return false;
         break;
       case 7:
-        if (!getColumnRangeFilter().equals(other.getColumnRangeFilter())) return false;
+        if (!getColumnRangeFilter()
+            .equals(other.getColumnRangeFilter())) return false;
         break;
       case 8:
-        if (!getTimestampRangeFilter().equals(other.getTimestampRangeFilter())) return false;
+        if (!getTimestampRangeFilter()
+            .equals(other.getTimestampRangeFilter())) return false;
         break;
       case 9:
-        if (!getValueRegexFilter().equals(other.getValueRegexFilter())) return false;
+        if (!getValueRegexFilter()
+            .equals(other.getValueRegexFilter())) return false;
         break;
       case 15:
-        if (!getValueRangeFilter().equals(other.getValueRangeFilter())) return false;
+        if (!getValueRangeFilter()
+            .equals(other.getValueRangeFilter())) return false;
         break;
       case 10:
-        if (getCellsPerRowOffsetFilter() != other.getCellsPerRowOffsetFilter()) return false;
+        if (getCellsPerRowOffsetFilter()
+            != other.getCellsPerRowOffsetFilter()) return false;
         break;
       case 11:
-        if (getCellsPerRowLimitFilter() != other.getCellsPerRowLimitFilter()) return false;
+        if (getCellsPerRowLimitFilter()
+            != other.getCellsPerRowLimitFilter()) return false;
         break;
       case 12:
-        if (getCellsPerColumnLimitFilter() != other.getCellsPerColumnLimitFilter()) return false;
+        if (getCellsPerColumnLimitFilter()
+            != other.getCellsPerColumnLimitFilter()) return false;
         break;
       case 13:
-        if (getStripValueTransformer() != other.getStripValueTransformer()) return false;
+        if (getStripValueTransformer()
+            != other.getStripValueTransformer()) return false;
         break;
       case 19:
-        if (!getApplyLabelTransformer().equals(other.getApplyLabelTransformer())) return false;
+        if (!getApplyLabelTransformer()
+            .equals(other.getApplyLabelTransformer())) return false;
         break;
       case 20:
-        if (!getValueBitmaskFilter().equals(other.getValueBitmaskFilter())) return false;
+        if (!getValueBitmaskFilter()
+            .equals(other.getValueBitmaskFilter())) return false;
         break;
       case 0:
       default:
@@ -5720,15 +5133,18 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         break;
       case 16:
         hash = (37 * hash) + SINK_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSink());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSink());
         break;
       case 17:
         hash = (37 * hash) + PASS_ALL_FILTER_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getPassAllFilter());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPassAllFilter());
         break;
       case 18:
         hash = (37 * hash) + BLOCK_ALL_FILTER_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getBlockAllFilter());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getBlockAllFilter());
         break;
       case 4:
         hash = (37 * hash) + ROW_KEY_REGEX_FILTER_FIELD_NUMBER;
@@ -5736,10 +5152,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         break;
       case 14:
         hash = (37 * hash) + ROW_SAMPLE_FILTER_FIELD_NUMBER;
-        hash =
-            (53 * hash)
-                + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getRowSampleFilter()));
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getRowSampleFilter()));
         break;
       case 5:
         hash = (37 * hash) + FAMILY_NAME_REGEX_FILTER_FIELD_NUMBER;
@@ -5779,7 +5193,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         break;
       case 13:
         hash = (37 * hash) + STRIP_VALUE_TRANSFORMER_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getStripValueTransformer());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStripValueTransformer());
         break;
       case 19:
         hash = (37 * hash) + APPLY_LABEL_TRANSFORMER_FIELD_NUMBER;
@@ -5797,104 +5212,99 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.RowFilter parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.RowFilter parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.RowFilter parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.RowFilter parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.RowFilter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.RowFilter parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.RowFilter parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.RowFilter prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Takes a row as input and produces an alternate view of the row based on
    * specified rules. For example, a RowFilter might trim down a row to include
@@ -5932,32 +5342,33 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
    *
    * Protobuf type {@code google.bigtable.v2.RowFilter}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.RowFilter)
       com.google.bigtable.v2.RowFilterOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.RowFilter.class,
-              com.google.bigtable.v2.RowFilter.Builder.class);
+              com.google.bigtable.v2.RowFilter.class, com.google.bigtable.v2.RowFilter.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.RowFilter.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -5989,9 +5400,9 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_RowFilter_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_RowFilter_descriptor;
     }
 
     @java.lang.Override
@@ -6011,9 +5422,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.RowFilter buildPartial() {
       com.google.bigtable.v2.RowFilter result = new com.google.bigtable.v2.RowFilter(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -6026,25 +5435,32 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     private void buildPartialOneofs(com.google.bigtable.v2.RowFilter result) {
       result.filterCase_ = filterCase_;
       result.filter_ = this.filter_;
-      if (filterCase_ == 1 && chainBuilder_ != null) {
+      if (filterCase_ == 1 &&
+          chainBuilder_ != null) {
         result.filter_ = chainBuilder_.build();
       }
-      if (filterCase_ == 2 && interleaveBuilder_ != null) {
+      if (filterCase_ == 2 &&
+          interleaveBuilder_ != null) {
         result.filter_ = interleaveBuilder_.build();
       }
-      if (filterCase_ == 3 && conditionBuilder_ != null) {
+      if (filterCase_ == 3 &&
+          conditionBuilder_ != null) {
         result.filter_ = conditionBuilder_.build();
       }
-      if (filterCase_ == 7 && columnRangeFilterBuilder_ != null) {
+      if (filterCase_ == 7 &&
+          columnRangeFilterBuilder_ != null) {
         result.filter_ = columnRangeFilterBuilder_.build();
       }
-      if (filterCase_ == 8 && timestampRangeFilterBuilder_ != null) {
+      if (filterCase_ == 8 &&
+          timestampRangeFilterBuilder_ != null) {
         result.filter_ = timestampRangeFilterBuilder_.build();
       }
-      if (filterCase_ == 15 && valueRangeFilterBuilder_ != null) {
+      if (filterCase_ == 15 &&
+          valueRangeFilterBuilder_ != null) {
         result.filter_ = valueRangeFilterBuilder_.build();
       }
-      if (filterCase_ == 20 && valueBitmaskFilterBuilder_ != null) {
+      if (filterCase_ == 20 &&
+          valueBitmaskFilterBuilder_ != null) {
         result.filter_ = valueBitmaskFilterBuilder_.build();
       }
     }
@@ -6052,7 +5468,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.RowFilter) {
-        return mergeFrom((com.google.bigtable.v2.RowFilter) other);
+        return mergeFrom((com.google.bigtable.v2.RowFilter)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -6062,114 +5478,93 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public Builder mergeFrom(com.google.bigtable.v2.RowFilter other) {
       if (other == com.google.bigtable.v2.RowFilter.getDefaultInstance()) return this;
       switch (other.getFilterCase()) {
-        case CHAIN:
-          {
-            mergeChain(other.getChain());
-            break;
-          }
-        case INTERLEAVE:
-          {
-            mergeInterleave(other.getInterleave());
-            break;
-          }
-        case CONDITION:
-          {
-            mergeCondition(other.getCondition());
-            break;
-          }
-        case SINK:
-          {
-            setSink(other.getSink());
-            break;
-          }
-        case PASS_ALL_FILTER:
-          {
-            setPassAllFilter(other.getPassAllFilter());
-            break;
-          }
-        case BLOCK_ALL_FILTER:
-          {
-            setBlockAllFilter(other.getBlockAllFilter());
-            break;
-          }
-        case ROW_KEY_REGEX_FILTER:
-          {
-            setRowKeyRegexFilter(other.getRowKeyRegexFilter());
-            break;
-          }
-        case ROW_SAMPLE_FILTER:
-          {
-            setRowSampleFilter(other.getRowSampleFilter());
-            break;
-          }
-        case FAMILY_NAME_REGEX_FILTER:
-          {
-            filterCase_ = 5;
-            filter_ = other.filter_;
-            onChanged();
-            break;
-          }
-        case COLUMN_QUALIFIER_REGEX_FILTER:
-          {
-            setColumnQualifierRegexFilter(other.getColumnQualifierRegexFilter());
-            break;
-          }
-        case COLUMN_RANGE_FILTER:
-          {
-            mergeColumnRangeFilter(other.getColumnRangeFilter());
-            break;
-          }
-        case TIMESTAMP_RANGE_FILTER:
-          {
-            mergeTimestampRangeFilter(other.getTimestampRangeFilter());
-            break;
-          }
-        case VALUE_REGEX_FILTER:
-          {
-            setValueRegexFilter(other.getValueRegexFilter());
-            break;
-          }
-        case VALUE_RANGE_FILTER:
-          {
-            mergeValueRangeFilter(other.getValueRangeFilter());
-            break;
-          }
-        case CELLS_PER_ROW_OFFSET_FILTER:
-          {
-            setCellsPerRowOffsetFilter(other.getCellsPerRowOffsetFilter());
-            break;
-          }
-        case CELLS_PER_ROW_LIMIT_FILTER:
-          {
-            setCellsPerRowLimitFilter(other.getCellsPerRowLimitFilter());
-            break;
-          }
-        case CELLS_PER_COLUMN_LIMIT_FILTER:
-          {
-            setCellsPerColumnLimitFilter(other.getCellsPerColumnLimitFilter());
-            break;
-          }
-        case STRIP_VALUE_TRANSFORMER:
-          {
-            setStripValueTransformer(other.getStripValueTransformer());
-            break;
-          }
-        case APPLY_LABEL_TRANSFORMER:
-          {
-            filterCase_ = 19;
-            filter_ = other.filter_;
-            onChanged();
-            break;
-          }
-        case VALUE_BITMASK_FILTER:
-          {
-            mergeValueBitmaskFilter(other.getValueBitmaskFilter());
-            break;
-          }
-        case FILTER_NOT_SET:
-          {
-            break;
-          }
+        case CHAIN: {
+          mergeChain(other.getChain());
+          break;
+        }
+        case INTERLEAVE: {
+          mergeInterleave(other.getInterleave());
+          break;
+        }
+        case CONDITION: {
+          mergeCondition(other.getCondition());
+          break;
+        }
+        case SINK: {
+          setSink(other.getSink());
+          break;
+        }
+        case PASS_ALL_FILTER: {
+          setPassAllFilter(other.getPassAllFilter());
+          break;
+        }
+        case BLOCK_ALL_FILTER: {
+          setBlockAllFilter(other.getBlockAllFilter());
+          break;
+        }
+        case ROW_KEY_REGEX_FILTER: {
+          setRowKeyRegexFilter(other.getRowKeyRegexFilter());
+          break;
+        }
+        case ROW_SAMPLE_FILTER: {
+          setRowSampleFilter(other.getRowSampleFilter());
+          break;
+        }
+        case FAMILY_NAME_REGEX_FILTER: {
+          filterCase_ = 5;
+          filter_ = other.filter_;
+          onChanged();
+          break;
+        }
+        case COLUMN_QUALIFIER_REGEX_FILTER: {
+          setColumnQualifierRegexFilter(other.getColumnQualifierRegexFilter());
+          break;
+        }
+        case COLUMN_RANGE_FILTER: {
+          mergeColumnRangeFilter(other.getColumnRangeFilter());
+          break;
+        }
+        case TIMESTAMP_RANGE_FILTER: {
+          mergeTimestampRangeFilter(other.getTimestampRangeFilter());
+          break;
+        }
+        case VALUE_REGEX_FILTER: {
+          setValueRegexFilter(other.getValueRegexFilter());
+          break;
+        }
+        case VALUE_RANGE_FILTER: {
+          mergeValueRangeFilter(other.getValueRangeFilter());
+          break;
+        }
+        case CELLS_PER_ROW_OFFSET_FILTER: {
+          setCellsPerRowOffsetFilter(other.getCellsPerRowOffsetFilter());
+          break;
+        }
+        case CELLS_PER_ROW_LIMIT_FILTER: {
+          setCellsPerRowLimitFilter(other.getCellsPerRowLimitFilter());
+          break;
+        }
+        case CELLS_PER_COLUMN_LIMIT_FILTER: {
+          setCellsPerColumnLimitFilter(other.getCellsPerColumnLimitFilter());
+          break;
+        }
+        case STRIP_VALUE_TRANSFORMER: {
+          setStripValueTransformer(other.getStripValueTransformer());
+          break;
+        }
+        case APPLY_LABEL_TRANSFORMER: {
+          filterCase_ = 19;
+          filter_ = other.filter_;
+          onChanged();
+          break;
+        }
+        case VALUE_BITMASK_FILTER: {
+          mergeValueBitmaskFilter(other.getValueBitmaskFilter());
+          break;
+        }
+        case FILTER_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -6197,141 +5592,128 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(internalGetChainFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(
-                    internalGetInterleaveFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(
-                    internalGetConditionFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 3;
-                break;
-              } // case 26
-            case 34:
-              {
-                filter_ = input.readBytes();
-                filterCase_ = 4;
-                break;
-              } // case 34
-            case 42:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                filterCase_ = 5;
-                filter_ = s;
-                break;
-              } // case 42
-            case 50:
-              {
-                filter_ = input.readBytes();
-                filterCase_ = 6;
-                break;
-              } // case 50
-            case 58:
-              {
-                input.readMessage(
-                    internalGetColumnRangeFilterFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 7;
-                break;
-              } // case 58
-            case 66:
-              {
-                input.readMessage(
-                    internalGetTimestampRangeFilterFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 8;
-                break;
-              } // case 66
-            case 74:
-              {
-                filter_ = input.readBytes();
-                filterCase_ = 9;
-                break;
-              } // case 74
-            case 80:
-              {
-                filter_ = input.readInt32();
-                filterCase_ = 10;
-                break;
-              } // case 80
-            case 88:
-              {
-                filter_ = input.readInt32();
-                filterCase_ = 11;
-                break;
-              } // case 88
-            case 96:
-              {
-                filter_ = input.readInt32();
-                filterCase_ = 12;
-                break;
-              } // case 96
-            case 104:
-              {
-                filter_ = input.readBool();
-                filterCase_ = 13;
-                break;
-              } // case 104
-            case 113:
-              {
-                filter_ = input.readDouble();
-                filterCase_ = 14;
-                break;
-              } // case 113
-            case 122:
-              {
-                input.readMessage(
-                    internalGetValueRangeFilterFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 15;
-                break;
-              } // case 122
-            case 128:
-              {
-                filter_ = input.readBool();
-                filterCase_ = 16;
-                break;
-              } // case 128
-            case 136:
-              {
-                filter_ = input.readBool();
-                filterCase_ = 17;
-                break;
-              } // case 136
-            case 144:
-              {
-                filter_ = input.readBool();
-                filterCase_ = 18;
-                break;
-              } // case 144
-            case 154:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                filterCase_ = 19;
-                filter_ = s;
-                break;
-              } // case 154
-            case 162:
-              {
-                input.readMessage(
-                    internalGetValueBitmaskFilterFieldBuilder().getBuilder(), extensionRegistry);
-                filterCase_ = 20;
-                break;
-              } // case 162
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetChainFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetInterleaveFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetConditionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              filter_ = input.readBytes();
+              filterCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              filterCase_ = 5;
+              filter_ = s;
+              break;
+            } // case 42
+            case 50: {
+              filter_ = input.readBytes();
+              filterCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  internalGetColumnRangeFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  internalGetTimestampRangeFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              filter_ = input.readBytes();
+              filterCase_ = 9;
+              break;
+            } // case 74
+            case 80: {
+              filter_ = input.readInt32();
+              filterCase_ = 10;
+              break;
+            } // case 80
+            case 88: {
+              filter_ = input.readInt32();
+              filterCase_ = 11;
+              break;
+            } // case 88
+            case 96: {
+              filter_ = input.readInt32();
+              filterCase_ = 12;
+              break;
+            } // case 96
+            case 104: {
+              filter_ = input.readBool();
+              filterCase_ = 13;
+              break;
+            } // case 104
+            case 113: {
+              filter_ = input.readDouble();
+              filterCase_ = 14;
+              break;
+            } // case 113
+            case 122: {
+              input.readMessage(
+                  internalGetValueRangeFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 15;
+              break;
+            } // case 122
+            case 128: {
+              filter_ = input.readBool();
+              filterCase_ = 16;
+              break;
+            } // case 128
+            case 136: {
+              filter_ = input.readBool();
+              filterCase_ = 17;
+              break;
+            } // case 136
+            case 144: {
+              filter_ = input.readBool();
+              filterCase_ = 18;
+              break;
+            } // case 144
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+              filterCase_ = 19;
+              filter_ = s;
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  internalGetValueBitmaskFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 20;
+              break;
+            } // case 162
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6341,12 +5723,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int filterCase_ = 0;
     private java.lang.Object filter_;
-
-    public FilterCase getFilterCase() {
-      return FilterCase.forNumber(filterCase_);
+    public FilterCase
+        getFilterCase() {
+      return FilterCase.forNumber(
+          filterCase_);
     }
 
     public Builder clearFilter() {
@@ -6359,38 +5741,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowFilter.Chain,
-            com.google.bigtable.v2.RowFilter.Chain.Builder,
-            com.google.bigtable.v2.RowFilter.ChainOrBuilder>
-        chainBuilder_;
-
+        com.google.bigtable.v2.RowFilter.Chain, com.google.bigtable.v2.RowFilter.Chain.Builder, com.google.bigtable.v2.RowFilter.ChainOrBuilder> chainBuilder_;
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter.Chain chain = 1;</code>
-     *
      * @return Whether the chain field is set.
      */
     @java.lang.Override
     public boolean hasChain() {
       return filterCase_ == 1;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter.Chain chain = 1;</code>
-     *
      * @return The chain.
      */
     @java.lang.Override
@@ -6407,10 +5778,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6431,10 +5799,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 1;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6442,7 +5807,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      *
      * <code>.google.bigtable.v2.RowFilter.Chain chain = 1;</code>
      */
-    public Builder setChain(com.google.bigtable.v2.RowFilter.Chain.Builder builderForValue) {
+    public Builder setChain(
+        com.google.bigtable.v2.RowFilter.Chain.Builder builderForValue) {
       if (chainBuilder_ == null) {
         filter_ = builderForValue.build();
         onChanged();
@@ -6452,10 +5818,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 1;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6465,13 +5828,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeChain(com.google.bigtable.v2.RowFilter.Chain value) {
       if (chainBuilder_ == null) {
-        if (filterCase_ == 1
-            && filter_ != com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.RowFilter.Chain.newBuilder(
-                      (com.google.bigtable.v2.RowFilter.Chain) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 1 &&
+            filter_ != com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.RowFilter.Chain.newBuilder((com.google.bigtable.v2.RowFilter.Chain) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -6486,10 +5846,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 1;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6513,10 +5870,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6527,10 +5881,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter.Chain.Builder getChainBuilder() {
       return internalGetChainFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6549,10 +5900,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in sequence, progressively
      * narrowing the results.
@@ -6561,19 +5909,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.RowFilter.Chain chain = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowFilter.Chain,
-            com.google.bigtable.v2.RowFilter.Chain.Builder,
-            com.google.bigtable.v2.RowFilter.ChainOrBuilder>
+        com.google.bigtable.v2.RowFilter.Chain, com.google.bigtable.v2.RowFilter.Chain.Builder, com.google.bigtable.v2.RowFilter.ChainOrBuilder> 
         internalGetChainFieldBuilder() {
       if (chainBuilder_ == null) {
         if (!(filterCase_ == 1)) {
           filter_ = com.google.bigtable.v2.RowFilter.Chain.getDefaultInstance();
         }
-        chainBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RowFilter.Chain,
-                com.google.bigtable.v2.RowFilter.Chain.Builder,
-                com.google.bigtable.v2.RowFilter.ChainOrBuilder>(
+        chainBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RowFilter.Chain, com.google.bigtable.v2.RowFilter.Chain.Builder, com.google.bigtable.v2.RowFilter.ChainOrBuilder>(
                 (com.google.bigtable.v2.RowFilter.Chain) filter_,
                 getParentForChildren(),
                 isClean());
@@ -6585,38 +5928,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowFilter.Interleave,
-            com.google.bigtable.v2.RowFilter.Interleave.Builder,
-            com.google.bigtable.v2.RowFilter.InterleaveOrBuilder>
-        interleaveBuilder_;
-
+        com.google.bigtable.v2.RowFilter.Interleave, com.google.bigtable.v2.RowFilter.Interleave.Builder, com.google.bigtable.v2.RowFilter.InterleaveOrBuilder> interleaveBuilder_;
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter.Interleave interleave = 2;</code>
-     *
      * @return Whether the interleave field is set.
      */
     @java.lang.Override
     public boolean hasInterleave() {
       return filterCase_ == 2;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter.Interleave interleave = 2;</code>
-     *
      * @return The interleave.
      */
     @java.lang.Override
@@ -6633,10 +5965,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6657,10 +5986,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6679,10 +6005,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6692,13 +6015,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeInterleave(com.google.bigtable.v2.RowFilter.Interleave value) {
       if (interleaveBuilder_ == null) {
-        if (filterCase_ == 2
-            && filter_ != com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.RowFilter.Interleave.newBuilder(
-                      (com.google.bigtable.v2.RowFilter.Interleave) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 2 &&
+            filter_ != com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.RowFilter.Interleave.newBuilder((com.google.bigtable.v2.RowFilter.Interleave) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -6713,10 +6033,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6740,10 +6057,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6754,10 +6068,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter.Interleave.Builder getInterleaveBuilder() {
       return internalGetInterleaveFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6776,10 +6087,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies several RowFilters to the data in parallel and combines the
      * results.
@@ -6788,19 +6096,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.RowFilter.Interleave interleave = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowFilter.Interleave,
-            com.google.bigtable.v2.RowFilter.Interleave.Builder,
-            com.google.bigtable.v2.RowFilter.InterleaveOrBuilder>
+        com.google.bigtable.v2.RowFilter.Interleave, com.google.bigtable.v2.RowFilter.Interleave.Builder, com.google.bigtable.v2.RowFilter.InterleaveOrBuilder> 
         internalGetInterleaveFieldBuilder() {
       if (interleaveBuilder_ == null) {
         if (!(filterCase_ == 2)) {
           filter_ = com.google.bigtable.v2.RowFilter.Interleave.getDefaultInstance();
         }
-        interleaveBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RowFilter.Interleave,
-                com.google.bigtable.v2.RowFilter.Interleave.Builder,
-                com.google.bigtable.v2.RowFilter.InterleaveOrBuilder>(
+        interleaveBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RowFilter.Interleave, com.google.bigtable.v2.RowFilter.Interleave.Builder, com.google.bigtable.v2.RowFilter.InterleaveOrBuilder>(
                 (com.google.bigtable.v2.RowFilter.Interleave) filter_,
                 getParentForChildren(),
                 isClean());
@@ -6812,38 +6115,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowFilter.Condition,
-            com.google.bigtable.v2.RowFilter.Condition.Builder,
-            com.google.bigtable.v2.RowFilter.ConditionOrBuilder>
-        conditionBuilder_;
-
+        com.google.bigtable.v2.RowFilter.Condition, com.google.bigtable.v2.RowFilter.Condition.Builder, com.google.bigtable.v2.RowFilter.ConditionOrBuilder> conditionBuilder_;
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter.Condition condition = 3;</code>
-     *
      * @return Whether the condition field is set.
      */
     @java.lang.Override
     public boolean hasCondition() {
       return filterCase_ == 3;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
      * </pre>
      *
      * <code>.google.bigtable.v2.RowFilter.Condition condition = 3;</code>
-     *
      * @return The condition.
      */
     @java.lang.Override
@@ -6860,10 +6152,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -6884,10 +6173,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 3;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -6906,10 +6192,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 3;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -6919,13 +6202,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeCondition(com.google.bigtable.v2.RowFilter.Condition value) {
       if (conditionBuilder_ == null) {
-        if (filterCase_ == 3
-            && filter_ != com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.RowFilter.Condition.newBuilder(
-                      (com.google.bigtable.v2.RowFilter.Condition) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 3 &&
+            filter_ != com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.RowFilter.Condition.newBuilder((com.google.bigtable.v2.RowFilter.Condition) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -6940,10 +6220,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 3;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -6967,10 +6244,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -6981,10 +6255,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.RowFilter.Condition.Builder getConditionBuilder() {
       return internalGetConditionFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -7003,10 +6274,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies one of two possible RowFilters to the data based on the output of
      * a predicate RowFilter.
@@ -7015,19 +6283,14 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.RowFilter.Condition condition = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RowFilter.Condition,
-            com.google.bigtable.v2.RowFilter.Condition.Builder,
-            com.google.bigtable.v2.RowFilter.ConditionOrBuilder>
+        com.google.bigtable.v2.RowFilter.Condition, com.google.bigtable.v2.RowFilter.Condition.Builder, com.google.bigtable.v2.RowFilter.ConditionOrBuilder> 
         internalGetConditionFieldBuilder() {
       if (conditionBuilder_ == null) {
         if (!(filterCase_ == 3)) {
           filter_ = com.google.bigtable.v2.RowFilter.Condition.getDefaultInstance();
         }
-        conditionBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RowFilter.Condition,
-                com.google.bigtable.v2.RowFilter.Condition.Builder,
-                com.google.bigtable.v2.RowFilter.ConditionOrBuilder>(
+        conditionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RowFilter.Condition, com.google.bigtable.v2.RowFilter.Condition.Builder, com.google.bigtable.v2.RowFilter.ConditionOrBuilder>(
                 (com.google.bigtable.v2.RowFilter.Condition) filter_,
                 getParentForChildren(),
                 isClean());
@@ -7039,8 +6302,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * ADVANCED USE ONLY.
      * Hook for introspection into the RowFilter. Outputs all cells directly to
@@ -7104,16 +6365,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool sink = 16;</code>
-     *
      * @return Whether the sink field is set.
      */
     public boolean hasSink() {
       return filterCase_ == 16;
     }
-
     /**
-     *
-     *
      * <pre>
      * ADVANCED USE ONLY.
      * Hook for introspection into the RowFilter. Outputs all cells directly to
@@ -7177,7 +6434,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool sink = 16;</code>
-     *
      * @return The sink.
      */
     public boolean getSink() {
@@ -7186,10 +6442,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return false;
     }
-
     /**
-     *
-     *
      * <pre>
      * ADVANCED USE ONLY.
      * Hook for introspection into the RowFilter. Outputs all cells directly to
@@ -7253,7 +6506,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool sink = 16;</code>
-     *
      * @param value The sink to set.
      * @return This builder for chaining.
      */
@@ -7264,10 +6516,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * ADVANCED USE ONLY.
      * Hook for introspection into the RowFilter. Outputs all cells directly to
@@ -7331,7 +6580,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bool sink = 16;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSink() {
@@ -7344,31 +6592,24 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches all cells, regardless of input. Functionally equivalent to
      * leaving `filter` unset, but included for completeness.
      * </pre>
      *
      * <code>bool pass_all_filter = 17;</code>
-     *
      * @return Whether the passAllFilter field is set.
      */
     public boolean hasPassAllFilter() {
       return filterCase_ == 17;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches all cells, regardless of input. Functionally equivalent to
      * leaving `filter` unset, but included for completeness.
      * </pre>
      *
      * <code>bool pass_all_filter = 17;</code>
-     *
      * @return The passAllFilter.
      */
     public boolean getPassAllFilter() {
@@ -7377,17 +6618,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return false;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches all cells, regardless of input. Functionally equivalent to
      * leaving `filter` unset, but included for completeness.
      * </pre>
      *
      * <code>bool pass_all_filter = 17;</code>
-     *
      * @param value The passAllFilter to set.
      * @return This builder for chaining.
      */
@@ -7398,17 +6635,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches all cells, regardless of input. Functionally equivalent to
      * leaving `filter` unset, but included for completeness.
      * </pre>
      *
      * <code>bool pass_all_filter = 17;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPassAllFilter() {
@@ -7421,31 +6654,24 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Does not match any cells, regardless of input. Useful for temporarily
      * disabling just part of a filter.
      * </pre>
      *
      * <code>bool block_all_filter = 18;</code>
-     *
      * @return Whether the blockAllFilter field is set.
      */
     public boolean hasBlockAllFilter() {
       return filterCase_ == 18;
     }
-
     /**
-     *
-     *
      * <pre>
      * Does not match any cells, regardless of input. Useful for temporarily
      * disabling just part of a filter.
      * </pre>
      *
      * <code>bool block_all_filter = 18;</code>
-     *
      * @return The blockAllFilter.
      */
     public boolean getBlockAllFilter() {
@@ -7454,17 +6680,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return false;
     }
-
     /**
-     *
-     *
      * <pre>
      * Does not match any cells, regardless of input. Useful for temporarily
      * disabling just part of a filter.
      * </pre>
      *
      * <code>bool block_all_filter = 18;</code>
-     *
      * @param value The blockAllFilter to set.
      * @return This builder for chaining.
      */
@@ -7475,17 +6697,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Does not match any cells, regardless of input. Useful for temporarily
      * disabling just part of a filter.
      * </pre>
      *
      * <code>bool block_all_filter = 18;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearBlockAllFilter() {
@@ -7498,8 +6716,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches only cells from rows whose keys satisfy the given RE2 regex. In
      * other words, passes through the entire row when the key matches, and
@@ -7511,16 +6727,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes row_key_regex_filter = 4;</code>
-     *
      * @return Whether the rowKeyRegexFilter field is set.
      */
     public boolean hasRowKeyRegexFilter() {
       return filterCase_ == 4;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from rows whose keys satisfy the given RE2 regex. In
      * other words, passes through the entire row when the key matches, and
@@ -7532,7 +6744,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes row_key_regex_filter = 4;</code>
-     *
      * @return The rowKeyRegexFilter.
      */
     public com.google.protobuf.ByteString getRowKeyRegexFilter() {
@@ -7541,10 +6752,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from rows whose keys satisfy the given RE2 regex. In
      * other words, passes through the entire row when the key matches, and
@@ -7556,23 +6764,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes row_key_regex_filter = 4;</code>
-     *
      * @param value The rowKeyRegexFilter to set.
      * @return This builder for chaining.
      */
     public Builder setRowKeyRegexFilter(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       filterCase_ = 4;
       filter_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from rows whose keys satisfy the given RE2 regex. In
      * other words, passes through the entire row when the key matches, and
@@ -7584,7 +6786,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes row_key_regex_filter = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRowKeyRegexFilter() {
@@ -7597,31 +6798,24 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches all cells from a row with probability p, and matches no cells
      * from the row with probability 1-p.
      * </pre>
      *
      * <code>double row_sample_filter = 14;</code>
-     *
      * @return Whether the rowSampleFilter field is set.
      */
     public boolean hasRowSampleFilter() {
       return filterCase_ == 14;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches all cells from a row with probability p, and matches no cells
      * from the row with probability 1-p.
      * </pre>
      *
      * <code>double row_sample_filter = 14;</code>
-     *
      * @return The rowSampleFilter.
      */
     public double getRowSampleFilter() {
@@ -7630,17 +6824,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return 0D;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches all cells from a row with probability p, and matches no cells
      * from the row with probability 1-p.
      * </pre>
      *
      * <code>double row_sample_filter = 14;</code>
-     *
      * @param value The rowSampleFilter to set.
      * @return This builder for chaining.
      */
@@ -7651,17 +6841,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches all cells from a row with probability p, and matches no cells
      * from the row with probability 1-p.
      * </pre>
      *
      * <code>double row_sample_filter = 14;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRowSampleFilter() {
@@ -7674,8 +6860,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose families satisfy the given RE2
      * regex. For technical reasons, the regex must not contain the `:`
@@ -7686,17 +6870,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string family_name_regex_filter = 5;</code>
-     *
      * @return Whether the familyNameRegexFilter field is set.
      */
     @java.lang.Override
     public boolean hasFamilyNameRegexFilter() {
       return filterCase_ == 5;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose families satisfy the given RE2
      * regex. For technical reasons, the regex must not contain the `:`
@@ -7707,7 +6887,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string family_name_regex_filter = 5;</code>
-     *
      * @return The familyNameRegexFilter.
      */
     @java.lang.Override
@@ -7717,7 +6896,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         ref = filter_;
       }
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (filterCase_ == 5) {
           filter_ = s;
@@ -7727,10 +6907,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose families satisfy the given RE2
      * regex. For technical reasons, the regex must not contain the `:`
@@ -7741,18 +6918,19 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string family_name_regex_filter = 5;</code>
-     *
      * @return The bytes for familyNameRegexFilter.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getFamilyNameRegexFilterBytes() {
+    public com.google.protobuf.ByteString
+        getFamilyNameRegexFilterBytes() {
       java.lang.Object ref = "";
       if (filterCase_ == 5) {
         ref = filter_;
       }
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         if (filterCase_ == 5) {
           filter_ = b;
         }
@@ -7761,10 +6939,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose families satisfy the given RE2
      * regex. For technical reasons, the regex must not contain the `:`
@@ -7775,23 +6950,18 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string family_name_regex_filter = 5;</code>
-     *
      * @param value The familyNameRegexFilter to set.
      * @return This builder for chaining.
      */
-    public Builder setFamilyNameRegexFilter(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setFamilyNameRegexFilter(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       filterCase_ = 5;
       filter_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose families satisfy the given RE2
      * regex. For technical reasons, the regex must not contain the `:`
@@ -7802,7 +6972,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string family_name_regex_filter = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearFamilyNameRegexFilter() {
@@ -7813,10 +6982,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose families satisfy the given RE2
      * regex. For technical reasons, the regex must not contain the `:`
@@ -7827,14 +6993,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string family_name_regex_filter = 5;</code>
-     *
      * @param value The bytes for familyNameRegexFilter to set.
      * @return This builder for chaining.
      */
-    public Builder setFamilyNameRegexFilterBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setFamilyNameRegexFilterBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       filterCase_ = 5;
       filter_ = value;
@@ -7843,8 +7007,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose qualifiers satisfy the given RE2
      * regex.
@@ -7855,16 +7017,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes column_qualifier_regex_filter = 6;</code>
-     *
      * @return Whether the columnQualifierRegexFilter field is set.
      */
     public boolean hasColumnQualifierRegexFilter() {
       return filterCase_ == 6;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose qualifiers satisfy the given RE2
      * regex.
@@ -7875,7 +7033,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes column_qualifier_regex_filter = 6;</code>
-     *
      * @return The columnQualifierRegexFilter.
      */
     public com.google.protobuf.ByteString getColumnQualifierRegexFilter() {
@@ -7884,10 +7041,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose qualifiers satisfy the given RE2
      * regex.
@@ -7898,23 +7052,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes column_qualifier_regex_filter = 6;</code>
-     *
      * @param value The columnQualifierRegexFilter to set.
      * @return This builder for chaining.
      */
     public Builder setColumnQualifierRegexFilter(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       filterCase_ = 6;
       filter_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns whose qualifiers satisfy the given RE2
      * regex.
@@ -7925,7 +7073,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes column_qualifier_regex_filter = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearColumnQualifierRegexFilter() {
@@ -7938,36 +7085,25 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ColumnRange,
-            com.google.bigtable.v2.ColumnRange.Builder,
-            com.google.bigtable.v2.ColumnRangeOrBuilder>
-        columnRangeFilterBuilder_;
-
+        com.google.bigtable.v2.ColumnRange, com.google.bigtable.v2.ColumnRange.Builder, com.google.bigtable.v2.ColumnRangeOrBuilder> columnRangeFilterBuilder_;
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.ColumnRange column_range_filter = 7;</code>
-     *
      * @return Whether the columnRangeFilter field is set.
      */
     @java.lang.Override
     public boolean hasColumnRangeFilter() {
       return filterCase_ == 7;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.ColumnRange column_range_filter = 7;</code>
-     *
      * @return The columnRangeFilter.
      */
     @java.lang.Override
@@ -7984,10 +7120,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ColumnRange.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8007,10 +7140,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 7;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8028,10 +7158,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 7;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8040,13 +7167,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeColumnRangeFilter(com.google.bigtable.v2.ColumnRange value) {
       if (columnRangeFilterBuilder_ == null) {
-        if (filterCase_ == 7
-            && filter_ != com.google.bigtable.v2.ColumnRange.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.ColumnRange.newBuilder(
-                      (com.google.bigtable.v2.ColumnRange) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 7 &&
+            filter_ != com.google.bigtable.v2.ColumnRange.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.ColumnRange.newBuilder((com.google.bigtable.v2.ColumnRange) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -8061,10 +7185,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 7;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8087,10 +7208,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8100,10 +7218,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ColumnRange.Builder getColumnRangeFilterBuilder() {
       return internalGetColumnRangeFilterFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8121,10 +7236,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ColumnRange.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells from columns within the given range.
      * </pre>
@@ -8132,20 +7244,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.ColumnRange column_range_filter = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ColumnRange,
-            com.google.bigtable.v2.ColumnRange.Builder,
-            com.google.bigtable.v2.ColumnRangeOrBuilder>
+        com.google.bigtable.v2.ColumnRange, com.google.bigtable.v2.ColumnRange.Builder, com.google.bigtable.v2.ColumnRangeOrBuilder> 
         internalGetColumnRangeFilterFieldBuilder() {
       if (columnRangeFilterBuilder_ == null) {
         if (!(filterCase_ == 7)) {
           filter_ = com.google.bigtable.v2.ColumnRange.getDefaultInstance();
         }
-        columnRangeFilterBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ColumnRange,
-                com.google.bigtable.v2.ColumnRange.Builder,
-                com.google.bigtable.v2.ColumnRangeOrBuilder>(
-                (com.google.bigtable.v2.ColumnRange) filter_, getParentForChildren(), isClean());
+        columnRangeFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ColumnRange, com.google.bigtable.v2.ColumnRange.Builder, com.google.bigtable.v2.ColumnRangeOrBuilder>(
+                (com.google.bigtable.v2.ColumnRange) filter_,
+                getParentForChildren(),
+                isClean());
         filter_ = null;
       }
       filterCase_ = 7;
@@ -8154,36 +7263,25 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.TimestampRange,
-            com.google.bigtable.v2.TimestampRange.Builder,
-            com.google.bigtable.v2.TimestampRangeOrBuilder>
-        timestampRangeFilterBuilder_;
-
+        com.google.bigtable.v2.TimestampRange, com.google.bigtable.v2.TimestampRange.Builder, com.google.bigtable.v2.TimestampRangeOrBuilder> timestampRangeFilterBuilder_;
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.TimestampRange timestamp_range_filter = 8;</code>
-     *
      * @return Whether the timestampRangeFilter field is set.
      */
     @java.lang.Override
     public boolean hasTimestampRangeFilter() {
       return filterCase_ == 8;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.TimestampRange timestamp_range_filter = 8;</code>
-     *
      * @return The timestampRangeFilter.
      */
     @java.lang.Override
@@ -8200,10 +7298,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.TimestampRange.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8223,10 +7318,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 8;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8244,10 +7336,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 8;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8256,13 +7345,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeTimestampRangeFilter(com.google.bigtable.v2.TimestampRange value) {
       if (timestampRangeFilterBuilder_ == null) {
-        if (filterCase_ == 8
-            && filter_ != com.google.bigtable.v2.TimestampRange.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.TimestampRange.newBuilder(
-                      (com.google.bigtable.v2.TimestampRange) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 8 &&
+            filter_ != com.google.bigtable.v2.TimestampRange.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.TimestampRange.newBuilder((com.google.bigtable.v2.TimestampRange) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -8277,10 +7363,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 8;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8303,10 +7386,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8316,10 +7396,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.TimestampRange.Builder getTimestampRangeFilterBuilder() {
       return internalGetTimestampRangeFilterFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8337,10 +7414,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.TimestampRange.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with timestamps within the given range.
      * </pre>
@@ -8348,20 +7422,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.TimestampRange timestamp_range_filter = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.TimestampRange,
-            com.google.bigtable.v2.TimestampRange.Builder,
-            com.google.bigtable.v2.TimestampRangeOrBuilder>
+        com.google.bigtable.v2.TimestampRange, com.google.bigtable.v2.TimestampRange.Builder, com.google.bigtable.v2.TimestampRangeOrBuilder> 
         internalGetTimestampRangeFilterFieldBuilder() {
       if (timestampRangeFilterBuilder_ == null) {
         if (!(filterCase_ == 8)) {
           filter_ = com.google.bigtable.v2.TimestampRange.getDefaultInstance();
         }
-        timestampRangeFilterBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.TimestampRange,
-                com.google.bigtable.v2.TimestampRange.Builder,
-                com.google.bigtable.v2.TimestampRangeOrBuilder>(
-                (com.google.bigtable.v2.TimestampRange) filter_, getParentForChildren(), isClean());
+        timestampRangeFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.TimestampRange, com.google.bigtable.v2.TimestampRange.Builder, com.google.bigtable.v2.TimestampRangeOrBuilder>(
+                (com.google.bigtable.v2.TimestampRange) filter_,
+                getParentForChildren(),
+                isClean());
         filter_ = null;
       }
       filterCase_ = 8;
@@ -8370,8 +7441,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the given regular expression.
      * Note that, since cell values can contain arbitrary bytes, the `&#92;C` escape
@@ -8381,16 +7450,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes value_regex_filter = 9;</code>
-     *
      * @return Whether the valueRegexFilter field is set.
      */
     public boolean hasValueRegexFilter() {
       return filterCase_ == 9;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the given regular expression.
      * Note that, since cell values can contain arbitrary bytes, the `&#92;C` escape
@@ -8400,7 +7465,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes value_regex_filter = 9;</code>
-     *
      * @return The valueRegexFilter.
      */
     public com.google.protobuf.ByteString getValueRegexFilter() {
@@ -8409,10 +7473,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the given regular expression.
      * Note that, since cell values can contain arbitrary bytes, the `&#92;C` escape
@@ -8422,23 +7483,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes value_regex_filter = 9;</code>
-     *
      * @param value The valueRegexFilter to set.
      * @return This builder for chaining.
      */
     public Builder setValueRegexFilter(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       filterCase_ = 9;
       filter_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the given regular expression.
      * Note that, since cell values can contain arbitrary bytes, the `&#92;C` escape
@@ -8448,7 +7503,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>bytes value_regex_filter = 9;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearValueRegexFilter() {
@@ -8461,36 +7515,25 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ValueRange,
-            com.google.bigtable.v2.ValueRange.Builder,
-            com.google.bigtable.v2.ValueRangeOrBuilder>
-        valueRangeFilterBuilder_;
-
+        com.google.bigtable.v2.ValueRange, com.google.bigtable.v2.ValueRange.Builder, com.google.bigtable.v2.ValueRangeOrBuilder> valueRangeFilterBuilder_;
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.ValueRange value_range_filter = 15;</code>
-     *
      * @return Whether the valueRangeFilter field is set.
      */
     @java.lang.Override
     public boolean hasValueRangeFilter() {
       return filterCase_ == 15;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.ValueRange value_range_filter = 15;</code>
-     *
      * @return The valueRangeFilter.
      */
     @java.lang.Override
@@ -8507,10 +7550,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ValueRange.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
@@ -8530,17 +7570,15 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 15;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
      *
      * <code>.google.bigtable.v2.ValueRange value_range_filter = 15;</code>
      */
-    public Builder setValueRangeFilter(com.google.bigtable.v2.ValueRange.Builder builderForValue) {
+    public Builder setValueRangeFilter(
+        com.google.bigtable.v2.ValueRange.Builder builderForValue) {
       if (valueRangeFilterBuilder_ == null) {
         filter_ = builderForValue.build();
         onChanged();
@@ -8550,10 +7588,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 15;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
@@ -8562,13 +7597,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeValueRangeFilter(com.google.bigtable.v2.ValueRange value) {
       if (valueRangeFilterBuilder_ == null) {
-        if (filterCase_ == 15
-            && filter_ != com.google.bigtable.v2.ValueRange.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.ValueRange.newBuilder(
-                      (com.google.bigtable.v2.ValueRange) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 15 &&
+            filter_ != com.google.bigtable.v2.ValueRange.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.ValueRange.newBuilder((com.google.bigtable.v2.ValueRange) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -8583,10 +7615,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 15;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
@@ -8609,10 +7638,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
@@ -8622,10 +7648,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ValueRange.Builder getValueRangeFilterBuilder() {
       return internalGetValueRangeFilterFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
@@ -8643,10 +7666,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ValueRange.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that fall within the given range.
      * </pre>
@@ -8654,20 +7674,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.ValueRange value_range_filter = 15;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ValueRange,
-            com.google.bigtable.v2.ValueRange.Builder,
-            com.google.bigtable.v2.ValueRangeOrBuilder>
+        com.google.bigtable.v2.ValueRange, com.google.bigtable.v2.ValueRange.Builder, com.google.bigtable.v2.ValueRangeOrBuilder> 
         internalGetValueRangeFilterFieldBuilder() {
       if (valueRangeFilterBuilder_ == null) {
         if (!(filterCase_ == 15)) {
           filter_ = com.google.bigtable.v2.ValueRange.getDefaultInstance();
         }
-        valueRangeFilterBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ValueRange,
-                com.google.bigtable.v2.ValueRange.Builder,
-                com.google.bigtable.v2.ValueRangeOrBuilder>(
-                (com.google.bigtable.v2.ValueRange) filter_, getParentForChildren(), isClean());
+        valueRangeFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ValueRange, com.google.bigtable.v2.ValueRange.Builder, com.google.bigtable.v2.ValueRangeOrBuilder>(
+                (com.google.bigtable.v2.ValueRange) filter_,
+                getParentForChildren(),
+                isClean());
         filter_ = null;
       }
       filterCase_ = 15;
@@ -8676,8 +7693,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Skips the first N cells of each row, matching all subsequent cells.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8685,16 +7700,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_offset_filter = 10;</code>
-     *
      * @return Whether the cellsPerRowOffsetFilter field is set.
      */
     public boolean hasCellsPerRowOffsetFilter() {
       return filterCase_ == 10;
     }
-
     /**
-     *
-     *
      * <pre>
      * Skips the first N cells of each row, matching all subsequent cells.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8702,7 +7713,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_offset_filter = 10;</code>
-     *
      * @return The cellsPerRowOffsetFilter.
      */
     public int getCellsPerRowOffsetFilter() {
@@ -8711,10 +7721,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return 0;
     }
-
     /**
-     *
-     *
      * <pre>
      * Skips the first N cells of each row, matching all subsequent cells.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8722,7 +7729,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_offset_filter = 10;</code>
-     *
      * @param value The cellsPerRowOffsetFilter to set.
      * @return This builder for chaining.
      */
@@ -8733,10 +7739,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Skips the first N cells of each row, matching all subsequent cells.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8744,7 +7747,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_offset_filter = 10;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCellsPerRowOffsetFilter() {
@@ -8757,8 +7759,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches only the first N cells of each row.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8766,16 +7766,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_limit_filter = 11;</code>
-     *
      * @return Whether the cellsPerRowLimitFilter field is set.
      */
     public boolean hasCellsPerRowLimitFilter() {
       return filterCase_ == 11;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only the first N cells of each row.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8783,7 +7779,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_limit_filter = 11;</code>
-     *
      * @return The cellsPerRowLimitFilter.
      */
     public int getCellsPerRowLimitFilter() {
@@ -8792,10 +7787,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return 0;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only the first N cells of each row.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8803,7 +7795,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_limit_filter = 11;</code>
-     *
      * @param value The cellsPerRowLimitFilter to set.
      * @return This builder for chaining.
      */
@@ -8814,10 +7805,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only the first N cells of each row.
      * If duplicate cells are present, as is possible when using an Interleave,
@@ -8825,7 +7813,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_row_limit_filter = 11;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCellsPerRowLimitFilter() {
@@ -8838,8 +7825,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Matches only the most recent N cells within each column. For example,
      * if N=2, this filter would match column `foo:bar` at timestamps 10 and 9,
@@ -8850,16 +7835,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_column_limit_filter = 12;</code>
-     *
      * @return Whether the cellsPerColumnLimitFilter field is set.
      */
     public boolean hasCellsPerColumnLimitFilter() {
       return filterCase_ == 12;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only the most recent N cells within each column. For example,
      * if N=2, this filter would match column `foo:bar` at timestamps 10 and 9,
@@ -8870,7 +7851,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_column_limit_filter = 12;</code>
-     *
      * @return The cellsPerColumnLimitFilter.
      */
     public int getCellsPerColumnLimitFilter() {
@@ -8879,10 +7859,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return 0;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only the most recent N cells within each column. For example,
      * if N=2, this filter would match column `foo:bar` at timestamps 10 and 9,
@@ -8893,7 +7870,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_column_limit_filter = 12;</code>
-     *
      * @param value The cellsPerColumnLimitFilter to set.
      * @return This builder for chaining.
      */
@@ -8904,10 +7880,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only the most recent N cells within each column. For example,
      * if N=2, this filter would match column `foo:bar` at timestamps 10 and 9,
@@ -8918,7 +7891,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int32 cells_per_column_limit_filter = 12;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCellsPerColumnLimitFilter() {
@@ -8931,29 +7903,22 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Replaces each cell's value with the empty string.
      * </pre>
      *
      * <code>bool strip_value_transformer = 13;</code>
-     *
      * @return Whether the stripValueTransformer field is set.
      */
     public boolean hasStripValueTransformer() {
       return filterCase_ == 13;
     }
-
     /**
-     *
-     *
      * <pre>
      * Replaces each cell's value with the empty string.
      * </pre>
      *
      * <code>bool strip_value_transformer = 13;</code>
-     *
      * @return The stripValueTransformer.
      */
     public boolean getStripValueTransformer() {
@@ -8962,16 +7927,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return false;
     }
-
     /**
-     *
-     *
      * <pre>
      * Replaces each cell's value with the empty string.
      * </pre>
      *
      * <code>bool strip_value_transformer = 13;</code>
-     *
      * @param value The stripValueTransformer to set.
      * @return This builder for chaining.
      */
@@ -8982,16 +7943,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Replaces each cell's value with the empty string.
      * </pre>
      *
      * <code>bool strip_value_transformer = 13;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearStripValueTransformer() {
@@ -9004,8 +7961,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     /**
-     *
-     *
      * <pre>
      * Applies the given label to all cells in the output row. This allows
      * the client to determine which results were produced from which part of
@@ -9023,17 +7978,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string apply_label_transformer = 19;</code>
-     *
      * @return Whether the applyLabelTransformer field is set.
      */
     @java.lang.Override
     public boolean hasApplyLabelTransformer() {
       return filterCase_ == 19;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies the given label to all cells in the output row. This allows
      * the client to determine which results were produced from which part of
@@ -9051,7 +8002,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string apply_label_transformer = 19;</code>
-     *
      * @return The applyLabelTransformer.
      */
     @java.lang.Override
@@ -9061,7 +8011,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         ref = filter_;
       }
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (filterCase_ == 19) {
           filter_ = s;
@@ -9071,10 +8022,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies the given label to all cells in the output row. This allows
      * the client to determine which results were produced from which part of
@@ -9092,18 +8040,19 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string apply_label_transformer = 19;</code>
-     *
      * @return The bytes for applyLabelTransformer.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getApplyLabelTransformerBytes() {
+    public com.google.protobuf.ByteString
+        getApplyLabelTransformerBytes() {
       java.lang.Object ref = "";
       if (filterCase_ == 19) {
         ref = filter_;
       }
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         if (filterCase_ == 19) {
           filter_ = b;
         }
@@ -9112,10 +8061,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies the given label to all cells in the output row. This allows
      * the client to determine which results were produced from which part of
@@ -9133,23 +8079,18 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string apply_label_transformer = 19;</code>
-     *
      * @param value The applyLabelTransformer to set.
      * @return This builder for chaining.
      */
-    public Builder setApplyLabelTransformer(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplyLabelTransformer(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       filterCase_ = 19;
       filter_ = value;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies the given label to all cells in the output row. This allows
      * the client to determine which results were produced from which part of
@@ -9167,7 +8108,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string apply_label_transformer = 19;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearApplyLabelTransformer() {
@@ -9178,10 +8118,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Applies the given label to all cells in the output row. This allows
      * the client to determine which results were produced from which part of
@@ -9199,14 +8136,12 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>string apply_label_transformer = 19;</code>
-     *
      * @param value The bytes for applyLabelTransformer to set.
      * @return This builder for chaining.
      */
-    public Builder setApplyLabelTransformerBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setApplyLabelTransformerBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       filterCase_ = 19;
       filter_ = value;
@@ -9215,14 +8150,8 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ValueBitmask,
-            com.google.bigtable.v2.ValueBitmask.Builder,
-            com.google.bigtable.v2.ValueBitmaskOrBuilder>
-        valueBitmaskFilterBuilder_;
-
+        com.google.bigtable.v2.ValueBitmask, com.google.bigtable.v2.ValueBitmask.Builder, com.google.bigtable.v2.ValueBitmaskOrBuilder> valueBitmaskFilterBuilder_;
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9231,17 +8160,13 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.ValueBitmask value_bitmask_filter = 20;</code>
-     *
      * @return Whether the valueBitmaskFilter field is set.
      */
     @java.lang.Override
     public boolean hasValueBitmaskFilter() {
       return filterCase_ == 20;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9250,7 +8175,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>.google.bigtable.v2.ValueBitmask value_bitmask_filter = 20;</code>
-     *
      * @return The valueBitmaskFilter.
      */
     @java.lang.Override
@@ -9267,10 +8191,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ValueBitmask.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9293,10 +8214,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 20;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9317,10 +8235,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 20;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9332,13 +8247,10 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeValueBitmaskFilter(com.google.bigtable.v2.ValueBitmask value) {
       if (valueBitmaskFilterBuilder_ == null) {
-        if (filterCase_ == 20
-            && filter_ != com.google.bigtable.v2.ValueBitmask.getDefaultInstance()) {
-          filter_ =
-              com.google.bigtable.v2.ValueBitmask.newBuilder(
-                      (com.google.bigtable.v2.ValueBitmask) filter_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (filterCase_ == 20 &&
+            filter_ != com.google.bigtable.v2.ValueBitmask.getDefaultInstance()) {
+          filter_ = com.google.bigtable.v2.ValueBitmask.newBuilder((com.google.bigtable.v2.ValueBitmask) filter_)
+              .mergeFrom(value).buildPartial();
         } else {
           filter_ = value;
         }
@@ -9353,10 +8265,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       filterCase_ = 20;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9382,10 +8291,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9398,10 +8304,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ValueBitmask.Builder getValueBitmaskFilterBuilder() {
       return internalGetValueBitmaskFilterFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9422,10 +8325,7 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
         return com.google.bigtable.v2.ValueBitmask.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Matches only cells with values that satisfy the condition `(value &amp; mask)
      * == mask`.
@@ -9436,20 +8336,17 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
      * <code>.google.bigtable.v2.ValueBitmask value_bitmask_filter = 20;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ValueBitmask,
-            com.google.bigtable.v2.ValueBitmask.Builder,
-            com.google.bigtable.v2.ValueBitmaskOrBuilder>
+        com.google.bigtable.v2.ValueBitmask, com.google.bigtable.v2.ValueBitmask.Builder, com.google.bigtable.v2.ValueBitmaskOrBuilder> 
         internalGetValueBitmaskFilterFieldBuilder() {
       if (valueBitmaskFilterBuilder_ == null) {
         if (!(filterCase_ == 20)) {
           filter_ = com.google.bigtable.v2.ValueBitmask.getDefaultInstance();
         }
-        valueBitmaskFilterBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ValueBitmask,
-                com.google.bigtable.v2.ValueBitmask.Builder,
-                com.google.bigtable.v2.ValueBitmaskOrBuilder>(
-                (com.google.bigtable.v2.ValueBitmask) filter_, getParentForChildren(), isClean());
+        valueBitmaskFilterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ValueBitmask, com.google.bigtable.v2.ValueBitmask.Builder, com.google.bigtable.v2.ValueBitmaskOrBuilder>(
+                (com.google.bigtable.v2.ValueBitmask) filter_,
+                getParentForChildren(),
+                isClean());
         filter_ = null;
       }
       filterCase_ = 20;
@@ -9462,7 +8359,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.RowFilter)
   private static final com.google.bigtable.v2.RowFilter DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.RowFilter();
   }
@@ -9471,27 +8367,27 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RowFilter> PARSER =
-      new com.google.protobuf.AbstractParser<RowFilter>() {
-        @java.lang.Override
-        public RowFilter parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<RowFilter>
+      PARSER = new com.google.protobuf.AbstractParser<RowFilter>() {
+    @java.lang.Override
+    public RowFilter parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<RowFilter> parser() {
     return PARSER;
@@ -9506,4 +8402,6 @@ public final class RowFilter extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.RowFilter getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

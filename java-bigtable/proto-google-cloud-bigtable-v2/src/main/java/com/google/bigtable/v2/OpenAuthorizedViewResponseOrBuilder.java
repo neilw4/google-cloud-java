@@ -6,7 +6,7 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface OpenAuthorizedViewResponseOrBuilder
-    extends
+public interface OpenAuthorizedViewResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.OpenAuthorizedViewResponse)
-    com.google.protobuf.MessageOrBuilder {}
+    com.google.protobuf.MessageOrBuilder {
+}

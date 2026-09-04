@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,62 +13,52 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.GoAwayResponse}
  */
 @com.google.protobuf.Generated
-public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class GoAwayResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.GoAwayResponse)
     GoAwayResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "GoAwayResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "GoAwayResponse");
   }
-
   // Use GoAwayResponse.newBuilder() to construct.
   private GoAwayResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private GoAwayResponse() {
     reason_ = "";
     description_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_GoAwayResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GoAwayResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_GoAwayResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GoAwayResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.GoAwayResponse.class,
-            com.google.bigtable.v2.GoAwayResponse.Builder.class);
+            com.google.bigtable.v2.GoAwayResponse.class, com.google.bigtable.v2.GoAwayResponse.Builder.class);
   }
 
   public static final int REASON_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object reason_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Server-generated reason for GOAWAY, including a plain-text description of
    * why. 'reason' may be used for CSM, while both may be logged.
    * </pre>
    *
    * <code>string reason = 1;</code>
-   *
    * @return The reason.
    */
   @java.lang.Override
@@ -79,31 +67,30 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       reason_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Server-generated reason for GOAWAY, including a plain-text description of
    * why. 'reason' may be used for CSM, while both may be logged.
    * </pre>
    *
    * <code>string reason = 1;</code>
-   *
    * @return The bytes for reason.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getReasonBytes() {
+  public com.google.protobuf.ByteString
+      getReasonBytes() {
     java.lang.Object ref = reason_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       reason_ = b;
       return b;
     } else {
@@ -112,13 +99,10 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
-
   /**
    * <code>string description = 2;</code>
-   *
    * @return The description.
    */
   @java.lang.Override
@@ -127,24 +111,25 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
-
   /**
    * <code>string description = 2;</code>
-   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getDescriptionBytes() {
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -154,10 +139,7 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
 
   public static final int LAST_RPC_ID_ADMITTED_FIELD_NUMBER = 3;
   private long lastRpcIdAdmitted_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * The last vRPC which was admitted by the AFE. The client may expect the
    * result from the vRPC on the stream before disconnecting, and should
@@ -165,7 +147,6 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
    * </pre>
    *
    * <code>int64 last_rpc_id_admitted = 3;</code>
-   *
    * @return The lastRpcIdAdmitted.
    */
   @java.lang.Override
@@ -174,7 +155,6 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -186,7 +166,8 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(reason_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, reason_);
     }
@@ -212,7 +193,8 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, description_);
     }
     if (lastRpcIdAdmitted_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(3, lastRpcIdAdmitted_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, lastRpcIdAdmitted_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -222,16 +204,19 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.GoAwayResponse)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.GoAwayResponse other = (com.google.bigtable.v2.GoAwayResponse) obj;
 
-    if (!getReason().equals(other.getReason())) return false;
-    if (!getDescription().equals(other.getDescription())) return false;
-    if (getLastRpcIdAdmitted() != other.getLastRpcIdAdmitted()) return false;
+    if (!getReason()
+        .equals(other.getReason())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (getLastRpcIdAdmitted()
+        != other.getLastRpcIdAdmitted()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -248,142 +233,139 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + LAST_RPC_ID_ADMITTED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getLastRpcIdAdmitted());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getLastRpcIdAdmitted());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.bigtable.v2.GoAwayResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.GoAwayResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.GoAwayResponse parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.GoAwayResponse parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.GoAwayResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.GoAwayResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.GoAwayResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.GoAwayResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.GoAwayResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.GoAwayResponse)
       com.google.bigtable.v2.GoAwayResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_GoAwayResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GoAwayResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_GoAwayResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GoAwayResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.GoAwayResponse.class,
-              com.google.bigtable.v2.GoAwayResponse.Builder.class);
+              com.google.bigtable.v2.GoAwayResponse.class, com.google.bigtable.v2.GoAwayResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.GoAwayResponse.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -395,9 +377,9 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_GoAwayResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_GoAwayResponse_descriptor;
     }
 
     @java.lang.Override
@@ -416,11 +398,8 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
 
     @java.lang.Override
     public com.google.bigtable.v2.GoAwayResponse buildPartial() {
-      com.google.bigtable.v2.GoAwayResponse result =
-          new com.google.bigtable.v2.GoAwayResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.GoAwayResponse result = new com.google.bigtable.v2.GoAwayResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -441,7 +420,7 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.GoAwayResponse) {
-        return mergeFrom((com.google.bigtable.v2.GoAwayResponse) other);
+        return mergeFrom((com.google.bigtable.v2.GoAwayResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -489,31 +468,27 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                reason_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                description_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 24:
-              {
-                lastRpcIdAdmitted_ = input.readInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              reason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              lastRpcIdAdmitted_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -523,27 +498,23 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object reason_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Server-generated reason for GOAWAY, including a plain-text description of
      * why. 'reason' may be used for CSM, while both may be logged.
      * </pre>
      *
      * <code>string reason = 1;</code>
-     *
      * @return The reason.
      */
     public java.lang.String getReason() {
       java.lang.Object ref = reason_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         reason_ = s;
         return s;
@@ -551,64 +522,53 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Server-generated reason for GOAWAY, including a plain-text description of
      * why. 'reason' may be used for CSM, while both may be logged.
      * </pre>
      *
      * <code>string reason = 1;</code>
-     *
      * @return The bytes for reason.
      */
-    public com.google.protobuf.ByteString getReasonBytes() {
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
       java.lang.Object ref = reason_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         reason_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Server-generated reason for GOAWAY, including a plain-text description of
      * why. 'reason' may be used for CSM, while both may be logged.
      * </pre>
      *
      * <code>string reason = 1;</code>
-     *
      * @param value The reason to set.
      * @return This builder for chaining.
      */
-    public Builder setReason(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setReason(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       reason_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Server-generated reason for GOAWAY, including a plain-text description of
      * why. 'reason' may be used for CSM, while both may be logged.
      * </pre>
      *
      * <code>string reason = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearReason() {
@@ -617,24 +577,19 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Server-generated reason for GOAWAY, including a plain-text description of
      * why. 'reason' may be used for CSM, while both may be logged.
      * </pre>
      *
      * <code>string reason = 1;</code>
-     *
      * @param value The bytes for reason to set.
      * @return This builder for chaining.
      */
-    public Builder setReasonBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setReasonBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       reason_ = value;
       bitField0_ |= 0x00000001;
@@ -643,16 +598,15 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     }
 
     private java.lang.Object description_ = "";
-
     /**
      * <code>string description = 2;</code>
-     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -660,43 +614,38 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString getDescriptionBytes() {
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -705,17 +654,14 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
      * <code>string description = 2;</code>
-     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
       bitField0_ |= 0x00000002;
@@ -723,11 +669,8 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private long lastRpcIdAdmitted_;
-
+    private long lastRpcIdAdmitted_ ;
     /**
-     *
-     *
      * <pre>
      * The last vRPC which was admitted by the AFE. The client may expect the
      * result from the vRPC on the stream before disconnecting, and should
@@ -735,17 +678,13 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int64 last_rpc_id_admitted = 3;</code>
-     *
      * @return The lastRpcIdAdmitted.
      */
     @java.lang.Override
     public long getLastRpcIdAdmitted() {
       return lastRpcIdAdmitted_;
     }
-
     /**
-     *
-     *
      * <pre>
      * The last vRPC which was admitted by the AFE. The client may expect the
      * result from the vRPC on the stream before disconnecting, and should
@@ -753,7 +692,6 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int64 last_rpc_id_admitted = 3;</code>
-     *
      * @param value The lastRpcIdAdmitted to set.
      * @return This builder for chaining.
      */
@@ -764,10 +702,7 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The last vRPC which was admitted by the AFE. The client may expect the
      * result from the vRPC on the stream before disconnecting, and should
@@ -775,7 +710,6 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
      * </pre>
      *
      * <code>int64 last_rpc_id_admitted = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearLastRpcIdAdmitted() {
@@ -790,7 +724,6 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.GoAwayResponse)
   private static final com.google.bigtable.v2.GoAwayResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.GoAwayResponse();
   }
@@ -799,27 +732,27 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GoAwayResponse> PARSER =
-      new com.google.protobuf.AbstractParser<GoAwayResponse>() {
-        @java.lang.Override
-        public GoAwayResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<GoAwayResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GoAwayResponse>() {
+    @java.lang.Override
+    public GoAwayResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<GoAwayResponse> parser() {
     return PARSER;
@@ -834,4 +767,6 @@ public final class GoAwayResponse extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.GoAwayResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

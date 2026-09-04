@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,57 +13,49 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ErrorResponse}
  */
 @com.google.protobuf.Generated
-public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ErrorResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ErrorResponse)
     ErrorResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ErrorResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ErrorResponse");
   }
-
   // Use ErrorResponse.newBuilder() to construct.
   private ErrorResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private ErrorResponse() {
+  }
 
-  private ErrorResponse() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_ErrorResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ErrorResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_ErrorResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ErrorResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ErrorResponse.class,
-            com.google.bigtable.v2.ErrorResponse.Builder.class);
+            com.google.bigtable.v2.ErrorResponse.class, com.google.bigtable.v2.ErrorResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int RPC_ID_FIELD_NUMBER = 1;
   private long rpcId_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * Which vRPC this response is for.
    * </pre>
    *
    * <code>int64 rpc_id = 1;</code>
-   *
    * @return The rpcId.
    */
   @java.lang.Override
@@ -75,75 +65,57 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
   public static final int CLUSTER_INFO_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.ClusterInformation clusterInfo_;
-
   /**
    * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-   *
    * @return Whether the clusterInfo field is set.
    */
   @java.lang.Override
   public boolean hasClusterInfo() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
    * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-   *
    * @return The clusterInfo.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ClusterInformation getClusterInfo() {
-    return clusterInfo_ == null
-        ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance()
-        : clusterInfo_;
+    return clusterInfo_ == null ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance() : clusterInfo_;
   }
-
-  /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+   */
   @java.lang.Override
   public com.google.bigtable.v2.ClusterInformationOrBuilder getClusterInfoOrBuilder() {
-    return clusterInfo_ == null
-        ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance()
-        : clusterInfo_;
+    return clusterInfo_ == null ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance() : clusterInfo_;
   }
 
   public static final int STATUS_FIELD_NUMBER = 3;
   private com.google.rpc.Status status_;
-
   /**
-   *
-   *
    * <pre>
    * The error from the vRPC and any retry information to consider.
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
-   *
    * @return Whether the status field is set.
    */
   @java.lang.Override
   public boolean hasStatus() {
     return ((bitField0_ & 0x00000002) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * The error from the vRPC and any retry information to consider.
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
-   *
    * @return The status.
    */
   @java.lang.Override
   public com.google.rpc.Status getStatus() {
     return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The error from the vRPC and any retry information to consider.
    * </pre>
@@ -157,35 +129,31 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
   public static final int RETRY_INFO_FIELD_NUMBER = 4;
   private com.google.rpc.RetryInfo retryInfo_;
-
   /**
    * <code>.google.rpc.RetryInfo retry_info = 4;</code>
-   *
    * @return Whether the retryInfo field is set.
    */
   @java.lang.Override
   public boolean hasRetryInfo() {
     return ((bitField0_ & 0x00000004) != 0);
   }
-
   /**
    * <code>.google.rpc.RetryInfo retry_info = 4;</code>
-   *
    * @return The retryInfo.
    */
   @java.lang.Override
   public com.google.rpc.RetryInfo getRetryInfo() {
     return retryInfo_ == null ? com.google.rpc.RetryInfo.getDefaultInstance() : retryInfo_;
   }
-
-  /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+  /**
+   * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+   */
   @java.lang.Override
   public com.google.rpc.RetryInfoOrBuilder getRetryInfoOrBuilder() {
     return retryInfo_ == null ? com.google.rpc.RetryInfo.getDefaultInstance() : retryInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -197,7 +165,8 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (rpcId_ != 0L) {
       output.writeInt64(1, rpcId_);
     }
@@ -220,16 +189,20 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     if (rpcId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, rpcId_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, rpcId_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getClusterInfo());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getClusterInfo());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getStatus());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getStatus());
     }
     if (((bitField0_ & 0x00000004) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getRetryInfo());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getRetryInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -239,25 +212,29 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ErrorResponse)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.ErrorResponse other = (com.google.bigtable.v2.ErrorResponse) obj;
 
-    if (getRpcId() != other.getRpcId()) return false;
+    if (getRpcId()
+        != other.getRpcId()) return false;
     if (hasClusterInfo() != other.hasClusterInfo()) return false;
     if (hasClusterInfo()) {
-      if (!getClusterInfo().equals(other.getClusterInfo())) return false;
+      if (!getClusterInfo()
+          .equals(other.getClusterInfo())) return false;
     }
     if (hasStatus() != other.hasStatus()) return false;
     if (hasStatus()) {
-      if (!getStatus().equals(other.getStatus())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
     }
     if (hasRetryInfo() != other.hasRetryInfo()) return false;
     if (hasRetryInfo()) {
-      if (!getRetryInfo().equals(other.getRetryInfo())) return false;
+      if (!getRetryInfo()
+          .equals(other.getRetryInfo())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -271,7 +248,8 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RPC_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getRpcId());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getRpcId());
     if (hasClusterInfo()) {
       hash = (37 * hash) + CLUSTER_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getClusterInfo().hashCode();
@@ -289,127 +267,120 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.ErrorResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ErrorResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.ErrorResponse parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.ErrorResponse parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.ErrorResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ErrorResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ErrorResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ErrorResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ErrorResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ErrorResponse)
       com.google.bigtable.v2.ErrorResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ErrorResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ErrorResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ErrorResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ErrorResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ErrorResponse.class,
-              com.google.bigtable.v2.ErrorResponse.Builder.class);
+              com.google.bigtable.v2.ErrorResponse.class, com.google.bigtable.v2.ErrorResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ErrorResponse.newBuilder()
@@ -417,19 +388,19 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetClusterInfoFieldBuilder();
         internalGetStatusFieldBuilder();
         internalGetRetryInfoFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -454,9 +425,9 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_ErrorResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_ErrorResponse_descriptor;
     }
 
     @java.lang.Override
@@ -476,9 +447,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public com.google.bigtable.v2.ErrorResponse buildPartial() {
       com.google.bigtable.v2.ErrorResponse result = new com.google.bigtable.v2.ErrorResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -490,16 +459,21 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.clusterInfo_ =
-            clusterInfoBuilder_ == null ? clusterInfo_ : clusterInfoBuilder_.build();
+        result.clusterInfo_ = clusterInfoBuilder_ == null
+            ? clusterInfo_
+            : clusterInfoBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.status_ = statusBuilder_ == null ? status_ : statusBuilder_.build();
+        result.status_ = statusBuilder_ == null
+            ? status_
+            : statusBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.retryInfo_ = retryInfoBuilder_ == null ? retryInfo_ : retryInfoBuilder_.build();
+        result.retryInfo_ = retryInfoBuilder_ == null
+            ? retryInfo_
+            : retryInfoBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
@@ -508,7 +482,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ErrorResponse) {
-        return mergeFrom((com.google.bigtable.v2.ErrorResponse) other);
+        return mergeFrom((com.google.bigtable.v2.ErrorResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -555,39 +529,38 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                rpcId_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 18:
-              {
-                input.readMessage(
-                    internalGetClusterInfoFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(internalGetStatusFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-            case 34:
-              {
-                input.readMessage(
-                    internalGetRetryInfoFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              rpcId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  internalGetClusterInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetRetryInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -597,36 +570,27 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private long rpcId_;
-
+    private long rpcId_ ;
     /**
-     *
-     *
      * <pre>
      * Which vRPC this response is for.
      * </pre>
      *
      * <code>int64 rpc_id = 1;</code>
-     *
      * @return The rpcId.
      */
     @java.lang.Override
     public long getRpcId() {
       return rpcId_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Which vRPC this response is for.
      * </pre>
      *
      * <code>int64 rpc_id = 1;</code>
-     *
      * @param value The rpcId to set.
      * @return This builder for chaining.
      */
@@ -637,16 +601,12 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Which vRPC this response is for.
      * </pre>
      *
      * <code>int64 rpc_id = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRpcId() {
@@ -658,36 +618,28 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
     private com.google.bigtable.v2.ClusterInformation clusterInfo_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ClusterInformation,
-            com.google.bigtable.v2.ClusterInformation.Builder,
-            com.google.bigtable.v2.ClusterInformationOrBuilder>
-        clusterInfoBuilder_;
-
+        com.google.bigtable.v2.ClusterInformation, com.google.bigtable.v2.ClusterInformation.Builder, com.google.bigtable.v2.ClusterInformationOrBuilder> clusterInfoBuilder_;
     /**
      * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-     *
      * @return Whether the clusterInfo field is set.
      */
     public boolean hasClusterInfo() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
      * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-     *
      * @return The clusterInfo.
      */
     public com.google.bigtable.v2.ClusterInformation getClusterInfo() {
       if (clusterInfoBuilder_ == null) {
-        return clusterInfo_ == null
-            ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance()
-            : clusterInfo_;
+        return clusterInfo_ == null ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance() : clusterInfo_;
       } else {
         return clusterInfoBuilder_.getMessage();
       }
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     public Builder setClusterInfo(com.google.bigtable.v2.ClusterInformation value) {
       if (clusterInfoBuilder_ == null) {
         if (value == null) {
@@ -701,8 +653,9 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     public Builder setClusterInfo(
         com.google.bigtable.v2.ClusterInformation.Builder builderForValue) {
       if (clusterInfoBuilder_ == null) {
@@ -714,13 +667,14 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     public Builder mergeClusterInfo(com.google.bigtable.v2.ClusterInformation value) {
       if (clusterInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && clusterInfo_ != null
-            && clusterInfo_ != com.google.bigtable.v2.ClusterInformation.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          clusterInfo_ != null &&
+          clusterInfo_ != com.google.bigtable.v2.ClusterInformation.getDefaultInstance()) {
           getClusterInfoBuilder().mergeFrom(value);
         } else {
           clusterInfo_ = value;
@@ -734,8 +688,9 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     public Builder clearClusterInfo() {
       bitField0_ = (bitField0_ & ~0x00000002);
       clusterInfo_ = null;
@@ -746,38 +701,37 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     public com.google.bigtable.v2.ClusterInformation.Builder getClusterInfoBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return internalGetClusterInfoFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     public com.google.bigtable.v2.ClusterInformationOrBuilder getClusterInfoOrBuilder() {
       if (clusterInfoBuilder_ != null) {
         return clusterInfoBuilder_.getMessageOrBuilder();
       } else {
-        return clusterInfo_ == null
-            ? com.google.bigtable.v2.ClusterInformation.getDefaultInstance()
-            : clusterInfo_;
+        return clusterInfo_ == null ?
+            com.google.bigtable.v2.ClusterInformation.getDefaultInstance() : clusterInfo_;
       }
     }
-
-    /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+    /**
+     * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ClusterInformation,
-            com.google.bigtable.v2.ClusterInformation.Builder,
-            com.google.bigtable.v2.ClusterInformationOrBuilder>
+        com.google.bigtable.v2.ClusterInformation, com.google.bigtable.v2.ClusterInformation.Builder, com.google.bigtable.v2.ClusterInformationOrBuilder> 
         internalGetClusterInfoFieldBuilder() {
       if (clusterInfoBuilder_ == null) {
-        clusterInfoBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ClusterInformation,
-                com.google.bigtable.v2.ClusterInformation.Builder,
-                com.google.bigtable.v2.ClusterInformationOrBuilder>(
-                getClusterInfo(), getParentForChildren(), isClean());
+        clusterInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ClusterInformation, com.google.bigtable.v2.ClusterInformation.Builder, com.google.bigtable.v2.ClusterInformationOrBuilder>(
+                getClusterInfo(),
+                getParentForChildren(),
+                isClean());
         clusterInfo_ = null;
       }
       return clusterInfoBuilder_;
@@ -785,33 +739,24 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
     private com.google.rpc.Status status_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>
-        statusBuilder_;
-
+        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
      *
      * <code>.google.rpc.Status status = 3;</code>
-     *
      * @return Whether the status field is set.
      */
     public boolean hasStatus() {
       return ((bitField0_ & 0x00000004) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
      *
      * <code>.google.rpc.Status status = 3;</code>
-     *
      * @return The status.
      */
     public com.google.rpc.Status getStatus() {
@@ -821,10 +766,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
         return statusBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
@@ -844,17 +786,15 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
      *
      * <code>.google.rpc.Status status = 3;</code>
      */
-    public Builder setStatus(com.google.rpc.Status.Builder builderForValue) {
+    public Builder setStatus(
+        com.google.rpc.Status.Builder builderForValue) {
       if (statusBuilder_ == null) {
         status_ = builderForValue.build();
       } else {
@@ -864,10 +804,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
@@ -876,9 +813,9 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
      */
     public Builder mergeStatus(com.google.rpc.Status value) {
       if (statusBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)
-            && status_ != null
-            && status_ != com.google.rpc.Status.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          status_ != null &&
+          status_ != com.google.rpc.Status.getDefaultInstance()) {
           getStatusBuilder().mergeFrom(value);
         } else {
           status_ = value;
@@ -892,10 +829,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
@@ -912,10 +846,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
@@ -927,10 +858,7 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return internalGetStatusFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
@@ -941,13 +869,11 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       if (statusBuilder_ != null) {
         return statusBuilder_.getMessageOrBuilder();
       } else {
-        return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
+        return status_ == null ?
+            com.google.rpc.Status.getDefaultInstance() : status_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The error from the vRPC and any retry information to consider.
      * </pre>
@@ -955,14 +881,14 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
      * <code>.google.rpc.Status status = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>
+        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
         internalGetStatusFieldBuilder() {
       if (statusBuilder_ == null) {
-        statusBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.rpc.Status,
-                com.google.rpc.Status.Builder,
-                com.google.rpc.StatusOrBuilder>(getStatus(), getParentForChildren(), isClean());
+        statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
+                getStatus(),
+                getParentForChildren(),
+                isClean());
         status_ = null;
       }
       return statusBuilder_;
@@ -970,23 +896,16 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
     private com.google.rpc.RetryInfo retryInfo_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.rpc.RetryInfo,
-            com.google.rpc.RetryInfo.Builder,
-            com.google.rpc.RetryInfoOrBuilder>
-        retryInfoBuilder_;
-
+        com.google.rpc.RetryInfo, com.google.rpc.RetryInfo.Builder, com.google.rpc.RetryInfoOrBuilder> retryInfoBuilder_;
     /**
      * <code>.google.rpc.RetryInfo retry_info = 4;</code>
-     *
      * @return Whether the retryInfo field is set.
      */
     public boolean hasRetryInfo() {
       return ((bitField0_ & 0x00000008) != 0);
     }
-
     /**
      * <code>.google.rpc.RetryInfo retry_info = 4;</code>
-     *
      * @return The retryInfo.
      */
     public com.google.rpc.RetryInfo getRetryInfo() {
@@ -996,8 +915,9 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
         return retryInfoBuilder_.getMessage();
       }
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
     public Builder setRetryInfo(com.google.rpc.RetryInfo value) {
       if (retryInfoBuilder_ == null) {
         if (value == null) {
@@ -1011,9 +931,11 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
-    public Builder setRetryInfo(com.google.rpc.RetryInfo.Builder builderForValue) {
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
+    public Builder setRetryInfo(
+        com.google.rpc.RetryInfo.Builder builderForValue) {
       if (retryInfoBuilder_ == null) {
         retryInfo_ = builderForValue.build();
       } else {
@@ -1023,13 +945,14 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
     public Builder mergeRetryInfo(com.google.rpc.RetryInfo value) {
       if (retryInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)
-            && retryInfo_ != null
-            && retryInfo_ != com.google.rpc.RetryInfo.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          retryInfo_ != null &&
+          retryInfo_ != com.google.rpc.RetryInfo.getDefaultInstance()) {
           getRetryInfoBuilder().mergeFrom(value);
         } else {
           retryInfo_ = value;
@@ -1043,8 +966,9 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
     public Builder clearRetryInfo() {
       bitField0_ = (bitField0_ & ~0x00000008);
       retryInfo_ = null;
@@ -1055,36 +979,37 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
     public com.google.rpc.RetryInfo.Builder getRetryInfoBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return internalGetRetryInfoFieldBuilder().getBuilder();
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
     public com.google.rpc.RetryInfoOrBuilder getRetryInfoOrBuilder() {
       if (retryInfoBuilder_ != null) {
         return retryInfoBuilder_.getMessageOrBuilder();
       } else {
-        return retryInfo_ == null ? com.google.rpc.RetryInfo.getDefaultInstance() : retryInfo_;
+        return retryInfo_ == null ?
+            com.google.rpc.RetryInfo.getDefaultInstance() : retryInfo_;
       }
     }
-
-    /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+    /**
+     * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+     */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.rpc.RetryInfo,
-            com.google.rpc.RetryInfo.Builder,
-            com.google.rpc.RetryInfoOrBuilder>
+        com.google.rpc.RetryInfo, com.google.rpc.RetryInfo.Builder, com.google.rpc.RetryInfoOrBuilder> 
         internalGetRetryInfoFieldBuilder() {
       if (retryInfoBuilder_ == null) {
-        retryInfoBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.rpc.RetryInfo,
-                com.google.rpc.RetryInfo.Builder,
-                com.google.rpc.RetryInfoOrBuilder>(
-                getRetryInfo(), getParentForChildren(), isClean());
+        retryInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.rpc.RetryInfo, com.google.rpc.RetryInfo.Builder, com.google.rpc.RetryInfoOrBuilder>(
+                getRetryInfo(),
+                getParentForChildren(),
+                isClean());
         retryInfo_ = null;
       }
       return retryInfoBuilder_;
@@ -1095,7 +1020,6 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ErrorResponse)
   private static final com.google.bigtable.v2.ErrorResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ErrorResponse();
   }
@@ -1104,27 +1028,27 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ErrorResponse> PARSER =
-      new com.google.protobuf.AbstractParser<ErrorResponse>() {
-        @java.lang.Override
-        public ErrorResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ErrorResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ErrorResponse>() {
+    @java.lang.Override
+    public ErrorResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ErrorResponse> parser() {
     return PARSER;
@@ -1139,4 +1063,6 @@ public final class ErrorResponse extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ErrorResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

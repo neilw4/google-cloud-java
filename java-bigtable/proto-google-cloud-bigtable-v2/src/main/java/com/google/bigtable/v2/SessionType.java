@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Supported session types.
  * </pre>
@@ -15,18 +13,25 @@ package com.google.bigtable.v2;
  * Protobuf enum {@code google.bigtable.v2.SessionType}
  */
 @com.google.protobuf.Generated
-public enum SessionType implements com.google.protobuf.ProtocolMessageEnum {
-  /** <code>SESSION_TYPE_UNSET = 0;</code> */
+public enum SessionType
+    implements com.google.protobuf.ProtocolMessageEnum {
+  /**
+   * <code>SESSION_TYPE_UNSET = 0;</code>
+   */
   SESSION_TYPE_UNSET(0),
-  /** <code>SESSION_TYPE_TABLE = 1;</code> */
+  /**
+   * <code>SESSION_TYPE_TABLE = 1;</code>
+   */
   SESSION_TYPE_TABLE(1),
-  /** <code>SESSION_TYPE_AUTHORIZED_VIEW = 2;</code> */
+  /**
+   * <code>SESSION_TYPE_AUTHORIZED_VIEW = 2;</code>
+   */
   SESSION_TYPE_AUTHORIZED_VIEW(2),
-  /** <code>SESSION_TYPE_MATERIALIZED_VIEW = 3;</code> */
+  /**
+   * <code>SESSION_TYPE_MATERIALIZED_VIEW = 3;</code>
+   */
   SESSION_TYPE_MATERIALIZED_VIEW(3),
   /**
-   *
-   *
    * <pre>
    * For internal protocol testing only.
    * </pre>
@@ -39,29 +44,30 @@ public enum SessionType implements com.google.protobuf.ProtocolMessageEnum {
 
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SessionType");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SessionType");
   }
-
-  /** <code>SESSION_TYPE_UNSET = 0;</code> */
-  public static final int SESSION_TYPE_UNSET_VALUE = 0;
-
-  /** <code>SESSION_TYPE_TABLE = 1;</code> */
-  public static final int SESSION_TYPE_TABLE_VALUE = 1;
-
-  /** <code>SESSION_TYPE_AUTHORIZED_VIEW = 2;</code> */
-  public static final int SESSION_TYPE_AUTHORIZED_VIEW_VALUE = 2;
-
-  /** <code>SESSION_TYPE_MATERIALIZED_VIEW = 3;</code> */
-  public static final int SESSION_TYPE_MATERIALIZED_VIEW_VALUE = 3;
-
   /**
-   *
-   *
+   * <code>SESSION_TYPE_UNSET = 0;</code>
+   */
+  public static final int SESSION_TYPE_UNSET_VALUE = 0;
+  /**
+   * <code>SESSION_TYPE_TABLE = 1;</code>
+   */
+  public static final int SESSION_TYPE_TABLE_VALUE = 1;
+  /**
+   * <code>SESSION_TYPE_AUTHORIZED_VIEW = 2;</code>
+   */
+  public static final int SESSION_TYPE_AUTHORIZED_VIEW_VALUE = 2;
+  /**
+   * <code>SESSION_TYPE_MATERIALIZED_VIEW = 3;</code>
+   */
+  public static final int SESSION_TYPE_MATERIALIZED_VIEW_VALUE = 3;
+  /**
    * <pre>
    * For internal protocol testing only.
    * </pre>
@@ -69,6 +75,7 @@ public enum SessionType implements com.google.protobuf.ProtocolMessageEnum {
    * <code>SESSION_TYPE_TEST = 9999;</code>
    */
   public static final int SESSION_TYPE_TEST_VALUE = 9999;
+
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -94,53 +101,51 @@ public enum SessionType implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static SessionType forNumber(int value) {
     switch (value) {
-      case 0:
-        return SESSION_TYPE_UNSET;
-      case 1:
-        return SESSION_TYPE_TABLE;
-      case 2:
-        return SESSION_TYPE_AUTHORIZED_VIEW;
-      case 3:
-        return SESSION_TYPE_MATERIALIZED_VIEW;
-      case 9999:
-        return SESSION_TYPE_TEST;
-      default:
-        return null;
+      case 0: return SESSION_TYPE_UNSET;
+      case 1: return SESSION_TYPE_TABLE;
+      case 2: return SESSION_TYPE_AUTHORIZED_VIEW;
+      case 3: return SESSION_TYPE_MATERIALIZED_VIEW;
+      case 9999: return SESSION_TYPE_TEST;
+      default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<SessionType> internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<SessionType>
+      internalGetValueMap() {
     return internalValueMap;
   }
+  private static final com.google.protobuf.Internal.EnumLiteMap<
+      SessionType> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<SessionType>() {
+          public SessionType findValueByNumber(int number) {
+            return SessionType.forNumber(number);
+          }
+        };
 
-  private static final com.google.protobuf.Internal.EnumLiteMap<SessionType> internalValueMap =
-      new com.google.protobuf.Internal.EnumLiteMap<SessionType>() {
-        public SessionType findValueByNumber(int number) {
-          return SessionType.forNumber(number);
-        }
-      };
-
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-
-  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+  public final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptorForType() {
     return getDescriptor();
   }
-
-  public static com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptor() {
     return com.google.bigtable.v2.SessionProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final SessionType[] VALUES = values();
 
-  public static SessionType valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static SessionType valueOf(
+      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException(
+        "EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -156,3 +161,4 @@ public enum SessionType implements com.google.protobuf.ProtocolMessageEnum {
 
   // @@protoc_insertion_point(enum_scope:google.bigtable.v2.SessionType)
 }
+

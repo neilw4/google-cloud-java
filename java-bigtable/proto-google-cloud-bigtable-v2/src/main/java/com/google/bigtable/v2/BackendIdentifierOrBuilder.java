@@ -6,62 +6,49 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface BackendIdentifierOrBuilder
-    extends
+public interface BackendIdentifierOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.BackendIdentifier)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the Google Frontend which serviced this request.
    * Only set when not using DirectAccess.
    * </pre>
    *
    * <code>int64 google_frontend_id = 1;</code>
-   *
    * @return The googleFrontendId.
    */
   long getGoogleFrontendId();
 
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the application frontend which serviced this
    * request.
    * </pre>
    *
    * <code>int64 application_frontend_id = 2;</code>
-   *
    * @return The applicationFrontendId.
    */
   long getApplicationFrontendId();
 
   /**
-   *
-   *
    * <pre>
    * The zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The applicationFrontendZone.
    */
   java.lang.String getApplicationFrontendZone();
-
   /**
-   *
-   *
    * <pre>
    * The zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The bytes for applicationFrontendZone.
    */
-  com.google.protobuf.ByteString getApplicationFrontendZoneBytes();
+  com.google.protobuf.ByteString
+      getApplicationFrontendZoneBytes();
 }

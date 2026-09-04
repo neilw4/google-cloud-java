@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,87 +13,69 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.OpenSessionResponse}
  */
 @com.google.protobuf.Generated
-public final class OpenSessionResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class OpenSessionResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.OpenSessionResponse)
     OpenSessionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "OpenSessionResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "OpenSessionResponse");
   }
-
   // Use OpenSessionResponse.newBuilder() to construct.
   private OpenSessionResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private OpenSessionResponse() {
     payload_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenSessionResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenSessionResponse_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.OpenSessionResponse.class,
-            com.google.bigtable.v2.OpenSessionResponse.Builder.class);
+            com.google.bigtable.v2.OpenSessionResponse.class, com.google.bigtable.v2.OpenSessionResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int BACKEND_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.BackendIdentifier backend_;
-
   /**
-   *
-   *
    * <pre>
    * Information on the backend(s) that are hosting this session.
    * </pre>
    *
    * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
-   *
    * @return Whether the backend field is set.
    */
   @java.lang.Override
   public boolean hasBackend() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Information on the backend(s) that are hosting this session.
    * </pre>
    *
    * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
-   *
    * @return The backend.
    */
   @java.lang.Override
   public com.google.bigtable.v2.BackendIdentifier getBackend() {
-    return backend_ == null
-        ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance()
-        : backend_;
+    return backend_ == null ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance() : backend_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Information on the backend(s) that are hosting this session.
    * </pre>
@@ -104,24 +84,18 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
    */
   @java.lang.Override
   public com.google.bigtable.v2.BackendIdentifierOrBuilder getBackendOrBuilder() {
-    return backend_ == null
-        ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance()
-        : backend_;
+    return backend_ == null ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance() : backend_;
   }
 
   public static final int PAYLOAD_FIELD_NUMBER = 1;
   private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * Can be Open{Table,AuthorizedView,MaterializedView}Response,
    * (or in post-V1, PrepareSqlQueryResponse)
    * </pre>
    *
    * <code>bytes payload = 1;</code>
-   *
    * @return The payload.
    */
   @java.lang.Override
@@ -130,7 +104,6 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -142,7 +115,8 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!payload_.isEmpty()) {
       output.writeBytes(1, payload_);
     }
@@ -159,10 +133,12 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
 
     size = 0;
     if (!payload_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(1, payload_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getBackend());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getBackend());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -172,19 +148,20 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.OpenSessionResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.OpenSessionResponse other =
-        (com.google.bigtable.v2.OpenSessionResponse) obj;
+    com.google.bigtable.v2.OpenSessionResponse other = (com.google.bigtable.v2.OpenSessionResponse) obj;
 
     if (hasBackend() != other.hasBackend()) return false;
     if (hasBackend()) {
-      if (!getBackend().equals(other.getBackend())) return false;
+      if (!getBackend()
+          .equals(other.getBackend())) return false;
     }
-    if (!getPayload().equals(other.getPayload())) return false;
+    if (!getPayload()
+        .equals(other.getPayload())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,128 +184,120 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
     return hash;
   }
 
-  public static com.google.bigtable.v2.OpenSessionResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.OpenSessionResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.OpenSessionResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.OpenSessionResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.OpenSessionResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.OpenSessionResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.OpenSessionResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.OpenSessionResponse)
       com.google.bigtable.v2.OpenSessionResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenSessionResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenSessionResponse_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.OpenSessionResponse.class,
-              com.google.bigtable.v2.OpenSessionResponse.Builder.class);
+              com.google.bigtable.v2.OpenSessionResponse.class, com.google.bigtable.v2.OpenSessionResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.OpenSessionResponse.newBuilder()
@@ -336,17 +305,17 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetBackendFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -361,9 +330,9 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenSessionResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionResponse_descriptor;
     }
 
     @java.lang.Override
@@ -382,11 +351,8 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
 
     @java.lang.Override
     public com.google.bigtable.v2.OpenSessionResponse buildPartial() {
-      com.google.bigtable.v2.OpenSessionResponse result =
-          new com.google.bigtable.v2.OpenSessionResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.OpenSessionResponse result = new com.google.bigtable.v2.OpenSessionResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -395,7 +361,9 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.backend_ = backendBuilder_ == null ? backend_ : backendBuilder_.build();
+        result.backend_ = backendBuilder_ == null
+            ? backend_
+            : backendBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
@@ -407,7 +375,7 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.OpenSessionResponse) {
-        return mergeFrom((com.google.bigtable.v2.OpenSessionResponse) other);
+        return mergeFrom((com.google.bigtable.v2.OpenSessionResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -448,25 +416,24 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                payload_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(internalGetBackendFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 18
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              payload_ = input.readBytes();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetBackendFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -476,55 +443,38 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.bigtable.v2.BackendIdentifier backend_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.BackendIdentifier,
-            com.google.bigtable.v2.BackendIdentifier.Builder,
-            com.google.bigtable.v2.BackendIdentifierOrBuilder>
-        backendBuilder_;
-
+        com.google.bigtable.v2.BackendIdentifier, com.google.bigtable.v2.BackendIdentifier.Builder, com.google.bigtable.v2.BackendIdentifierOrBuilder> backendBuilder_;
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
      *
      * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
-     *
      * @return Whether the backend field is set.
      */
     public boolean hasBackend() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
      *
      * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
-     *
      * @return The backend.
      */
     public com.google.bigtable.v2.BackendIdentifier getBackend() {
       if (backendBuilder_ == null) {
-        return backend_ == null
-            ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance()
-            : backend_;
+        return backend_ == null ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance() : backend_;
       } else {
         return backendBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
@@ -544,17 +494,15 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
      *
      * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
      */
-    public Builder setBackend(com.google.bigtable.v2.BackendIdentifier.Builder builderForValue) {
+    public Builder setBackend(
+        com.google.bigtable.v2.BackendIdentifier.Builder builderForValue) {
       if (backendBuilder_ == null) {
         backend_ = builderForValue.build();
       } else {
@@ -564,10 +512,7 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
@@ -576,9 +521,9 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
      */
     public Builder mergeBackend(com.google.bigtable.v2.BackendIdentifier value) {
       if (backendBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && backend_ != null
-            && backend_ != com.google.bigtable.v2.BackendIdentifier.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          backend_ != null &&
+          backend_ != com.google.bigtable.v2.BackendIdentifier.getDefaultInstance()) {
           getBackendBuilder().mergeFrom(value);
         } else {
           backend_ = value;
@@ -592,10 +537,7 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
@@ -612,10 +554,7 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
@@ -627,10 +566,7 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       onChanged();
       return internalGetBackendFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
@@ -641,15 +577,11 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
       if (backendBuilder_ != null) {
         return backendBuilder_.getMessageOrBuilder();
       } else {
-        return backend_ == null
-            ? com.google.bigtable.v2.BackendIdentifier.getDefaultInstance()
-            : backend_;
+        return backend_ == null ?
+            com.google.bigtable.v2.BackendIdentifier.getDefaultInstance() : backend_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Information on the backend(s) that are hosting this session.
      * </pre>
@@ -657,74 +589,57 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
      * <code>.google.bigtable.v2.BackendIdentifier backend = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.BackendIdentifier,
-            com.google.bigtable.v2.BackendIdentifier.Builder,
-            com.google.bigtable.v2.BackendIdentifierOrBuilder>
+        com.google.bigtable.v2.BackendIdentifier, com.google.bigtable.v2.BackendIdentifier.Builder, com.google.bigtable.v2.BackendIdentifierOrBuilder> 
         internalGetBackendFieldBuilder() {
       if (backendBuilder_ == null) {
-        backendBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.BackendIdentifier,
-                com.google.bigtable.v2.BackendIdentifier.Builder,
-                com.google.bigtable.v2.BackendIdentifierOrBuilder>(
-                getBackend(), getParentForChildren(), isClean());
+        backendBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.BackendIdentifier, com.google.bigtable.v2.BackendIdentifier.Builder, com.google.bigtable.v2.BackendIdentifierOrBuilder>(
+                getBackend(),
+                getParentForChildren(),
+                isClean());
         backend_ = null;
       }
       return backendBuilder_;
     }
 
     private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * Can be Open{Table,AuthorizedView,MaterializedView}Response,
      * (or in post-V1, PrepareSqlQueryResponse)
      * </pre>
      *
      * <code>bytes payload = 1;</code>
-     *
      * @return The payload.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getPayload() {
       return payload_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Can be Open{Table,AuthorizedView,MaterializedView}Response,
      * (or in post-V1, PrepareSqlQueryResponse)
      * </pre>
      *
      * <code>bytes payload = 1;</code>
-     *
      * @param value The payload to set.
      * @return This builder for chaining.
      */
     public Builder setPayload(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       payload_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Can be Open{Table,AuthorizedView,MaterializedView}Response,
      * (or in post-V1, PrepareSqlQueryResponse)
      * </pre>
      *
      * <code>bytes payload = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPayload() {
@@ -739,7 +654,6 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.OpenSessionResponse)
   private static final com.google.bigtable.v2.OpenSessionResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.OpenSessionResponse();
   }
@@ -748,27 +662,27 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OpenSessionResponse> PARSER =
-      new com.google.protobuf.AbstractParser<OpenSessionResponse>() {
-        @java.lang.Override
-        public OpenSessionResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<OpenSessionResponse>
+      PARSER = new com.google.protobuf.AbstractParser<OpenSessionResponse>() {
+    @java.lang.Override
+    public OpenSessionResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<OpenSessionResponse> parser() {
     return PARSER;
@@ -783,4 +697,6 @@ public final class OpenSessionResponse extends com.google.protobuf.GeneratedMess
   public com.google.bigtable.v2.OpenSessionResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

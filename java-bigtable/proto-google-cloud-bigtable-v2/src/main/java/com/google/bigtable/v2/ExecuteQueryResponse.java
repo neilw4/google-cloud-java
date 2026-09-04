@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Response message for Bigtable.ExecuteQuery
  * </pre>
@@ -15,63 +13,54 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ExecuteQueryResponse}
  */
 @com.google.protobuf.Generated
-public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ExecuteQueryResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ExecuteQueryResponse)
     ExecuteQueryResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ExecuteQueryResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ExecuteQueryResponse");
   }
-
   // Use ExecuteQueryResponse.newBuilder() to construct.
   private ExecuteQueryResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
+  private ExecuteQueryResponse() {
+  }
 
-  private ExecuteQueryResponse() {}
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ExecuteQueryResponse.class,
-            com.google.bigtable.v2.ExecuteQueryResponse.Builder.class);
+            com.google.bigtable.v2.ExecuteQueryResponse.class, com.google.bigtable.v2.ExecuteQueryResponse.Builder.class);
   }
 
   private int bitField0_;
   private int responseCase_ = 0;
-
   @SuppressWarnings("serial")
   private java.lang.Object response_;
-
   public enum ResponseCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     METADATA(1),
     RESULTS(2),
     RESPONSE_NOT_SET(0);
     private final int value;
-
     private ResponseCase(int value) {
       this.value = value;
     }
-
     /**
      * @param value The number of the enum to look for.
      * @return The enum associated with the given number.
@@ -84,68 +73,54 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
 
     public static ResponseCase forNumber(int value) {
       switch (value) {
-        case 1:
-          return METADATA;
-        case 2:
-          return RESULTS;
-        case 0:
-          return RESPONSE_NOT_SET;
-        default:
-          return null;
+        case 1: return METADATA;
+        case 2: return RESULTS;
+        case 0: return RESPONSE_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public ResponseCase getResponseCase() {
-    return ResponseCase.forNumber(responseCase_);
+  public ResponseCase
+  getResponseCase() {
+    return ResponseCase.forNumber(
+        responseCase_);
   }
 
   public static final int METADATA_FIELD_NUMBER = 1;
-
   /**
-   *
-   *
    * <pre>
    * Structure of rows in this response stream. The first (and only the first)
    * response streamed from the server will be of this type.
    * </pre>
    *
    * <code>.google.bigtable.v2.ResultSetMetadata metadata = 1;</code>
-   *
    * @return Whether the metadata field is set.
    */
   @java.lang.Override
   public boolean hasMetadata() {
     return responseCase_ == 1;
   }
-
   /**
-   *
-   *
    * <pre>
    * Structure of rows in this response stream. The first (and only the first)
    * response streamed from the server will be of this type.
    * </pre>
    *
    * <code>.google.bigtable.v2.ResultSetMetadata metadata = 1;</code>
-   *
    * @return The metadata.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ResultSetMetadata getMetadata() {
     if (responseCase_ == 1) {
-      return (com.google.bigtable.v2.ResultSetMetadata) response_;
+       return (com.google.bigtable.v2.ResultSetMetadata) response_;
     }
     return com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * Structure of rows in this response stream. The first (and only the first)
    * response streamed from the server will be of this type.
@@ -156,16 +131,13 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public com.google.bigtable.v2.ResultSetMetadataOrBuilder getMetadataOrBuilder() {
     if (responseCase_ == 1) {
-      return (com.google.bigtable.v2.ResultSetMetadata) response_;
+       return (com.google.bigtable.v2.ResultSetMetadata) response_;
     }
     return com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance();
   }
 
   public static final int RESULTS_FIELD_NUMBER = 2;
-
   /**
-   *
-   *
    * <pre>
    * A partial result set with row data potentially including additional
    * instructions on how recent past and future partial responses should be
@@ -173,17 +145,13 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.PartialResultSet results = 2;</code>
-   *
    * @return Whether the results field is set.
    */
   @java.lang.Override
   public boolean hasResults() {
     return responseCase_ == 2;
   }
-
   /**
-   *
-   *
    * <pre>
    * A partial result set with row data potentially including additional
    * instructions on how recent past and future partial responses should be
@@ -191,20 +159,16 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.PartialResultSet results = 2;</code>
-   *
    * @return The results.
    */
   @java.lang.Override
   public com.google.bigtable.v2.PartialResultSet getResults() {
     if (responseCase_ == 2) {
-      return (com.google.bigtable.v2.PartialResultSet) response_;
+       return (com.google.bigtable.v2.PartialResultSet) response_;
     }
     return com.google.bigtable.v2.PartialResultSet.getDefaultInstance();
   }
-
   /**
-   *
-   *
    * <pre>
    * A partial result set with row data potentially including additional
    * instructions on how recent past and future partial responses should be
@@ -216,17 +180,14 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public com.google.bigtable.v2.PartialResultSetOrBuilder getResultsOrBuilder() {
     if (responseCase_ == 2) {
-      return (com.google.bigtable.v2.PartialResultSet) response_;
+       return (com.google.bigtable.v2.PartialResultSet) response_;
     }
     return com.google.bigtable.v2.PartialResultSet.getDefaultInstance();
   }
 
   public static final int REQUEST_STATS_FIELD_NUMBER = 3;
   private com.google.bigtable.v2.RequestStats requestStats_;
-
   /**
-   *
-   *
    * <pre>
    * Return query performance statistics based on the requested
    * `request_stats_view` and the query itself. The field is only populated in
@@ -234,17 +195,13 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.RequestStats request_stats = 3;</code>
-   *
    * @return Whether the requestStats field is set.
    */
   @java.lang.Override
   public boolean hasRequestStats() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Return query performance statistics based on the requested
    * `request_stats_view` and the query itself. The field is only populated in
@@ -252,19 +209,13 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
    * </pre>
    *
    * <code>.google.bigtable.v2.RequestStats request_stats = 3;</code>
-   *
    * @return The requestStats.
    */
   @java.lang.Override
   public com.google.bigtable.v2.RequestStats getRequestStats() {
-    return requestStats_ == null
-        ? com.google.bigtable.v2.RequestStats.getDefaultInstance()
-        : requestStats_;
+    return requestStats_ == null ? com.google.bigtable.v2.RequestStats.getDefaultInstance() : requestStats_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Return query performance statistics based on the requested
    * `request_stats_view` and the query itself. The field is only populated in
@@ -275,13 +226,10 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
    */
   @java.lang.Override
   public com.google.bigtable.v2.RequestStatsOrBuilder getRequestStatsOrBuilder() {
-    return requestStats_ == null
-        ? com.google.bigtable.v2.RequestStats.getDefaultInstance()
-        : requestStats_;
+    return requestStats_ == null ? com.google.bigtable.v2.RequestStats.getDefaultInstance() : requestStats_;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -293,7 +241,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (responseCase_ == 1) {
       output.writeMessage(1, (com.google.bigtable.v2.ResultSetMetadata) response_);
     }
@@ -313,17 +262,16 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
 
     size = 0;
     if (responseCase_ == 1) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              1, (com.google.bigtable.v2.ResultSetMetadata) response_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.google.bigtable.v2.ResultSetMetadata) response_);
     }
     if (responseCase_ == 2) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              2, (com.google.bigtable.v2.PartialResultSet) response_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.bigtable.v2.PartialResultSet) response_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRequestStats());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getRequestStats());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -333,25 +281,27 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ExecuteQueryResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.ExecuteQueryResponse other =
-        (com.google.bigtable.v2.ExecuteQueryResponse) obj;
+    com.google.bigtable.v2.ExecuteQueryResponse other = (com.google.bigtable.v2.ExecuteQueryResponse) obj;
 
     if (hasRequestStats() != other.hasRequestStats()) return false;
     if (hasRequestStats()) {
-      if (!getRequestStats().equals(other.getRequestStats())) return false;
+      if (!getRequestStats()
+          .equals(other.getRequestStats())) return false;
     }
     if (!getResponseCase().equals(other.getResponseCase())) return false;
     switch (responseCase_) {
       case 1:
-        if (!getMetadata().equals(other.getMetadata())) return false;
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
         break;
       case 2:
-        if (!getResults().equals(other.getResults())) return false;
+        if (!getResults()
+            .equals(other.getResults())) return false;
         break;
       case 0:
       default:
@@ -388,128 +338,120 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     return hash;
   }
 
-  public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.ExecuteQueryResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ExecuteQueryResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.ExecuteQueryResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ExecuteQueryResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ExecuteQueryResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Response message for Bigtable.ExecuteQuery
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ExecuteQueryResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ExecuteQueryResponse)
       com.google.bigtable.v2.ExecuteQueryResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ExecuteQueryResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ExecuteQueryResponse.class,
-              com.google.bigtable.v2.ExecuteQueryResponse.Builder.class);
+              com.google.bigtable.v2.ExecuteQueryResponse.class, com.google.bigtable.v2.ExecuteQueryResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ExecuteQueryResponse.newBuilder()
@@ -517,17 +459,17 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetRequestStatsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -549,9 +491,9 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_ExecuteQueryResponse_descriptor;
     }
 
     @java.lang.Override
@@ -570,11 +512,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
 
     @java.lang.Override
     public com.google.bigtable.v2.ExecuteQueryResponse buildPartial() {
-      com.google.bigtable.v2.ExecuteQueryResponse result =
-          new com.google.bigtable.v2.ExecuteQueryResponse(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.ExecuteQueryResponse result = new com.google.bigtable.v2.ExecuteQueryResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -584,8 +523,9 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.requestStats_ =
-            requestStatsBuilder_ == null ? requestStats_ : requestStatsBuilder_.build();
+        result.requestStats_ = requestStatsBuilder_ == null
+            ? requestStats_
+            : requestStatsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -594,10 +534,12 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     private void buildPartialOneofs(com.google.bigtable.v2.ExecuteQueryResponse result) {
       result.responseCase_ = responseCase_;
       result.response_ = this.response_;
-      if (responseCase_ == 1 && metadataBuilder_ != null) {
+      if (responseCase_ == 1 &&
+          metadataBuilder_ != null) {
         result.response_ = metadataBuilder_.build();
       }
-      if (responseCase_ == 2 && resultsBuilder_ != null) {
+      if (responseCase_ == 2 &&
+          resultsBuilder_ != null) {
         result.response_ = resultsBuilder_.build();
       }
     }
@@ -605,7 +547,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ExecuteQueryResponse) {
-        return mergeFrom((com.google.bigtable.v2.ExecuteQueryResponse) other);
+        return mergeFrom((com.google.bigtable.v2.ExecuteQueryResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -618,20 +560,17 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
         mergeRequestStats(other.getRequestStats());
       }
       switch (other.getResponseCase()) {
-        case METADATA:
-          {
-            mergeMetadata(other.getMetadata());
-            break;
-          }
-        case RESULTS:
-          {
-            mergeResults(other.getResults());
-            break;
-          }
-        case RESPONSE_NOT_SET:
-          {
-            break;
-          }
+        case METADATA: {
+          mergeMetadata(other.getMetadata());
+          break;
+        }
+        case RESULTS: {
+          mergeResults(other.getResults());
+          break;
+        }
+        case RESPONSE_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -659,33 +598,33 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(
-                    internalGetMetadataFieldBuilder().getBuilder(), extensionRegistry);
-                responseCase_ = 1;
-                break;
-              } // case 10
-            case 18:
-              {
-                input.readMessage(internalGetResultsFieldBuilder().getBuilder(), extensionRegistry);
-                responseCase_ = 2;
-                break;
-              } // case 18
-            case 26:
-              {
-                input.readMessage(
-                    internalGetRequestStatsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetResultsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetRequestStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -695,12 +634,12 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       } // finally
       return this;
     }
-
     private int responseCase_ = 0;
     private java.lang.Object response_;
-
-    public ResponseCase getResponseCase() {
-      return ResponseCase.forNumber(responseCase_);
+    public ResponseCase
+        getResponseCase() {
+      return ResponseCase.forNumber(
+          responseCase_);
     }
 
     public Builder clearResponse() {
@@ -713,38 +652,27 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ResultSetMetadata,
-            com.google.bigtable.v2.ResultSetMetadata.Builder,
-            com.google.bigtable.v2.ResultSetMetadataOrBuilder>
-        metadataBuilder_;
-
+        com.google.bigtable.v2.ResultSetMetadata, com.google.bigtable.v2.ResultSetMetadata.Builder, com.google.bigtable.v2.ResultSetMetadataOrBuilder> metadataBuilder_;
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
      * </pre>
      *
      * <code>.google.bigtable.v2.ResultSetMetadata metadata = 1;</code>
-     *
      * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
       return responseCase_ == 1;
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
      * </pre>
      *
      * <code>.google.bigtable.v2.ResultSetMetadata metadata = 1;</code>
-     *
      * @return The metadata.
      */
     @java.lang.Override
@@ -761,10 +689,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -785,10 +710,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       responseCase_ = 1;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -796,7 +718,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      *
      * <code>.google.bigtable.v2.ResultSetMetadata metadata = 1;</code>
      */
-    public Builder setMetadata(com.google.bigtable.v2.ResultSetMetadata.Builder builderForValue) {
+    public Builder setMetadata(
+        com.google.bigtable.v2.ResultSetMetadata.Builder builderForValue) {
       if (metadataBuilder_ == null) {
         response_ = builderForValue.build();
         onChanged();
@@ -806,10 +729,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       responseCase_ = 1;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -819,13 +739,10 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      */
     public Builder mergeMetadata(com.google.bigtable.v2.ResultSetMetadata value) {
       if (metadataBuilder_ == null) {
-        if (responseCase_ == 1
-            && response_ != com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance()) {
-          response_ =
-              com.google.bigtable.v2.ResultSetMetadata.newBuilder(
-                      (com.google.bigtable.v2.ResultSetMetadata) response_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (responseCase_ == 1 &&
+            response_ != com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance()) {
+          response_ = com.google.bigtable.v2.ResultSetMetadata.newBuilder((com.google.bigtable.v2.ResultSetMetadata) response_)
+              .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
         }
@@ -840,10 +757,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       responseCase_ = 1;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -867,10 +781,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -881,10 +792,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.ResultSetMetadata.Builder getMetadataBuilder() {
       return internalGetMetadataFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -903,10 +811,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Structure of rows in this response stream. The first (and only the first)
      * response streamed from the server will be of this type.
@@ -915,19 +820,14 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * <code>.google.bigtable.v2.ResultSetMetadata metadata = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ResultSetMetadata,
-            com.google.bigtable.v2.ResultSetMetadata.Builder,
-            com.google.bigtable.v2.ResultSetMetadataOrBuilder>
+        com.google.bigtable.v2.ResultSetMetadata, com.google.bigtable.v2.ResultSetMetadata.Builder, com.google.bigtable.v2.ResultSetMetadataOrBuilder> 
         internalGetMetadataFieldBuilder() {
       if (metadataBuilder_ == null) {
         if (!(responseCase_ == 1)) {
           response_ = com.google.bigtable.v2.ResultSetMetadata.getDefaultInstance();
         }
-        metadataBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ResultSetMetadata,
-                com.google.bigtable.v2.ResultSetMetadata.Builder,
-                com.google.bigtable.v2.ResultSetMetadataOrBuilder>(
+        metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ResultSetMetadata, com.google.bigtable.v2.ResultSetMetadata.Builder, com.google.bigtable.v2.ResultSetMetadataOrBuilder>(
                 (com.google.bigtable.v2.ResultSetMetadata) response_,
                 getParentForChildren(),
                 isClean());
@@ -939,14 +839,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     }
 
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.PartialResultSet,
-            com.google.bigtable.v2.PartialResultSet.Builder,
-            com.google.bigtable.v2.PartialResultSetOrBuilder>
-        resultsBuilder_;
-
+        com.google.bigtable.v2.PartialResultSet, com.google.bigtable.v2.PartialResultSet.Builder, com.google.bigtable.v2.PartialResultSetOrBuilder> resultsBuilder_;
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -954,17 +848,13 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.PartialResultSet results = 2;</code>
-     *
      * @return Whether the results field is set.
      */
     @java.lang.Override
     public boolean hasResults() {
       return responseCase_ == 2;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -972,7 +862,6 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.PartialResultSet results = 2;</code>
-     *
      * @return The results.
      */
     @java.lang.Override
@@ -989,10 +878,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.PartialResultSet.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1014,10 +900,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       responseCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1026,7 +909,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      *
      * <code>.google.bigtable.v2.PartialResultSet results = 2;</code>
      */
-    public Builder setResults(com.google.bigtable.v2.PartialResultSet.Builder builderForValue) {
+    public Builder setResults(
+        com.google.bigtable.v2.PartialResultSet.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         response_ = builderForValue.build();
         onChanged();
@@ -1036,10 +920,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       responseCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1050,13 +931,10 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      */
     public Builder mergeResults(com.google.bigtable.v2.PartialResultSet value) {
       if (resultsBuilder_ == null) {
-        if (responseCase_ == 2
-            && response_ != com.google.bigtable.v2.PartialResultSet.getDefaultInstance()) {
-          response_ =
-              com.google.bigtable.v2.PartialResultSet.newBuilder(
-                      (com.google.bigtable.v2.PartialResultSet) response_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (responseCase_ == 2 &&
+            response_ != com.google.bigtable.v2.PartialResultSet.getDefaultInstance()) {
+          response_ = com.google.bigtable.v2.PartialResultSet.newBuilder((com.google.bigtable.v2.PartialResultSet) response_)
+              .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
         }
@@ -1071,10 +949,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       responseCase_ = 2;
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1099,10 +974,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1114,10 +986,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     public com.google.bigtable.v2.PartialResultSet.Builder getResultsBuilder() {
       return internalGetResultsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1137,10 +1006,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
         return com.google.bigtable.v2.PartialResultSet.getDefaultInstance();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * A partial result set with row data potentially including additional
      * instructions on how recent past and future partial responses should be
@@ -1150,19 +1016,14 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * <code>.google.bigtable.v2.PartialResultSet results = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.PartialResultSet,
-            com.google.bigtable.v2.PartialResultSet.Builder,
-            com.google.bigtable.v2.PartialResultSetOrBuilder>
+        com.google.bigtable.v2.PartialResultSet, com.google.bigtable.v2.PartialResultSet.Builder, com.google.bigtable.v2.PartialResultSetOrBuilder> 
         internalGetResultsFieldBuilder() {
       if (resultsBuilder_ == null) {
         if (!(responseCase_ == 2)) {
           response_ = com.google.bigtable.v2.PartialResultSet.getDefaultInstance();
         }
-        resultsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.PartialResultSet,
-                com.google.bigtable.v2.PartialResultSet.Builder,
-                com.google.bigtable.v2.PartialResultSetOrBuilder>(
+        resultsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.PartialResultSet, com.google.bigtable.v2.PartialResultSet.Builder, com.google.bigtable.v2.PartialResultSetOrBuilder>(
                 (com.google.bigtable.v2.PartialResultSet) response_,
                 getParentForChildren(),
                 isClean());
@@ -1175,14 +1036,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
 
     private com.google.bigtable.v2.RequestStats requestStats_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RequestStats,
-            com.google.bigtable.v2.RequestStats.Builder,
-            com.google.bigtable.v2.RequestStatsOrBuilder>
-        requestStatsBuilder_;
-
+        com.google.bigtable.v2.RequestStats, com.google.bigtable.v2.RequestStats.Builder, com.google.bigtable.v2.RequestStatsOrBuilder> requestStatsBuilder_;
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1190,16 +1045,12 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.RequestStats request_stats = 3;</code>
-     *
      * @return Whether the requestStats field is set.
      */
     public boolean hasRequestStats() {
       return ((bitField0_ & 0x00000004) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1207,22 +1058,16 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * </pre>
      *
      * <code>.google.bigtable.v2.RequestStats request_stats = 3;</code>
-     *
      * @return The requestStats.
      */
     public com.google.bigtable.v2.RequestStats getRequestStats() {
       if (requestStatsBuilder_ == null) {
-        return requestStats_ == null
-            ? com.google.bigtable.v2.RequestStats.getDefaultInstance()
-            : requestStats_;
+        return requestStats_ == null ? com.google.bigtable.v2.RequestStats.getDefaultInstance() : requestStats_;
       } else {
         return requestStatsBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1244,10 +1089,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1256,7 +1098,8 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      *
      * <code>.google.bigtable.v2.RequestStats request_stats = 3;</code>
      */
-    public Builder setRequestStats(com.google.bigtable.v2.RequestStats.Builder builderForValue) {
+    public Builder setRequestStats(
+        com.google.bigtable.v2.RequestStats.Builder builderForValue) {
       if (requestStatsBuilder_ == null) {
         requestStats_ = builderForValue.build();
       } else {
@@ -1266,10 +1109,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1280,9 +1120,9 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      */
     public Builder mergeRequestStats(com.google.bigtable.v2.RequestStats value) {
       if (requestStatsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)
-            && requestStats_ != null
-            && requestStats_ != com.google.bigtable.v2.RequestStats.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          requestStats_ != null &&
+          requestStats_ != com.google.bigtable.v2.RequestStats.getDefaultInstance()) {
           getRequestStatsBuilder().mergeFrom(value);
         } else {
           requestStats_ = value;
@@ -1296,10 +1136,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1318,10 +1155,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1335,10 +1169,7 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       onChanged();
       return internalGetRequestStatsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1351,15 +1182,11 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
       if (requestStatsBuilder_ != null) {
         return requestStatsBuilder_.getMessageOrBuilder();
       } else {
-        return requestStats_ == null
-            ? com.google.bigtable.v2.RequestStats.getDefaultInstance()
-            : requestStats_;
+        return requestStats_ == null ?
+            com.google.bigtable.v2.RequestStats.getDefaultInstance() : requestStats_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Return query performance statistics based on the requested
      * `request_stats_view` and the query itself. The field is only populated in
@@ -1369,17 +1196,14 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
      * <code>.google.bigtable.v2.RequestStats request_stats = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.RequestStats,
-            com.google.bigtable.v2.RequestStats.Builder,
-            com.google.bigtable.v2.RequestStatsOrBuilder>
+        com.google.bigtable.v2.RequestStats, com.google.bigtable.v2.RequestStats.Builder, com.google.bigtable.v2.RequestStatsOrBuilder> 
         internalGetRequestStatsFieldBuilder() {
       if (requestStatsBuilder_ == null) {
-        requestStatsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.RequestStats,
-                com.google.bigtable.v2.RequestStats.Builder,
-                com.google.bigtable.v2.RequestStatsOrBuilder>(
-                getRequestStats(), getParentForChildren(), isClean());
+        requestStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.RequestStats, com.google.bigtable.v2.RequestStats.Builder, com.google.bigtable.v2.RequestStatsOrBuilder>(
+                getRequestStats(),
+                getParentForChildren(),
+                isClean());
         requestStats_ = null;
       }
       return requestStatsBuilder_;
@@ -1390,7 +1214,6 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ExecuteQueryResponse)
   private static final com.google.bigtable.v2.ExecuteQueryResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ExecuteQueryResponse();
   }
@@ -1399,27 +1222,27 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ExecuteQueryResponse> PARSER =
-      new com.google.protobuf.AbstractParser<ExecuteQueryResponse>() {
-        @java.lang.Override
-        public ExecuteQueryResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ExecuteQueryResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ExecuteQueryResponse>() {
+    @java.lang.Override
+    public ExecuteQueryResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ExecuteQueryResponse> parser() {
     return PARSER;
@@ -1434,4 +1257,6 @@ public final class ExecuteQueryResponse extends com.google.protobuf.GeneratedMes
   public com.google.bigtable.v2.ExecuteQueryResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

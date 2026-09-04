@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Internal usage only.
  * </pre>
@@ -15,54 +13,46 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.OpenSessionRequest}
  */
 @com.google.protobuf.Generated
-public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessage
-    implements
+public final class OpenSessionRequest extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.OpenSessionRequest)
     OpenSessionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "OpenSessionRequest");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "OpenSessionRequest");
   }
-
   // Use OpenSessionRequest.newBuilder() to construct.
   private OpenSessionRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private OpenSessionRequest() {
     routingCookie_ = com.google.protobuf.ByteString.EMPTY;
     payload_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenSessionRequest_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.SessionProto
-        .internal_static_google_bigtable_v2_OpenSessionRequest_fieldAccessorTable
+    return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.OpenSessionRequest.class,
-            com.google.bigtable.v2.OpenSessionRequest.Builder.class);
+            com.google.bigtable.v2.OpenSessionRequest.class, com.google.bigtable.v2.OpenSessionRequest.Builder.class);
   }
 
   private int bitField0_;
   public static final int PROTOCOL_VERSION_FIELD_NUMBER = 1;
   private long protocolVersion_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * A version indicator from the client stating its understanding of the
    * protocol. This is to disambiguate client behavior amidst changes in
@@ -71,7 +61,6 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
    * </pre>
    *
    * <code>int64 protocol_version = 1;</code>
-   *
    * @return The protocolVersion.
    */
   @java.lang.Override
@@ -81,42 +70,31 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
   public static final int FLAGS_FIELD_NUMBER = 2;
   private com.google.bigtable.v2.FeatureFlags flags_;
-
   /**
-   *
-   *
    * <pre>
    * Client settings, including a record of
    * </pre>
    *
    * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
-   *
    * @return Whether the flags field is set.
    */
   @java.lang.Override
   public boolean hasFlags() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Client settings, including a record of
    * </pre>
    *
    * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
-   *
    * @return The flags.
    */
   @java.lang.Override
   public com.google.bigtable.v2.FeatureFlags getFlags() {
     return flags_ == null ? com.google.bigtable.v2.FeatureFlags.getDefaultInstance() : flags_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Client settings, including a record of
    * </pre>
@@ -130,16 +108,12 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
   public static final int CONSECUTIVE_FAILED_CONNECTION_ATTEMPTS_FIELD_NUMBER = 3;
   private long consecutiveFailedConnectionAttempts_ = 0L;
-
   /**
-   *
-   *
    * <pre>
    * Used for serverside observability.
    * </pre>
    *
    * <code>int64 consecutive_failed_connection_attempts = 3;</code>
-   *
    * @return The consecutiveFailedConnectionAttempts.
    */
   @java.lang.Override
@@ -149,17 +123,13 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
   public static final int ROUTING_COOKIE_FIELD_NUMBER = 4;
   private com.google.protobuf.ByteString routingCookie_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * How the request should be routed (if presented as part of a GOAWAY
    * from a previous session). Post V1.
    * </pre>
    *
    * <code>bytes routing_cookie = 4;</code>
-   *
    * @return The routingCookie.
    */
   @java.lang.Override
@@ -169,17 +139,13 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
   public static final int PAYLOAD_FIELD_NUMBER = 5;
   private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
-
   /**
-   *
-   *
    * <pre>
    * Can be Open{Table,AuthorizedView,MaterializedView}Request,
    * (or in post-V1, PrepareSqlQueryRequest)
    * </pre>
    *
    * <code>bytes payload = 5;</code>
-   *
    * @return The payload.
    */
   @java.lang.Override
@@ -188,7 +154,6 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -200,7 +165,8 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (protocolVersion_ != 0L) {
       output.writeInt64(1, protocolVersion_);
     }
@@ -226,21 +192,24 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
     size = 0;
     if (protocolVersion_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, protocolVersion_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, protocolVersion_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getFlags());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getFlags());
     }
     if (consecutiveFailedConnectionAttempts_ != 0L) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeInt64Size(
-              3, consecutiveFailedConnectionAttempts_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, consecutiveFailedConnectionAttempts_);
     }
     if (!routingCookie_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(4, routingCookie_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(4, routingCookie_);
     }
     if (!payload_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream.computeBytesSize(5, payload_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(5, payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -250,23 +219,26 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.OpenSessionRequest)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.OpenSessionRequest other =
-        (com.google.bigtable.v2.OpenSessionRequest) obj;
+    com.google.bigtable.v2.OpenSessionRequest other = (com.google.bigtable.v2.OpenSessionRequest) obj;
 
-    if (getProtocolVersion() != other.getProtocolVersion()) return false;
+    if (getProtocolVersion()
+        != other.getProtocolVersion()) return false;
     if (hasFlags() != other.hasFlags()) return false;
     if (hasFlags()) {
-      if (!getFlags().equals(other.getFlags())) return false;
+      if (!getFlags()
+          .equals(other.getFlags())) return false;
     }
-    if (getConsecutiveFailedConnectionAttempts() != other.getConsecutiveFailedConnectionAttempts())
-      return false;
-    if (!getRoutingCookie().equals(other.getRoutingCookie())) return false;
-    if (!getPayload().equals(other.getPayload())) return false;
+    if (getConsecutiveFailedConnectionAttempts()
+        != other.getConsecutiveFailedConnectionAttempts()) return false;
+    if (!getRoutingCookie()
+        .equals(other.getRoutingCookie())) return false;
+    if (!getPayload()
+        .equals(other.getPayload())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -279,15 +251,15 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getProtocolVersion());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProtocolVersion());
     if (hasFlags()) {
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + getFlags().hashCode();
     }
     hash = (37 * hash) + CONSECUTIVE_FAILED_CONNECTION_ATTEMPTS_FIELD_NUMBER;
-    hash =
-        (53 * hash)
-            + com.google.protobuf.Internal.hashLong(getConsecutiveFailedConnectionAttempts());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getConsecutiveFailedConnectionAttempts());
     hash = (37 * hash) + ROUTING_COOKIE_FIELD_NUMBER;
     hash = (53 * hash) + getRoutingCookie().hashCode();
     hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
@@ -297,128 +269,120 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     return hash;
   }
 
-  public static com.google.bigtable.v2.OpenSessionRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.OpenSessionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.OpenSessionRequest parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.OpenSessionRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.OpenSessionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.OpenSessionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Internal usage only.
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.OpenSessionRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.OpenSessionRequest)
       com.google.bigtable.v2.OpenSessionRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenSessionRequest_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenSessionRequest_fieldAccessorTable
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.OpenSessionRequest.class,
-              com.google.bigtable.v2.OpenSessionRequest.Builder.class);
+              com.google.bigtable.v2.OpenSessionRequest.class, com.google.bigtable.v2.OpenSessionRequest.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.OpenSessionRequest.newBuilder()
@@ -426,17 +390,17 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetFlagsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -454,9 +418,9 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.SessionProto
-          .internal_static_google_bigtable_v2_OpenSessionRequest_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.SessionProto.internal_static_google_bigtable_v2_OpenSessionRequest_descriptor;
     }
 
     @java.lang.Override
@@ -475,11 +439,8 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
     @java.lang.Override
     public com.google.bigtable.v2.OpenSessionRequest buildPartial() {
-      com.google.bigtable.v2.OpenSessionRequest result =
-          new com.google.bigtable.v2.OpenSessionRequest(this);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      com.google.bigtable.v2.OpenSessionRequest result = new com.google.bigtable.v2.OpenSessionRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -491,7 +452,9 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.flags_ = flagsBuilder_ == null ? flags_ : flagsBuilder_.build();
+        result.flags_ = flagsBuilder_ == null
+            ? flags_
+            : flagsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -509,7 +472,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.OpenSessionRequest) {
-        return mergeFrom((com.google.bigtable.v2.OpenSessionRequest) other);
+        return mergeFrom((com.google.bigtable.v2.OpenSessionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -559,43 +522,39 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
             case 0:
               done = true;
               break;
-            case 8:
-              {
-                protocolVersion_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-            case 18:
-              {
-                input.readMessage(internalGetFlagsFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-            case 24:
-              {
-                consecutiveFailedConnectionAttempts_ = input.readInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-            case 34:
-              {
-                routingCookie_ = input.readBytes();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-            case 42:
-              {
-                payload_ = input.readBytes();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 8: {
+              protocolVersion_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  internalGetFlagsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              consecutiveFailedConnectionAttempts_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              routingCookie_ = input.readBytes();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              payload_ = input.readBytes();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -605,14 +564,10 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       } // finally
       return this;
     }
-
     private int bitField0_;
 
-    private long protocolVersion_;
-
+    private long protocolVersion_ ;
     /**
-     *
-     *
      * <pre>
      * A version indicator from the client stating its understanding of the
      * protocol. This is to disambiguate client behavior amidst changes in
@@ -621,17 +576,13 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
      * </pre>
      *
      * <code>int64 protocol_version = 1;</code>
-     *
      * @return The protocolVersion.
      */
     @java.lang.Override
     public long getProtocolVersion() {
       return protocolVersion_;
     }
-
     /**
-     *
-     *
      * <pre>
      * A version indicator from the client stating its understanding of the
      * protocol. This is to disambiguate client behavior amidst changes in
@@ -640,7 +591,6 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
      * </pre>
      *
      * <code>int64 protocol_version = 1;</code>
-     *
      * @param value The protocolVersion to set.
      * @return This builder for chaining.
      */
@@ -651,10 +601,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * A version indicator from the client stating its understanding of the
      * protocol. This is to disambiguate client behavior amidst changes in
@@ -663,7 +610,6 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
      * </pre>
      *
      * <code>int64 protocol_version = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearProtocolVersion() {
@@ -675,35 +621,24 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
     private com.google.bigtable.v2.FeatureFlags flags_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.FeatureFlags,
-            com.google.bigtable.v2.FeatureFlags.Builder,
-            com.google.bigtable.v2.FeatureFlagsOrBuilder>
-        flagsBuilder_;
-
+        com.google.bigtable.v2.FeatureFlags, com.google.bigtable.v2.FeatureFlags.Builder, com.google.bigtable.v2.FeatureFlagsOrBuilder> flagsBuilder_;
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
      *
      * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
-     *
      * @return Whether the flags field is set.
      */
     public boolean hasFlags() {
       return ((bitField0_ & 0x00000002) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
      *
      * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
-     *
      * @return The flags.
      */
     public com.google.bigtable.v2.FeatureFlags getFlags() {
@@ -713,10 +648,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
         return flagsBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
@@ -736,17 +668,15 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
      *
      * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
      */
-    public Builder setFlags(com.google.bigtable.v2.FeatureFlags.Builder builderForValue) {
+    public Builder setFlags(
+        com.google.bigtable.v2.FeatureFlags.Builder builderForValue) {
       if (flagsBuilder_ == null) {
         flags_ = builderForValue.build();
       } else {
@@ -756,10 +686,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
@@ -768,9 +695,9 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
      */
     public Builder mergeFlags(com.google.bigtable.v2.FeatureFlags value) {
       if (flagsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)
-            && flags_ != null
-            && flags_ != com.google.bigtable.v2.FeatureFlags.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          flags_ != null &&
+          flags_ != com.google.bigtable.v2.FeatureFlags.getDefaultInstance()) {
           getFlagsBuilder().mergeFrom(value);
         } else {
           flags_ = value;
@@ -784,10 +711,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
@@ -804,10 +728,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
@@ -819,10 +740,7 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       onChanged();
       return internalGetFlagsFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
@@ -833,13 +751,11 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       if (flagsBuilder_ != null) {
         return flagsBuilder_.getMessageOrBuilder();
       } else {
-        return flags_ == null ? com.google.bigtable.v2.FeatureFlags.getDefaultInstance() : flags_;
+        return flags_ == null ?
+            com.google.bigtable.v2.FeatureFlags.getDefaultInstance() : flags_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Client settings, including a record of
      * </pre>
@@ -847,49 +763,38 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
      * <code>.google.bigtable.v2.FeatureFlags flags = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.FeatureFlags,
-            com.google.bigtable.v2.FeatureFlags.Builder,
-            com.google.bigtable.v2.FeatureFlagsOrBuilder>
+        com.google.bigtable.v2.FeatureFlags, com.google.bigtable.v2.FeatureFlags.Builder, com.google.bigtable.v2.FeatureFlagsOrBuilder> 
         internalGetFlagsFieldBuilder() {
       if (flagsBuilder_ == null) {
-        flagsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.FeatureFlags,
-                com.google.bigtable.v2.FeatureFlags.Builder,
-                com.google.bigtable.v2.FeatureFlagsOrBuilder>(
-                getFlags(), getParentForChildren(), isClean());
+        flagsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.FeatureFlags, com.google.bigtable.v2.FeatureFlags.Builder, com.google.bigtable.v2.FeatureFlagsOrBuilder>(
+                getFlags(),
+                getParentForChildren(),
+                isClean());
         flags_ = null;
       }
       return flagsBuilder_;
     }
 
-    private long consecutiveFailedConnectionAttempts_;
-
+    private long consecutiveFailedConnectionAttempts_ ;
     /**
-     *
-     *
      * <pre>
      * Used for serverside observability.
      * </pre>
      *
      * <code>int64 consecutive_failed_connection_attempts = 3;</code>
-     *
      * @return The consecutiveFailedConnectionAttempts.
      */
     @java.lang.Override
     public long getConsecutiveFailedConnectionAttempts() {
       return consecutiveFailedConnectionAttempts_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used for serverside observability.
      * </pre>
      *
      * <code>int64 consecutive_failed_connection_attempts = 3;</code>
-     *
      * @param value The consecutiveFailedConnectionAttempts to set.
      * @return This builder for chaining.
      */
@@ -900,16 +805,12 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Used for serverside observability.
      * </pre>
      *
      * <code>int64 consecutive_failed_connection_attempts = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearConsecutiveFailedConnectionAttempts() {
@@ -920,57 +821,43 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     }
 
     private com.google.protobuf.ByteString routingCookie_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * How the request should be routed (if presented as part of a GOAWAY
      * from a previous session). Post V1.
      * </pre>
      *
      * <code>bytes routing_cookie = 4;</code>
-     *
      * @return The routingCookie.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getRoutingCookie() {
       return routingCookie_;
     }
-
     /**
-     *
-     *
      * <pre>
      * How the request should be routed (if presented as part of a GOAWAY
      * from a previous session). Post V1.
      * </pre>
      *
      * <code>bytes routing_cookie = 4;</code>
-     *
      * @param value The routingCookie to set.
      * @return This builder for chaining.
      */
     public Builder setRoutingCookie(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       routingCookie_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * How the request should be routed (if presented as part of a GOAWAY
      * from a previous session). Post V1.
      * </pre>
      *
      * <code>bytes routing_cookie = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRoutingCookie() {
@@ -981,57 +868,43 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     }
 
     private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
-
     /**
-     *
-     *
      * <pre>
      * Can be Open{Table,AuthorizedView,MaterializedView}Request,
      * (or in post-V1, PrepareSqlQueryRequest)
      * </pre>
      *
      * <code>bytes payload = 5;</code>
-     *
      * @return The payload.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getPayload() {
       return payload_;
     }
-
     /**
-     *
-     *
      * <pre>
      * Can be Open{Table,AuthorizedView,MaterializedView}Request,
      * (or in post-V1, PrepareSqlQueryRequest)
      * </pre>
      *
      * <code>bytes payload = 5;</code>
-     *
      * @param value The payload to set.
      * @return This builder for chaining.
      */
     public Builder setPayload(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+      if (value == null) { throw new NullPointerException(); }
       payload_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Can be Open{Table,AuthorizedView,MaterializedView}Request,
      * (or in post-V1, PrepareSqlQueryRequest)
      * </pre>
      *
      * <code>bytes payload = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearPayload() {
@@ -1046,7 +919,6 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.OpenSessionRequest)
   private static final com.google.bigtable.v2.OpenSessionRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.OpenSessionRequest();
   }
@@ -1055,27 +927,27 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OpenSessionRequest> PARSER =
-      new com.google.protobuf.AbstractParser<OpenSessionRequest>() {
-        @java.lang.Override
-        public OpenSessionRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<OpenSessionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<OpenSessionRequest>() {
+    @java.lang.Override
+    public OpenSessionRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<OpenSessionRequest> parser() {
     return PARSER;
@@ -1090,4 +962,6 @@ public final class OpenSessionRequest extends com.google.protobuf.GeneratedMessa
   public com.google.bigtable.v2.OpenSessionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

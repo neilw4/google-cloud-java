@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionRefreshConfigOrBuilder
-    extends
+public interface SessionRefreshConfigOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionRefreshConfig)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * An optimized Open request that the session may use on a retry when
    * establishing this session again. This can be sent from the AFE to
@@ -21,14 +18,10 @@ public interface SessionRefreshConfigOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
-   *
    * @return Whether the optimizedOpenRequest field is set.
    */
   boolean hasOptimizedOpenRequest();
-
   /**
-   *
-   *
    * <pre>
    * An optimized Open request that the session may use on a retry when
    * establishing this session again. This can be sent from the AFE to
@@ -36,14 +29,10 @@ public interface SessionRefreshConfigOrBuilder
    * </pre>
    *
    * <code>.google.bigtable.v2.OpenSessionRequest optimized_open_request = 1;</code>
-   *
    * @return The optimizedOpenRequest.
    */
   com.google.bigtable.v2.OpenSessionRequest getOptimizedOpenRequest();
-
   /**
-   *
-   *
    * <pre>
    * An optimized Open request that the session may use on a retry when
    * establishing this session again. This can be sent from the AFE to
@@ -55,19 +44,15 @@ public interface SessionRefreshConfigOrBuilder
   com.google.bigtable.v2.OpenSessionRequestOrBuilder getOptimizedOpenRequestOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
    */
-  java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata> getMetadataList();
-
+  java.util.List<com.google.bigtable.v2.SessionRefreshConfig.Metadata> 
+      getMetadataList();
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -75,10 +60,7 @@ public interface SessionRefreshConfigOrBuilder
    * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
    */
   com.google.bigtable.v2.SessionRefreshConfig.Metadata getMetadata(int index);
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
@@ -86,27 +68,22 @@ public interface SessionRefreshConfigOrBuilder
    * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
    */
   int getMetadataCount();
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder> 
       getMetadataOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * Any additional metadata to include when reconnecting.
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.SessionRefreshConfig.Metadata metadata = 2;</code>
    */
-  com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder getMetadataOrBuilder(int index);
+  com.google.bigtable.v2.SessionRefreshConfig.MetadataOrBuilder getMetadataOrBuilder(
+      int index);
 }

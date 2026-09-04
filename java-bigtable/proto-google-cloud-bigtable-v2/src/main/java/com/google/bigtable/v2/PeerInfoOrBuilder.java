@@ -6,94 +6,73 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface PeerInfoOrBuilder
-    extends
+public interface PeerInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.PeerInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the Google Frontend which serviced this request.
    * Only set when not using DirectAccess.
    * </pre>
    *
    * <code>int64 google_frontend_id = 1;</code>
-   *
    * @return The googleFrontendId.
    */
   long getGoogleFrontendId();
 
   /**
-   *
-   *
    * <pre>
    * An opaque identifier for the application frontend which serviced this
    * request.
    * </pre>
    *
    * <code>int64 application_frontend_id = 2;</code>
-   *
    * @return The applicationFrontendId.
    */
   long getApplicationFrontendId();
 
   /**
-   *
-   *
    * <pre>
    * The Cloud region of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_region = 6;</code>
-   *
    * @return The applicationFrontendRegion.
    */
   java.lang.String getApplicationFrontendRegion();
-
   /**
-   *
-   *
    * <pre>
    * The Cloud region of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_region = 6;</code>
-   *
    * @return The bytes for applicationFrontendRegion.
    */
-  com.google.protobuf.ByteString getApplicationFrontendRegionBytes();
+  com.google.protobuf.ByteString
+      getApplicationFrontendRegionBytes();
 
   /**
-   *
-   *
    * <pre>
    * The Cloud zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The applicationFrontendZone.
    */
   java.lang.String getApplicationFrontendZone();
-
   /**
-   *
-   *
    * <pre>
    * The Cloud zone of the application frontend that served this request.
    * </pre>
    *
    * <code>string application_frontend_zone = 3;</code>
-   *
    * @return The bytes for applicationFrontendZone.
    */
-  com.google.protobuf.ByteString getApplicationFrontendZoneBytes();
+  com.google.protobuf.ByteString
+      getApplicationFrontendZoneBytes();
 
   /**
-   *
-   *
    * <pre>
    * The subzone of the application frontend that served this request, e.g. an
    * identifier for where within a zone (within the reported region) the
@@ -101,14 +80,10 @@ public interface PeerInfoOrBuilder
    * </pre>
    *
    * <code>string application_frontend_subzone = 4;</code>
-   *
    * @return The applicationFrontendSubzone.
    */
   java.lang.String getApplicationFrontendSubzone();
-
   /**
-   *
-   *
    * <pre>
    * The subzone of the application frontend that served this request, e.g. an
    * identifier for where within a zone (within the reported region) the
@@ -116,21 +91,18 @@ public interface PeerInfoOrBuilder
    * </pre>
    *
    * <code>string application_frontend_subzone = 4;</code>
-   *
    * @return The bytes for applicationFrontendSubzone.
    */
-  com.google.protobuf.ByteString getApplicationFrontendSubzoneBytes();
+  com.google.protobuf.ByteString
+      getApplicationFrontendSubzoneBytes();
 
   /**
    * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-   *
    * @return The enum numeric value on the wire for transportType.
    */
   int getTransportTypeValue();
-
   /**
    * <code>.google.bigtable.v2.PeerInfo.TransportType transport_type = 5;</code>
-   *
    * @return The transportType.
    */
   com.google.bigtable.v2.PeerInfo.TransportType getTransportType();

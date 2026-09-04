@@ -6,25 +6,20 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface InferInternalTypeMetadataResponseOrBuilder
-    extends
+public interface InferInternalTypeMetadataResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.InferInternalTypeMetadataResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
-  java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> getFamilyList();
-
+  java.util.List<com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family> 
+      getFamilyList();
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -32,10 +27,7 @@ public interface InferInternalTypeMetadataResponseOrBuilder
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
   com.google.bigtable.v2.InferInternalTypeMetadataResponse.Family getFamily(int index);
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
@@ -43,22 +35,16 @@ public interface InferInternalTypeMetadataResponseOrBuilder
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
   int getFamilyCount();
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>
    *
    * <code>repeated .google.bigtable.v2.InferInternalTypeMetadataResponse.Family family = 1;</code>
    */
-  java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder>
+  java.util.List<? extends com.google.bigtable.v2.InferInternalTypeMetadataResponse.FamilyOrBuilder> 
       getFamilyOrBuilderList();
-
   /**
-   *
-   *
    * <pre>
    * List of column families in the response
    * </pre>

@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SampleRowKeysResponseOrBuilder
-    extends
+public interface SampleRowKeysResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SampleRowKeysResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Sorted streamed sequence of sample row keys in the table, restricted to
    * the row_range if specified in the request. The table might have contents
@@ -27,14 +24,11 @@ public interface SampleRowKeysResponseOrBuilder
    * </pre>
    *
    * <code>bytes row_key = 1;</code>
-   *
    * @return The rowKey.
    */
   com.google.protobuf.ByteString getRowKey();
 
   /**
-   *
-   *
    * <pre>
    * Approximate total storage space used by all rows in the table which precede
    * `row_key` (and if a row-range is specified in the request, which follow
@@ -45,7 +39,6 @@ public interface SampleRowKeysResponseOrBuilder
    * </pre>
    *
    * <code>int64 offset_bytes = 2;</code>
-   *
    * @return The offsetBytes.
    */
   long getOffsetBytes();

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * Response message for Bigtable.SimpleExecuteQuery
  * </pre>
@@ -15,86 +13,70 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.SimpleExecuteQueryResponse}
  */
 @com.google.protobuf.Generated
-public final class SimpleExecuteQueryResponse extends com.google.protobuf.GeneratedMessage
-    implements
+public final class SimpleExecuteQueryResponse extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.SimpleExecuteQueryResponse)
     SimpleExecuteQueryResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "SimpleExecuteQueryResponse");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "SimpleExecuteQueryResponse");
   }
-
   // Use SimpleExecuteQueryResponse.newBuilder() to construct.
   private SimpleExecuteQueryResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private SimpleExecuteQueryResponse() {
     rows_ = java.util.Collections.emptyList();
     nextPageToken_ = "";
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.BigtableProto
-        .internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable
+    return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.SimpleExecuteQueryResponse.class,
-            com.google.bigtable.v2.SimpleExecuteQueryResponse.Builder.class);
+            com.google.bigtable.v2.SimpleExecuteQueryResponse.class, com.google.bigtable.v2.SimpleExecuteQueryResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int SCHEMA_FIELD_NUMBER = 1;
   private com.google.bigtable.v2.ProtoSchema schema_;
-
   /**
-   *
-   *
    * <pre>
    * Schema of the columns in the result set.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
-   *
    * @return Whether the schema field is set.
    */
   @java.lang.Override
   public boolean hasSchema() {
     return ((bitField0_ & 0x00000001) != 0);
   }
-
   /**
-   *
-   *
    * <pre>
    * Schema of the columns in the result set.
    * </pre>
    *
    * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
-   *
    * @return The schema.
    */
   @java.lang.Override
   public com.google.bigtable.v2.ProtoSchema getSchema() {
     return schema_ == null ? com.google.bigtable.v2.ProtoSchema.getDefaultInstance() : schema_;
   }
-
   /**
-   *
-   *
    * <pre>
    * Schema of the columns in the result set.
    * </pre>
@@ -107,13 +89,9 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   }
 
   public static final int ROWS_FIELD_NUMBER = 2;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.ArrayValue> rows_;
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -125,10 +103,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   public java.util.List<com.google.bigtable.v2.ArrayValue> getRowsList() {
     return rows_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -137,14 +112,11 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.ArrayValueOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.ArrayValueOrBuilder> 
       getRowsOrBuilderList() {
     return rows_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -156,10 +128,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   public int getRowsCount() {
     return rows_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -171,10 +140,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   public com.google.bigtable.v2.ArrayValue getRows(int index) {
     return rows_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * The rows in the result set wherein each row contains values with schema
    * matching the `schema` field above.
@@ -183,18 +149,15 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
    * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.ArrayValueOrBuilder getRowsOrBuilder(int index) {
+  public com.google.bigtable.v2.ArrayValueOrBuilder getRowsOrBuilder(
+      int index) {
     return rows_.get(index);
   }
 
   public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 3;
-
   @SuppressWarnings("serial")
   private volatile java.lang.Object nextPageToken_ = "";
-
   /**
-   *
-   *
    * <pre>
    * Optional. A token that can be sent as `page_token` to retrieve the next
    * rows in the result set. If this field is omitted, there are no subsequent
@@ -202,7 +165,6 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
    * </pre>
    *
    * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The nextPageToken.
    */
   @java.lang.Override
@@ -211,16 +173,14 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       nextPageToken_ = s;
       return s;
     }
   }
-
   /**
-   *
-   *
    * <pre>
    * Optional. A token that can be sent as `page_token` to retrieve the next
    * rows in the result set. If this field is omitted, there are no subsequent
@@ -228,15 +188,16 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
    * </pre>
    *
    * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for nextPageToken.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getNextPageTokenBytes() {
+  public com.google.protobuf.ByteString
+      getNextPageTokenBytes() {
     java.lang.Object ref = nextPageToken_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       nextPageToken_ = b;
       return b;
     } else {
@@ -245,7 +206,6 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -257,7 +217,8 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getSchema());
     }
@@ -277,10 +238,12 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getSchema());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getSchema());
     }
     for (int i = 0; i < rows_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, rows_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, rows_.get(i));
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextPageToken_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, nextPageToken_);
@@ -293,20 +256,22 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.SimpleExecuteQueryResponse)) {
       return super.equals(obj);
     }
-    com.google.bigtable.v2.SimpleExecuteQueryResponse other =
-        (com.google.bigtable.v2.SimpleExecuteQueryResponse) obj;
+    com.google.bigtable.v2.SimpleExecuteQueryResponse other = (com.google.bigtable.v2.SimpleExecuteQueryResponse) obj;
 
     if (hasSchema() != other.hasSchema()) return false;
     if (hasSchema()) {
-      if (!getSchema().equals(other.getSchema())) return false;
+      if (!getSchema()
+          .equals(other.getSchema())) return false;
     }
-    if (!getRowsList().equals(other.getRowsList())) return false;
-    if (!getNextPageToken().equals(other.getNextPageToken())) return false;
+    if (!getRowsList()
+        .equals(other.getRowsList())) return false;
+    if (!getNextPageToken()
+        .equals(other.getNextPageToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -334,127 +299,119 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   }
 
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
-      java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
+  public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
+  }
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+  public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseDelimitedFrom(
-      java.io.InputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
-  }
-
-  public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.SimpleExecuteQueryResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.SimpleExecuteQueryResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * Response message for Bigtable.SimpleExecuteQuery
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.SimpleExecuteQueryResponse}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.SimpleExecuteQueryResponse)
       com.google.bigtable.v2.SimpleExecuteQueryResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.SimpleExecuteQueryResponse.class,
-              com.google.bigtable.v2.SimpleExecuteQueryResponse.Builder.class);
+              com.google.bigtable.v2.SimpleExecuteQueryResponse.class, com.google.bigtable.v2.SimpleExecuteQueryResponse.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.SimpleExecuteQueryResponse.newBuilder()
@@ -462,18 +419,18 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
         internalGetSchemaFieldBuilder();
         internalGetRowsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -495,9 +452,9 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.BigtableProto
-          .internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.BigtableProto.internal_static_google_bigtable_v2_SimpleExecuteQueryResponse_descriptor;
     }
 
     @java.lang.Override
@@ -516,18 +473,14 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
 
     @java.lang.Override
     public com.google.bigtable.v2.SimpleExecuteQueryResponse buildPartial() {
-      com.google.bigtable.v2.SimpleExecuteQueryResponse result =
-          new com.google.bigtable.v2.SimpleExecuteQueryResponse(this);
+      com.google.bigtable.v2.SimpleExecuteQueryResponse result = new com.google.bigtable.v2.SimpleExecuteQueryResponse(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.bigtable.v2.SimpleExecuteQueryResponse result) {
+    private void buildPartialRepeatedFields(com.google.bigtable.v2.SimpleExecuteQueryResponse result) {
       if (rowsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
           rows_ = java.util.Collections.unmodifiableList(rows_);
@@ -543,7 +496,9 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.schema_ = schemaBuilder_ == null ? schema_ : schemaBuilder_.build();
+        result.schema_ = schemaBuilder_ == null
+            ? schema_
+            : schemaBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -555,7 +510,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.SimpleExecuteQueryResponse) {
-        return mergeFrom((com.google.bigtable.v2.SimpleExecuteQueryResponse) other);
+        return mergeFrom((com.google.bigtable.v2.SimpleExecuteQueryResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -563,8 +518,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
     }
 
     public Builder mergeFrom(com.google.bigtable.v2.SimpleExecuteQueryResponse other) {
-      if (other == com.google.bigtable.v2.SimpleExecuteQueryResponse.getDefaultInstance())
-        return this;
+      if (other == com.google.bigtable.v2.SimpleExecuteQueryResponse.getDefaultInstance()) return this;
       if (other.hasSchema()) {
         mergeSchema(other.getSchema());
       }
@@ -586,10 +540,9 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
             rowsBuilder_ = null;
             rows_ = other.rows_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            rowsBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetRowsFieldBuilder()
-                    : null;
+            rowsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetRowsFieldBuilder() : null;
           } else {
             rowsBuilder_.addAllMessages(other.rows_);
           }
@@ -626,38 +579,37 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                input.readMessage(internalGetSchemaFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-            case 18:
-              {
-                com.google.bigtable.v2.ArrayValue m =
-                    input.readMessage(
-                        com.google.bigtable.v2.ArrayValue.parser(), extensionRegistry);
-                if (rowsBuilder_ == null) {
-                  ensureRowsIsMutable();
-                  rows_.add(m);
-                } else {
-                  rowsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-            case 26:
-              {
-                nextPageToken_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              input.readMessage(
+                  internalGetSchemaFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.google.bigtable.v2.ArrayValue m =
+                  input.readMessage(
+                      com.google.bigtable.v2.ArrayValue.parser(),
+                      extensionRegistry);
+              if (rowsBuilder_ == null) {
+                ensureRowsIsMutable();
+                rows_.add(m);
+              } else {
+                rowsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              nextPageToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -667,40 +619,28 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private com.google.bigtable.v2.ProtoSchema schema_;
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ProtoSchema,
-            com.google.bigtable.v2.ProtoSchema.Builder,
-            com.google.bigtable.v2.ProtoSchemaOrBuilder>
-        schemaBuilder_;
-
+        com.google.bigtable.v2.ProtoSchema, com.google.bigtable.v2.ProtoSchema.Builder, com.google.bigtable.v2.ProtoSchemaOrBuilder> schemaBuilder_;
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
      *
      * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
-     *
      * @return Whether the schema field is set.
      */
     public boolean hasSchema() {
       return ((bitField0_ & 0x00000001) != 0);
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
      *
      * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
-     *
      * @return The schema.
      */
     public com.google.bigtable.v2.ProtoSchema getSchema() {
@@ -710,10 +650,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
         return schemaBuilder_.getMessage();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
@@ -733,17 +670,15 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
      *
      * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
      */
-    public Builder setSchema(com.google.bigtable.v2.ProtoSchema.Builder builderForValue) {
+    public Builder setSchema(
+        com.google.bigtable.v2.ProtoSchema.Builder builderForValue) {
       if (schemaBuilder_ == null) {
         schema_ = builderForValue.build();
       } else {
@@ -753,10 +688,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
@@ -765,9 +697,9 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      */
     public Builder mergeSchema(com.google.bigtable.v2.ProtoSchema value) {
       if (schemaBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)
-            && schema_ != null
-            && schema_ != com.google.bigtable.v2.ProtoSchema.getDefaultInstance()) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          schema_ != null &&
+          schema_ != com.google.bigtable.v2.ProtoSchema.getDefaultInstance()) {
           getSchemaBuilder().mergeFrom(value);
         } else {
           schema_ = value;
@@ -781,10 +713,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
@@ -801,10 +730,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
@@ -816,10 +742,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       onChanged();
       return internalGetSchemaFieldBuilder().getBuilder();
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
@@ -830,13 +753,11 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       if (schemaBuilder_ != null) {
         return schemaBuilder_.getMessageOrBuilder();
       } else {
-        return schema_ == null ? com.google.bigtable.v2.ProtoSchema.getDefaultInstance() : schema_;
+        return schema_ == null ?
+            com.google.bigtable.v2.ProtoSchema.getDefaultInstance() : schema_;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Schema of the columns in the result set.
      * </pre>
@@ -844,41 +765,32 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * <code>.google.bigtable.v2.ProtoSchema schema = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-            com.google.bigtable.v2.ProtoSchema,
-            com.google.bigtable.v2.ProtoSchema.Builder,
-            com.google.bigtable.v2.ProtoSchemaOrBuilder>
+        com.google.bigtable.v2.ProtoSchema, com.google.bigtable.v2.ProtoSchema.Builder, com.google.bigtable.v2.ProtoSchemaOrBuilder> 
         internalGetSchemaFieldBuilder() {
       if (schemaBuilder_ == null) {
-        schemaBuilder_ =
-            new com.google.protobuf.SingleFieldBuilder<
-                com.google.bigtable.v2.ProtoSchema,
-                com.google.bigtable.v2.ProtoSchema.Builder,
-                com.google.bigtable.v2.ProtoSchemaOrBuilder>(
-                getSchema(), getParentForChildren(), isClean());
+        schemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.bigtable.v2.ProtoSchema, com.google.bigtable.v2.ProtoSchema.Builder, com.google.bigtable.v2.ProtoSchemaOrBuilder>(
+                getSchema(),
+                getParentForChildren(),
+                isClean());
         schema_ = null;
       }
       return schemaBuilder_;
     }
 
     private java.util.List<com.google.bigtable.v2.ArrayValue> rows_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureRowsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         rows_ = new java.util.ArrayList<com.google.bigtable.v2.ArrayValue>(rows_);
         bitField0_ |= 0x00000002;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.ArrayValue,
-            com.google.bigtable.v2.ArrayValue.Builder,
-            com.google.bigtable.v2.ArrayValueOrBuilder>
-        rowsBuilder_;
+        com.google.bigtable.v2.ArrayValue, com.google.bigtable.v2.ArrayValue.Builder, com.google.bigtable.v2.ArrayValueOrBuilder> rowsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -893,10 +805,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
         return rowsBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -911,10 +820,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
         return rowsBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -929,10 +835,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
         return rowsBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -940,7 +843,8 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public Builder setRows(int index, com.google.bigtable.v2.ArrayValue value) {
+    public Builder setRows(
+        int index, com.google.bigtable.v2.ArrayValue value) {
       if (rowsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -953,10 +857,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -964,7 +865,8 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public Builder setRows(int index, com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
+    public Builder setRows(
+        int index, com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         rows_.set(index, builderForValue.build());
@@ -974,10 +876,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -998,10 +897,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1009,7 +905,8 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public Builder addRows(int index, com.google.bigtable.v2.ArrayValue value) {
+    public Builder addRows(
+        int index, com.google.bigtable.v2.ArrayValue value) {
       if (rowsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1022,10 +919,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1033,7 +927,8 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public Builder addRows(com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
+    public Builder addRows(
+        com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         rows_.add(builderForValue.build());
@@ -1043,10 +938,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1054,7 +946,8 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public Builder addRows(int index, com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
+    public Builder addRows(
+        int index, com.google.bigtable.v2.ArrayValue.Builder builderForValue) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         rows_.add(index, builderForValue.build());
@@ -1064,10 +957,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1079,17 +969,15 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
         java.lang.Iterable<? extends com.google.bigtable.v2.ArrayValue> values) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, rows_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, rows_);
         onChanged();
       } else {
         rowsBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1107,10 +995,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1128,10 +1013,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1139,13 +1021,11 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public com.google.bigtable.v2.ArrayValue.Builder getRowsBuilder(int index) {
+    public com.google.bigtable.v2.ArrayValue.Builder getRowsBuilder(
+        int index) {
       return internalGetRowsFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1153,17 +1033,14 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public com.google.bigtable.v2.ArrayValueOrBuilder getRowsOrBuilder(int index) {
+    public com.google.bigtable.v2.ArrayValueOrBuilder getRowsOrBuilder(
+        int index) {
       if (rowsBuilder_ == null) {
-        return rows_.get(index);
-      } else {
+        return rows_.get(index);  } else {
         return rowsBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1171,18 +1048,15 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.ArrayValueOrBuilder>
-        getRowsOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.ArrayValueOrBuilder> 
+         getRowsOrBuilderList() {
       if (rowsBuilder_ != null) {
         return rowsBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(rows_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1191,13 +1065,10 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
     public com.google.bigtable.v2.ArrayValue.Builder addRowsBuilder() {
-      return internalGetRowsFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.ArrayValue.getDefaultInstance());
+      return internalGetRowsFieldBuilder().addBuilder(
+          com.google.bigtable.v2.ArrayValue.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1205,14 +1076,12 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public com.google.bigtable.v2.ArrayValue.Builder addRowsBuilder(int index) {
-      return internalGetRowsFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.ArrayValue.getDefaultInstance());
+    public com.google.bigtable.v2.ArrayValue.Builder addRowsBuilder(
+        int index) {
+      return internalGetRowsFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.ArrayValue.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * The rows in the result set wherein each row contains values with schema
      * matching the `schema` field above.
@@ -1220,32 +1089,27 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      *
      * <code>repeated .google.bigtable.v2.ArrayValue rows = 2;</code>
      */
-    public java.util.List<com.google.bigtable.v2.ArrayValue.Builder> getRowsBuilderList() {
+    public java.util.List<com.google.bigtable.v2.ArrayValue.Builder> 
+         getRowsBuilderList() {
       return internalGetRowsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.ArrayValue,
-            com.google.bigtable.v2.ArrayValue.Builder,
-            com.google.bigtable.v2.ArrayValueOrBuilder>
+        com.google.bigtable.v2.ArrayValue, com.google.bigtable.v2.ArrayValue.Builder, com.google.bigtable.v2.ArrayValueOrBuilder> 
         internalGetRowsFieldBuilder() {
       if (rowsBuilder_ == null) {
-        rowsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.ArrayValue,
-                com.google.bigtable.v2.ArrayValue.Builder,
-                com.google.bigtable.v2.ArrayValueOrBuilder>(
-                rows_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
+        rowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.ArrayValue, com.google.bigtable.v2.ArrayValue.Builder, com.google.bigtable.v2.ArrayValueOrBuilder>(
+                rows_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
         rows_ = null;
       }
       return rowsBuilder_;
     }
 
     private java.lang.Object nextPageToken_ = "";
-
     /**
-     *
-     *
      * <pre>
      * Optional. A token that can be sent as `page_token` to retrieve the next
      * rows in the result set. If this field is omitted, there are no subsequent
@@ -1253,13 +1117,13 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The nextPageToken.
      */
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextPageToken_ = s;
         return s;
@@ -1267,10 +1131,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
         return (java.lang.String) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. A token that can be sent as `page_token` to retrieve the next
      * rows in the result set. If this field is omitted, there are no subsequent
@@ -1278,24 +1139,22 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return The bytes for nextPageToken.
      */
-    public com.google.protobuf.ByteString getNextPageTokenBytes() {
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         nextPageToken_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. A token that can be sent as `page_token` to retrieve the next
      * rows in the result set. If this field is omitted, there are no subsequent
@@ -1303,23 +1162,18 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The nextPageToken to set.
      * @return This builder for chaining.
      */
-    public Builder setNextPageToken(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setNextPageToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       nextPageToken_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. A token that can be sent as `page_token` to retrieve the next
      * rows in the result set. If this field is omitted, there are no subsequent
@@ -1327,7 +1181,6 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearNextPageToken() {
@@ -1336,10 +1189,7 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
       onChanged();
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * Optional. A token that can be sent as `page_token` to retrieve the next
      * rows in the result set. If this field is omitted, there are no subsequent
@@ -1347,14 +1197,12 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
      * </pre>
      *
      * <code>string next_page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     *
      * @param value The bytes for nextPageToken to set.
      * @return This builder for chaining.
      */
-    public Builder setNextPageTokenBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       nextPageToken_ = value;
       bitField0_ |= 0x00000004;
@@ -1367,7 +1215,6 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.SimpleExecuteQueryResponse)
   private static final com.google.bigtable.v2.SimpleExecuteQueryResponse DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.SimpleExecuteQueryResponse();
   }
@@ -1376,27 +1223,27 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SimpleExecuteQueryResponse> PARSER =
-      new com.google.protobuf.AbstractParser<SimpleExecuteQueryResponse>() {
-        @java.lang.Override
-        public SimpleExecuteQueryResponse parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<SimpleExecuteQueryResponse>
+      PARSER = new com.google.protobuf.AbstractParser<SimpleExecuteQueryResponse>() {
+    @java.lang.Override
+    public SimpleExecuteQueryResponse parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<SimpleExecuteQueryResponse> parser() {
     return PARSER;
@@ -1411,4 +1258,6 @@ public final class SimpleExecuteQueryResponse extends com.google.protobuf.Genera
   public com.google.bigtable.v2.SimpleExecuteQueryResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

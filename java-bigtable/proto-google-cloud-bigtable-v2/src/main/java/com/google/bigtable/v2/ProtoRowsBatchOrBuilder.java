@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ProtoRowsBatchOrBuilder
-    extends
+public interface ProtoRowsBatchOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ProtoRowsBatch)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Part of a serialized `ProtoRows` message.
    * A complete, parseable ProtoRows message is constructed by
@@ -23,7 +20,6 @@ public interface ProtoRowsBatchOrBuilder
    * </pre>
    *
    * <code>bytes batch_data = 1;</code>
-   *
    * @return The batchData.
    */
   com.google.protobuf.ByteString getBatchData();

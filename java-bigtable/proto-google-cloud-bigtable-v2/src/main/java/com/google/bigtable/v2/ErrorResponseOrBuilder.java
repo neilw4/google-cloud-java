@@ -6,70 +6,54 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ErrorResponseOrBuilder
-    extends
+public interface ErrorResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ErrorResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Which vRPC this response is for.
    * </pre>
    *
    * <code>int64 rpc_id = 1;</code>
-   *
    * @return The rpcId.
    */
   long getRpcId();
 
   /**
    * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-   *
    * @return Whether the clusterInfo field is set.
    */
   boolean hasClusterInfo();
-
   /**
    * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
-   *
    * @return The clusterInfo.
    */
   com.google.bigtable.v2.ClusterInformation getClusterInfo();
-
-  /** <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code> */
+  /**
+   * <code>.google.bigtable.v2.ClusterInformation cluster_info = 2;</code>
+   */
   com.google.bigtable.v2.ClusterInformationOrBuilder getClusterInfoOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * The error from the vRPC and any retry information to consider.
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
-   *
    * @return Whether the status field is set.
    */
   boolean hasStatus();
-
   /**
-   *
-   *
    * <pre>
    * The error from the vRPC and any retry information to consider.
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
-   *
    * @return The status.
    */
   com.google.rpc.Status getStatus();
-
   /**
-   *
-   *
    * <pre>
    * The error from the vRPC and any retry information to consider.
    * </pre>
@@ -80,18 +64,16 @@ public interface ErrorResponseOrBuilder
 
   /**
    * <code>.google.rpc.RetryInfo retry_info = 4;</code>
-   *
    * @return Whether the retryInfo field is set.
    */
   boolean hasRetryInfo();
-
   /**
    * <code>.google.rpc.RetryInfo retry_info = 4;</code>
-   *
    * @return The retryInfo.
    */
   com.google.rpc.RetryInfo getRetryInfo();
-
-  /** <code>.google.rpc.RetryInfo retry_info = 4;</code> */
+  /**
+   * <code>.google.rpc.RetryInfo retry_info = 4;</code>
+   */
   com.google.rpc.RetryInfoOrBuilder getRetryInfoOrBuilder();
 }

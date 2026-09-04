@@ -6,102 +6,77 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SimpleExecuteQueryRequestOrBuilder
-    extends
+public interface SimpleExecuteQueryRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SimpleExecuteQueryRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance against which the query should be
    * executed.
    * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The instanceName.
    */
   java.lang.String getInstanceName();
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance against which the query should be
    * executed.
    * Format: `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for instanceName.
    */
-  com.google.protobuf.ByteString getInstanceNameBytes();
+  com.google.protobuf.ByteString
+      getInstanceNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. This value specifies routing for replication. If not specified,
    * the `default` application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The appProfileId.
    */
   java.lang.String getAppProfileId();
-
   /**
-   *
-   *
    * <pre>
    * Optional. This value specifies routing for replication. If not specified,
    * the `default` application profile will be used.
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for appProfileId.
    */
-  com.google.protobuf.ByteString getAppProfileIdBytes();
+  com.google.protobuf.ByteString
+      getAppProfileIdBytes();
 
   /**
-   *
-   *
    * <pre>
    * Required. The query string.
    * </pre>
    *
    * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-   *
    * @return The query.
    */
   java.lang.String getQuery();
-
   /**
-   *
-   *
    * <pre>
    * Required. The query string.
    * </pre>
    *
    * <code>string query = 3 [(.google.api.field_behavior) = REQUIRED];</code>
-   *
    * @return The bytes for query.
    */
-  com.google.protobuf.ByteString getQueryBytes();
+  com.google.protobuf.ByteString
+      getQueryBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. The page token, received from a previous `SimpleExecuteQuery`
    * call. Provide this to retrieve the subsequent rows of the result set.
@@ -111,14 +86,10 @@ public interface SimpleExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The pageToken.
    */
   java.lang.String getPageToken();
-
   /**
-   *
-   *
    * <pre>
    * Optional. The page token, received from a previous `SimpleExecuteQuery`
    * call. Provide this to retrieve the subsequent rows of the result set.
@@ -128,14 +99,12 @@ public interface SimpleExecuteQueryRequestOrBuilder
    * </pre>
    *
    * <code>string page_token = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for pageToken.
    */
-  com.google.protobuf.ByteString getPageTokenBytes();
+  com.google.protobuf.ByteString
+      getPageTokenBytes();
 
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -148,10 +117,7 @@ public interface SimpleExecuteQueryRequestOrBuilder
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
   int getViewParametersCount();
-
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -163,15 +129,15 @@ public interface SimpleExecuteQueryRequestOrBuilder
    *
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
-  boolean containsViewParameters(java.lang.String key);
-
-  /** Use {@link #getViewParametersMap()} instead. */
+  boolean containsViewParameters(
+      java.lang.String key);
+  /**
+   * Use {@link #getViewParametersMap()} instead.
+   */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParameters();
-
+  java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
+  getViewParameters();
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -183,11 +149,9 @@ public interface SimpleExecuteQueryRequestOrBuilder
    *
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
-  java.util.Map<java.lang.String, com.google.bigtable.v2.Value> getViewParametersMap();
-
+  java.util.Map<java.lang.String, com.google.bigtable.v2.Value>
+  getViewParametersMap();
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -200,14 +164,11 @@ public interface SimpleExecuteQueryRequestOrBuilder
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
   /* nullable */
-  com.google.bigtable.v2.Value getViewParametersOrDefault(
+com.google.bigtable.v2.Value getViewParametersOrDefault(
       java.lang.String key,
       /* nullable */
-      com.google.bigtable.v2.Value defaultValue);
-
+com.google.bigtable.v2.Value defaultValue);
   /**
-   *
-   *
    * <pre>
    * This map provides the runtime values returned by the VIEW_PARAMETERS()
    * function calls, typically used for user-level scoping of data based on
@@ -219,5 +180,6 @@ public interface SimpleExecuteQueryRequestOrBuilder
    *
    * <code>map&lt;string, .google.bigtable.v2.Value&gt; view_parameters = 5;</code>
    */
-  com.google.bigtable.v2.Value getViewParametersOrThrow(java.lang.String key);
+  com.google.bigtable.v2.Value getViewParametersOrThrow(
+      java.lang.String key);
 }

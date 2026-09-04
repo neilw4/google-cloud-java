@@ -6,40 +6,29 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface ClientConfigurationOrBuilder
-    extends
+public interface ClientConfigurationOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.ClientConfiguration)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The configuration for Bigtable Sessions.
    * </pre>
    *
    * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
-   *
    * @return Whether the sessionConfiguration field is set.
    */
   boolean hasSessionConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * The configuration for Bigtable Sessions.
    * </pre>
    *
    * <code>.google.bigtable.v2.SessionClientConfiguration session_configuration = 2;</code>
-   *
    * @return The sessionConfiguration.
    */
   com.google.bigtable.v2.SessionClientConfiguration getSessionConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * The configuration for Bigtable Sessions.
    * </pre>
@@ -49,36 +38,27 @@ public interface ClientConfigurationOrBuilder
   com.google.bigtable.v2.SessionClientConfigurationOrBuilder getSessionConfigurationOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * If the client should cease to check for new configurations, e.g. a
    * backstop to prevent excessive GetClientConfiguration RPCs.
    * </pre>
    *
    * <code>bool stop_polling = 3;</code>
-   *
    * @return Whether the stopPolling field is set.
    */
   boolean hasStopPolling();
-
   /**
-   *
-   *
    * <pre>
    * If the client should cease to check for new configurations, e.g. a
    * backstop to prevent excessive GetClientConfiguration RPCs.
    * </pre>
    *
    * <code>bool stop_polling = 3;</code>
-   *
    * @return The stopPolling.
    */
   boolean getStopPolling();
 
   /**
-   *
-   *
    * <pre>
    * Deprecated, prerfer polling_configuration.
    *
@@ -87,14 +67,10 @@ public interface ClientConfigurationOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration polling_interval = 4;</code>
-   *
    * @return Whether the pollingInterval field is set.
    */
   boolean hasPollingInterval();
-
   /**
-   *
-   *
    * <pre>
    * Deprecated, prerfer polling_configuration.
    *
@@ -103,14 +79,10 @@ public interface ClientConfigurationOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration polling_interval = 4;</code>
-   *
    * @return The pollingInterval.
    */
   com.google.protobuf.Duration getPollingInterval();
-
   /**
-   *
-   *
    * <pre>
    * Deprecated, prerfer polling_configuration.
    *
@@ -123,75 +95,51 @@ public interface ClientConfigurationOrBuilder
   com.google.protobuf.DurationOrBuilder getPollingIntervalOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * If the client should continue to check for new configurations.
    * </pre>
    *
-   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
    * @return Whether the pollingConfiguration field is set.
    */
   boolean hasPollingConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * If the client should continue to check for new configurations.
    * </pre>
    *
-   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-   * </code>
-   *
+   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
    * @return The pollingConfiguration.
    */
   com.google.bigtable.v2.ClientConfiguration.PollingConfiguration getPollingConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * If the client should continue to check for new configurations.
    * </pre>
    *
-   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;
-   * </code>
+   * <code>.google.bigtable.v2.ClientConfiguration.PollingConfiguration polling_configuration = 5;</code>
    */
-  com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder
-      getPollingConfigurationOrBuilder();
+  com.google.bigtable.v2.ClientConfiguration.PollingConfigurationOrBuilder getPollingConfigurationOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Configuration for telemetry.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
-   *
    * @return Whether the telemetryConfiguration field is set.
    */
   boolean hasTelemetryConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * Configuration for telemetry.
    * </pre>
    *
    * <code>.google.bigtable.v2.TelemetryConfiguration telemetry_configuration = 6;</code>
-   *
    * @return The telemetryConfiguration.
    */
   com.google.bigtable.v2.TelemetryConfiguration getTelemetryConfiguration();
-
   /**
-   *
-   *
    * <pre>
    * Configuration for telemetry.
    * </pre>

@@ -6,8 +6,6 @@
 package com.google.bigtable.v2;
 
 /**
- *
- *
  * <pre>
  * ResultSet schema in proto format
  * </pre>
@@ -15,54 +13,45 @@ package com.google.bigtable.v2;
  * Protobuf type {@code google.bigtable.v2.ProtoSchema}
  */
 @com.google.protobuf.Generated
-public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
-    implements
+public final class ProtoSchema extends
+    com.google.protobuf.GeneratedMessage implements
     // @@protoc_insertion_point(message_implements:google.bigtable.v2.ProtoSchema)
     ProtoSchemaOrBuilder {
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 33,
-        /* patch= */ 6,
-        /* suffix= */ "",
-        "ProtoSchema");
+      com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+      /* major= */ 4,
+      /* minor= */ 33,
+      /* patch= */ 6,
+      /* suffix= */ "",
+      "ProtoSchema");
   }
-
   // Use ProtoSchema.newBuilder() to construct.
   private ProtoSchema(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-
   private ProtoSchema() {
     columns_ = java.util.Collections.emptyList();
   }
 
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ProtoSchema_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ProtoSchema_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.bigtable.v2.DataProto
-        .internal_static_google_bigtable_v2_ProtoSchema_fieldAccessorTable
+    return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ProtoSchema_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.bigtable.v2.ProtoSchema.class,
-            com.google.bigtable.v2.ProtoSchema.Builder.class);
+            com.google.bigtable.v2.ProtoSchema.class, com.google.bigtable.v2.ProtoSchema.Builder.class);
   }
 
   public static final int COLUMNS_FIELD_NUMBER = 1;
-
   @SuppressWarnings("serial")
   private java.util.List<com.google.bigtable.v2.ColumnMetadata> columns_;
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -73,10 +62,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
   public java.util.List<com.google.bigtable.v2.ColumnMetadata> getColumnsList() {
     return columns_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -84,14 +70,11 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.bigtable.v2.ColumnMetadataOrBuilder>
+  public java.util.List<? extends com.google.bigtable.v2.ColumnMetadataOrBuilder> 
       getColumnsOrBuilderList() {
     return columns_;
   }
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -102,10 +85,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
   public int getColumnsCount() {
     return columns_.size();
   }
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -116,10 +96,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ColumnMetadata getColumns(int index) {
     return columns_.get(index);
   }
-
   /**
-   *
-   *
    * <pre>
    * The columns in the result set.
    * </pre>
@@ -127,12 +104,12 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
    * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
    */
   @java.lang.Override
-  public com.google.bigtable.v2.ColumnMetadataOrBuilder getColumnsOrBuilder(int index) {
+  public com.google.bigtable.v2.ColumnMetadataOrBuilder getColumnsOrBuilder(
+      int index) {
     return columns_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -144,7 +121,8 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < columns_.size(); i++) {
       output.writeMessage(1, columns_.get(i));
     }
@@ -158,7 +136,8 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
 
     size = 0;
     for (int i = 0; i < columns_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, columns_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, columns_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -168,14 +147,15 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.bigtable.v2.ProtoSchema)) {
       return super.equals(obj);
     }
     com.google.bigtable.v2.ProtoSchema other = (com.google.bigtable.v2.ProtoSchema) obj;
 
-    if (!getColumnsList().equals(other.getColumnsList())) return false;
+    if (!getColumnsList()
+        .equals(other.getColumnsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -196,136 +176,132 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
     return hash;
   }
 
-  public static com.google.bigtable.v2.ProtoSchema parseFrom(java.nio.ByteBuffer data)
+  public static com.google.bigtable.v2.ProtoSchema parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.bigtable.v2.ProtoSchema parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.bigtable.v2.ProtoSchema parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   public static com.google.bigtable.v2.ProtoSchema parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input);
   }
 
   public static com.google.bigtable.v2.ProtoSchema parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.bigtable.v2.ProtoSchema parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessage.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessage
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.bigtable.v2.ProtoSchema prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessage.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
-   *
-   *
    * <pre>
    * ResultSet schema in proto format
    * </pre>
    *
    * Protobuf type {@code google.bigtable.v2.ProtoSchema}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.bigtable.v2.ProtoSchema)
       com.google.bigtable.v2.ProtoSchemaOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ProtoSchema_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ProtoSchema_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ProtoSchema_fieldAccessorTable
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ProtoSchema_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.bigtable.v2.ProtoSchema.class,
-              com.google.bigtable.v2.ProtoSchema.Builder.class);
+              com.google.bigtable.v2.ProtoSchema.class, com.google.bigtable.v2.ProtoSchema.Builder.class);
     }
 
     // Construct using com.google.bigtable.v2.ProtoSchema.newBuilder()
-    private Builder() {}
+    private Builder() {
 
-    private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      super(parent);
     }
 
+    private Builder(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      super(parent);
+
+    }
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -341,9 +317,9 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.bigtable.v2.DataProto
-          .internal_static_google_bigtable_v2_ProtoSchema_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.bigtable.v2.DataProto.internal_static_google_bigtable_v2_ProtoSchema_descriptor;
     }
 
     @java.lang.Override
@@ -364,9 +340,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
     public com.google.bigtable.v2.ProtoSchema buildPartial() {
       com.google.bigtable.v2.ProtoSchema result = new com.google.bigtable.v2.ProtoSchema(this);
       buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) {
-        buildPartial0(result);
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
@@ -390,7 +364,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.bigtable.v2.ProtoSchema) {
-        return mergeFrom((com.google.bigtable.v2.ProtoSchema) other);
+        return mergeFrom((com.google.bigtable.v2.ProtoSchema)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -417,10 +391,9 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
             columnsBuilder_ = null;
             columns_ = other.columns_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            columnsBuilder_ =
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders
-                    ? internalGetColumnsFieldBuilder()
-                    : null;
+            columnsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetColumnsFieldBuilder() : null;
           } else {
             columnsBuilder_.addAllMessages(other.columns_);
           }
@@ -452,26 +425,25 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.bigtable.v2.ColumnMetadata m =
-                    input.readMessage(
-                        com.google.bigtable.v2.ColumnMetadata.parser(), extensionRegistry);
-                if (columnsBuilder_ == null) {
-                  ensureColumnsIsMutable();
-                  columns_.add(m);
-                } else {
-                  columnsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-            default:
-              {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
+            case 10: {
+              com.google.bigtable.v2.ColumnMetadata m =
+                  input.readMessage(
+                      com.google.bigtable.v2.ColumnMetadata.parser(),
+                      extensionRegistry);
+              if (columnsBuilder_ == null) {
+                ensureColumnsIsMutable();
+                columns_.add(m);
+              } else {
+                columnsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
           } // switch (tag)
         } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -481,28 +453,21 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       } // finally
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.bigtable.v2.ColumnMetadata> columns_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureColumnsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         columns_ = new java.util.ArrayList<com.google.bigtable.v2.ColumnMetadata>(columns_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.ColumnMetadata,
-            com.google.bigtable.v2.ColumnMetadata.Builder,
-            com.google.bigtable.v2.ColumnMetadataOrBuilder>
-        columnsBuilder_;
+        com.google.bigtable.v2.ColumnMetadata, com.google.bigtable.v2.ColumnMetadata.Builder, com.google.bigtable.v2.ColumnMetadataOrBuilder> columnsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -516,10 +481,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
         return columnsBuilder_.getMessageList();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -533,10 +495,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
         return columnsBuilder_.getCount();
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -550,17 +509,15 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
         return columnsBuilder_.getMessage(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public Builder setColumns(int index, com.google.bigtable.v2.ColumnMetadata value) {
+    public Builder setColumns(
+        int index, com.google.bigtable.v2.ColumnMetadata value) {
       if (columnsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -573,10 +530,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -594,10 +548,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -617,17 +568,15 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public Builder addColumns(int index, com.google.bigtable.v2.ColumnMetadata value) {
+    public Builder addColumns(
+        int index, com.google.bigtable.v2.ColumnMetadata value) {
       if (columnsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -640,17 +589,15 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public Builder addColumns(com.google.bigtable.v2.ColumnMetadata.Builder builderForValue) {
+    public Builder addColumns(
+        com.google.bigtable.v2.ColumnMetadata.Builder builderForValue) {
       if (columnsBuilder_ == null) {
         ensureColumnsIsMutable();
         columns_.add(builderForValue.build());
@@ -660,10 +607,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -681,10 +625,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -695,17 +636,15 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
         java.lang.Iterable<? extends com.google.bigtable.v2.ColumnMetadata> values) {
       if (columnsBuilder_ == null) {
         ensureColumnsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, columns_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, columns_);
         onChanged();
       } else {
         columnsBuilder_.addAllMessages(values);
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -722,10 +661,7 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -742,58 +678,47 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
       }
       return this;
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public com.google.bigtable.v2.ColumnMetadata.Builder getColumnsBuilder(int index) {
+    public com.google.bigtable.v2.ColumnMetadata.Builder getColumnsBuilder(
+        int index) {
       return internalGetColumnsFieldBuilder().getBuilder(index);
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public com.google.bigtable.v2.ColumnMetadataOrBuilder getColumnsOrBuilder(int index) {
+    public com.google.bigtable.v2.ColumnMetadataOrBuilder getColumnsOrBuilder(
+        int index) {
       if (columnsBuilder_ == null) {
-        return columns_.get(index);
-      } else {
+        return columns_.get(index);  } else {
         return columnsBuilder_.getMessageOrBuilder(index);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public java.util.List<? extends com.google.bigtable.v2.ColumnMetadataOrBuilder>
-        getColumnsOrBuilderList() {
+    public java.util.List<? extends com.google.bigtable.v2.ColumnMetadataOrBuilder> 
+         getColumnsOrBuilderList() {
       if (columnsBuilder_ != null) {
         return columnsBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(columns_);
       }
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
@@ -801,49 +726,42 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
     public com.google.bigtable.v2.ColumnMetadata.Builder addColumnsBuilder() {
-      return internalGetColumnsFieldBuilder()
-          .addBuilder(com.google.bigtable.v2.ColumnMetadata.getDefaultInstance());
+      return internalGetColumnsFieldBuilder().addBuilder(
+          com.google.bigtable.v2.ColumnMetadata.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public com.google.bigtable.v2.ColumnMetadata.Builder addColumnsBuilder(int index) {
-      return internalGetColumnsFieldBuilder()
-          .addBuilder(index, com.google.bigtable.v2.ColumnMetadata.getDefaultInstance());
+    public com.google.bigtable.v2.ColumnMetadata.Builder addColumnsBuilder(
+        int index) {
+      return internalGetColumnsFieldBuilder().addBuilder(
+          index, com.google.bigtable.v2.ColumnMetadata.getDefaultInstance());
     }
-
     /**
-     *
-     *
      * <pre>
      * The columns in the result set.
      * </pre>
      *
      * <code>repeated .google.bigtable.v2.ColumnMetadata columns = 1;</code>
      */
-    public java.util.List<com.google.bigtable.v2.ColumnMetadata.Builder> getColumnsBuilderList() {
+    public java.util.List<com.google.bigtable.v2.ColumnMetadata.Builder> 
+         getColumnsBuilderList() {
       return internalGetColumnsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilder<
-            com.google.bigtable.v2.ColumnMetadata,
-            com.google.bigtable.v2.ColumnMetadata.Builder,
-            com.google.bigtable.v2.ColumnMetadataOrBuilder>
+        com.google.bigtable.v2.ColumnMetadata, com.google.bigtable.v2.ColumnMetadata.Builder, com.google.bigtable.v2.ColumnMetadataOrBuilder> 
         internalGetColumnsFieldBuilder() {
       if (columnsBuilder_ == null) {
-        columnsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilder<
-                com.google.bigtable.v2.ColumnMetadata,
-                com.google.bigtable.v2.ColumnMetadata.Builder,
-                com.google.bigtable.v2.ColumnMetadataOrBuilder>(
-                columns_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        columnsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.bigtable.v2.ColumnMetadata, com.google.bigtable.v2.ColumnMetadata.Builder, com.google.bigtable.v2.ColumnMetadataOrBuilder>(
+                columns_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         columns_ = null;
       }
       return columnsBuilder_;
@@ -854,7 +772,6 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
 
   // @@protoc_insertion_point(class_scope:google.bigtable.v2.ProtoSchema)
   private static final com.google.bigtable.v2.ProtoSchema DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.bigtable.v2.ProtoSchema();
   }
@@ -863,27 +780,27 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ProtoSchema> PARSER =
-      new com.google.protobuf.AbstractParser<ProtoSchema>() {
-        @java.lang.Override
-        public ProtoSchema parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+  private static final com.google.protobuf.Parser<ProtoSchema>
+      PARSER = new com.google.protobuf.AbstractParser<ProtoSchema>() {
+    @java.lang.Override
+    public ProtoSchema parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
 
   public static com.google.protobuf.Parser<ProtoSchema> parser() {
     return PARSER;
@@ -898,4 +815,6 @@ public final class ProtoSchema extends com.google.protobuf.GeneratedMessage
   public com.google.bigtable.v2.ProtoSchema getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

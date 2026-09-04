@@ -6,14 +6,11 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface GetClientConfigurationRequestOrBuilder
-    extends
+public interface GetClientConfigurationRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.GetClientConfigurationRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance for which the client will target
    * with Data API requests.
@@ -21,17 +18,11 @@ public interface GetClientConfigurationRequestOrBuilder
    * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The instanceName.
    */
   java.lang.String getInstanceName();
-
   /**
-   *
-   *
    * <pre>
    * Required. The unique name of the instance for which the client will target
    * with Data API requests.
@@ -39,17 +30,13 @@ public interface GetClientConfigurationRequestOrBuilder
    * Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
    * </pre>
    *
-   * <code>
-   * string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
-   * </code>
-   *
+   * <code>string instance_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for instanceName.
    */
-  com.google.protobuf.ByteString getInstanceNameBytes();
+  com.google.protobuf.ByteString
+      getInstanceNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. The name of the AppProfile which will be used by the client when
    * sending requests in the Data API.
@@ -58,14 +45,10 @@ public interface GetClientConfigurationRequestOrBuilder
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The appProfileId.
    */
   java.lang.String getAppProfileId();
-
   /**
-   *
-   *
    * <pre>
    * Optional. The name of the AppProfile which will be used by the client when
    * sending requests in the Data API.
@@ -74,8 +57,8 @@ public interface GetClientConfigurationRequestOrBuilder
    * </pre>
    *
    * <code>string app_profile_id = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
-   *
    * @return The bytes for appProfileId.
    */
-  com.google.protobuf.ByteString getAppProfileIdBytes();
+  com.google.protobuf.ByteString
+      getAppProfileIdBytes();
 }

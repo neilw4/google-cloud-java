@@ -6,56 +6,45 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface GoAwayResponseOrBuilder
-    extends
+public interface GoAwayResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.GoAwayResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Server-generated reason for GOAWAY, including a plain-text description of
    * why. 'reason' may be used for CSM, while both may be logged.
    * </pre>
    *
    * <code>string reason = 1;</code>
-   *
    * @return The reason.
    */
   java.lang.String getReason();
-
   /**
-   *
-   *
    * <pre>
    * Server-generated reason for GOAWAY, including a plain-text description of
    * why. 'reason' may be used for CSM, while both may be logged.
    * </pre>
    *
    * <code>string reason = 1;</code>
-   *
    * @return The bytes for reason.
    */
-  com.google.protobuf.ByteString getReasonBytes();
+  com.google.protobuf.ByteString
+      getReasonBytes();
 
   /**
    * <code>string description = 2;</code>
-   *
    * @return The description.
    */
   java.lang.String getDescription();
-
   /**
    * <code>string description = 2;</code>
-   *
    * @return The bytes for description.
    */
-  com.google.protobuf.ByteString getDescriptionBytes();
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
 
   /**
-   *
-   *
    * <pre>
    * The last vRPC which was admitted by the AFE. The client may expect the
    * result from the vRPC on the stream before disconnecting, and should
@@ -63,7 +52,6 @@ public interface GoAwayResponseOrBuilder
    * </pre>
    *
    * <code>int64 last_rpc_id_admitted = 3;</code>
-   *
    * @return The lastRpcIdAdmitted.
    */
   long getLastRpcIdAdmitted();

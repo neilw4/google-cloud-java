@@ -6,30 +6,37 @@
 package com.google.bigtable.v2;
 
 @com.google.protobuf.Generated
-public interface SessionMutateRowRequestOrBuilder
-    extends
+public interface SessionMutateRowRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.bigtable.v2.SessionMutateRowRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>bytes key = 1;</code>
-   *
    * @return The key.
    */
   com.google.protobuf.ByteString getKey();
 
-  /** <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code> */
-  java.util.List<com.google.bigtable.v2.Mutation> getMutationsList();
-
-  /** <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code>
+   */
+  java.util.List<com.google.bigtable.v2.Mutation> 
+      getMutationsList();
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code>
+   */
   com.google.bigtable.v2.Mutation getMutations(int index);
-
-  /** <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code> */
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code>
+   */
   int getMutationsCount();
-
-  /** <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code> */
-  java.util.List<? extends com.google.bigtable.v2.MutationOrBuilder> getMutationsOrBuilderList();
-
-  /** <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code> */
-  com.google.bigtable.v2.MutationOrBuilder getMutationsOrBuilder(int index);
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code>
+   */
+  java.util.List<? extends com.google.bigtable.v2.MutationOrBuilder> 
+      getMutationsOrBuilderList();
+  /**
+   * <code>repeated .google.bigtable.v2.Mutation mutations = 2;</code>
+   */
+  com.google.bigtable.v2.MutationOrBuilder getMutationsOrBuilder(
+      int index);
 }
