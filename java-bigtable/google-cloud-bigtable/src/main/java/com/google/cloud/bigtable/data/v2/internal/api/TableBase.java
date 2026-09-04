@@ -41,8 +41,8 @@ import io.grpc.CallOptions;
 import io.grpc.Context;
 import io.grpc.Deadline;
 import io.grpc.Metadata;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ScheduledExecutorService;
 
 class TableBase implements AutoCloseable {
   private final SessionPool<?> sessionPool;
@@ -85,8 +85,8 @@ class TableBase implements AutoCloseable {
             stamped,
             sessionDescriptor,
             sessionPoolName,
-                timer,
-                (ScheduledExecutorService) backgroundExecutor);
+            timer,
+            (ScheduledExecutorService) backgroundExecutor);
 
     sessionPool.start(openReq, new Metadata());
 

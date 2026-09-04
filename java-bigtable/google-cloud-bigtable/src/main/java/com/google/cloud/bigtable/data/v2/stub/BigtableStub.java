@@ -26,6 +26,8 @@ import com.google.bigtable.v2.ExecuteQueryRequest;
 import com.google.bigtable.v2.ExecuteQueryResponse;
 import com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsRequest;
 import com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse;
+import com.google.bigtable.v2.InferInternalTypeMetadataRequest;
+import com.google.bigtable.v2.InferInternalTypeMetadataResponse;
 import com.google.bigtable.v2.MutateRowRequest;
 import com.google.bigtable.v2.MutateRowResponse;
 import com.google.bigtable.v2.MutateRowsRequest;
@@ -42,6 +44,8 @@ import com.google.bigtable.v2.ReadRowsRequest;
 import com.google.bigtable.v2.ReadRowsResponse;
 import com.google.bigtable.v2.SampleRowKeysRequest;
 import com.google.bigtable.v2.SampleRowKeysResponse;
+import com.google.bigtable.v2.SimpleExecuteQueryRequest;
+import com.google.bigtable.v2.SimpleExecuteQueryResponse;
 import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
@@ -98,8 +102,18 @@ public abstract class BigtableStub implements BackgroundResource {
     throw new UnsupportedOperationException("Not implemented: prepareQueryCallable()");
   }
 
+  public UnaryCallable<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+      inferInternalTypeMetadataCallable() {
+    throw new UnsupportedOperationException("Not implemented: inferInternalTypeMetadataCallable()");
+  }
+
   public ServerStreamingCallable<ExecuteQueryRequest, ExecuteQueryResponse> executeQueryCallable() {
     throw new UnsupportedOperationException("Not implemented: executeQueryCallable()");
+  }
+
+  public UnaryCallable<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+      simpleExecuteQueryCallable() {
+    throw new UnsupportedOperationException("Not implemented: simpleExecuteQueryCallable()");
   }
 
   @Override

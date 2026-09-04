@@ -471,6 +471,56 @@ public final class BigtableGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<
+          com.google.bigtable.v2.InferInternalTypeMetadataRequest,
+          com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+      getInferInternalTypeMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InferInternalTypeMetadata",
+      requestType = com.google.bigtable.v2.InferInternalTypeMetadataRequest.class,
+      responseType = com.google.bigtable.v2.InferInternalTypeMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<
+          com.google.bigtable.v2.InferInternalTypeMetadataRequest,
+          com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+      getInferInternalTypeMetadataMethod() {
+    io.grpc.MethodDescriptor<
+            com.google.bigtable.v2.InferInternalTypeMetadataRequest,
+            com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+        getInferInternalTypeMetadataMethod;
+    if ((getInferInternalTypeMetadataMethod = BigtableGrpc.getInferInternalTypeMetadataMethod)
+        == null) {
+      synchronized (BigtableGrpc.class) {
+        if ((getInferInternalTypeMetadataMethod = BigtableGrpc.getInferInternalTypeMetadataMethod)
+            == null) {
+          BigtableGrpc.getInferInternalTypeMetadataMethod =
+              getInferInternalTypeMetadataMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.google.bigtable.v2.InferInternalTypeMetadataRequest,
+                          com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(
+                          generateFullMethodName(SERVICE_NAME, "InferInternalTypeMetadata"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.google.bigtable.v2.InferInternalTypeMetadataRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.google.bigtable.v2.InferInternalTypeMetadataResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(
+                          new BigtableMethodDescriptorSupplier("InferInternalTypeMetadata"))
+                      .build();
+        }
+      }
+    }
+    return getInferInternalTypeMetadataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<
           com.google.bigtable.v2.ExecuteQueryRequest, com.google.bigtable.v2.ExecuteQueryResponse>
       getExecuteQueryMethod;
 
@@ -509,6 +559,53 @@ public final class BigtableGrpc {
       }
     }
     return getExecuteQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<
+          com.google.bigtable.v2.SimpleExecuteQueryRequest,
+          com.google.bigtable.v2.SimpleExecuteQueryResponse>
+      getSimpleExecuteQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SimpleExecuteQuery",
+      requestType = com.google.bigtable.v2.SimpleExecuteQueryRequest.class,
+      responseType = com.google.bigtable.v2.SimpleExecuteQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<
+          com.google.bigtable.v2.SimpleExecuteQueryRequest,
+          com.google.bigtable.v2.SimpleExecuteQueryResponse>
+      getSimpleExecuteQueryMethod() {
+    io.grpc.MethodDescriptor<
+            com.google.bigtable.v2.SimpleExecuteQueryRequest,
+            com.google.bigtable.v2.SimpleExecuteQueryResponse>
+        getSimpleExecuteQueryMethod;
+    if ((getSimpleExecuteQueryMethod = BigtableGrpc.getSimpleExecuteQueryMethod) == null) {
+      synchronized (BigtableGrpc.class) {
+        if ((getSimpleExecuteQueryMethod = BigtableGrpc.getSimpleExecuteQueryMethod) == null) {
+          BigtableGrpc.getSimpleExecuteQueryMethod =
+              getSimpleExecuteQueryMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.google.bigtable.v2.SimpleExecuteQueryRequest,
+                          com.google.bigtable.v2.SimpleExecuteQueryResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SimpleExecuteQuery"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.google.bigtable.v2.SimpleExecuteQueryRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.google.bigtable.v2.SimpleExecuteQueryResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(
+                          new BigtableMethodDescriptorSupplier("SimpleExecuteQuery"))
+                      .build();
+        }
+      }
+    }
+    return getSimpleExecuteQueryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<
@@ -917,6 +1014,24 @@ public final class BigtableGrpc {
      *
      *
      * <pre>
+     * NOTE: This API won't be generally available.
+     * Infers type metadata of a table, which includes column families and
+     * qualifiers, and corresponding inferred types of each column. This API will
+     * use the caller's default app_profile_id.
+     * </pre>
+     */
+    default void inferInternalTypeMetadata(
+        com.google.bigtable.v2.InferInternalTypeMetadataRequest request,
+        io.grpc.stub.StreamObserver<com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+            responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(
+          getInferInternalTypeMetadataMethod(), responseObserver);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Executes a SQL query against a particular Bigtable instance.
      * </pre>
      */
@@ -925,6 +1040,32 @@ public final class BigtableGrpc {
         io.grpc.stub.StreamObserver<com.google.bigtable.v2.ExecuteQueryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(
           getExecuteQueryMethod(), responseObserver);
+    }
+
+    /**
+     *
+     *
+     * <pre>
+     * Executes a SQL query against a particular Bigtable instance. The RPC
+     * returns at least 10 MiB of the proto-serialized result set (or just one row
+     * if the size of the proto-serialized representation of the row exceeds 10
+     * MiB). The RPC may return more than 10 MiB of proto-serialized result set
+     * for performance reasons.
+     * This RPC is only intended to be used by the `execute_sql` OneMCP tool. The
+     * RPC returns the UNIMPLEMENTED status code if called by any other client.
+     * This RPC does not adhere to the Cloud Breaking Change and Deprecation
+     * Policy (go/cloud-deprecation-policy). See go/gcp-as-platform:onemcp#policy
+     * for the rationale.
+     * Result sets can be also be fetched in streaming fashion by calling
+     * .
+     * </pre>
+     */
+    default void simpleExecuteQuery(
+        com.google.bigtable.v2.SimpleExecuteQueryRequest request,
+        io.grpc.stub.StreamObserver<com.google.bigtable.v2.SimpleExecuteQueryResponse>
+            responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(
+          getSimpleExecuteQueryMethod(), responseObserver);
     }
 
     /**
@@ -1208,6 +1349,26 @@ public final class BigtableGrpc {
      *
      *
      * <pre>
+     * NOTE: This API won't be generally available.
+     * Infers type metadata of a table, which includes column families and
+     * qualifiers, and corresponding inferred types of each column. This API will
+     * use the caller's default app_profile_id.
+     * </pre>
+     */
+    public void inferInternalTypeMetadata(
+        com.google.bigtable.v2.InferInternalTypeMetadataRequest request,
+        io.grpc.stub.StreamObserver<com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+            responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getInferInternalTypeMetadataMethod(), getCallOptions()),
+          request,
+          responseObserver);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Executes a SQL query against a particular Bigtable instance.
      * </pre>
      */
@@ -1216,6 +1377,34 @@ public final class BigtableGrpc {
         io.grpc.stub.StreamObserver<com.google.bigtable.v2.ExecuteQueryResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getExecuteQueryMethod(), getCallOptions()),
+          request,
+          responseObserver);
+    }
+
+    /**
+     *
+     *
+     * <pre>
+     * Executes a SQL query against a particular Bigtable instance. The RPC
+     * returns at least 10 MiB of the proto-serialized result set (or just one row
+     * if the size of the proto-serialized representation of the row exceeds 10
+     * MiB). The RPC may return more than 10 MiB of proto-serialized result set
+     * for performance reasons.
+     * This RPC is only intended to be used by the `execute_sql` OneMCP tool. The
+     * RPC returns the UNIMPLEMENTED status code if called by any other client.
+     * This RPC does not adhere to the Cloud Breaking Change and Deprecation
+     * Policy (go/cloud-deprecation-policy). See go/gcp-as-platform:onemcp#policy
+     * for the rationale.
+     * Result sets can be also be fetched in streaming fashion by calling
+     * .
+     * </pre>
+     */
+    public void simpleExecuteQuery(
+        com.google.bigtable.v2.SimpleExecuteQueryRequest request,
+        io.grpc.stub.StreamObserver<com.google.bigtable.v2.SimpleExecuteQueryResponse>
+            responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSimpleExecuteQueryMethod(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1471,6 +1660,23 @@ public final class BigtableGrpc {
      *
      *
      * <pre>
+     * NOTE: This API won't be generally available.
+     * Infers type metadata of a table, which includes column families and
+     * qualifiers, and corresponding inferred types of each column. This API will
+     * use the caller's default app_profile_id.
+     * </pre>
+     */
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse inferInternalTypeMetadata(
+        com.google.bigtable.v2.InferInternalTypeMetadataRequest request)
+        throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getInferInternalTypeMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Executes a SQL query against a particular Bigtable instance.
      * </pre>
      */
@@ -1479,6 +1685,30 @@ public final class BigtableGrpc {
         executeQuery(com.google.bigtable.v2.ExecuteQueryRequest request) {
       return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
           getChannel(), getExecuteQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
+     * Executes a SQL query against a particular Bigtable instance. The RPC
+     * returns at least 10 MiB of the proto-serialized result set (or just one row
+     * if the size of the proto-serialized representation of the row exceeds 10
+     * MiB). The RPC may return more than 10 MiB of proto-serialized result set
+     * for performance reasons.
+     * This RPC is only intended to be used by the `execute_sql` OneMCP tool. The
+     * RPC returns the UNIMPLEMENTED status code if called by any other client.
+     * This RPC does not adhere to the Cloud Breaking Change and Deprecation
+     * Policy (go/cloud-deprecation-policy). See go/gcp-as-platform:onemcp#policy
+     * for the rationale.
+     * Result sets can be also be fetched in streaming fashion by calling
+     * .
+     * </pre>
+     */
+    public com.google.bigtable.v2.SimpleExecuteQueryResponse simpleExecuteQuery(
+        com.google.bigtable.v2.SimpleExecuteQueryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSimpleExecuteQueryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1728,6 +1958,22 @@ public final class BigtableGrpc {
      *
      *
      * <pre>
+     * NOTE: This API won't be generally available.
+     * Infers type metadata of a table, which includes column families and
+     * qualifiers, and corresponding inferred types of each column. This API will
+     * use the caller's default app_profile_id.
+     * </pre>
+     */
+    public com.google.bigtable.v2.InferInternalTypeMetadataResponse inferInternalTypeMetadata(
+        com.google.bigtable.v2.InferInternalTypeMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInferInternalTypeMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Executes a SQL query against a particular Bigtable instance.
      * </pre>
      */
@@ -1735,6 +1981,30 @@ public final class BigtableGrpc {
         com.google.bigtable.v2.ExecuteQueryRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getExecuteQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
+     * Executes a SQL query against a particular Bigtable instance. The RPC
+     * returns at least 10 MiB of the proto-serialized result set (or just one row
+     * if the size of the proto-serialized representation of the row exceeds 10
+     * MiB). The RPC may return more than 10 MiB of proto-serialized result set
+     * for performance reasons.
+     * This RPC is only intended to be used by the `execute_sql` OneMCP tool. The
+     * RPC returns the UNIMPLEMENTED status code if called by any other client.
+     * This RPC does not adhere to the Cloud Breaking Change and Deprecation
+     * Policy (go/cloud-deprecation-policy). See go/gcp-as-platform:onemcp#policy
+     * for the rationale.
+     * Result sets can be also be fetched in streaming fashion by calling
+     * .
+     * </pre>
+     */
+    public com.google.bigtable.v2.SimpleExecuteQueryResponse simpleExecuteQuery(
+        com.google.bigtable.v2.SimpleExecuteQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSimpleExecuteQueryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1851,6 +2121,48 @@ public final class BigtableGrpc {
      *
      *
      * <pre>
+     * NOTE: This API won't be generally available.
+     * Infers type metadata of a table, which includes column families and
+     * qualifiers, and corresponding inferred types of each column. This API will
+     * use the caller's default app_profile_id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.google.bigtable.v2.InferInternalTypeMetadataResponse>
+        inferInternalTypeMetadata(com.google.bigtable.v2.InferInternalTypeMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getInferInternalTypeMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
+     * Executes a SQL query against a particular Bigtable instance. The RPC
+     * returns at least 10 MiB of the proto-serialized result set (or just one row
+     * if the size of the proto-serialized representation of the row exceeds 10
+     * MiB). The RPC may return more than 10 MiB of proto-serialized result set
+     * for performance reasons.
+     * This RPC is only intended to be used by the `execute_sql` OneMCP tool. The
+     * RPC returns the UNIMPLEMENTED status code if called by any other client.
+     * This RPC does not adhere to the Cloud Breaking Change and Deprecation
+     * Policy (go/cloud-deprecation-policy). See go/gcp-as-platform:onemcp#policy
+     * for the rationale.
+     * Result sets can be also be fetched in streaming fashion by calling
+     * .
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.google.bigtable.v2.SimpleExecuteQueryResponse>
+        simpleExecuteQuery(com.google.bigtable.v2.SimpleExecuteQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSimpleExecuteQueryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * This RPC is only intended to be used by the official Cloud Bigtable client
      * libraries to implement the Bigtable Session based protocol. It is subject
      * to change without notice.
@@ -1874,11 +2186,13 @@ public final class BigtableGrpc {
   private static final int METHODID_GENERATE_INITIAL_CHANGE_STREAM_PARTITIONS = 7;
   private static final int METHODID_READ_CHANGE_STREAM = 8;
   private static final int METHODID_PREPARE_QUERY = 9;
-  private static final int METHODID_EXECUTE_QUERY = 10;
-  private static final int METHODID_GET_CLIENT_CONFIGURATION = 11;
-  private static final int METHODID_OPEN_TABLE = 12;
-  private static final int METHODID_OPEN_AUTHORIZED_VIEW = 13;
-  private static final int METHODID_OPEN_MATERIALIZED_VIEW = 14;
+  private static final int METHODID_INFER_INTERNAL_TYPE_METADATA = 10;
+  private static final int METHODID_EXECUTE_QUERY = 11;
+  private static final int METHODID_SIMPLE_EXECUTE_QUERY = 12;
+  private static final int METHODID_GET_CLIENT_CONFIGURATION = 13;
+  private static final int METHODID_OPEN_TABLE = 14;
+  private static final int METHODID_OPEN_AUTHORIZED_VIEW = 15;
+  private static final int METHODID_OPEN_MATERIALIZED_VIEW = 16;
 
   private static final class MethodHandlers<Req, Resp>
       implements io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1958,10 +2272,23 @@ public final class BigtableGrpc {
               (io.grpc.stub.StreamObserver<com.google.bigtable.v2.PrepareQueryResponse>)
                   responseObserver);
           break;
+        case METHODID_INFER_INTERNAL_TYPE_METADATA:
+          serviceImpl.inferInternalTypeMetadata(
+              (com.google.bigtable.v2.InferInternalTypeMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.google.bigtable.v2.InferInternalTypeMetadataResponse>)
+                  responseObserver);
+          break;
         case METHODID_EXECUTE_QUERY:
           serviceImpl.executeQuery(
               (com.google.bigtable.v2.ExecuteQueryRequest) request,
               (io.grpc.stub.StreamObserver<com.google.bigtable.v2.ExecuteQueryResponse>)
+                  responseObserver);
+          break;
+        case METHODID_SIMPLE_EXECUTE_QUERY:
+          serviceImpl.simpleExecuteQuery(
+              (com.google.bigtable.v2.SimpleExecuteQueryRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.bigtable.v2.SimpleExecuteQueryResponse>)
                   responseObserver);
           break;
         case METHODID_GET_CLIENT_CONFIGURATION:
@@ -2069,11 +2396,25 @@ public final class BigtableGrpc {
                     com.google.bigtable.v2.PrepareQueryRequest,
                     com.google.bigtable.v2.PrepareQueryResponse>(service, METHODID_PREPARE_QUERY)))
         .addMethod(
+            getInferInternalTypeMetadataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+                new MethodHandlers<
+                    com.google.bigtable.v2.InferInternalTypeMetadataRequest,
+                    com.google.bigtable.v2.InferInternalTypeMetadataResponse>(
+                    service, METHODID_INFER_INTERNAL_TYPE_METADATA)))
+        .addMethod(
             getExecuteQueryMethod(),
             io.grpc.stub.ServerCalls.asyncServerStreamingCall(
                 new MethodHandlers<
                     com.google.bigtable.v2.ExecuteQueryRequest,
                     com.google.bigtable.v2.ExecuteQueryResponse>(service, METHODID_EXECUTE_QUERY)))
+        .addMethod(
+            getSimpleExecuteQueryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+                new MethodHandlers<
+                    com.google.bigtable.v2.SimpleExecuteQueryRequest,
+                    com.google.bigtable.v2.SimpleExecuteQueryResponse>(
+                    service, METHODID_SIMPLE_EXECUTE_QUERY)))
         .addMethod(
             getGetClientConfigurationMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2158,7 +2499,9 @@ public final class BigtableGrpc {
                       .addMethod(getGenerateInitialChangeStreamPartitionsMethod())
                       .addMethod(getReadChangeStreamMethod())
                       .addMethod(getPrepareQueryMethod())
+                      .addMethod(getInferInternalTypeMetadataMethod())
                       .addMethod(getExecuteQueryMethod())
+                      .addMethod(getSimpleExecuteQueryMethod())
                       .addMethod(getGetClientConfigurationMethod())
                       .addMethod(getOpenTableMethod())
                       .addMethod(getOpenAuthorizedViewMethod())

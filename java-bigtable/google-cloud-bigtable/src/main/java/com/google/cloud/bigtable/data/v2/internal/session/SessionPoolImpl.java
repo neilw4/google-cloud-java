@@ -257,12 +257,19 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
                 }
                 int delta = poolSizer.getScaleDelta();
                 double exactToRemove = sessions.getAllSessions().size() * 0.1;
-                int sessionsToRemove = (int) exactToRemove + (java.util.concurrent.ThreadLocalRandom.current().nextDouble() < (exactToRemove - (int) exactToRemove) ? 1 : 0);
+                int sessionsToRemove =
+                    (int) exactToRemove
+                        + (java.util.concurrent.ThreadLocalRandom.current().nextDouble()
+                                < (exactToRemove - (int) exactToRemove)
+                            ? 1
+                            : 0);
                 int removedCount = 0;
-                java.util.Map<SessionList.AfeHandle, Integer> removedPerAfe = new java.util.HashMap<>();
+                java.util.Map<SessionList.AfeHandle, Integer> removedPerAfe =
+                    new java.util.HashMap<>();
 
                 while (removedCount < sessionsToRemove) {
-                  List<SessionList.AfeHandle> afes = new ArrayList<>(sessions.getAfesWithReadySessions());
+                  List<SessionList.AfeHandle> afes =
+                      new ArrayList<>(sessions.getAfesWithReadySessions());
                   if (afes.isEmpty()) {
                     break;
                   }
@@ -283,7 +290,12 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
                   SessionHandle handle = maxAfe.sessions.peek();
                   if (handle != null) {
-                    // TODO: update the poolScaleTask logic for removing extra sessions. First, target AFEs with more sessions than afe.afeLoad.getAvailableRif(), and remove the ones with the most sessions. If that prevents AFEs from having too many sessions, remove sessions from those with the lowest weight - prefer to remove all sessions from one afe as opposed to a portion of sessions from many afes.
+                    // TODO: update the poolScaleTask logic for removing extra sessions. First,
+                    // target AFEs with more sessions than afe.afeLoad.getAvailableRif(), and remove
+                    // the ones with the most sessions. If that prevents AFEs from having too many
+                    // sessions, remove sessions from those with the lowest weight - prefer to
+                    // remove all sessions from one afe as opposed to a portion of sessions from
+                    // many afes.
                     handle.onSessionClosing();
                     handle.getSession().close(CloseSessionRequest.getDefaultInstance());
                     removedPerAfe.put(maxAfe, removedPerAfe.getOrDefault(maxAfe, 0) + 1);
@@ -295,7 +307,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
                 delta += removedCount;
 
                 for (int i = delta; i > 0; i--) {
-                  createSession(openParams, /*retryFailures=*/ false);
+                  createSession(openParams, /* retryFailures= */ false);
                 }
               }
             },

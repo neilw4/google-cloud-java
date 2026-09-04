@@ -87,13 +87,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
 
       <!-- Using maven site plugin only as a hook for javadoc:aggregate, don't need the reports -->
       <plugin>

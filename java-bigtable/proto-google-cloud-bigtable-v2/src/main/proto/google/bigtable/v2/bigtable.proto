@@ -316,6 +316,26 @@ service Bigtable {
     option (google.api.method_signature) = "instance_name,query,app_profile_id";
   }
 
+  // NOTE: This API won't be generally available.
+  // Infers type metadata of a table, which includes column families and
+  // qualifiers, and corresponding inferred types of each column. This API will
+  // use the caller's default app_profile_id.
+  rpc InferInternalTypeMetadata(InferInternalTypeMetadataRequest)
+      returns (InferInternalTypeMetadataResponse) {
+    option (google.api.http) = {
+      get: "/v2/{table_name=projects/*/instances/*/tables/*}:inferInternalTypeMetadata"
+    };
+    option (google.api.routing) = {
+      routing_parameters {
+        field: "table_name"
+        path_template: "{table_name=projects/*/instances/*/tables/*}"
+      }
+      routing_parameters { field: "app_profile_id" }
+    };
+    option (google.api.method_signature) =
+        "table_name,rows_limit,columns_per_row_limit";
+  }
+
   // Executes a SQL query against a particular Bigtable instance.
   rpc ExecuteQuery(ExecuteQueryRequest) returns (stream ExecuteQueryResponse) {
     option (google.api.http) = {
@@ -333,6 +353,32 @@ service Bigtable {
     option (google.api.method_signature) = "instance_name,query,app_profile_id";
   }
 
+  // Executes a SQL query against a particular Bigtable instance. The RPC
+  // returns at least 10 MiB of the proto-serialized result set (or just one row
+  // if the size of the proto-serialized representation of the row exceeds 10
+  // MiB). The RPC may return more than 10 MiB of proto-serialized result set
+  // for performance reasons.
+  //
+  // This RPC is only intended to be used by the `execute_sql` OneMCP tool. The
+  // RPC returns the UNIMPLEMENTED status code if called by any other client.
+  //
+  // This RPC does not adhere to the Cloud Breaking Change and Deprecation
+  // Policy (go/cloud-deprecation-policy). See go/gcp-as-platform:onemcp#policy
+  // for the rationale.
+  //
+  // Result sets can be also be fetched in streaming fashion by calling
+  // .
+  rpc SimpleExecuteQuery(SimpleExecuteQueryRequest)
+      returns (SimpleExecuteQueryResponse) {
+    option (google.api.http) = {
+      post: "/v2/{instance_name=projects/*/instances/*}:simpleExecuteQuery"
+      body: "*"
+    };
+    option (google.api.method_signature) = "instance_name,query";
+    option (google.api.method_signature) = "instance_name,query,app_profile_id";
+  }
+
+  //
   // This RPC is only intended to be used by the official Cloud Bigtable client
   // libraries to implement the Bigtable Session based protocol. It is subject
   // to change without notice.
@@ -486,7 +532,7 @@ message ReadRowsResponse {
     int64 timestamp_micros = 4;
 
     // Labels applied to the cell by a
-    // [RowFilter][google.bigtable.v2.RowFilter].  Labels are only set
+    // .  Labels are only set
     // on the first CellChunk per cell.
     repeated string labels = 5;
 
@@ -579,7 +625,7 @@ message SampleRowKeysRequest {
   // from all rows.
   // The output will always return the end key in the range as the last sample
   // returned.
-  RowRange row_range = 6 [(google.api.field_behavior) = OPTIONAL];
+  RowRange row_range = 6;
 }
 
 // Response message for Bigtable.SampleRowKeys.
@@ -721,6 +767,8 @@ message MutateRowsResponse {
   // One or more results for Entries from the batch request.
   repeated Entry entries = 1;
 
+  ServerStats server_stats = 2;
+
   // Information about how client should limit the rate (QPS). Primirily used by
   // supported official Cloud Bigtable clients. If unset, the rate limit info is
   // not provided by the server.
@@ -747,6 +795,25 @@ message RateLimitInfo {
   // For example, QPS can be used as long as each request involves a similar
   // amount of work.
   double factor = 2;
+}
+
+message ServerStats {
+  // Contains tabletserver stats, e.g. CPU utilization.
+  message CPUStats {
+    // This is the recent CPU utilization for one of the tabletservers that this
+    // request touched, in unit of milli-GCU seconds per second. The duration of
+    // the measure is determined in the server, which is usually 5 seconds.
+    int32 recent_gcu_milliseconds_per_second = 1;
+
+    // This is the CPU capacity of the tabletserver, measured in milli-GCU. For
+    // our regular CBT nodes, it's 8000.
+    int32 milligcu_limit = 2;
+  }
+
+  // Currently we have 1 entry per underlying RPC. Note that multiple RPCs may
+  // be sent to the same tabletserver and we don't de-duplicate. We only get the
+  // stats if the RPC returns OK.
+  repeated CPUStats cpu_stats = 1;
 }
 
 // Request message for Bigtable.CheckAndMutateRow.
@@ -829,7 +896,10 @@ message PingAndWarmRequest {
 }
 
 // Response message for Bigtable.PingAndWarm connection keepalive and warming.
-message PingAndWarmResponse {}
+message PingAndWarmResponse {
+  // Data received from the server.
+  bytes ping_data = 1;
+}
 
 // Request message for Bigtable.ReadModifyWriteRow.
 message ReadModifyWriteRowRequest {
@@ -1123,8 +1193,101 @@ message ReadChangeStreamResponse {
   }
 }
 
+// Note: This API won't be generally available.
+// Request message for InferInternalTypeMetadata
+message InferInternalTypeMetadataRequest {
+  // Required. The unique name of the requested table.
+  // Values are of the form
+  // `projects/{project}/instances/{instance}/tables/{table}`.
+  string table_name = 1 [
+    (google.api.field_behavior) = REQUIRED,
+    (google.api.resource_reference) = {
+      type: "bigtableadmin.googleapis.com/Table"
+    }
+  ];
+
+  // This API only accepts the empty value of app_profile_id.
+  string app_profile_id = 5;
+
+  // The API will scan the first `rows_limit` rows in the table. The limit must
+  // be greater than 0 and less than or equal to 1000, otherwise the request
+  // will fail.
+  int32 rows_limit = 3;
+
+  // The API will scan the first `columns_per_row_limit` columns in each row.
+  // The limit must be greater than 0 and less than or equal to 1000, otherwise
+  // the request will fail.
+  int32 columns_per_row_limit = 4;
+}
+
+// Note: This API is not generally available. Users must be allowlisted
+// Response message for InferInternalTypeMetadata
+message InferInternalTypeMetadataResponse {
+  // Represent a column family
+  message Family {
+    // Column family name
+    string family_name = 1;
+
+    // List of columns in the column family
+    repeated Column columns = 2;
+  }
+
+  // Represents a column
+  message Column {
+    // Column qualifier
+    bytes qualifier = 1;
+
+    // Type metadata of the column
+    Type type = 2;
+  }
+
+  // Type metadata definition
+  enum Type {
+    // Bytes as default type
+    TYPE_BYTES = 0;
+
+    // UTF-8 encoded string
+    TYPE_STRING = 1;
+
+    // The following case-insensitive strings are interpreted as boolean
+    // `true`: "true", "t", "yes", "y", "1".
+    // The following case-insensitive strings are interpreted as boolean
+    // `false`: "false", "f", "no", "n", "0"
+    TYPE_BOOLEAN = 2;
+
+    // For integer that is UTF-8 encoded. The string must reflect a
+    // base-10 integer whose value falls within the range [−9223372036854775808,
+    // +9223372036854775807] (optionally preceded by a `+` or `-`).
+    TYPE_INTEGER = 3;
+
+    // For float that is UTF-8 encoded. The string must reflect a base-10
+    // floating point number. For number that overflow a double, e.g. big
+    // numeric, we will interpret that number as TYPE_FLOAT with less precision.
+    // See https://en.cppreference.com/w/c/string/byte/strtof for details about
+    // the allowed formats for `str` following the "C" locale.
+    TYPE_FLOAT = 4;
+  }
+
+  // List of column families in the response
+  repeated Family family = 1;
+}
+
 // Request message for Bigtable.ExecuteQuery
 message ExecuteQueryRequest {
+  // The desired view into RequestStats that should be returned in the response.
+  enum RequestStatsView {
+    // The default / unset value.
+    REQUEST_STATS_VIEW_UNSPECIFIED = 0;
+
+    // No request stats will be returned.
+    REQUEST_STATS_VIEW_NONE = 1;
+
+    // Simple request stats will be returned. See the
+    // `RequestStats.SimpleSqlReadStatsView` message for more details on which
+    // stats are returned.
+    REQUEST_STATS_VIEW_SIMPLE = 2;
+  }
+
   // Required. The unique name of the instance against which the query should be
   // executed.
   // Values are of the form `projects/<project>/instances/<instance>`
@@ -1164,7 +1327,7 @@ message ExecuteQueryRequest {
   oneof data_format {
     // Protocol buffer format as described by ProtoSchema and ProtoRows
     // messages.
-    ProtoFormat proto_format = 4 [deprecated = true];
+    ProtoFormat proto_format = 4;
   }
 
   // Optional. If this request is resuming a previously interrupted query
@@ -1183,13 +1346,13 @@ message ExecuteQueryRequest {
   // the query string.
   //
   // For example, if
-  // `params["firstName"] = bytes_value: "foo" type {bytes_type {}}`
+  // `params= bytes_value: "foo" type {bytes_type {}}`
   // then `@firstName` will be replaced with googlesql bytes value "foo" in the
   // query string during query evaluation.
   //
   // If `Value.kind` is not set, the value is treated as a NULL value of the
   // given type. For example, if
-  // `params["firstName"] = type {string_type {}}`
+  // `params= type {string_type {}}`
   // then `@firstName` will be replaced with googlesql null string.
   //
   // If `query` is set, any empty `Value.type` in the map will be rejected with
@@ -1200,6 +1363,12 @@ message ExecuteQueryRequest {
   // `Value.type` must match the corresponding `param_types` entry, or be
   // rejected with `INVALID_ARGUMENT`.
   map<string, Value> params = 7 [(google.api.field_behavior) = REQUIRED];
+
+  // The view into RequestStats, as described above. This will default to
+  // REQUEST_STATS_VIEW_NONE if not set. Request stats may still be empty
+  // even if it was requested, because the stats is missing or incomplete. For
+  // example, no request stats will be returned if `resume_token` is set.
+  RequestStatsView request_stats_view = 10;
 
   // Optional. This map provides the runtime values returned by the
   // VIEW_PARAMETERS() function calls, typically used for user-level scoping of
@@ -1229,6 +1398,61 @@ message ExecuteQueryResponse {
     // interpreted.
     PartialResultSet results = 2;
   }
+
+  // Return query performance statistics based on the requested
+  // `request_stats_view` and the query itself. The field is only populated in
+  // the last response of the stream, and it may be empty even if requested.
+  RequestStats request_stats = 3;
+}
+
+// Request message for Bigtable.SimpleExecuteQuery
+message SimpleExecuteQueryRequest {
+  // Required. The unique name of the instance against which the query should be
+  // executed.
+  // Format: `projects/<project>/instances/<instance>`
+  string instance_name = 1 [
+    (google.api.field_behavior) = REQUIRED,
+    (google.api.resource_reference) = {
+      type: "bigtableadmin.googleapis.com/Instance"
+    }
+  ];
+
+  // Optional. This value specifies routing for replication. If not specified,
+  // the `default` application profile will be used.
+  string app_profile_id = 2 [(google.api.field_behavior) = OPTIONAL];
+
+  // Required. The query string.
+  string query = 3 [(google.api.field_behavior) = REQUIRED];
+
+  // Optional. The page token, received from a previous `SimpleExecuteQuery`
+  // call. Provide this to retrieve the subsequent rows of the result set.
+  //
+  // When paginating, all other parameters provided to `SimpleExecuteQuery` must
+  // match the call that provided the page token.
+  string page_token = 4 [(google.api.field_behavior) = OPTIONAL];
+
+  // This map provides the runtime values returned by the VIEW_PARAMETERS()
+  // function calls, typically used for user-level scoping of data based on
+  // identity.
+  //
+  // The key is the name of the view parameter e.g. `user_id`, and
+  // the value is the parameter value e.g. `alice@example.com`.
+  map<string, Value> view_parameters = 5;
+}
+
+// Response message for Bigtable.SimpleExecuteQuery
+message SimpleExecuteQueryResponse {
+  // Schema of the columns in the result set.
+  ProtoSchema schema = 1;
+
+  // The rows in the result set wherein each row contains values with schema
+  // matching the `schema` field above.
+  repeated ArrayValue rows = 2;
+
+  // Optional. A token that can be sent as `page_token` to retrieve the next
+  // rows in the result set. If this field is omitted, there are no subsequent
+  // rows.
+  string next_page_token = 3 [(google.api.field_behavior) = OPTIONAL];
 }
 
 // Request message for Bigtable.PrepareQuery
@@ -1269,7 +1493,7 @@ message PrepareQueryRequest {
   // `@` character followed by the parameter name (for example, `@firstName`) in
   // the query string.
   //
-  // For example, if param_types["firstName"] = Bytes then @firstName will be a
+  // For example, if param_types= Bytes then @firstName will be a
   // query parameter of type Bytes. The specific `Value` to be used for the
   // query execution must be sent in `ExecuteQueryRequest` in the `params` map.
   map<string, Type> param_types = 6 [(google.api.field_behavior) = REQUIRED];

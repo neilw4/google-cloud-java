@@ -16,7 +16,6 @@
 
 package com.google.cloud.bigtable.data.v2.internal.util;
 
-import com.google.bigtable.v2.BigtableGrpc;
 import com.google.bigtable.v2.ClientConfiguration;
 import com.google.bigtable.v2.ClientConfiguration.PollingCase;
 import com.google.bigtable.v2.FeatureFlags;
@@ -30,10 +29,6 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.TextFormat;
 import com.google.protobuf.util.Durations;
-import io.grpc.CallOptions;
-import io.grpc.ClientCall;
-import io.grpc.ClientCall.Listener;
-import io.grpc.Deadline;
 import io.grpc.ManagedChannel;
 import io.grpc.Metadata;
 import io.grpc.Status;

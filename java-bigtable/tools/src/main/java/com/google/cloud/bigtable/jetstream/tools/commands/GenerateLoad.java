@@ -90,42 +90,43 @@ public class GenerateLoad implements Callable<Void> {
       names = "--key",
       description = "row key as a string",
       converter = ByteStringOptionConverter.class)
-  private ByteString[] rowKeys = {ByteString.copyFromUtf8("0"),
-                                  ByteString.copyFromUtf8("1"),
-                                  ByteString.copyFromUtf8("2"),
-                                  ByteString.copyFromUtf8("3"),
-                                  ByteString.copyFromUtf8("4"),
-                                  ByteString.copyFromUtf8("5"),
-                                  ByteString.copyFromUtf8("6"),
-                                  ByteString.copyFromUtf8("7"),
-                                  ByteString.copyFromUtf8("8"),
-                                  ByteString.copyFromUtf8("9"),
-                                  ByteString.copyFromUtf8("a"),
-                                  ByteString.copyFromUtf8("b"),
-                                  ByteString.copyFromUtf8("c"),
-                                  ByteString.copyFromUtf8("d"),
-                                  ByteString.copyFromUtf8("e"),
-                                  ByteString.copyFromUtf8("f"),
-                                  ByteString.copyFromUtf8("g"),
-                                  ByteString.copyFromUtf8("h"),
-                                  ByteString.copyFromUtf8("i"),
-                                  ByteString.copyFromUtf8("j"),
-                                  ByteString.copyFromUtf8("k"),
-                                  ByteString.copyFromUtf8("l"),
-                                  ByteString.copyFromUtf8("m"),
-                                  ByteString.copyFromUtf8("n"),
-                                  ByteString.copyFromUtf8("o"),
-                                  ByteString.copyFromUtf8("p"),
-                                  ByteString.copyFromUtf8("q"),
-                                  ByteString.copyFromUtf8("r"),
-                                  ByteString.copyFromUtf8("s"),
-                                  ByteString.copyFromUtf8("t"),
-                                  ByteString.copyFromUtf8("u"),
-                                  ByteString.copyFromUtf8("v"),
-                                  ByteString.copyFromUtf8("w"),
-                                  ByteString.copyFromUtf8("x"),
-                                  ByteString.copyFromUtf8("y"),
-                                  ByteString.copyFromUtf8("z")
+  private ByteString[] rowKeys = {
+    ByteString.copyFromUtf8("0"),
+    ByteString.copyFromUtf8("1"),
+    ByteString.copyFromUtf8("2"),
+    ByteString.copyFromUtf8("3"),
+    ByteString.copyFromUtf8("4"),
+    ByteString.copyFromUtf8("5"),
+    ByteString.copyFromUtf8("6"),
+    ByteString.copyFromUtf8("7"),
+    ByteString.copyFromUtf8("8"),
+    ByteString.copyFromUtf8("9"),
+    ByteString.copyFromUtf8("a"),
+    ByteString.copyFromUtf8("b"),
+    ByteString.copyFromUtf8("c"),
+    ByteString.copyFromUtf8("d"),
+    ByteString.copyFromUtf8("e"),
+    ByteString.copyFromUtf8("f"),
+    ByteString.copyFromUtf8("g"),
+    ByteString.copyFromUtf8("h"),
+    ByteString.copyFromUtf8("i"),
+    ByteString.copyFromUtf8("j"),
+    ByteString.copyFromUtf8("k"),
+    ByteString.copyFromUtf8("l"),
+    ByteString.copyFromUtf8("m"),
+    ByteString.copyFromUtf8("n"),
+    ByteString.copyFromUtf8("o"),
+    ByteString.copyFromUtf8("p"),
+    ByteString.copyFromUtf8("q"),
+    ByteString.copyFromUtf8("r"),
+    ByteString.copyFromUtf8("s"),
+    ByteString.copyFromUtf8("t"),
+    ByteString.copyFromUtf8("u"),
+    ByteString.copyFromUtf8("v"),
+    ByteString.copyFromUtf8("w"),
+    ByteString.copyFromUtf8("x"),
+    ByteString.copyFromUtf8("y"),
+    ByteString.copyFromUtf8("z")
   };
 
   @Option(names = "--concurrency", description = "number of concurrent reads")
@@ -160,30 +161,38 @@ public class GenerateLoad implements Callable<Void> {
 
   @Override
   public Void call() throws Exception {
-    final AtomicReference<StatsTracker> currentTracker = new AtomicReference<>(new StatsTracker(Math.max(100_000, qps * 20)));
+    final AtomicReference<StatsTracker> currentTracker =
+        new AtomicReference<>(new StatsTracker(Math.max(100_000, qps * 20)));
     ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-    scheduler.scheduleAtFixedRate(() -> {
-      StatsTracker oldTracker = currentTracker.getAndSet(new StatsTracker(Math.max(100_000, qps * 20)));
-      int count = oldTracker.count.get();
-      int validCount = Math.min(count, oldTracker.latencies.length);
-      long[] lats = new long[validCount];
-      System.arraycopy(oldTracker.latencies, 0, lats, 0, validCount);
-      Arrays.sort(lats);
+    scheduler.scheduleAtFixedRate(
+        () -> {
+          StatsTracker oldTracker =
+              currentTracker.getAndSet(new StatsTracker(Math.max(100_000, qps * 20)));
+          int count = oldTracker.count.get();
+          int validCount = Math.min(count, oldTracker.latencies.length);
+          long[] lats = new long[validCount];
+          System.arraycopy(oldTracker.latencies, 0, lats, 0, validCount);
+          Arrays.sort(lats);
 
-      long elapsedNanos = System.nanoTime() - oldTracker.startTime;
-      double elapsedSecs = elapsedNanos / 1e9;
-      double rps = validCount / elapsedSecs;
-      double fraction = rps * concurrency / qps;
+          long elapsedNanos = System.nanoTime() - oldTracker.startTime;
+          double elapsedSecs = elapsedNanos / 1e9;
+          double rps = validCount / elapsedSecs;
+          double fraction = rps * concurrency / qps;
 
-      long p50 = validCount > 0 ? lats[(int)(validCount * 0.50)] : 0;
-      long p90 = validCount > 0 ? lats[(int)(validCount * 0.90)] : 0;
-      long p95 = validCount > 0 ? lats[(int)(validCount * 0.95)] : 0;
-      long p99 = validCount > 0 ? lats[(int)(validCount * 0.99)] : 0;
-      long p999 = validCount > 0 ? lats[(int)(validCount * 0.999)] : 0;
+          long p50 = validCount > 0 ? lats[(int) (validCount * 0.50)] : 0;
+          long p90 = validCount > 0 ? lats[(int) (validCount * 0.90)] : 0;
+          long p95 = validCount > 0 ? lats[(int) (validCount * 0.95)] : 0;
+          long p99 = validCount > 0 ? lats[(int) (validCount * 0.99)] : 0;
+          long p999 = validCount > 0 ? lats[(int) (validCount * 0.999)] : 0;
 
-      System.out.printf("RPS: %.2f, Fraction of expected: %.4f, p50: %d ms, p90: %d ms, p95: %d ms, p99: %d ms, p99.9: %d ms%n",
-          rps, fraction, p50, p90, p95, p99, p999);
-    }, 10, 10, TimeUnit.SECONDS);
+          System.out.printf(
+              "RPS: %.2f, Fraction of expected: %.4f, p50: %d ms, p90: %d ms, p95: %d ms, p99: %d"
+                  + " ms, p99.9: %d ms%n",
+              rps, fraction, p50, p90, p95, p99, p999);
+        },
+        10,
+        10,
+        TimeUnit.SECONDS);
 
     byte[] payloadData = new byte[payloadSize];
     new Random().nextBytes(payloadData);

@@ -1,0 +1,9 @@
+syntax = "proto2";
+package google.api;
+import "google/protobuf/descriptor.proto";
+message FieldAuditing {
+  optional string directive = 1;
+}
+extend google.protobuf.FieldOptions {
+  optional FieldAuditing field_auditing = 55555;
+}

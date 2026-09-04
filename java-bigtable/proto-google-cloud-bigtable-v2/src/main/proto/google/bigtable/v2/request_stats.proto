@@ -44,6 +44,46 @@ option ruby_package = "Google::Cloud::Bigtable::V2";
 // over the course of a read, e.g. how many results were scanned in a read
 // operation versus the results returned.
 message ReadIterationStats {
+  // Captures information about the usage of the memory layer during the read.
+  message MemoryLayerStats {
+    // Reason why the entire request cannot use the memory layer.
+    enum RequestIneligibilityReason {
+      // The request was eligible to use the memory layer.
+      REQUEST_ELIGIBLE = 0;
+
+      // The client library version is outdated and does not support the memory
+      // layer.
+      CLIENT_VERSION_OUTDATED = 1;
+
+      // The app profile used for the request does not have a memory layer
+      // configured.
+      APP_PROFILE_NO_MEMORY_CONFIG = 2;
+
+      // The request was throttled and bypassed the memory layer.
+      REQUEST_THROTTLED = 3;
+
+      // The rowset in the request is not supported by the memory layer.
+      ROWSET_INELIGIBLE = 4;
+
+      // The filter in the request is not supported by the memory layer.
+      FILTER_INELIGIBLE = 5;
+
+      // The memory layer is disabled or unavailable.
+      MEMORY_LAYER_DISABLED = 6;
+
+      // The request was executed with a transaction, which is not supported by
+      // the memory layer.
+      TRANSACTIONS_UNSUPPORTED = 7;
+    }
+
+    // Reason why the entire request cannot use the memory layer.
+    RequestIneligibilityReason request_ineligibility_reason = 1;
+
+    // Number of times a row access attempt resulted in a given outcome.
+    // Only contains the very first result for each row.
+    map<int32, int64> row_result_counts = 2;
+  }
+
   // The rows seen (scanned) as part of the request. This includes the count of
   // rows returned, as captured below.
   int64 rows_seen_count = 1;
@@ -57,6 +97,20 @@ message ReadIterationStats {
 
   // The cells returned as part of the request.
   int64 cells_returned_count = 4;
+
+  // Statistics about the memory layer for this read.
+  MemoryLayerStats memory_layer_stats = 6;
+}
+
+// TableReadIterationStats captures iteration stats for a single table in a
+// query.
+message TableReadIterationStats {
+  // The full resource name of the table
+  // (`projects/<project>/instances/<instance>/tables/<table>`).
+  string table_name = 1;
+
+  // The iteration statistics captured for this table during query execution.
+  ReadIterationStats read_iteration_stats = 2;
 }
 
 // RequestLatencyStats provides a measurement of the latency of the request as
@@ -96,6 +150,25 @@ message FullReadStatsView {
   RequestLatencyStats request_latency_stats = 2;
 }
 
+// SimpleSqlReadStatsView captures some simple stats of a SQL read. This view
+// captures the rows and cells seen and returned, as well as the latency of the
+// request. The view may be empty, even if requested, if the stats are missing
+// or incomplete.
+message SimpleSqlReadStatsView {
+  // Iteration stats describe how efficient the read is, e.g. comparing
+  // rows seen vs. rows returned or cells seen vs cells returned can provide an
+  // indication of read efficiency (the higher the ratio of seen to retuned the
+  // better).
+  ReadIterationStats read_iteration_stats = 1;
+
+  // Request latency stats describe the time taken to complete a request, from
+  // the server side.
+  RequestLatencyStats request_latency_stats = 2;
+
+  // Read iteration stats broken down by table.
+  repeated TableReadIterationStats per_table_read_iteration_stats = 3;
+}
+
 // RequestStats is the container for additional information pertaining to a
 // single request, helpful for evaluating the performance of the sent request.
 // Currently, the following method is supported: google.bigtable.v2.ReadRows
@@ -108,5 +181,10 @@ message RequestStats {
     // Available with the ReadRowsRequest.RequestStatsView.REQUEST_STATS_FULL
     // view, see package google.bigtable.v2.
     FullReadStatsView full_read_stats_view = 1;
+
+    // Available with the
+    // ExecuteQueryRequest.RequestStatsView.REQUEST_STATS_VIEW_SIMPLE view, see
+    // package google.bigtable.v2.
+    SimpleSqlReadStatsView simple_sql_read_stats_view = 2;
   }
 }

@@ -47,7 +47,8 @@ public class Resource {
 
   private static final class TableNameConverter implements ITypeConverter<TableName> {
     // private static final String[] TABLES = {"mytable", "mytable2", "mytable3", "mytable4"};
-    // private static final String RANDOM_TABLE = TABLES[new java.util.Random().nextInt(TABLES.length)];
+    // private static final String RANDOM_TABLE = TABLES[new
+    // java.util.Random().nextInt(TABLES.length)];
 
     @Override
     public TableName convert(String value) {

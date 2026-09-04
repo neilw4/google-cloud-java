@@ -108,7 +108,10 @@ public class Ycsb implements Callable<Void> {
   @Option(
       names = "--dataintegrity",
       description =
-          "Enable data verification in Ycsb. This will add new counters to the YCSB. The counters will appear at the end of the run as `[VERIFY], Return=UNEXPECTED_STATE, $count`. Please note that this will only work on a table that was loaded with dataintegrity enabled.")
+          "Enable data verification in Ycsb. This will add new counters to the YCSB. The counters"
+              + " will appear at the end of the run as `[VERIFY], Return=UNEXPECTED_STATE, $count`."
+              + " Please note that this will only work on a table that was loaded with"
+              + " dataintegrity enabled.")
   private boolean dataIntegrity = false;
 
   @Option(names = "--load", description = "Read write portion")

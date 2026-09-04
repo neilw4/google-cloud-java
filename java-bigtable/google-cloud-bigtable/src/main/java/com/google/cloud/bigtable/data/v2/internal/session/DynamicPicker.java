@@ -20,7 +20,6 @@ import com.google.bigtable.v2.LoadBalancingOptions;
 import com.google.bigtable.v2.SessionClientConfiguration;
 import com.google.cloud.bigtable.data.v2.internal.session.SessionList.SessionHandle;
 import java.util.Optional;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**

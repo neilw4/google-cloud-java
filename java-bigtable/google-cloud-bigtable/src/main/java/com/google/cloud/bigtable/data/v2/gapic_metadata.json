@@ -19,6 +19,9 @@
             "GenerateInitialChangeStreamPartitions": {
               "methods": ["generateInitialChangeStreamPartitionsCallable"]
             },
+            "InferInternalTypeMetadata": {
+              "methods": ["inferInternalTypeMetadata", "inferInternalTypeMetadata", "inferInternalTypeMetadata", "inferInternalTypeMetadataCallable"]
+            },
             "MutateRow": {
               "methods": ["mutateRow", "mutateRow", "mutateRow", "mutateRow", "mutateRow", "mutateRowCallable"]
             },
@@ -42,6 +45,9 @@
             },
             "SampleRowKeys": {
               "methods": ["sampleRowKeysCallable"]
+            },
+            "SimpleExecuteQuery": {
+              "methods": ["simpleExecuteQuery", "simpleExecuteQuery", "simpleExecuteQuery", "simpleExecuteQuery", "simpleExecuteQuery", "simpleExecuteQueryCallable"]
             }
           }
         }

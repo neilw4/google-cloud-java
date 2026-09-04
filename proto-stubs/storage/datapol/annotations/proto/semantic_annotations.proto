@@ -1,0 +1,13 @@
+syntax = "proto2";
+package datapol;
+import "google/protobuf/descriptor.proto";
+enum SemanticType {
+  ST_IDENTIFYING_ID = 1;
+}
+message Qualifier {
+  optional bool is_access_target = 1;
+}
+extend google.protobuf.FieldOptions {
+  optional Qualifier qualifier = 55557;
+  optional SemanticType semantic_type = 55558;
+}

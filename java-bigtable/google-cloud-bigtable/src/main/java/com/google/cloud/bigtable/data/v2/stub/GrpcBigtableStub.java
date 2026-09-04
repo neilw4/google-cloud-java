@@ -32,6 +32,8 @@ import com.google.bigtable.v2.ExecuteQueryRequest;
 import com.google.bigtable.v2.ExecuteQueryResponse;
 import com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsRequest;
 import com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse;
+import com.google.bigtable.v2.InferInternalTypeMetadataRequest;
+import com.google.bigtable.v2.InferInternalTypeMetadataResponse;
 import com.google.bigtable.v2.MutateRowRequest;
 import com.google.bigtable.v2.MutateRowResponse;
 import com.google.bigtable.v2.MutateRowsRequest;
@@ -48,6 +50,8 @@ import com.google.bigtable.v2.ReadRowsRequest;
 import com.google.bigtable.v2.ReadRowsResponse;
 import com.google.bigtable.v2.SampleRowKeysRequest;
 import com.google.bigtable.v2.SampleRowKeysResponse;
+import com.google.bigtable.v2.SimpleExecuteQueryRequest;
+import com.google.bigtable.v2.SimpleExecuteQueryResponse;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
@@ -180,6 +184,20 @@ public class GrpcBigtableStub extends BigtableStub {
               .setSampledToLocalTracing(true)
               .build();
 
+  private static final MethodDescriptor<
+          InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+      inferInternalTypeMetadataMethodDescriptor =
+          MethodDescriptor
+              .<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName("google.bigtable.v2.Bigtable/InferInternalTypeMetadata")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(InferInternalTypeMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(InferInternalTypeMetadataResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
+              .build();
+
   private static final MethodDescriptor<ExecuteQueryRequest, ExecuteQueryResponse>
       executeQueryMethodDescriptor =
           MethodDescriptor.<ExecuteQueryRequest, ExecuteQueryResponse>newBuilder()
@@ -188,6 +206,18 @@ public class GrpcBigtableStub extends BigtableStub {
               .setRequestMarshaller(ProtoUtils.marshaller(ExecuteQueryRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ExecuteQueryResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
+              .build();
+
+  private static final MethodDescriptor<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+      simpleExecuteQueryMethodDescriptor =
+          MethodDescriptor.<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName("google.bigtable.v2.Bigtable/SimpleExecuteQuery")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(SimpleExecuteQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(SimpleExecuteQueryResponse.getDefaultInstance()))
               .setSampledToLocalTracing(true)
               .build();
 
@@ -208,8 +238,12 @@ public class GrpcBigtableStub extends BigtableStub {
   private final ServerStreamingCallable<ReadChangeStreamRequest, ReadChangeStreamResponse>
       readChangeStreamCallable;
   private final UnaryCallable<PrepareQueryRequest, PrepareQueryResponse> prepareQueryCallable;
+  private final UnaryCallable<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+      inferInternalTypeMetadataCallable;
   private final ServerStreamingCallable<ExecuteQueryRequest, ExecuteQueryResponse>
       executeQueryCallable;
+  private final UnaryCallable<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+      simpleExecuteQueryCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -262,6 +296,10 @@ public class GrpcBigtableStub extends BigtableStub {
   private static final PathTemplate PREPARE_QUERY_0_PATH_TEMPLATE =
       PathTemplate.create("{name=projects/*/instances/*}");
   private static final PathTemplate PREPARE_QUERY_1_PATH_TEMPLATE =
+      PathTemplate.create("{app_profile_id=**}");
+  private static final PathTemplate INFER_INTERNAL_TYPE_METADATA_0_PATH_TEMPLATE =
+      PathTemplate.create("{table_name=projects/*/instances/*/tables/*}");
+  private static final PathTemplate INFER_INTERNAL_TYPE_METADATA_1_PATH_TEMPLATE =
       PathTemplate.create("{app_profile_id=**}");
   private static final PathTemplate EXECUTE_QUERY_0_PATH_TEMPLATE =
       PathTemplate.create("{name=projects/*/instances/*}");
@@ -470,6 +508,26 @@ public class GrpcBigtableStub extends BigtableStub {
                 })
             .setResourceNameExtractor(request -> request.getInstanceName())
             .build();
+    GrpcCallSettings<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+        inferInternalTypeMetadataTransportSettings =
+            GrpcCallSettings
+                .<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>newBuilder()
+                .setMethodDescriptor(inferInternalTypeMetadataMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add(
+                          request.getTableName(),
+                          "table_name",
+                          INFER_INTERNAL_TYPE_METADATA_0_PATH_TEMPLATE);
+                      builder.add(
+                          request.getAppProfileId(),
+                          "app_profile_id",
+                          INFER_INTERNAL_TYPE_METADATA_1_PATH_TEMPLATE);
+                      return builder.build();
+                    })
+                .setResourceNameExtractor(request -> request.getTableName())
+                .build();
     GrpcCallSettings<ExecuteQueryRequest, ExecuteQueryResponse> executeQueryTransportSettings =
         GrpcCallSettings.<ExecuteQueryRequest, ExecuteQueryResponse>newBuilder()
             .setMethodDescriptor(executeQueryMethodDescriptor)
@@ -483,6 +541,18 @@ public class GrpcBigtableStub extends BigtableStub {
                 })
             .setResourceNameExtractor(request -> request.getInstanceName())
             .build();
+    GrpcCallSettings<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+        simpleExecuteQueryTransportSettings =
+            GrpcCallSettings.<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>newBuilder()
+                .setMethodDescriptor(simpleExecuteQueryMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("instance_name", String.valueOf(request.getInstanceName()));
+                      return builder.build();
+                    })
+                .setResourceNameExtractor(request -> request.getInstanceName())
+                .build();
 
     this.readRowsCallable =
         callableFactory.createServerStreamingCallable(
@@ -520,9 +590,19 @@ public class GrpcBigtableStub extends BigtableStub {
     this.prepareQueryCallable =
         callableFactory.createUnaryCallable(
             prepareQueryTransportSettings, settings.prepareQuerySettings(), clientContext);
+    this.inferInternalTypeMetadataCallable =
+        callableFactory.createUnaryCallable(
+            inferInternalTypeMetadataTransportSettings,
+            settings.inferInternalTypeMetadataSettings(),
+            clientContext);
     this.executeQueryCallable =
         callableFactory.createServerStreamingCallable(
             executeQueryTransportSettings, settings.executeQuerySettings(), clientContext);
+    this.simpleExecuteQueryCallable =
+        callableFactory.createUnaryCallable(
+            simpleExecuteQueryTransportSettings,
+            settings.simpleExecuteQuerySettings(),
+            clientContext);
 
     this.backgroundResources =
         new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -590,8 +670,20 @@ public class GrpcBigtableStub extends BigtableStub {
   }
 
   @Override
+  public UnaryCallable<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+      inferInternalTypeMetadataCallable() {
+    return inferInternalTypeMetadataCallable;
+  }
+
+  @Override
   public ServerStreamingCallable<ExecuteQueryRequest, ExecuteQueryResponse> executeQueryCallable() {
     return executeQueryCallable;
+  }
+
+  @Override
+  public UnaryCallable<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+      simpleExecuteQueryCallable() {
+    return simpleExecuteQueryCallable;
   }
 
   @Override

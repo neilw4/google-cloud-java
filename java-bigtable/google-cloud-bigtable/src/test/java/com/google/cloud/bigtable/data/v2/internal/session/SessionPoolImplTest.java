@@ -54,7 +54,6 @@ import com.google.cloud.bigtable.data.v2.internal.session.fake.PeerInfoIntercept
 import com.google.cloud.bigtable.data.v2.internal.util.ClientConfigurationManager;
 import com.google.common.base.Suppliers;
 import com.google.common.truth.Correspondence;
-import com.google.common.util.concurrent.MoreExecutors;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.util.Durations;
 import com.google.rpc.Code;

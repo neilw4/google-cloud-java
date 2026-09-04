@@ -40,6 +40,8 @@ import com.google.bigtable.v2.ExecuteQueryRequest;
 import com.google.bigtable.v2.ExecuteQueryResponse;
 import com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsRequest;
 import com.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse;
+import com.google.bigtable.v2.InferInternalTypeMetadataRequest;
+import com.google.bigtable.v2.InferInternalTypeMetadataResponse;
 import com.google.bigtable.v2.MutateRowRequest;
 import com.google.bigtable.v2.MutateRowResponse;
 import com.google.bigtable.v2.MutateRowsRequest;
@@ -56,6 +58,8 @@ import com.google.bigtable.v2.ReadRowsRequest;
 import com.google.bigtable.v2.ReadRowsResponse;
 import com.google.bigtable.v2.SampleRowKeysRequest;
 import com.google.bigtable.v2.SampleRowKeysResponse;
+import com.google.bigtable.v2.SimpleExecuteQueryRequest;
+import com.google.bigtable.v2.SimpleExecuteQueryResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
@@ -100,8 +104,13 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
   private final ServerStreamingCallSettings<ReadChangeStreamRequest, ReadChangeStreamResponse>
       readChangeStreamSettings;
   private final UnaryCallSettings<PrepareQueryRequest, PrepareQueryResponse> prepareQuerySettings;
+  private final UnaryCallSettings<
+          InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+      inferInternalTypeMetadataSettings;
   private final ServerStreamingCallSettings<ExecuteQueryRequest, ExecuteQueryResponse>
       executeQuerySettings;
+  private final UnaryCallSettings<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+      simpleExecuteQuerySettings;
 
   /** Returns the object with the settings used for calls to readRows. */
   public ServerStreamingCallSettings<ReadRowsRequest, ReadRowsResponse> readRowsSettings() {
@@ -162,10 +171,22 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
     return prepareQuerySettings;
   }
 
+  /** Returns the object with the settings used for calls to inferInternalTypeMetadata. */
+  public UnaryCallSettings<InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+      inferInternalTypeMetadataSettings() {
+    return inferInternalTypeMetadataSettings;
+  }
+
   /** Returns the object with the settings used for calls to executeQuery. */
   public ServerStreamingCallSettings<ExecuteQueryRequest, ExecuteQueryResponse>
       executeQuerySettings() {
     return executeQuerySettings;
+  }
+
+  /** Returns the object with the settings used for calls to simpleExecuteQuery. */
+  public UnaryCallSettings<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+      simpleExecuteQuerySettings() {
+    return simpleExecuteQuerySettings;
   }
 
   public BigtableStub createStub() throws IOException {
@@ -193,7 +214,7 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
   /** Returns the default service endpoint. */
   @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
-    return "test-bigtable.sandbox.googleapis.com:443";
+    return "bigtable.googleapis.com:443";
   }
 
   /** Returns the default mTLS service endpoint. */
@@ -259,7 +280,9 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
         settingsBuilder.generateInitialChangeStreamPartitionsSettings().build();
     readChangeStreamSettings = settingsBuilder.readChangeStreamSettings().build();
     prepareQuerySettings = settingsBuilder.prepareQuerySettings().build();
+    inferInternalTypeMetadataSettings = settingsBuilder.inferInternalTypeMetadataSettings().build();
     executeQuerySettings = settingsBuilder.executeQuerySettings().build();
+    simpleExecuteQuerySettings = settingsBuilder.simpleExecuteQuerySettings().build();
   }
 
   @Override
@@ -296,8 +319,13 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
         readChangeStreamSettings;
     private final UnaryCallSettings.Builder<PrepareQueryRequest, PrepareQueryResponse>
         prepareQuerySettings;
+    private final UnaryCallSettings.Builder<
+            InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+        inferInternalTypeMetadataSettings;
     private final ServerStreamingCallSettings.Builder<ExecuteQueryRequest, ExecuteQueryResponse>
         executeQuerySettings;
+    private final UnaryCallSettings.Builder<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+        simpleExecuteQuerySettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -427,7 +455,9 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
       generateInitialChangeStreamPartitionsSettings = ServerStreamingCallSettings.newBuilder();
       readChangeStreamSettings = ServerStreamingCallSettings.newBuilder();
       prepareQuerySettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      inferInternalTypeMetadataSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       executeQuerySettings = ServerStreamingCallSettings.newBuilder();
+      simpleExecuteQuerySettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
@@ -435,7 +465,9 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
               checkAndMutateRowSettings,
               pingAndWarmSettings,
               readModifyWriteRowSettings,
-              prepareQuerySettings);
+              prepareQuerySettings,
+              inferInternalTypeMetadataSettings,
+              simpleExecuteQuerySettings);
       initDefaults(this);
     }
 
@@ -453,7 +485,9 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
           settings.generateInitialChangeStreamPartitionsSettings.toBuilder();
       readChangeStreamSettings = settings.readChangeStreamSettings.toBuilder();
       prepareQuerySettings = settings.prepareQuerySettings.toBuilder();
+      inferInternalTypeMetadataSettings = settings.inferInternalTypeMetadataSettings.toBuilder();
       executeQuerySettings = settings.executeQuerySettings.toBuilder();
+      simpleExecuteQuerySettings = settings.simpleExecuteQuerySettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
@@ -461,7 +495,9 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
               checkAndMutateRowSettings,
               pingAndWarmSettings,
               readModifyWriteRowSettings,
-              prepareQuerySettings);
+              prepareQuerySettings,
+              inferInternalTypeMetadataSettings,
+              simpleExecuteQuerySettings);
     }
 
     private static Builder createDefault() {
@@ -528,9 +564,19 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_params"));
 
       builder
+          .inferInternalTypeMetadataSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_params"));
+
+      builder
           .executeQuerySettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_4_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_4_params"));
+
+      builder
+          .simpleExecuteQuerySettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_params"));
 
       return builder;
     }
@@ -613,10 +659,23 @@ public class BigtableStubSettings extends StubSettings<BigtableStubSettings> {
       return prepareQuerySettings;
     }
 
+    /** Returns the builder for the settings used for calls to inferInternalTypeMetadata. */
+    public UnaryCallSettings.Builder<
+            InferInternalTypeMetadataRequest, InferInternalTypeMetadataResponse>
+        inferInternalTypeMetadataSettings() {
+      return inferInternalTypeMetadataSettings;
+    }
+
     /** Returns the builder for the settings used for calls to executeQuery. */
     public ServerStreamingCallSettings.Builder<ExecuteQueryRequest, ExecuteQueryResponse>
         executeQuerySettings() {
       return executeQuerySettings;
+    }
+
+    /** Returns the builder for the settings used for calls to simpleExecuteQuery. */
+    public UnaryCallSettings.Builder<SimpleExecuteQueryRequest, SimpleExecuteQueryResponse>
+        simpleExecuteQuerySettings() {
+      return simpleExecuteQuerySettings;
     }
 
     @Override

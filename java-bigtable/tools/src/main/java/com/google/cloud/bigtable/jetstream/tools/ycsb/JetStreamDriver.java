@@ -27,8 +27,8 @@ import com.google.bigtable.v2.SessionMutateRowResponse;
 import com.google.bigtable.v2.SessionReadRowRequest;
 import com.google.bigtable.v2.SessionReadRowResponse;
 import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.CloudPath;
-import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.RawDirectPath;
 import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.DirectAccess;
+import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.RawDirectPath;
 import com.google.cloud.bigtable.data.v2.internal.api.Client;
 import com.google.cloud.bigtable.data.v2.internal.api.ClientSettings;
 import com.google.cloud.bigtable.data.v2.internal.api.InstanceName;
@@ -93,31 +93,32 @@ public class JetStreamDriver extends site.ycsb.DB {
 
       Mode mode = Mode.valueOf(getRequiredProp(TRANSPORT_KEY));
       try {
-      switch (mode) {
-        case CloudPath:
-          Preconditions.checkArgument(
-              endpoints.size() == 1, "CloudPath must have exactly 1 endpoint");
-          builder.setChannelProvider(new CloudPath(endpoints.get(0)));
-          break;
-        // case CloudPathTd:
-        //   Preconditions.checkArgument(
-        //       endpoints.size() == 1, "CloudPathTd must have exactly 1 endpoint");
-        //   builder.setChannelProvider(new TrafficDirector(endpoints.get(0), false));
-        //   break;
-        case DirectPath:
-          Preconditions.checkArgument(
-              endpoints.size() == 1, "DirectPath must have exactly 1 endpoint");
-          builder.setChannelProvider(new DirectAccess(endpoints.get(0)));
-          break;
-        case RawDirectPath:
-          {
-            Preconditions.checkArgument(!endpoints.isEmpty(), "Must specify at least one endpoint");
-            builder.setChannelProvider(new RawDirectPath(endpoints));
+        switch (mode) {
+          case CloudPath:
+            Preconditions.checkArgument(
+                endpoints.size() == 1, "CloudPath must have exactly 1 endpoint");
+            builder.setChannelProvider(new CloudPath(endpoints.get(0)));
             break;
-          }
-        default:
-          throw new IllegalArgumentException("Unknown mode: " + mode);
-      }
+          // case CloudPathTd:
+          //   Preconditions.checkArgument(
+          //       endpoints.size() == 1, "CloudPathTd must have exactly 1 endpoint");
+          //   builder.setChannelProvider(new TrafficDirector(endpoints.get(0), false));
+          //   break;
+          case DirectPath:
+            Preconditions.checkArgument(
+                endpoints.size() == 1, "DirectPath must have exactly 1 endpoint");
+            builder.setChannelProvider(new DirectAccess(endpoints.get(0)));
+            break;
+          case RawDirectPath:
+            {
+              Preconditions.checkArgument(
+                  !endpoints.isEmpty(), "Must specify at least one endpoint");
+              builder.setChannelProvider(new RawDirectPath(endpoints));
+              break;
+            }
+          default:
+            throw new IllegalArgumentException("Unknown mode: " + mode);
+        }
       } catch (Exception e) {
         throw new RuntimeException(e);
       }

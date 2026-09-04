@@ -16,21 +16,21 @@
 
 package com.google.cloud.bigtable.data.v2.internal.session;
 
-import com.google.bigtable.v2.LoadBalancingOptions;
 import com.google.cloud.bigtable.data.v2.internal.session.SessionList.AfeHandle;
 import com.google.cloud.bigtable.data.v2.internal.session.SessionList.SessionHandle;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 class WeightedLeastInFlightPicker extends Picker {
 
-  private static final Logger DEFAULT_LOGGER = Logger.getLogger(WeightedLeastInFlightPicker.class.getName());
+  private static final Logger DEFAULT_LOGGER =
+      Logger.getLogger(WeightedLeastInFlightPicker.class.getName());
   private static final AtomicLong lastWarningTimeMillis = new AtomicLong(0);
   private Logger logger = DEFAULT_LOGGER;
 
@@ -49,11 +49,18 @@ class WeightedLeastInFlightPicker extends Picker {
       return Optional.empty();
     }
 
-    // TODO: implement logic to deal with all weights being zero from https://docs.google.com/document/d/1MCiF73XLXoHGaCjiqLRbpYrqh4WLMAmKU6E7gk2Q73c/edit?usp=sharing
+    // TODO: implement logic to deal with all weights being zero from
+    // https://docs.google.com/document/d/1MCiF73XLXoHGaCjiqLRbpYrqh4WLMAmKU6E7gk2Q73c/edit?usp=sharing
 
     ThreadLocalRandom rng = ThreadLocalRandom.current();
     // Weight is from 0.0 to 1.0, and indicates likelihood that a candidate should be picked.
-    List<AfeHandle> candidates = new ArrayList<>(readyAfes.stream().filter(afe -> afe.weight > 0.0f && (afe.weight >= 1.0f || rng.nextFloat() <= afe.weight)).collect(Collectors.toList()));
+    List<AfeHandle> candidates =
+        new ArrayList<>(
+            readyAfes.stream()
+                .filter(
+                    afe ->
+                        afe.weight > 0.0f && (afe.weight >= 1.0f || rng.nextFloat() <= afe.weight))
+                .collect(Collectors.toList()));
     if (candidates.isEmpty()) {
       long now = System.currentTimeMillis();
       long last = lastWarningTimeMillis.get();
@@ -68,12 +75,13 @@ class WeightedLeastInFlightPicker extends Picker {
     AfeHandle bestAfe = null;
     long iterations = candidates.size();
 
-    // Find AFE with the best cost, addressing them in a random order so that if multiple AFEs have the same cost we pick one at random.
+    // Find AFE with the best cost, addressing them in a random order so that if multiple AFEs have
+    // the same cost we pick one at random.
     // Partial Fisher-Yates shuffle.
     for (int i = 0; i < iterations; i++) {
       int randomIndex = i + rng.nextInt(candidates.size() - i);
       AfeHandle picked = candidates.get(randomIndex);
-      double cost = picked.getNumOutstanding() / (double)picked.weight;
+      double cost = picked.getNumOutstanding() / (double) picked.weight;
       if (cost < bestCost) {
         bestCost = cost;
         bestAfe = picked;

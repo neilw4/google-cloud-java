@@ -23,15 +23,14 @@ import com.google.bigtable.v2.SessionResponse;
 import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders;
 import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.ChannelProvider;
 import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.CloudPath;
-import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.ForwardingChannelProvider;
 import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.DirectAccess;
+import com.google.cloud.bigtable.data.v2.internal.api.ChannelProviders.ForwardingChannelProvider;
 import com.google.cloud.bigtable.jetstream.tools.core.IpInterceptor;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
 import com.google.protobuf.util.JsonFormat;
-import io.grpc.CallCredentials;
 import io.grpc.CallOptions;
 import io.grpc.Channel;
 import io.grpc.ClientCall;
@@ -108,10 +107,19 @@ public class Target {
       showDefaultValue = Visibility.ALWAYS)
   List<String> endpoints = Collections.singletonList(ChannelProviders.DEFAULT_HOST);
 
-  @Option(names = "--dump-metadata", description = "Log metadata", showDefaultValue = Visibility.ALWAYS)
+  @Option(
+      names = "--dump-metadata",
+      description = "Log metadata",
+      showDefaultValue = Visibility.ALWAYS)
   boolean dumpMetadata = false;
 
-  @Option(names = "--gfe-debug-headers", description = "Request GFE debug headers. Can be gfe_response_only, all_response or request_and_response", showDefaultValue = Visibility.ALWAYS, required = false)
+  @Option(
+      names = "--gfe-debug-headers",
+      description =
+          "Request GFE debug headers. Can be gfe_response_only, all_response or"
+              + " request_and_response",
+      showDefaultValue = Visibility.ALWAYS,
+      required = false)
   String requestGfeDebugHeaders = null;
 
   public Mode getMode() {
@@ -138,7 +146,8 @@ public class Target {
           provider = new ChannelProviders.RawDirectPath(getEndpoints());
           break;
         case DirectPath:
-          Preconditions.checkArgument(endpoints.size() == 1, "DirectPath only supports one endpoint");
+          Preconditions.checkArgument(
+              endpoints.size() == 1, "DirectPath only supports one endpoint");
           provider = new DirectAccess(getEndpoints().get(0));
           break;
         default:
@@ -152,8 +161,7 @@ public class Target {
     return new ForwardingChannelProvider(provider) {
       @Override
       public ManagedChannelBuilder<?> newChannelBuilder() {
-        ManagedChannelBuilder<?> builder = super.newChannelBuilder()
-            .intercept(new IpInterceptor());
+        ManagedChannelBuilder<?> builder = super.newChannelBuilder().intercept(new IpInterceptor());
         if (dumpMetadata) {
           builder = builder.intercept(new MetadataInterceptor(requestGfeDebugHeaders));
         }
@@ -170,10 +178,7 @@ public class Target {
         .toString();
   }
 
-
-  /**
-   * Interceptor used to debug metadata between the client and the server
-   */
+  /** Interceptor used to debug metadata between the client and the server */
   private static class MetadataInterceptor implements ClientInterceptor {
 
     private static final Logger LOG = LoggerFactory.getLogger(MetadataInterceptor.class);
@@ -185,8 +190,10 @@ public class Target {
     private static final Metadata.Key<String> PEER_INFO_KEY =
         Key.of("bigtable-peer-info", Metadata.ASCII_STRING_MARSHALLER);
 
-    private static final Metadata.Key<String> REQ_GFE_HEADERS = Key.of("X-Return-Encrypted-Headers", Metadata.ASCII_STRING_MARSHALLER);
-    private static final Metadata.Key<String> RESP_GFE_HEADERS = Key.of("X-Encrypted-Debug-Headers", Metadata.ASCII_STRING_MARSHALLER);
+    private static final Metadata.Key<String> REQ_GFE_HEADERS =
+        Key.of("X-Return-Encrypted-Headers", Metadata.ASCII_STRING_MARSHALLER);
+    private static final Metadata.Key<String> RESP_GFE_HEADERS =
+        Key.of("X-Encrypted-Debug-Headers", Metadata.ASCII_STRING_MARSHALLER);
     private final String requestGfeDebugHeaders;
 
     public MetadataInterceptor(@Nullable String requestGfeDebugHeaders) {
@@ -201,69 +208,83 @@ public class Target {
           channel.newCall(methodDescriptor, callOptions)) {
         final AtomicInteger requestMsgIndex = new AtomicInteger(-1);
 
-
         @Override
         public void start(Listener<RespT> responseListener, Metadata requestHeaders) {
           if (requestGfeDebugHeaders != null) {
             requestHeaders.put(REQ_GFE_HEADERS, requestGfeDebugHeaders);
           }
-          LOG.info("Stream {} Request Metadata: {}",
+          LOG.info(
+              "Stream {} Request Metadata: {}",
               methodDescriptor.getBareMethodName(),
               MoreObjects.toStringHelper(requestHeaders)
-                  .add("featureFlags",
-                      prettyPrintProto(extractProto(requestHeaders, FEATURE_FLAGS_KEY, FeatureFlags.parser())))
+                  .add(
+                      "featureFlags",
+                      prettyPrintProto(
+                          extractProto(requestHeaders, FEATURE_FLAGS_KEY, FeatureFlags.parser())))
                   .add("x-google-params", requestHeaders.get(REQUEST_PARAMS_KEY))
                   .add("raw", requestHeaders));
 
-          super.start(new SimpleForwardingClientCallListener<RespT>(responseListener) {
-            @Override
-            public void onHeaders(Metadata responseHeaders) {
-              LOG.info("Stream {} Response headers: {}",
-                  methodDescriptor.getBareMethodName(),
-                  MoreObjects.toStringHelper(responseHeaders)
-                      .add("peerInfo",
-                          prettyPrintProto(extractProto(responseHeaders, PEER_INFO_KEY, PeerInfo.parser())))
-                      .add("gfeDebugHeaders", responseHeaders.get(RESP_GFE_HEADERS))
-                      .add("raw", responseHeaders)
-              );
+          super.start(
+              new SimpleForwardingClientCallListener<RespT>(responseListener) {
+                @Override
+                public void onHeaders(Metadata responseHeaders) {
+                  LOG.info(
+                      "Stream {} Response headers: {}",
+                      methodDescriptor.getBareMethodName(),
+                      MoreObjects.toStringHelper(responseHeaders)
+                          .add(
+                              "peerInfo",
+                              prettyPrintProto(
+                                  extractProto(responseHeaders, PEER_INFO_KEY, PeerInfo.parser())))
+                          .add("gfeDebugHeaders", responseHeaders.get(RESP_GFE_HEADERS))
+                          .add("raw", responseHeaders));
 
-              super.onHeaders(responseHeaders);
-            }
-
-            @Override
-            public void onMessage(RespT message) {
-              if (message instanceof SessionResponse) {
-                SessionResponse sResp = (SessionResponse) message;
-                switch (sResp.getPayloadCase()) {
-                  case OPEN_SESSION:
-                  case VIRTUAL_RPC:
-                    LOG.info("Stream {} SessionResponse: {}", methodDescriptor.getBareMethodName(), prettyPrintProto(sResp));
-                    break;
+                  super.onHeaders(responseHeaders);
                 }
-              } else if (message instanceof ClientConfiguration) {
-                LOG.info("ClientConfig: {}", message);
-              } else {
-                LOG.warn("Stream {} Unexpected response: {}", methodDescriptor.getBareMethodName(), prettyPrintProto(message));
-              }
-              super.onMessage(message);
-            }
 
-            @Override
-            public void onClose(Status status, Metadata trailers) {
-              LOG.info("Stream {} Response trailers: {}",
-                  methodDescriptor.getBareMethodName(),
-                  MoreObjects.toStringHelper(trailers)
-                      .add("raw", trailers)
-              );
-              super.onClose(status, trailers);
-            }
-          }, requestHeaders);
+                @Override
+                public void onMessage(RespT message) {
+                  if (message instanceof SessionResponse) {
+                    SessionResponse sResp = (SessionResponse) message;
+                    switch (sResp.getPayloadCase()) {
+                      case OPEN_SESSION:
+                      case VIRTUAL_RPC:
+                        LOG.info(
+                            "Stream {} SessionResponse: {}",
+                            methodDescriptor.getBareMethodName(),
+                            prettyPrintProto(sResp));
+                        break;
+                    }
+                  } else if (message instanceof ClientConfiguration) {
+                    LOG.info("ClientConfig: {}", message);
+                  } else {
+                    LOG.warn(
+                        "Stream {} Unexpected response: {}",
+                        methodDescriptor.getBareMethodName(),
+                        prettyPrintProto(message));
+                  }
+                  super.onMessage(message);
+                }
+
+                @Override
+                public void onClose(Status status, Metadata trailers) {
+                  LOG.info(
+                      "Stream {} Response trailers: {}",
+                      methodDescriptor.getBareMethodName(),
+                      MoreObjects.toStringHelper(trailers).add("raw", trailers));
+                  super.onClose(status, trailers);
+                }
+              },
+              requestHeaders);
         }
 
         @Override
         public void sendMessage(ReqT message) {
           if (requestMsgIndex.incrementAndGet() == 0) {
-            LOG.info("Stream {} first msg: {}", methodDescriptor.getBareMethodName(), prettyPrintProto(message));
+            LOG.info(
+                "Stream {} first msg: {}",
+                methodDescriptor.getBareMethodName(),
+                prettyPrintProto(message));
           }
 
           super.sendMessage(message);
@@ -285,7 +306,9 @@ public class Target {
     }
     return msg.toString();
   }
-  private static <T> T extractProto(Metadata md, Metadata.Key<String> key, com.google.protobuf.Parser<T> parser) {
+
+  private static <T> T extractProto(
+      Metadata md, Metadata.Key<String> key, com.google.protobuf.Parser<T> parser) {
     String encodedStr = md.get(key);
     byte[] decoded = Base64.getUrlDecoder().decode(encodedStr);
     try {
