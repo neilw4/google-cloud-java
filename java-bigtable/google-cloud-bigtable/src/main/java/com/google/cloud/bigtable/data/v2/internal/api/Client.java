@@ -78,6 +78,7 @@ public class Client implements AutoCloseable {
           // .setTrafficDirectorEnabled(true)
           // .setDirectAccessRequested(true)
           .setPeerInfo(true)
+          .setPeerLoadInfo(true)
           .setSessionsCompatible(true)
           .setSessionsRequired( // Internal system property internal testing, not to be used by
               // external customers.

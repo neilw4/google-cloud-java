@@ -660,6 +660,7 @@ public class EnhancedBigtableStubSettings extends StubSettings<EnhancedBigtableS
               .setDirectAccessRequested(isDirectPathRequested)
               .setTrafficDirectorEnabled(isDirectPathRequested)
               .setPeerInfo(true)
+              .setPeerLoadInfo(true)
               .setSessionsCompatible(true)
               .setMicrosecondTimestamp(true);
     }
