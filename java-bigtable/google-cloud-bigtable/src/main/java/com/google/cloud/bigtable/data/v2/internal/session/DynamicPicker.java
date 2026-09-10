@@ -40,7 +40,10 @@ class DynamicPicker extends Picker {
 
   @Override
   public Optional<SessionHandle> pickSession() {
-    return delegate.pickSession();
+    // LOGGER.warning("picking session using dynamic picker");
+    Optional<SessionHandle> result = delegate.pickSession();
+    // LOGGER.warning("dynamic picker result isPresent=" + result.isPresent());
+    return result;
   }
 
   public void updateConfig(SessionClientConfiguration.SessionPoolConfiguration config) {

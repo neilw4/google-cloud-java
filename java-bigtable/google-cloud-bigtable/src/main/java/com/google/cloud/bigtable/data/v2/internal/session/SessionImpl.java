@@ -326,7 +326,7 @@ public class SessionImpl implements Session, VRpcSessionApi {
               "Tried to start a started session, current state: %s",
               state);
 
-          logger.fine(String.format("Starting session %s", info.getLogName()));
+          logger.info(String.format("Starting session %s", info.getLogName()));
           tracer.onStart();
 
           updateState(SessionState.STARTING);
@@ -359,7 +359,9 @@ public class SessionImpl implements Session, VRpcSessionApi {
 
   @Override
   public void close(CloseSessionRequest req) {
-    logger.fine(String.format("Closing session %s for reason: %s", info.getLogName(), req));
+    if (req.getReason() == CloseSessionRequest.CloseSessionReason.CLOSE_SESSION_REASON_UNSET) {
+      logger.warning(String.format("Closing session %s for reason: %s", info.getLogName(), req));
+    }
 
     sessionSyncContext.execute(
         () -> {
@@ -425,6 +427,7 @@ public class SessionImpl implements Session, VRpcSessionApi {
   @Override
   public <OpenReqT extends Message, ReqT extends Message, RespT extends Message>
       VRpc<ReqT, RespT> newCall(VRpcDescriptor<OpenReqT, ReqT, RespT> descriptor) {
+    // logger.warning(String.format("SessionImpl.newCall invoked on %s for %s", info.getLogName(), descriptor));
     debugTagTracer.checkPrecondition(
         descriptor.getSessionDescriptor().getType() == info.getPoolInfo().getType(),
         "session_new_call_wrong_type",
@@ -441,6 +444,7 @@ public class SessionImpl implements Session, VRpcSessionApi {
 
   @Override
   public void startRpc(VRpcImpl<?, ?, ?> rpc, VirtualRpcRequest payload) {
+    // logger.warning("starting RPC " + payload.toString());
     sessionSyncContext.execute(
         () -> {
           if (currentRpc != null) {
@@ -469,6 +473,7 @@ public class SessionImpl implements Session, VRpcSessionApi {
 
   @Override
   public void cancelRpc(long rpcId, @Nullable String message, @Nullable Throwable cause) {
+    logger.warning("cancelled RPC because " + message + " with cause " + cause);
     sessionSyncContext.execute(
         () -> {
           if (currentRpc != null && rpcId == currentRpc.rpcId) {
@@ -556,9 +561,11 @@ public class SessionImpl implements Session, VRpcSessionApi {
         handleSessionParamsResponse(message.getSessionParameters());
         break;
       case GO_AWAY:
+      logger.warning("got GOAWAY response message " + message.toString());
         handleGoAwayResponse(message.getGoAway());
         break;
       case VIRTUAL_RPC:
+      // logger.warning("got VRPC message " + message.toString());
         handleVRpcResponse(message.getVirtualRpc());
         break;
       case HEARTBEAT:
@@ -571,6 +578,7 @@ public class SessionImpl implements Session, VRpcSessionApi {
         handleSessionRefreshConfigResponse(message.getSessionRefreshConfig());
         break;
       case ERROR:
+      logger.warning("got VRPC error message " + message.toString());
         handleVRpcErrorResponse(message.getError());
         break;
       case PAYLOAD_NOT_SET:
@@ -681,6 +689,7 @@ public class SessionImpl implements Session, VRpcSessionApi {
   }
 
   private void handlePeerLoadResponse(PeerLoadInfo peerLoad) {
+    // logger.warning("got peer load info " + peerLoad.toString());
     sessionSyncContext.throwIfNotInThisSynchronizationContext();
     stream.updatePeerLoad(peerLoad);
     sessionListener.onPeerLoad(peerLoad);
@@ -800,14 +809,14 @@ public class SessionImpl implements Session, VRpcSessionApi {
     }
 
     if (state == SessionState.WAIT_SERVER_CLOSE) {
-      logger.fine(String.format("%s closed normally with status %s", info.getLogName(), status));
+      logger.info(String.format("%s closed normally with status %s", info.getLogName(), status));
     } else {
       debugTagTracer.record(TelemetryConfiguration.Level.WARN, "session_abnormal_close");
       // Unexpected path
       String msg =
           String.format(
-              "Session error: %s session closed unexpectedly in state %s. Status: %s",
-              info.getLogName(), state, status);
+              "Session error: %s session closed unexpectedly in state %s. Status: %s. Trailers: %s",
+              info.getLogName(),state, status, trailers);
       logger.warning(msg);
 
       if (state == SessionState.CLOSED) {

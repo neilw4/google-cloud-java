@@ -255,8 +255,18 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
                 if (poolState != PoolState.STARTED) {
                   return;
                 }
+                int totalSessions = sessions.getAllSessions().size();
+                int inUseCount = sessions.getStats().getInUseCount();
+                int readyCount = sessions.getStats().getReadyCount();
+                int notReadyNotInUse = totalSessions - inUseCount - readyCount;
+                logger.warning(
+                    String.format(
+                        "poolScaleTask stats before making changes: total sessions=%d, in use=%d, ready=%d, not ready and not in use=%d",
+                        totalSessions, inUseCount, readyCount, notReadyNotInUse));
+
                 int delta = poolSizer.getScaleDelta();
-                double exactToRemove = sessions.getAllSessions().size() * 0.1;
+                int desiredSize = delta+totalSessions;
+                double exactToRemove = sessions.getAllSessions().size() * 0.015 * 5;
                 int sessionsToRemove =
                     (int) exactToRemove
                         + (java.util.concurrent.ThreadLocalRandom.current().nextDouble()
@@ -297,7 +307,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
                     // remove all sessions from one afe as opposed to a portion of sessions from
                     // many afes.
                     handle.onSessionClosing();
-                    handle.getSession().close(CloseSessionRequest.getDefaultInstance());
+                    handle.getSession().close(CloseSessionRequest.newBuilder().setReason(CloseSessionReason.CLOSE_SESSION_REASON_DOWNSIZE).build());
                     removedPerAfe.put(maxAfe, removedPerAfe.getOrDefault(maxAfe, 0) + 1);
                     removedCount++;
                   } else {
@@ -305,14 +315,40 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
                   }
                 }
                 delta += removedCount;
+                logger.warning(
+                    String.format(
+                        "poolScaleTask: total sessions=%d, want to remove=%d, removed=%d, added=%d, desired size=%d",
+                        sessions.getAllSessions().size(),
+                        sessionsToRemove,
+                        removedCount,
+                        Math.max(0, delta), desiredSize));
+
+                totalSessions = sessions.getAllSessions().size();
+                inUseCount = sessions.getStats().getInUseCount();
+                readyCount = sessions.getStats().getReadyCount();
+                notReadyNotInUse = totalSessions - inUseCount - readyCount;
+                logger.warning(
+                    String.format(
+                        "poolScaleTask stats after removing sessions: total sessions=%d, in use=%d, ready=%d, not ready and not in use=%d",
+                        totalSessions, inUseCount, readyCount, notReadyNotInUse));
 
                 for (int i = delta; i > 0; i--) {
                   createSession(openParams, /* retryFailures= */ false);
                 }
+
+                totalSessions = sessions.getAllSessions().size();
+                inUseCount = sessions.getStats().getInUseCount();
+                readyCount = sessions.getStats().getReadyCount();
+                notReadyNotInUse = totalSessions - inUseCount - readyCount;
+                logger.warning(
+                    String.format(
+                        "poolScaleTask stats after adding sessions: total sessions=%d, in use=%d, ready=%d, not ready and not in use=%d",
+                        totalSessions, inUseCount, readyCount, notReadyNotInUse));
+
               }
             },
             0,
-            100,
+            500,
             TimeUnit.MILLISECONDS);
 
     this.budget = budget;
@@ -539,6 +575,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
     budget.onSessionCreationSuccess();
 
     // handle pending rpcs
+    // logger.warning("onSessionReady calling tryDrainPendingRpcs");
     tryDrainPendingRpcs();
   }
 
@@ -554,6 +591,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
     if (handle.getSession().getState() != SessionState.READY) {
       return;
     }
+        // logger.warning("onVRpcComplete calling tryDrainPendingRpcs");
     tryDrainPendingRpcs();
   }
 
@@ -638,7 +676,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
         try {
           vrpc.getListener().onClose(result);
         } catch (Throwable t) {
-          logger.log(Level.WARNING, "Exception when closing request", t);
+          logger.log(Level.WARNING, "Exception when closing request", t.toString());
         }
       }
     }
@@ -646,18 +684,24 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
   @GuardedBy("this")
   private void tryDrainPendingRpcs() {
+    int drained = 0;
+    int cancelled = 0;
     while (!pendingRpcs.isEmpty()) {
       if (pendingRpcs.peek().isCancelled) {
         pendingRpcs.pop();
+        cancelled++;
         continue;
       }
       Optional<SessionHandle> handle = picker.pickSession();
+      // logger.info("3a. SessionPoolImpl.tryDrainPendingRpcs: pickSession returned isPresent=" + handle.isPresent());
       if (!handle.isPresent()) {
         break;
       }
+      drained++;
       PendingVRpc<?, ?> rpc = pendingRpcs.removeFirst();
       rpc.drainTo(handle.get());
     }
+    // logger.info("3b. SessionPoolImpl.tryDrainPendingRpcs: drained=" + drained + ", cancelled=" + cancelled);
   }
 
   @GuardedBy("this")
@@ -678,14 +722,17 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
   @Override
   public synchronized <ReqT extends Message, RespT extends Message> VRpc<ReqT, RespT> newCall(
       VRpcDescriptor<?, ReqT, RespT> desc) {
+    // logger.info("1.3. SessionPoolImpl.newCall: invoked");
     Optional<SessionHandle> handle = picker.pickSession();
+    // logger.info("1.6. SessionPoolImpl.newCall: pickSession returned isPresent=" + handle.isPresent());
     if (handle.isPresent()) {
+      // logger.info("1.7a. SessionPoolImpl.newCall: picked session: " + handle.get().getSession().getLogName());
       return newRealCall(desc, handle.get());
     }
     if (logger.isLoggable(Level.FINE)) {
-      logger.fine(
+      logger.info(
           String.format(
-              "%s Creating new rpc as pending, numPending: %d, %s",
+              "1.7b. %s Creating new rpc as pending, numPending: %d, %s",
               info.getLogName(), pendingRpcs.size(), sessions.getStats()));
     }
     return new PendingVRpc<>(desc);
@@ -777,6 +824,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
           createSession(openParams, true);
         }
 
+        // logger.warning("PendingVRpc.start calling tryDrainPendingRpcs");
         tryDrainPendingRpcs();
       }
     }

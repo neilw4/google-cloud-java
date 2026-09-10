@@ -74,7 +74,7 @@ class SessionList {
   // - starting sessions
   // - closing sessions
   private final Set<SessionHandle> allSessions = new HashSet<>();
-  private final Set<SessionHandle> inUseSessions = new HashSet<>();
+  public final Set<SessionHandle> inUseSessions = new HashSet<>();
 
   private final CloseSessionRequest missedHeartbeatCloseRequest =
       CloseSessionRequest.newBuilder()
@@ -215,7 +215,7 @@ class SessionList {
   void updateWeights() {
     // TODO: find AFEs and sessions that are ready
     if (afeHandles.isEmpty()) {
-      LOG.warning("no AFEs, skipping weight update.");
+      // LOG.warning("no AFEs, skipping weight update.");
       return;
     }
 
@@ -415,7 +415,7 @@ class SessionList {
       double peerLoadWeight = 1.0;
       if (afe.afeLoad.getVersion() == preferredVersion) {
         PeerLoadInfo loadInfo = afe.afeLoad;
-        expectedLatency = Durations.toMillis(loadInfo.getExpectedLatency());
+        expectedLatency = Durations.toMicros(loadInfo.getExpectedLatency()) / 1000.0;
         peerLoadWeight = loadInfo.getWeight();
       }
 
@@ -428,7 +428,7 @@ class SessionList {
               "AFE %d: weight changed from %.2f to %.2f, potential rif: %.2f, outstanding rif: %d,"
                   + " num sessions: %d, cost: %.2f, expected latency: %.2f, network latency: %.2f,"
                   + " expected+network latency: %.2f, peer load weight: %.2f, (expected+network"
-                  + " latency)/weight: %.2f",
+                  + " latency)/weight: %.2f, utilization: %.2f",
               id,
               oldWeight,
               afe.weight,
@@ -440,7 +440,7 @@ class SessionList {
               networkLatency,
               totalLatency,
               peerLoadWeight,
-              latencyPerWeight));
+              latencyPerWeight, (afe.afeLoad != null ? afe.afeLoad.getUtilization() : 0.0)));
     }
     double usableSessions =
         afeHandles.values().stream().mapToDouble(afe -> afe.refCount * afe.weight).sum();
@@ -452,11 +452,11 @@ class SessionList {
             "%d pct of streams are useable out of %d total",
             (int) (poolStats.usableFraction * 100), (int) totalSessions));
 
-    LOG.info(
-        String.format(
-            "AFE weights: %d with weight 1.0 (ids: %s), %d with weight 0.0, %d with weight"
-                + " in-between (ids: %s)",
-            numWeight100, idsWeight100, numWeight0, numWeightInBetween, idsWeightInBetween));
+    // LOG.info(
+    //     String.format(
+    //         "AFE weights: %d with weight 1.0 (ids: %s), %d with weight 0.0, %d with weight"
+    //             + " in-between (ids: %s)",
+    //         numWeight100, idsWeight100, numWeight0, numWeightInBetween, idsWeightInBetween));
   }
 
   void checkHeartbeat(Clock clock) {
@@ -725,8 +725,8 @@ class SessionList {
     // TODO: expose via method
     int refCount = 0;
 
-    private final PeakEwma transportLatency = new PeakEwma(Duration.of(500, ChronoUnit.MICROS));
-    private final PeakEwma e2eLatency = new PeakEwma(Duration.ofMillis(1));
+    private final PeakEwma transportLatency = new PeakEwma(Duration.of(500, ChronoUnit.MICROS), 1.0);
+    private final PeakEwma e2eLatency = new PeakEwma(Duration.ofMillis(1), 1.0);
 
     // TODO: adjust available in-flight requests to add in current in-flight requests from client
     // (if any).
@@ -776,9 +776,11 @@ class SessionList {
     private long timestamp = System.nanoTime();
     private double cost;
     private long samples = 0;
+    private final double peakFactor;
 
-    public PeakEwma(Duration initialLatency) {
+    public PeakEwma(Duration initialLatency, double peakFactor) {
       this.cost = initialLatency.toNanos();
+      this.peakFactor = peakFactor;
     }
 
     public double getCost() {
@@ -796,14 +798,13 @@ class SessionList {
       long now = System.nanoTime();
       long rttNs = rtt.toNanos();
 
-      if (cost < rttNs) {
-        this.cost = rttNs;
-      } else {
-        long elapsed = Math.max(now - timestamp, 0);
-        double decay = Math.exp(-elapsed / decayNs);
-        double recency = 1.0 - decay;
-        this.cost = cost * decay + rttNs * recency;
+      long elapsed = Math.max(now - timestamp, 0);
+      double decay = Math.exp(-elapsed / decayNs);
+      if (rttNs > cost) {
+        decay *= (1.0 - peakFactor);
       }
+      double recency = 1.0 - decay;
+      this.cost = cost * decay + rttNs * recency;
       this.timestamp = now;
     }
   }

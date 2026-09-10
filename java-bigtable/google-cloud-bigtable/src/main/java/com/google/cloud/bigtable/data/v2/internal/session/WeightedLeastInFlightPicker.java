@@ -42,6 +42,7 @@ class WeightedLeastInFlightPicker extends Picker {
 
   @Override
   Optional<SessionHandle> pickSession() {
+    // logger.info("1.5. WeightedLeastInFlightPicker.pickSession: invoked");
     List<AfeHandle> readyAfes = sessionList.getAfesWithReadySessions();
 
     if (readyAfes.isEmpty()) {
@@ -67,7 +68,7 @@ class WeightedLeastInFlightPicker extends Picker {
       if (now - last > 100 && lastWarningTimeMillis.compareAndSet(last, now)) {
         logger.warning("All candidate AFEs have 0 weight, picking at random");
       }
-      // TODO: maybe we can be smarter about weighting by cost or something.
+      logger.info("1.5a. WeightedLeastInFlightPicker: no candidate with nonzero weight, picked candidate with best cost out of " + readyAfes.size() + " options");
       return sessionList.checkoutSession(readyAfes.get(rng.nextInt(readyAfes.size())));
     }
 
@@ -89,6 +90,7 @@ class WeightedLeastInFlightPicker extends Picker {
       // Move candidate to the `i`th entry so that it's not picked again.
       Collections.swap(candidates, i, randomIndex);
     }
+    // logger.info("1.5b. WeightedLeastInFlightPicker: picked candidate with non-zero weight out of " + candidates.size() + " options");
     return sessionList.checkoutSession(bestAfe);
   }
 }
