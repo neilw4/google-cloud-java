@@ -28,7 +28,10 @@ import io.opentelemetry.api.metrics.LongHistogram;
 import io.opentelemetry.api.metrics.Meter;
 import io.opentelemetry.contrib.gcp.resource.GCPResourceProvider;
 import io.opentelemetry.exporter.logging.LoggingMetricExporter;
+import io.opentelemetry.sdk.metrics.InstrumentSelector;
 import io.opentelemetry.sdk.metrics.SdkMeterProvider;
+import io.opentelemetry.sdk.metrics.Aggregation;
+import io.opentelemetry.sdk.metrics.View;
 import io.opentelemetry.sdk.metrics.export.PeriodicMetricReader;
 import io.opentelemetry.sdk.resources.Resource;
 import java.io.IOException;
@@ -67,22 +70,41 @@ public class Metrics {
     MetricConfiguration config =
         MetricConfiguration.builder()
             .setMetricServiceSettings(MetricServiceSettings.newBuilder().build())
-            .setProjectId(tableName.getProjectId())
+            // .setProjectId(tableName.getProjectId())
             .setCredentials(credentials)
             .setInstrumentationLibraryLabelsEnabled(false)
             .build();
 
+    // In theory using this resource ensures that we don't get erors about writing a point twice with different times, but
+    // for reasons I don't understand it also prevents us from exporting the data.
+    Attributes detectedAttributes = new GCPResourceProvider().getAttributes();
+    String podName = System.getenv().getOrDefault("POD_NAME", System.getenv().getOrDefault("HOSTNAME", "unknown-pod"));
+    String namespace = System.getenv().getOrDefault("POD_NAMESPACE", "default");
+    Resource resource =
+        Resource.create(detectedAttributes)
+            ;
+            // .merge(
+            //     Resource.builder()
+            //         .put("k8s.pod.name", podName)
+            //         .put("k8s.namespace.name", namespace)
+            //         .build());
+
     SdkMeterProvider meterProvider =
         SdkMeterProvider.builder()
-            .setResource(Resource.create(new GCPResourceProvider().getAttributes()))
+            .setResource(resource)
+            .registerView(
+                InstrumentSelector.builder()
+                    .setName("otel.sdk.*")
+                    .build(),
+                View.builder().setAggregation(Aggregation.drop()).build())
             .registerMetricReader(
                 PeriodicMetricReader.builder(
                         GoogleCloudMetricExporter.createWithConfiguration(config))
-                    .setInterval(Duration.ofMinutes(1))
+                    .setInterval(Duration.ofSeconds(30))
                     .build())
             .registerMetricReader(
                 PeriodicMetricReader.builder(LoggingMetricExporter.create())
-                    .setInterval(Duration.ofMinutes(1))
+                    .setInterval(Duration.ofSeconds(30))
                     .build())
             .build();
 

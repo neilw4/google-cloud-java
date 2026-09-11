@@ -397,6 +397,7 @@ public class GenerateUnaryLoad implements Callable<Void> {
                   FeatureFlags.newBuilder()
                       .setDirectAccessRequested(target.getMode().enableDp)
                       .setTrafficDirectorEnabled(target.getMode().enableTd)
+                      .setSessionsCompatible(false)
                       .build(),
                   ImmutableMap.of(
                       "table_name",
