@@ -289,7 +289,7 @@
                 <image>gcr.io/google.com/cloud-bigtable-dev/jetstream-tools:v${timestamp}</image>
                 <tags>
                   <tag>latest</tag>
-                  <tag>neilwells-test</tag>
+                  <tag>neilwells-test-chbl</tag>
                 </tags>
               </to>
               <container>

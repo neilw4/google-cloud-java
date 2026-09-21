@@ -494,7 +494,7 @@ class SessionList {
       PeerInfo peerInfo = session.getPeerInfo();
 
       AfeHandle afeHandle =
-          afeHandles.computeIfAbsent(AfeId.extract(peerInfo), (ignored) -> new AfeHandle());
+          afeHandles.computeIfAbsent(AfeId.extract(peerInfo), id -> new AfeHandle(id));
       this.afe = Optional.of(afeHandle);
       afeHandle.sessions.add(this);
       afeHandle.refCount++;
@@ -708,7 +708,7 @@ class SessionList {
   /** Typesafe wrapper around the applicationFrontendId the server sent us */
   @AutoValue
   abstract static class AfeId {
-    protected abstract long getId();
+    abstract long getId();
 
     static AfeId extract(PeerInfo peerInfo) {
       return new AutoValue_SessionList_AfeId(peerInfo.getApplicationFrontendId());
@@ -716,6 +716,8 @@ class SessionList {
   }
 
   static class AfeHandle {
+    final AfeId afeId;
+
     // All sessions in the queue are ready to be used
     @VisibleForTesting final Queue<SessionHandle> sessions;
     // Last time this afe was used. It will be consulted when we need to garbage collect
@@ -734,7 +736,8 @@ class SessionList {
     // 0.0-1.0.
     float weight = 0.0f;
 
-    public AfeHandle() {
+    public AfeHandle(AfeId afeId) {
+      this.afeId = afeId;
       sessions = new ArrayDeque<>();
     }
 

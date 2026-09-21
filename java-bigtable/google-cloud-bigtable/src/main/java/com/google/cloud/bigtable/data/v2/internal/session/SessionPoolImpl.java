@@ -126,7 +126,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
 
   private final ScheduledFuture<?> afeListPruneTask;
 
-  private final ScheduledFuture<?> afeListUpdateWeightsTask;
+  // private final ScheduledFuture<?> afeListUpdateWeightsTask;
 
   private final ScheduledFuture<?> poolScaleTask;
 
@@ -238,16 +238,16 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
             SessionList.SESSION_LIST_PRUNE_INTERVAL.toMillis(),
             SessionList.SESSION_LIST_PRUNE_INTERVAL.toMillis(),
             TimeUnit.MILLISECONDS);
-    afeListUpdateWeightsTask =
-        executorService.scheduleAtFixedRate(
-            () -> {
-              synchronized (SessionPoolImpl.this) {
-                sessions.updateWeights();
-              }
-            },
-            0,
-            100,
-            TimeUnit.MILLISECONDS);
+    // afeListUpdateWeightsTask =
+    //     executorService.scheduleAtFixedRate(
+    //         () -> {
+    //           synchronized (SessionPoolImpl.this) {
+    //             sessions.updateWeights();
+    //           }
+    //         },
+    //         0,
+    //         100,
+    //         TimeUnit.MILLISECONDS);
     poolScaleTask =
         executorService.scheduleAtFixedRate(
             () -> {
@@ -403,7 +403,7 @@ public class SessionPoolImpl<OpenReqT extends Message> implements SessionPool<Op
       }
       afeListPruneTask.cancel(false);
       heartbeatMonitor.cancel(false);
-      afeListUpdateWeightsTask.cancel(false);
+      // afeListUpdateWeightsTask.cancel(false);
       poolScaleTask.cancel(false);
       if (retryCreateSessionFuture != null) {
         retryCreateSessionFuture.cancel(false);

@@ -55,7 +55,7 @@ class DynamicPicker extends Picker {
   }
 
   private Picker createPicker(LoadBalancingOptions options) {
-    return new WeightedLeastInFlightPicker(sessions);
+    return new ConsistentHashingWithBoundedLoadPicker(sessions);
     // switch (options.getLoadBalancingStrategyCase()) {
     //   case RANDOM:
     //     return new SimplePicker(sessions, options.getRandom());
